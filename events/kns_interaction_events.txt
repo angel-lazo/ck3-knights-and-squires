@@ -1,0 +1,23 @@
+namespace = kns_interaction
+
+kns_interaction.0080 = {
+	type = letter_event
+	opening = kns_interaction.0080.opening
+	desc = kns_interaction.0080.desc
+	sender = scope:recipient
+
+	option = {
+		name = kns_interaction.0080.a
+	}
+}
+
+kns_interaction.0081 = {
+	type = letter_event
+	opening = kns_interaction.0081.opening
+	desc = kns_interaction.0081.desc
+	sender = scope:recipient
+
+	option = {
+		name = kns_interaction.0081.a
+	}
+}

@@ -1,0 +1,14 @@
+squire = {
+	texture = "gfx/interface/icons/icon_prowess.dds"
+	alias = { squires squirepossessive }
+}
+
+kns_knight = {
+	texture = "gfx/interface/icons/icon_prowess.dds"
+	alias = { kns_knights kns_knightspossessive }
+}
+
+kns_prowess_talent = {
+	texture = "gfx/interface/icons/icon_prowess.dds"
+	alias = { kns_prowess_talents }
+}

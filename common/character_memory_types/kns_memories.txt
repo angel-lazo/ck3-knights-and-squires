@@ -1,0 +1,98 @@
+kns_got_squire = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_got_squire_desc }
+	second_perspective_description = { desc = kns_got_squire_desc_second }
+	third_perspective_description = { desc = kns_got_squire_desc_third }
+	participants = { squire }
+	duration = { years = 75 }
+}
+
+kns_became_squire = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_became_squire_desc }
+	second_perspective_description = { desc = kns_became_squire_desc_second }
+	third_perspective_description = { desc = kns_became_squire_desc_third }
+	participants = { knight }
+	duration = { years = 75 }
+}
+
+kns_lost_squire = {
+	categories = { negative martial }
+	icon = "martial.dds"
+	description = { desc = kns_lost_squire_desc }
+	second_perspective_description = { desc = kns_lost_squire_desc_second }
+	third_perspective_description = { desc = kns_lost_squire_desc_third }
+	participants = { squire }
+	duration = { years = 75 }
+}
+
+kns_removed_me_as_squire = {
+	categories = { negative martial }
+	icon = "martial.dds"
+	description = { desc = kns_removed_me_as_squire_desc }
+	second_perspective_description = { desc = kns_removed_me_as_squire_desc_second }
+	third_perspective_description = { desc = kns_removed_me_as_squire_desc_third }
+	participants = { knight }
+	duration = { years = 100 }
+}
+
+kns_was_knighted = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_was_knighted_desc }
+	second_perspective_description = { desc = kns_was_knighted_desc_second }
+	third_perspective_description = { desc = kns_was_knighted_desc_third }
+	participants = { knight }
+	duration = { years = 100 }
+}
+
+kns_knighted_someone = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_knighted_someone_desc }
+	second_perspective_description = { desc = kns_knighted_someone_desc_second }
+	third_perspective_description = { desc = kns_knighted_someone_desc_third }
+	participants = { squire }
+	duration = { years = 100 }
+}
+
+kns_was_knighted_on_the_battlefield = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_was_knighted_on_the_battlefield_desc }
+	second_perspective_description = { desc = kns_was_knighted_on_the_battlefield_desc_second }
+	third_perspective_description = { desc = kns_was_knighted_on_the_battlefield_desc_third }
+	participants = { knight }
+	duration = { years = 100 }
+}
+
+kns_bought_knighthood = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_bought_knighthood_desc }
+	second_perspective_description = { desc = kns_bought_knighthood_desc_second }
+	third_perspective_description = { desc = kns_bought_knighthood_desc_third }
+	duration = { years = 100 }
+}
+
+kns_stripped_knighthood = {
+	categories = { negative martial }
+	icon = "martial.dds"
+	description = { desc = kns_stripped_knighthood_desc }
+	second_perspective_description = { desc = kns_stripped_knighthood_desc_second }
+	third_perspective_description = { desc = kns_stripped_knighthood_desc_third }
+	participants = { knight }
+	duration = { years = 100 }
+}
+
+kns_was_stripped_of_knighthood = {
+	categories = { negative martial }
+	icon = "martial.dds"
+	description = { desc = kns_was_stripped_of_knighthood_desc }
+	second_perspective_description = { desc = kns_was_stripped_of_knighthood_desc_second }
+	third_perspective_description = { desc = kns_was_stripped_of_knighthood_desc_third }
+	participants = { stripper }
+	duration = { years = 100 }
+}

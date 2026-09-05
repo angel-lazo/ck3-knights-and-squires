@@ -1,0 +1,25 @@
+---
+description: Present options and a recommendation before editing this mod
+alwaysApply: true
+---
+
+# Recommend before implement
+
+When the user asks for a change, fix, or new feature in Knights & Squires:
+
+1. **Investigate first** (read/search as needed), but **do not edit files yet** unless the user clearly says to implement now, or the task is trivial and unambiguous (typo, missing loc key they named, single-line fix they already approved).
+
+2. **Reply with a short recommendation block** before any implementation:
+   - **Recommended** — one approach and why (match existing mod patterns, load-order safety, CK3 constraints).
+   - **Alternatives** — 1–2 other valid options with trade-offs.
+   - **Scope** — which files would change.
+   - **Ask** — e.g. "Proceed with Recommended, or pick A/B?"
+
+3. **Implement only after** the user picks an option or says "go ahead" / "do the recommended one" / equivalent.
+
+4. **Exceptions** (implement without waiting):
+   - User message is explicitly "just do it" / "implement option A" / "apply your recommendation".
+   - User is answering a prior options question with a choice.
+   - Pure Q&A with no requested change (explain only).
+
+Keep options concrete for this mod: script effects, triggers, loc, GUI, game rules, README — not vague architecture essays.

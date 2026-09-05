@@ -1,0 +1,20 @@
+kns_has_squire_modifier = {
+	icon = martial_positive
+	monthly_prestige = 0.1
+	prowess = 1
+}
+
+kns_in_prowess_training = {
+	icon = health_positive
+	health = medium_health_bonus
+}
+
+kns_funding_knight_training = {
+	icon = economy_negative
+	monthly_income = -0.5
+	scale = {
+		value = kns_training_knight_count_value
+		desc = kns_funding_knight_training
+		display_mode = scaled
+	}
+}

@@ -1,0 +1,891 @@
+# Rolls a prowess cap of 1-50 on a right-skewed bell curve centered at 15.
+# Inept and Formidable are each about 5% of common rolls. Cap 50 (Prodigious) is 1 in 1000.
+kns_roll_prowess_cap_effect = {
+	random_list = {
+		1 = {
+			set_variable = { name = kns_prowess_cap value = 50 }
+		}
+		999 = {
+			random_list = {
+				6 = { set_variable = { name = kns_prowess_cap value = 1 } }
+				8 = { set_variable = { name = kns_prowess_cap value = 2 } }
+				13 = { set_variable = { name = kns_prowess_cap value = 3 } }
+				20 = { set_variable = { name = kns_prowess_cap value = 4 } }
+				26 = { set_variable = { name = kns_prowess_cap value = 5 } }
+				26 = { set_variable = { name = kns_prowess_cap value = 6 } }
+				35 = { set_variable = { name = kns_prowess_cap value = 7 } }
+				44 = { set_variable = { name = kns_prowess_cap value = 8 } }
+				55 = { set_variable = { name = kns_prowess_cap value = 9 } }
+				66 = { set_variable = { name = kns_prowess_cap value = 10 } }
+				77 = { set_variable = { name = kns_prowess_cap value = 11 } }
+				86 = { set_variable = { name = kns_prowess_cap value = 12 } }
+				94 = { set_variable = { name = kns_prowess_cap value = 13 } }
+				98 = { set_variable = { name = kns_prowess_cap value = 14 } }
+				100 = { set_variable = { name = kns_prowess_cap value = 15 } }
+				98 = { set_variable = { name = kns_prowess_cap value = 16 } }
+				94 = { set_variable = { name = kns_prowess_cap value = 17 } }
+				86 = { set_variable = { name = kns_prowess_cap value = 18 } }
+				77 = { set_variable = { name = kns_prowess_cap value = 19 } }
+				66 = { set_variable = { name = kns_prowess_cap value = 20 } }
+				55 = { set_variable = { name = kns_prowess_cap value = 21 } }
+				44 = { set_variable = { name = kns_prowess_cap value = 22 } }
+				35 = { set_variable = { name = kns_prowess_cap value = 23 } }
+				26 = { set_variable = { name = kns_prowess_cap value = 24 } }
+				19 = { set_variable = { name = kns_prowess_cap value = 25 } }
+				14 = { set_variable = { name = kns_prowess_cap value = 26 } }
+				9 = { set_variable = { name = kns_prowess_cap value = 27 } }
+				6 = { set_variable = { name = kns_prowess_cap value = 28 } }
+				4 = { set_variable = { name = kns_prowess_cap value = 29 } }
+				10 = { set_variable = { name = kns_prowess_cap value = 30 } }
+				6 = { set_variable = { name = kns_prowess_cap value = 31 } }
+				6 = { set_variable = { name = kns_prowess_cap value = 32 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 33 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 34 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 35 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 36 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 37 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 38 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 39 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 40 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 41 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 42 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 43 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 44 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 45 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 46 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 47 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 48 } }
+				3 = { set_variable = { name = kns_prowess_cap value = 49 } }
+			}
+		}
+	}
+}
+
+kns_apply_talent_trait_from_cap_effect = {
+	if = {
+		limit = { has_trait = kns_talent_generation }
+		add_character_flag = kns_had_prodigy_trait
+	}
+	remove_trait = kns_talent_unskilled
+	remove_trait = kns_talent_low
+	remove_trait = kns_talent_normal
+	remove_trait = kns_talent_elite
+	remove_trait = kns_talent_generation
+	if = {
+		limit = { var:kns_prowess_cap <= 5 }
+		add_trait = kns_talent_unskilled
+	}
+	else_if = {
+		limit = { var:kns_prowess_cap <= 14 }
+		add_trait = kns_talent_low
+	}
+	else_if = {
+		limit = { var:kns_prowess_cap <= 29 }
+		add_trait = kns_talent_normal
+	}
+	else_if = {
+		limit = { var:kns_prowess_cap <= 49 }
+		add_trait = kns_talent_elite
+	}
+	else = {
+		add_trait = kns_talent_generation
+	}
+	if = {
+		limit = {
+			has_trait = kns_talent_generation
+			NOT = { has_character_flag = kns_had_prodigy_trait }
+		}
+		kns_register_living_prodigy_effect = yes
+	}
+	else_if = {
+		limit = {
+			has_character_flag = kns_had_prodigy_trait
+			NOT = { has_trait = kns_talent_generation }
+		}
+		kns_unregister_living_prodigy_effect = yes
+	}
+	remove_character_flag = kns_had_prodigy_trait
+}
+
+kns_update_training_modifier_effect = {
+	if = {
+		limit = {
+			kns_is_funded_knight_trigger = yes
+			NOT = { kns_takes_old_age_prowess_loss_trigger = yes }
+		}
+		if = {
+			limit = {
+				NOT = { has_character_modifier = kns_in_prowess_training }
+			}
+			add_character_modifier = kns_in_prowess_training
+		}
+	}
+	else = {
+		if = {
+			limit = { has_character_modifier = kns_in_prowess_training }
+			remove_character_modifier = kns_in_prowess_training
+		}
+	}
+}
+
+kns_cancel_old_age_funding_effect = {
+	if = {
+		limit = {
+			kns_is_funded_knight_trigger = yes
+			kns_takes_old_age_prowess_loss_trigger = yes
+		}
+		var:kns_funding_patron = { save_scope_as = kns_old_age_patron }
+		kns_stop_funding_knight_effect = {
+			KNIGHT = this
+			PATRON = scope:kns_old_age_patron
+		}
+		send_interface_toast = {
+			type = event_toast_effect_neutral
+			title = kns_prowess_training_old_age_toast
+			custom_tooltip = kns_prowess_training_old_age_toast.tt
+			left_icon = this
+		}
+	}
+	else = {
+		kns_update_training_modifier_effect = yes
+	}
+}
+
+kns_sweep_patron_old_age_funding_effect = {
+	save_scope_as = kns_sweep_patron
+	if = {
+		limit = { has_character_flag = kns_prowess_funded }
+		kns_cancel_old_age_funding_effect = yes
+	}
+	every_courtier = {
+		limit = { has_character_flag = kns_prowess_funded }
+		kns_cancel_old_age_funding_effect = yes
+	}
+	every_vassal = {
+		limit = { has_character_flag = kns_prowess_funded }
+		kns_cancel_old_age_funding_effect = yes
+	}
+}
+
+kns_start_funding_knight_effect = {
+	$PATRON$ = { save_scope_as = kns_new_patron }
+	$KNIGHT$ = {
+		if = {
+			limit = { kns_takes_old_age_prowess_loss_trigger = yes }
+			kns_update_training_modifier_effect = yes
+		}
+		else = {
+			add_character_flag = kns_prowess_funded
+			set_variable = {
+				name = kns_funding_patron
+				value = scope:kns_new_patron
+			}
+			kns_update_training_modifier_effect = yes
+		}
+	}
+	scope:kns_new_patron = {
+		kns_refresh_training_upkeep_effect = yes
+	}
+}
+
+kns_stop_funding_knight_effect = {
+	$PATRON$ = { save_scope_as = kns_old_patron }
+	$KNIGHT$ = {
+		remove_character_flag = kns_prowess_funded
+		remove_variable = kns_funding_patron
+		kns_update_training_modifier_effect = yes
+	}
+	scope:kns_old_patron = {
+		kns_refresh_training_upkeep_effect = yes
+	}
+}
+
+kns_fund_all_knights_effect = {
+	save_scope_as = kns_funding_actor
+	if = {
+		limit = {
+			kns_can_be_funded_by_trigger = { PATRON = scope:kns_funding_actor }
+		}
+		kns_start_funding_knight_effect = {
+			KNIGHT = this
+			PATRON = scope:kns_funding_actor
+		}
+	}
+	every_courtier = {
+		limit = {
+			kns_can_be_funded_by_trigger = { PATRON = scope:kns_funding_actor }
+		}
+		kns_start_funding_knight_effect = {
+			KNIGHT = this
+			PATRON = scope:kns_funding_actor
+		}
+	}
+	every_vassal = {
+		limit = {
+			kns_can_be_funded_by_trigger = { PATRON = scope:kns_funding_actor }
+		}
+		kns_start_funding_knight_effect = {
+			KNIGHT = this
+			PATRON = scope:kns_funding_actor
+		}
+	}
+}
+
+kns_stop_all_funded_knights_effect = {
+	save_scope_as = kns_funding_actor
+	if = {
+		limit = { has_character_flag = kns_prowess_funded }
+		kns_stop_funding_knight_effect = {
+			KNIGHT = this
+			PATRON = scope:kns_funding_actor
+		}
+	}
+	every_courtier = {
+		limit = { has_character_flag = kns_prowess_funded }
+		kns_stop_funding_knight_effect = {
+			KNIGHT = this
+			PATRON = scope:kns_funding_actor
+		}
+	}
+	every_vassal = {
+		limit = { has_character_flag = kns_prowess_funded }
+		kns_stop_funding_knight_effect = {
+			KNIGHT = this
+			PATRON = scope:kns_funding_actor
+		}
+	}
+}
+
+kns_refresh_prowess_room_display_effect = {
+	set_variable = {
+		name = kns_compared_prowess
+		value = prowess_no_portrait
+	}
+	set_variable = {
+		name = kns_weapon_prowess
+		value = kns_weapon_prowess_value
+	}
+	set_variable = {
+		name = kns_total_prowess
+		value = prowess
+	}
+	set_variable = {
+		name = kns_prowess_room_display
+		value = kns_prowess_training_room_value
+	}
+}
+
+kns_snapshot_base_prowess_effect = {
+	kns_refresh_prowess_room_display_effect = yes
+}
+
+kns_refresh_base_prowess_effect = {
+	kns_refresh_prowess_room_display_effect = yes
+}
+
+kns_add_tracked_prowess_skill_effect = {
+	add_prowess_skill = $AMOUNT$
+	kns_refresh_prowess_room_display_effect = yes
+}
+
+kns_add_funding_knight_to_named_list_effect = {
+	$KNIGHT$ = {
+		kns_refresh_base_prowess_effect = yes
+	}
+	add_to_variable_list = {
+		name = $LIST$
+		target = $KNIGHT$
+	}
+}
+
+kns_rebuild_funding_knight_list_effect = {
+	save_scope_as = kns_funding_viewer
+	kns_sweep_patron_old_age_funding_effect = yes
+	clear_variable_list = kns_funding_knights
+	clear_variable_list = kns_funding_knights_fundable
+	clear_variable_list = kns_funding_knights_unfundable
+	if = {
+		limit = {
+			kns_is_manageable_knight_trigger = { PATRON = scope:kns_funding_viewer }
+		}
+		add_to_list = kns_funding_unsorted
+	}
+	every_courtier = {
+		limit = {
+			kns_is_manageable_knight_trigger = { PATRON = scope:kns_funding_viewer }
+		}
+		add_to_list = kns_funding_unsorted
+	}
+	every_vassal = {
+		limit = {
+			kns_is_manageable_knight_trigger = { PATRON = scope:kns_funding_viewer }
+		}
+		add_to_list = kns_funding_unsorted
+	}
+	if = {
+		limit = { exists = var:kns_fundable_sort_potential }
+		ordered_in_list = {
+			list = kns_funding_unsorted
+			limit = {
+				kns_is_funding_window_fundable_trigger = { PATRON = scope:kns_funding_viewer }
+			}
+			order_by = {
+				value = 0
+				if = {
+					limit = { has_variable = kns_prowess_cap }
+					add = var:kns_prowess_cap
+				}
+			}
+			max = 300
+			check_range_bounds = no
+			save_temporary_scope_as = kns_funding_knight
+			scope:kns_funding_viewer = {
+				kns_add_funding_knight_to_named_list_effect = {
+					KNIGHT = scope:kns_funding_knight
+					LIST = kns_funding_knights_fundable
+				}
+			}
+		}
+	}
+	else = {
+		ordered_in_list = {
+			list = kns_funding_unsorted
+			limit = {
+				kns_is_funding_window_fundable_trigger = { PATRON = scope:kns_funding_viewer }
+			}
+			order_by = prowess
+			max = 300
+			check_range_bounds = no
+			save_temporary_scope_as = kns_funding_knight
+			scope:kns_funding_viewer = {
+				kns_add_funding_knight_to_named_list_effect = {
+					KNIGHT = scope:kns_funding_knight
+					LIST = kns_funding_knights_fundable
+				}
+			}
+		}
+	}
+	ordered_in_list = {
+		list = kns_funding_unsorted
+		limit = {
+			NOT = {
+				kns_is_funding_window_fundable_trigger = { PATRON = scope:kns_funding_viewer }
+			}
+		}
+		order_by = prowess
+		max = 300
+		check_range_bounds = no
+		save_temporary_scope_as = kns_funding_knight
+		scope:kns_funding_viewer = {
+			kns_add_funding_knight_to_named_list_effect = {
+				KNIGHT = scope:kns_funding_knight
+				LIST = kns_funding_knights_unfundable
+			}
+		}
+	}
+}
+
+kns_add_potential_knight_to_list_effect = {
+	$KNIGHT$ = {
+		set_variable = {
+			name = kns_compared_prowess
+			value = prowess_no_portrait
+		}
+	}
+	add_to_variable_list = {
+		name = kns_potential_knights
+		target = $KNIGHT$
+	}
+}
+
+kns_rebuild_potential_knight_list_effect = {
+	save_scope_as = kns_funding_viewer
+	clear_variable_list = kns_potential_knights
+	every_courtier = {
+		limit = {
+			kns_is_potential_knight_for_trigger = { ACTOR = scope:kns_funding_viewer }
+			kns_matches_potential_age_filter_trigger = { VIEWER = scope:kns_funding_viewer }
+		}
+		add_to_list = kns_potential_unsorted
+	}
+	every_vassal = {
+		limit = {
+			kns_is_potential_knight_for_trigger = { ACTOR = scope:kns_funding_viewer }
+			kns_matches_potential_age_filter_trigger = { VIEWER = scope:kns_funding_viewer }
+		}
+		add_to_list = kns_potential_unsorted
+	}
+	if = {
+		limit = { exists = var:kns_potential_sort_age }
+		ordered_in_list = {
+			list = kns_potential_unsorted
+			order_by = {
+				value = 0
+				subtract = age
+			}
+			max = 300
+			check_range_bounds = no
+			save_temporary_scope_as = kns_potential_knight
+			scope:kns_funding_viewer = {
+				kns_add_potential_knight_to_list_effect = {
+					KNIGHT = scope:kns_potential_knight
+				}
+			}
+		}
+	}
+	else = {
+		ordered_in_list = {
+			list = kns_potential_unsorted
+			order_by = prowess_no_portrait
+			max = 300
+			check_range_bounds = no
+			save_temporary_scope_as = kns_potential_knight
+			scope:kns_funding_viewer = {
+				kns_add_potential_knight_to_list_effect = {
+					KNIGHT = scope:kns_potential_knight
+				}
+			}
+		}
+	}
+}
+
+kns_open_funding_window_effect = {
+	remove_variable = kns_manage_tab_potential
+	kns_rebuild_funding_knight_list_effect = yes
+	kns_rebuild_potential_knight_list_effect = yes
+	set_variable = kns_funding_window_open
+}
+
+kns_close_funding_window_effect = {
+	remove_variable = kns_funding_window_open
+	remove_variable = kns_manage_tab_potential
+	remove_variable = kns_potential_age_max
+	remove_variable = kns_potential_sort_age
+	remove_variable = kns_fundable_sort_potential
+	clear_variable_list = kns_funding_knights
+	clear_variable_list = kns_funding_knights_fundable
+	clear_variable_list = kns_funding_knights_unfundable
+	clear_variable_list = kns_potential_knights
+}
+
+kns_assign_prowess_talent_core_effect = {
+	kns_roll_prowess_cap_effect = yes
+	kns_apply_talent_trait_from_cap_effect = yes
+	kns_refresh_base_prowess_effect = yes
+	kns_update_training_modifier_effect = yes
+}
+
+kns_assign_prowess_talent_effect = {
+	if = {
+		limit = {
+			NOT = { has_variable = kns_prowess_cap }
+			kns_is_knight_trigger = yes
+		}
+		kns_assign_prowess_talent_core_effect = yes
+		send_interface_toast = {
+			type = event_toast_effect_neutral
+			title = kns_prowess_talent_revealed_toast
+			custom_tooltip = kns_prowess_talent_revealed_toast.tt
+			left_icon = this
+		}
+	}
+}
+
+kns_assign_prowess_talent_silent_effect = {
+	if = {
+		limit = {
+			NOT = { has_variable = kns_prowess_cap }
+			kns_is_knight_trigger = yes
+		}
+		kns_assign_prowess_talent_core_effect = yes
+	}
+}
+
+kns_save_training_patron_effect = {
+	if = {
+		limit = {
+			exists = liege
+			NOT = { liege = this }
+		}
+		liege = { save_scope_as = kns_training_patron }
+	}
+	else_if = {
+		limit = {
+			exists = court_owner
+			NOT = { court_owner = this }
+		}
+		court_owner = { save_scope_as = kns_training_patron }
+	}
+	else = {
+		save_scope_as = kns_training_patron
+	}
+}
+
+kns_count_training_knights_effect = {
+	save_scope_as = kns_upkeep_payer
+	set_variable = {
+		name = kns_training_knight_count
+		value = 0
+	}
+	if = {
+		limit = { has_character_flag = kns_prowess_funded }
+		change_variable = {
+			name = kns_training_knight_count
+			add = 1
+		}
+	}
+	every_courtier = {
+		limit = { has_character_flag = kns_prowess_funded }
+		scope:kns_upkeep_payer = {
+			change_variable = {
+				name = kns_training_knight_count
+				add = 1
+			}
+		}
+	}
+	every_vassal = {
+		limit = { has_character_flag = kns_prowess_funded }
+		scope:kns_upkeep_payer = {
+			change_variable = {
+				name = kns_training_knight_count
+				add = 1
+			}
+		}
+	}
+}
+
+kns_refresh_training_upkeep_effect = {
+	kns_count_training_knights_effect = yes
+	remove_character_modifier = kns_training_upkeep_1
+	remove_character_modifier = kns_training_upkeep_2
+	remove_character_modifier = kns_training_upkeep_4
+	remove_character_modifier = kns_training_upkeep_8
+	remove_character_modifier = kns_training_upkeep_16
+	if = {
+		limit = { has_character_modifier = kns_funding_knight_training }
+		remove_character_modifier = kns_funding_knight_training
+	}
+	if = {
+		limit = {
+			exists = var:kns_training_knight_count
+			var:kns_training_knight_count > 0
+		}
+		add_character_modifier = kns_funding_knight_training
+	}
+	else = {
+		remove_variable = kns_training_knight_count
+	}
+}
+
+# Age < 30: 0-5, mean 3. Age 30-45: 0-3, mean 2. Age 46+: 0-1, even odds.
+kns_roll_yearly_prowess_gain_effect = {
+	if = {
+		limit = { age < 30 }
+		random_list = {
+			1 = { set_variable = { name = kns_prowess_gain value = 0 } }
+			3 = { set_variable = { name = kns_prowess_gain value = 1 } }
+			5 = { set_variable = { name = kns_prowess_gain value = 2 } }
+			8 = { set_variable = { name = kns_prowess_gain value = 3 } }
+			6 = { set_variable = { name = kns_prowess_gain value = 4 } }
+			4 = { set_variable = { name = kns_prowess_gain value = 5 } }
+		}
+	}
+	else_if = {
+		limit = { age >= 46 }
+		random_list = {
+			1 = { set_variable = { name = kns_prowess_gain value = 0 } }
+			1 = { set_variable = { name = kns_prowess_gain value = 1 } }
+		}
+	}
+	else = {
+		random_list = {
+			1 = { set_variable = { name = kns_prowess_gain value = 0 } }
+			2 = { set_variable = { name = kns_prowess_gain value = 1 } }
+			4 = { set_variable = { name = kns_prowess_gain value = 2 } }
+			4 = { set_variable = { name = kns_prowess_gain value = 3 } }
+		}
+	}
+}
+
+kns_yearly_prowess_training_effect = {
+	if = {
+		limit = { kns_is_funded_knight_trigger = yes }
+		kns_refresh_base_prowess_effect = yes
+		var:kns_funding_patron = { save_scope_as = kns_training_patron }
+		if = {
+			limit = {
+				NOT = {
+					kns_is_in_funding_reach_of_trigger = { PATRON = scope:kns_training_patron }
+				}
+			}
+			kns_stop_funding_knight_effect = {
+				KNIGHT = this
+				PATRON = scope:kns_training_patron
+			}
+		}
+		else_if = {
+			limit = { kns_takes_old_age_prowess_loss_trigger = yes }
+			kns_cancel_old_age_funding_effect = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { kns_knight_can_train_prowess_trigger = yes }
+			}
+			kns_update_training_modifier_effect = yes
+			scope:kns_training_patron ?= {
+				kns_refresh_training_upkeep_effect = yes
+			}
+		}
+		else_if = {
+			limit = {
+				scope:kns_training_patron = {
+					gold < 0
+				}
+			}
+			send_interface_toast = {
+				type = event_toast_effect_bad
+				title = kns_prowess_training_unfunded_toast
+				custom_tooltip = kns_prowess_training_unfunded_toast.tt
+				left_icon = this
+				right_icon = scope:kns_training_patron
+			}
+		}
+		else = {
+			kns_roll_yearly_prowess_gain_effect = yes
+			set_variable = {
+				name = kns_prowess_room
+				value = kns_prowess_training_room_value
+			}
+			if = {
+				limit = { var:kns_prowess_gain > var:kns_prowess_room }
+				set_variable = {
+					name = kns_prowess_gain
+					value = var:kns_prowess_room
+				}
+			}
+			if = {
+				limit = { var:kns_prowess_gain > 0 }
+				kns_add_tracked_prowess_skill_effect = {
+					AMOUNT = var:kns_prowess_gain
+				}
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title = kns_prowess_training_gain_toast
+					custom_tooltip = kns_prowess_training_gain_toast.tt
+					left_icon = this
+				}
+			}
+			remove_variable = kns_prowess_gain
+			remove_variable = kns_prowess_room
+		}
+		kns_update_training_modifier_effect = yes
+		scope:kns_training_patron ?= {
+			kns_refresh_training_upkeep_effect = yes
+		}
+	}
+	else = {
+		kns_update_training_modifier_effect = yes
+	}
+}
+
+kns_raise_prowess_to_thirty_effect = {
+	if = {
+		limit = { prowess_no_portrait < 30 }
+		kns_add_tracked_prowess_skill_effect = {
+			AMOUNT = kns_prowess_needed_to_reach_30
+		}
+	}
+}
+
+kns_force_prodigious_cap_effect = {
+	set_variable = { name = kns_prowess_cap value = 50 }
+	kns_apply_talent_trait_from_cap_effect = yes
+}
+
+kns_save_catholic_pope_effect = {
+	if = {
+		limit = { exists = faith:catholic.religious_head }
+		faith:catholic.religious_head = { save_scope_as = kns_pope }
+	}
+	else_if = {
+		limit = { exists = title:k_papal_state.holder }
+		title:k_papal_state.holder = { save_scope_as = kns_pope }
+	}
+}
+
+kns_gather_papal_tourney_entrants_effect = {
+	clear_variable_list = kns_papal_entrants
+	every_ruler = {
+		limit = { kns_practices_knighthood_trigger = yes }
+		if = {
+			limit = { kns_can_enter_papal_youth_tourney_trigger = yes }
+			scope:kns_pope = {
+				add_to_variable_list = {
+					name = kns_papal_entrants
+					target = prev
+				}
+			}
+		}
+		random = {
+			chance = 20
+			random_courtier = {
+				limit = { kns_can_enter_papal_youth_tourney_trigger = yes }
+				scope:kns_pope = {
+					add_to_variable_list = {
+						name = kns_papal_entrants
+						target = prev
+					}
+				}
+			}
+		}
+	}
+}
+
+kns_make_papal_tourney_winner_prodigious_effect = {
+	$WINNER$ = {
+		save_scope_as = kns_papal_winner
+		add_character_flag = kns_papal_tourney_prize
+		kns_force_prodigious_cap_effect = yes
+	}
+	kns_become_a_knight_effect = {
+		KNIGHT_MAKER = $POPE$
+		KNIGHT_TO_BE = $WINNER$
+	}
+	$WINNER$ = {
+		kns_raise_prowess_to_thirty_effect = yes
+		add_character_flag = kns_papal_tourney_prodigy
+		remove_character_flag = kns_papal_tourney_prize
+	}
+}
+
+kns_register_living_prodigy_effect = {
+	if = {
+		limit = { NOT = { has_global_variable = kns_living_prodigy_count } }
+		set_global_variable = {
+			name = kns_living_prodigy_count
+			value = 0
+		}
+	}
+	change_global_variable = {
+		name = kns_living_prodigy_count
+		add = 1
+	}
+}
+
+kns_unregister_living_prodigy_effect = {
+	if = {
+		limit = {
+			exists = global_var:kns_living_prodigy_count
+			global_var:kns_living_prodigy_count > 0
+		}
+		change_global_variable = {
+			name = kns_living_prodigy_count
+			subtract = 1
+		}
+	}
+}
+
+kns_recount_living_prodigies_effect = {
+	set_global_variable = {
+		name = kns_living_prodigy_count
+		value = 0
+	}
+	every_living_character = {
+		limit = {
+			is_alive = yes
+			has_trait = kns_talent_generation
+		}
+		change_global_variable = {
+			name = kns_living_prodigy_count
+			add = 1
+		}
+	}
+}
+
+kns_try_start_papal_youth_tourney_effect = {
+	if = {
+		limit = {
+			NOT = { kns_living_prodigious_exists_trigger = yes }
+			NOT = { has_global_variable = kns_papal_tourney_pending }
+			OR = {
+				NOT = { has_global_variable = kns_papal_tourney_ready_year }
+				current_year >= global_var:kns_papal_tourney_ready_year
+			}
+		}
+		kns_save_catholic_pope_effect = yes
+		if = {
+			limit = {
+				exists = scope:kns_pope
+				scope:kns_pope = {
+					is_alive = yes
+					is_imprisoned = no
+				}
+			}
+			set_global_variable = {
+				name = kns_papal_tourney_pending
+				value = yes
+			}
+			scope:kns_pope = {
+				add_character_flag = kns_papal_tourney_needed
+				trigger_event = {
+					id = kns_papal_tourney.0001
+					days = { 60 120 }
+				}
+			}
+		}
+	}
+}
+
+kns_resolve_papal_youth_tourney_effect = {
+	if = {
+		limit = {
+			exists = scope:kns_pope
+			scope:kns_pope = {
+				any_in_list = {
+					variable = kns_papal_entrants
+					is_alive = yes
+					kns_can_enter_papal_youth_tourney_trigger = yes
+				}
+			}
+		}
+		scope:kns_pope = {
+			random_in_list = {
+				variable = kns_papal_entrants
+				limit = {
+					is_alive = yes
+					kns_can_enter_papal_youth_tourney_trigger = yes
+				}
+				weight = {
+					base = 5
+					modifier = {
+						add = prowess_no_portrait
+					}
+					modifier = {
+						add = 10
+						has_education_martial_trigger = yes
+					}
+				}
+				save_scope_as = kns_papal_winner
+			}
+		}
+		if = {
+			limit = { exists = scope:kns_papal_winner }
+			kns_make_papal_tourney_winner_prodigious_effect = {
+				WINNER = scope:kns_papal_winner
+				POPE = scope:kns_pope
+			}
+			set_global_variable = {
+				name = kns_papal_tourney_ready_year
+				value = {
+					value = current_year
+					add = 20
+				}
+			}
+		}
+	}
+	remove_global_variable = kns_papal_tourney_pending
+	scope:kns_pope ?= {
+		remove_character_flag = kns_papal_tourney_needed
+		clear_variable_list = kns_papal_entrants
+	}
+}

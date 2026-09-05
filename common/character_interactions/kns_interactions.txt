@@ -1,0 +1,1352 @@
+#########################
+# Offer Knighthood
+#########################
+
+kns_offer_knighthood_interaction = {
+	category = interaction_category_diplomacy
+	desc = kns_offer_knighthood_interaction_desc
+	icon = icon_combat
+
+	ai_maybe = yes
+	ai_min_reply_days = 1
+	ai_max_reply_days = 3
+	popup_on_receive = yes
+
+	greeting = positive
+	send_name = kns_offer_of_knighthood
+	notification_text = KNS_OFFER_KNIGHTHOOD_NOTIFICATION
+
+	use_diplomatic_range = yes
+
+	cost = {
+		prestige = { value = medium_prestige_value }
+	}
+
+	is_shown = {
+		scope:actor = {
+			kns_actor_can_offer_knighthood_trigger = yes
+			NOT = { this = scope:recipient }
+		}
+		scope:recipient = {
+			kns_can_receive_knighthood_offer_from_trigger = { ACTOR = scope:actor }
+		}
+	}
+
+	on_accept = {
+		kns_become_a_knight_effect = {
+			KNIGHT_MAKER = scope:actor
+			KNIGHT_TO_BE = scope:recipient
+		}
+	}
+
+	on_decline = {
+		scope:actor = {
+			add_prestige = miniscule_prestige_loss
+			add_opinion = {
+				target = scope:recipient
+				modifier = kns_declined_knighthood_opinion
+				opinion = -15
+			}
+			send_interface_toast = {
+				title = kns_knighthood_offer_rejected_toast
+				left_icon = scope:actor
+				right_icon = scope:recipient
+				custom_tooltip = kns_knighthood_offer_rejected_toast.tt
+			}
+		}
+	}
+
+	ai_frequency = 24
+
+	ai_potential = {
+		is_adult = yes
+		kns_is_knight_trigger = yes
+		is_available_ai_adult = yes
+	}
+
+	ai_targets = {
+		ai_recipients = children
+		ai_recipients = courtiers
+		ai_recipients = vassals
+		max = 5
+	}
+
+	ai_targets = {
+		ai_recipients = scripted_relations
+	}
+
+	auto_accept = {
+		custom_description = {
+			text = "KNS_THEY_ARE_MY_SQUIRE"
+			subject = scope:actor
+			object = scope:recipient
+			scope:recipient = {
+				has_relation_kns_knight = scope:actor
+			}
+		}
+	}
+
+	ai_accept = {
+		base = 20
+		modifier = {
+			add = { value = ai_boldness divide = 2 min = 10 }
+			ai_boldness > 0
+			desc = KNS_KNIGHTHOOD_HIGH_BOLDNESS_REASON
+		}
+		modifier = {
+			add = 10
+			has_education_martial_trigger = yes
+			desc = KNS_KNIGHTHOOD_EDUCATION_MARTIAL_REASON
+		}
+		modifier = {
+			add = -15
+			has_education_learning_trigger = yes
+			desc = KNS_KNIGHTHOOD_EDUCATION_LEARNING_REASON
+		}
+		modifier = {
+			add = 25
+			has_trait_rank = {
+				trait = education_martial_prowess
+				rank >= 1
+			}
+			desc = KNS_KNIGHTHOOD_I_AM_A_WARRIOR_REASON
+		}
+		modifier = {
+			add = -200
+			NOT = { kns_practices_knighthood_trigger = yes }
+			desc = KNS_KNIGHTHOOD_MY_FAITH_DOES_NOT_CARE
+		}
+		modifier = {
+			add = 20
+			kns_practices_knighthood_trigger = yes
+			desc = KNS_KNIGHTHOOD_HAS_KNIGHTHOOD_REASON
+		}
+		modifier = {
+			add = -1000
+			OR = {
+				has_relation_rival = scope:actor
+				has_relation_nemesis = scope:actor
+			}
+			desc = AI_YOUR_RIVAL
+		}
+		modifier = {
+			add = 50
+			is_lowborn = yes
+			scope:actor = { is_lowborn = no }
+			desc = KNS_LOWBORN_DESIRES_KNIGHTHOOD_REASON
+		}
+		modifier = {
+			add = -100
+			is_lowborn = no
+			scope:actor = { is_lowborn = yes }
+			desc = KNS_HIGHBORN_DISLIKES_LOWBORN_KNIGHT_OFFER
+		}
+		opinion_modifier = {
+			who = scope:recipient
+			opinion_target = scope:actor
+			multiplier = 0.25
+			desc = AI_SIMPLE_OPINION_REASON
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 2000
+			has_relation_kns_squire = scope:recipient
+		}
+		modifier = {
+			add = 20
+			kns_practices_knighthood_trigger = yes
+		}
+		modifier = {
+			add = 5
+			OR = {
+				has_trait = gallant
+				has_trait = generous
+				has_trait = gregarious
+			}
+		}
+		modifier = {
+			add = -300
+			scope:recipient = {
+				NOT = { kns_practices_knighthood_trigger = yes }
+			}
+		}
+		modifier = {
+			add = -100
+			opinion = {
+				target = scope:recipient
+				value <= low_negative_opinion
+			}
+		}
+	}
+}
+
+#########################
+# Ask Liege for Knighthood
+#########################
+
+kns_ask_liege_knighthood_interaction = {
+	category = interaction_category_vassal
+	desc = kns_ask_liege_knighthood_interaction_desc
+	icon = icon_combat
+	interface_priority = 70
+
+	ai_maybe = yes
+	ai_min_reply_days = 1
+	ai_max_reply_days = 4
+	popup_on_receive = yes
+
+	greeting = positive
+	send_name = kns_ask_for_knighthood
+	notification_text = KNS_ASK_LIEGE_KNIGHTHOOD_NOTIFICATION
+
+	use_diplomatic_range = yes
+	cooldown = { days = 730 }
+
+	cost = {
+		prestige = { value = medium_prestige_value }
+	}
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			NOT = { this = scope:recipient }
+			kns_can_become_a_knight_trigger = yes
+			kns_can_ask_for_knighthood_from_trigger = { LORD = scope:recipient }
+		}
+		scope:recipient = {
+			kns_is_king_or_emperor_trigger = yes
+		}
+	}
+
+	is_valid = {
+		scope:recipient = {
+			custom_tooltip = {
+				text = kns_ask_liege_king_or_emperor_tt
+				kns_is_king_or_emperor_trigger = yes
+			}
+			custom_tooltip = {
+				text = kns_ask_liege_christian_tt
+				kns_practices_knighthood_trigger = yes
+			}
+			custom_tooltip = {
+				text = kns_ask_liege_good_opinion_tt
+				opinion = {
+					target = scope:actor
+					value >= 50
+				}
+			}
+		}
+		scope:actor = {
+			custom_tooltip = {
+				text = kns_ask_liege_martial_tt
+				kns_has_ask_liege_martial_requirement_trigger = yes
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_imprisoned = no
+			NOT = { is_at_war_with = scope:recipient }
+		}
+		scope:recipient = {
+			is_adult = yes
+			is_imprisoned = no
+		}
+	}
+
+	on_accept = {
+		kns_become_a_knight_effect = {
+			KNIGHT_MAKER = scope:recipient
+			KNIGHT_TO_BE = scope:actor
+		}
+	}
+
+	on_decline = {
+		scope:actor = {
+			add_prestige = miniscule_prestige_loss
+			send_interface_toast = {
+				title = kns_ask_liege_knighthood_rejected_toast
+				left_icon = scope:actor
+				right_icon = scope:recipient
+				custom_tooltip = kns_ask_liege_knighthood_rejected_toast.tt
+			}
+		}
+	}
+
+	ai_accept = {
+		base = 10
+		opinion_modifier = {
+			who = scope:recipient
+			opinion_target = scope:actor
+			multiplier = 0.5
+			desc = AI_SIMPLE_OPINION_REASON
+		}
+		modifier = {
+			add = 20
+			scope:recipient = { kns_is_knight_trigger = yes }
+			desc = KNS_KNIGHTHOOD_HAS_KNIGHTHOOD_REASON
+		}
+		modifier = {
+			add = -25
+			scope:recipient = { has_trait = greedy }
+			desc = THEY_ARE_GREEDY
+		}
+		modifier = {
+			add = -1000
+			OR = {
+				scope:recipient = { has_relation_rival = scope:actor }
+				scope:recipient = { has_relation_nemesis = scope:actor }
+			}
+			desc = AI_YOUR_RIVAL
+		}
+	}
+
+	ai_will_do = { base = 0 }
+}
+
+#########################
+# Educate Squire (own court)
+#########################
+
+kns_educate_squire_interaction = {
+	category = interaction_category_diplomacy
+	desc = kns_educate_squire_interaction_desc
+	icon = icon_combat
+	use_diplomatic_range = yes
+	send_name = KNS_OFFER_EDUCATE_SQUIRE
+	greeting = positive
+
+	notification_text = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:actor = scope:secondary_actor
+					NOT = { scope:recipient = scope:secondary_recipient }
+				}
+				desc = KNS_EDUCATE_RECIPIENT_SQUIRE_PERSONALLY_REQUEST
+			}
+			triggered_desc = {
+				trigger = {
+					scope:actor = scope:secondary_actor
+					scope:recipient = scope:secondary_recipient
+				}
+				desc = KNS_EDUCATE_SQUIRE_PERSONALLY_REQUEST
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { scope:recipient = scope:secondary_recipient }
+					NOT = { scope:actor = scope:secondary_actor }
+				}
+				desc = KNS_EDUCATE_RECIPIENT_SQUIRE_REQUEST
+			}
+			desc = KNS_EDUCATE_SQUIRE_REQUEST
+		}
+	}
+
+	cooldown = { months = 4 }
+
+	redirect = {
+		if = {
+			limit = { scope:actor = { is_ai = no } }
+			scope:actor = {
+				if = {
+					limit = { kns_is_eligible_for_squirehood_trigger = yes }
+					save_scope_as = secondary_recipient
+				}
+				else_if = {
+					limit = { kns_can_take_squire_trigger = yes }
+					save_scope_as = secondary_actor
+				}
+			}
+			scope:recipient = {
+				if = {
+					limit = { kns_can_take_squire_trigger = yes }
+					save_scope_as = secondary_actor
+				}
+				else = {
+					save_scope_as = secondary_recipient
+				}
+			}
+		}
+	}
+
+	populate_actor_list = {
+		scope:actor = {
+			if = {
+				limit = { kns_can_take_squire_trigger = yes }
+				add_to_list = characters
+			}
+			every_courtier = {
+				limit = { kns_can_take_squire_trigger = yes }
+				add_to_list = characters
+			}
+		}
+	}
+
+	populate_recipient_list = {
+		scope:recipient = {
+			if = {
+				limit = { kns_is_eligible_for_squirehood_trigger = yes }
+				add_to_list = characters
+			}
+			every_courtier = {
+				limit = { kns_is_eligible_for_squirehood_trigger = yes }
+				add_to_list = characters
+			}
+		}
+	}
+
+	prompt = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = scope:secondary_actor } }
+				desc = KNS_EDUCATE_SELECT_YOUR_KNIGHT
+			}
+			triggered_desc = {
+				trigger = { NOT = { exists = scope:secondary_recipient } }
+				desc = KNS_EDUCATE_SELECT_YOUR_SQUIRE
+			}
+		}
+	}
+
+	is_shown = {
+		scope:recipient = {
+			is_in_the_same_court_as = scope:actor
+		}
+		trigger_if = {
+			limit = { exists = scope:secondary_actor }
+			scope:secondary_actor = { kns_can_take_squire_trigger = yes }
+		}
+		trigger_if = {
+			limit = { exists = scope:secondary_recipient }
+			scope:secondary_recipient = { kns_is_eligible_for_squirehood_trigger = yes }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = {
+			is_imprisoned = no
+			NOT = { has_trait = incapable }
+		}
+		custom_description = {
+			text = kns_character_to_knight_exists
+			subject = scope:actor
+			scope:actor = {
+				OR = {
+					any_courtier = { kns_can_take_squire_trigger = yes }
+					kns_can_take_squire_trigger = yes
+				}
+			}
+		}
+		custom_description = {
+			text = kns_character_to_squire_exists
+			object = scope:actor
+			scope:actor = {
+				OR = {
+					any_courtier = { kns_is_eligible_for_squirehood_trigger = yes }
+					kns_is_eligible_for_squirehood_trigger = yes
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		scope:secondary_recipient = { save_scope_as = squire }
+		scope:secondary_actor = { save_scope_as = knight }
+		kns_set_squire_effect = {
+			KNIGHT = scope:secondary_actor
+			SQUIRE = scope:secondary_recipient
+		}
+		kns_offer_squire_hook_effect = yes
+	}
+
+	auto_accept = yes
+
+	send_option = {
+		is_shown = { NOT = { scope:actor = scope:recipient } }
+		is_valid = { scope:actor = { has_usable_hook = scope:recipient } }
+		flag = hook
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	should_use_extra_icon = {
+		scope:actor = { has_usable_hook = scope:recipient }
+	}
+	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
+	send_options_exclusive = no
+
+	ai_frequency = 24
+
+	ai_potential = {
+		is_adult = yes
+		is_available_ai_adult = yes
+		OR = {
+			kns_is_knight_trigger = yes
+			any_courtier = { kns_can_take_squire_trigger = yes }
+		}
+		any_courtier = { kns_is_eligible_for_squirehood_trigger = yes }
+	}
+
+	ai_targets = { ai_recipients = self }
+
+	ai_will_do = {
+		base = 60
+		modifier = {
+			add = 20
+			kns_practices_knighthood_trigger = yes
+		}
+		modifier = {
+			add = {
+				value = scope:secondary_recipient.age
+				multiply = -4
+			}
+			scope:secondary_recipient.age >= 16
+		}
+		modifier = {
+			add = -1000
+			scope:secondary_recipient = {
+				OR = {
+					has_relation_rival = scope:secondary_actor
+					has_relation_nemesis = scope:secondary_actor
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			scope:secondary_recipient = {
+				NOR = {
+					is_close_family_of = scope:actor
+					this = scope:actor
+				}
+			}
+		}
+	}
+}
+
+#########################
+# Offer Squire to another court
+#########################
+
+kns_offer_squire_interaction = {
+	category = interaction_category_diplomacy
+	icon = icon_combat
+	desc = kns_offer_squire_interaction_desc
+	send_name = KNS_OFFER_SQUIRE
+
+	is_shown = {
+		scope:recipient = {
+			NOT = { this = scope:actor }
+			NOT = { is_courtier_of = scope:actor }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		custom_description = {
+			text = kns_character_to_knight_exists
+			subject = scope:recipient
+			scope:recipient = {
+				OR = {
+					any_courtier = { kns_can_take_squire_trigger = yes }
+					kns_can_take_squire_trigger = yes
+				}
+			}
+		}
+		custom_description = {
+			text = kns_character_to_squire_exists
+			object = scope:actor
+			scope:actor = {
+				OR = {
+					any_courtier = { kns_is_eligible_for_squirehood_trigger = yes }
+					kns_is_eligible_for_squirehood_trigger = yes
+				}
+			}
+		}
+		NOT = { scope:actor = { is_at_war_with = scope:recipient } }
+		scope:recipient = { is_imprisoned = no }
+	}
+
+	prompt = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = scope:secondary_actor }
+				desc = KNS_EDUCATE_SELECT_THEIR_KNIGHT
+			}
+			desc = KNS_EDUCATE_SELECT_YOUR_SQUIRE
+		}
+	}
+
+	populate_actor_list = {
+		scope:actor = {
+			if = {
+				limit = {
+					kns_is_eligible_for_squirehood_trigger = yes
+					is_hostage = no
+				}
+				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					kns_is_eligible_for_squirehood_trigger = yes
+					is_hostage = no
+				}
+				add_to_list = characters
+			}
+		}
+	}
+
+	populate_recipient_list = {
+		scope:recipient = {
+			if = {
+				limit = { kns_can_take_squire_trigger = yes }
+				add_to_list = characters
+			}
+			every_courtier = {
+				limit = { kns_can_take_squire_trigger = yes }
+				add_to_list = characters
+			}
+		}
+	}
+
+	greeting = positive
+	notification_text = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:actor = scope:secondary_actor
+					scope:recipient = scope:secondary_recipient
+				}
+				desc = KNS_SQUIRE_SHOWN_PERSONALLY_REQUEST
+			}
+			triggered_desc = {
+				trigger = { scope:actor = scope:secondary_actor }
+				desc = KNS_SQUIRE_SHOWN_ACTOR_REQUEST
+			}
+			triggered_desc = {
+				trigger = { scope:recipient = scope:secondary_recipient }
+				desc = KNS_SQUIRE_SHOWN_CHILD_PERSONALLY_REQUEST
+			}
+			desc = KNS_SQUIRE_SHOWN_CHILD_REQUEST
+		}
+	}
+
+	on_accept = {
+		scope:secondary_actor = { save_scope_as = squire }
+		scope:secondary_recipient = { save_scope_as = knight }
+		scope:actor = {
+			trigger_event = kns_interaction.0080
+			kns_set_squire_effect = {
+				KNIGHT = scope:secondary_recipient
+				SQUIRE = scope:secondary_actor
+			}
+			kns_offer_squire_hook_effect = yes
+		}
+	}
+
+	on_decline = {
+		scope:actor = {
+			trigger_event = kns_interaction.0081
+		}
+	}
+
+	auto_accept = {
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:hook = yes
+			scope:actor = { has_strong_hook = scope:recipient }
+		}
+	}
+
+	send_option = {
+		is_shown = { NOT = { scope:actor = scope:recipient } }
+		is_valid = { scope:actor = { has_usable_hook = scope:recipient } }
+		flag = hook
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	send_options_exclusive = no
+	should_use_extra_icon = {
+		scope:actor = { has_usable_hook = scope:recipient }
+	}
+	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
+
+	ai_frequency = 36
+	ai_targets = { ai_recipients = vassals ai_recipients = peer_vassals }
+
+	ai_accept = {
+		base = 10
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 0.6
+			desc = AI_OPINION_REASON
+		}
+		modifier = {
+			add = -1000
+			scope:secondary_actor = {
+				is_landed = yes
+				age >= 16
+			}
+			desc = KNS_SQUIREHOOD_I_AM_A_RULER_ALREADY
+		}
+		modifier = {
+			add = {
+				value = scope:secondary_actor.age
+				multiply = -4
+			}
+			scope:secondary_actor.age >= 16
+			desc = KNS_SQUIREHOOD_I_AM_OLD_ENOUGH
+		}
+		modifier = {
+			add = 50
+			scope:recipient = { target_is_liege_or_above = scope:actor }
+			desc = EDUCATE_CHILD_ACTOR_IS_MY_LIEGE
+		}
+		modifier = {
+			add = 15
+			kns_practices_knighthood_trigger = yes
+			desc = KNS_KNIGHTHOOD_HAS_KNIGHTHOOD_REASON
+		}
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			add = 20
+			AND = {
+				scope:recipient = { kns_practices_knighthood_trigger = yes }
+				scope:actor = { kns_practices_knighthood_trigger = yes }
+			}
+		}
+		modifier = {
+			add = 60
+			scope:secondary_actor = {
+				is_child_of = scope:actor
+				any_heir_title = {
+					exists = this
+					place_in_line_of_succession = {
+						target = scope:secondary_actor
+						value < 3
+					}
+				}
+			}
+		}
+		modifier = {
+			add = -1000
+			scope:recipient = {
+				OR = {
+					has_relation_rival = scope:actor
+					has_relation_nemesis = scope:actor
+				}
+			}
+		}
+	}
+
+	ai_potential = {
+		primary_title.tier >= tier_county
+		is_available_ai_adult = yes
+		any_courtier = { kns_is_eligible_for_squirehood_trigger = yes }
+	}
+}
+
+#########################
+# Offer Knight Tutelage
+#########################
+
+kns_offer_knight_tutelage_interaction = {
+	category = interaction_category_diplomacy
+	icon = icon_combat
+	desc = kns_offer_knight_tutelage_interaction_desc
+	use_diplomatic_range = yes
+	send_name = KNS_OFFER_KNIGHT_TUTELAGE
+
+	populate_actor_list = {
+		scope:actor = {
+			if = {
+				limit = {
+					kns_can_take_squire_trigger = yes
+					is_hostage = no
+				}
+				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					kns_can_take_squire_trigger = yes
+					is_hostage = no
+				}
+				add_to_list = characters
+			}
+		}
+	}
+
+	populate_recipient_list = {
+		scope:recipient = {
+			if = {
+				limit = { kns_is_eligible_for_squirehood_trigger = yes }
+				add_to_list = characters
+			}
+			every_courtier = {
+				limit = { kns_is_eligible_for_squirehood_trigger = yes }
+				add_to_list = characters
+			}
+		}
+	}
+
+	greeting = positive
+	notification_text = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:actor = scope:secondary_actor
+					scope:recipient = scope:secondary_recipient
+				}
+				desc = KNS_EDUCATE_SQUIRE_PERSONALLY_REQUEST
+			}
+			triggered_desc = {
+				trigger = { scope:actor = scope:secondary_actor }
+				desc = KNS_EDUCATE_RECIPIENT_SQUIRE_PERSONALLY_REQUEST
+			}
+			triggered_desc = {
+				trigger = { scope:recipient = scope:secondary_recipient }
+				desc = KNS_EDUCATE_SQUIRE_REQUEST
+			}
+			desc = KNS_EDUCATE_RECIPIENT_SQUIRE_REQUEST
+		}
+	}
+
+	prompt = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = scope:secondary_actor } }
+				desc = KNS_EDUCATE_SELECT_YOUR_KNIGHT
+			}
+			triggered_desc = {
+				trigger = { NOT = { exists = scope:secondary_recipient } }
+				desc = KNS_EDUCATE_SELECT_THEIR_SQUIRE
+			}
+		}
+	}
+
+	is_shown = {
+		scope:recipient = {
+			NOT = { this = scope:actor }
+			is_landed = yes
+		}
+		trigger_if = {
+			limit = { exists = scope:secondary_recipient }
+			scope:secondary_recipient = {
+				kns_is_eligible_for_squirehood_trigger = yes
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		custom_description = {
+			text = kns_character_to_squire_exists
+			object = scope:recipient
+			scope:recipient = {
+				OR = {
+					any_courtier = { kns_is_eligible_for_squirehood_trigger = yes }
+					kns_is_eligible_for_squirehood_trigger = yes
+				}
+			}
+		}
+		custom_description = {
+			text = kns_character_to_knight_exists
+			subject = scope:actor
+			scope:actor = {
+				OR = {
+					any_courtier = { kns_can_take_squire_trigger = yes }
+					kns_can_take_squire_trigger = yes
+				}
+			}
+		}
+		scope:recipient = { is_imprisoned = no }
+		NOT = { scope:actor = { is_at_war_with = scope:recipient } }
+	}
+
+	on_accept = {
+		scope:secondary_actor = { save_scope_as = knight }
+		scope:secondary_recipient = { save_scope_as = squire }
+		if = {
+			limit = {
+				scope:knight = { kns_can_take_squire_trigger = yes }
+			}
+			kns_set_squire_effect = {
+				KNIGHT = scope:secondary_actor
+				SQUIRE = scope:secondary_recipient
+			}
+			kns_offer_squire_hook_effect = yes
+			scope:actor = {
+				if = {
+					limit = { NOT = { this = scope:recipient } }
+					trigger_event = kns_interaction.0080
+				}
+			}
+		}
+	}
+
+	on_decline = {
+		scope:actor = {
+			trigger_event = kns_interaction.0081
+			add_opinion = {
+				modifier = declined_guardianship_opinion
+				target = scope:recipient
+				opinion = -15
+			}
+		}
+	}
+
+	auto_accept = {
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:hook = yes
+			scope:actor = { has_strong_hook = scope:recipient }
+		}
+	}
+
+	ai_accept = {
+		base = 0
+		modifier = {
+			add = 50
+			scope:recipient = { target_is_liege_or_above = scope:actor }
+			desc = EDUCATE_CHILD_ACTOR_IS_MY_LIEGE
+		}
+		modifier = {
+			add = 20
+			scope:recipient = { has_relation_friend = scope:actor }
+			desc = AI_YOUR_FRIEND
+		}
+		modifier = {
+			add = -1000
+			scope:recipient = {
+				OR = {
+					has_relation_rival = scope:actor
+					has_relation_nemesis = scope:actor
+				}
+			}
+			desc = AI_YOUR_RIVAL
+		}
+		opinion_modifier = {
+			opinion_target = scope:actor
+			who = scope:recipient
+			multiplier = 0.8
+			desc = AI_OPINION_REASON
+		}
+		compare_modifier = {
+			trigger = { scope:secondary_actor = { prowess >= 10 } }
+			target = scope:secondary_actor
+			value = prowess
+			step = 4
+			multiplier = 0.75
+			offset = -5
+			min = 0
+			desc = KNS_AI_GUARDIAN_SKILL_PROWESS
+		}
+		modifier = {
+			add = 100
+			scope:actor = { is_allied_to = scope:recipient }
+			desc = AI_HAS_ALLIANCE
+		}
+	}
+
+	send_option = {
+		is_shown = { NOT = { scope:actor = scope:recipient } }
+		is_valid = { scope:actor = { has_usable_hook = scope:recipient } }
+		flag = hook
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	should_use_extra_icon = {
+		scope:actor = { has_usable_hook = scope:recipient }
+	}
+	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
+	send_options_exclusive = no
+
+	ai_targets = { ai_recipients = vassals ai_recipients = peer_vassals }
+	ai_frequency = 36
+
+	ai_potential = {
+		is_imprisoned = no
+		is_available = yes
+		any_courtier = { kns_can_take_squire_trigger = yes }
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			add = 25
+			AND = {
+				scope:recipient = { kns_practices_knighthood_trigger = yes }
+				scope:actor = { kns_practices_knighthood_trigger = yes }
+			}
+		}
+		modifier = {
+			add = -1000
+			scope:recipient = {
+				OR = {
+					has_relation_rival = scope:actor
+					has_relation_nemesis = scope:actor
+				}
+			}
+		}
+	}
+}
+
+#########################
+# Remove My Squire
+#########################
+
+kns_remove_my_squire_interaction = {
+	category = interaction_category_diplomacy
+	desc = kns_remove_my_squire_interaction_desc
+	icon = icon_combat
+	popup_on_receive = yes
+	greeting = negative
+	send_name = kns_squirehood_removal
+	notification_text = KNS_REMOVAL_OF_SQUIREHOOD_NOTIFICATION
+	use_diplomatic_range = yes
+
+	is_shown = {
+		scope:actor = {
+			is_adult = yes
+			kns_is_knight_trigger = yes
+			has_relation_kns_squire = scope:recipient
+			is_imprisoned = no
+		}
+		scope:recipient = {
+			is_imprisoned = no
+			has_trait = squire
+			has_relation_kns_knight = scope:actor
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			remove_relation_kns_squire = scope:recipient
+			create_character_memory = {
+				type = kns_lost_squire
+				participants = { squire = scope:recipient }
+			}
+		}
+		scope:recipient = {
+			add_character_flag = kns_was_removed_as_squire_flag
+			add_opinion = {
+				target = scope:actor
+				modifier = kns_removed_me_as_squire_opinion
+				opinion = -50
+			}
+			create_character_memory = {
+				type = kns_removed_me_as_squire
+				participants = { knight = scope:actor }
+			}
+			if = {
+				limit = {
+					any_owned_story = { story_type = story_kns_squire_ongoing }
+				}
+				random_owned_story = {
+					limit = { story_type = story_kns_squire_ongoing }
+					end_story = yes
+				}
+			}
+		}
+	}
+	auto_accept = yes
+}
+
+#########################
+# Remove Child's Knight
+#########################
+
+kns_remove_childs_knight_interaction = {
+	category = interaction_category_friendly
+	desc = kns_remove_childs_knight_interaction_desc
+	icon = icon_combat
+	force_notification = yes
+	greeting = negative
+	notification_text = KNS_REMOVE_CHILDS_KNIGHT_INTERACTION
+	use_diplomatic_range = no
+
+	is_shown = {
+		scope:actor = {
+			is_ruler = yes
+			NOT = {
+				any_relation = {
+					type = kns_squire
+					this = scope:recipient
+				}
+			}
+		}
+		scope:recipient = {
+			is_landed = no
+			is_child_of = scope:actor
+			any_relation = { type = kns_knight }
+		}
+	}
+
+	auto_accept = yes
+
+	on_accept = {
+		scope:recipient = {
+			save_scope_as = cancelled_squire_child
+			random_relation = {
+				type = kns_knight
+				save_scope_as = childs_knight
+			}
+			if = {
+				limit = {
+					OR = {
+						host = scope:childs_knight
+						host = scope:childs_knight.liege
+					}
+				}
+				return_to_court = yes
+			}
+			if = {
+				limit = {
+					any_owned_story = { story_type = story_kns_squire_ongoing }
+				}
+				random_owned_story = {
+					limit = { story_type = story_kns_squire_ongoing }
+					end_story = yes
+				}
+			}
+		}
+		scope:childs_knight = {
+			remove_relation_kns_squire = scope:cancelled_squire_child
+			create_character_memory = {
+				type = kns_lost_squire
+				participants = { squire = scope:cancelled_squire_child }
+			}
+			add_opinion = {
+				target = scope:actor
+				modifier = kns_removed_my_squire_opinion
+				opinion = -50
+			}
+		}
+		scope:cancelled_squire_child = {
+			add_character_flag = kns_was_removed_as_squire_flag
+		}
+	}
+
+	ai_will_do = { base = 0 }
+}
+
+#########################
+# Train Squire
+#########################
+
+kns_train_squire_interaction = {
+	category = interaction_category_diplomacy
+	desc = kns_train_squire_interaction_desc
+	icon = icon_combat
+	greeting = positive
+	send_name = kns_squire_training
+	notification_text = KNS_KNIGHT_TRAINS_SQUIRE_NOTIFICATION
+	use_diplomatic_range = yes
+	cooldown_against_recipient = { days = 32 }
+
+	is_shown = {
+		scope:actor = {
+			is_adult = yes
+			kns_is_knight_trigger = yes
+			any_relation = { type = kns_squire }
+			is_imprisoned = no
+		}
+		scope:recipient = {
+			has_trait = squire
+			has_relation_kns_knight = scope:actor
+			is_imprisoned = no
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = { is_available = yes }
+	}
+
+	on_accept = {
+		scope:actor = {
+			custom_tooltip = kns_train_squire_actor.tt
+			save_scope_as = my_knight
+			scope:recipient = { save_scope_as = my_squire }
+			trigger_event = kns_squire.0400
+		}
+		scope:recipient = {
+			custom_tooltip = kns_train_squire_recipient.tt
+		}
+	}
+
+	auto_accept = yes
+	ai_frequency = 3
+
+	ai_potential = {
+		is_adult = yes
+		kns_is_knight_trigger = yes
+		is_imprisoned = no
+		is_available_ai_adult = yes
+	}
+
+	ai_targets = { ai_recipients = scripted_relations }
+	ai_will_do = { base = 100 }
+}
+
+#########################
+# Strip Knighthood
+#########################
+
+kns_strip_knighthood_interaction = {
+	category = interaction_category_prison
+	desc = kns_strip_knighthood_interaction_desc
+	icon = icon_combat
+	greeting = negative
+	send_name = kns_strip_knighthood
+	notification_text = KNS_STRIP_KNIGHTHOOD_NOTIFICATION
+	use_diplomatic_range = yes
+
+	is_shown = {
+		scope:actor = {
+			is_landed = yes
+			highest_held_title_tier >= tier_kingdom
+			kns_practices_knighthood_trigger = yes
+		}
+		scope:recipient = {
+			kns_is_knight_trigger = yes
+			OR = {
+				is_vassal_or_below_of = scope:actor
+				court_owner ?= { is_vassal_or_below_of = scope:actor }
+				is_courtier_of = scope:actor
+			}
+		}
+	}
+
+	cost = {
+		prestige = { value = major_prestige_value }
+	}
+
+	on_accept = {
+		kns_strip_knighthood_effect = {
+			STRIPPER = scope:actor
+			KNIGHT = scope:recipient
+		}
+	}
+
+	auto_accept = yes
+	ai_will_do = { base = 0 }
+}
+
+#########################
+# Fund Knight
+#########################
+
+kns_fund_knight_interaction = {
+	category = interaction_category_diplomacy
+	desc = kns_fund_knight_interaction_desc
+	icon = icon_gold
+	interface_priority = 80
+
+	send_name = kns_fund_knight
+	use_diplomatic_range = no
+	auto_accept = yes
+
+	is_shown = {
+		scope:actor = {
+			is_landed = yes
+		}
+		scope:recipient = {
+			kns_can_be_funded_by_trigger = { PATRON = scope:actor }
+		}
+	}
+
+	on_accept = {
+		kns_start_funding_knight_effect = {
+			KNIGHT = scope:recipient
+			PATRON = scope:actor
+		}
+		scope:actor = {
+			send_interface_toast = {
+				type = event_toast_effect_good
+				title = kns_fund_knight_toast
+				custom_tooltip = kns_fund_knight_toast.tt
+				left_icon = scope:recipient
+			}
+		}
+	}
+
+	ai_will_do = { base = 0 }
+}
+
+kns_stop_funding_knight_interaction = {
+	category = interaction_category_diplomacy
+	desc = kns_stop_funding_knight_interaction_desc
+	icon = icon_gold
+	interface_priority = 81
+
+	send_name = kns_stop_funding_knight
+	use_diplomatic_range = no
+	auto_accept = yes
+
+	is_shown = {
+		scope:actor = {
+			is_landed = yes
+		}
+		scope:recipient = {
+			kns_is_funded_by_character_trigger = { PATRON = scope:actor }
+		}
+	}
+
+	on_accept = {
+		kns_stop_funding_knight_effect = {
+			KNIGHT = scope:recipient
+			PATRON = scope:actor
+		}
+		scope:actor = {
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = kns_stop_funding_knight_toast
+				custom_tooltip = kns_stop_funding_knight_toast.tt
+				left_icon = scope:recipient
+			}
+		}
+	}
+
+	ai_will_do = { base = 0 }
+}
+
+#########################
+# View Knightly Lineage
+#########################
+
+kns_view_knightly_lineage_interaction = {
+	category = interaction_category_diplomacy
+	desc = kns_view_knightly_lineage_interaction_desc
+	icon = icon_combat
+	interface_priority = 82
+
+	send_name = kns_view_knightly_lineage
+	use_diplomatic_range = no
+	auto_accept = yes
+
+	is_shown = {
+		scope:recipient = {
+			kns_is_knight_trigger = yes
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			send_interface_toast = {
+				title = kns_view_knightly_lineage
+				left_icon = scope:recipient
+				scope:recipient = {
+					kns_show_knightly_lineage_effect = yes
+				}
+			}
+		}
+	}
+
+	ai_will_do = { base = 0 }
+}

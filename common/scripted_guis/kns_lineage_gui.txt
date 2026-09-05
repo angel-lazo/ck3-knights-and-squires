@@ -1,0 +1,110 @@
+kns_lineage_window_is_shown = {
+	scope = character
+	is_shown = {
+		exists = var:kns_lineage_subject
+	}
+}
+
+kns_lineage_has_teacher = {
+	scope = character
+	is_shown = {
+		exists = var:kns_lineage_teacher
+		var:kns_lineage_subject ?= {
+			NOT = { has_character_flag = kns_bought_knighthood }
+		}
+	}
+}
+
+kns_lineage_is_purchased = {
+	scope = character
+	is_shown = {
+		var:kns_lineage_subject ?= {
+			has_character_flag = kns_bought_knighthood
+		}
+	}
+}
+
+kns_lineage_teacher_unknown = {
+	scope = character
+	is_shown = {
+		NOT = { exists = var:kns_lineage_teacher }
+		var:kns_lineage_subject ?= {
+			NOT = { has_character_flag = kns_bought_knighthood }
+		}
+	}
+}
+
+kns_lineage_has_chain = {
+	scope = character
+	is_shown = {
+		exists = var:kns_lineage_gen1
+	}
+}
+
+kns_lineage_has_gen2 = {
+	scope = character
+	is_shown = {
+		exists = var:kns_lineage_gen2
+	}
+}
+
+kns_lineage_has_gen3 = {
+	scope = character
+	is_shown = {
+		exists = var:kns_lineage_gen3
+	}
+}
+
+kns_lineage_has_students = {
+	scope = character
+	is_shown = {
+		exists = var:kns_lineage_student_1
+	}
+}
+
+kns_lineage_has_student_1 = {
+	scope = character
+	is_shown = { exists = var:kns_lineage_student_1 }
+}
+
+kns_lineage_has_student_2 = {
+	scope = character
+	is_shown = { exists = var:kns_lineage_student_2 }
+}
+
+kns_lineage_has_student_3 = {
+	scope = character
+	is_shown = { exists = var:kns_lineage_student_3 }
+}
+
+kns_lineage_has_student_4 = {
+	scope = character
+	is_shown = { exists = var:kns_lineage_student_4 }
+}
+
+kns_lineage_has_student_5 = {
+	scope = character
+	is_shown = { exists = var:kns_lineage_student_5 }
+}
+
+kns_lineage_has_student_6 = {
+	scope = character
+	is_shown = { exists = var:kns_lineage_student_6 }
+}
+
+kns_lineage_has_student_7 = {
+	scope = character
+	is_shown = { exists = var:kns_lineage_student_7 }
+}
+
+kns_lineage_has_student_8 = {
+	scope = character
+	is_shown = { exists = var:kns_lineage_student_8 }
+}
+
+kns_close_lineage_window = {
+	scope = character
+	effect = {
+		kns_close_lineage_window_effect = yes
+	}
+}

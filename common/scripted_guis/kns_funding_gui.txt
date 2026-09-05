@@ -1,0 +1,364 @@
+kns_funding_window_is_shown = {
+	scope = character
+	is_shown = {
+		exists = var:kns_funding_window_open
+	}
+}
+
+kns_close_funding_window = {
+	scope = character
+	effect = {
+		kns_close_funding_window_effect = yes
+	}
+}
+
+kns_gui_fund_all_knights = {
+	scope = character
+	is_valid = {
+		is_imprisoned = no
+		kns_has_any_fundable_knight_trigger = yes
+	}
+	effect = {
+		custom_tooltip = kns_funding_window_fund_all_tt
+		kns_fund_all_knights_effect = yes
+		kns_rebuild_funding_knight_list_effect = yes
+	}
+}
+
+kns_gui_stop_all_funded_knights = {
+	scope = character
+	is_valid = {
+		is_imprisoned = no
+		kns_has_any_funded_knight_trigger = yes
+	}
+	effect = {
+		custom_tooltip = kns_funding_window_stop_all_tt
+		kns_stop_all_funded_knights_effect = yes
+		kns_rebuild_funding_knight_list_effect = yes
+	}
+}
+
+kns_gui_knight_training = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		scope:target = {
+			kns_knight_is_training_prowess_trigger = yes
+		}
+	}
+}
+
+kns_gui_knight_at_peak = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		scope:target = {
+			kns_knight_is_at_exact_peak_trigger = yes
+		}
+	}
+}
+
+kns_gui_knight_surpassed = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		scope:target = {
+			kns_knight_has_surpassed_prowess_cap_trigger = yes
+		}
+	}
+}
+
+kns_gui_knight_old_age_blocked = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		scope:target = {
+			kns_takes_old_age_prowess_loss_trigger = yes
+		}
+	}
+}
+
+kns_gui_knight_is_funded = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		scope:target = {
+			kns_is_funded_by_character_trigger = { PATRON = root }
+		}
+	}
+}
+
+kns_gui_toggle_knight_funding = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_valid = {
+		is_imprisoned = no
+		OR = {
+			scope:target = {
+				kns_is_funded_by_character_trigger = { PATRON = root }
+			}
+			scope:target = {
+				kns_can_be_funded_by_trigger = { PATRON = root }
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = kns_funding_window_toggle_tt
+		if = {
+			limit = {
+				scope:target = {
+					kns_is_funded_by_character_trigger = { PATRON = root }
+				}
+			}
+			kns_stop_funding_knight_effect = {
+				KNIGHT = scope:target
+				PATRON = root
+			}
+		}
+		else_if = {
+			limit = {
+				scope:target = {
+					kns_can_be_funded_by_trigger = { PATRON = root }
+				}
+			}
+			kns_start_funding_knight_effect = {
+				KNIGHT = scope:target
+				PATRON = root
+			}
+		}
+		kns_rebuild_funding_knight_list_effect = yes
+	}
+}
+
+kns_gui_knight_is_self = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		scope:target = root
+	}
+}
+
+kns_gui_knight_is_courtier = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		scope:target = {
+			is_courtier_of = root
+		}
+	}
+}
+
+kns_gui_knight_is_vassal = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		scope:target = {
+			is_vassal_of = root
+		}
+	}
+}
+
+kns_gui_funding_tab_is_shown = {
+	scope = character
+	is_shown = {
+		NOT = { exists = var:kns_manage_tab_potential }
+	}
+}
+
+kns_gui_potential_tab_is_shown = {
+	scope = character
+	is_shown = {
+		exists = var:kns_manage_tab_potential
+	}
+}
+
+kns_gui_select_funding_tab = {
+	scope = character
+	effect = {
+		remove_variable = kns_manage_tab_potential
+		kns_rebuild_funding_knight_list_effect = yes
+	}
+}
+
+kns_gui_select_potential_tab = {
+	scope = character
+	effect = {
+		set_variable = kns_manage_tab_potential
+		kns_rebuild_potential_knight_list_effect = yes
+	}
+}
+
+kns_gui_age_filter_all_is_shown = {
+	scope = character
+	is_shown = {
+		NAND = {
+			exists = var:kns_potential_age_max
+			var:kns_potential_age_max > 0
+		}
+	}
+}
+
+kns_gui_age_filter_20_is_shown = {
+	scope = character
+	is_shown = {
+		exists = var:kns_potential_age_max
+		var:kns_potential_age_max = 20
+	}
+}
+
+kns_gui_age_filter_30_is_shown = {
+	scope = character
+	is_shown = {
+		exists = var:kns_potential_age_max
+		var:kns_potential_age_max = 30
+	}
+}
+
+kns_gui_age_filter_40_is_shown = {
+	scope = character
+	is_shown = {
+		exists = var:kns_potential_age_max
+		var:kns_potential_age_max = 40
+	}
+}
+
+kns_gui_set_age_filter_all = {
+	scope = character
+	effect = {
+		remove_variable = kns_potential_age_max
+		kns_rebuild_potential_knight_list_effect = yes
+	}
+}
+
+kns_gui_set_age_filter_20 = {
+	scope = character
+	effect = {
+		set_variable = {
+			name = kns_potential_age_max
+			value = 20
+		}
+		kns_rebuild_potential_knight_list_effect = yes
+	}
+}
+
+kns_gui_set_age_filter_30 = {
+	scope = character
+	effect = {
+		set_variable = {
+			name = kns_potential_age_max
+			value = 30
+		}
+		kns_rebuild_potential_knight_list_effect = yes
+	}
+}
+
+kns_gui_set_age_filter_40 = {
+	scope = character
+	effect = {
+		set_variable = {
+			name = kns_potential_age_max
+			value = 40
+		}
+		kns_rebuild_potential_knight_list_effect = yes
+	}
+}
+
+kns_gui_fundable_sort_total_is_shown = {
+	scope = character
+	is_shown = {
+		NOT = { exists = var:kns_fundable_sort_potential }
+	}
+}
+
+kns_gui_fundable_sort_potential_is_shown = {
+	scope = character
+	is_shown = {
+		exists = var:kns_fundable_sort_potential
+	}
+}
+
+kns_gui_fundable_sort_by_total = {
+	scope = character
+	effect = {
+		remove_variable = kns_fundable_sort_potential
+		kns_rebuild_funding_knight_list_effect = yes
+	}
+}
+
+kns_gui_fundable_sort_by_potential = {
+	scope = character
+	effect = {
+		set_variable = kns_fundable_sort_potential
+		kns_rebuild_funding_knight_list_effect = yes
+	}
+}
+
+kns_gui_sort_prowess_is_shown = {
+	scope = character
+	is_shown = {
+		NOT = { exists = var:kns_potential_sort_age }
+	}
+}
+
+kns_gui_sort_age_is_shown = {
+	scope = character
+	is_shown = {
+		exists = var:kns_potential_sort_age
+	}
+}
+
+kns_gui_sort_by_prowess = {
+	scope = character
+	effect = {
+		remove_variable = kns_potential_sort_age
+		kns_rebuild_potential_knight_list_effect = yes
+	}
+}
+
+kns_gui_sort_by_age = {
+	scope = character
+	effect = {
+		set_variable = kns_potential_sort_age
+		kns_rebuild_potential_knight_list_effect = yes
+	}
+}
+
+kns_gui_knight_candidate = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_valid = {
+		kns_actor_can_offer_knighthood_trigger = yes
+		scope:target = {
+			kns_is_potential_knight_for_trigger = { ACTOR = root }
+		}
+	}
+	effect = {
+		custom_tooltip = kns_funding_window_knight_tt
+		kns_become_a_knight_effect = {
+			KNIGHT_MAKER = root
+			KNIGHT_TO_BE = scope:target
+		}
+		kns_rebuild_potential_knight_list_effect = yes
+		kns_rebuild_funding_knight_list_effect = yes
+	}
+}

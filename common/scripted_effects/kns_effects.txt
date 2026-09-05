@@ -1,0 +1,953 @@
+kns_become_a_knight_effect = {
+	$KNIGHT_TO_BE$ = {
+		if = {
+			limit = {
+				has_trait = squire
+			}
+			add_trait_xp = {
+				trait = squire
+				track = knight
+				value = 100
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_trait = squire }
+			}
+			add_trait = squire
+			add_trait_xp = {
+				trait = squire
+				track = knight
+				value = 100
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = kns_knightless_squire_flag
+			}
+			remove_character_flag = kns_knightless_squire_flag
+		}
+		if = {
+			limit = { has_relation_kns_knight = $KNIGHT_MAKER$ }
+			$KNIGHT_MAKER$ = {
+				kns_manage_knight_location_after_squirehood_effect = { KNIGHT_TO_BE = $KNIGHT_TO_BE$ }
+				remove_relation_kns_squire = $KNIGHT_TO_BE$
+			}
+			kns_manage_squire_location_after_squirehood_effect = { KNIGHT_MAKER = $KNIGHT_MAKER$ }
+		}
+		else_if = {
+			limit = {
+				any_relation = {
+					type = kns_knight
+					this != $KNIGHT_MAKER$
+				}
+			}
+			every_relation = {
+				type = kns_knight
+				save_scope_as = kns_old_knight
+				kns_manage_knight_location_after_squirehood_effect = { KNIGHT_TO_BE = $KNIGHT_TO_BE$ }
+				remove_relation_kns_squire = $KNIGHT_TO_BE$
+			}
+			kns_manage_squire_location_after_squirehood_effect = { KNIGHT_MAKER = scope:kns_old_knight }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_character_flag = kns_had_ongoing_squire_story
+					any_owned_story = {
+						story_type = story_kns_squire_ongoing
+					}
+				}
+			}
+			random_owned_story = {
+				limit = {
+					story_type = story_kns_squire_ongoing
+				}
+				end_story = yes
+			}
+		}
+		save_scope_as = kns_new_knight
+		if = {
+			limit = {
+				any_close_family_member = {
+					exists = yes
+				}
+			}
+			every_close_family_member = {
+				limit = {
+					opinion = {
+						target = scope:kns_new_knight
+						value >= 10
+					}
+				}
+				trigger_event = {
+					id = kns_knighthood.0320
+					days = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = kns_bought_knighthood
+			}
+			add_prestige = 25
+			create_character_memory = {
+				type = kns_bought_knighthood
+			}
+		}
+		else = {
+			$KNIGHT_MAKER$ = {
+				create_character_memory = {
+					type = kns_knighted_someone
+					participants = {
+						squire = $KNIGHT_TO_BE$
+					}
+				}
+				if = {
+					limit = {
+						is_alive = yes
+					}
+					add_opinion = {
+						target = $KNIGHT_TO_BE$
+						modifier = kns_i_made_you_a_knight_opinion
+						opinion = 25
+					}
+					if = {
+						limit = {
+							kns_practices_knighthood_trigger = yes
+						}
+						add_piety = 25
+					}
+				}
+			}
+			if = {
+				limit = {
+					$KNIGHT_MAKER$ = { is_alive = yes }
+				}
+				if = {
+					limit = {
+						kns_practices_knighthood_trigger = yes
+					}
+					add_opinion = {
+						target = $KNIGHT_MAKER$
+						modifier = kns_knighted_me_opinion
+						opinion = 50
+					}
+				}
+				else = {
+					add_opinion = {
+						target = $KNIGHT_MAKER$
+						modifier = kns_knighted_me_opinion
+						opinion = 25
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_character_flag = kns_had_battlefield_knighthood
+				}
+				create_character_memory = {
+					type = kns_was_knighted_on_the_battlefield
+					participants = {
+						knight = $KNIGHT_MAKER$
+					}
+				}
+			}
+			else = {
+				create_character_memory = {
+					type = kns_was_knighted
+					participants = {
+						knight = $KNIGHT_MAKER$
+					}
+				}
+			}
+			kns_add_become_a_knight_prestige_effect = {
+				KNIGHT_MAKER = $KNIGHT_MAKER$
+				KNIGHT_TO_BE = $KNIGHT_TO_BE$
+			}
+			if = {
+				limit = {
+					kns_practices_knighthood_trigger = yes
+				}
+				add_piety = 75
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_character_flag = kns_bought_knighthood }
+				NOT = { this = $KNIGHT_MAKER$ }
+			}
+			kns_record_knightly_lineage_effect = {
+				KNIGHT_MAKER = $KNIGHT_MAKER$
+				KNIGHT_TO_BE = this
+			}
+		}
+		kns_assign_prowess_talent_effect = yes
+		if = {
+			limit = {
+				NOT = { has_character_flag = kns_received_knighting_kit }
+			}
+			if = {
+				limit = { has_trait = kns_talent_generation }
+				custom_tooltip = kns_knighting_kit_prodigious_tt
+			}
+			else = {
+				custom_tooltip = kns_knighting_kit_tt
+			}
+			hidden_effect = {
+				kns_equip_knighting_kit_effect = {
+					MAKER = $KNIGHT_MAKER$
+				}
+			}
+		}
+	}
+}
+
+kns_record_knightly_lineage_effect = {
+	$KNIGHT_TO_BE$ = {
+		set_variable = {
+			name = kns_knighted_by
+			value = $KNIGHT_MAKER$
+		}
+	}
+	$KNIGHT_MAKER$ = {
+		add_to_variable_list = {
+			name = kns_knights_made
+			target = $KNIGHT_TO_BE$
+		}
+	}
+}
+
+kns_show_knightly_lineage_effect = {
+	if = {
+		limit = { has_character_flag = kns_bought_knighthood }
+		custom_tooltip = kns_lineage_purchased_tt
+	}
+	else_if = {
+		limit = { exists = var:kns_knighted_by }
+		var:kns_knighted_by = { save_scope_as = kns_lineage_teacher }
+		custom_tooltip = kns_lineage_teacher_tt
+	}
+	else = {
+		custom_tooltip = kns_lineage_teacher_unknown_tt
+	}
+	if = {
+		limit = {
+			any_in_list = {
+				variable = kns_knights_made
+				is_alive = yes
+			}
+		}
+		custom_tooltip = kns_lineage_students_header_tt
+		every_in_list = {
+			variable = kns_knights_made
+			limit = { is_alive = yes }
+			save_temporary_scope_as = kns_lineage_student
+			custom_tooltip = kns_lineage_student_tt
+		}
+	}
+	else = {
+		custom_tooltip = kns_lineage_no_students_tt
+	}
+	if = {
+		limit = { exists = var:kns_knighted_by }
+		var:kns_knighted_by = { save_scope_as = kns_lineage_gen1 }
+		custom_tooltip = kns_lineage_chain_1_tt
+		if = {
+			limit = {
+				scope:kns_lineage_gen1 = { exists = var:kns_knighted_by }
+			}
+			scope:kns_lineage_gen1 = {
+				var:kns_knighted_by = { save_scope_as = kns_lineage_gen2 }
+			}
+			custom_tooltip = kns_lineage_chain_2_tt
+			if = {
+				limit = {
+					scope:kns_lineage_gen2 = { exists = var:kns_knighted_by }
+				}
+				scope:kns_lineage_gen2 = {
+					var:kns_knighted_by = { save_scope_as = kns_lineage_gen3 }
+				}
+				custom_tooltip = kns_lineage_chain_3_tt
+			}
+		}
+	}
+}
+
+kns_clear_lineage_window_vars_effect = {
+	remove_variable = kns_lineage_subject
+	remove_variable = kns_lineage_teacher
+	remove_variable = kns_lineage_gen1
+	remove_variable = kns_lineage_gen2
+	remove_variable = kns_lineage_gen3
+	remove_variable = kns_lineage_student_count
+	remove_variable = kns_lineage_student_1
+	remove_variable = kns_lineage_student_2
+	remove_variable = kns_lineage_student_3
+	remove_variable = kns_lineage_student_4
+	remove_variable = kns_lineage_student_5
+	remove_variable = kns_lineage_student_6
+	remove_variable = kns_lineage_student_7
+	remove_variable = kns_lineage_student_8
+}
+
+kns_close_lineage_window_effect = {
+	kns_clear_lineage_window_vars_effect = yes
+}
+
+kns_store_lineage_student_effect = {
+	change_variable = {
+		name = kns_lineage_student_count
+		add = 1
+	}
+	if = {
+		limit = { var:kns_lineage_student_count = 1 }
+		set_variable = { name = kns_lineage_student_1 value = $STUDENT$ }
+	}
+	else_if = {
+		limit = { var:kns_lineage_student_count = 2 }
+		set_variable = { name = kns_lineage_student_2 value = $STUDENT$ }
+	}
+	else_if = {
+		limit = { var:kns_lineage_student_count = 3 }
+		set_variable = { name = kns_lineage_student_3 value = $STUDENT$ }
+	}
+	else_if = {
+		limit = { var:kns_lineage_student_count = 4 }
+		set_variable = { name = kns_lineage_student_4 value = $STUDENT$ }
+	}
+	else_if = {
+		limit = { var:kns_lineage_student_count = 5 }
+		set_variable = { name = kns_lineage_student_5 value = $STUDENT$ }
+	}
+	else_if = {
+		limit = { var:kns_lineage_student_count = 6 }
+		set_variable = { name = kns_lineage_student_6 value = $STUDENT$ }
+	}
+	else_if = {
+		limit = { var:kns_lineage_student_count = 7 }
+		set_variable = { name = kns_lineage_student_7 value = $STUDENT$ }
+	}
+	else_if = {
+		limit = { var:kns_lineage_student_count = 8 }
+		set_variable = { name = kns_lineage_student_8 value = $STUDENT$ }
+	}
+}
+
+kns_open_lineage_window_effect = {
+	save_scope_as = kns_lineage_viewer
+	kns_clear_lineage_window_vars_effect = yes
+	set_variable = {
+		name = kns_lineage_subject
+		value = $SUBJECT$
+	}
+	set_variable = {
+		name = kns_lineage_student_count
+		value = 0
+	}
+	$SUBJECT$ = {
+		if = {
+			limit = {
+				NOT = { has_character_flag = kns_bought_knighthood }
+				exists = var:kns_knighted_by
+			}
+			var:kns_knighted_by = { save_scope_as = kns_lineage_teacher }
+			prev = {
+				set_variable = {
+					name = kns_lineage_teacher
+					value = scope:kns_lineage_teacher
+				}
+				set_variable = {
+					name = kns_lineage_gen1
+					value = scope:kns_lineage_teacher
+				}
+			}
+			if = {
+				limit = {
+					scope:kns_lineage_teacher = { exists = var:kns_knighted_by }
+				}
+				scope:kns_lineage_teacher = {
+					var:kns_knighted_by = { save_scope_as = kns_lineage_gen2 }
+				}
+				prev = {
+					set_variable = {
+						name = kns_lineage_gen2
+						value = scope:kns_lineage_gen2
+					}
+				}
+				if = {
+					limit = {
+						scope:kns_lineage_gen2 = { exists = var:kns_knighted_by }
+					}
+					scope:kns_lineage_gen2 = {
+						var:kns_knighted_by = { save_scope_as = kns_lineage_gen3 }
+					}
+					prev = {
+						set_variable = {
+							name = kns_lineage_gen3
+							value = scope:kns_lineage_gen3
+						}
+					}
+				}
+			}
+		}
+		every_in_list = {
+			variable = kns_knights_made
+			limit = {
+				is_alive = yes
+				scope:kns_lineage_viewer = { var:kns_lineage_student_count < 8 }
+			}
+			save_temporary_scope_as = kns_lineage_student
+			scope:kns_lineage_viewer = {
+				kns_store_lineage_student_effect = {
+					STUDENT = scope:kns_lineage_student
+				}
+			}
+		}
+	}
+}
+
+kns_equip_knighting_kit_effect = {
+	save_scope_as = kns_kit_owner
+	add_character_flag = kns_received_knighting_kit
+	if = {
+		limit = {
+			$MAKER$ = { is_alive = yes }
+		}
+		$MAKER$ = { save_scope_as = kns_kit_smith }
+	}
+	else = {
+		random_dummy_gender_effect = yes
+		scope:dummy_gender = { save_scope_as = kns_kit_smith }
+	}
+	if = {
+		limit = { has_trait = kns_talent_generation }
+		kns_create_prodigious_weapon_effect = yes
+		kns_create_prodigious_armor_effect = yes
+		trigger_event = {
+			id = kns_nickname.0001
+			days = 1825
+		}
+	}
+	else = {
+	set_artifact_rarity_common = yes
+	random_list = {
+		1 = {
+			create_artifact_weapon_effect = {
+				OWNER = scope:kns_kit_owner
+				CREATOR = scope:kns_kit_smith
+				SET_WEAPON_TYPE = flag:artifact_weapon_type_sword
+			}
+		}
+		1 = {
+			create_artifact_weapon_effect = {
+				OWNER = scope:kns_kit_owner
+				CREATOR = scope:kns_kit_smith
+				SET_WEAPON_TYPE = flag:artifact_weapon_type_axe
+			}
+		}
+		1 = {
+			create_artifact_weapon_effect = {
+				OWNER = scope:kns_kit_owner
+				CREATOR = scope:kns_kit_smith
+				SET_WEAPON_TYPE = flag:artifact_weapon_type_hammer
+			}
+		}
+		1 = {
+			create_artifact_weapon_effect = {
+				OWNER = scope:kns_kit_owner
+				CREATOR = scope:kns_kit_smith
+				SET_WEAPON_TYPE = flag:artifact_weapon_type_mace
+			}
+		}
+		1 = {
+			create_artifact_weapon_effect = {
+				OWNER = scope:kns_kit_owner
+				CREATOR = scope:kns_kit_smith
+				SET_WEAPON_TYPE = flag:artifact_weapon_type_spear
+			}
+		}
+	}
+	set_artifact_rarity_common = yes
+	create_artifact_armor_effect = {
+		OWNER = scope:kns_kit_owner
+		CREATOR = scope:kns_kit_smith
+		SET_ARMOR_TYPE = flag:no
+	}
+	scope:newly_created_artifact ?= {
+		if = {
+			limit = {
+				scope:kns_kit_owner = { can_equip_artifact = prev }
+			}
+			equip_artifact_to_owner = yes
+		}
+	}
+	}
+}
+
+kns_add_become_a_knight_prestige_effect = {
+	add_prestige = {
+		value = 50
+		if = {
+			limit = {
+				exists = $KNIGHT_MAKER$.dynasty
+				$KNIGHT_MAKER$.dynasty = { dynasty_prestige_level >= 3 }
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				exists = $KNIGHT_MAKER$.dynasty
+				$KNIGHT_MAKER$.dynasty = { dynasty_prestige_level >= 6 }
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				$KNIGHT_MAKER$ = {
+					prestige_level >= 4
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				$KNIGHT_TO_BE$ = {
+					is_close_family_of = $KNIGHT_MAKER$
+				}
+			}
+			add = -25
+		}
+		if = {
+			limit = {
+				$KNIGHT_TO_BE$ = {
+					any_heir_title = {
+						tier >= tier_empire
+						place_in_line_of_succession = {
+							target = prev
+							value <= 3
+						}
+					}
+				}
+			}
+			add = 25
+		}
+		if = {
+			limit = {
+				$KNIGHT_TO_BE$ = {
+					is_landed = yes
+					highest_held_title_tier > tier_barony
+				}
+			}
+			add = 5
+		}
+	}
+}
+
+kns_set_squire_effect = {
+	$KNIGHT$ = {
+		set_relation_kns_squire = $SQUIRE$
+		create_character_memory = {
+			type = kns_got_squire
+			participants = {
+				squire = $SQUIRE$
+			}
+		}
+		add_opinion = {
+			target = $SQUIRE$
+			modifier = kns_became_my_squire_opinion
+			opinion = 10
+		}
+	}
+	$SQUIRE$ = {
+		if = {
+			limit = {
+				NOT = { has_trait = squire }
+			}
+			add_trait = squire
+		}
+		save_scope_as = squire
+		$KNIGHT$ = {
+			save_scope_as = my_knight
+		}
+		kns_init_squire_story_cycle_effect = yes
+		create_character_memory = {
+			type = kns_became_squire
+			participants = {
+				knight = $KNIGHT$
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = kns_knightless_squire_flag
+			}
+			remove_character_flag = kns_knightless_squire_flag
+		}
+		kns_move_for_squiring_effect = {
+			KNIGHT = $KNIGHT$
+			SQUIRE = $SQUIRE$
+		}
+		add_opinion = {
+			target = $KNIGHT$
+			modifier = kns_made_me_squire_opinion
+			opinion = 15
+		}
+	}
+}
+
+kns_offer_squire_hook_effect = {
+	scope:actor = {
+		if = {
+			limit = {
+				scope:hook = yes
+				has_usable_hook = scope:recipient
+			}
+			use_hook = scope:recipient
+		}
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+		}
+	}
+}
+
+kns_strip_knighthood_effect = {
+	$STRIPPER$ = {
+		create_character_memory = {
+			type = kns_stripped_knighthood
+			participants = {
+				knight = $KNIGHT$
+			}
+		}
+	}
+	$KNIGHT$ = {
+		if = {
+			limit = {
+				has_trait = squire
+			}
+			remove_trait = squire
+		}
+		add_trait = stripped_knight
+		if = {
+			limit = {
+				kns_practices_knighthood_trigger = yes
+			}
+			add_piety = major_piety_loss
+		}
+		if = {
+			limit = {
+				any_relation = {
+					type = kns_squire
+				}
+			}
+			every_relation = {
+				type = kns_squire
+				remove_relation_kns_knight = $KNIGHT$
+				add_character_flag = kns_was_removed_as_squire_flag
+			}
+		}
+		add_prestige = major_prestige_loss
+		create_character_memory = {
+			type = kns_was_stripped_of_knighthood
+			participants = {
+				stripper = $STRIPPER$
+			}
+		}
+		add_character_flag = kns_cannot_be_knighted
+		add_opinion = {
+			target = $STRIPPER$
+			modifier = kns_stripped_my_knighthood
+			opinion = -50
+		}
+	}
+}
+
+kns_move_for_squiring_effect = {
+	if = {
+		limit = {
+			$KNIGHT$ = { is_playable_character = yes }
+			$SQUIRE$ = {
+				is_playable_character = no
+				is_ruler = no
+			}
+			NOT = {
+				$SQUIRE$ = {
+					any_relation = { type = guardian }
+				}
+			}
+			NOT = { $KNIGHT$ = $SQUIRE$.host }
+		}
+		visit_court_of = $KNIGHT$
+	}
+	else_if = {
+		limit = {
+			$KNIGHT$ = {
+				is_playable_character = no
+				is_ruler = no
+			}
+			$SQUIRE$ = { is_playable_character = yes }
+			$KNIGHT$ = { has_any_court_position = no }
+			NOT = { $SQUIRE$ = $KNIGHT$.host }
+		}
+		$KNIGHT$ = {
+			visit_court_of = $SQUIRE$
+		}
+	}
+	else_if = {
+		limit = {
+			$KNIGHT$ = {
+				is_playable_character = no
+				is_ruler = no
+			}
+			$SQUIRE$ = {
+				is_playable_character = no
+				any_relation = { type = guardian }
+			}
+			$KNIGHT$ = { has_any_court_position = no }
+			NOT = { $KNIGHT$.host = $SQUIRE$.host }
+		}
+		$KNIGHT$ = {
+			visit_court_of = $SQUIRE$.host
+		}
+	}
+	else_if = {
+		limit = {
+			$KNIGHT$ = {
+				is_playable_character = no
+				is_ruler = no
+			}
+			$SQUIRE$ = {
+				is_playable_character = no
+				is_ruler = no
+			}
+			NOT = {
+				$SQUIRE$ = {
+					any_relation = { type = guardian }
+				}
+			}
+			NOT = { $KNIGHT$.host = $SQUIRE$.host }
+		}
+		visit_court_of = $KNIGHT$.host
+	}
+}
+
+kns_init_squire_story_cycle_effect = {
+	if = {
+		limit = {
+			NOT = { has_character_flag = kns_had_ongoing_squire_story }
+		}
+		create_story = story_kns_squire_ongoing
+	}
+	save_scope_as = squire
+	send_interface_toast = {
+		type = event_toast_effect_good
+		title = kns_became_a_squire_toast.t
+		custom_tooltip = kns_became_a_squire_toast.tt
+		left_icon = scope:squire
+		right_icon = scope:my_knight
+	}
+}
+
+kns_add_squire_trait_xp_effect = {
+	add_trait_xp = {
+		trait = squire
+		track = knight
+		value = {
+			value = 0
+			add = {
+				integer_range = { min = $MIN_VALUE$ max = $MAX_VALUE$ }
+			}
+		}
+	}
+}
+
+kns_try_squire_skill_increase_effect = {
+	random_list = {
+		20 = {
+			trigger = {
+				trigger_if = {
+					limit = { exists = var:kns_skill_inc_$SKILL$ }
+					var:kns_skill_inc_$SKILL$ < 2
+				}
+				trigger_else = {
+					always = yes
+				}
+			}
+			add_$SKILL$_skill = 1
+			if = {
+				limit = {
+					NOT = { exists = var:kns_skill_inc_$SKILL$ }
+				}
+				set_variable = {
+					name = kns_skill_inc_$SKILL$
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					name = kns_skill_inc_$SKILL$
+					add = 1
+				}
+			}
+		}
+		80 = {}
+	}
+}
+
+kns_knightless_squire_cleanup_timer_effect = {
+	if = {
+		limit = { is_ai = yes }
+		trigger_event = {
+			id = kns_maintenance.0300
+			months = 4
+		}
+	}
+	else = {
+		trigger_event = {
+			id = kns_maintenance.0300
+			years = 1
+		}
+	}
+}
+
+kns_manage_knight_location_after_squirehood_effect = {
+	if = {
+		limit = {
+			is_away_from_court = yes
+			OR = {
+				is_foreign_court_guest_of = $KNIGHT_TO_BE$
+				AND = {
+					exists = $KNIGHT_TO_BE$.host
+					is_foreign_court_guest_of = $KNIGHT_TO_BE$.host
+				}
+				AND = {
+					exists = $KNIGHT_TO_BE$.liege
+					is_foreign_court_guest_of = $KNIGHT_TO_BE$.liege
+				}
+			}
+		}
+		return_to_court = yes
+		set_location_to_default = yes
+	}
+}
+
+kns_manage_squire_location_after_squirehood_effect = {
+	if = {
+		limit = {
+			is_away_from_court = yes
+			OR = {
+				is_foreign_court_guest_of = $KNIGHT_MAKER$
+				AND = {
+					exists = $KNIGHT_MAKER$.host
+					is_foreign_court_guest_of = $KNIGHT_MAKER$.host
+				}
+				AND = {
+					exists = $KNIGHT_MAKER$.liege
+					is_foreign_court_guest_of = $KNIGHT_MAKER$.liege
+				}
+			}
+			NOT = {
+				any_relation = {
+					type = ward
+					is_playable_character = yes
+					this = $KNIGHT_MAKER$.host
+				}
+			}
+		}
+		return_to_court = yes
+		set_location_to_default = yes
+	}
+}
+
+kns_try_make_starting_knight_effect = {
+	if = {
+		limit = {
+			kns_can_try_starting_knight_trigger = yes
+			NOT = { has_trait = squire }
+		}
+		add_trait = squire
+		add_trait_xp = {
+			trait = squire
+			track = knight
+			value = 100
+		}
+		kns_assign_prowess_talent_silent_effect = yes
+	}
+}
+
+kns_set_squire_silent_effect = {
+	$KNIGHT$ = {
+		set_relation_kns_squire = $SQUIRE$
+	}
+	$SQUIRE$ = {
+		if = {
+			limit = {
+				NOT = { has_trait = squire }
+			}
+			add_trait = squire
+		}
+		if = {
+			limit = {
+				NOT = { has_character_flag = kns_had_ongoing_squire_story }
+			}
+			create_story = story_kns_squire_ongoing
+		}
+	}
+}
+
+kns_try_assign_starting_squire_effect = {
+	if = {
+		limit = {
+			kns_is_eligible_for_squirehood_trigger = yes
+			kns_practices_knighthood_trigger = yes
+		}
+		if = {
+			limit = {
+				exists = host
+				host = { kns_can_take_squire_trigger = yes }
+			}
+			kns_set_squire_silent_effect = {
+				KNIGHT = host
+				SQUIRE = this
+			}
+		}
+		else_if = {
+			limit = {
+				exists = host
+				host = {
+					any_courtier = {
+						kns_can_take_squire_trigger = yes
+					}
+				}
+			}
+			host = {
+				random_courtier = {
+					limit = { kns_can_take_squire_trigger = yes }
+					save_scope_as = kns_start_knight
+				}
+			}
+			kns_set_squire_silent_effect = {
+				KNIGHT = scope:kns_start_knight
+				SQUIRE = this
+			}
+		}
+	}
+}
+
+kns_end_squire_relation_effect = {
+	$KNIGHT$ = {
+		remove_relation_kns_squire = $SQUIRE$
+	}
+	$SQUIRE$ = {
+		if = {
+			limit = {
+				any_owned_story = {
+					story_type = story_kns_squire_ongoing
+				}
+			}
+			random_owned_story = {
+				limit = { story_type = story_kns_squire_ongoing }
+				end_story = yes
+			}
+		}
+	}
+}

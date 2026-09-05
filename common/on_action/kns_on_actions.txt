@@ -1,0 +1,203 @@
+on_game_start = {
+	on_actions = {
+		kns_on_game_start
+	}
+}
+
+kns_on_game_start = {
+	effect = {
+		every_ruler = {
+			limit = {
+				is_landed = yes
+				kns_practices_knighthood_trigger = yes
+			}
+			kns_try_make_starting_knight_effect = yes
+			every_courtier = {
+				limit = {
+					is_adult = yes
+					kns_practices_knighthood_trigger = yes
+				}
+				kns_try_make_starting_knight_effect = yes
+			}
+			every_courtier = {
+				limit = {
+					kns_is_eligible_for_squirehood_trigger = yes
+					OR = {
+						is_close_family_of = prev
+						is_child_of = prev
+					}
+				}
+				kns_try_assign_starting_squire_effect = yes
+			}
+		}
+		kns_recount_living_prodigies_effect = yes
+		kns_try_start_papal_youth_tourney_effect = yes
+	}
+}
+
+on_birthday = {
+	on_actions = {
+		kns_on_birthday
+	}
+}
+
+kns_on_birthday = {
+	events = {
+		kns_squire.0231
+		kns_prowess.0001
+	}
+}
+
+on_16th_birthday = {
+	on_actions = {
+		kns_on_16th_birthday
+	}
+}
+
+kns_on_16th_birthday = {
+	events = {
+		kns_squire.0230
+	}
+}
+
+on_combat_end_winner = {
+	on_actions = {
+		kns_on_combat_end_winner
+	}
+}
+
+kns_on_combat_end_winner = {
+	random_events = {
+		950 = 0
+		50 = kns_knighthood.0600
+	}
+}
+
+on_death = {
+	on_actions = {
+		kns_on_death
+	}
+}
+
+kns_on_death = {
+	effect = {
+		if = {
+			limit = { exists = var:kns_funding_patron }
+			var:kns_funding_patron = { save_scope_as = kns_dead_patron }
+			remove_character_flag = kns_prowess_funded
+			remove_variable = kns_funding_patron
+			scope:kns_dead_patron ?= {
+				kns_refresh_training_upkeep_effect = yes
+			}
+		}
+		if = {
+			limit = { has_trait = kns_talent_generation }
+			kns_unregister_living_prodigy_effect = yes
+			if = {
+				limit = {
+					NOT = { has_character_flag = kns_papal_tourney_prodigy }
+					NOT = { kns_living_prodigious_exists_trigger = yes }
+				}
+				save_scope_as = kns_dead_prodigious
+				kns_try_start_papal_youth_tourney_effect = yes
+			}
+		}
+		if = {
+			limit = { exists = var:kns_training_knight_count }
+			every_courtier = {
+				limit = { has_character_flag = kns_prowess_funded }
+				remove_character_flag = kns_prowess_funded
+				remove_variable = kns_funding_patron
+				kns_update_training_modifier_effect = yes
+			}
+			every_vassal = {
+				limit = { has_character_flag = kns_prowess_funded }
+				remove_character_flag = kns_prowess_funded
+				remove_variable = kns_funding_patron
+				kns_update_training_modifier_effect = yes
+			}
+		}
+	}
+}
+
+quarterly_playable_pulse = {
+	on_actions = {
+		kns_quarterly_playable_pulse
+	}
+}
+
+kns_quarterly_playable_pulse = {
+	effect = {
+		if = {
+			limit = {
+				OR = {
+					exists = var:kns_training_knight_count
+					has_character_modifier = kns_funding_knight_training
+					has_character_flag = kns_prowess_funded
+				}
+			}
+			kns_sweep_patron_old_age_funding_effect = yes
+			kns_update_training_modifier_effect = yes
+			every_courtier = {
+				limit = {
+					OR = {
+						has_character_flag = kns_prowess_funded
+						has_character_modifier = kns_in_prowess_training
+					}
+				}
+				kns_update_training_modifier_effect = yes
+			}
+			every_vassal = {
+				limit = {
+					OR = {
+						has_character_flag = kns_prowess_funded
+						has_character_modifier = kns_in_prowess_training
+					}
+				}
+				kns_update_training_modifier_effect = yes
+			}
+			kns_refresh_training_upkeep_effect = yes
+		}
+	}
+	random_events = {
+		850 = 0
+		75 = kns_knighthood.0016
+		75 = kns_knighthood.0017
+	}
+}
+
+yearly_global_pulse = {
+	on_actions = {
+		kns_yearly_global_pulse
+	}
+}
+
+kns_yearly_global_pulse = {
+	effect = {
+		if = {
+			limit = { NOT = { has_global_variable = kns_living_prodigy_count } }
+			kns_recount_living_prodigies_effect = yes
+		}
+		kns_try_start_papal_youth_tourney_effect = yes
+	}
+}
+
+kns_ongoing_squire_events = {
+	trigger = {
+		is_imprisoned = no
+	}
+	random_events = {
+		400 = 0
+		200 = kns_squire.0001
+		200 = kns_squire.0002
+		200 = kns_squire.0003
+		200 = kns_squire.0004
+		200 = kns_squire.0005
+		200 = kns_squire.0006
+		200 = kns_squire.0007
+		200 = kns_squire.0008
+	}
+	events = {
+		kns_maintenance.0001
+	}
+}

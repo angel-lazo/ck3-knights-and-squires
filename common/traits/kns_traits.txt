@@ -1,0 +1,128 @@
+squire = {
+	physical = no
+	shown_in_ruler_designer = no
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = this
+					kns_is_squire_with_trait_xp = yes
+				}
+				desc = trait_squire
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					kns_is_knight_trigger = yes
+				}
+				desc = trait_knight
+			}
+			desc = trait_knight
+		}
+	}
+
+	icon = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = squire.dds
+			}
+			triggered_desc = {
+				trigger = {
+					kns_is_squire_with_trait_xp = yes
+				}
+				desc = squire.dds
+			}
+			triggered_desc = {
+				trigger = {
+					kns_is_knight_trigger = yes
+				}
+				desc = knight.dds
+			}
+			desc = knight.dds
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_squire_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = kns_knightless_squire_flag
+				}
+				desc = trait_squire_no_knight_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					kns_is_knight_trigger = yes
+				}
+				desc = trait_knight_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					any_owned_story = {
+						story_type = story_kns_squire_ongoing
+					}
+				}
+				desc = trait_squire_character_desc
+			}
+			desc = trait_squire_desc
+		}
+	}
+
+	same_opinion = 5
+
+	tracks = {
+		knight = {
+			100 = {
+				monthly_prestige = 1
+				attraction_opinion = 5
+				general_opinion = 5
+				heavy_cavalry_damage_mult = 0.05
+				knight_effectiveness_mult = 0.02
+			}
+		}
+	}
+}
+
+stripped_knight = {
+	physical = no
+	category = fame
+	opposite_opinion = -10
+	monthly_prestige_gain_mult = -0.01
+	opposites = { squire }
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_stripped_knight
+			}
+			desc = trait_stripped_knight
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_stripped_knight_desc
+			}
+			desc = trait_stripped_knight_character_desc
+		}
+	}
+
+	ai_sociability = -5
+}

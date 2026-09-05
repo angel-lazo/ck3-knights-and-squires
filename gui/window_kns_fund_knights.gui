@@ -1,0 +1,532 @@
+window = {
+	name = "kns_fund_knights_window"
+	size = { 860 960 }
+	parentanchor = center
+	position = { 0 0 }
+	movable = yes
+	layer = top
+	allow_outside = yes
+	visible = "[GetPlayer.MakeScope.Var('kns_funding_window_open').IsSet]"
+
+	using = Window_Background_Subwindow
+
+		vbox = {
+			margin = { 10 10 }
+			spacing = 8
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				spacing = 8
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_funding_window_title"
+					fontsize = 22
+				}
+
+				button_close = {
+					onclick = "[GetScriptedGui('kns_close_funding_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+				}
+			}
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				spacing = 8
+
+				button_standard = {
+					layoutpolicy_horizontal = expanding
+					text = "kns_funding_window_tab_funding"
+					down = "[GetScriptedGui('kns_gui_funding_tab_is_shown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					onclick = "[GetScriptedGui('kns_gui_select_funding_tab').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+				}
+
+				button_standard = {
+					layoutpolicy_horizontal = expanding
+					text = "kns_funding_window_tab_potential"
+					down = "[GetScriptedGui('kns_gui_potential_tab_is_shown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					onclick = "[GetScriptedGui('kns_gui_select_potential_tab').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+				}
+			}
+
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				visible = "[GetScriptedGui('kns_gui_funding_tab_is_shown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					background = {
+						using = Background_Area_Dark
+					}
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center
+						text = "kns_funding_window_summary"
+						default_format = "#high"
+					}
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center
+						text = "kns_funding_window_cost"
+					}
+				}
+
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					spacing = 8
+
+					button_standard = {
+						layoutpolicy_horizontal = expanding
+						text = "kns_funding_window_fund_all"
+						enabled = "[GetScriptedGui('kns_gui_fund_all_knights').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						onclick = "[GetScriptedGui('kns_gui_fund_all_knights').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						tooltip = "kns_funding_window_fund_all_tt"
+					}
+
+					button_standard = {
+						layoutpolicy_horizontal = expanding
+						text = "kns_funding_window_stop_all"
+						enabled = "[GetScriptedGui('kns_gui_stop_all_funded_knights').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						onclick = "[GetScriptedGui('kns_gui_stop_all_funded_knights').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						tooltip = "kns_funding_window_stop_all_tt"
+					}
+				}
+
+				scrollbox = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+
+					blockoverride "scrollbox_content" {
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_funding_window_fundable_header"
+								default_format = "#high"
+							}
+
+							hbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 8
+
+								button_standard = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_funding_window_sort_total_prowess"
+									down = "[GetScriptedGui('kns_gui_fundable_sort_total_is_shown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									onclick = "[GetScriptedGui('kns_gui_fundable_sort_by_total').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									tooltip = "kns_funding_window_sort_total_prowess_tt"
+								}
+
+								button_standard = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_funding_window_sort_potential"
+									down = "[GetScriptedGui('kns_gui_fundable_sort_potential_is_shown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									onclick = "[GetScriptedGui('kns_gui_fundable_sort_by_potential').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									tooltip = "kns_funding_window_sort_potential_tt"
+								}
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_funding_window_section_empty"
+								visible = "[IsDataModelEmpty( GetPlayer.MakeScope.GetList('kns_funding_knights_fundable') )]"
+							}
+
+							vbox = {
+								name = "kns_funding_knight_list_fundable"
+								layoutpolicy_horizontal = expanding
+								datamodel = "[GetPlayer.MakeScope.GetList('kns_funding_knights_fundable')]"
+
+								item = {
+									hbox = {
+										layoutpolicy_horizontal = expanding
+										spacing = 8
+										datacontext = "[Scope.Char]"
+										background = {
+											using = Background_Area_Dark
+										}
+
+										widget = {
+											size = { 85 90 }
+											visible = "[Character.IsValid]"
+											portrait_head_small = {}
+										}
+
+										vbox = {
+											layoutpolicy_horizontal = expanding
+											parentanchor = vcenter
+											spacing = 2
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												visible = "[Character.IsValid]"
+												text = "[Character.GetShortUINameNoTooltip]"
+												default_format = "#high"
+											}
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = "kns_funding_window_prowess"
+												tooltip = "kns_funding_window_prowess_tt"
+												visible = "[GetScriptedGui('kns_gui_knight_training').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = "kns_funding_window_prowess_peak"
+												tooltip = "kns_funding_window_prowess_peak_tt"
+												default_format = "#positive"
+												visible = "[GetScriptedGui('kns_gui_knight_at_peak').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = "kns_funding_window_prowess_surpassed"
+												tooltip = "kns_funding_window_prowess_surpassed_tt"
+												default_format = "#high"
+												visible = "[GetScriptedGui('kns_gui_knight_surpassed').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = "kns_funding_window_row_stipend"
+												visible = "[GetScriptedGui('kns_gui_knight_is_funded').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = "kns_funding_window_row_old_age"
+												default_format = "#negative"
+												visible = "[GetScriptedGui('kns_gui_knight_old_age_blocked').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = "kns_funding_window_row_no_stipend"
+												visible = "[And( Not( GetScriptedGui('kns_gui_knight_is_funded').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End ) ), Not( GetScriptedGui('kns_gui_knight_old_age_blocked').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End ) ) )]"
+											}
+
+											hbox = {
+												spacing = 6
+
+												text_single = {
+													text = "kns_funding_window_you"
+													visible = "[GetScriptedGui('kns_gui_knight_is_self').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+												}
+
+												text_single = {
+													text = "kns_funding_window_courtier"
+													visible = "[GetScriptedGui('kns_gui_knight_is_courtier').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+												}
+
+												text_single = {
+													text = "kns_funding_window_vassal"
+													visible = "[GetScriptedGui('kns_gui_knight_is_vassal').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+												}
+											}
+										}
+
+										button_checkbox_label = {
+											parentanchor = vcenter
+											onclick = "[GetScriptedGui('kns_gui_toggle_knight_funding').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											enabled = "[GetScriptedGui('kns_gui_toggle_knight_funding').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											tooltip = "kns_funding_window_toggle_tt"
+
+											blockoverride "checkbox" {
+												checked = "[GetScriptedGui('kns_gui_knight_is_funded').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+											blockoverride "text" {
+												text = "kns_funding_window_funded"
+											}
+										}
+									}
+								}
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_funding_window_unfundable_header"
+								default_format = "#high"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_funding_window_section_empty"
+								visible = "[IsDataModelEmpty( GetPlayer.MakeScope.GetList('kns_funding_knights_unfundable') )]"
+							}
+
+							vbox = {
+								name = "kns_funding_knight_list_unfundable"
+								layoutpolicy_horizontal = expanding
+								datamodel = "[GetPlayer.MakeScope.GetList('kns_funding_knights_unfundable')]"
+
+								item = {
+									hbox = {
+										layoutpolicy_horizontal = expanding
+										spacing = 8
+										datacontext = "[Scope.Char]"
+										background = {
+											using = Background_Area_Dark
+										}
+
+										widget = {
+											size = { 85 90 }
+											visible = "[Character.IsValid]"
+											portrait_head_small = {}
+										}
+
+										vbox = {
+											layoutpolicy_horizontal = expanding
+											parentanchor = vcenter
+											spacing = 2
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												visible = "[Character.IsValid]"
+												text = "[Character.GetShortUINameNoTooltip]"
+												default_format = "#high"
+											}
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = "kns_funding_window_prowess"
+												tooltip = "kns_funding_window_prowess_tt"
+												visible = "[GetScriptedGui('kns_gui_knight_training').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = "kns_funding_window_prowess_peak"
+												tooltip = "kns_funding_window_prowess_peak_tt"
+												default_format = "#positive"
+												visible = "[GetScriptedGui('kns_gui_knight_at_peak').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = "kns_funding_window_prowess_surpassed"
+												tooltip = "kns_funding_window_prowess_surpassed_tt"
+												default_format = "#high"
+												visible = "[GetScriptedGui('kns_gui_knight_surpassed').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = "kns_funding_window_row_stipend"
+												visible = "[GetScriptedGui('kns_gui_knight_is_funded').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = "kns_funding_window_row_old_age"
+												default_format = "#negative"
+												visible = "[GetScriptedGui('kns_gui_knight_old_age_blocked').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = "kns_funding_window_row_no_stipend"
+												visible = "[And( Not( GetScriptedGui('kns_gui_knight_is_funded').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End ) ), Not( GetScriptedGui('kns_gui_knight_old_age_blocked').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End ) ) )]"
+											}
+
+											hbox = {
+												spacing = 6
+
+												text_single = {
+													text = "kns_funding_window_you"
+													visible = "[GetScriptedGui('kns_gui_knight_is_self').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+												}
+
+												text_single = {
+													text = "kns_funding_window_courtier"
+													visible = "[GetScriptedGui('kns_gui_knight_is_courtier').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+												}
+
+												text_single = {
+													text = "kns_funding_window_vassal"
+													visible = "[GetScriptedGui('kns_gui_knight_is_vassal').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+												}
+											}
+										}
+
+										button_checkbox_label = {
+											parentanchor = vcenter
+											onclick = "[GetScriptedGui('kns_gui_toggle_knight_funding').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											enabled = "[GetScriptedGui('kns_gui_toggle_knight_funding').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											tooltip = "kns_funding_window_toggle_tt"
+
+											blockoverride "checkbox" {
+												checked = "[GetScriptedGui('kns_gui_knight_is_funded').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+											blockoverride "text" {
+												text = "kns_funding_window_funded"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+
+					blockoverride "scrollbox_empty" {
+						visible = "[And( IsDataModelEmpty( GetPlayer.MakeScope.GetList('kns_funding_knights_fundable') ), IsDataModelEmpty( GetPlayer.MakeScope.GetList('kns_funding_knights_unfundable') ) )]"
+						text = "kns_funding_window_empty"
+					}
+				}
+			}
+
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				spacing = 12
+				visible = "[GetScriptedGui('kns_gui_potential_tab_is_shown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_funding_window_potential_header"
+					default_format = "#high"
+				}
+
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					spacing = 6
+
+					button_standard = {
+						layoutpolicy_horizontal = expanding
+						text = "kns_funding_window_age_all"
+						down = "[GetScriptedGui('kns_gui_age_filter_all_is_shown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						onclick = "[GetScriptedGui('kns_gui_set_age_filter_all').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					}
+
+					button_standard = {
+						layoutpolicy_horizontal = expanding
+						text = "kns_funding_window_age_20"
+						down = "[GetScriptedGui('kns_gui_age_filter_20_is_shown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						onclick = "[GetScriptedGui('kns_gui_set_age_filter_20').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					}
+
+					button_standard = {
+						layoutpolicy_horizontal = expanding
+						text = "kns_funding_window_age_30"
+						down = "[GetScriptedGui('kns_gui_age_filter_30_is_shown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						onclick = "[GetScriptedGui('kns_gui_set_age_filter_30').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					}
+
+					button_standard = {
+						layoutpolicy_horizontal = expanding
+						text = "kns_funding_window_age_40"
+						down = "[GetScriptedGui('kns_gui_age_filter_40_is_shown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						onclick = "[GetScriptedGui('kns_gui_set_age_filter_40').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					}
+				}
+
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					spacing = 8
+					margin = { 0 4 }
+
+					button_standard = {
+						layoutpolicy_horizontal = expanding
+						text = "kns_funding_window_sort_prowess"
+						down = "[GetScriptedGui('kns_gui_sort_prowess_is_shown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						onclick = "[GetScriptedGui('kns_gui_sort_by_prowess').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					}
+
+					button_standard = {
+						layoutpolicy_horizontal = expanding
+						text = "kns_funding_window_sort_age"
+						down = "[GetScriptedGui('kns_gui_sort_age_is_shown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						onclick = "[GetScriptedGui('kns_gui_sort_by_age').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					}
+				}
+
+				scrollbox = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+
+					blockoverride "scrollbox_content" {
+						vbox = {
+							name = "kns_potential_knight_list"
+							layoutpolicy_horizontal = expanding
+							datamodel = "[GetPlayer.MakeScope.GetList('kns_potential_knights')]"
+
+							item = {
+								hbox = {
+									layoutpolicy_horizontal = expanding
+									spacing = 8
+									datacontext = "[Scope.Char]"
+									background = {
+										using = Background_Area_Dark
+									}
+
+									widget = {
+										size = { 85 90 }
+										visible = "[Character.IsValid]"
+										portrait_head_small = {}
+									}
+
+									vbox = {
+										layoutpolicy_horizontal = expanding
+										parentanchor = vcenter
+										spacing = 2
+
+										text_single = {
+											layoutpolicy_horizontal = expanding
+											visible = "[Character.IsValid]"
+											text = "[Character.GetShortUINameNoTooltip]"
+											default_format = "#high"
+										}
+
+										text_single = {
+											layoutpolicy_horizontal = expanding
+											text = "kns_funding_window_potential_prowess"
+										}
+
+										text_single = {
+											layoutpolicy_horizontal = expanding
+											text = "kns_funding_window_potential_age"
+										}
+
+										hbox = {
+											spacing = 6
+
+											text_single = {
+												text = "kns_funding_window_courtier"
+												visible = "[GetScriptedGui('kns_gui_knight_is_courtier').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+
+											text_single = {
+												text = "kns_funding_window_vassal"
+												visible = "[GetScriptedGui('kns_gui_knight_is_vassal').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+										}
+									}
+
+									button_standard = {
+										parentanchor = vcenter
+										text = "kns_funding_window_knight"
+										enabled = "[GetScriptedGui('kns_gui_knight_candidate').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_knight_candidate').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+										tooltip = "kns_funding_window_knight_tt"
+									}
+								}
+							}
+						}
+					}
+
+					blockoverride "scrollbox_empty" {
+						visible = "[IsDataModelEmpty( GetPlayer.MakeScope.GetList('kns_potential_knights') )]"
+						text = "kns_funding_window_potential_empty"
+					}
+				}
+			}
+		}
+	}

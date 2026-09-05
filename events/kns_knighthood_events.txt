@@ -1,0 +1,409 @@
+namespace = kns_knighthood
+
+# A wandering knight offers to take your child as a squire
+kns_knighthood.0016 = {
+	type = character_event
+	title = kns_knighthood.0016.t
+	desc = kns_knighthood.0016.desc
+	theme = faith
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+	lower_left_portrait = {
+		character = scope:potential_child_squire
+		animation = disbelief
+	}
+	right_portrait = {
+		character = scope:hedge_knight
+		animation = personality_bold
+	}
+
+	trigger = {
+		is_ruler = yes
+		kns_practices_knighthood_trigger = yes
+		highest_held_title_tier >= tier_county
+		any_child = {
+			is_ruler = no
+			kns_is_eligible_for_squirehood_trigger = yes
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.25
+		modifier = {
+			add = 0.5
+			kns_is_knight_trigger = no
+		}
+		modifier = {
+			add = -8
+			highest_held_title_tier >= tier_empire
+		}
+	}
+
+	immediate = {
+		random_child = {
+			limit = {
+				is_ruler = no
+				kns_is_eligible_for_squirehood_trigger = yes
+			}
+			save_scope_as = potential_child_squire
+		}
+		create_character = {
+			template = knight
+			dynasty = none
+			location = root.capital_province
+			culture = root.culture
+			faith = root.faith
+			gender_female_chance = 0
+			age = { 28 46 }
+			save_scope_as = hedge_knight
+		}
+		scope:hedge_knight = {
+			add_trait = squire
+			add_trait_xp = {
+				trait = squire
+				track = knight
+				value = 100
+			}
+			kns_assign_prowess_talent_silent_effect = yes
+		}
+	}
+
+	option = {
+		name = kns_knighthood.0016.a
+		add_courtier = scope:hedge_knight
+		kns_set_squire_effect = {
+			KNIGHT = scope:hedge_knight
+			SQUIRE = scope:potential_child_squire
+		}
+		scope:hedge_knight = {
+			add_prestige = medium_prestige_gain
+			save_scope_as = my_knight
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				OR = {
+					has_trait = humble
+					has_trait = trusting
+				}
+				add = 10
+			}
+		}
+	}
+
+	option = {
+		name = kns_knighthood.0016.b
+		custom_tooltip = kns_knighthood.0016.b.tt
+		ai_chance = {
+			base = 80
+			modifier = {
+				OR = {
+					has_trait = arrogant
+					has_trait = paranoid
+				}
+				add = 40
+			}
+		}
+	}
+}
+
+# Offer to take a kinsman as squire
+kns_knighthood.0017 = {
+	type = character_event
+	title = kns_knighthood.0017.t
+	desc = kns_knighthood.0017.desc
+	theme = faith
+	override_background = { reference = army_camp }
+
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:potential_squire
+		animation = idle
+	}
+
+	trigger = {
+		kns_can_take_squire_trigger = yes
+		any_close_or_extended_family_member = {
+			kns_is_eligible_for_squirehood_trigger = yes
+			NOT = { this = root }
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.2
+	}
+
+	immediate = {
+		random_close_or_extended_family_member = {
+			limit = {
+				kns_is_eligible_for_squirehood_trigger = yes
+				NOT = { this = root }
+			}
+			save_scope_as = potential_squire
+		}
+	}
+
+	option = {
+		name = kns_knighthood.0017.a
+		save_scope_as = knight_offerer
+		scope:potential_squire = {
+			trigger_event = kns_knighthood.0018
+		}
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = kns_knighthood.0017.b
+		ai_chance = { base = 30 }
+	}
+}
+
+kns_knighthood.0018 = {
+	type = letter_event
+	opening = kns_knighthood.0018.opening
+	desc = kns_knighthood.0018.desc
+	sender = scope:knight_offerer
+
+	trigger = {
+		exists = scope:knight_offerer
+	}
+
+	option = {
+		name = kns_knighthood.0018.a
+		kns_set_squire_effect = {
+			KNIGHT = scope:knight_offerer
+			SQUIRE = root
+		}
+		add_prestige = medium_prestige_gain
+		scope:knight_offerer = {
+			trigger_event = kns_knighthood.0019
+		}
+		ai_chance = {
+			base = 70
+			opinion_modifier = {
+				opinion_target = scope:knight_offerer
+			}
+		}
+	}
+
+	option = {
+		name = kns_knighthood.0018.b
+		scope:knight_offerer = {
+			send_interface_toast = {
+				title = kns_knighthood.0018.b_toast
+				left_icon = scope:knight_offerer
+				right_icon = root
+				custom_tooltip = kns_knighthood.0018.b_toast_tt
+				add_prestige = minor_prestige_loss
+			}
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+kns_knighthood.0019 = {
+	type = letter_event
+	opening = kns_knighthood.0019.opening
+	desc = kns_knighthood.0019.desc
+	sender = scope:potential_squire
+
+	option = {
+		name = kns_knighthood.0019.a
+		show_as_tooltip = {
+			kns_set_squire_effect = {
+				KNIGHT = root
+				SQUIRE = scope:potential_squire
+			}
+		}
+	}
+}
+
+# AI knight is ready to knight their squire
+kns_knighthood.0300 = {
+	type = character_event
+	title = kns_knighthood.0300.t
+	desc = kns_knighthood.0300.desc
+	theme = martial
+	override_background = { reference = army_camp }
+
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+	right_portrait = {
+		character = scope:my_squire
+		animation = idle
+	}
+
+	immediate = {
+		if = {
+			limit = { NOT = { exists = scope:my_squire } }
+			random_relation = {
+				type = kns_squire
+				limit = {
+					has_trait = squire
+					has_trait_xp = {
+						trait = squire
+						track = knight
+						value >= 66
+					}
+				}
+				save_scope_as = my_squire
+			}
+		}
+	}
+
+	option = {
+		name = kns_knighthood.0300.a
+		custom_tooltip = kns_knighthood.0300.a.tt
+		kns_become_a_knight_effect = {
+			KNIGHT_MAKER = root
+			KNIGHT_TO_BE = scope:my_squire
+		}
+	}
+}
+
+# Family is told a relation was knighted
+kns_knighthood.0320 = {
+	type = character_event
+	title = kns_knighthood.0320.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:kns_new_knight.house ?= root.house
+				}
+				desc = kns_knighthood.0320.desc_same_house
+			}
+			desc = kns_knighthood.0320.desc_not_same_house
+		}
+	}
+	theme = faith
+	override_background = { reference = temple }
+
+	left_portrait = {
+		character = scope:kns_new_knight
+		animation = happiness
+	}
+	right_portrait = {
+		character = root
+		animation = throne_room_applaud_1
+	}
+
+	immediate = {
+		if = {
+			limit = { exists = scope:kns_new_knight }
+			scope:kns_new_knight = { save_scope_as = my_relation }
+		}
+	}
+
+	option = {
+		name = kns_knighthood.0320.a
+	}
+}
+
+# Battlefield knighting router
+kns_knighthood.0600 = {
+	scope = combat_side
+	hidden = yes
+
+	trigger = {
+		side_commander ?= {
+			kns_is_knight_trigger = yes
+		}
+		any_side_knight = {
+			kns_is_knight_trigger = no
+			kns_is_squire_with_trait_xp = no
+			kns_can_become_a_knight_trigger = yes
+		}
+	}
+
+	immediate = {
+		side_commander = {
+			save_scope_as = side_commander
+		}
+		random_side_knight = {
+			limit = {
+				kns_is_knight_trigger = no
+				kns_is_squire_with_trait_xp = no
+				kns_can_become_a_knight_trigger = yes
+			}
+			save_scope_as = soldier_to_be_knighted
+			scope:side_commander = {
+				trigger_event = kns_knighthood.0601
+			}
+		}
+	}
+}
+
+kns_knighthood.0601 = {
+	type = character_event
+	title = kns_knighthood.0601.t
+	desc = kns_knighthood.0601.desc
+	theme = faith
+	override_background = { reference = army_camp }
+
+	left_portrait = root
+	right_portrait = {
+		character = scope:soldier_to_be_knighted
+		animation = ecstasy
+	}
+
+	option = {
+		name = kns_knighthood.0601.a
+		custom_tooltip = kns_knighthood.0601.a.tt
+		add_prestige = 25
+		scope:soldier_to_be_knighted = {
+			trigger_event = kns_knighthood.0602
+		}
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = kns_knighthood.0601.b
+		ai_chance = {
+			base = 30
+			modifier = {
+				has_trait = arrogant
+				add = 20
+			}
+		}
+	}
+}
+
+kns_knighthood.0602 = {
+	type = character_event
+	title = kns_knighthood.0602.t
+	desc = kns_knighthood.0602.desc
+	theme = faith
+	override_background = { reference = battlefield }
+
+	left_portrait = {
+		character = scope:side_commander
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:soldier_to_be_knighted
+		animation = throne_room_kneel_1
+	}
+
+	option = {
+		name = kns_knighthood.0602.a
+		custom_tooltip = kns_knighthood.0602.a.tt
+		add_character_flag = kns_had_battlefield_knighthood
+		kns_become_a_knight_effect = {
+			KNIGHT_MAKER = scope:side_commander
+			KNIGHT_TO_BE = scope:soldier_to_be_knighted
+		}
+		scope:side_commander = {
+			add_prestige = 50
+		}
+	}
+}

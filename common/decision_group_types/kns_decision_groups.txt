@@ -1,0 +1,4 @@
+kns_knight_decisions = {
+	sort_order = 170
+	gui_tags = { big_button }
+}

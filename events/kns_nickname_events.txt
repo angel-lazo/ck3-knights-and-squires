@@ -1,0 +1,56 @@
+namespace = kns_nickname
+
+kns_nickname.0001 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		is_alive = yes
+		has_trait = kns_talent_generation
+		exists = var:kns_knight_weapon_type
+	}
+
+	immediate = {
+		save_scope_as = kns_named_knight
+		kns_assign_prodigious_nickname_effect = yes
+		if = {
+			limit = { is_ai = no }
+			trigger_event = kns_nickname.0002
+		}
+		else_if = {
+			limit = {
+				exists = liege
+				liege = { is_ai = no }
+			}
+			liege = {
+				trigger_event = kns_nickname.0002
+			}
+		}
+		else_if = {
+			limit = {
+				exists = court_owner
+				court_owner = { is_ai = no }
+			}
+			court_owner = {
+				trigger_event = kns_nickname.0002
+			}
+		}
+	}
+}
+
+kns_nickname.0002 = {
+	type = character_event
+	title = kns_nickname.0002.t
+	desc = kns_nickname.0002.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = scope:kns_named_knight
+		animation = personality_bold
+	}
+
+	option = {
+		name = kns_nickname.0002.a
+	}
+}

@@ -1,0 +1,132 @@
+activity_kns_papal_youth_tourney = {
+	is_shown = {
+		has_dlc_feature = tours_and_tournaments
+		has_dlc_feature = advanced_activities
+		has_character_flag = kns_papal_tourney_needed
+		kns_is_catholic_pope_trigger = yes
+	}
+
+	can_start_showing_failures_only = {
+		NOT = { is_activity_type_on_cooldown = activity_kns_papal_youth_tourney }
+		is_available_adult = yes
+	}
+
+	is_valid = {
+		scope:host = {
+			is_alive = yes
+			is_imprisoned = no
+		}
+	}
+
+	on_invalidated = {
+		if = {
+			limit = {
+				has_attending_activity_guests = no
+			}
+			scope:host = {
+				trigger_event = kns_papal_tourney.0010
+			}
+		}
+	}
+
+	is_location_valid = {
+		this = scope:host.capital_province
+	}
+
+	province_filter = capital
+	ai_province_filter = capital
+	max_province_icons = 1
+
+	cost = {
+		gold = { add = 0 }
+	}
+
+	ui_predicted_cost = {
+		gold = 0
+	}
+
+	cooldown = { days = 7300 }
+
+	phases = {
+		kns_papal_melee_phase = {
+			is_predefined = no
+
+			on_phase_active = {
+				if = {
+					limit = { this = scope:host }
+					scope:activity = { progress_activity_phase_after = { days = 30 } }
+				}
+			}
+
+			on_end = {
+				if = {
+					limit = { this = scope:host }
+					save_scope_as = kns_pope
+					scope:activity = {
+						every_attending_character = {
+							limit = {
+								this != scope:host
+								kns_can_enter_papal_youth_tourney_trigger = yes
+							}
+							scope:host = {
+								add_to_variable_list = {
+									name = kns_papal_entrants
+									target = prev
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	wait_time_before_start = { days = 14 }
+	max_guest_arrival_delay_time = { months = 2 }
+
+	ai_will_do = {
+		value = 1000
+	}
+
+	ai_will_select_province = {
+		value = 100
+	}
+
+	max_guests = 24
+
+	guest_invite_rules = {
+		defaults = {
+			3 = activity_invite_rule_vassals
+			2 = activity_invite_rule_vassals_children
+			2 = activity_invite_rule_liege
+		}
+	}
+
+	can_be_activity_guest = {
+		kns_can_enter_papal_youth_tourney_trigger = yes
+		in_diplomatic_range = scope:host
+	}
+
+	host_intents = {
+		default = reduce_stress_intent
+		intents = { reduce_stress_intent }
+	}
+
+	guest_intents = {
+		default = reduce_stress_intent
+		intents = { reduce_stress_intent }
+	}
+
+	guest_join_chance = {
+		base = 80
+		base_activity_modifier = yes
+	}
+
+	province_description = {
+		desc = activity_kns_papal_youth_tourney_province_desc
+	}
+
+	on_start = {
+		scope:host = { save_scope_as = kns_pope }
+	}
+}

@@ -1,0 +1,348 @@
+window = {
+	name = "kns_knightly_lineage_window"
+	size = { 540 720 }
+	parentanchor = center
+	position = { 0 0 }
+	movable = yes
+	layer = top
+	allow_outside = yes
+	visible = "[GetPlayer.MakeScope.Var('kns_lineage_subject').IsSet]"
+
+	using = Window_Background_Subwindow
+
+		vbox = {
+			margin = { 10 10 }
+			spacing = 6
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				spacing = 8
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_lineage_window_title"
+					fontsize = 22
+				}
+
+				button_close = {
+					onclick = "[GetScriptedGui('kns_close_lineage_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+				}
+			}
+
+			# This knight
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				background = {
+					using = Background_Area_Dark
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_lineage_window_subject"
+					default_format = "#high"
+				}
+
+				widget = {
+					size = { 110 120 }
+					parentanchor = hcenter
+					visible = "[GetPlayer.MakeScope.Var('kns_lineage_subject').Char.IsValid]"
+					datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_subject').Char]"
+					portrait_head = {}
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					visible = "[GetPlayer.MakeScope.Var('kns_lineage_subject').Char.IsValid]"
+					datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_subject').Char]"
+					text = "[Character.GetShortUINameNoTooltip]"
+				}
+			}
+
+			# Dubbed by
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				background = {
+					using = Background_Area_Dark
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_lineage_window_teacher"
+					default_format = "#high"
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_lineage_window_purchased"
+					visible = "[GetScriptedGui('kns_lineage_is_purchased').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_lineage_window_unknown"
+					visible = "[GetScriptedGui('kns_lineage_teacher_unknown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+				}
+
+				hbox = {
+					parentanchor = hcenter
+					visible = "[GetScriptedGui('kns_lineage_has_teacher').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					spacing = 8
+
+					widget = {
+						size = { 110 120 }
+						visible = "[GetPlayer.MakeScope.Var('kns_lineage_teacher').Char.IsValid]"
+						datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_teacher').Char]"
+						portrait_head = {}
+					}
+
+					text_single = {
+						parentanchor = vcenter
+						visible = "[GetPlayer.MakeScope.Var('kns_lineage_teacher').Char.IsValid]"
+						datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_teacher').Char]"
+						text = "[Character.GetShortUINameNoTooltip]"
+					}
+				}
+			}
+
+			# Chain: oldest to newest
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				visible = "[GetScriptedGui('kns_lineage_has_chain').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+				background = {
+					using = Background_Area_Dark
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_lineage_window_chain"
+					default_format = "#high"
+				}
+
+				hbox = {
+					parentanchor = hcenter
+					spacing = 6
+
+					vbox = {
+						visible = "[GetScriptedGui('kns_lineage_has_gen3').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						widget = {
+							size = { 85 90 }
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_gen3').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_gen3').Char]"
+							portrait_head_small = {}
+						}
+						text_single = {
+							align = center
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_gen3').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_gen3').Char]"
+							text = "[Character.GetFirstNameNoTooltip]"
+						}
+					}
+
+					vbox = {
+						visible = "[GetScriptedGui('kns_lineage_has_gen2').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						widget = {
+							size = { 85 90 }
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_gen2').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_gen2').Char]"
+							portrait_head_small = {}
+						}
+						text_single = {
+							align = center
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_gen2').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_gen2').Char]"
+							text = "[Character.GetFirstNameNoTooltip]"
+						}
+					}
+
+					vbox = {
+						visible = "[GetScriptedGui('kns_lineage_has_teacher').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						widget = {
+							size = { 85 90 }
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_gen1').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_gen1').Char]"
+							portrait_head_small = {}
+						}
+						text_single = {
+							align = center
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_gen1').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_gen1').Char]"
+							text = "[Character.GetFirstNameNoTooltip]"
+						}
+					}
+
+					vbox = {
+						widget = {
+							size = { 85 90 }
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_subject').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_subject').Char]"
+							portrait_head_small = {}
+						}
+						text_single = {
+							align = center
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_subject').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_subject').Char]"
+							text = "[Character.GetFirstNameNoTooltip]"
+						}
+					}
+				}
+			}
+
+			# Knights they dubbed
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				background = {
+					using = Background_Area_Dark
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_lineage_window_students"
+					default_format = "#high"
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_lineage_window_no_students"
+					visible = "[Not( GetScriptedGui('kns_lineage_has_students').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+				}
+
+				flowcontainer = {
+					layoutpolicy_horizontal = expanding
+					visible = "[GetScriptedGui('kns_lineage_has_students').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+					vbox = {
+						visible = "[GetScriptedGui('kns_lineage_has_student_1').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						widget = {
+							size = { 85 90 }
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_1').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_1').Char]"
+							portrait_head_small = {}
+						}
+						text_single = {
+							align = center
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_1').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_1').Char]"
+							text = "[Character.GetFirstNameNoTooltip]"
+						}
+					}
+					vbox = {
+						visible = "[GetScriptedGui('kns_lineage_has_student_2').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						widget = {
+							size = { 85 90 }
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_2').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_2').Char]"
+							portrait_head_small = {}
+						}
+						text_single = {
+							align = center
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_2').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_2').Char]"
+							text = "[Character.GetFirstNameNoTooltip]"
+						}
+					}
+					vbox = {
+						visible = "[GetScriptedGui('kns_lineage_has_student_3').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						widget = {
+							size = { 85 90 }
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_3').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_3').Char]"
+							portrait_head_small = {}
+						}
+						text_single = {
+							align = center
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_3').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_3').Char]"
+							text = "[Character.GetFirstNameNoTooltip]"
+						}
+					}
+					vbox = {
+						visible = "[GetScriptedGui('kns_lineage_has_student_4').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						widget = {
+							size = { 85 90 }
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_4').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_4').Char]"
+							portrait_head_small = {}
+						}
+						text_single = {
+							align = center
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_4').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_4').Char]"
+							text = "[Character.GetFirstNameNoTooltip]"
+						}
+					}
+					vbox = {
+						visible = "[GetScriptedGui('kns_lineage_has_student_5').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						widget = {
+							size = { 85 90 }
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_5').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_5').Char]"
+							portrait_head_small = {}
+						}
+						text_single = {
+							align = center
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_5').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_5').Char]"
+							text = "[Character.GetFirstNameNoTooltip]"
+						}
+					}
+					vbox = {
+						visible = "[GetScriptedGui('kns_lineage_has_student_6').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						widget = {
+							size = { 85 90 }
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_6').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_6').Char]"
+							portrait_head_small = {}
+						}
+						text_single = {
+							align = center
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_6').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_6').Char]"
+							text = "[Character.GetFirstNameNoTooltip]"
+						}
+					}
+					vbox = {
+						visible = "[GetScriptedGui('kns_lineage_has_student_7').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						widget = {
+							size = { 85 90 }
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_7').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_7').Char]"
+							portrait_head_small = {}
+						}
+						text_single = {
+							align = center
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_7').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_7').Char]"
+							text = "[Character.GetFirstNameNoTooltip]"
+						}
+					}
+					vbox = {
+						visible = "[GetScriptedGui('kns_lineage_has_student_8').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						widget = {
+							size = { 85 90 }
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_8').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_8').Char]"
+							portrait_head_small = {}
+						}
+						text_single = {
+							align = center
+							visible = "[GetPlayer.MakeScope.Var('kns_lineage_student_8').Char.IsValid]"
+							datacontext = "[GetPlayer.MakeScope.Var('kns_lineage_student_8').Char]"
+							text = "[Character.GetFirstNameNoTooltip]"
+						}
+					}
+				}
+			}
+		}
+	}

@@ -1,0 +1,11 @@
+kns_squire = {
+	corresponding = kns_knight
+	special_guest = no
+	title_grant_target = no
+}
+
+kns_knight = {
+	corresponding = kns_squire
+	special_guest = no
+	title_grant_target = no
+}

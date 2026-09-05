@@ -1,0 +1,15 @@
+namespace = kns_prowess
+
+kns_prowess.0001 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		kns_is_knight_trigger = yes
+		has_variable = kns_prowess_cap
+	}
+
+	immediate = {
+		kns_yearly_prowess_training_effect = yes
+	}
+}

@@ -1,0 +1,2295 @@
+kns_assign_prodigious_nickname_effect = {
+	if = {
+		limit = {
+			exists = var:kns_knight_weapon_type
+			var:kns_knight_weapon_type = flag:sword
+		}
+		random_list = {
+			1 = {
+				give_nickname = nick_kns_sword_01
+			}
+			1 = {
+				give_nickname = nick_kns_sword_02
+			}
+			1 = {
+				give_nickname = nick_kns_sword_03
+			}
+			1 = {
+				give_nickname = nick_kns_sword_04
+			}
+			1 = {
+				give_nickname = nick_kns_sword_05
+			}
+			1 = {
+				give_nickname = nick_kns_sword_06
+			}
+			1 = {
+				give_nickname = nick_kns_sword_07
+			}
+			1 = {
+				give_nickname = nick_kns_sword_08
+			}
+			1 = {
+				give_nickname = nick_kns_sword_09
+			}
+			1 = {
+				give_nickname = nick_kns_sword_10
+			}
+			1 = {
+				give_nickname = nick_kns_sword_11
+			}
+			1 = {
+				give_nickname = nick_kns_sword_12
+			}
+			1 = {
+				give_nickname = nick_kns_sword_13
+			}
+			1 = {
+				give_nickname = nick_kns_sword_14
+			}
+			1 = {
+				give_nickname = nick_kns_sword_15
+			}
+			1 = {
+				give_nickname = nick_kns_sword_16
+			}
+			1 = {
+				give_nickname = nick_kns_sword_17
+			}
+			1 = {
+				give_nickname = nick_kns_sword_18
+			}
+			1 = {
+				give_nickname = nick_kns_sword_19
+			}
+			1 = {
+				give_nickname = nick_kns_sword_20
+			}
+			1 = {
+				give_nickname = nick_kns_sword_21
+			}
+			1 = {
+				give_nickname = nick_kns_sword_22
+			}
+			1 = {
+				give_nickname = nick_kns_sword_23
+			}
+			1 = {
+				give_nickname = nick_kns_sword_24
+			}
+			1 = {
+				give_nickname = nick_kns_sword_25
+			}
+			1 = {
+				give_nickname = nick_kns_sword_26
+			}
+			1 = {
+				give_nickname = nick_kns_sword_27
+			}
+			1 = {
+				give_nickname = nick_kns_sword_28
+			}
+			1 = {
+				give_nickname = nick_kns_sword_29
+			}
+			1 = {
+				give_nickname = nick_kns_sword_30
+			}
+			1 = {
+				give_nickname = nick_kns_sword_31
+			}
+			1 = {
+				give_nickname = nick_kns_sword_32
+			}
+			1 = {
+				give_nickname = nick_kns_sword_33
+			}
+			1 = {
+				give_nickname = nick_kns_sword_34
+			}
+			1 = {
+				give_nickname = nick_kns_sword_35
+			}
+			1 = {
+				give_nickname = nick_kns_sword_36
+			}
+			1 = {
+				give_nickname = nick_kns_sword_37
+			}
+			1 = {
+				give_nickname = nick_kns_sword_38
+			}
+			1 = {
+				give_nickname = nick_kns_sword_39
+			}
+			1 = {
+				give_nickname = nick_kns_sword_40
+			}
+			1 = {
+				give_nickname = nick_kns_sword_41
+			}
+			1 = {
+				give_nickname = nick_kns_sword_42
+			}
+			1 = {
+				give_nickname = nick_kns_sword_43
+			}
+			1 = {
+				give_nickname = nick_kns_sword_44
+			}
+			1 = {
+				give_nickname = nick_kns_sword_45
+			}
+			1 = {
+				give_nickname = nick_kns_sword_46
+			}
+			1 = {
+				give_nickname = nick_kns_sword_47
+			}
+			1 = {
+				give_nickname = nick_kns_sword_48
+			}
+			1 = {
+				give_nickname = nick_kns_sword_49
+			}
+			1 = {
+				give_nickname = nick_kns_sword_50
+			}
+			1 = {
+				give_nickname = nick_kns_sword_51
+			}
+			1 = {
+				give_nickname = nick_kns_sword_52
+			}
+			1 = {
+				give_nickname = nick_kns_sword_53
+			}
+			1 = {
+				give_nickname = nick_kns_sword_54
+			}
+			1 = {
+				give_nickname = nick_kns_sword_55
+			}
+			1 = {
+				give_nickname = nick_kns_sword_56
+			}
+			1 = {
+				give_nickname = nick_kns_sword_57
+			}
+			1 = {
+				give_nickname = nick_kns_sword_58
+			}
+			1 = {
+				give_nickname = nick_kns_sword_59
+			}
+			1 = {
+				give_nickname = nick_kns_sword_60
+			}
+			1 = {
+				give_nickname = nick_kns_sword_61
+			}
+			1 = {
+				give_nickname = nick_kns_sword_62
+			}
+			1 = {
+				give_nickname = nick_kns_sword_63
+			}
+			1 = {
+				give_nickname = nick_kns_sword_64
+			}
+			1 = {
+				give_nickname = nick_kns_sword_65
+			}
+			1 = {
+				give_nickname = nick_kns_sword_66
+			}
+			1 = {
+				give_nickname = nick_kns_sword_67
+			}
+			1 = {
+				give_nickname = nick_kns_sword_68
+			}
+			1 = {
+				give_nickname = nick_kns_sword_69
+			}
+			1 = {
+				give_nickname = nick_kns_sword_70
+			}
+			1 = {
+				give_nickname = nick_kns_sword_71
+			}
+			1 = {
+				give_nickname = nick_kns_sword_72
+			}
+			1 = {
+				give_nickname = nick_kns_sword_73
+			}
+			1 = {
+				give_nickname = nick_kns_sword_74
+			}
+			1 = {
+				give_nickname = nick_kns_sword_75
+			}
+			1 = {
+				give_nickname = nick_kns_sword_76
+			}
+			1 = {
+				give_nickname = nick_kns_sword_77
+			}
+			1 = {
+				give_nickname = nick_kns_sword_78
+			}
+			1 = {
+				give_nickname = nick_kns_sword_79
+			}
+			1 = {
+				give_nickname = nick_kns_sword_80
+			}
+			1 = {
+				give_nickname = nick_kns_sword_81
+			}
+			1 = {
+				give_nickname = nick_kns_sword_82
+			}
+			1 = {
+				give_nickname = nick_kns_sword_83
+			}
+			1 = {
+				give_nickname = nick_kns_sword_84
+			}
+			1 = {
+				give_nickname = nick_kns_sword_85
+			}
+			1 = {
+				give_nickname = nick_kns_sword_86
+			}
+			1 = {
+				give_nickname = nick_kns_sword_87
+			}
+			1 = {
+				give_nickname = nick_kns_sword_88
+			}
+			1 = {
+				give_nickname = nick_kns_sword_89
+			}
+			1 = {
+				give_nickname = nick_kns_sword_90
+			}
+			1 = {
+				give_nickname = nick_kns_sword_91
+			}
+			1 = {
+				give_nickname = nick_kns_sword_92
+			}
+			1 = {
+				give_nickname = nick_kns_sword_93
+			}
+			1 = {
+				give_nickname = nick_kns_sword_94
+			}
+			1 = {
+				give_nickname = nick_kns_sword_95
+			}
+			1 = {
+				give_nickname = nick_kns_sword_96
+			}
+			1 = {
+				give_nickname = nick_kns_sword_97
+			}
+			1 = {
+				give_nickname = nick_kns_sword_98
+			}
+			1 = {
+				give_nickname = nick_kns_sword_99
+			}
+			1 = {
+				give_nickname = nick_kns_sword_100
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = var:kns_knight_weapon_type
+			var:kns_knight_weapon_type = flag:axe
+		}
+		random_list = {
+			1 = {
+				give_nickname = nick_kns_axe_01
+			}
+			1 = {
+				give_nickname = nick_kns_axe_02
+			}
+			1 = {
+				give_nickname = nick_kns_axe_03
+			}
+			1 = {
+				give_nickname = nick_kns_axe_04
+			}
+			1 = {
+				give_nickname = nick_kns_axe_05
+			}
+			1 = {
+				give_nickname = nick_kns_axe_06
+			}
+			1 = {
+				give_nickname = nick_kns_axe_07
+			}
+			1 = {
+				give_nickname = nick_kns_axe_08
+			}
+			1 = {
+				give_nickname = nick_kns_axe_09
+			}
+			1 = {
+				give_nickname = nick_kns_axe_10
+			}
+			1 = {
+				give_nickname = nick_kns_axe_11
+			}
+			1 = {
+				give_nickname = nick_kns_axe_12
+			}
+			1 = {
+				give_nickname = nick_kns_axe_13
+			}
+			1 = {
+				give_nickname = nick_kns_axe_14
+			}
+			1 = {
+				give_nickname = nick_kns_axe_15
+			}
+			1 = {
+				give_nickname = nick_kns_axe_16
+			}
+			1 = {
+				give_nickname = nick_kns_axe_17
+			}
+			1 = {
+				give_nickname = nick_kns_axe_18
+			}
+			1 = {
+				give_nickname = nick_kns_axe_19
+			}
+			1 = {
+				give_nickname = nick_kns_axe_20
+			}
+			1 = {
+				give_nickname = nick_kns_axe_21
+			}
+			1 = {
+				give_nickname = nick_kns_axe_22
+			}
+			1 = {
+				give_nickname = nick_kns_axe_23
+			}
+			1 = {
+				give_nickname = nick_kns_axe_24
+			}
+			1 = {
+				give_nickname = nick_kns_axe_25
+			}
+			1 = {
+				give_nickname = nick_kns_axe_26
+			}
+			1 = {
+				give_nickname = nick_kns_axe_27
+			}
+			1 = {
+				give_nickname = nick_kns_axe_28
+			}
+			1 = {
+				give_nickname = nick_kns_axe_29
+			}
+			1 = {
+				give_nickname = nick_kns_axe_30
+			}
+			1 = {
+				give_nickname = nick_kns_axe_31
+			}
+			1 = {
+				give_nickname = nick_kns_axe_32
+			}
+			1 = {
+				give_nickname = nick_kns_axe_33
+			}
+			1 = {
+				give_nickname = nick_kns_axe_34
+			}
+			1 = {
+				give_nickname = nick_kns_axe_35
+			}
+			1 = {
+				give_nickname = nick_kns_axe_36
+			}
+			1 = {
+				give_nickname = nick_kns_axe_37
+			}
+			1 = {
+				give_nickname = nick_kns_axe_38
+			}
+			1 = {
+				give_nickname = nick_kns_axe_39
+			}
+			1 = {
+				give_nickname = nick_kns_axe_40
+			}
+			1 = {
+				give_nickname = nick_kns_axe_41
+			}
+			1 = {
+				give_nickname = nick_kns_axe_42
+			}
+			1 = {
+				give_nickname = nick_kns_axe_43
+			}
+			1 = {
+				give_nickname = nick_kns_axe_44
+			}
+			1 = {
+				give_nickname = nick_kns_axe_45
+			}
+			1 = {
+				give_nickname = nick_kns_axe_46
+			}
+			1 = {
+				give_nickname = nick_kns_axe_47
+			}
+			1 = {
+				give_nickname = nick_kns_axe_48
+			}
+			1 = {
+				give_nickname = nick_kns_axe_49
+			}
+			1 = {
+				give_nickname = nick_kns_axe_50
+			}
+			1 = {
+				give_nickname = nick_kns_axe_51
+			}
+			1 = {
+				give_nickname = nick_kns_axe_52
+			}
+			1 = {
+				give_nickname = nick_kns_axe_53
+			}
+			1 = {
+				give_nickname = nick_kns_axe_54
+			}
+			1 = {
+				give_nickname = nick_kns_axe_55
+			}
+			1 = {
+				give_nickname = nick_kns_axe_56
+			}
+			1 = {
+				give_nickname = nick_kns_axe_57
+			}
+			1 = {
+				give_nickname = nick_kns_axe_58
+			}
+			1 = {
+				give_nickname = nick_kns_axe_59
+			}
+			1 = {
+				give_nickname = nick_kns_axe_60
+			}
+			1 = {
+				give_nickname = nick_kns_axe_61
+			}
+			1 = {
+				give_nickname = nick_kns_axe_62
+			}
+			1 = {
+				give_nickname = nick_kns_axe_63
+			}
+			1 = {
+				give_nickname = nick_kns_axe_64
+			}
+			1 = {
+				give_nickname = nick_kns_axe_65
+			}
+			1 = {
+				give_nickname = nick_kns_axe_66
+			}
+			1 = {
+				give_nickname = nick_kns_axe_67
+			}
+			1 = {
+				give_nickname = nick_kns_axe_68
+			}
+			1 = {
+				give_nickname = nick_kns_axe_69
+			}
+			1 = {
+				give_nickname = nick_kns_axe_70
+			}
+			1 = {
+				give_nickname = nick_kns_axe_71
+			}
+			1 = {
+				give_nickname = nick_kns_axe_72
+			}
+			1 = {
+				give_nickname = nick_kns_axe_73
+			}
+			1 = {
+				give_nickname = nick_kns_axe_74
+			}
+			1 = {
+				give_nickname = nick_kns_axe_75
+			}
+			1 = {
+				give_nickname = nick_kns_axe_76
+			}
+			1 = {
+				give_nickname = nick_kns_axe_77
+			}
+			1 = {
+				give_nickname = nick_kns_axe_78
+			}
+			1 = {
+				give_nickname = nick_kns_axe_79
+			}
+			1 = {
+				give_nickname = nick_kns_axe_80
+			}
+			1 = {
+				give_nickname = nick_kns_axe_81
+			}
+			1 = {
+				give_nickname = nick_kns_axe_82
+			}
+			1 = {
+				give_nickname = nick_kns_axe_83
+			}
+			1 = {
+				give_nickname = nick_kns_axe_84
+			}
+			1 = {
+				give_nickname = nick_kns_axe_85
+			}
+			1 = {
+				give_nickname = nick_kns_axe_86
+			}
+			1 = {
+				give_nickname = nick_kns_axe_87
+			}
+			1 = {
+				give_nickname = nick_kns_axe_88
+			}
+			1 = {
+				give_nickname = nick_kns_axe_89
+			}
+			1 = {
+				give_nickname = nick_kns_axe_90
+			}
+			1 = {
+				give_nickname = nick_kns_axe_91
+			}
+			1 = {
+				give_nickname = nick_kns_axe_92
+			}
+			1 = {
+				give_nickname = nick_kns_axe_93
+			}
+			1 = {
+				give_nickname = nick_kns_axe_94
+			}
+			1 = {
+				give_nickname = nick_kns_axe_95
+			}
+			1 = {
+				give_nickname = nick_kns_axe_96
+			}
+			1 = {
+				give_nickname = nick_kns_axe_97
+			}
+			1 = {
+				give_nickname = nick_kns_axe_98
+			}
+			1 = {
+				give_nickname = nick_kns_axe_99
+			}
+			1 = {
+				give_nickname = nick_kns_axe_100
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = var:kns_knight_weapon_type
+			var:kns_knight_weapon_type = flag:hammer
+		}
+		random_list = {
+			1 = {
+				give_nickname = nick_kns_hammer_01
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_02
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_03
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_04
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_05
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_06
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_07
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_08
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_09
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_10
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_11
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_12
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_13
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_14
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_15
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_16
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_17
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_18
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_19
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_20
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_21
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_22
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_23
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_24
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_25
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_26
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_27
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_28
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_29
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_30
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_31
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_32
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_33
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_34
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_35
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_36
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_37
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_38
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_39
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_40
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_41
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_42
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_43
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_44
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_45
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_46
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_47
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_48
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_49
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_50
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_51
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_52
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_53
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_54
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_55
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_56
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_57
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_58
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_59
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_60
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_61
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_62
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_63
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_64
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_65
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_66
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_67
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_68
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_69
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_70
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_71
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_72
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_73
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_74
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_75
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_76
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_77
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_78
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_79
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_80
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_81
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_82
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_83
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_84
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_85
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_86
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_87
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_88
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_89
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_90
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_91
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_92
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_93
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_94
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_95
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_96
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_97
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_98
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_99
+			}
+			1 = {
+				give_nickname = nick_kns_hammer_100
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = var:kns_knight_weapon_type
+			var:kns_knight_weapon_type = flag:mace
+		}
+		random_list = {
+			1 = {
+				give_nickname = nick_kns_mace_01
+			}
+			1 = {
+				give_nickname = nick_kns_mace_02
+			}
+			1 = {
+				give_nickname = nick_kns_mace_03
+			}
+			1 = {
+				give_nickname = nick_kns_mace_04
+			}
+			1 = {
+				give_nickname = nick_kns_mace_05
+			}
+			1 = {
+				give_nickname = nick_kns_mace_06
+			}
+			1 = {
+				give_nickname = nick_kns_mace_07
+			}
+			1 = {
+				give_nickname = nick_kns_mace_08
+			}
+			1 = {
+				give_nickname = nick_kns_mace_09
+			}
+			1 = {
+				give_nickname = nick_kns_mace_10
+			}
+			1 = {
+				give_nickname = nick_kns_mace_11
+			}
+			1 = {
+				give_nickname = nick_kns_mace_12
+			}
+			1 = {
+				give_nickname = nick_kns_mace_13
+			}
+			1 = {
+				give_nickname = nick_kns_mace_14
+			}
+			1 = {
+				give_nickname = nick_kns_mace_15
+			}
+			1 = {
+				give_nickname = nick_kns_mace_16
+			}
+			1 = {
+				give_nickname = nick_kns_mace_17
+			}
+			1 = {
+				give_nickname = nick_kns_mace_18
+			}
+			1 = {
+				give_nickname = nick_kns_mace_19
+			}
+			1 = {
+				give_nickname = nick_kns_mace_20
+			}
+			1 = {
+				give_nickname = nick_kns_mace_21
+			}
+			1 = {
+				give_nickname = nick_kns_mace_22
+			}
+			1 = {
+				give_nickname = nick_kns_mace_23
+			}
+			1 = {
+				give_nickname = nick_kns_mace_24
+			}
+			1 = {
+				give_nickname = nick_kns_mace_25
+			}
+			1 = {
+				give_nickname = nick_kns_mace_26
+			}
+			1 = {
+				give_nickname = nick_kns_mace_27
+			}
+			1 = {
+				give_nickname = nick_kns_mace_28
+			}
+			1 = {
+				give_nickname = nick_kns_mace_29
+			}
+			1 = {
+				give_nickname = nick_kns_mace_30
+			}
+			1 = {
+				give_nickname = nick_kns_mace_31
+			}
+			1 = {
+				give_nickname = nick_kns_mace_32
+			}
+			1 = {
+				give_nickname = nick_kns_mace_33
+			}
+			1 = {
+				give_nickname = nick_kns_mace_34
+			}
+			1 = {
+				give_nickname = nick_kns_mace_35
+			}
+			1 = {
+				give_nickname = nick_kns_mace_36
+			}
+			1 = {
+				give_nickname = nick_kns_mace_37
+			}
+			1 = {
+				give_nickname = nick_kns_mace_38
+			}
+			1 = {
+				give_nickname = nick_kns_mace_39
+			}
+			1 = {
+				give_nickname = nick_kns_mace_40
+			}
+			1 = {
+				give_nickname = nick_kns_mace_41
+			}
+			1 = {
+				give_nickname = nick_kns_mace_42
+			}
+			1 = {
+				give_nickname = nick_kns_mace_43
+			}
+			1 = {
+				give_nickname = nick_kns_mace_44
+			}
+			1 = {
+				give_nickname = nick_kns_mace_45
+			}
+			1 = {
+				give_nickname = nick_kns_mace_46
+			}
+			1 = {
+				give_nickname = nick_kns_mace_47
+			}
+			1 = {
+				give_nickname = nick_kns_mace_48
+			}
+			1 = {
+				give_nickname = nick_kns_mace_49
+			}
+			1 = {
+				give_nickname = nick_kns_mace_50
+			}
+			1 = {
+				give_nickname = nick_kns_mace_51
+			}
+			1 = {
+				give_nickname = nick_kns_mace_52
+			}
+			1 = {
+				give_nickname = nick_kns_mace_53
+			}
+			1 = {
+				give_nickname = nick_kns_mace_54
+			}
+			1 = {
+				give_nickname = nick_kns_mace_55
+			}
+			1 = {
+				give_nickname = nick_kns_mace_56
+			}
+			1 = {
+				give_nickname = nick_kns_mace_57
+			}
+			1 = {
+				give_nickname = nick_kns_mace_58
+			}
+			1 = {
+				give_nickname = nick_kns_mace_59
+			}
+			1 = {
+				give_nickname = nick_kns_mace_60
+			}
+			1 = {
+				give_nickname = nick_kns_mace_61
+			}
+			1 = {
+				give_nickname = nick_kns_mace_62
+			}
+			1 = {
+				give_nickname = nick_kns_mace_63
+			}
+			1 = {
+				give_nickname = nick_kns_mace_64
+			}
+			1 = {
+				give_nickname = nick_kns_mace_65
+			}
+			1 = {
+				give_nickname = nick_kns_mace_66
+			}
+			1 = {
+				give_nickname = nick_kns_mace_67
+			}
+			1 = {
+				give_nickname = nick_kns_mace_68
+			}
+			1 = {
+				give_nickname = nick_kns_mace_69
+			}
+			1 = {
+				give_nickname = nick_kns_mace_70
+			}
+			1 = {
+				give_nickname = nick_kns_mace_71
+			}
+			1 = {
+				give_nickname = nick_kns_mace_72
+			}
+			1 = {
+				give_nickname = nick_kns_mace_73
+			}
+			1 = {
+				give_nickname = nick_kns_mace_74
+			}
+			1 = {
+				give_nickname = nick_kns_mace_75
+			}
+			1 = {
+				give_nickname = nick_kns_mace_76
+			}
+			1 = {
+				give_nickname = nick_kns_mace_77
+			}
+			1 = {
+				give_nickname = nick_kns_mace_78
+			}
+			1 = {
+				give_nickname = nick_kns_mace_79
+			}
+			1 = {
+				give_nickname = nick_kns_mace_80
+			}
+			1 = {
+				give_nickname = nick_kns_mace_81
+			}
+			1 = {
+				give_nickname = nick_kns_mace_82
+			}
+			1 = {
+				give_nickname = nick_kns_mace_83
+			}
+			1 = {
+				give_nickname = nick_kns_mace_84
+			}
+			1 = {
+				give_nickname = nick_kns_mace_85
+			}
+			1 = {
+				give_nickname = nick_kns_mace_86
+			}
+			1 = {
+				give_nickname = nick_kns_mace_87
+			}
+			1 = {
+				give_nickname = nick_kns_mace_88
+			}
+			1 = {
+				give_nickname = nick_kns_mace_89
+			}
+			1 = {
+				give_nickname = nick_kns_mace_90
+			}
+			1 = {
+				give_nickname = nick_kns_mace_91
+			}
+			1 = {
+				give_nickname = nick_kns_mace_92
+			}
+			1 = {
+				give_nickname = nick_kns_mace_93
+			}
+			1 = {
+				give_nickname = nick_kns_mace_94
+			}
+			1 = {
+				give_nickname = nick_kns_mace_95
+			}
+			1 = {
+				give_nickname = nick_kns_mace_96
+			}
+			1 = {
+				give_nickname = nick_kns_mace_97
+			}
+			1 = {
+				give_nickname = nick_kns_mace_98
+			}
+			1 = {
+				give_nickname = nick_kns_mace_99
+			}
+			1 = {
+				give_nickname = nick_kns_mace_100
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = var:kns_knight_weapon_type
+			var:kns_knight_weapon_type = flag:spear
+		}
+		random_list = {
+			1 = {
+				give_nickname = nick_kns_spear_01
+			}
+			1 = {
+				give_nickname = nick_kns_spear_02
+			}
+			1 = {
+				give_nickname = nick_kns_spear_03
+			}
+			1 = {
+				give_nickname = nick_kns_spear_04
+			}
+			1 = {
+				give_nickname = nick_kns_spear_05
+			}
+			1 = {
+				give_nickname = nick_kns_spear_06
+			}
+			1 = {
+				give_nickname = nick_kns_spear_07
+			}
+			1 = {
+				give_nickname = nick_kns_spear_08
+			}
+			1 = {
+				give_nickname = nick_kns_spear_09
+			}
+			1 = {
+				give_nickname = nick_kns_spear_10
+			}
+			1 = {
+				give_nickname = nick_kns_spear_11
+			}
+			1 = {
+				give_nickname = nick_kns_spear_12
+			}
+			1 = {
+				give_nickname = nick_kns_spear_13
+			}
+			1 = {
+				give_nickname = nick_kns_spear_14
+			}
+			1 = {
+				give_nickname = nick_kns_spear_15
+			}
+			1 = {
+				give_nickname = nick_kns_spear_16
+			}
+			1 = {
+				give_nickname = nick_kns_spear_17
+			}
+			1 = {
+				give_nickname = nick_kns_spear_18
+			}
+			1 = {
+				give_nickname = nick_kns_spear_19
+			}
+			1 = {
+				give_nickname = nick_kns_spear_20
+			}
+			1 = {
+				give_nickname = nick_kns_spear_21
+			}
+			1 = {
+				give_nickname = nick_kns_spear_22
+			}
+			1 = {
+				give_nickname = nick_kns_spear_23
+			}
+			1 = {
+				give_nickname = nick_kns_spear_24
+			}
+			1 = {
+				give_nickname = nick_kns_spear_25
+			}
+			1 = {
+				give_nickname = nick_kns_spear_26
+			}
+			1 = {
+				give_nickname = nick_kns_spear_27
+			}
+			1 = {
+				give_nickname = nick_kns_spear_28
+			}
+			1 = {
+				give_nickname = nick_kns_spear_29
+			}
+			1 = {
+				give_nickname = nick_kns_spear_30
+			}
+			1 = {
+				give_nickname = nick_kns_spear_31
+			}
+			1 = {
+				give_nickname = nick_kns_spear_32
+			}
+			1 = {
+				give_nickname = nick_kns_spear_33
+			}
+			1 = {
+				give_nickname = nick_kns_spear_34
+			}
+			1 = {
+				give_nickname = nick_kns_spear_35
+			}
+			1 = {
+				give_nickname = nick_kns_spear_36
+			}
+			1 = {
+				give_nickname = nick_kns_spear_37
+			}
+			1 = {
+				give_nickname = nick_kns_spear_38
+			}
+			1 = {
+				give_nickname = nick_kns_spear_39
+			}
+			1 = {
+				give_nickname = nick_kns_spear_40
+			}
+			1 = {
+				give_nickname = nick_kns_spear_41
+			}
+			1 = {
+				give_nickname = nick_kns_spear_42
+			}
+			1 = {
+				give_nickname = nick_kns_spear_43
+			}
+			1 = {
+				give_nickname = nick_kns_spear_44
+			}
+			1 = {
+				give_nickname = nick_kns_spear_45
+			}
+			1 = {
+				give_nickname = nick_kns_spear_46
+			}
+			1 = {
+				give_nickname = nick_kns_spear_47
+			}
+			1 = {
+				give_nickname = nick_kns_spear_48
+			}
+			1 = {
+				give_nickname = nick_kns_spear_49
+			}
+			1 = {
+				give_nickname = nick_kns_spear_50
+			}
+			1 = {
+				give_nickname = nick_kns_spear_51
+			}
+			1 = {
+				give_nickname = nick_kns_spear_52
+			}
+			1 = {
+				give_nickname = nick_kns_spear_53
+			}
+			1 = {
+				give_nickname = nick_kns_spear_54
+			}
+			1 = {
+				give_nickname = nick_kns_spear_55
+			}
+			1 = {
+				give_nickname = nick_kns_spear_56
+			}
+			1 = {
+				give_nickname = nick_kns_spear_57
+			}
+			1 = {
+				give_nickname = nick_kns_spear_58
+			}
+			1 = {
+				give_nickname = nick_kns_spear_59
+			}
+			1 = {
+				give_nickname = nick_kns_spear_60
+			}
+			1 = {
+				give_nickname = nick_kns_spear_61
+			}
+			1 = {
+				give_nickname = nick_kns_spear_62
+			}
+			1 = {
+				give_nickname = nick_kns_spear_63
+			}
+			1 = {
+				give_nickname = nick_kns_spear_64
+			}
+			1 = {
+				give_nickname = nick_kns_spear_65
+			}
+			1 = {
+				give_nickname = nick_kns_spear_66
+			}
+			1 = {
+				give_nickname = nick_kns_spear_67
+			}
+			1 = {
+				give_nickname = nick_kns_spear_68
+			}
+			1 = {
+				give_nickname = nick_kns_spear_69
+			}
+			1 = {
+				give_nickname = nick_kns_spear_70
+			}
+			1 = {
+				give_nickname = nick_kns_spear_71
+			}
+			1 = {
+				give_nickname = nick_kns_spear_72
+			}
+			1 = {
+				give_nickname = nick_kns_spear_73
+			}
+			1 = {
+				give_nickname = nick_kns_spear_74
+			}
+			1 = {
+				give_nickname = nick_kns_spear_75
+			}
+			1 = {
+				give_nickname = nick_kns_spear_76
+			}
+			1 = {
+				give_nickname = nick_kns_spear_77
+			}
+			1 = {
+				give_nickname = nick_kns_spear_78
+			}
+			1 = {
+				give_nickname = nick_kns_spear_79
+			}
+			1 = {
+				give_nickname = nick_kns_spear_80
+			}
+			1 = {
+				give_nickname = nick_kns_spear_81
+			}
+			1 = {
+				give_nickname = nick_kns_spear_82
+			}
+			1 = {
+				give_nickname = nick_kns_spear_83
+			}
+			1 = {
+				give_nickname = nick_kns_spear_84
+			}
+			1 = {
+				give_nickname = nick_kns_spear_85
+			}
+			1 = {
+				give_nickname = nick_kns_spear_86
+			}
+			1 = {
+				give_nickname = nick_kns_spear_87
+			}
+			1 = {
+				give_nickname = nick_kns_spear_88
+			}
+			1 = {
+				give_nickname = nick_kns_spear_89
+			}
+			1 = {
+				give_nickname = nick_kns_spear_90
+			}
+			1 = {
+				give_nickname = nick_kns_spear_91
+			}
+			1 = {
+				give_nickname = nick_kns_spear_92
+			}
+			1 = {
+				give_nickname = nick_kns_spear_93
+			}
+			1 = {
+				give_nickname = nick_kns_spear_94
+			}
+			1 = {
+				give_nickname = nick_kns_spear_95
+			}
+			1 = {
+				give_nickname = nick_kns_spear_96
+			}
+			1 = {
+				give_nickname = nick_kns_spear_97
+			}
+			1 = {
+				give_nickname = nick_kns_spear_98
+			}
+			1 = {
+				give_nickname = nick_kns_spear_99
+			}
+			1 = {
+				give_nickname = nick_kns_spear_100
+			}
+		}
+	}
+}
+
+kns_name_prodigious_weapon_effect = {
+	if = {
+		limit = { exists = scope:kns_prodigious_weapon_kind scope:kns_prodigious_weapon_kind = flag:sword }
+		random_list = {
+			1 = {
+				set_artifact_name = kns_art_sword_excalibur
+				set_artifact_description = kns_art_sword_excalibur_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_durandal
+				set_artifact_description = kns_art_sword_durandal_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_joyeuse
+				set_artifact_description = kns_art_sword_joyeuse_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_tizona
+				set_artifact_description = kns_art_sword_tizona_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_colada
+				set_artifact_description = kns_art_sword_colada_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_curtana
+				set_artifact_description = kns_art_sword_curtana_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_hauteclere
+				set_artifact_description = kns_art_sword_hauteclere_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_almace
+				set_artifact_description = kns_art_sword_almace_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_clarent
+				set_artifact_description = kns_art_sword_clarent_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_galatine
+				set_artifact_description = kns_art_sword_galatine_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_arondight
+				set_artifact_description = kns_art_sword_arondight_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_coreiseuse
+				set_artifact_description = kns_art_sword_coreiseuse_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_murgleis
+				set_artifact_description = kns_art_sword_murgleis_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_nagelring
+				set_artifact_description = kns_art_sword_nagelring_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_gram
+				set_artifact_description = kns_art_sword_gram_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_balmung
+				set_artifact_description = kns_art_sword_balmung_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_mimung
+				set_artifact_description = kns_art_sword_mimung_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_tyrfing
+				set_artifact_description = kns_art_sword_tyrfing_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_skofnung
+				set_artifact_description = kns_art_sword_skofnung_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_hrunting
+				set_artifact_description = kns_art_sword_hrunting_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_naegling
+				set_artifact_description = kns_art_sword_naegling_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_caladbolg
+				set_artifact_description = kns_art_sword_caladbolg_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_fragarach
+				set_artifact_description = kns_art_sword_fragarach_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_crocea_mors
+				set_artifact_description = kns_art_sword_crocea_mors_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_ascalon_blade
+				set_artifact_description = kns_art_sword_ascalon_blade_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_zulfiqar
+				set_artifact_description = kns_art_sword_zulfiqar_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_wallace_blade
+				set_artifact_description = kns_art_sword_wallace_blade_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_attila_sword
+				set_artifact_description = kns_art_sword_attila_sword_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_goujian
+				set_artifact_description = kns_art_sword_goujian_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_sword_precieuse
+				set_artifact_description = kns_art_sword_precieuse_desc
+			}
+		}
+	}
+	if = {
+		limit = { exists = scope:kns_prodigious_weapon_kind scope:kns_prodigious_weapon_kind = flag:axe }
+		random_list = {
+			1 = {
+				set_artifact_name = kns_art_axe_olaf_axe
+				set_artifact_description = kns_art_axe_olaf_axe_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_boru_axe
+				set_artifact_description = kns_art_axe_boru_axe_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_clovis_francisca
+				set_artifact_description = kns_art_axe_clovis_francisca_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_skeggox
+				set_artifact_description = kns_art_axe_skeggox_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_hel_bili
+				set_artifact_description = kns_art_axe_hel_bili_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_widow_hewer
+				set_artifact_description = kns_art_axe_widow_hewer_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_ragnar_axe
+				set_artifact_description = kns_art_axe_ragnar_axe_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_harold_axe
+				set_artifact_description = kns_art_axe_harold_axe_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_perun_axe
+				set_artifact_description = kns_art_axe_perun_axe_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_forseti_axe
+				set_artifact_description = kns_art_axe_forseti_axe_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_cnut_axe
+				set_artifact_description = kns_art_axe_cnut_axe_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_varangian_axe
+				set_artifact_description = kns_art_axe_varangian_axe_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_godwin_axe
+				set_artifact_description = kns_art_axe_godwin_axe_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_ulfr_axe
+				set_artifact_description = kns_art_axe_ulfr_axe_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_hewer_of_rings
+				set_artifact_description = kns_art_axe_hewer_of_rings_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_winter_bit
+				set_artifact_description = kns_art_axe_winter_bit_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_boar_tusk
+				set_artifact_description = kns_art_axe_boar_tusk_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_oakenshame
+				set_artifact_description = kns_art_axe_oakenshame_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_red_helve
+				set_artifact_description = kns_art_axe_red_helve_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_grave_wedge
+				set_artifact_description = kns_art_axe_grave_wedge_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_crow_beak
+				set_artifact_description = kns_art_axe_crow_beak_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_thingstead
+				set_artifact_description = kns_art_axe_thingstead_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_sail_ripper
+				set_artifact_description = kns_art_axe_sail_ripper_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_monk_maker
+				set_artifact_description = kns_art_axe_monk_maker_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_iron_crescent
+				set_artifact_description = kns_art_axe_iron_crescent_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_blood_adze
+				set_artifact_description = kns_art_axe_blood_adze_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_night_cleaver
+				set_artifact_description = kns_art_axe_night_cleaver_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_wolf_jaw
+				set_artifact_description = kns_art_axe_wolf_jaw_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_stave_breaker
+				set_artifact_description = kns_art_axe_stave_breaker_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_axe_doom_hatchet
+				set_artifact_description = kns_art_axe_doom_hatchet_desc
+			}
+		}
+	}
+	if = {
+		limit = { exists = scope:kns_prodigious_weapon_kind scope:kns_prodigious_weapon_kind = flag:hammer }
+		random_list = {
+			1 = {
+				set_artifact_name = kns_art_hammer_mjolnir
+				set_artifact_description = kns_art_hammer_mjolnir_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_martel
+				set_artifact_description = kns_art_hammer_martel_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_smith_of_war
+				set_artifact_description = kns_art_hammer_smith_of_war_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_anvil_ender
+				set_artifact_description = kns_art_hammer_anvil_ender_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_bone_mill
+				set_artifact_description = kns_art_hammer_bone_mill_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_bell_tongue
+				set_artifact_description = kns_art_hammer_bell_tongue_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_chapel_knocker
+				set_artifact_description = kns_art_hammer_chapel_knocker_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_crow_hammer
+				set_artifact_description = kns_art_hammer_crow_hammer_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_oath_peen
+				set_artifact_description = kns_art_hammer_oath_peen_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_ice_maul
+				set_artifact_description = kns_art_hammer_ice_maul_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_saint_eloi
+				set_artifact_description = kns_art_hammer_saint_eloi_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_gate_tooth
+				set_artifact_description = kns_art_hammer_gate_tooth_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_riders_end
+				set_artifact_description = kns_art_hammer_riders_end_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_black_peen
+				set_artifact_description = kns_art_hammer_black_peen_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_wakes_the_dead
+				set_artifact_description = kns_art_hammer_wakes_the_dead_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_ford_hammer
+				set_artifact_description = kns_art_hammer_ford_hammer_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_monk_bell
+				set_artifact_description = kns_art_hammer_monk_bell_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_nail_god
+				set_artifact_description = kns_art_hammer_nail_god_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_storm_mallet
+				set_artifact_description = kns_art_hammer_storm_mallet_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_grave_maul
+				set_artifact_description = kns_art_hammer_grave_maul_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_helm_singer
+				set_artifact_description = kns_art_hammer_helm_singer_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_the_mason
+				set_artifact_description = kns_art_hammer_the_mason_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_red_star
+				set_artifact_description = kns_art_hammer_red_star_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_winter_weight
+				set_artifact_description = kns_art_hammer_winter_weight_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_law_hammer
+				set_artifact_description = kns_art_hammer_law_hammer_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_boar_maul
+				set_artifact_description = kns_art_hammer_boar_maul_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_ash_breaker
+				set_artifact_description = kns_art_hammer_ash_breaker_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_crooked_saint
+				set_artifact_description = kns_art_hammer_crooked_saint_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_iron_gospel
+				set_artifact_description = kns_art_hammer_iron_gospel_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_hammer_last_forge
+				set_artifact_description = kns_art_hammer_last_forge_desc
+			}
+		}
+	}
+	if = {
+		limit = { exists = scope:kns_prodigious_weapon_kind scope:kns_prodigious_weapon_kind = flag:mace }
+		random_list = {
+			1 = {
+				set_artifact_name = kns_art_mace_odo_mace
+				set_artifact_description = kns_art_mace_odo_mace_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_morning_star
+				set_artifact_description = kns_art_mace_morning_star_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_holy_knob
+				set_artifact_description = kns_art_mace_holy_knob_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_skull_orb
+				set_artifact_description = kns_art_mace_skull_orb_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_flanged_mercy
+				set_artifact_description = kns_art_mace_flanged_mercy_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_cantor
+				set_artifact_description = kns_art_mace_cantor_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_pewter_saint
+				set_artifact_description = kns_art_mace_pewter_saint_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_crown_cracker
+				set_artifact_description = kns_art_mace_crown_cracker_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_rood_mace
+				set_artifact_description = kns_art_mace_rood_mace_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_black_scepter
+				set_artifact_description = kns_art_mace_black_scepter_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_vineyard
+				set_artifact_description = kns_art_mace_vineyard_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_gate_key
+				set_artifact_description = kns_art_mace_gate_key_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_pax
+				set_artifact_description = kns_art_mace_pax_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_tithing
+				set_artifact_description = kns_art_mace_tithing_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_iron_psalm
+				set_artifact_description = kns_art_mace_iron_psalm_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_bulb_of_cain
+				set_artifact_description = kns_art_mace_bulb_of_cain_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_knuckle_mass
+				set_artifact_description = kns_art_mace_knuckle_mass_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_white_flange
+				set_artifact_description = kns_art_mace_white_flange_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_sexton
+				set_artifact_description = kns_art_mace_sexton_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_reliquary
+				set_artifact_description = kns_art_mace_reliquary_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_storm_knob
+				set_artifact_description = kns_art_mace_storm_knob_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_lawgiver
+				set_artifact_description = kns_art_mace_lawgiver_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_red_chaplet
+				set_artifact_description = kns_art_mace_red_chaplet_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_abbey_debt
+				set_artifact_description = kns_art_mace_abbey_debt_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_horseman_bead
+				set_artifact_description = kns_art_mace_horseman_bead_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_quiet_bell
+				set_artifact_description = kns_art_mace_quiet_bell_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_basilica
+				set_artifact_description = kns_art_mace_basilica_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_nail_bloom
+				set_artifact_description = kns_art_mace_nail_bloom_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_winter_orb
+				set_artifact_description = kns_art_mace_winter_orb_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_mace_the_verdict
+				set_artifact_description = kns_art_mace_the_verdict_desc
+			}
+		}
+	}
+	if = {
+		limit = { exists = scope:kns_prodigious_weapon_kind scope:kns_prodigious_weapon_kind = flag:spear }
+		random_list = {
+			1 = {
+				set_artifact_name = kns_art_spear_gungnir
+				set_artifact_description = kns_art_spear_gungnir_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_rhongomyniad
+				set_artifact_description = kns_art_spear_rhongomyniad_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_ascalon_spear
+				set_artifact_description = kns_art_spear_ascalon_spear_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_gae_bulg
+				set_artifact_description = kns_art_spear_gae_bulg_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_luin
+				set_artifact_description = kns_art_spear_luin_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_holy_lance
+				set_artifact_description = kns_art_spear_holy_lance_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_longinus
+				set_artifact_description = kns_art_spear_longinus_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_amenonuhoko
+				set_artifact_description = kns_art_spear_amenonuhoko_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_gwrnach
+				set_artifact_description = kns_art_spear_gwrnach_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_achilles_ash
+				set_artifact_description = kns_art_spear_achilles_ash_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_hector_dory
+				set_artifact_description = kns_art_spear_hector_dory_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_odon_spear
+				set_artifact_description = kns_art_spear_odon_spear_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_boar_spit
+				set_artifact_description = kns_art_spear_boar_spit_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_winged_ash
+				set_artifact_description = kns_art_spear_winged_ash_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_ford_reed
+				set_artifact_description = kns_art_spear_ford_reed_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_banner_tooth
+				set_artifact_description = kns_art_spear_banner_tooth_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_night_pike
+				set_artifact_description = kns_art_spear_night_pike_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_saint_maurice
+				set_artifact_description = kns_art_spear_saint_maurice_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_wolf_reed
+				set_artifact_description = kns_art_spear_wolf_reed_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_oath_point
+				set_artifact_description = kns_art_spear_oath_point_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_red_ash
+				set_artifact_description = kns_art_spear_red_ash_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_sea_reed
+				set_artifact_description = kns_art_spear_sea_reed_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_grave_reed
+				set_artifact_description = kns_art_spear_grave_reed_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_kingfisher
+				set_artifact_description = kns_art_spear_kingfisher_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_the_unbroken
+				set_artifact_description = kns_art_spear_the_unbroken_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_winter_thorn
+				set_artifact_description = kns_art_spear_winter_thorn_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_crow_spit
+				set_artifact_description = kns_art_spear_crow_spit_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_law_point
+				set_artifact_description = kns_art_spear_law_point_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_dawn_reed
+				set_artifact_description = kns_art_spear_dawn_reed_desc
+			}
+			1 = {
+				set_artifact_name = kns_art_spear_the_guest
+				set_artifact_description = kns_art_spear_the_guest_desc
+			}
+		}
+	}
+}
+
+kns_name_prodigious_armor_effect = {
+	random_list = {
+		1 = {
+			set_artifact_name = kns_art_armor_beowulf_mail
+			set_artifact_description = kns_art_armor_beowulf_mail_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_roland_harness
+			set_artifact_description = kns_art_armor_roland_harness_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_black_prince
+			set_artifact_description = kns_art_armor_black_prince_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_wenceslaus
+			set_artifact_description = kns_art_armor_wenceslaus_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_godfrey_mail
+			set_artifact_description = kns_art_armor_godfrey_mail_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_cid_hauberk
+			set_artifact_description = kns_art_armor_cid_hauberk_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_joan_plate
+			set_artifact_description = kns_art_armor_joan_plate_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_green_knight
+			set_artifact_description = kns_art_armor_green_knight_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_lohengrin
+			set_artifact_description = kns_art_armor_lohengrin_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_achilles_panoply
+			set_artifact_description = kns_art_armor_achilles_panoply_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_hector_armor
+			set_artifact_description = kns_art_armor_hector_armor_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_el_cid_cuirass
+			set_artifact_description = kns_art_armor_el_cid_cuirass_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_charlemagne_byrnie
+			set_artifact_description = kns_art_armor_charlemagne_byrnie_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_arthur_harness
+			set_artifact_description = kns_art_armor_arthur_harness_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_galahad_white
+			set_artifact_description = kns_art_armor_galahad_white_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_tristan_mail
+			set_artifact_description = kns_art_armor_tristan_mail_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_bevis_plate
+			set_artifact_description = kns_art_armor_bevis_plate_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_guy_warwick
+			set_artifact_description = kns_art_armor_guy_warwick_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_ogier_mail
+			set_artifact_description = kns_art_armor_ogier_mail_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_huon_harness
+			set_artifact_description = kns_art_armor_huon_harness_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_elie_mail
+			set_artifact_description = kns_art_armor_elie_mail_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_william_orange
+			set_artifact_description = kns_art_armor_william_orange_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_renaud_armor
+			set_artifact_description = kns_art_armor_renaud_armor_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_aeneas_mail
+			set_artifact_description = kns_art_armor_aeneas_mail_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_turnus_breast
+			set_artifact_description = kns_art_armor_turnus_breast_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_bohemond_mail
+			set_artifact_description = kns_art_armor_bohemond_mail_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_tancred_harness
+			set_artifact_description = kns_art_armor_tancred_harness_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_richard_lion
+			set_artifact_description = kns_art_armor_richard_lion_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_saladin_lamellar
+			set_artifact_description = kns_art_armor_saladin_lamellar_desc
+		}
+		1 = {
+			set_artifact_name = kns_art_armor_barbarossa_mail
+			set_artifact_description = kns_art_armor_barbarossa_mail_desc
+		}
+	}
+}

@@ -1,0 +1,269 @@
+KnsFmtTitledFirstName = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_fmt_titled_first_dame
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_fmt_titled_first_sir
+	}
+	text = {
+		localization_key = kns_fmt_titled_first_default
+	}
+}
+
+KnsFmtTitledFirstNameOnlyNicknamedPrefix = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_fmt_titled_first_only_nick_prefix_dame
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_fmt_titled_first_only_nick_prefix_sir
+	}
+	text = {
+		localization_key = kns_fmt_titled_first_only_nick_prefix_default
+	}
+}
+
+KnsFmtTitledFirstNameNicknamed = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_fmt_titled_first_nick_dame
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_fmt_titled_first_nick_sir
+	}
+	text = {
+		localization_key = kns_fmt_titled_first_nick_default
+	}
+}
+
+KnsFmtTitledFirstNameNicknamedPrefix = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_fmt_titled_first_nick_prefix_dame
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_fmt_titled_first_nick_prefix_sir
+	}
+	text = {
+		localization_key = kns_fmt_titled_first_nick_prefix_default
+	}
+}
+
+KnsFmtTitledFirstNamePatronym = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_fmt_titled_first_patronym_dame
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_fmt_titled_first_patronym_sir
+	}
+	text = {
+		localization_key = kns_fmt_titled_first_patronym_default
+	}
+}
+
+KnsFmtTitledFirstNameNicknamedPatronym = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_fmt_titled_first_nick_patronym_dame
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_fmt_titled_first_nick_patronym_sir
+	}
+	text = {
+		localization_key = kns_fmt_titled_first_nick_patronym_default
+	}
+}
+
+KnsFmtTitledFirstNameNicknamedPrefixPatronym = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_fmt_titled_first_nick_prefix_patronym_dame
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_fmt_titled_first_nick_prefix_patronym_sir
+	}
+	text = {
+		localization_key = kns_fmt_titled_first_nick_prefix_patronym_default
+	}
+}
+
+KnsFmtTitledFirstNameDynastyAlwaysFirst = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_fmt_titled_first_dyn_always_dame
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_fmt_titled_first_dyn_always_sir
+	}
+	text = {
+		localization_key = kns_fmt_titled_first_dyn_always_default
+	}
+}
+
+KnsFmtTitledFirstNameNicknamedDynastyAlwaysFirst = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_fmt_titled_first_nick_dyn_always_dame
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_fmt_titled_first_nick_dyn_always_sir
+	}
+	text = {
+		localization_key = kns_fmt_titled_first_nick_dyn_always_default
+	}
+}
+
+KnsFmtTitledFirstNameNicknamedPrefixDynastyAlwaysFirst = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_fmt_titled_first_nick_prefix_dyn_always_dame
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_fmt_titled_first_nick_prefix_dyn_always_sir
+	}
+	text = {
+		localization_key = kns_fmt_titled_first_nick_prefix_dyn_always_default
+	}
+}
+
+KnsFmtTitledFirstNamePatronymDynastyAlwaysFirst = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_fmt_titled_first_patronym_dyn_always_dame
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_fmt_titled_first_patronym_dyn_always_sir
+	}
+	text = {
+		localization_key = kns_fmt_titled_first_patronym_dyn_always_default
+	}
+}
+
+KnsFmtTitledFirstNameJapanese = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_fmt_titled_first_jp_dame
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_fmt_titled_first_jp_sir
+	}
+	text = {
+		localization_key = kns_fmt_titled_first_jp_default
+	}
+}
+
+KnsFmtTitledFirstNameNicknamedJapanese = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_fmt_titled_first_nick_jp_dame
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_fmt_titled_first_nick_jp_sir
+	}
+	text = {
+		localization_key = kns_fmt_titled_first_nick_jp_default
+	}
+}
+
+KnsFmtTitledFirstNameNicknamedPrefixJapanese = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_fmt_titled_first_nick_prefix_jp_dame
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_fmt_titled_first_nick_prefix_jp_sir
+	}
+	text = {
+		localization_key = kns_fmt_titled_first_nick_prefix_jp_default
+	}
+}
+
+KnsSirPrefixSpaced = {
+	type = character
+	text = {
+		trigger = {
+			kns_should_use_sir_style_trigger = yes
+			is_female = yes
+		}
+		localization_key = kns_honorific_dame_spaced
+	}
+	text = {
+		trigger = { kns_should_use_sir_style_trigger = yes }
+		localization_key = kns_honorific_sir_spaced
+	}
+	text = {
+		localization_key = kns_honorific_none
+	}
+}

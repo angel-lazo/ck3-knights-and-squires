@@ -1,0 +1,429 @@
+namespace = kns_maintenance
+
+# Squire has become ineligible
+kns_maintenance.0001 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		kns_is_squire_with_knight = yes
+		NOT = { has_character_flag = kns_disqualified_from_squirehood_flag }
+		kns_has_traits_preventing_knighthood_trigger = yes
+	}
+
+	immediate = {
+		add_character_flag = kns_disqualified_from_squirehood_flag
+		random_relation = {
+			type = kns_knight
+			save_scope_as = my_knight
+		}
+		save_scope_as = my_squire
+		scope:my_knight = {
+			trigger_event = kns_maintenance.0005
+		}
+		trigger_event = kns_maintenance.0006
+	}
+}
+
+kns_maintenance.0005 = {
+	type = character_event
+	title = kns_maintenance.0005.t
+	desc = kns_maintenance.0005.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+	right_portrait = {
+		character = scope:my_squire
+		animation = idle
+	}
+
+	immediate = {
+		if = {
+			limit = { NOT = { exists = scope:my_squire } }
+			random_relation = {
+				type = kns_squire
+				limit = { kns_has_traits_preventing_knighthood_trigger = yes }
+				save_scope_as = my_squire
+			}
+		}
+	}
+
+	option = {
+		name = kns_maintenance.0005.a
+		custom_tooltip = kns_maintenance.0005.a.tt
+		remove_relation_kns_squire = scope:my_squire
+	}
+}
+
+kns_maintenance.0006 = {
+	type = character_event
+	title = kns_maintenance.0006.t
+	desc = kns_maintenance.0006.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	immediate = {
+		if = {
+			limit = { NOT = { exists = scope:my_knight } }
+			random_relation = {
+				type = kns_knight
+				save_scope_as = my_knight
+			}
+		}
+		random_owned_story = {
+			limit = { story_type = story_kns_squire_ongoing }
+			end_story = yes
+		}
+		if = {
+			limit = { exists = scope:my_knight }
+			remove_relation_kns_knight = scope:my_knight
+		}
+		remove_trait = squire
+	}
+
+	option = {
+		name = kns_maintenance.0006.a
+		show_as_tooltip = {
+			remove_trait = squire
+		}
+	}
+}
+
+# Hostile relations break the bond
+kns_maintenance.0007 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		kns_is_squire_with_knight = yes
+		exists = scope:my_knight
+		kns_hostile_squire_knight_trigger = { KNIGHT = scope:my_knight }
+	}
+
+	immediate = {
+		save_scope_as = my_squire
+		scope:my_knight = {
+			trigger_event = kns_maintenance.0008
+		}
+		trigger_event = kns_maintenance.0009
+	}
+}
+
+kns_maintenance.0008 = {
+	type = character_event
+	title = kns_maintenance.0008.t
+	desc = kns_maintenance.0008.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = root
+	right_portrait = {
+		character = scope:my_squire
+		animation = anger
+	}
+
+	option = {
+		name = kns_maintenance.0008.a
+		remove_relation_kns_squire = scope:my_squire
+	}
+}
+
+kns_maintenance.0009 = {
+	type = character_event
+	title = kns_maintenance.0009.t
+	desc = kns_maintenance.0009.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = root
+	right_portrait = {
+		character = scope:my_knight
+		animation = anger
+	}
+
+	immediate = {
+		random_owned_story = {
+			limit = { story_type = story_kns_squire_ongoing }
+			end_story = yes
+		}
+		if = {
+			limit = { exists = scope:my_knight }
+			remove_relation_kns_knight = scope:my_knight
+		}
+		add_character_flag = kns_knightless_squire_flag
+	}
+
+	option = {
+		name = kns_maintenance.0009.a
+	}
+}
+
+# Knight has died; squire must find another or become knightless
+kns_maintenance.0010 = {
+	type = character_event
+	title = kns_maintenance.0010.t
+	desc = kns_maintenance.0010.desc
+	theme = death
+	override_background = { reference = corridor_day }
+
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	right_portrait = {
+		character = scope:dead_knight
+		animation = idle
+	}
+
+	immediate = {
+		add_character_flag = kns_knightless_squire_flag
+	}
+
+	option = {
+		name = kns_maintenance.0010.a
+		if = {
+			limit = {
+				any_close_or_extended_family_member = {
+					kns_can_take_squire_trigger = yes
+					OR = {
+						is_in_the_same_court_as = root
+						liege = root
+						root.liege = this
+					}
+				}
+			}
+			random_close_or_extended_family_member = {
+				limit = {
+					kns_can_take_squire_trigger = yes
+					OR = {
+						is_in_the_same_court_as = root
+						liege = root
+						root.liege = this
+					}
+				}
+				save_scope_as = nearby_knight
+			}
+			scope:nearby_knight = {
+				scope:root = { save_scope_as = knightless_squire }
+				trigger_event = kns_maintenance.0011
+			}
+		}
+		else_if = {
+			limit = {
+				is_ruler = no
+				exists = liege
+				liege = {
+					any_courtier = { kns_can_take_squire_trigger = yes }
+				}
+			}
+			liege = {
+				random_courtier = {
+					limit = { kns_can_take_squire_trigger = yes }
+					save_scope_as = nearby_knight
+				}
+			}
+			scope:nearby_knight = {
+				scope:root = { save_scope_as = knightless_squire }
+				trigger_event = kns_maintenance.0011
+			}
+		}
+		else = {
+			kns_knightless_squire_cleanup_timer_effect = yes
+		}
+	}
+
+	option = {
+		name = kns_maintenance.0010.b
+		kns_knightless_squire_cleanup_timer_effect = yes
+	}
+}
+
+# Nearby knight is asked to take the orphaned squire
+kns_maintenance.0011 = {
+	type = character_event
+	title = kns_maintenance.0011.t
+	desc = kns_maintenance.0011.desc
+	theme = faith
+	override_background = { reference = army_camp }
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+	right_portrait = {
+		character = scope:knightless_squire
+		animation = beg
+	}
+
+	option = {
+		name = kns_maintenance.0011.a
+		save_scope_as = my_knight
+		kns_set_squire_effect = {
+			KNIGHT = root
+			SQUIRE = scope:knightless_squire
+		}
+		ai_chance = { base = 55 }
+	}
+
+	option = {
+		name = kns_maintenance.0011.b
+		custom_tooltip = kns_maintenance.0011.b.tt
+		scope:knightless_squire = {
+			kns_knightless_squire_cleanup_timer_effect = yes
+			send_interface_toast = {
+				title = kns_squire_refused_new_knight_toast
+				left_icon = root
+				right_icon = scope:knightless_squire
+			}
+		}
+		ai_chance = { base = 45 }
+	}
+}
+
+# Deathbed knighting
+kns_maintenance.0012 = {
+	type = character_event
+	title = kns_maintenance.0012.t
+	desc = kns_maintenance.0012.desc
+	theme = death
+	override_background = { reference = bedchamber }
+
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	right_portrait = {
+		character = scope:dead_knight
+		animation = idle
+	}
+
+	option = {
+		name = kns_maintenance.0012.a
+		custom_tooltip = kns_maintenance.0012.a.tt
+		if = {
+			limit = { kns_can_become_a_knight_trigger = yes }
+			kns_become_a_knight_effect = {
+				KNIGHT_MAKER = scope:dead_knight
+				KNIGHT_TO_BE = root
+			}
+		}
+		else = {
+			add_character_flag = kns_knightless_squire_flag
+			kns_knightless_squire_cleanup_timer_effect = yes
+		}
+	}
+}
+
+# Knightless squire timeout
+kns_maintenance.0300 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		has_character_flag = kns_knightless_squire_flag
+		has_trait = squire
+		num_of_relation_kns_knight = 0
+		kns_is_knight_trigger = no
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = squire
+					track = knight
+					value >= 66
+				}
+				kns_can_become_a_knight_trigger = yes
+			}
+			kns_become_a_knight_effect = {
+				KNIGHT_MAKER = root
+				KNIGHT_TO_BE = root
+			}
+		}
+		else = {
+			remove_trait = squire
+			remove_character_flag = kns_knightless_squire_flag
+			if = {
+				limit = {
+					any_owned_story = { story_type = story_kns_squire_ongoing }
+				}
+				random_owned_story = {
+					limit = { story_type = story_kns_squire_ongoing }
+					end_story = yes
+				}
+			}
+		}
+	}
+}
+
+# Squirehood has gone on too long
+kns_maintenance.0400 = {
+	type = character_event
+	title = kns_maintenance.0400.t
+	desc = kns_maintenance.0400.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = root
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	immediate = {
+		random_relation = {
+			type = kns_knight
+			save_scope_as = my_knight
+		}
+		if = {
+			limit = { exists = scope:my_knight }
+			remove_relation_kns_knight = scope:my_knight
+		}
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = squire
+					track = knight
+					value >= 50
+				}
+				kns_can_become_a_knight_trigger = yes
+			}
+			save_scope_value_as = {
+				name = kns_late_knighting
+				value = yes
+			}
+		}
+		else = {
+			remove_trait = squire
+		}
+		random_owned_story = {
+			limit = { story_type = story_kns_squire_ongoing }
+			end_story = yes
+		}
+	}
+
+	option = {
+		name = kns_maintenance.0400.a
+		if = {
+			limit = { exists = scope:kns_late_knighting }
+			kns_become_a_knight_effect = {
+				KNIGHT_MAKER = scope:my_knight
+				KNIGHT_TO_BE = root
+			}
+		}
+	}
+}

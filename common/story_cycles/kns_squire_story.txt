@@ -1,0 +1,236 @@
+story_kns_squire_ongoing = {
+
+	on_setup = {
+		story_owner = {
+			add_character_flag = kns_had_ongoing_squire_story
+			set_variable = {
+				name = kns_years_as_squire
+				value = 0
+			}
+		}
+	}
+
+	on_end = {
+		if = {
+			limit = {
+				story_owner = { is_alive = yes }
+			}
+			story_owner = {
+				remove_character_flag = kns_had_ongoing_squire_story
+				remove_variable = kns_years_as_squire
+			}
+		}
+	}
+
+	on_owner_death = {
+		scope:story = { end_story = yes }
+	}
+
+	# Unlanded AI knights train their squires automatically
+	effect_group = {
+		days = { 21 32 }
+		trigger = {
+			story_owner = {
+				has_trait_xp = {
+					trait = squire
+					track = knight
+					value >= 0
+				}
+				NOT = {
+					has_trait_xp = {
+						trait = squire
+						track = knight
+						value >= 66
+					}
+				}
+				any_relation = {
+					type = kns_knight
+					is_alive = yes
+					is_playable_character = no
+				}
+			}
+		}
+		triggered_effect = {
+			trigger = { always = yes }
+			effect = {
+				story_owner = {
+					save_scope_as = my_squire
+					random_relation = {
+						type = kns_knight
+						limit = { is_playable_character = no }
+						save_scope_as = my_knight
+					}
+				}
+				scope:my_knight ?= {
+					trigger_event = kns_squire.0400
+				}
+			}
+		}
+	}
+
+	# Random squirehood events
+	effect_group = {
+		days = 100
+		chance = 65
+		trigger = {
+			story_owner = {
+				has_trait = squire
+				num_of_relation_kns_knight = 1
+			}
+		}
+		triggered_effect = {
+			trigger = { always = yes }
+			effect = {
+				story_owner = {
+					trigger_event = {
+						on_action = kns_ongoing_squire_events
+					}
+				}
+			}
+		}
+	}
+
+	# AI knight promotes a ready squire
+	effect_group = {
+		days = { 30 45 }
+		trigger = {
+			story_owner = {
+				num_of_relation_kns_knight = 1
+				has_trait_xp = {
+					trait = squire
+					track = knight
+					value >= 66
+				}
+				kns_can_become_a_knight_trigger = yes
+				any_relation = {
+					type = kns_knight
+					is_ai = yes
+				}
+			}
+		}
+		triggered_effect = {
+			trigger = { always = yes }
+			effect = {
+				story_owner = {
+					save_scope_as = my_squire
+					random_relation = {
+						type = kns_knight
+						limit = { is_ai = yes }
+						save_scope_as = my_knight
+					}
+				}
+				scope:my_knight = {
+					trigger_event = kns_knighthood.0300
+				}
+			}
+		}
+	}
+
+	# Landed AI squires eventually knight themselves
+	effect_group = {
+		days = { 91 92 }
+		trigger = {
+			story_owner = {
+				is_playable_character = yes
+				highest_held_title_tier >= tier_county
+				age >= 16
+				is_ai = yes
+				kns_can_become_a_knight_trigger = yes
+			}
+		}
+		triggered_effect = {
+			trigger = { always = yes }
+			effect = {
+				story_owner = {
+					save_scope_as = my_squire
+					if = {
+						limit = {
+							any_relation = { type = kns_knight }
+						}
+						random_relation = {
+							type = kns_knight
+							save_scope_as = my_knight
+						}
+					}
+					else = {
+						save_scope_as = my_knight
+					}
+					kns_become_a_knight_effect = {
+						KNIGHT_MAKER = scope:my_knight
+						KNIGHT_TO_BE = scope:my_squire
+					}
+				}
+			}
+		}
+	}
+
+	# Count years after age 22
+	effect_group = {
+		days = 365
+		trigger = {
+			story_owner = {
+				has_variable = kns_years_as_squire
+				age >= 22
+			}
+		}
+		triggered_effect = {
+			trigger = { always = yes }
+			effect = {
+				story_owner = {
+					change_variable = {
+						name = kns_years_as_squire
+						add = 1
+					}
+				}
+			}
+		}
+	}
+
+	# End overlong squirehood
+	effect_group = {
+		days = 365
+		trigger = {
+			story_owner = {
+				age >= 22
+				var:kns_years_as_squire >= 15
+			}
+		}
+		triggered_effect = {
+			trigger = { always = yes }
+			effect = {
+				story_owner = {
+					trigger_event = kns_maintenance.0400
+				}
+			}
+		}
+	}
+
+	# Break the bond if knight and squire become hostile
+	effect_group = {
+		days = { 91 92 }
+		trigger = {
+			story_owner = {
+				kns_is_squire_with_knight = yes
+			}
+		}
+		triggered_effect = {
+			trigger = { always = yes }
+			effect = {
+				story_owner = {
+					save_scope_as = my_squire
+					random_relation = {
+						type = kns_knight
+						save_scope_as = my_knight
+					}
+					if = {
+						limit = {
+							exists = scope:my_knight
+							kns_hostile_squire_knight_trigger = { KNIGHT = scope:my_knight }
+						}
+						trigger_event = kns_maintenance.0007
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+kns_training_knight_count_value = {
+	value = 0
+	if = {
+		limit = { exists = var:kns_training_knight_count }
+		add = var:kns_training_knight_count
+	}
+}
+
+kns_funded_knight_monthly_income = {
+	value = kns_training_knight_count_value
+	multiply = -0.5
+}
+
+kns_funding_monthly_cost = {
+	value = kns_training_knight_count_value
+	multiply = 0.5
+}
+
+kns_prowess_needed_to_reach_30 = {
+	value = 30
+	subtract = prowess_no_portrait
+	min = 0
+}
+
+# Gift at Arms is compared to prowess without portrait artifacts (weapons).
+# Traits, dynasty perks, and Has a Squire are included. Equipped weapons are not.
+kns_compared_prowess_value = {
+	value = prowess_no_portrait
+}
+
+kns_weapon_prowess_value = {
+	value = prowess
+	subtract = prowess_no_portrait
+	min = 0
+}
+
+kns_prowess_training_room_value = {
+	value = 0
+	if = {
+		limit = { has_variable = kns_prowess_cap }
+		value = var:kns_prowess_cap
+		subtract = kns_compared_prowess_value
+		min = 0
+	}
+}

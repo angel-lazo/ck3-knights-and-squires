@@ -1,0 +1,1 @@
+gui/window_kns_fund_knights.gui = kns_fund_knights_window

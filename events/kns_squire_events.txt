@@ -1,0 +1,765 @@
+namespace = kns_squire
+
+scripted_trigger kns_available_for_squire_event = {
+	is_available = yes
+	kns_is_squire_with_knight = yes
+	NOT = { has_character_flag = kns_squire_event_$NUM$ }
+}
+
+# Horsemanship
+kns_squire.0001 = {
+	type = character_event
+	title = kns_squire.0001.t
+	desc = kns_squire.0001.desc
+	theme = martial
+	override_background = { reference = army_camp }
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:my_knight
+		animation = personality_honorable
+	}
+
+	trigger = {
+		kns_available_for_squire_event = { NUM = 0001 }
+	}
+
+	immediate = {
+		add_character_flag = { flag = kns_squire_event_0001 months = 4 }
+		random_relation = {
+			type = kns_knight
+			save_scope_as = my_knight
+		}
+	}
+
+	option = {
+		name = kns_squire.0001.a
+		duel = {
+			skill = martial
+			value = medium_skill_rating
+			55 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -39
+				}
+				desc = kns_squire.tt.success
+				send_interface_message = {
+					type = event_toast_effect_good
+					title = kns_squire.tt.success
+					desc = kns_squire.desc.success
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = 4 MAX_VALUE = 6 }
+					kns_try_squire_skill_increase_effect = { SKILL = martial }
+					left_icon = root
+					right_icon = scope:my_knight
+				}
+			}
+			45 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -19
+				}
+				desc = kns_squire.tt.failure
+				send_interface_message = {
+					type = event_toast_effect_bad
+					title = kns_squire.tt.failure
+					desc = kns_squire.desc.failure
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = -4 MAX_VALUE = -1 }
+					left_icon = root
+					right_icon = scope:my_knight
+				}
+			}
+		}
+	}
+}
+
+# Armor and harness
+kns_squire.0002 = {
+	type = character_event
+	title = kns_squire.0002.t
+	desc = kns_squire.0002.desc
+	theme = stewardship
+	override_background = { reference = army_camp }
+	left_portrait = root
+
+	trigger = {
+		kns_available_for_squire_event = { NUM = 0002 }
+	}
+
+	immediate = {
+		add_character_flag = { flag = kns_squire_event_0002 months = 4 }
+		random_relation = {
+			type = kns_knight
+			save_scope_as = my_knight
+		}
+	}
+
+	option = {
+		name = kns_squire.0002.a
+		duel = {
+			skill = stewardship
+			value = low_skill_rating
+			70 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -39
+				}
+				desc = kns_squire.tt.success
+				send_interface_message = {
+					type = event_toast_effect_good
+					title = kns_squire.tt.success
+					desc = kns_squire.desc.success
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = 1 MAX_VALUE = 3 }
+					kns_try_squire_skill_increase_effect = { SKILL = stewardship }
+					left_icon = root
+					right_icon = scope:my_knight
+				}
+			}
+			30 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -19
+				}
+				desc = kns_squire.tt.failure
+				send_interface_message = {
+					type = event_toast_effect_bad
+					title = kns_squire.tt.failure
+					desc = kns_squire.desc.failure
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = -2 MAX_VALUE = 0 }
+					left_icon = root
+					right_icon = scope:my_knight
+				}
+			}
+		}
+	}
+}
+
+# Sword practice with knight
+kns_squire.0003 = {
+	type = character_event
+	title = kns_squire.0003.t
+	desc = kns_squire.0003.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = disapproval
+	}
+	right_portrait = {
+		character = scope:my_knight
+		animation = personality_bold
+	}
+
+	trigger = {
+		kns_available_for_squire_event = { NUM = 0003 }
+	}
+
+	immediate = {
+		add_character_flag = { flag = kns_squire_event_0003 months = 4 }
+		random_relation = {
+			type = kns_knight
+			save_scope_as = my_knight
+		}
+	}
+
+	option = {
+		name = kns_squire.0003.a
+		duel = {
+			skill = prowess
+			value = medium_skill_rating
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -39
+				}
+				desc = kns_squire.tt.success
+				send_interface_message = {
+					type = event_toast_effect_good
+					title = kns_squire.tt.success
+					desc = kns_squire.desc.success
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 8 }
+					kns_try_squire_skill_increase_effect = { SKILL = prowess }
+					left_icon = root
+					right_icon = scope:my_knight
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -19
+				}
+				desc = kns_squire.tt.failure
+				send_interface_message = {
+					type = event_toast_effect_bad
+					title = kns_squire.tt.failure
+					desc = kns_squire.desc.failure
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = -3 MAX_VALUE = 0 }
+					left_icon = root
+					right_icon = scope:my_knight
+				}
+			}
+		}
+	}
+}
+
+# Solo yard work
+kns_squire.0004 = {
+	type = character_event
+	title = kns_squire.0004.t
+	desc = kns_squire.0004.desc
+	theme = martial
+	override_background = { reference = courtyard }
+	left_portrait = root
+
+	trigger = {
+		kns_available_for_squire_event = { NUM = 0004 }
+	}
+
+	immediate = {
+		add_character_flag = { flag = kns_squire_event_0004 months = 4 }
+		random_relation = {
+			type = kns_knight
+			save_scope_as = my_knight
+		}
+	}
+
+	option = {
+		name = kns_squire.0004.a
+		duel = {
+			skill = prowess
+			value = low_skill_rating
+			65 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3
+					min = -39
+				}
+				desc = kns_squire.tt.success
+				send_interface_message = {
+					type = event_toast_effect_good
+					title = kns_squire.tt.success
+					desc = kns_squire.desc.success
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = 2 MAX_VALUE = 5 }
+					kns_try_squire_skill_increase_effect = { SKILL = prowess }
+					left_icon = root
+				}
+			}
+			35 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3
+					min = -19
+				}
+				desc = kns_squire.tt.failure
+				send_interface_message = {
+					type = event_toast_effect_bad
+					title = kns_squire.tt.failure
+					desc = kns_squire.desc.failure
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = -2 MAX_VALUE = 0 }
+					left_icon = root
+				}
+			}
+		}
+	}
+}
+
+# Rallying speech
+kns_squire.0005 = {
+	type = character_event
+	title = kns_squire.0005.t
+	desc = kns_squire.0005.desc
+	theme = diplomacy
+	override_background = { reference = army_camp }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:my_knight
+		animation = admiration
+	}
+
+	trigger = {
+		kns_available_for_squire_event = { NUM = 0005 }
+	}
+
+	immediate = {
+		add_character_flag = { flag = kns_squire_event_0005 months = 4 }
+		random_relation = {
+			type = kns_knight
+			save_scope_as = my_knight
+		}
+	}
+
+	option = {
+		name = kns_squire.0005.a
+		duel = {
+			skill = diplomacy
+			value = medium_skill_rating
+			55 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -39
+				}
+				desc = kns_squire.tt.success
+				send_interface_message = {
+					type = event_toast_effect_good
+					title = kns_squire.tt.success
+					desc = kns_squire.desc.success
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = 3 MAX_VALUE = 6 }
+					kns_try_squire_skill_increase_effect = { SKILL = diplomacy }
+					left_icon = root
+					right_icon = scope:my_knight
+				}
+			}
+			45 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -19
+				}
+				desc = kns_squire.tt.failure
+				send_interface_message = {
+					type = event_toast_effect_bad
+					title = kns_squire.tt.failure
+					desc = kns_squire.desc.failure
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = -3 MAX_VALUE = 0 }
+					left_icon = root
+					right_icon = scope:my_knight
+				}
+			}
+		}
+	}
+}
+
+# Chivalrous conduct
+kns_squire.0006 = {
+	type = character_event
+	title = kns_squire.0006.t
+	desc = kns_squire.0006.desc
+	theme = diplomacy
+	override_background = { reference = courtyard }
+	left_portrait = root
+	right_portrait = {
+		character = scope:my_knight
+		animation = personality_honorable
+	}
+
+	trigger = {
+		kns_available_for_squire_event = { NUM = 0006 }
+	}
+
+	immediate = {
+		add_character_flag = { flag = kns_squire_event_0006 months = 4 }
+		random_relation = {
+			type = kns_knight
+			save_scope_as = my_knight
+		}
+	}
+
+	option = {
+		name = kns_squire.0006.a
+		duel = {
+			skill = diplomacy
+			value = low_skill_rating
+			65 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3
+					min = -39
+				}
+				desc = kns_squire.tt.success
+				send_interface_message = {
+					type = event_toast_effect_good
+					title = kns_squire.tt.success
+					desc = kns_squire.desc.success
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = 2 MAX_VALUE = 5 }
+					kns_try_squire_skill_increase_effect = { SKILL = diplomacy }
+					left_icon = root
+					right_icon = scope:my_knight
+				}
+			}
+			35 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3
+					min = -19
+				}
+				desc = kns_squire.tt.failure
+				send_interface_message = {
+					type = event_toast_effect_bad
+					title = kns_squire.tt.failure
+					desc = kns_squire.desc.failure
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = -2 MAX_VALUE = 0 }
+					left_icon = root
+					right_icon = scope:my_knight
+				}
+			}
+		}
+	}
+}
+
+# Heraldry and letters
+kns_squire.0007 = {
+	type = character_event
+	title = kns_squire.0007.t
+	desc = kns_squire.0007.desc
+	theme = learning
+	override_background = { reference = study }
+	left_portrait = root
+
+	trigger = {
+		kns_available_for_squire_event = { NUM = 0007 }
+	}
+
+	immediate = {
+		add_character_flag = { flag = kns_squire_event_0007 months = 4 }
+		random_relation = {
+			type = kns_knight
+			save_scope_as = my_knight
+		}
+	}
+
+	option = {
+		name = kns_squire.0007.a
+		duel = {
+			skill = learning
+			value = medium_skill_rating
+			55 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -39
+				}
+				desc = kns_squire.tt.success
+				send_interface_message = {
+					type = event_toast_effect_good
+					title = kns_squire.tt.success
+					desc = kns_squire.desc.success
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = 2 MAX_VALUE = 5 }
+					kns_try_squire_skill_increase_effect = { SKILL = learning }
+					left_icon = root
+					right_icon = scope:my_knight
+				}
+			}
+			45 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -19
+				}
+				desc = kns_squire.tt.failure
+				send_interface_message = {
+					type = event_toast_effect_bad
+					title = kns_squire.tt.failure
+					desc = kns_squire.desc.failure
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = -2 MAX_VALUE = 0 }
+					left_icon = root
+					right_icon = scope:my_knight
+				}
+			}
+		}
+	}
+}
+
+# Training yard melee
+kns_squire.0008 = {
+	type = character_event
+	title = kns_squire.0008.t
+	desc = kns_squire.0008.desc
+	theme = martial
+	override_background = { reference = courtyard }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	trigger = {
+		kns_available_for_squire_event = { NUM = 0008 }
+	}
+
+	immediate = {
+		add_character_flag = { flag = kns_squire_event_0008 months = 4 }
+		random_relation = {
+			type = kns_knight
+			save_scope_as = my_knight
+		}
+	}
+
+	option = {
+		name = kns_squire.0008.a
+		duel = {
+			skill = martial
+			value = medium_skill_rating
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -39
+				}
+				desc = kns_squire.tt.success
+				send_interface_message = {
+					type = event_toast_effect_good
+					title = kns_squire.tt.success
+					desc = kns_squire.desc.success
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = 4 MAX_VALUE = 7 }
+					kns_try_squire_skill_increase_effect = { SKILL = martial }
+					left_icon = root
+					right_icon = scope:my_knight
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -19
+				}
+				desc = kns_squire.tt.failure
+				send_interface_message = {
+					type = event_toast_effect_bad
+					title = kns_squire.tt.failure
+					desc = kns_squire.desc.failure
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = -3 MAX_VALUE = 0 }
+					left_icon = root
+					right_icon = scope:my_knight
+				}
+			}
+		}
+	}
+}
+
+# 16th birthday boost
+kns_squire.0230 = {
+	hidden = yes
+	type = character_event
+
+	trigger = {
+		has_trait = squire
+		kns_is_squire_with_trait_xp = yes
+	}
+
+	immediate = {
+		kns_add_squire_trait_xp_effect = { MIN_VALUE = 8 MAX_VALUE = 12 }
+	}
+}
+
+# Yearly birthday trickle after 16
+kns_squire.0231 = {
+	hidden = yes
+	type = character_event
+
+	trigger = {
+		age > 16
+		has_trait = squire
+		kns_is_squire_with_trait_xp = yes
+	}
+
+	immediate = {
+		kns_add_squire_trait_xp_effect = { MIN_VALUE = 1 MAX_VALUE = 3 }
+	}
+}
+
+# Directed training from the knight
+kns_squire.0400 = {
+	type = character_event
+	title = kns_squire.0400.t
+	desc = kns_squire.0400.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+	right_portrait = {
+		character = scope:my_squire
+		animation = idle
+	}
+
+	# Strategy
+	option = {
+		name = kns_squire.0400.a
+		random_list = {
+			3 = {
+				modifier = {
+					scope:my_squire.martial > mediocre_skill_rating
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = { has_trait = shrewd }
+					add = 2
+				}
+				custom_tooltip = kns_squire.0400.good_training.tt
+				scope:my_squire = {
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = 8 MAX_VALUE = 14 }
+					kns_try_squire_skill_increase_effect = { SKILL = martial }
+					send_interface_message = {
+						type = event_toast_effect_good
+						title = kns_squire.0400.had_a_training_session.t
+						desc = kns_squire.0401_good_strategy.desc
+						left_icon = scope:my_squire
+						right_icon = root
+					}
+				}
+			}
+			1 = {
+				modifier = {
+					scope:my_squire.martial < mediocre_skill_rating
+					add = 2
+				}
+				custom_tooltip = kns_squire.0400.bad_training.tt
+				scope:my_squire = {
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = -2 MAX_VALUE = 2 }
+					send_interface_message = {
+						type = event_toast_effect_bad
+						title = kns_squire.0400.had_a_training_session.t
+						desc = kns_squire.0401_bad_strategy.desc
+						left_icon = scope:my_squire
+						right_icon = root
+					}
+				}
+			}
+		}
+	}
+
+	# Chivalry
+	option = {
+		name = kns_squire.0400.b
+		random_list = {
+			3 = {
+				modifier = {
+					scope:my_squire.diplomacy > mediocre_skill_rating
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = { has_trait = gallant }
+					add = 3
+				}
+				custom_tooltip = kns_squire.0400.good_training.tt
+				scope:my_squire = {
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = 8 MAX_VALUE = 14 }
+					kns_try_squire_skill_increase_effect = { SKILL = diplomacy }
+					send_interface_message = {
+						type = event_toast_effect_good
+						title = kns_squire.0400.had_a_training_session.t
+						desc = kns_squire.0401_good_chivalry.desc
+						left_icon = scope:my_squire
+						right_icon = root
+					}
+				}
+			}
+			1 = {
+				custom_tooltip = kns_squire.0400.bad_training.tt
+				scope:my_squire = {
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = -2 MAX_VALUE = 2 }
+					send_interface_message = {
+						type = event_toast_effect_bad
+						title = kns_squire.0400.had_a_training_session.t
+						desc = kns_squire.0401_bad_chivalry.desc
+						left_icon = scope:my_squire
+						right_icon = root
+					}
+				}
+			}
+		}
+	}
+
+	# Arms
+	option = {
+		name = kns_squire.0400.c
+		random_list = {
+			3 = {
+				modifier = {
+					scope:my_squire.prowess > mediocre_skill_rating
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait_rank = {
+							trait = education_martial_prowess
+							rank >= 1
+						}
+					}
+					add = 3
+				}
+				custom_tooltip = kns_squire.0400.good_training.tt
+				scope:my_squire = {
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = 10 MAX_VALUE = 16 }
+					kns_try_squire_skill_increase_effect = { SKILL = prowess }
+					send_interface_message = {
+						type = event_toast_effect_good
+						title = kns_squire.0400.had_a_training_session.t
+						desc = kns_squire.0401_good_arms.desc
+						left_icon = scope:my_squire
+						right_icon = root
+					}
+				}
+			}
+			1 = {
+				custom_tooltip = kns_squire.0400.bad_training.tt
+				scope:my_squire = {
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = -2 MAX_VALUE = 2 }
+					send_interface_message = {
+						type = event_toast_effect_bad
+						title = kns_squire.0400.had_a_training_session.t
+						desc = kns_squire.0401_bad_arms.desc
+						left_icon = scope:my_squire
+						right_icon = root
+					}
+				}
+			}
+		}
+	}
+
+	# Horsemanship
+	option = {
+		name = kns_squire.0400.d
+		random_list = {
+			3 = {
+				modifier = {
+					scope:my_squire.martial > mediocre_skill_rating
+					add = 2
+				}
+				custom_tooltip = kns_squire.0400.good_training.tt
+				scope:my_squire = {
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = 8 MAX_VALUE = 14 }
+					kns_try_squire_skill_increase_effect = { SKILL = martial }
+					send_interface_message = {
+						type = event_toast_effect_good
+						title = kns_squire.0400.had_a_training_session.t
+						desc = kns_squire.0401_good_horse.desc
+						left_icon = scope:my_squire
+						right_icon = root
+					}
+				}
+			}
+			1 = {
+				custom_tooltip = kns_squire.0400.bad_training.tt
+				scope:my_squire = {
+					kns_add_squire_trait_xp_effect = { MIN_VALUE = -2 MAX_VALUE = 2 }
+					send_interface_message = {
+						type = event_toast_effect_bad
+						title = kns_squire.0400.had_a_training_session.t
+						desc = kns_squire.0401_bad_horse.desc
+						left_icon = scope:my_squire
+						right_icon = root
+					}
+				}
+			}
+		}
+	}
+}

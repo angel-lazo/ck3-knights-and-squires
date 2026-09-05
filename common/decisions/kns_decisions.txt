@@ -1,0 +1,172 @@
+kns_buy_knighthood_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+
+	decision_group_type = kns_knight_decisions
+	sort_order = 75
+
+	desc = kns_buy_knighthood_decision_desc
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 24
+		duchy = 24
+		kingdom = 24
+		empire = 24
+		hegemony = 0
+	}
+
+	cost = {
+		gold = {
+			value = 200
+			if = {
+				limit = {
+					highest_held_title_tier >= tier_kingdom
+				}
+				add = 200
+			}
+		}
+		prestige = {
+			value = 200
+			if = {
+				limit = {
+					highest_held_title_tier >= tier_kingdom
+				}
+				add = 200
+			}
+		}
+		piety = {
+			value = 0
+			if = {
+				limit = {
+					kns_practices_knighthood_trigger = yes
+				}
+				add = 150
+			}
+			if = {
+				limit = {
+					highest_held_title_tier >= tier_kingdom
+				}
+				add = 200
+			}
+		}
+	}
+
+	is_shown = {
+		kns_can_become_a_knight_trigger = yes
+		NOR = {
+			has_character_flag = kns_bought_knighthood
+			has_trait = just
+			has_trait = content
+			AND = {
+				kns_practices_knighthood_trigger = yes
+				OR = {
+					has_trait = zealous
+					piety_level >= 4
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			custom_description = {
+				text = kns_faith_practices_knighthood
+				kns_practices_knighthood_trigger = yes
+			}
+			AND = {
+				NOT = { kns_practices_knighthood_trigger = yes }
+				has_trait = ambitious
+				NOT = { has_trait = zealous }
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_at_war = no
+		is_imprisoned = no
+		is_available_adult = yes
+		NOT = { government_has_flag = government_is_tribal }
+	}
+
+	effect = {
+		add_character_flag = kns_bought_knighthood
+		custom_tooltip = kns_buy_knighthood_decision_tooltip
+		hidden_effect = {
+			kns_become_a_knight_effect = {
+				KNIGHT_MAKER = root
+				KNIGHT_TO_BE = root
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 5
+		modifier = {
+			add = -33
+			kns_practices_knighthood_trigger = yes
+		}
+		modifier = {
+			add = 33
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 20
+			has_trait = deceitful
+		}
+		modifier = {
+			add = -50
+			has_trait = humble
+		}
+		modifier = {
+			add = -100
+			is_male = no
+		}
+	}
+}
+
+kns_manage_knight_funding_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+
+	decision_group_type = kns_knight_decisions
+	sort_order = 76
+
+	desc = kns_manage_knight_funding_decision_desc
+
+	ai_check_interval = 0
+
+	is_shown = {
+		is_landed = yes
+		is_playable_character = yes
+		OR = {
+			kns_has_any_manageable_knight_trigger = yes
+			kns_has_any_potential_knight_trigger = yes
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		custom_tooltip = kns_manage_knight_funding_decision_tooltip
+		hidden_effect = {
+			kns_open_funding_window_effect = yes
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

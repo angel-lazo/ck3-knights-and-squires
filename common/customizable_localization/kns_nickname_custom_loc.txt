@@ -1,0 +1,2007 @@
+﻿KnsKnightNicknameStory = {
+	type = character
+	random_valid = no
+	text = {
+		trigger = { has_nickname = nick_kns_sword_01 }
+		localization_key = nick_kns_sword_01_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_02 }
+		localization_key = nick_kns_sword_02_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_03 }
+		localization_key = nick_kns_sword_03_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_04 }
+		localization_key = nick_kns_sword_04_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_05 }
+		localization_key = nick_kns_sword_05_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_06 }
+		localization_key = nick_kns_sword_06_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_07 }
+		localization_key = nick_kns_sword_07_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_08 }
+		localization_key = nick_kns_sword_08_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_09 }
+		localization_key = nick_kns_sword_09_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_10 }
+		localization_key = nick_kns_sword_10_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_11 }
+		localization_key = nick_kns_sword_11_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_12 }
+		localization_key = nick_kns_sword_12_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_13 }
+		localization_key = nick_kns_sword_13_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_14 }
+		localization_key = nick_kns_sword_14_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_15 }
+		localization_key = nick_kns_sword_15_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_16 }
+		localization_key = nick_kns_sword_16_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_17 }
+		localization_key = nick_kns_sword_17_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_18 }
+		localization_key = nick_kns_sword_18_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_19 }
+		localization_key = nick_kns_sword_19_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_20 }
+		localization_key = nick_kns_sword_20_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_21 }
+		localization_key = nick_kns_sword_21_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_22 }
+		localization_key = nick_kns_sword_22_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_23 }
+		localization_key = nick_kns_sword_23_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_24 }
+		localization_key = nick_kns_sword_24_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_25 }
+		localization_key = nick_kns_sword_25_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_26 }
+		localization_key = nick_kns_sword_26_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_27 }
+		localization_key = nick_kns_sword_27_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_28 }
+		localization_key = nick_kns_sword_28_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_29 }
+		localization_key = nick_kns_sword_29_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_30 }
+		localization_key = nick_kns_sword_30_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_31 }
+		localization_key = nick_kns_sword_31_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_32 }
+		localization_key = nick_kns_sword_32_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_33 }
+		localization_key = nick_kns_sword_33_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_34 }
+		localization_key = nick_kns_sword_34_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_35 }
+		localization_key = nick_kns_sword_35_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_36 }
+		localization_key = nick_kns_sword_36_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_37 }
+		localization_key = nick_kns_sword_37_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_38 }
+		localization_key = nick_kns_sword_38_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_39 }
+		localization_key = nick_kns_sword_39_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_40 }
+		localization_key = nick_kns_sword_40_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_41 }
+		localization_key = nick_kns_sword_41_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_42 }
+		localization_key = nick_kns_sword_42_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_43 }
+		localization_key = nick_kns_sword_43_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_44 }
+		localization_key = nick_kns_sword_44_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_45 }
+		localization_key = nick_kns_sword_45_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_46 }
+		localization_key = nick_kns_sword_46_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_47 }
+		localization_key = nick_kns_sword_47_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_48 }
+		localization_key = nick_kns_sword_48_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_49 }
+		localization_key = nick_kns_sword_49_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_50 }
+		localization_key = nick_kns_sword_50_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_51 }
+		localization_key = nick_kns_sword_51_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_52 }
+		localization_key = nick_kns_sword_52_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_53 }
+		localization_key = nick_kns_sword_53_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_54 }
+		localization_key = nick_kns_sword_54_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_55 }
+		localization_key = nick_kns_sword_55_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_56 }
+		localization_key = nick_kns_sword_56_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_57 }
+		localization_key = nick_kns_sword_57_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_58 }
+		localization_key = nick_kns_sword_58_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_59 }
+		localization_key = nick_kns_sword_59_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_60 }
+		localization_key = nick_kns_sword_60_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_61 }
+		localization_key = nick_kns_sword_61_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_62 }
+		localization_key = nick_kns_sword_62_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_63 }
+		localization_key = nick_kns_sword_63_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_64 }
+		localization_key = nick_kns_sword_64_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_65 }
+		localization_key = nick_kns_sword_65_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_66 }
+		localization_key = nick_kns_sword_66_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_67 }
+		localization_key = nick_kns_sword_67_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_68 }
+		localization_key = nick_kns_sword_68_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_69 }
+		localization_key = nick_kns_sword_69_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_70 }
+		localization_key = nick_kns_sword_70_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_71 }
+		localization_key = nick_kns_sword_71_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_72 }
+		localization_key = nick_kns_sword_72_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_73 }
+		localization_key = nick_kns_sword_73_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_74 }
+		localization_key = nick_kns_sword_74_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_75 }
+		localization_key = nick_kns_sword_75_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_76 }
+		localization_key = nick_kns_sword_76_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_77 }
+		localization_key = nick_kns_sword_77_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_78 }
+		localization_key = nick_kns_sword_78_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_79 }
+		localization_key = nick_kns_sword_79_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_80 }
+		localization_key = nick_kns_sword_80_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_81 }
+		localization_key = nick_kns_sword_81_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_82 }
+		localization_key = nick_kns_sword_82_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_83 }
+		localization_key = nick_kns_sword_83_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_84 }
+		localization_key = nick_kns_sword_84_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_85 }
+		localization_key = nick_kns_sword_85_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_86 }
+		localization_key = nick_kns_sword_86_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_87 }
+		localization_key = nick_kns_sword_87_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_88 }
+		localization_key = nick_kns_sword_88_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_89 }
+		localization_key = nick_kns_sword_89_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_90 }
+		localization_key = nick_kns_sword_90_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_91 }
+		localization_key = nick_kns_sword_91_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_92 }
+		localization_key = nick_kns_sword_92_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_93 }
+		localization_key = nick_kns_sword_93_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_94 }
+		localization_key = nick_kns_sword_94_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_95 }
+		localization_key = nick_kns_sword_95_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_96 }
+		localization_key = nick_kns_sword_96_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_97 }
+		localization_key = nick_kns_sword_97_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_98 }
+		localization_key = nick_kns_sword_98_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_99 }
+		localization_key = nick_kns_sword_99_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_sword_100 }
+		localization_key = nick_kns_sword_100_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_01 }
+		localization_key = nick_kns_axe_01_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_02 }
+		localization_key = nick_kns_axe_02_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_03 }
+		localization_key = nick_kns_axe_03_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_04 }
+		localization_key = nick_kns_axe_04_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_05 }
+		localization_key = nick_kns_axe_05_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_06 }
+		localization_key = nick_kns_axe_06_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_07 }
+		localization_key = nick_kns_axe_07_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_08 }
+		localization_key = nick_kns_axe_08_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_09 }
+		localization_key = nick_kns_axe_09_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_10 }
+		localization_key = nick_kns_axe_10_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_11 }
+		localization_key = nick_kns_axe_11_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_12 }
+		localization_key = nick_kns_axe_12_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_13 }
+		localization_key = nick_kns_axe_13_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_14 }
+		localization_key = nick_kns_axe_14_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_15 }
+		localization_key = nick_kns_axe_15_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_16 }
+		localization_key = nick_kns_axe_16_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_17 }
+		localization_key = nick_kns_axe_17_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_18 }
+		localization_key = nick_kns_axe_18_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_19 }
+		localization_key = nick_kns_axe_19_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_20 }
+		localization_key = nick_kns_axe_20_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_21 }
+		localization_key = nick_kns_axe_21_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_22 }
+		localization_key = nick_kns_axe_22_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_23 }
+		localization_key = nick_kns_axe_23_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_24 }
+		localization_key = nick_kns_axe_24_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_25 }
+		localization_key = nick_kns_axe_25_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_26 }
+		localization_key = nick_kns_axe_26_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_27 }
+		localization_key = nick_kns_axe_27_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_28 }
+		localization_key = nick_kns_axe_28_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_29 }
+		localization_key = nick_kns_axe_29_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_30 }
+		localization_key = nick_kns_axe_30_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_31 }
+		localization_key = nick_kns_axe_31_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_32 }
+		localization_key = nick_kns_axe_32_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_33 }
+		localization_key = nick_kns_axe_33_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_34 }
+		localization_key = nick_kns_axe_34_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_35 }
+		localization_key = nick_kns_axe_35_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_36 }
+		localization_key = nick_kns_axe_36_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_37 }
+		localization_key = nick_kns_axe_37_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_38 }
+		localization_key = nick_kns_axe_38_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_39 }
+		localization_key = nick_kns_axe_39_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_40 }
+		localization_key = nick_kns_axe_40_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_41 }
+		localization_key = nick_kns_axe_41_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_42 }
+		localization_key = nick_kns_axe_42_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_43 }
+		localization_key = nick_kns_axe_43_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_44 }
+		localization_key = nick_kns_axe_44_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_45 }
+		localization_key = nick_kns_axe_45_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_46 }
+		localization_key = nick_kns_axe_46_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_47 }
+		localization_key = nick_kns_axe_47_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_48 }
+		localization_key = nick_kns_axe_48_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_49 }
+		localization_key = nick_kns_axe_49_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_50 }
+		localization_key = nick_kns_axe_50_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_51 }
+		localization_key = nick_kns_axe_51_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_52 }
+		localization_key = nick_kns_axe_52_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_53 }
+		localization_key = nick_kns_axe_53_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_54 }
+		localization_key = nick_kns_axe_54_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_55 }
+		localization_key = nick_kns_axe_55_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_56 }
+		localization_key = nick_kns_axe_56_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_57 }
+		localization_key = nick_kns_axe_57_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_58 }
+		localization_key = nick_kns_axe_58_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_59 }
+		localization_key = nick_kns_axe_59_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_60 }
+		localization_key = nick_kns_axe_60_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_61 }
+		localization_key = nick_kns_axe_61_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_62 }
+		localization_key = nick_kns_axe_62_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_63 }
+		localization_key = nick_kns_axe_63_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_64 }
+		localization_key = nick_kns_axe_64_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_65 }
+		localization_key = nick_kns_axe_65_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_66 }
+		localization_key = nick_kns_axe_66_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_67 }
+		localization_key = nick_kns_axe_67_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_68 }
+		localization_key = nick_kns_axe_68_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_69 }
+		localization_key = nick_kns_axe_69_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_70 }
+		localization_key = nick_kns_axe_70_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_71 }
+		localization_key = nick_kns_axe_71_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_72 }
+		localization_key = nick_kns_axe_72_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_73 }
+		localization_key = nick_kns_axe_73_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_74 }
+		localization_key = nick_kns_axe_74_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_75 }
+		localization_key = nick_kns_axe_75_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_76 }
+		localization_key = nick_kns_axe_76_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_77 }
+		localization_key = nick_kns_axe_77_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_78 }
+		localization_key = nick_kns_axe_78_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_79 }
+		localization_key = nick_kns_axe_79_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_80 }
+		localization_key = nick_kns_axe_80_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_81 }
+		localization_key = nick_kns_axe_81_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_82 }
+		localization_key = nick_kns_axe_82_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_83 }
+		localization_key = nick_kns_axe_83_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_84 }
+		localization_key = nick_kns_axe_84_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_85 }
+		localization_key = nick_kns_axe_85_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_86 }
+		localization_key = nick_kns_axe_86_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_87 }
+		localization_key = nick_kns_axe_87_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_88 }
+		localization_key = nick_kns_axe_88_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_89 }
+		localization_key = nick_kns_axe_89_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_90 }
+		localization_key = nick_kns_axe_90_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_91 }
+		localization_key = nick_kns_axe_91_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_92 }
+		localization_key = nick_kns_axe_92_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_93 }
+		localization_key = nick_kns_axe_93_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_94 }
+		localization_key = nick_kns_axe_94_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_95 }
+		localization_key = nick_kns_axe_95_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_96 }
+		localization_key = nick_kns_axe_96_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_97 }
+		localization_key = nick_kns_axe_97_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_98 }
+		localization_key = nick_kns_axe_98_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_99 }
+		localization_key = nick_kns_axe_99_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_axe_100 }
+		localization_key = nick_kns_axe_100_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_01 }
+		localization_key = nick_kns_hammer_01_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_02 }
+		localization_key = nick_kns_hammer_02_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_03 }
+		localization_key = nick_kns_hammer_03_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_04 }
+		localization_key = nick_kns_hammer_04_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_05 }
+		localization_key = nick_kns_hammer_05_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_06 }
+		localization_key = nick_kns_hammer_06_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_07 }
+		localization_key = nick_kns_hammer_07_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_08 }
+		localization_key = nick_kns_hammer_08_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_09 }
+		localization_key = nick_kns_hammer_09_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_10 }
+		localization_key = nick_kns_hammer_10_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_11 }
+		localization_key = nick_kns_hammer_11_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_12 }
+		localization_key = nick_kns_hammer_12_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_13 }
+		localization_key = nick_kns_hammer_13_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_14 }
+		localization_key = nick_kns_hammer_14_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_15 }
+		localization_key = nick_kns_hammer_15_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_16 }
+		localization_key = nick_kns_hammer_16_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_17 }
+		localization_key = nick_kns_hammer_17_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_18 }
+		localization_key = nick_kns_hammer_18_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_19 }
+		localization_key = nick_kns_hammer_19_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_20 }
+		localization_key = nick_kns_hammer_20_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_21 }
+		localization_key = nick_kns_hammer_21_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_22 }
+		localization_key = nick_kns_hammer_22_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_23 }
+		localization_key = nick_kns_hammer_23_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_24 }
+		localization_key = nick_kns_hammer_24_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_25 }
+		localization_key = nick_kns_hammer_25_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_26 }
+		localization_key = nick_kns_hammer_26_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_27 }
+		localization_key = nick_kns_hammer_27_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_28 }
+		localization_key = nick_kns_hammer_28_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_29 }
+		localization_key = nick_kns_hammer_29_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_30 }
+		localization_key = nick_kns_hammer_30_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_31 }
+		localization_key = nick_kns_hammer_31_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_32 }
+		localization_key = nick_kns_hammer_32_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_33 }
+		localization_key = nick_kns_hammer_33_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_34 }
+		localization_key = nick_kns_hammer_34_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_35 }
+		localization_key = nick_kns_hammer_35_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_36 }
+		localization_key = nick_kns_hammer_36_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_37 }
+		localization_key = nick_kns_hammer_37_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_38 }
+		localization_key = nick_kns_hammer_38_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_39 }
+		localization_key = nick_kns_hammer_39_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_40 }
+		localization_key = nick_kns_hammer_40_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_41 }
+		localization_key = nick_kns_hammer_41_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_42 }
+		localization_key = nick_kns_hammer_42_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_43 }
+		localization_key = nick_kns_hammer_43_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_44 }
+		localization_key = nick_kns_hammer_44_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_45 }
+		localization_key = nick_kns_hammer_45_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_46 }
+		localization_key = nick_kns_hammer_46_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_47 }
+		localization_key = nick_kns_hammer_47_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_48 }
+		localization_key = nick_kns_hammer_48_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_49 }
+		localization_key = nick_kns_hammer_49_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_50 }
+		localization_key = nick_kns_hammer_50_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_51 }
+		localization_key = nick_kns_hammer_51_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_52 }
+		localization_key = nick_kns_hammer_52_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_53 }
+		localization_key = nick_kns_hammer_53_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_54 }
+		localization_key = nick_kns_hammer_54_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_55 }
+		localization_key = nick_kns_hammer_55_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_56 }
+		localization_key = nick_kns_hammer_56_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_57 }
+		localization_key = nick_kns_hammer_57_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_58 }
+		localization_key = nick_kns_hammer_58_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_59 }
+		localization_key = nick_kns_hammer_59_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_60 }
+		localization_key = nick_kns_hammer_60_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_61 }
+		localization_key = nick_kns_hammer_61_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_62 }
+		localization_key = nick_kns_hammer_62_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_63 }
+		localization_key = nick_kns_hammer_63_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_64 }
+		localization_key = nick_kns_hammer_64_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_65 }
+		localization_key = nick_kns_hammer_65_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_66 }
+		localization_key = nick_kns_hammer_66_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_67 }
+		localization_key = nick_kns_hammer_67_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_68 }
+		localization_key = nick_kns_hammer_68_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_69 }
+		localization_key = nick_kns_hammer_69_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_70 }
+		localization_key = nick_kns_hammer_70_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_71 }
+		localization_key = nick_kns_hammer_71_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_72 }
+		localization_key = nick_kns_hammer_72_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_73 }
+		localization_key = nick_kns_hammer_73_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_74 }
+		localization_key = nick_kns_hammer_74_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_75 }
+		localization_key = nick_kns_hammer_75_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_76 }
+		localization_key = nick_kns_hammer_76_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_77 }
+		localization_key = nick_kns_hammer_77_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_78 }
+		localization_key = nick_kns_hammer_78_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_79 }
+		localization_key = nick_kns_hammer_79_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_80 }
+		localization_key = nick_kns_hammer_80_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_81 }
+		localization_key = nick_kns_hammer_81_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_82 }
+		localization_key = nick_kns_hammer_82_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_83 }
+		localization_key = nick_kns_hammer_83_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_84 }
+		localization_key = nick_kns_hammer_84_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_85 }
+		localization_key = nick_kns_hammer_85_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_86 }
+		localization_key = nick_kns_hammer_86_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_87 }
+		localization_key = nick_kns_hammer_87_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_88 }
+		localization_key = nick_kns_hammer_88_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_89 }
+		localization_key = nick_kns_hammer_89_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_90 }
+		localization_key = nick_kns_hammer_90_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_91 }
+		localization_key = nick_kns_hammer_91_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_92 }
+		localization_key = nick_kns_hammer_92_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_93 }
+		localization_key = nick_kns_hammer_93_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_94 }
+		localization_key = nick_kns_hammer_94_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_95 }
+		localization_key = nick_kns_hammer_95_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_96 }
+		localization_key = nick_kns_hammer_96_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_97 }
+		localization_key = nick_kns_hammer_97_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_98 }
+		localization_key = nick_kns_hammer_98_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_99 }
+		localization_key = nick_kns_hammer_99_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_hammer_100 }
+		localization_key = nick_kns_hammer_100_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_01 }
+		localization_key = nick_kns_mace_01_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_02 }
+		localization_key = nick_kns_mace_02_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_03 }
+		localization_key = nick_kns_mace_03_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_04 }
+		localization_key = nick_kns_mace_04_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_05 }
+		localization_key = nick_kns_mace_05_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_06 }
+		localization_key = nick_kns_mace_06_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_07 }
+		localization_key = nick_kns_mace_07_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_08 }
+		localization_key = nick_kns_mace_08_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_09 }
+		localization_key = nick_kns_mace_09_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_10 }
+		localization_key = nick_kns_mace_10_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_11 }
+		localization_key = nick_kns_mace_11_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_12 }
+		localization_key = nick_kns_mace_12_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_13 }
+		localization_key = nick_kns_mace_13_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_14 }
+		localization_key = nick_kns_mace_14_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_15 }
+		localization_key = nick_kns_mace_15_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_16 }
+		localization_key = nick_kns_mace_16_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_17 }
+		localization_key = nick_kns_mace_17_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_18 }
+		localization_key = nick_kns_mace_18_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_19 }
+		localization_key = nick_kns_mace_19_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_20 }
+		localization_key = nick_kns_mace_20_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_21 }
+		localization_key = nick_kns_mace_21_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_22 }
+		localization_key = nick_kns_mace_22_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_23 }
+		localization_key = nick_kns_mace_23_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_24 }
+		localization_key = nick_kns_mace_24_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_25 }
+		localization_key = nick_kns_mace_25_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_26 }
+		localization_key = nick_kns_mace_26_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_27 }
+		localization_key = nick_kns_mace_27_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_28 }
+		localization_key = nick_kns_mace_28_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_29 }
+		localization_key = nick_kns_mace_29_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_30 }
+		localization_key = nick_kns_mace_30_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_31 }
+		localization_key = nick_kns_mace_31_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_32 }
+		localization_key = nick_kns_mace_32_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_33 }
+		localization_key = nick_kns_mace_33_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_34 }
+		localization_key = nick_kns_mace_34_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_35 }
+		localization_key = nick_kns_mace_35_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_36 }
+		localization_key = nick_kns_mace_36_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_37 }
+		localization_key = nick_kns_mace_37_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_38 }
+		localization_key = nick_kns_mace_38_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_39 }
+		localization_key = nick_kns_mace_39_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_40 }
+		localization_key = nick_kns_mace_40_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_41 }
+		localization_key = nick_kns_mace_41_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_42 }
+		localization_key = nick_kns_mace_42_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_43 }
+		localization_key = nick_kns_mace_43_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_44 }
+		localization_key = nick_kns_mace_44_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_45 }
+		localization_key = nick_kns_mace_45_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_46 }
+		localization_key = nick_kns_mace_46_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_47 }
+		localization_key = nick_kns_mace_47_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_48 }
+		localization_key = nick_kns_mace_48_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_49 }
+		localization_key = nick_kns_mace_49_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_50 }
+		localization_key = nick_kns_mace_50_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_51 }
+		localization_key = nick_kns_mace_51_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_52 }
+		localization_key = nick_kns_mace_52_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_53 }
+		localization_key = nick_kns_mace_53_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_54 }
+		localization_key = nick_kns_mace_54_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_55 }
+		localization_key = nick_kns_mace_55_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_56 }
+		localization_key = nick_kns_mace_56_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_57 }
+		localization_key = nick_kns_mace_57_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_58 }
+		localization_key = nick_kns_mace_58_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_59 }
+		localization_key = nick_kns_mace_59_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_60 }
+		localization_key = nick_kns_mace_60_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_61 }
+		localization_key = nick_kns_mace_61_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_62 }
+		localization_key = nick_kns_mace_62_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_63 }
+		localization_key = nick_kns_mace_63_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_64 }
+		localization_key = nick_kns_mace_64_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_65 }
+		localization_key = nick_kns_mace_65_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_66 }
+		localization_key = nick_kns_mace_66_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_67 }
+		localization_key = nick_kns_mace_67_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_68 }
+		localization_key = nick_kns_mace_68_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_69 }
+		localization_key = nick_kns_mace_69_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_70 }
+		localization_key = nick_kns_mace_70_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_71 }
+		localization_key = nick_kns_mace_71_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_72 }
+		localization_key = nick_kns_mace_72_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_73 }
+		localization_key = nick_kns_mace_73_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_74 }
+		localization_key = nick_kns_mace_74_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_75 }
+		localization_key = nick_kns_mace_75_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_76 }
+		localization_key = nick_kns_mace_76_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_77 }
+		localization_key = nick_kns_mace_77_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_78 }
+		localization_key = nick_kns_mace_78_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_79 }
+		localization_key = nick_kns_mace_79_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_80 }
+		localization_key = nick_kns_mace_80_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_81 }
+		localization_key = nick_kns_mace_81_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_82 }
+		localization_key = nick_kns_mace_82_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_83 }
+		localization_key = nick_kns_mace_83_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_84 }
+		localization_key = nick_kns_mace_84_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_85 }
+		localization_key = nick_kns_mace_85_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_86 }
+		localization_key = nick_kns_mace_86_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_87 }
+		localization_key = nick_kns_mace_87_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_88 }
+		localization_key = nick_kns_mace_88_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_89 }
+		localization_key = nick_kns_mace_89_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_90 }
+		localization_key = nick_kns_mace_90_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_91 }
+		localization_key = nick_kns_mace_91_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_92 }
+		localization_key = nick_kns_mace_92_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_93 }
+		localization_key = nick_kns_mace_93_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_94 }
+		localization_key = nick_kns_mace_94_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_95 }
+		localization_key = nick_kns_mace_95_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_96 }
+		localization_key = nick_kns_mace_96_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_97 }
+		localization_key = nick_kns_mace_97_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_98 }
+		localization_key = nick_kns_mace_98_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_99 }
+		localization_key = nick_kns_mace_99_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_mace_100 }
+		localization_key = nick_kns_mace_100_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_01 }
+		localization_key = nick_kns_spear_01_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_02 }
+		localization_key = nick_kns_spear_02_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_03 }
+		localization_key = nick_kns_spear_03_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_04 }
+		localization_key = nick_kns_spear_04_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_05 }
+		localization_key = nick_kns_spear_05_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_06 }
+		localization_key = nick_kns_spear_06_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_07 }
+		localization_key = nick_kns_spear_07_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_08 }
+		localization_key = nick_kns_spear_08_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_09 }
+		localization_key = nick_kns_spear_09_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_10 }
+		localization_key = nick_kns_spear_10_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_11 }
+		localization_key = nick_kns_spear_11_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_12 }
+		localization_key = nick_kns_spear_12_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_13 }
+		localization_key = nick_kns_spear_13_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_14 }
+		localization_key = nick_kns_spear_14_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_15 }
+		localization_key = nick_kns_spear_15_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_16 }
+		localization_key = nick_kns_spear_16_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_17 }
+		localization_key = nick_kns_spear_17_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_18 }
+		localization_key = nick_kns_spear_18_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_19 }
+		localization_key = nick_kns_spear_19_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_20 }
+		localization_key = nick_kns_spear_20_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_21 }
+		localization_key = nick_kns_spear_21_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_22 }
+		localization_key = nick_kns_spear_22_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_23 }
+		localization_key = nick_kns_spear_23_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_24 }
+		localization_key = nick_kns_spear_24_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_25 }
+		localization_key = nick_kns_spear_25_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_26 }
+		localization_key = nick_kns_spear_26_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_27 }
+		localization_key = nick_kns_spear_27_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_28 }
+		localization_key = nick_kns_spear_28_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_29 }
+		localization_key = nick_kns_spear_29_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_30 }
+		localization_key = nick_kns_spear_30_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_31 }
+		localization_key = nick_kns_spear_31_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_32 }
+		localization_key = nick_kns_spear_32_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_33 }
+		localization_key = nick_kns_spear_33_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_34 }
+		localization_key = nick_kns_spear_34_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_35 }
+		localization_key = nick_kns_spear_35_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_36 }
+		localization_key = nick_kns_spear_36_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_37 }
+		localization_key = nick_kns_spear_37_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_38 }
+		localization_key = nick_kns_spear_38_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_39 }
+		localization_key = nick_kns_spear_39_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_40 }
+		localization_key = nick_kns_spear_40_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_41 }
+		localization_key = nick_kns_spear_41_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_42 }
+		localization_key = nick_kns_spear_42_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_43 }
+		localization_key = nick_kns_spear_43_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_44 }
+		localization_key = nick_kns_spear_44_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_45 }
+		localization_key = nick_kns_spear_45_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_46 }
+		localization_key = nick_kns_spear_46_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_47 }
+		localization_key = nick_kns_spear_47_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_48 }
+		localization_key = nick_kns_spear_48_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_49 }
+		localization_key = nick_kns_spear_49_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_50 }
+		localization_key = nick_kns_spear_50_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_51 }
+		localization_key = nick_kns_spear_51_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_52 }
+		localization_key = nick_kns_spear_52_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_53 }
+		localization_key = nick_kns_spear_53_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_54 }
+		localization_key = nick_kns_spear_54_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_55 }
+		localization_key = nick_kns_spear_55_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_56 }
+		localization_key = nick_kns_spear_56_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_57 }
+		localization_key = nick_kns_spear_57_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_58 }
+		localization_key = nick_kns_spear_58_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_59 }
+		localization_key = nick_kns_spear_59_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_60 }
+		localization_key = nick_kns_spear_60_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_61 }
+		localization_key = nick_kns_spear_61_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_62 }
+		localization_key = nick_kns_spear_62_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_63 }
+		localization_key = nick_kns_spear_63_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_64 }
+		localization_key = nick_kns_spear_64_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_65 }
+		localization_key = nick_kns_spear_65_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_66 }
+		localization_key = nick_kns_spear_66_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_67 }
+		localization_key = nick_kns_spear_67_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_68 }
+		localization_key = nick_kns_spear_68_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_69 }
+		localization_key = nick_kns_spear_69_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_70 }
+		localization_key = nick_kns_spear_70_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_71 }
+		localization_key = nick_kns_spear_71_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_72 }
+		localization_key = nick_kns_spear_72_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_73 }
+		localization_key = nick_kns_spear_73_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_74 }
+		localization_key = nick_kns_spear_74_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_75 }
+		localization_key = nick_kns_spear_75_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_76 }
+		localization_key = nick_kns_spear_76_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_77 }
+		localization_key = nick_kns_spear_77_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_78 }
+		localization_key = nick_kns_spear_78_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_79 }
+		localization_key = nick_kns_spear_79_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_80 }
+		localization_key = nick_kns_spear_80_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_81 }
+		localization_key = nick_kns_spear_81_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_82 }
+		localization_key = nick_kns_spear_82_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_83 }
+		localization_key = nick_kns_spear_83_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_84 }
+		localization_key = nick_kns_spear_84_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_85 }
+		localization_key = nick_kns_spear_85_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_86 }
+		localization_key = nick_kns_spear_86_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_87 }
+		localization_key = nick_kns_spear_87_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_88 }
+		localization_key = nick_kns_spear_88_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_89 }
+		localization_key = nick_kns_spear_89_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_90 }
+		localization_key = nick_kns_spear_90_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_91 }
+		localization_key = nick_kns_spear_91_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_92 }
+		localization_key = nick_kns_spear_92_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_93 }
+		localization_key = nick_kns_spear_93_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_94 }
+		localization_key = nick_kns_spear_94_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_95 }
+		localization_key = nick_kns_spear_95_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_96 }
+		localization_key = nick_kns_spear_96_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_97 }
+		localization_key = nick_kns_spear_97_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_98 }
+		localization_key = nick_kns_spear_98_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_99 }
+		localization_key = nick_kns_spear_99_desc
+	}
+	text = {
+		trigger = { has_nickname = nick_kns_spear_100 }
+		localization_key = nick_kns_spear_100_desc
+	}
+	text = {
+		localization_key = kns_nickname_story_fallback
+	}
+}

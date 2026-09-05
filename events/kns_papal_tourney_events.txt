@@ -1,0 +1,177 @@
+namespace = kns_papal_tourney
+
+# Pope announces the youth tourney and gathers the field
+kns_papal_tourney.0001 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { kns_living_prodigious_exists_trigger = yes }
+			remove_global_variable = kns_papal_tourney_pending
+			remove_character_flag = kns_papal_tourney_needed
+		}
+		else = {
+			save_scope_as = kns_pope
+			kns_gather_papal_tourney_entrants_effect = yes
+			if = {
+				limit = { has_dlc_feature = tours_and_tournaments }
+				ai_attempt_to_host_activity = activity_kns_papal_youth_tourney
+			}
+			trigger_event = {
+				id = kns_papal_tourney.0010
+				days = 90
+			}
+		}
+	}
+}
+
+# Player letter: accept or decline
+kns_papal_tourney.0002 = {
+	type = letter_event
+	sender = scope:kns_pope
+	opening = kns_papal_tourney.0002.opening
+	desc = kns_papal_tourney.0002.desc
+
+	trigger = {
+		is_ai = no
+		exists = scope:kns_pope
+	}
+
+	option = {
+		name = kns_papal_tourney.0002.a
+		trigger = { kns_can_enter_papal_youth_tourney_trigger = yes }
+		scope:kns_pope = {
+			add_to_variable_list = {
+				name = kns_papal_entrants
+				target = root
+			}
+		}
+		add_character_flag = {
+			flag = kns_entered_papal_tourney
+			days = 120
+		}
+		if = {
+			limit = {
+				exists = involved_activity
+				involved_activity = { has_activity_type = activity_kns_papal_youth_tourney }
+			}
+			accept_activity_invite = involved_activity
+		}
+		else_if = {
+			limit = {
+				scope:kns_pope = { exists = involved_activity }
+			}
+			accept_activity_invite = scope:kns_pope.involved_activity
+		}
+		custom_tooltip = kns_papal_tourney_accept_tt
+	}
+
+	option = {
+		name = kns_papal_tourney.0002.b
+		trigger = { kns_can_enter_papal_youth_tourney_trigger = yes }
+		custom_tooltip = kns_papal_tourney_decline_tt
+	}
+
+	option = {
+		name = kns_papal_tourney.0002.c
+		trigger = {
+			NOT = { kns_can_enter_papal_youth_tourney_trigger = yes }
+		}
+		custom_tooltip = kns_papal_tourney_watch_tt
+	}
+}
+
+# Resolve the tourney
+kns_papal_tourney.0010 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { NOT = { exists = scope:kns_pope } }
+			save_scope_as = kns_pope
+		}
+		kns_resolve_papal_youth_tourney_effect = yes
+		every_ruler = {
+			limit = {
+				is_ai = no
+				exists = scope:kns_papal_winner
+			}
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = kns_papal_tourney_winner_toast
+				custom_tooltip = kns_papal_tourney_winner_toast.tt
+				left_icon = scope:kns_pope
+				right_icon = scope:kns_papal_winner
+			}
+			trigger_event = kns_papal_tourney.0011
+		}
+	}
+}
+
+# Player result
+kns_papal_tourney.0011 = {
+	type = character_event
+	title = kns_papal_tourney.0011.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:kns_papal_winner
+					this = scope:kns_papal_winner
+				}
+				desc = kns_papal_tourney.0011.desc_won
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:kns_papal_winner
+					has_character_flag = kns_entered_papal_tourney
+				}
+				desc = kns_papal_tourney.0011.desc_lost
+			}
+			triggered_desc = {
+				trigger = { exists = scope:kns_papal_winner }
+				desc = kns_papal_tourney.0011.desc_news
+			}
+			desc = kns_papal_tourney.0011.desc_none
+		}
+	}
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = scope:kns_pope
+		animation = personality_honorable
+	}
+	right_portrait = {
+		trigger = { exists = scope:kns_papal_winner }
+		character = scope:kns_papal_winner
+		animation = happiness
+	}
+
+	option = {
+		name = kns_papal_tourney.0011.a
+		trigger = {
+			exists = scope:kns_papal_winner
+			this = scope:kns_papal_winner
+		}
+		custom_tooltip = kns_papal_tourney_winner_name_tt
+	}
+
+	option = {
+		name = kns_papal_tourney.0011.b
+		trigger = {
+			exists = scope:kns_papal_winner
+			NOT = { this = scope:kns_papal_winner }
+		}
+		custom_tooltip = kns_papal_tourney_winner_name_tt
+	}
+
+	option = {
+		name = kns_papal_tourney.0011.c
+		trigger = {
+			NOT = { exists = scope:kns_papal_winner }
+		}
+	}
+}

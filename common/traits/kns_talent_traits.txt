@@ -1,0 +1,79 @@
+kns_talent_unskilled = {
+	category = fame
+	opposites = { kns_talent_low kns_talent_normal kns_talent_elite kns_talent_generation }
+	shown_in_ruler_designer = no
+	icon = kns_talent_unskilled.dds
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_kns_talent_unskilled_desc
+			}
+			desc = trait_kns_talent_unskilled_character_desc
+		}
+	}
+}
+
+kns_talent_low = {
+	category = fame
+	opposites = { kns_talent_unskilled kns_talent_normal kns_talent_elite kns_talent_generation }
+	shown_in_ruler_designer = no
+	icon = kns_talent_low.dds
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_kns_talent_low_desc
+			}
+			desc = trait_kns_talent_low_character_desc
+		}
+	}
+}
+
+kns_talent_normal = {
+	category = fame
+	opposites = { kns_talent_unskilled kns_talent_low kns_talent_elite kns_talent_generation }
+	shown_in_ruler_designer = no
+	icon = kns_talent_normal.dds
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_kns_talent_normal_desc
+			}
+			desc = trait_kns_talent_normal_character_desc
+		}
+	}
+}
+
+kns_talent_elite = {
+	category = fame
+	opposites = { kns_talent_unskilled kns_talent_low kns_talent_normal kns_talent_generation }
+	shown_in_ruler_designer = no
+	icon = kns_talent_elite.dds
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_kns_talent_elite_desc
+			}
+			desc = trait_kns_talent_elite_character_desc
+		}
+	}
+}
+
+kns_talent_generation = {
+	category = fame
+	opposites = { kns_talent_unskilled kns_talent_low kns_talent_normal kns_talent_elite }
+	shown_in_ruler_designer = no
+	icon = kns_talent_generation.dds
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_kns_talent_generation_desc
+			}
+			desc = trait_kns_talent_generation_character_desc
+		}
+	}
+}

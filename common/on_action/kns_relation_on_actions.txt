@@ -1,0 +1,37 @@
+on_death_relation_kns_squire = {
+	effect = {
+		save_scope_as = dead_knight
+		if = {
+			limit = {
+				scope:target = {
+					has_trait_xp = {
+						trait = squire
+						track = knight
+						value >= 51
+					}
+					age >= 14
+				}
+			}
+			scope:target = {
+				trigger_event = kns_maintenance.0012
+			}
+		}
+		else = {
+			scope:target = {
+				trigger_event = kns_maintenance.0010
+			}
+		}
+	}
+}
+
+on_set_relation_kns_squire = {
+	effect = {
+		add_character_modifier = kns_has_squire_modifier
+	}
+}
+
+on_remove_relation_kns_squire = {
+	effect = {
+		remove_character_modifier = kns_has_squire_modifier
+	}
+}

@@ -1,0 +1,21 @@
+KnsProwessCap = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_prowess_cap }
+		localization_key = kns_prowess_cap_value
+	}
+	text = {
+		localization_key = kns_prowess_cap_unknown
+	}
+}
+
+KnsProwessGain = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_prowess_gain }
+		localization_key = kns_prowess_gain_value
+	}
+	text = {
+		localization_key = kns_prowess_gain_none
+	}
+}
