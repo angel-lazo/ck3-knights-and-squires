@@ -2,15 +2,13 @@
  kns_imperial_olympic_not_on_cooldown_tt:0 "The Imperial Olympic Games are not on cooldown"
 
  kns_imperial_olympic.0001.t:0 "The Size of the Bracket"
- kns_imperial_olympic.0001.desc:0 "How large a bracket do you wish to call? More slots mean more champions sent by each Christian ruler invited to your games.\n\nEach ruler receives a share of the bracket (at least one champion, at most five). If fewer than the bracket size answer the summons, the lists still run with byes."
+ kns_imperial_olympic.0001.desc:0 "How large a bracket do you wish to call? Invited Christian rulers send champions by rank: one for a count, two for a duke, three for a king, four for an emperor or hegemon.\n\nEvery Prodigious knight who is fit to fight is entered. The thirty strongest Christian knights aged thirty-five and under are entered as well. Invited rulers then fill what remains. If fewer than the bracket size answer the summons, the lists still run with byes."
 
- kns_imperial_olympic.0001.a:0 "A bracket of thirty-two"
- kns_imperial_olympic.0001.b:0 "A bracket of sixty-four"
- kns_imperial_olympic.0001.c:0 "A bracket of one hundred and twenty-eight"
+ kns_imperial_olympic.0001.a:0 "A bracket of one hundred and twenty-eight"
+ kns_imperial_olympic.0001.b:0 "A bracket of two hundred and fifty-six"
 
- kns_imperial_olympic_field_32_tt:0 "Bracket size: 32 entrants"
- kns_imperial_olympic_field_64_tt:0 "Bracket size: 64 entrants"
  kns_imperial_olympic_field_128_tt:0 "Bracket size: 128 entrants"
+ kns_imperial_olympic_field_256_tt:0 "Bracket size: 256 entrants"
 
  kns_imperial_olympic.0002.t:0 "The Cycle of the Games"
  kns_imperial_olympic.0002.desc:0 "Like the contests of old, these games will return of their own accord. Choose how many years will pass between each raising of the lists. You may change this later."
@@ -44,7 +42,7 @@
  kns_imperial_olympic_cancel_tt:0 "Cancel the Imperial Olympic Games"
 
  kns_imperial_olympic.0004.t:0 "Proclaim the Games"
- kns_imperial_olympic.0004.desc:0 "Summons will go out to Christian rulers within diplomatic range. They may ride to the lists themselves and send champions from their courts. Your selected champions will be entered as well.\n\nWhen the lists close, the victor takes five thousand prestige, forty percent of the gold you funded, dynasty [renown|E] scaled to the purse (up to 250 at five thousand gold), and knighthood if they are not yet a knight (unless they are you). The host county's taxes swell for six months. The games will then return on the cycle you chose."
+ kns_imperial_olympic.0004.desc:0 "Summons will go out to Christian rulers within diplomatic range. They may ride to the lists themselves and send champions from their courts: one for a count, two for a duke, three for a king, four for an emperor or hegemon. Your selected champions will be entered first. Every Prodigious knight fit to fight is entered, then the thirty strongest Christian knights aged thirty-five and under.\n\nWhen the lists close, the victor takes five thousand prestige, forty percent of the gold you funded, dynasty [renown|E] scaled to the purse (up to 250 at five thousand gold), and knighthood if they are not yet a knight (unless they are you). The host county's taxes swell for six months. The games will then return on the cycle you chose."
 
  kns_imperial_olympic.0004.a:0 "Let the games begin"
  kns_imperial_olympic.0004.b:0 "Not yet"
@@ -67,7 +65,7 @@
  kns_imperial_olympic.0020.b:0 "Change the purse"
  kns_imperial_olympic.0020.b.tt:0 "Set the fund from 1000 to 5000 gold. The victor takes 40%; the rest pays for the games."
  kns_imperial_olympic.0020.c:0 "Change the bracket"
- kns_imperial_olympic.0020.c.tt:0 "32, 64, or 128 entrants"
+ kns_imperial_olympic.0020.c.tt:0 "128 or 256 entrants"
  kns_imperial_olympic.0020.d:0 "Change the venue"
  kns_imperial_olympic.0020.d.tt:0 "Capital, or any county in your realm"
  kns_imperial_olympic.0020.e:0 "Raise the lists now"

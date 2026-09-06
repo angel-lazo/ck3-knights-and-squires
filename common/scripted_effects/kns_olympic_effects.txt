@@ -608,6 +608,41 @@ kns_handle_imperial_olympic_organizer_death_effect = {
 	}
 }
 
+kns_try_add_imperial_olympic_entrant_if_room_effect = {
+	if = {
+		limit = {
+			scope:kns_emperor = {
+				has_variable = kns_olympic_bracket_size
+				variable_list_size = {
+					name = kns_olympic_entrants
+					value < var:kns_olympic_bracket_size
+				}
+			}
+		}
+		kns_add_imperial_olympic_entrant_effect = { ENTRANT = $ENTRANT$ }
+	}
+}
+
+kns_auto_invite_imperial_olympic_stars_effect = {
+	every_living_character = {
+		limit = { kns_olympic_auto_invite_prodigious_knight_trigger = yes }
+		save_scope_as = kns_olympic_auto_pick
+		kns_try_add_imperial_olympic_entrant_if_room_effect = { ENTRANT = scope:kns_olympic_auto_pick }
+	}
+	every_living_character = {
+		limit = { kns_olympic_auto_invite_young_christian_knight_trigger = yes }
+		add_to_list = kns_olympic_young_pool
+	}
+	ordered_in_list = {
+		list = kns_olympic_young_pool
+		order_by = prowess_no_portrait
+		max = 30
+		check_range_bounds = no
+		save_scope_as = kns_olympic_auto_pick
+		kns_try_add_imperial_olympic_entrant_if_room_effect = { ENTRANT = scope:kns_olympic_auto_pick }
+	}
+}
+
 kns_add_imperial_olympic_entrant_effect = {
 	$ENTRANT$ = {
 		if = {
@@ -801,10 +836,6 @@ kns_gather_imperial_olympic_entrants_effect = {
 			}
 		}
 	}
-	set_variable = {
-		name = kns_olympic_slots_per_ruler
-		value = kns_olympic_slots_per_ruler_value
-	}
 	# Reserve the player's chosen champions first so they cannot be crowded out.
 	if = {
 		limit = {
@@ -823,6 +854,7 @@ kns_gather_imperial_olympic_entrants_effect = {
 			kns_add_imperial_olympic_entrant_effect = { ENTRANT = scope:kns_olympic_player_pick }
 		}
 	}
+	kns_auto_invite_imperial_olympic_stars_effect = yes
 	every_in_list = {
 		variable = kns_olympic_invited_rulers
 		save_scope_as = kns_olympic_invitee
@@ -830,6 +862,10 @@ kns_gather_imperial_olympic_entrants_effect = {
 			set_variable = {
 				name = kns_olympic_ruler_picks
 				value = 0
+			}
+			set_variable = {
+				name = kns_olympic_slots_per_ruler
+				value = scope:kns_olympic_invitee.kns_olympic_slots_per_ruler_value
 			}
 			if = {
 				limit = {
@@ -941,7 +977,7 @@ kns_seed_imperial_olympic_bracket_effect = {
 		}
 	}
 	while = {
-		count = 128
+		count = 256
 		limit = {
 			variable_list_size = {
 				name = kns_olympic_entrants
@@ -1707,10 +1743,6 @@ kns_preview_imperial_olympic_invite_count_effect = {
 				add = 1
 			}
 		}
-	}
-	set_variable = {
-		name = kns_olympic_slots_per_ruler
-		value = kns_olympic_slots_per_ruler_value
 	}
 }
 

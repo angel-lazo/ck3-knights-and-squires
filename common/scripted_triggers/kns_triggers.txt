@@ -535,8 +535,13 @@ kns_is_catholic_pope_trigger = {
 }
 
 kns_is_emperor_trigger = {
-	is_landed = yes
-	highest_held_title_tier >= tier_empire
+	OR = {
+		AND = {
+			is_landed = yes
+			highest_held_title_tier >= tier_empire
+		}
+		highest_held_title_tier >= tier_hegemony
+	}
 }
 
 kns_can_see_imperial_olympic_decisions_trigger = {
@@ -617,6 +622,16 @@ kns_can_enter_imperial_olympic_ruler_trigger = {
 kns_can_enter_imperial_olympic_champion_trigger = {
 	kns_olympic_fit_to_fight_trigger = yes
 	kns_is_knight_trigger = yes
+}
+
+kns_olympic_auto_invite_prodigious_knight_trigger = {
+	has_trait = kns_talent_generation
+	kns_can_enter_imperial_olympic_champion_trigger = yes
+}
+
+kns_olympic_auto_invite_young_christian_knight_trigger = {
+	kns_can_enter_imperial_olympic_champion_trigger = yes
+	age <= 35
 }
 
 kns_can_pick_as_olympic_champion_trigger = {

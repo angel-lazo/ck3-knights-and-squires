@@ -54,31 +54,20 @@ kns_olympic_player_champion_slots_value = {
 	value = 4
 }
 
-# ceil(bracket_size / invited_ruler_count), clamped 1–5
+# Invited ruler champion quota: count 1, duke 2, king 3, empire/hegemony 4. Barons use the count quota.
 kns_olympic_slots_per_ruler_value = {
-	value = 0
+	value = 1
 	if = {
-		limit = {
-			exists = scope:kns_emperor
-			scope:kns_emperor = {
-				has_variable = kns_olympic_invited_ruler_count
-				var:kns_olympic_invited_ruler_count > 0
-			}
-		}
-		value = 32
-		if = {
-			limit = {
-				scope:kns_emperor = { has_variable = kns_olympic_bracket_size }
-			}
-			value = scope:kns_emperor.var:kns_olympic_bracket_size
-		}
-		divide = scope:kns_emperor.var:kns_olympic_invited_ruler_count
-		ceiling = yes
-		min = 1
-		max = 5
+		limit = { highest_held_title_tier >= tier_duchy }
+		value = 2
 	}
-	else = {
-		value = 1
+	if = {
+		limit = { highest_held_title_tier >= tier_kingdom }
+		value = 3
+	}
+	if = {
+		limit = { highest_held_title_tier >= tier_empire }
+		value = 4
 	}
 }
 

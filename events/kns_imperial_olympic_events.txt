@@ -17,9 +17,9 @@ kns_imperial_olympic.0001 = {
 		name = kns_imperial_olympic.0001.a
 		set_variable = {
 			name = kns_olympic_bracket_size
-			value = 32
+			value = 128
 		}
-		custom_tooltip = kns_imperial_olympic_field_32_tt
+		custom_tooltip = kns_imperial_olympic_field_128_tt
 		kns_olympic_continue_setup_or_manage_effect = { NEXT = kns_imperial_olympic.0002 }
 	}
 
@@ -27,19 +27,9 @@ kns_imperial_olympic.0001 = {
 		name = kns_imperial_olympic.0001.b
 		set_variable = {
 			name = kns_olympic_bracket_size
-			value = 64
+			value = 256
 		}
-		custom_tooltip = kns_imperial_olympic_field_64_tt
-		kns_olympic_continue_setup_or_manage_effect = { NEXT = kns_imperial_olympic.0002 }
-	}
-
-	option = {
-		name = kns_imperial_olympic.0001.c
-		set_variable = {
-			name = kns_olympic_bracket_size
-			value = 128
-		}
-		custom_tooltip = kns_imperial_olympic_field_128_tt
+		custom_tooltip = kns_imperial_olympic_field_256_tt
 		kns_olympic_continue_setup_or_manage_effect = { NEXT = kns_imperial_olympic.0002 }
 	}
 }
