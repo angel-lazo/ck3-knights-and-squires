@@ -534,6 +534,121 @@ kns_is_catholic_pope_trigger = {
 	}
 }
 
+kns_is_emperor_trigger = {
+	is_landed = yes
+	highest_held_title_tier >= tier_empire
+}
+
+kns_can_see_imperial_olympic_decisions_trigger = {
+	is_playable_character = yes
+	is_ai = no
+	kns_is_emperor_trigger = yes
+}
+
+kns_can_host_imperial_olympic_trigger = {
+	kns_can_see_imperial_olympic_decisions_trigger = yes
+	kns_practices_knighthood_trigger = yes
+	is_available_adult = yes
+	is_imprisoned = no
+}
+
+kns_has_olympic_institution_trigger = {
+	has_character_flag = kns_olympic_institution
+}
+
+kns_has_olympic_dormant_tradition_trigger = {
+	has_global_variable = kns_olympic_dormant
+}
+
+kns_has_olympic_settings_to_save_trigger = {
+	OR = {
+		has_character_flag = kns_olympic_institution
+		has_character_flag = kns_imperial_olympic_host
+		has_variable = kns_olympic_interval_years
+		has_variable = kns_olympic_bracket_size
+	}
+}
+
+kns_olympic_should_auto_start_trigger = {
+	kns_can_see_imperial_olympic_decisions_trigger = yes
+	kns_has_olympic_institution_trigger = yes
+	NOT = { has_character_flag = kns_imperial_olympic_host }
+	is_at_war = no
+	is_imprisoned = no
+	is_available_adult = yes
+	has_variable = kns_olympic_next_year
+	current_year >= var:kns_olympic_next_year
+	has_variable = kns_olympic_bracket_size
+	has_variable = kns_olympic_location
+}
+
+kns_can_be_invited_imperial_olympic_ruler_trigger = {
+	is_alive = yes
+	is_adult = yes
+	is_imprisoned = no
+	NOT = { has_trait = incapable }
+	kns_practices_knighthood_trigger = yes
+	in_diplomatic_range = scope:kns_emperor
+	NOT = { this = scope:kns_emperor }
+	is_playable_character = yes
+}
+
+kns_olympic_fit_to_fight_trigger = {
+	is_alive = yes
+	is_adult = yes
+	is_male = yes
+	is_imprisoned = no
+	NOT = { has_trait = incapable }
+	kns_practices_knighthood_trigger = yes
+	kns_has_papal_tourney_physical_deformity_trigger = no
+	has_any_illness = no
+	NOR = {
+		is_landless_adventurer = yes
+		government_has_flag = government_is_landless_adventurer
+		liege ?= { is_landless_adventurer = yes }
+	}
+}
+
+kns_can_enter_imperial_olympic_ruler_trigger = {
+	kns_can_be_invited_imperial_olympic_ruler_trigger = yes
+	kns_olympic_fit_to_fight_trigger = yes
+}
+
+kns_can_enter_imperial_olympic_champion_trigger = {
+	kns_olympic_fit_to_fight_trigger = yes
+	kns_is_knight_trigger = yes
+}
+
+kns_can_pick_as_olympic_champion_trigger = {
+	kns_olympic_fit_to_fight_trigger = yes
+	OR = {
+		this = root
+		AND = {
+			is_courtier_of = root
+			kns_is_knight_trigger = yes
+		}
+	}
+}
+
+kns_can_enter_imperial_olympic_duel_trigger = {
+	kns_olympic_fit_to_fight_trigger = yes
+}
+
+kns_can_enter_imperial_olympic_trigger = {
+	OR = {
+		AND = {
+			exists = scope:kns_emperor
+			this = scope:kns_emperor
+			kns_olympic_fit_to_fight_trigger = yes
+		}
+		AND = {
+			is_ruler = yes
+			kns_can_enter_imperial_olympic_ruler_trigger = yes
+		}
+		kns_can_enter_imperial_olympic_champion_trigger = yes
+	}
+}
+
 kns_can_enter_papal_youth_tourney_trigger = {
 	age >= 16
 	age <= 25

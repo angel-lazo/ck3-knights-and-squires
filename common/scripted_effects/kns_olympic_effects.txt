@@ -1,0 +1,1708 @@
+# Runtime only. Keeps the institution: interval, purse, bracket size, venue, next year.
+kns_clear_imperial_olympic_vars_effect = {
+	remove_character_flag = kns_imperial_olympic_host
+	remove_character_flag = kns_entered_imperial_olympic
+	remove_character_flag = kns_olympic_manage_session
+	remove_character_flag = kns_olympic_picking_venue
+	remove_variable = kns_olympic_invited_ruler_count
+	remove_variable = kns_olympic_slots_per_ruler
+	remove_variable = kns_olympic_venue_walk
+	remove_variable = kns_olympic_round
+	remove_variable = kns_olympic_fighter_a
+	remove_variable = kns_olympic_fighter_b
+	remove_variable = kns_olympic_bout_open
+	remove_variable = kns_olympic_found_seed
+	clear_variable_list = kns_olympic_entrants
+	clear_variable_list = kns_olympic_invited_rulers
+	clear_variable_list = kns_olympic_round_fighters
+	clear_variable_list = kns_olympic_next_round
+	clear_variable_list = kns_olympic_venue_scratch
+}
+
+kns_abandon_imperial_olympic_planning_effect = {
+	kns_clear_imperial_olympic_vars_effect = yes
+	if = {
+		limit = { NOT = { kns_has_olympic_institution_trigger = yes } }
+		remove_variable = kns_olympic_bracket_size
+		remove_variable = kns_olympic_location
+		remove_variable = kns_olympic_interval_years
+		remove_variable = kns_olympic_prize_gold
+		remove_variable = kns_olympic_next_year
+	}
+}
+
+kns_olympic_continue_setup_or_manage_effect = {
+	if = {
+		limit = { has_character_flag = kns_olympic_manage_session }
+		trigger_event = kns_imperial_olympic.0020
+	}
+	else = {
+		trigger_event = $NEXT$
+	}
+}
+
+kns_schedule_next_olympic_effect = {
+	if = {
+		limit = { NOT = { has_variable = kns_olympic_interval_years } }
+		set_variable = {
+			name = kns_olympic_interval_years
+			value = 4
+		}
+	}
+	if = {
+		limit = { NOT = { has_variable = kns_olympic_prize_gold } }
+		set_variable = {
+			name = kns_olympic_prize_gold
+			value = 1000
+		}
+	}
+	set_variable = {
+		name = kns_olympic_next_year
+		value = current_year
+	}
+	change_variable = {
+		name = kns_olympic_next_year
+		add = var:kns_olympic_interval_years
+	}
+}
+
+kns_schedule_olympic_retry_next_year_effect = {
+	if = {
+		limit = { NOT = { has_variable = kns_olympic_interval_years } }
+		set_variable = {
+			name = kns_olympic_interval_years
+			value = 4
+		}
+	}
+	if = {
+		limit = { NOT = { has_variable = kns_olympic_prize_gold } }
+		set_variable = {
+			name = kns_olympic_prize_gold
+			value = 1000
+		}
+	}
+	set_variable = {
+		name = kns_olympic_next_year
+		value = current_year
+	}
+	change_variable = {
+		name = kns_olympic_next_year
+		add = 1
+	}
+}
+
+kns_try_start_scheduled_imperial_olympic_effect = {
+	every_player = {
+		limit = { kns_olympic_should_auto_start_trigger = yes }
+		save_scope_as = kns_emperor
+		kns_start_imperial_olympic_bracket_effect = yes
+	}
+}
+
+kns_clear_olympic_dormant_effect = {
+	remove_global_variable = kns_olympic_dormant
+	remove_global_variable = kns_olympic_dormant_interval
+	remove_global_variable = kns_olympic_dormant_prize
+	remove_global_variable = kns_olympic_dormant_bracket
+	remove_global_variable = kns_olympic_dormant_next_year
+	remove_global_variable = kns_olympic_dormant_location
+	remove_global_variable = kns_olympic_dormant_predecessor
+}
+
+kns_save_olympic_dormant_from_this_effect = {
+	set_global_variable = kns_olympic_dormant
+	set_global_variable = {
+		name = kns_olympic_dormant_predecessor
+		value = this
+	}
+	if = {
+		limit = { has_variable = kns_olympic_interval_years }
+		set_global_variable = {
+			name = kns_olympic_dormant_interval
+			value = var:kns_olympic_interval_years
+		}
+	}
+	if = {
+		limit = { has_variable = kns_olympic_prize_gold }
+		set_global_variable = {
+			name = kns_olympic_dormant_prize
+			value = var:kns_olympic_prize_gold
+		}
+	}
+	if = {
+		limit = { has_variable = kns_olympic_bracket_size }
+		set_global_variable = {
+			name = kns_olympic_dormant_bracket
+			value = var:kns_olympic_bracket_size
+		}
+	}
+	if = {
+		limit = { has_variable = kns_olympic_next_year }
+		set_global_variable = {
+			name = kns_olympic_dormant_next_year
+			value = var:kns_olympic_next_year
+		}
+	}
+	if = {
+		limit = { exists = var:kns_olympic_location }
+		set_global_variable = {
+			name = kns_olympic_dormant_location
+			value = var:kns_olympic_location
+		}
+	}
+}
+
+kns_load_olympic_dormant_onto_this_effect = {
+	if = {
+		limit = { has_global_variable = kns_olympic_dormant_interval }
+		set_variable = {
+			name = kns_olympic_interval_years
+			value = global_var:kns_olympic_dormant_interval
+		}
+	}
+	if = {
+		limit = { has_global_variable = kns_olympic_dormant_prize }
+		set_variable = {
+			name = kns_olympic_prize_gold
+			value = global_var:kns_olympic_dormant_prize
+		}
+	}
+	if = {
+		limit = { has_global_variable = kns_olympic_dormant_bracket }
+		set_variable = {
+			name = kns_olympic_bracket_size
+			value = global_var:kns_olympic_dormant_bracket
+		}
+	}
+	if = {
+		limit = { has_global_variable = kns_olympic_dormant_next_year }
+		set_variable = {
+			name = kns_olympic_next_year
+			value = global_var:kns_olympic_dormant_next_year
+		}
+	}
+	if = {
+		limit = { exists = global_var:kns_olympic_dormant_location }
+		set_variable = {
+			name = kns_olympic_location
+			value = global_var:kns_olympic_dormant_location
+		}
+	}
+}
+
+kns_copy_olympic_list_to_effect = {
+	$TARGET$ = {
+		clear_variable_list = $LIST$
+	}
+	every_in_list = {
+		variable = $LIST$
+		save_scope_as = kns_olympic_copy_item
+		$TARGET$ = {
+			add_to_variable_list = {
+				name = $LIST$
+				target = scope:kns_olympic_copy_item
+			}
+		}
+	}
+}
+
+kns_copy_olympic_runtime_to_effect = {
+	$TARGET$ = {
+		save_scope_as = kns_olympic_copy_target
+	}
+	if = {
+		limit = { has_variable = kns_olympic_bracket_size }
+		scope:kns_olympic_copy_target = {
+			set_variable = {
+				name = kns_olympic_bracket_size
+				value = prev.var:kns_olympic_bracket_size
+			}
+		}
+	}
+	if = {
+		limit = { exists = var:kns_olympic_location }
+		scope:kns_olympic_copy_target = {
+			set_variable = {
+				name = kns_olympic_location
+				value = prev.var:kns_olympic_location
+			}
+		}
+	}
+	if = {
+		limit = { has_variable = kns_olympic_interval_years }
+		scope:kns_olympic_copy_target = {
+			set_variable = {
+				name = kns_olympic_interval_years
+				value = prev.var:kns_olympic_interval_years
+			}
+		}
+	}
+	if = {
+		limit = { has_variable = kns_olympic_prize_gold }
+		scope:kns_olympic_copy_target = {
+			set_variable = {
+				name = kns_olympic_prize_gold
+				value = prev.var:kns_olympic_prize_gold
+			}
+		}
+	}
+	if = {
+		limit = { has_variable = kns_olympic_round }
+		scope:kns_olympic_copy_target = {
+			set_variable = {
+				name = kns_olympic_round
+				value = prev.var:kns_olympic_round
+			}
+		}
+	}
+	if = {
+		limit = { exists = var:kns_olympic_fighter_a }
+		scope:kns_olympic_copy_target = {
+			set_variable = {
+				name = kns_olympic_fighter_a
+				value = prev.var:kns_olympic_fighter_a
+			}
+		}
+	}
+	if = {
+		limit = { exists = var:kns_olympic_fighter_b }
+		scope:kns_olympic_copy_target = {
+			set_variable = {
+				name = kns_olympic_fighter_b
+				value = prev.var:kns_olympic_fighter_b
+			}
+		}
+	}
+	if = {
+		limit = { has_variable = kns_olympic_bout_open }
+		scope:kns_olympic_copy_target = {
+			set_variable = kns_olympic_bout_open
+		}
+	}
+	kns_copy_olympic_list_to_effect = {
+		TARGET = scope:kns_olympic_copy_target
+		LIST = kns_olympic_entrants
+	}
+	kns_copy_olympic_list_to_effect = {
+		TARGET = scope:kns_olympic_copy_target
+		LIST = kns_olympic_invited_rulers
+	}
+	kns_copy_olympic_list_to_effect = {
+		TARGET = scope:kns_olympic_copy_target
+		LIST = kns_olympic_round_fighters
+	}
+	kns_copy_olympic_list_to_effect = {
+		TARGET = scope:kns_olympic_copy_target
+		LIST = kns_olympic_next_round
+	}
+	kns_copy_olympic_list_to_effect = {
+		TARGET = scope:kns_olympic_copy_target
+		LIST = kns_olympic_player_champion_picks
+	}
+	scope:kns_olympic_copy_target = {
+		add_character_flag = kns_imperial_olympic_host
+	}
+}
+
+kns_olympic_sync_push_winner_effect = {
+	$WINNER$ = {
+		if = {
+			limit = { NOT = { has_variable = kns_imperial_duel_wins } }
+			set_variable = {
+				name = kns_imperial_duel_wins
+				value = 0
+			}
+		}
+		change_variable = {
+			name = kns_imperial_duel_wins
+			add = 1
+		}
+	}
+	if = {
+		limit = { exists = scope:kns_olympic_sync_loser }
+		$WINNER$ = {
+			create_character_memory = {
+				type = kns_olympic_defeated_in_lists
+				participants = {
+					opponent = scope:kns_olympic_sync_loser
+				}
+			}
+		}
+	}
+	kns_register_imperial_hof_character_effect = { CHAR = $WINNER$ }
+	add_to_variable_list = {
+		name = kns_olympic_next_round
+		target = $WINNER$
+	}
+	remove_variable = kns_olympic_bout_open
+}
+
+kns_olympic_force_complete_bracket_effect = {
+	save_scope_as = kns_emperor
+	kns_olympic_debug_log_effect = { MSG = force_complete_on_organizer_death }
+	if = {
+		limit = {
+			has_variable = kns_olympic_bout_open
+			exists = var:kns_olympic_fighter_a
+			exists = var:kns_olympic_fighter_b
+		}
+		var:kns_olympic_fighter_a = { save_scope_as = kns_olympic_fighter_a }
+		var:kns_olympic_fighter_b = { save_scope_as = kns_olympic_fighter_b }
+		random_list = {
+			50 = {
+				modifier = {
+					add = scope:kns_olympic_fighter_a.prowess_no_portrait
+				}
+				scope:kns_olympic_fighter_b = { save_scope_as = kns_olympic_sync_loser }
+				kns_olympic_sync_push_winner_effect = { WINNER = scope:kns_olympic_fighter_a }
+			}
+			50 = {
+				modifier = {
+					add = scope:kns_olympic_fighter_b.prowess_no_portrait
+				}
+				scope:kns_olympic_fighter_a = { save_scope_as = kns_olympic_sync_loser }
+				kns_olympic_sync_push_winner_effect = { WINNER = scope:kns_olympic_fighter_b }
+			}
+		}
+	}
+	while = {
+		count = 250
+		limit = {
+			OR = {
+				variable_list_size = {
+					name = kns_olympic_round_fighters
+					value > 0
+				}
+				variable_list_size = {
+					name = kns_olympic_next_round
+					value > 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				variable_list_size = {
+					name = kns_olympic_round_fighters
+					value >= 2
+				}
+			}
+			random_in_list = {
+				variable = kns_olympic_round_fighters
+				limit = { is_alive = yes }
+				save_scope_as = kns_olympic_fighter_a
+			}
+			if = {
+				limit = { exists = scope:kns_olympic_fighter_a }
+				remove_list_variable = {
+					name = kns_olympic_round_fighters
+					target = scope:kns_olympic_fighter_a
+				}
+				random_in_list = {
+					variable = kns_olympic_round_fighters
+					limit = {
+						is_alive = yes
+						NOT = { this = scope:kns_olympic_fighter_a }
+					}
+					save_scope_as = kns_olympic_fighter_b
+				}
+				if = {
+					limit = { exists = scope:kns_olympic_fighter_b }
+					remove_list_variable = {
+						name = kns_olympic_round_fighters
+						target = scope:kns_olympic_fighter_b
+					}
+					random_list = {
+						50 = {
+							modifier = {
+								add = scope:kns_olympic_fighter_a.prowess_no_portrait
+							}
+							scope:kns_olympic_fighter_b = { save_scope_as = kns_olympic_sync_loser }
+							kns_olympic_sync_push_winner_effect = { WINNER = scope:kns_olympic_fighter_a }
+						}
+						50 = {
+							modifier = {
+								add = scope:kns_olympic_fighter_b.prowess_no_portrait
+							}
+							scope:kns_olympic_fighter_a = { save_scope_as = kns_olympic_sync_loser }
+							kns_olympic_sync_push_winner_effect = { WINNER = scope:kns_olympic_fighter_b }
+						}
+					}
+				}
+				else = {
+					kns_olympic_sync_push_winner_effect = { WINNER = scope:kns_olympic_fighter_a }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				variable_list_size = {
+					name = kns_olympic_round_fighters
+					value = 1
+				}
+			}
+			random_in_list = {
+				variable = kns_olympic_round_fighters
+				limit = { is_alive = yes }
+				save_scope_as = kns_olympic_bye_winner
+			}
+			remove_list_variable = {
+				name = kns_olympic_round_fighters
+				target = scope:kns_olympic_bye_winner
+			}
+			if = {
+				limit = { exists = scope:kns_olympic_bye_winner }
+				add_to_variable_list = {
+					name = kns_olympic_next_round
+					target = scope:kns_olympic_bye_winner
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				variable_list_size = {
+					name = kns_olympic_round_fighters
+					value = 0
+				}
+				variable_list_size = {
+					name = kns_olympic_next_round
+					value > 1
+				}
+			}
+			every_in_list = {
+				variable = kns_olympic_next_round
+				limit = { is_alive = yes }
+				save_scope_as = kns_olympic_advancer
+				scope:kns_emperor = {
+					add_to_variable_list = {
+						name = kns_olympic_round_fighters
+						target = scope:kns_olympic_advancer
+					}
+				}
+			}
+			clear_variable_list = kns_olympic_next_round
+			if = {
+				limit = { has_variable = kns_olympic_round }
+				change_variable = {
+					name = kns_olympic_round
+					add = 1
+				}
+			}
+		}
+	}
+	random_in_list = {
+		variable = kns_olympic_next_round
+		limit = { is_alive = yes }
+		save_scope_as = kns_olympic_winner
+	}
+	if = {
+		limit = { NOT = { exists = scope:kns_olympic_winner } }
+		random_in_list = {
+			variable = kns_olympic_round_fighters
+			limit = { is_alive = yes }
+			save_scope_as = kns_olympic_winner
+		}
+	}
+	if = {
+		limit = { exists = scope:kns_olympic_winner }
+		kns_award_imperial_olympic_winner_effect = { WINNER = scope:kns_olympic_winner }
+		if = {
+			limit = {
+				exists = scope:kns_olympic_winner
+				scope:kns_olympic_winner = { is_ai = no }
+			}
+			scope:kns_olympic_winner = {
+				trigger_event = kns_imperial_olympic.0011
+			}
+		}
+	}
+	kns_clear_imperial_olympic_vars_effect = yes
+}
+
+kns_adopt_imperial_olympic_institution_effect = {
+	add_character_flag = kns_olympic_institution
+	if = {
+		limit = { NOT = { has_variable = kns_olympic_interval_years } }
+		set_variable = {
+			name = kns_olympic_interval_years
+			value = 4
+		}
+	}
+	if = {
+		limit = { NOT = { has_variable = kns_olympic_prize_gold } }
+		set_variable = {
+			name = kns_olympic_prize_gold
+			value = 1000
+		}
+	}
+	remove_character_flag = kns_olympic_continue_session
+	kns_apply_olympic_knight_culture_modifier_effect = yes
+	kns_clear_olympic_dormant_effect = yes
+}
+
+kns_olympic_after_prize_setup_effect = {
+	if = {
+		limit = { has_character_flag = kns_olympic_manage_session }
+		trigger_event = kns_imperial_olympic.0020
+	}
+	else_if = {
+		limit = { has_character_flag = kns_olympic_continue_session }
+		kns_adopt_imperial_olympic_institution_effect = yes
+		trigger_event = kns_imperial_olympic.0032
+	}
+	else = {
+		trigger_event = kns_imperial_olympic.0003
+	}
+}
+
+kns_handle_imperial_olympic_organizer_death_effect = {
+	if = {
+		limit = { kns_has_olympic_settings_to_save_trigger = yes }
+		kns_olympic_debug_log_effect = { MSG = organizer_death }
+		kns_save_olympic_dormant_from_this_effect = yes
+		if = {
+			limit = { exists = player_heir }
+			player_heir = {
+				save_scope_as = kns_olympic_successor
+			}
+		}
+		else_if = {
+			limit = { exists = primary_heir }
+			primary_heir = {
+				save_scope_as = kns_olympic_successor
+			}
+		}
+		if = {
+			limit = { has_character_flag = kns_imperial_olympic_host }
+			if = {
+				limit = {
+					is_ai = no
+					exists = scope:kns_olympic_successor
+					scope:kns_olympic_successor = { is_alive = yes }
+				}
+				kns_copy_olympic_runtime_to_effect = { TARGET = scope:kns_olympic_successor }
+				kns_clear_imperial_olympic_vars_effect = yes
+				scope:kns_olympic_successor = {
+					save_scope_as = kns_emperor
+					if = {
+						limit = { has_variable = kns_olympic_bout_open }
+						trigger_event = kns_imperial_olympic.0102
+					}
+					else = {
+						trigger_event = {
+							id = kns_imperial_olympic.0100
+							days = 1
+						}
+					}
+					trigger_event = kns_imperial_olympic.0031
+				}
+			}
+			else = {
+				kns_olympic_force_complete_bracket_effect = yes
+			}
+		}
+	}
+}
+
+kns_add_imperial_olympic_entrant_effect = {
+	$ENTRANT$ = {
+		if = {
+			limit = {
+				scope:kns_emperor = {
+					NOT = {
+						is_target_in_variable_list = {
+							name = kns_olympic_entrants
+							target = $ENTRANT$
+						}
+					}
+				}
+			}
+			if = {
+				limit = { is_ai = no }
+				add_character_flag = {
+					flag = kns_entered_imperial_olympic
+					days = 180
+				}
+			}
+			scope:kns_emperor = {
+				add_to_variable_list = {
+					name = kns_olympic_entrants
+					target = $ENTRANT$
+				}
+			}
+		}
+	}
+}
+
+kns_set_olympic_venue_to_capital_effect = {
+	if = {
+		limit = { exists = capital_province }
+		capital_province = {
+			save_scope_as = kns_olympic_capital_province
+		}
+		set_variable = {
+			name = kns_olympic_location
+			value = scope:kns_olympic_capital_province
+		}
+	}
+}
+
+kns_set_olympic_venue_from_county_effect = {
+	$COUNTY$ = {
+		title_province = {
+			save_scope_as = kns_olympic_venue_province
+		}
+	}
+	set_variable = {
+		name = kns_olympic_location
+		value = scope:kns_olympic_venue_province
+	}
+}
+
+kns_ensure_olympic_venue_effect = {
+	if = {
+		limit = { NOT = { exists = var:kns_olympic_location } }
+		kns_set_olympic_venue_to_capital_effect = yes
+	}
+}
+
+kns_ensure_olympic_prize_floor_effect = {
+	if = {
+		limit = {
+			OR = {
+				NOT = { has_variable = kns_olympic_prize_gold }
+				var:kns_olympic_prize_gold < 1000
+			}
+		}
+		set_variable = {
+			name = kns_olympic_prize_gold
+			value = 1000
+		}
+	}
+}
+
+kns_apply_olympic_host_county_bonus_effect = {
+	if = {
+		limit = { exists = var:kns_olympic_bonus_county }
+		var:kns_olympic_bonus_county = {
+			remove_county_modifier = kns_olympic_host_county_modifier
+		}
+	}
+	kns_ensure_olympic_venue_effect = yes
+	if = {
+		limit = { exists = var:kns_olympic_location }
+		var:kns_olympic_location = {
+			county = {
+				save_scope_as = kns_olympic_host_county
+			}
+		}
+	}
+	if = {
+		limit = { exists = scope:kns_olympic_host_county }
+		scope:kns_olympic_host_county = {
+			set_variable = {
+				name = kns_olympic_county_bonus_scale
+				value = scope:kns_emperor.kns_olympic_prize_gold_scale_value
+			}
+			add_county_modifier = {
+				modifier = kns_olympic_host_county_modifier
+				months = 6
+			}
+		}
+		set_variable = {
+			name = kns_olympic_bonus_county
+			value = scope:kns_olympic_host_county
+		}
+	}
+}
+
+kns_pick_nth_realm_county_for_olympic_effect = {
+	save_scope_as = kns_emperor
+	clear_variable_list = kns_olympic_venue_scratch
+	set_variable = {
+		name = kns_olympic_venue_walk
+		value = 0
+	}
+	while = {
+		count = 20
+		limit = {
+			scope:kns_emperor = {
+				var:kns_olympic_venue_walk < $N$
+			}
+		}
+		random_realm_county = {
+			limit = {
+				holder.top_liege = scope:kns_emperor
+				title_province = {
+					NOT = {
+						scope:kns_emperor = {
+							is_target_in_variable_list = {
+								name = kns_olympic_venue_scratch
+								target = this
+							}
+						}
+					}
+				}
+			}
+			weight = {
+				base = 1
+				modifier = {
+					add = development_level
+				}
+			}
+			title_province = {
+				scope:kns_emperor = {
+					add_to_variable_list = {
+						name = kns_olympic_venue_scratch
+						target = this
+					}
+					change_variable = {
+						name = kns_olympic_venue_walk
+						add = 1
+					}
+					if = {
+						limit = {
+							var:kns_olympic_venue_walk = $N$
+						}
+						set_variable = {
+							name = kns_olympic_location
+							value = this
+						}
+					}
+				}
+			}
+		}
+	}
+	clear_variable_list = kns_olympic_venue_scratch
+}
+
+kns_gather_imperial_olympic_entrants_effect = {
+	save_scope_as = kns_emperor
+	clear_variable_list = kns_olympic_entrants
+	clear_variable_list = kns_olympic_invited_rulers
+	set_variable = {
+		name = kns_olympic_invited_ruler_count
+		value = 0
+	}
+	every_ruler = {
+		limit = { kns_can_be_invited_imperial_olympic_ruler_trigger = yes }
+		scope:kns_emperor = {
+			change_variable = {
+				name = kns_olympic_invited_ruler_count
+				add = 1
+			}
+			add_to_variable_list = {
+				name = kns_olympic_invited_rulers
+				target = prev
+			}
+		}
+	}
+	set_variable = {
+		name = kns_olympic_slots_per_ruler
+		value = kns_olympic_slots_per_ruler_value
+	}
+	# Reserve the player's chosen champions first so they cannot be crowded out.
+	if = {
+		limit = {
+			variable_list_size = {
+				name = kns_olympic_player_champion_picks
+				value > 0
+			}
+		}
+		every_in_list = {
+			variable = kns_olympic_player_champion_picks
+			limit = {
+				is_alive = yes
+				kns_can_enter_imperial_olympic_duel_trigger = yes
+			}
+			save_scope_as = kns_olympic_player_pick
+			kns_add_imperial_olympic_entrant_effect = { ENTRANT = scope:kns_olympic_player_pick }
+		}
+	}
+	every_in_list = {
+		variable = kns_olympic_invited_rulers
+		save_scope_as = kns_olympic_invitee
+		scope:kns_emperor = {
+			set_variable = {
+				name = kns_olympic_ruler_picks
+				value = 0
+			}
+			if = {
+				limit = {
+					scope:kns_olympic_invitee = { kns_can_enter_imperial_olympic_champion_trigger = yes }
+					variable_list_size = {
+						name = kns_olympic_entrants
+						value < var:kns_olympic_bracket_size
+					}
+					var:kns_olympic_ruler_picks < var:kns_olympic_slots_per_ruler
+				}
+				kns_add_imperial_olympic_entrant_effect = { ENTRANT = scope:kns_olympic_invitee }
+				change_variable = {
+					name = kns_olympic_ruler_picks
+					add = 1
+				}
+			}
+			while = {
+				count = 5
+				limit = {
+					var:kns_olympic_ruler_picks < var:kns_olympic_slots_per_ruler
+					variable_list_size = {
+						name = kns_olympic_entrants
+						value < var:kns_olympic_bracket_size
+					}
+					scope:kns_olympic_invitee = {
+						any_courtier = {
+							kns_can_enter_imperial_olympic_champion_trigger = yes
+							NOT = {
+								scope:kns_emperor = {
+									is_target_in_variable_list = {
+										name = kns_olympic_entrants
+										target = prev
+									}
+								}
+							}
+						}
+					}
+				}
+				change_variable = {
+					name = kns_olympic_ruler_picks
+					add = 1
+				}
+				scope:kns_olympic_invitee = {
+					random_courtier = {
+						limit = {
+							kns_can_enter_imperial_olympic_champion_trigger = yes
+							NOT = {
+								scope:kns_emperor = {
+									is_target_in_variable_list = {
+										name = kns_olympic_entrants
+										target = prev
+									}
+								}
+							}
+						}
+						weight = {
+							base = 1
+							modifier = {
+								add = prowess_no_portrait
+							}
+						}
+						save_scope_as = kns_olympic_champion_pick
+					}
+				}
+				if = {
+					limit = { exists = scope:kns_olympic_champion_pick }
+					kns_add_imperial_olympic_entrant_effect = { ENTRANT = scope:kns_olympic_champion_pick }
+				}
+			}
+			remove_variable = kns_olympic_ruler_picks
+		}
+	}
+}
+
+kns_seed_imperial_olympic_bracket_effect = {
+	save_scope_as = kns_emperor
+	clear_variable_list = kns_olympic_round_fighters
+	clear_variable_list = kns_olympic_next_round
+	set_variable = {
+		name = kns_olympic_round
+		value = 1
+	}
+	every_in_list = {
+		variable = kns_olympic_player_champion_picks
+		limit = {
+			is_alive = yes
+			kns_can_enter_imperial_olympic_duel_trigger = yes
+			scope:kns_emperor = {
+				is_target_in_variable_list = {
+					name = kns_olympic_entrants
+					target = prev
+				}
+				variable_list_size = {
+					name = kns_olympic_round_fighters
+					value < var:kns_olympic_bracket_size
+				}
+			}
+		}
+		save_scope_as = kns_olympic_seed_pick
+		scope:kns_emperor = {
+			remove_list_variable = {
+				name = kns_olympic_entrants
+				target = scope:kns_olympic_seed_pick
+			}
+			add_to_variable_list = {
+				name = kns_olympic_round_fighters
+				target = scope:kns_olympic_seed_pick
+			}
+		}
+	}
+	while = {
+		count = 128
+		limit = {
+			variable_list_size = {
+				name = kns_olympic_entrants
+				value > 0
+			}
+			variable_list_size = {
+				name = kns_olympic_round_fighters
+				value < var:kns_olympic_bracket_size
+			}
+		}
+		set_variable = {
+			name = kns_olympic_found_seed
+			value = 0
+		}
+		random_in_list = {
+			variable = kns_olympic_entrants
+			limit = {
+				is_alive = yes
+				kns_can_enter_imperial_olympic_duel_trigger = yes
+			}
+			weight = {
+				base = 1
+				modifier = {
+					add = prowess_no_portrait
+				}
+			}
+			save_scope_as = kns_olympic_seed_pick
+			scope:kns_emperor = {
+				set_variable = {
+					name = kns_olympic_found_seed
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				var:kns_olympic_found_seed = 1
+				exists = scope:kns_olympic_seed_pick
+			}
+			remove_list_variable = {
+				name = kns_olympic_entrants
+				target = scope:kns_olympic_seed_pick
+			}
+			add_to_variable_list = {
+				name = kns_olympic_round_fighters
+				target = scope:kns_olympic_seed_pick
+			}
+		}
+		else = {
+			clear_variable_list = kns_olympic_entrants
+		}
+	}
+}
+
+kns_register_imperial_hof_character_effect = {
+	$CHAR$ = {
+		save_scope_as = kns_hof_char
+	}
+	every_player = {
+		limit = {
+			NOT = {
+				is_target_in_variable_list = {
+					name = kns_hof_index
+					target = scope:kns_hof_char
+				}
+			}
+		}
+		add_to_variable_list = {
+			name = kns_hof_index
+			target = scope:kns_hof_char
+		}
+	}
+}
+
+kns_olympic_save_host_effect = {
+	if = {
+		limit = { has_character_flag = kns_imperial_olympic_host }
+		save_scope_as = kns_emperor
+	}
+	else = {
+		every_player = {
+			limit = { has_character_flag = kns_imperial_olympic_host }
+			save_scope_as = kns_emperor
+		}
+	}
+}
+
+kns_olympic_debug_log_effect = {
+	debug_log = "KNS Olympic | $MSG$"
+	debug_log_scopes = yes
+}
+
+kns_record_imperial_olympic_bout_win_effect = {
+	$WINNER$ = {
+		if = {
+			limit = { NOT = { has_variable = kns_imperial_duel_wins } }
+			set_variable = {
+				name = kns_imperial_duel_wins
+				value = 0
+			}
+		}
+		change_variable = {
+			name = kns_imperial_duel_wins
+			add = 1
+		}
+		create_character_memory = {
+			type = kns_olympic_defeated_in_lists
+			participants = {
+				opponent = $LOSER$
+			}
+		}
+	}
+	kns_register_imperial_hof_character_effect = { CHAR = $WINNER$ }
+	kns_olympic_finish_bout_and_continue_effect = { WINNER = $WINNER$ }
+}
+
+kns_record_imperial_olympic_bout_win_from_pair_effect = {
+	if = {
+		limit = { $WINNER$ = scope:kns_olympic_fighter_a }
+		kns_record_imperial_olympic_bout_win_effect = {
+			WINNER = $WINNER$
+			LOSER = scope:kns_olympic_fighter_b
+		}
+	}
+	else = {
+		kns_record_imperial_olympic_bout_win_effect = {
+			WINNER = $WINNER$
+			LOSER = scope:kns_olympic_fighter_a
+		}
+	}
+}
+
+kns_record_imperial_olympic_bye_advance_effect = {
+	kns_olympic_finish_bout_and_continue_effect = { WINNER = $WINNER$ }
+}
+
+kns_olympic_finish_bout_and_continue_effect = {
+	kns_olympic_save_host_effect = yes
+	scope:kns_emperor = {
+		kns_olympic_debug_log_effect = { MSG = finish_bout_continue }
+		remove_variable = kns_olympic_bout_open
+		add_to_variable_list = {
+			name = kns_olympic_next_round
+			target = $WINNER$
+		}
+		trigger_event = {
+			id = kns_imperial_olympic.0100
+			days = 1
+		}
+	}
+}
+
+kns_restore_imperial_olympic_bout_scopes_effect = {
+	kns_olympic_save_host_effect = yes
+	scope:kns_emperor = {
+		if = {
+			limit = { exists = var:kns_olympic_fighter_a }
+			var:kns_olympic_fighter_a = {
+				save_scope_as = kns_olympic_fighter_a
+			}
+		}
+		if = {
+			limit = { exists = var:kns_olympic_fighter_b }
+			var:kns_olympic_fighter_b = {
+				save_scope_as = kns_olympic_fighter_b
+			}
+		}
+	}
+}
+
+kns_imperial_olympic_resolve_ai_bout_effect = {
+	kns_olympic_debug_log_effect = { MSG = ai_bout_resolve }
+	random_list = {
+		50 = {
+			modifier = {
+				add = scope:kns_olympic_fighter_a.prowess_no_portrait
+			}
+			kns_record_imperial_olympic_bout_win_effect = {
+				WINNER = scope:kns_olympic_fighter_a
+				LOSER = scope:kns_olympic_fighter_b
+			}
+		}
+		50 = {
+			modifier = {
+				add = scope:kns_olympic_fighter_b.prowess_no_portrait
+			}
+			kns_record_imperial_olympic_bout_win_effect = {
+				WINNER = scope:kns_olympic_fighter_b
+				LOSER = scope:kns_olympic_fighter_a
+			}
+		}
+	}
+}
+
+kns_imperial_olympic_pick_bout_pair_effect = {
+	save_scope_as = kns_emperor
+	random_in_list = {
+		variable = kns_olympic_round_fighters
+		limit = { is_alive = yes }
+		save_scope_as = kns_olympic_fighter_a
+	}
+	if = {
+		limit = { NOT = { exists = scope:kns_olympic_fighter_a } }
+		kns_olympic_debug_log_effect = { MSG = pick_bout_no_fighter_a }
+		kns_imperial_olympic_end_round_effect = yes
+	}
+	else = {
+		remove_list_variable = {
+			name = kns_olympic_round_fighters
+			target = scope:kns_olympic_fighter_a
+		}
+		random_in_list = {
+			variable = kns_olympic_round_fighters
+			limit = {
+				is_alive = yes
+				NOT = { this = scope:kns_olympic_fighter_a }
+			}
+			save_scope_as = kns_olympic_fighter_b
+		}
+		if = {
+			limit = { NOT = { exists = scope:kns_olympic_fighter_b } }
+			kns_olympic_debug_log_effect = { MSG = pick_bout_bye }
+			kns_record_imperial_olympic_bye_advance_effect = {
+				WINNER = scope:kns_olympic_fighter_a
+			}
+		}
+		else = {
+			remove_list_variable = {
+				name = kns_olympic_round_fighters
+				target = scope:kns_olympic_fighter_b
+			}
+			set_variable = {
+				name = kns_olympic_fighter_a
+				value = scope:kns_olympic_fighter_a
+			}
+			set_variable = {
+				name = kns_olympic_fighter_b
+				value = scope:kns_olympic_fighter_b
+			}
+			if = {
+				limit = {
+					OR = {
+						scope:kns_olympic_fighter_a = { is_ai = no }
+						scope:kns_olympic_fighter_b = { is_ai = no }
+					}
+				}
+				set_variable = kns_olympic_bout_open
+				kns_olympic_debug_log_effect = { MSG = pick_bout_player }
+				trigger_event = kns_imperial_olympic.0102
+			}
+			else = {
+				kns_olympic_debug_log_effect = { MSG = pick_bout_ai }
+				kns_imperial_olympic_resolve_ai_bout_effect = yes
+			}
+		}
+	}
+}
+
+kns_imperial_olympic_advance_round_driver_effect = {
+	kns_olympic_save_host_effect = yes
+	scope:kns_emperor = {
+		if = {
+			limit = { has_variable = kns_olympic_bout_open }
+			kns_olympic_debug_log_effect = { MSG = driver_wait_player_bout }
+			trigger_event = {
+				id = kns_imperial_olympic.0100
+				days = 1
+			}
+		}
+		else_if = {
+			limit = {
+				variable_list_size = {
+					name = kns_olympic_round_fighters
+					value = 0
+				}
+			}
+			kns_olympic_debug_log_effect = { MSG = driver_round_fighters_empty }
+			kns_imperial_olympic_end_round_effect = yes
+		}
+		else_if = {
+			limit = {
+				variable_list_size = {
+					name = kns_olympic_round_fighters
+					value = 1
+				}
+			}
+			random_in_list = {
+				variable = kns_olympic_round_fighters
+				limit = { is_alive = yes }
+				save_scope_as = kns_olympic_bye_winner
+			}
+			remove_list_variable = {
+				name = kns_olympic_round_fighters
+				target = scope:kns_olympic_bye_winner
+			}
+			if = {
+				limit = { exists = scope:kns_olympic_bye_winner }
+				kns_olympic_debug_log_effect = { MSG = driver_odd_bye }
+				kns_record_imperial_olympic_bye_advance_effect = {
+					WINNER = scope:kns_olympic_bye_winner
+				}
+			}
+			else = {
+				kns_imperial_olympic_end_round_effect = yes
+			}
+		}
+		else = {
+			kns_imperial_olympic_pick_bout_pair_effect = yes
+		}
+	}
+}
+
+kns_imperial_olympic_end_round_effect = {
+	kns_olympic_save_host_effect = yes
+	scope:kns_emperor = {
+		if = {
+			limit = {
+				variable_list_size = {
+					name = kns_olympic_next_round
+					value = 1
+				}
+			}
+			random_in_list = {
+				variable = kns_olympic_next_round
+				limit = { is_alive = yes }
+				save_scope_as = kns_olympic_winner
+			}
+			if = {
+				limit = { exists = scope:kns_olympic_winner }
+				kns_olympic_debug_log_effect = { MSG = end_round_crown }
+				kns_crown_imperial_olympic_champion_effect = { WINNER = scope:kns_olympic_winner }
+			}
+			else = {
+				kns_olympic_debug_log_effect = { MSG = end_round_crown_failed }
+				trigger_event = kns_imperial_olympic.0005
+				kns_clear_imperial_olympic_vars_effect = yes
+			}
+		}
+		else_if = {
+			limit = {
+				variable_list_size = {
+					name = kns_olympic_next_round
+					value = 0
+				}
+			}
+			kns_olympic_debug_log_effect = { MSG = end_round_empty_next }
+			trigger_event = kns_imperial_olympic.0005
+			kns_clear_imperial_olympic_vars_effect = yes
+		}
+		else = {
+			kns_olympic_debug_log_effect = { MSG = end_round_advance }
+			every_in_list = {
+				variable = kns_olympic_next_round
+				limit = { is_alive = yes }
+				save_scope_as = kns_olympic_advancer
+				scope:kns_emperor = {
+					add_to_variable_list = {
+						name = kns_olympic_round_fighters
+						target = scope:kns_olympic_advancer
+					}
+				}
+			}
+			clear_variable_list = kns_olympic_next_round
+			change_variable = {
+				name = kns_olympic_round
+				add = 1
+			}
+			if = {
+				limit = {
+					variable_list_size = {
+						name = kns_olympic_round_fighters
+						value = 0
+					}
+				}
+				trigger_event = kns_imperial_olympic.0005
+				kns_clear_imperial_olympic_vars_effect = yes
+			}
+			else = {
+				trigger_event = {
+					id = kns_imperial_olympic.0100
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+kns_record_olympic_tournament_year_effect = {
+	if = {
+		limit = { NOT = { has_variable = kns_olympic_win_year_1 } }
+		set_variable = {
+			name = kns_olympic_win_year_1
+			value = current_year
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_variable = kns_olympic_win_year_2 } }
+		set_variable = {
+			name = kns_olympic_win_year_2
+			value = current_year
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_variable = kns_olympic_win_year_3 } }
+		set_variable = {
+			name = kns_olympic_win_year_3
+			value = current_year
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_variable = kns_olympic_win_year_4 } }
+		set_variable = {
+			name = kns_olympic_win_year_4
+			value = current_year
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_variable = kns_olympic_win_year_5 } }
+		set_variable = {
+			name = kns_olympic_win_year_5
+			value = current_year
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_variable = kns_olympic_win_year_6 } }
+		set_variable = {
+			name = kns_olympic_win_year_6
+			value = current_year
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_variable = kns_olympic_win_year_7 } }
+		set_variable = {
+			name = kns_olympic_win_year_7
+			value = current_year
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_variable = kns_olympic_win_year_8 } }
+		set_variable = {
+			name = kns_olympic_win_year_8
+			value = current_year
+		}
+	}
+}
+
+kns_apply_olympic_knight_culture_modifier_effect = {
+	remove_character_modifier = kns_olympic_knight_culture_modifier
+	if = {
+		limit = {
+			has_variable = kns_olympic_prize_gold
+			var:kns_olympic_prize_gold > 0
+		}
+		add_character_modifier = kns_olympic_knight_culture_modifier
+	}
+}
+
+kns_award_imperial_olympic_winner_effect = {
+	$WINNER$ = {
+		save_scope_as = kns_olympic_winner
+		add_prestige = 5000
+		create_character_memory = {
+			type = kns_olympic_won_the_games
+		}
+		if = {
+			limit = { NOT = { has_variable = kns_imperial_titles_won } }
+			set_variable = {
+				name = kns_imperial_titles_won
+				value = 0
+			}
+		}
+		change_variable = {
+			name = kns_imperial_titles_won
+			add = 1
+		}
+		kns_record_olympic_tournament_year_effect = yes
+	}
+	if = {
+		limit = {
+			scope:kns_emperor = {
+				has_variable = kns_olympic_prize_gold
+				var:kns_olympic_prize_gold >= 1000
+			}
+		}
+		scope:kns_emperor = {
+			add_gold = {
+				value = var:kns_olympic_prize_gold
+				multiply = -1
+			}
+		}
+		$WINNER$ = {
+			add_gold = scope:kns_emperor.kns_olympic_winner_gold_value
+		}
+	}
+	if = {
+		limit = {
+			NOT = { $WINNER$ = scope:kns_emperor }
+			$WINNER$ = { kns_is_knight_trigger = no }
+		}
+		kns_become_a_knight_effect = {
+			KNIGHT_TO_BE = $WINNER$
+			KNIGHT_MAKER = scope:kns_emperor
+		}
+	}
+	scope:kns_emperor = {
+		kns_apply_olympic_knight_culture_modifier_effect = yes
+		kns_apply_olympic_host_county_bonus_effect = yes
+	}
+	kns_register_imperial_hof_character_effect = { CHAR = $WINNER$ }
+	$WINNER$ = {
+		add_opinion = {
+			target = scope:kns_emperor
+			modifier = kns_olympic_champion_opinion
+		}
+	}
+}
+
+kns_crown_imperial_olympic_champion_effect = {
+	$WINNER$ = {
+		save_scope_as = kns_olympic_winner
+	}
+	kns_award_imperial_olympic_winner_effect = { WINNER = scope:kns_olympic_winner }
+	scope:kns_emperor = {
+		if = {
+			limit = {
+				is_alive = yes
+				is_ai = no
+			}
+			trigger_event = kns_imperial_olympic.0010
+		}
+		else = {
+			kns_clear_imperial_olympic_vars_effect = yes
+		}
+	}
+}
+
+kns_found_imperial_olympic_institution_effect = {
+	if = {
+		limit = { NOT = { kns_has_olympic_institution_trigger = yes } }
+		add_character_flag = kns_olympic_institution
+		create_character_memory = {
+			type = kns_olympic_founded_the_games
+		}
+	}
+	if = {
+		limit = { NOT = { has_variable = kns_olympic_interval_years } }
+		set_variable = {
+			name = kns_olympic_interval_years
+			value = 4
+		}
+	}
+	if = {
+		limit = { NOT = { has_variable = kns_olympic_prize_gold } }
+		set_variable = {
+			name = kns_olympic_prize_gold
+			value = 1000
+		}
+	}
+}
+
+kns_start_imperial_olympic_bracket_effect = {
+	save_scope_as = kns_emperor
+	kns_ensure_olympic_venue_effect = yes
+	kns_ensure_olympic_prize_floor_effect = yes
+	add_character_flag = kns_imperial_olympic_host
+	kns_gather_imperial_olympic_entrants_effect = yes
+	kns_olympic_debug_log_effect = { MSG = start_after_gather }
+	if = {
+		limit = {
+			variable_list_size = {
+				name = kns_olympic_entrants
+				value >= 2
+			}
+			has_variable = kns_olympic_location
+		}
+		kns_seed_imperial_olympic_bracket_effect = yes
+		kns_olympic_debug_log_effect = { MSG = start_after_seed }
+		if = {
+			limit = {
+				variable_list_size = {
+					name = kns_olympic_round_fighters
+					value >= 2
+				}
+			}
+			create_character_memory = {
+				type = kns_olympic_held_the_games
+			}
+			if = {
+				limit = {
+					is_ai = no
+					has_variable = kns_olympic_next_year
+				}
+				trigger_event = kns_imperial_olympic.0007
+			}
+			kns_schedule_next_olympic_effect = yes
+			trigger_event = {
+				id = kns_imperial_olympic.0100
+				days = 7
+			}
+		}
+		else = {
+			kns_olympic_debug_log_effect = { MSG = start_seed_failed }
+			kns_schedule_olympic_retry_next_year_effect = yes
+			kns_clear_imperial_olympic_vars_effect = yes
+			trigger_event = kns_imperial_olympic.0005
+		}
+	}
+	else = {
+		kns_olympic_debug_log_effect = { MSG = start_gather_failed }
+		kns_schedule_olympic_retry_next_year_effect = yes
+		kns_clear_imperial_olympic_vars_effect = yes
+		trigger_event = kns_imperial_olympic.0005
+	}
+}
+
+kns_rebuild_hof_list_effect = {
+	save_scope_as = kns_hof_viewer
+	clear_variable_list = kns_hof_duelists
+	clear_variable_list = kns_hof_champions
+	every_in_list = {
+		variable = kns_hof_index
+		limit = {
+			OR = {
+				AND = {
+					has_variable = kns_imperial_duel_wins
+					var:kns_imperial_duel_wins > 0
+				}
+				AND = {
+					has_variable = kns_imperial_titles_won
+					var:kns_imperial_titles_won > 0
+				}
+			}
+		}
+		add_to_list = kns_hof_unsorted
+	}
+	ordered_in_list = {
+		list = kns_hof_unsorted
+		limit = {
+			has_variable = kns_imperial_duel_wins
+			var:kns_imperial_duel_wins > 0
+		}
+		order_by = var:kns_imperial_duel_wins
+		max = 20
+		check_range_bounds = no
+		save_temporary_scope_as = kns_hof_entry
+		scope:kns_hof_viewer = {
+			add_to_variable_list = {
+				name = kns_hof_duelists
+				target = scope:kns_hof_entry
+			}
+		}
+	}
+	ordered_in_list = {
+		list = kns_hof_unsorted
+		limit = {
+			has_variable = kns_imperial_titles_won
+			var:kns_imperial_titles_won > 0
+		}
+		order_by = var:kns_imperial_titles_won
+		max = 100
+		check_range_bounds = no
+		save_temporary_scope_as = kns_hof_entry
+		scope:kns_hof_viewer = {
+			add_to_variable_list = {
+				name = kns_hof_champions
+				target = scope:kns_hof_entry
+			}
+		}
+	}
+}
+
+kns_open_hof_window_effect = {
+	kns_rebuild_hof_list_effect = yes
+	set_variable = kns_hof_window_open
+}
+
+kns_close_hof_window_effect = {
+	remove_variable = kns_hof_window_open
+	clear_variable_list = kns_hof_duelists
+	clear_variable_list = kns_hof_champions
+}
+
+kns_preview_imperial_olympic_invite_count_effect = {
+	save_scope_as = kns_emperor
+	set_variable = {
+		name = kns_olympic_invited_ruler_count
+		value = 0
+	}
+	every_ruler = {
+		limit = { kns_can_be_invited_imperial_olympic_ruler_trigger = yes }
+		scope:kns_emperor = {
+			change_variable = {
+				name = kns_olympic_invited_ruler_count
+				add = 1
+			}
+		}
+	}
+	set_variable = {
+		name = kns_olympic_slots_per_ruler
+		value = kns_olympic_slots_per_ruler_value
+	}
+}
+
+kns_sync_olympic_champion_picker_slots_effect = {
+	set_variable = {
+		name = kns_olympic_picker_slots
+		value = kns_olympic_player_champion_slots_value
+	}
+}
+
+kns_sync_olympic_champion_picker_count_effect = {
+	set_variable = {
+		name = kns_olympic_picker_count
+		value = 0
+	}
+	every_in_list = {
+		variable = kns_olympic_player_champion_picks
+		root = {
+			change_variable = {
+				name = kns_olympic_picker_count
+				add = 1
+			}
+		}
+	}
+}
+
+kns_rebuild_olympic_champion_picker_list_effect = {
+	save_scope_as = kns_emperor
+	clear_variable_list = kns_olympic_eligible_champions
+	if = {
+		limit = { kns_olympic_fit_to_fight_trigger = yes }
+		add_to_variable_list = {
+			name = kns_olympic_eligible_champions
+			target = scope:kns_emperor
+		}
+	}
+	every_courtier = {
+		limit = {
+			kns_can_pick_as_olympic_champion_trigger = yes
+		}
+		add_to_list = kns_olympic_picker_unsorted
+	}
+	ordered_in_list = {
+		list = kns_olympic_picker_unsorted
+		order_by = prowess_no_portrait
+		max = 100
+		check_range_bounds = no
+		save_temporary_scope_as = kns_olympic_picker_candidate
+		scope:kns_emperor = {
+			add_to_variable_list = {
+				name = kns_olympic_eligible_champions
+				target = scope:kns_olympic_picker_candidate
+			}
+		}
+	}
+}
+
+kns_open_olympic_champion_picker_effect = {
+	kns_preview_imperial_olympic_invite_count_effect = yes
+	kns_sync_olympic_champion_picker_slots_effect = yes
+	kns_rebuild_olympic_champion_picker_list_effect = yes
+	kns_sync_olympic_champion_picker_count_effect = yes
+	set_variable = kns_olympic_champion_picker_open
+}
+
+kns_close_olympic_champion_picker_effect = {
+	remove_variable = kns_olympic_champion_picker_open
+	clear_variable_list = kns_olympic_eligible_champions
+}

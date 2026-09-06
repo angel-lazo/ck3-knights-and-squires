@@ -193,17 +193,25 @@ Unlanded knights are styled **Sir** (men) or **Dame** (women) in titled and unla
 - **Offer Knighthood / Ask Liege:** character interactions for knighthood. Ask Liege still has a cooldown; Offer Knighthood does not.
 - **Buy Knighthood:** a paid decision for some characters to knight themselves.
 - **Papal youth tourney:** if no living Prodigious knight exists, a papal tourney can create one and raise their prowess toward 30.
+- **Imperial Olympic Games:** player emperors may **found** a Christian single-elimination duel bracket as a lasting institution. At founding you choose bracket size (**32** / **64** / **128**), cycle (**every 2, 3, or 4 years**), fund (**1000–5000 gold**), and venue (**capital**, or any **realm county** via a title picker; capital if none is chosen). After that the games **auto-start** when due; **Manage Imperial Olympic Games** changes settings or raises the lists early. If the organizer dies mid-bracket, a **player heir** finishes that tournament; afterwards only a **player emperor** may **Continue the Imperial Olympic Games** (free — re-pick cycle and purse). AI emperors do not keep the custom. Use **Select Imperial Olympic Champions** to pick up to **four** court knights (and optionally yourself). The victor takes **5000 prestige** and **40% of the fund**; the rest pays for the event. The host county gets a tax bonus for **6 months** (max **+50%** at 5000 gold). Knight effectiveness scales with the full fund (**5000 gold = +100%**). Bout winners, the tournament champion, and the hosting emperor keep memories. **View Hall of Legends** opens a ranked GUI. No DLC required.
 
 ## Key files
 
 | File | Role |
 |---|---|
 | `common/scripted_effects/kns_prowess_effects.txt` | Cap roll, talent trait, funding, yearly gain |
-| `common/script_values/kns_values.txt` | Compared prowess, training room, stipend cost |
-| `common/scripted_triggers/kns_triggers.txt` | Peak, Old Age block, can-train, funding reach, Sir style |
+| `common/scripted_effects/kns_olympic_effects.txt` | Imperial Olympic gather, bracket, duel resolution, Hall of Legends lists |
+| `common/scripted_guis/kns_hof_gui.txt` | Hall of Legends window actions |
+| `gui/window_kns_imperial_hof.gui` | Hall of Legends UI |
+| `common/script_values/kns_values.txt` | Compared prowess, training room, stipend cost, Olympic quota |
+| `common/scripted_triggers/kns_triggers.txt` | Peak, Old Age block, can-train, funding reach, Sir style, Olympic eligibility |
 | `common/customizable_localization/kns_honorific_custom_loc.txt` | Sir / Dame name prefix |
 | `localization/english/kns_character_names_l_english.yml` | Character name formats with honorifics |
 | `common/scripted_guis/kns_funding_gui.txt` | Manage Knights window actions |
 | `gui/window_kns_fund_knights.gui` | Funding / Potential UI |
-| `common/decisions/kns_decisions.txt` | Manage Knight Decision |
+| `common/scripted_guis/kns_olympic_champion_picker_gui.txt` | Select Olympic champions window |
+| `gui/window_kns_olympic_champion_picker.gui` | Champion picker UI |
+| `common/decisions/kns_decisions.txt` | Manage Knight Decision, Select Olympic Champions, Hold/Continue/Manage Olympic Games, Hall of Legends |
+| `events/kns_imperial_olympic_events.txt` | Imperial Olympic setup, bracket, duels, and results |
 | `localization/english/kns_prowess_l_english.yml` | Player-facing text |
+| `localization/english/kns_imperial_olympic_l_english.yml` | Imperial Olympic text |

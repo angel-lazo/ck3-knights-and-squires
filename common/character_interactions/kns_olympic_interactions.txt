@@ -1,0 +1,62 @@
+kns_olympic_choose_venue_interaction = {
+	category = interaction_category_uncategorized
+	hidden = yes
+	ignores_pending_interaction_block = yes
+	use_diplomatic_range = no
+
+	desc = kns_olympic_choose_venue_interaction_desc
+	icon = icon_combat
+
+	target_type = title
+	target_filter = actor_realm_titles
+
+	auto_accept = yes
+
+	is_shown = {
+		scope:actor = {
+			this = scope:recipient
+			has_character_flag = kns_olympic_picking_venue
+		}
+	}
+
+	can_be_picked_title = {
+		scope:target = {
+			tier = tier_county
+			holder = {
+				top_liege = scope:actor
+			}
+		}
+	}
+
+	has_valid_target_showing_failures_only = {
+		scope:target ?= {
+			tier = tier_county
+			holder = {
+				top_liege = scope:actor
+			}
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			kns_set_olympic_venue_from_county_effect = { COUNTY = scope:target }
+			remove_character_flag = kns_olympic_picking_venue
+			kns_olympic_continue_setup_or_manage_effect = { NEXT = kns_imperial_olympic.0004 }
+		}
+	}
+
+	on_decline = {
+		scope:actor = {
+			remove_character_flag = kns_olympic_picking_venue
+			trigger_event = kns_imperial_olympic.0003
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

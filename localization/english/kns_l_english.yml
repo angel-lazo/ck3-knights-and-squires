@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  # Game concepts
  game_concept_squire:0 "Squire"
  game_concept_squire_desc:0 "A youth bound to a [kns_knight|E] to learn arms, courtesy, and the duties of knighthood. Progress is tracked on the Squire trait. At high progress, any knight - or a Christian king - may dub them."
@@ -330,6 +330,22 @@
  kns_was_stripped_of_knighthood_desc:0 "[stripper.GetShortUIName] stripped me of knighthood."
  kns_was_stripped_of_knighthood_desc_second:0 "[stripper.GetShortUIName] stripped you of knighthood."
  kns_was_stripped_of_knighthood_desc_third:0 "[stripper.GetShortUIName] stripped [owner.GetShortUIName] of knighthood."
+ kns_olympic_defeated_in_lists:0 "won a bout in the Imperial Games"
+ kns_olympic_won_the_games:0 "won the Imperial Olympic Games"
+ kns_olympic_founded_the_games:0 "proclaimed the Imperial Olympic Games"
+ kns_olympic_held_the_games:0 "held the Imperial Olympic Games"
+ kns_olympic_defeated_in_lists_desc:0 "I defeated [opponent.GetShortUIName] in the lists of the Imperial Olympic Games."
+ kns_olympic_defeated_in_lists_desc_second:0 "You defeated [opponent.GetShortUIName] in the lists of the Imperial Olympic Games."
+ kns_olympic_defeated_in_lists_desc_third:0 "[owner.GetShortUIName|U] defeated [opponent.GetShortUIName] in the lists of the Imperial Olympic Games."
+ kns_olympic_won_the_games_desc:0 "I won the Imperial Olympic Games."
+ kns_olympic_won_the_games_desc_second:0 "You won the Imperial Olympic Games."
+ kns_olympic_won_the_games_desc_third:0 "[owner.GetShortUIName|U] won the Imperial Olympic Games."
+ kns_olympic_founded_the_games_desc:0 "I proclaimed the Imperial Olympic Games."
+ kns_olympic_founded_the_games_desc_second:0 "You proclaimed the Imperial Olympic Games."
+ kns_olympic_founded_the_games_desc_third:0 "[owner.GetShortUIName|U] proclaimed the Imperial Olympic Games."
+ kns_olympic_held_the_games_desc:0 "I held the Imperial Olympic Games."
+ kns_olympic_held_the_games_desc_second:0 "You held the Imperial Olympic Games."
+ kns_olympic_held_the_games_desc_third:0 "[owner.GetShortUIName|U] held the Imperial Olympic Games."
  kns_knighting_kit_tt:0 "They receive a common weapon (kept in their inventory) and are fitted with a common suit of armor"
  kns_knighting_kit_prodigious_tt:0 "This prodigious knight is given an illustrious named relic weapon (kept in their inventory) and is fitted with relic armor. Each is forged as a normal piece, then set to the utmost [prowess|E]. Other bonuses are whatever the steel happened to take. The steel does not decay. In five years the singers will give them a name."
  kns_art_placeholder_weapon:0 "A Knight's Weapon"

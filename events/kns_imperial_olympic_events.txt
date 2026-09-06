@@ -1,0 +1,769 @@
+namespace = kns_imperial_olympic
+
+# Bracket size
+kns_imperial_olympic.0001 = {
+	type = character_event
+	title = kns_imperial_olympic.0001.t
+	desc = kns_imperial_olympic.0001.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = kns_imperial_olympic.0001.a
+		set_variable = {
+			name = kns_olympic_bracket_size
+			value = 32
+		}
+		custom_tooltip = kns_imperial_olympic_field_32_tt
+		kns_olympic_continue_setup_or_manage_effect = { NEXT = kns_imperial_olympic.0002 }
+	}
+
+	option = {
+		name = kns_imperial_olympic.0001.b
+		set_variable = {
+			name = kns_olympic_bracket_size
+			value = 64
+		}
+		custom_tooltip = kns_imperial_olympic_field_64_tt
+		kns_olympic_continue_setup_or_manage_effect = { NEXT = kns_imperial_olympic.0002 }
+	}
+
+	option = {
+		name = kns_imperial_olympic.0001.c
+		set_variable = {
+			name = kns_olympic_bracket_size
+			value = 128
+		}
+		custom_tooltip = kns_imperial_olympic_field_128_tt
+		kns_olympic_continue_setup_or_manage_effect = { NEXT = kns_imperial_olympic.0002 }
+	}
+}
+
+# Cycle: every 2, 3, or 4 years
+kns_imperial_olympic.0002 = {
+	type = character_event
+	title = kns_imperial_olympic.0002.t
+	desc = kns_imperial_olympic.0002.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = kns_imperial_olympic.0002.a
+		set_variable = {
+			name = kns_olympic_interval_years
+			value = 2
+		}
+		custom_tooltip = kns_imperial_olympic_interval_2_tt
+		kns_olympic_continue_setup_or_manage_effect = { NEXT = kns_imperial_olympic.0006 }
+	}
+
+	option = {
+		name = kns_imperial_olympic.0002.b
+		set_variable = {
+			name = kns_olympic_interval_years
+			value = 3
+		}
+		custom_tooltip = kns_imperial_olympic_interval_3_tt
+		kns_olympic_continue_setup_or_manage_effect = { NEXT = kns_imperial_olympic.0006 }
+	}
+
+	option = {
+		name = kns_imperial_olympic.0002.c
+		set_variable = {
+			name = kns_olympic_interval_years
+			value = 4
+		}
+		custom_tooltip = kns_imperial_olympic_interval_4_tt
+		kns_olympic_continue_setup_or_manage_effect = { NEXT = kns_imperial_olympic.0006 }
+	}
+}
+
+# Champion purse 1000–5000
+kns_imperial_olympic.0006 = {
+	type = character_event
+	title = kns_imperial_olympic.0006.t
+	desc = kns_imperial_olympic.0006.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = kns_imperial_olympic.0006.a
+		set_variable = {
+			name = kns_olympic_prize_gold
+			value = 1000
+		}
+		custom_tooltip = kns_imperial_olympic_prize_gold_1000_tt
+		kns_olympic_after_prize_setup_effect = yes
+	}
+
+	option = {
+		name = kns_imperial_olympic.0006.b
+		set_variable = {
+			name = kns_olympic_prize_gold
+			value = 2000
+		}
+		custom_tooltip = kns_imperial_olympic_prize_gold_2000_tt
+		kns_olympic_after_prize_setup_effect = yes
+	}
+
+	option = {
+		name = kns_imperial_olympic.0006.c
+		set_variable = {
+			name = kns_olympic_prize_gold
+			value = 3000
+		}
+		custom_tooltip = kns_imperial_olympic_prize_gold_3000_tt
+		kns_olympic_after_prize_setup_effect = yes
+	}
+
+	option = {
+		name = kns_imperial_olympic.0006.d
+		set_variable = {
+			name = kns_olympic_prize_gold
+			value = 4000
+		}
+		custom_tooltip = kns_imperial_olympic_prize_gold_4000_tt
+		kns_olympic_after_prize_setup_effect = yes
+	}
+
+	option = {
+		name = kns_imperial_olympic.0006.e
+		set_variable = {
+			name = kns_olympic_prize_gold
+			value = 5000
+		}
+		custom_tooltip = kns_imperial_olympic_prize_gold_5000_tt
+		kns_olympic_after_prize_setup_effect = yes
+	}
+}
+
+# Venue: capital default, or pick any realm county
+kns_imperial_olympic.0003 = {
+	type = character_event
+	title = kns_imperial_olympic.0003.t
+	desc = kns_imperial_olympic.0003.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = kns_imperial_olympic.0003.a
+		custom_tooltip = kns_imperial_olympic_venue_capital_tt
+		hidden_effect = {
+			kns_set_olympic_venue_to_capital_effect = yes
+		}
+		kns_olympic_continue_setup_or_manage_effect = { NEXT = kns_imperial_olympic.0004 }
+	}
+
+	option = {
+		name = kns_imperial_olympic.0003.b
+		custom_tooltip = kns_imperial_olympic_venue_pick_tt
+		add_character_flag = kns_olympic_picking_venue
+		open_interaction_window = {
+			interaction = kns_olympic_choose_venue_interaction
+			actor = root
+			recipient = root
+		}
+	}
+
+	option = {
+		name = kns_imperial_olympic.0003.cancel
+		custom_tooltip = kns_imperial_olympic_cancel_tt
+		hidden_effect = {
+			if = {
+				limit = { has_character_flag = kns_olympic_manage_session }
+				trigger_event = kns_imperial_olympic.0020
+			}
+			else = {
+				kns_abandon_imperial_olympic_planning_effect = yes
+			}
+		}
+	}
+}
+
+# Confirm and start bracket
+kns_imperial_olympic.0004 = {
+	type = character_event
+	title = kns_imperial_olympic.0004.t
+	desc = kns_imperial_olympic.0004.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = kns_imperial_olympic.0004.a
+		custom_tooltip = kns_imperial_olympic_start_tt
+		hidden_effect = {
+			kns_found_imperial_olympic_institution_effect = yes
+			kns_start_imperial_olympic_bracket_effect = yes
+		}
+	}
+
+	option = {
+		name = kns_imperial_olympic.0004.b
+		custom_tooltip = kns_imperial_olympic_cancel_tt
+		hidden_effect = {
+			kns_abandon_imperial_olympic_planning_effect = yes
+		}
+	}
+}
+
+# Too few entrants
+kns_imperial_olympic.0005 = {
+	type = character_event
+	title = kns_imperial_olympic.0005.t
+	desc = kns_imperial_olympic.0005.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+
+	option = {
+		name = kns_imperial_olympic.0005.a
+	}
+}
+
+# Auto-cycle: the games return
+kns_imperial_olympic.0007 = {
+	type = character_event
+	title = kns_imperial_olympic.0007.t
+	desc = kns_imperial_olympic.0007.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = kns_imperial_olympic.0007.a
+		custom_tooltip = kns_imperial_olympic_start_tt
+	}
+}
+
+# Manage an existing institution
+kns_imperial_olympic.0020 = {
+	type = character_event
+	title = kns_imperial_olympic.0020.t
+	desc = kns_imperial_olympic.0020.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	immediate = {
+		add_character_flag = kns_olympic_manage_session
+		kns_apply_olympic_knight_culture_modifier_effect = yes
+	}
+
+	option = {
+		name = kns_imperial_olympic.0020.a
+		custom_tooltip = kns_imperial_olympic.0020.a.tt
+		trigger_event = kns_imperial_olympic.0002
+	}
+
+	option = {
+		name = kns_imperial_olympic.0020.b
+		custom_tooltip = kns_imperial_olympic.0020.b.tt
+		trigger_event = kns_imperial_olympic.0006
+	}
+
+	option = {
+		name = kns_imperial_olympic.0020.c
+		custom_tooltip = kns_imperial_olympic.0020.c.tt
+		trigger_event = kns_imperial_olympic.0001
+	}
+
+	option = {
+		name = kns_imperial_olympic.0020.d
+		custom_tooltip = kns_imperial_olympic.0020.d.tt
+		trigger_event = kns_imperial_olympic.0003
+	}
+
+	option = {
+		name = kns_imperial_olympic.0020.e
+		trigger = {
+			NOT = { has_character_flag = kns_imperial_olympic_host }
+			is_at_war = no
+			is_available_adult = yes
+		}
+		custom_tooltip = kns_imperial_olympic_start_tt
+		hidden_effect = {
+			remove_character_flag = kns_olympic_manage_session
+			kns_start_imperial_olympic_bracket_effect = yes
+		}
+	}
+
+	option = {
+		name = kns_imperial_olympic.0020.close
+		hidden_effect = {
+			remove_character_flag = kns_olympic_manage_session
+			kns_apply_olympic_knight_culture_modifier_effect = yes
+		}
+	}
+}
+
+# Continue a predecessor's tradition
+kns_imperial_olympic.0030 = {
+	type = character_event
+	title = kns_imperial_olympic.0030.t
+	desc = kns_imperial_olympic.0030.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		trigger = { exists = scope:kns_olympic_predecessor }
+		character = scope:kns_olympic_predecessor
+		animation = personality_honorable
+	}
+
+	immediate = {
+		add_character_flag = kns_olympic_continue_session
+		kns_load_olympic_dormant_onto_this_effect = yes
+		if = {
+			limit = { exists = global_var:kns_olympic_dormant_predecessor }
+			global_var:kns_olympic_dormant_predecessor = {
+				save_scope_as = kns_olympic_predecessor
+			}
+		}
+	}
+
+	option = {
+		name = kns_imperial_olympic.0030.a
+		custom_tooltip = kns_imperial_olympic.0030.a.tt
+		trigger_event = kns_imperial_olympic.0002
+	}
+
+	option = {
+		name = kns_imperial_olympic.0030.b
+		custom_tooltip = kns_imperial_olympic.0030.b.tt
+		hidden_effect = {
+			remove_character_flag = kns_olympic_continue_session
+			kns_clear_olympic_dormant_effect = yes
+			if = {
+				limit = { NOT = { has_character_flag = kns_imperial_olympic_host } }
+				remove_variable = kns_olympic_interval_years
+				remove_variable = kns_olympic_prize_gold
+				remove_variable = kns_olympic_bracket_size
+				remove_variable = kns_olympic_location
+				remove_variable = kns_olympic_next_year
+			}
+		}
+	}
+}
+
+# Live bracket passed to the heir
+kns_imperial_olympic.0031 = {
+	type = character_event
+	title = kns_imperial_olympic.0031.t
+	desc = kns_imperial_olympic.0031.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = kns_imperial_olympic.0031.a
+		custom_tooltip = kns_imperial_olympic.0031.a.tt
+	}
+}
+
+# Tradition adopted after Continue
+kns_imperial_olympic.0032 = {
+	type = character_event
+	title = kns_imperial_olympic.0032.t
+	desc = kns_imperial_olympic.0032.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	option = {
+		name = kns_imperial_olympic.0032.a
+	}
+}
+
+# Emperor crowns the bracket champion
+kns_imperial_olympic.0010 = {
+	type = character_event
+	title = kns_imperial_olympic.0010.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:kns_olympic_winner
+					this = scope:kns_olympic_winner
+				}
+				desc = kns_imperial_olympic.0010.desc_self
+			}
+			triggered_desc = {
+				trigger = { exists = scope:kns_olympic_winner }
+				desc = kns_imperial_olympic.0010.desc_crown
+			}
+			desc = kns_imperial_olympic.0010.desc_none
+		}
+	}
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		trigger = {
+			exists = scope:kns_olympic_winner
+			NOT = { this = scope:kns_olympic_winner }
+		}
+		character = scope:kns_olympic_winner
+		animation = happiness
+	}
+
+	immediate = {
+		if = {
+			limit = { NOT = { exists = scope:kns_emperor } }
+			save_scope_as = kns_emperor
+		}
+	}
+
+	option = {
+		name = kns_imperial_olympic.0010.a
+		trigger = {
+			exists = scope:kns_olympic_winner
+			this = scope:kns_olympic_winner
+		}
+		custom_tooltip = kns_imperial_olympic_prize_tt
+		hidden_effect = {
+			kns_clear_imperial_olympic_vars_effect = yes
+		}
+	}
+
+	option = {
+		name = kns_imperial_olympic.0010.b
+		trigger = {
+			exists = scope:kns_olympic_winner
+			NOT = { this = scope:kns_olympic_winner }
+		}
+		custom_tooltip = kns_imperial_olympic_prize_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:kns_olympic_winner = { is_ai = no }
+				}
+				scope:kns_olympic_winner = {
+					trigger_event = kns_imperial_olympic.0011
+				}
+			}
+			else = {
+				kns_clear_imperial_olympic_vars_effect = yes
+			}
+		}
+	}
+
+	option = {
+		name = kns_imperial_olympic.0010.c
+		trigger = {
+			NOT = { exists = scope:kns_olympic_winner }
+		}
+		hidden_effect = {
+			kns_clear_imperial_olympic_vars_effect = yes
+		}
+	}
+}
+
+# Player result
+kns_imperial_olympic.0011 = {
+	type = character_event
+	title = kns_imperial_olympic.0011.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:kns_olympic_winner
+					this = scope:kns_olympic_winner
+				}
+				desc = kns_imperial_olympic.0011.desc_won
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:kns_olympic_winner
+					has_character_flag = kns_entered_imperial_olympic
+				}
+				desc = kns_imperial_olympic.0011.desc_lost
+			}
+			triggered_desc = {
+				trigger = { exists = scope:kns_olympic_winner }
+				desc = kns_imperial_olympic.0011.desc_news
+			}
+			desc = kns_imperial_olympic.0011.desc_none
+		}
+	}
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		trigger = { exists = scope:kns_emperor }
+		character = scope:kns_emperor
+		animation = personality_honorable
+	}
+	right_portrait = {
+		trigger = { exists = scope:kns_olympic_winner }
+		character = scope:kns_olympic_winner
+		animation = happiness
+	}
+
+	option = {
+		name = kns_imperial_olympic.0011.a
+		trigger = {
+			exists = scope:kns_olympic_winner
+			this = scope:kns_olympic_winner
+		}
+		custom_tooltip = kns_imperial_olympic_winner_name_tt
+		hidden_effect = {
+			kns_clear_imperial_olympic_vars_effect = yes
+		}
+	}
+
+	option = {
+		name = kns_imperial_olympic.0011.b
+		trigger = {
+			exists = scope:kns_olympic_winner
+			NOT = { this = scope:kns_olympic_winner }
+		}
+		custom_tooltip = kns_imperial_olympic_winner_name_tt
+		hidden_effect = {
+			kns_clear_imperial_olympic_vars_effect = yes
+		}
+	}
+}
+
+# Bracket round driver
+kns_imperial_olympic.0100 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		kns_imperial_olympic_advance_round_driver_effect = yes
+	}
+}
+
+# Hidden prowess duel (AI vs AI)
+kns_imperial_olympic.0101 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		kns_restore_imperial_olympic_bout_scopes_effect = yes
+		if = {
+			limit = { has_variable = kns_olympic_bout_open }
+			random_list = {
+				50 = {
+					modifier = {
+						add = scope:kns_olympic_fighter_a.prowess_no_portrait
+					}
+					scope:kns_olympic_fighter_a = {
+						save_scope_as = kns_olympic_winner
+					}
+				}
+				50 = {
+					modifier = {
+						add = scope:kns_olympic_fighter_b.prowess_no_portrait
+					}
+					scope:kns_olympic_fighter_b = {
+						save_scope_as = kns_olympic_winner
+					}
+				}
+			}
+			if = {
+				limit = { exists = scope:kns_olympic_winner }
+				kns_record_imperial_olympic_bout_win_from_pair_effect = {
+					WINNER = scope:kns_olympic_winner
+				}
+			}
+			else = {
+				scope:kns_olympic_fighter_a = {
+					save_scope_as = kns_olympic_winner
+				}
+				kns_record_imperial_olympic_bout_win_from_pair_effect = {
+					WINNER = scope:kns_olympic_winner
+				}
+			}
+		}
+	}
+}
+
+# Player visual non-lethal single combat
+kns_imperial_olympic.0102 = {
+	type = character_event
+	title = kns_imperial_olympic.0102.t
+	desc = kns_imperial_olympic.0102.desc
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = scope:kns_olympic_fighter_a
+		animation = rage
+	}
+	right_portrait = {
+		character = scope:kns_olympic_fighter_b
+		animation = anger
+	}
+
+	immediate = {
+		kns_restore_imperial_olympic_bout_scopes_effect = yes
+		kns_olympic_debug_log_effect = { MSG = player_bout_0102 }
+	}
+
+	option = {
+		name = kns_imperial_olympic.0102.a
+		if = {
+			limit = {
+				scope:kns_olympic_fighter_a = { is_ai = no }
+			}
+			configure_start_single_combat_effect = {
+				SC_INITIATOR = scope:kns_olympic_fighter_a
+				SC_ATTACKER = scope:kns_olympic_fighter_a
+				SC_DEFENDER = scope:kns_olympic_fighter_b
+				FATALITY = no
+				FIXED = no
+				LOCALE = courtyard
+				OUTPUT_EVENT = kns_imperial_olympic.0103
+				INVALIDATION_EVENT = kns_imperial_olympic.0103
+			}
+		}
+		else = {
+			configure_start_single_combat_effect = {
+				SC_INITIATOR = scope:kns_olympic_fighter_b
+				SC_ATTACKER = scope:kns_olympic_fighter_b
+				SC_DEFENDER = scope:kns_olympic_fighter_a
+				FATALITY = no
+				FIXED = no
+				LOCALE = courtyard
+				OUTPUT_EVENT = kns_imperial_olympic.0103
+				INVALIDATION_EVENT = kns_imperial_olympic.0103
+			}
+		}
+		hidden_effect = {
+			trigger_event = {
+				id = kns_imperial_olympic.0103
+				days = 5
+			}
+		}
+	}
+}
+
+# Single combat outcome
+kns_imperial_olympic.0103 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { exists = scope:sc_victor }
+			scope:sc_victor = {
+				save_scope_as = kns_olympic_winner
+			}
+		}
+		kns_restore_imperial_olympic_bout_scopes_effect = yes
+		kns_olympic_debug_log_effect = { MSG = player_bout_0103 }
+		scope:kns_emperor = {
+			if = {
+				limit = { has_variable = kns_olympic_bout_open }
+				if = {
+					limit = {
+						exists = scope:sc_attacker
+						exists = scope:sc_defender
+					}
+					single_combat_clean_shirtlessness_effect = {
+						ATTACKER = scope:sc_attacker
+						DEFENDER = scope:sc_defender
+					}
+				}
+				if = {
+					limit = { NOT = { exists = scope:kns_olympic_winner } }
+					if = {
+						limit = {
+							exists = scope:kns_olympic_fighter_a
+							exists = scope:kns_olympic_fighter_b
+							scope:kns_olympic_fighter_a = {
+								prowess_no_portrait >= scope:kns_olympic_fighter_b.prowess_no_portrait
+							}
+						}
+						scope:kns_olympic_fighter_a = {
+							save_scope_as = kns_olympic_winner
+						}
+					}
+					else_if = {
+						limit = { exists = scope:kns_olympic_fighter_b }
+						scope:kns_olympic_fighter_b = {
+							save_scope_as = kns_olympic_winner
+						}
+					}
+					else_if = {
+						limit = { exists = scope:kns_olympic_fighter_a }
+						scope:kns_olympic_fighter_a = {
+							save_scope_as = kns_olympic_winner
+						}
+					}
+				}
+				if = {
+					limit = { exists = scope:kns_olympic_winner }
+					kns_record_imperial_olympic_bout_win_from_pair_effect = {
+						WINNER = scope:kns_olympic_winner
+					}
+				}
+				else = {
+					kns_olympic_debug_log_effect = { MSG = player_bout_0103_no_winner }
+					remove_variable = kns_olympic_bout_open
+					trigger_event = {
+						id = kns_imperial_olympic.0100
+						days = 1
+					}
+				}
+			}
+			else = {
+				kns_olympic_debug_log_effect = { MSG = player_bout_0103_ignored_no_open }
+			}
+		}
+	}
+}

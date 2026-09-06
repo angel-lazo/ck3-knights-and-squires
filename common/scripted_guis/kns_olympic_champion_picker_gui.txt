@@ -1,0 +1,110 @@
+kns_olympic_champion_picker_is_shown = {
+	scope = character
+	is_shown = {
+		exists = var:kns_olympic_champion_picker_open
+	}
+}
+
+kns_close_olympic_champion_picker = {
+	scope = character
+	effect = {
+		kns_close_olympic_champion_picker_effect = yes
+	}
+}
+
+kns_gui_refresh_olympic_champion_picker = {
+	scope = character
+	effect = {
+		kns_preview_imperial_olympic_invite_count_effect = yes
+		kns_sync_olympic_champion_picker_slots_effect = yes
+		kns_rebuild_olympic_champion_picker_list_effect = yes
+		kns_sync_olympic_champion_picker_count_effect = yes
+	}
+}
+
+kns_gui_olympic_champion_is_picked = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		is_target_in_variable_list = {
+			name = kns_olympic_player_champion_picks
+			target = scope:target
+		}
+	}
+}
+
+kns_gui_toggle_olympic_champion_pick = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_valid = {
+		scope:target = {
+			kns_can_pick_as_olympic_champion_trigger = yes
+		}
+		OR = {
+			is_target_in_variable_list = {
+				name = kns_olympic_player_champion_picks
+				target = scope:target
+			}
+			AND = {
+				has_variable = kns_olympic_picker_count
+				has_variable = kns_olympic_picker_slots
+				var:kns_olympic_picker_count < var:kns_olympic_picker_slots
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				is_target_in_variable_list = {
+					name = kns_olympic_player_champion_picks
+					target = scope:target
+				}
+			}
+			remove_list_variable = {
+				name = kns_olympic_player_champion_picks
+				target = scope:target
+			}
+		}
+		else = {
+			add_to_variable_list = {
+				name = kns_olympic_player_champion_picks
+				target = scope:target
+			}
+		}
+		kns_sync_olympic_champion_picker_count_effect = yes
+	}
+}
+
+kns_gui_olympic_champion_is_self = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		scope:target = root
+	}
+}
+
+kns_gui_olympic_champion_is_courtier = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		scope:target = {
+			is_courtier_of = root
+		}
+	}
+}
+
+kns_gui_clear_olympic_champion_picks = {
+	scope = character
+	effect = {
+		clear_variable_list = kns_olympic_player_champion_picks
+		kns_sync_olympic_champion_picker_count_effect = yes
+	}
+}

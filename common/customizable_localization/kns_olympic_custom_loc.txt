@@ -1,0 +1,38 @@
+KnsOlympicWinYears = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_olympic_win_year_8 }
+		localization_key = kns_hof_years_8
+	}
+	text = {
+		trigger = { has_variable = kns_olympic_win_year_7 }
+		localization_key = kns_hof_years_7
+	}
+	text = {
+		trigger = { has_variable = kns_olympic_win_year_6 }
+		localization_key = kns_hof_years_6
+	}
+	text = {
+		trigger = { has_variable = kns_olympic_win_year_5 }
+		localization_key = kns_hof_years_5
+	}
+	text = {
+		trigger = { has_variable = kns_olympic_win_year_4 }
+		localization_key = kns_hof_years_4
+	}
+	text = {
+		trigger = { has_variable = kns_olympic_win_year_3 }
+		localization_key = kns_hof_years_3
+	}
+	text = {
+		trigger = { has_variable = kns_olympic_win_year_2 }
+		localization_key = kns_hof_years_2
+	}
+	text = {
+		trigger = { has_variable = kns_olympic_win_year_1 }
+		localization_key = kns_hof_years_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}

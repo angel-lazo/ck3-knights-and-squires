@@ -43,3 +43,65 @@ kns_prowess_training_room_value = {
 		min = 0
 	}
 }
+
+# Imperial Olympic Tournament — hard minimum entrants to crown a champion
+kns_olympic_hard_minimum_value = {
+	value = 2
+}
+
+# Player may reserve up to this many champions (self + court knights).
+kns_olympic_player_champion_slots_value = {
+	value = 4
+}
+
+# ceil(bracket_size / invited_ruler_count), clamped 1–5
+kns_olympic_slots_per_ruler_value = {
+	value = 0
+	if = {
+		limit = {
+			exists = scope:kns_emperor
+			scope:kns_emperor = {
+				has_variable = kns_olympic_invited_ruler_count
+				var:kns_olympic_invited_ruler_count > 0
+			}
+		}
+		value = 32
+		if = {
+			limit = {
+				scope:kns_emperor = { has_variable = kns_olympic_bracket_size }
+			}
+			value = scope:kns_emperor.var:kns_olympic_bracket_size
+		}
+		divide = scope:kns_emperor.var:kns_olympic_invited_ruler_count
+		ceiling = yes
+		min = 1
+		max = 5
+	}
+	else = {
+		value = 1
+	}
+}
+
+# Purse gold on the Olympic host (1000–5000). Scales knight-effectiveness modifier.
+kns_olympic_prize_gold_scale_value = {
+	value = 1000
+	if = {
+		limit = { has_variable = kns_olympic_prize_gold }
+		value = var:kns_olympic_prize_gold
+	}
+}
+
+# Winner takes 40% of the funded purse.
+kns_olympic_winner_gold_value = {
+	value = kns_olympic_prize_gold_scale_value
+	multiply = 0.4
+}
+
+# County tax bonus scale; set on the host county when the games are crowned.
+kns_olympic_county_bonus_scale_value = {
+	value = 1000
+	if = {
+		limit = { has_variable = kns_olympic_county_bonus_scale }
+		value = var:kns_olympic_county_bonus_scale
+	}
+}

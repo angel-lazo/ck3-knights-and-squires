@@ -1,0 +1,218 @@
+window = {
+	name = "kns_imperial_hof_window"
+	size = { 780 920 }
+	parentanchor = center
+	position = { 0 0 }
+	movable = yes
+	layer = top
+	allow_outside = yes
+	visible = "[GetPlayer.MakeScope.Var('kns_hof_window_open').IsSet]"
+
+	using = Window_Background_Subwindow
+
+		vbox = {
+			margin = { 10 10 }
+			spacing = 8
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				spacing = 8
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_hof_window_title"
+					fontsize = 22
+				}
+
+				button_close = {
+					onclick = "[GetScriptedGui('kns_close_hof_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+				}
+			}
+
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				background = {
+					using = Background_Area_Dark
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_hof_window_subtitle"
+				}
+			}
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				spacing = 8
+
+				button_standard = {
+					layoutpolicy_horizontal = expanding
+					text = "kns_hof_window_refresh"
+					tooltip = "kns_hof_window_refresh_tt"
+					onclick = "[GetScriptedGui('kns_gui_refresh_hof_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+				}
+			}
+
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				text = "kns_hof_window_section_champions"
+				default_format = "#high"
+			}
+
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				text = "kns_hof_window_section_champions_desc"
+			}
+
+			scrollbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				minimumsize = { -1 280 }
+
+				blockoverride "scrollbox_content" {
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 6
+						datamodel = "[GetPlayer.MakeScope.GetList('kns_hof_champions')]"
+
+						item = {
+							hbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 8
+								datacontext = "[Scope.Char]"
+								background = {
+									using = Background_Area_Dark
+								}
+
+								text_single = {
+									size = { 36 40 }
+									align = center
+									parentanchor = vcenter
+									text = "[Add_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)1')]"
+									default_format = "#high"
+								}
+
+								widget = {
+									size = { 85 90 }
+									parentanchor = vcenter
+									portrait_head_small = {}
+								}
+
+								vbox = {
+									layoutpolicy_horizontal = expanding
+									parentanchor = vcenter
+									spacing = 2
+
+									text_single = {
+										layoutpolicy_horizontal = expanding
+										text = "[Character.GetShortUINameNoTooltip]"
+										default_format = "#high"
+									}
+
+									text_single = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_hof_window_deceased"
+										visible = "[GetScriptedGui('kns_gui_hof_entry_is_dead').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+									}
+
+									text_single = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_hof_window_row_titles"
+										default_format = "#positive"
+									}
+								}
+							}
+						}
+					}
+				}
+
+				blockoverride "scrollbox_empty" {
+					visible = "[IsDataModelEmpty( GetPlayer.MakeScope.GetList('kns_hof_champions') )]"
+					text = "kns_hof_window_empty_champions"
+				}
+			}
+
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				text = "kns_hof_window_section_duel_wins"
+				default_format = "#high"
+			}
+
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				text = "kns_hof_window_section_duel_wins_desc"
+			}
+
+			scrollbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				minimumsize = { -1 280 }
+
+				blockoverride "scrollbox_content" {
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 6
+						datamodel = "[GetPlayer.MakeScope.GetList('kns_hof_duelists')]"
+
+						item = {
+							hbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 8
+								datacontext = "[Scope.Char]"
+								background = {
+									using = Background_Area_Dark
+								}
+
+								text_single = {
+									size = { 36 40 }
+									align = center
+									parentanchor = vcenter
+									text = "[Add_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)1')]"
+									default_format = "#high"
+								}
+
+								widget = {
+									size = { 85 90 }
+									parentanchor = vcenter
+									portrait_head_small = {}
+								}
+
+								vbox = {
+									layoutpolicy_horizontal = expanding
+									parentanchor = vcenter
+									spacing = 2
+
+									text_single = {
+										layoutpolicy_horizontal = expanding
+										text = "[Character.GetShortUINameNoTooltip]"
+										default_format = "#high"
+									}
+
+									text_single = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_hof_window_deceased"
+										visible = "[GetScriptedGui('kns_gui_hof_entry_is_dead').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+									}
+
+									text_single = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_hof_window_row_duel_wins"
+										default_format = "#high"
+									}
+								}
+							}
+						}
+					}
+				}
+
+				blockoverride "scrollbox_empty" {
+					visible = "[IsDataModelEmpty( GetPlayer.MakeScope.GetList('kns_hof_duelists') )]"
+					text = "kns_hof_window_empty_duelists"
+				}
+			}
+		}
+}

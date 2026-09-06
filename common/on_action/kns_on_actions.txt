@@ -117,6 +117,15 @@ kns_on_death = {
 				kns_update_training_modifier_effect = yes
 			}
 		}
+		if = {
+			limit = {
+				OR = {
+					has_character_flag = kns_olympic_institution
+					has_character_flag = kns_imperial_olympic_host
+				}
+			}
+			kns_handle_imperial_olympic_organizer_death_effect = yes
+		}
 	}
 }
 
@@ -179,6 +188,7 @@ kns_yearly_global_pulse = {
 			kns_recount_living_prodigies_effect = yes
 		}
 		kns_try_start_papal_youth_tourney_effect = yes
+		kns_try_start_scheduled_imperial_olympic_effect = yes
 	}
 }
 

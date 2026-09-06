@@ -96,3 +96,40 @@ kns_was_stripped_of_knighthood = {
 	participants = { stripper }
 	duration = { years = 100 }
 }
+
+kns_olympic_defeated_in_lists = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_defeated_in_lists_desc }
+	second_perspective_description = { desc = kns_olympic_defeated_in_lists_desc_second }
+	third_perspective_description = { desc = kns_olympic_defeated_in_lists_desc_third }
+	participants = { opponent }
+	duration = { years = 75 }
+}
+
+kns_olympic_won_the_games = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_won_the_games_desc }
+	second_perspective_description = { desc = kns_olympic_won_the_games_desc_second }
+	third_perspective_description = { desc = kns_olympic_won_the_games_desc_third }
+	duration = { years = 100 }
+}
+
+kns_olympic_founded_the_games = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_olympic_founded_the_games_desc }
+	second_perspective_description = { desc = kns_olympic_founded_the_games_desc_second }
+	third_perspective_description = { desc = kns_olympic_founded_the_games_desc_third }
+	duration = { years = 100 }
+}
+
+kns_olympic_held_the_games = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_olympic_held_the_games_desc }
+	second_perspective_description = { desc = kns_olympic_held_the_games_desc_second }
+	third_perspective_description = { desc = kns_olympic_held_the_games_desc_third }
+	duration = { years = 75 }
+}

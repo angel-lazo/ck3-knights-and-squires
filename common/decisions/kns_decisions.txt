@@ -170,3 +170,221 @@ kns_manage_knight_funding_decision = {
 		base = 0
 	}
 }
+
+kns_imperial_olympic_select_champions_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+
+	decision_group_type = kns_knight_decisions
+	sort_order = 77
+
+	desc = kns_imperial_olympic_select_champions_decision_desc
+
+	ai_check_interval = 0
+
+	is_shown = {
+		kns_can_see_imperial_olympic_decisions_trigger = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		NOT = { has_character_flag = kns_imperial_olympic_host }
+		custom_description = {
+			text = kns_imperial_olympic_knighthood_tt
+			kns_practices_knighthood_trigger = yes
+		}
+	}
+
+	effect = {
+		custom_tooltip = kns_imperial_olympic_select_champions_decision_tooltip
+		hidden_effect = {
+			kns_open_olympic_champion_picker_effect = yes
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+kns_imperial_olympic_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+
+	decision_group_type = kns_knight_decisions
+	sort_order = 78
+
+	desc = kns_imperial_olympic_decision_desc
+
+	ai_check_interval = 0
+
+	cost = {
+		gold = {
+			value = 500
+		}
+		prestige = {
+			value = 500
+		}
+	}
+
+	is_shown = {
+		kns_can_see_imperial_olympic_decisions_trigger = yes
+		NOT = { kns_has_olympic_institution_trigger = yes }
+		NOT = { kns_has_olympic_dormant_tradition_trigger = yes }
+	}
+
+	is_valid_showing_failures_only = {
+		is_at_war = no
+		is_imprisoned = no
+		NOT = { has_character_flag = kns_imperial_olympic_host }
+		custom_description = {
+			text = kns_imperial_olympic_knighthood_tt
+			kns_practices_knighthood_trigger = yes
+		}
+		custom_description = {
+			text = kns_imperial_olympic_available_adult_tt
+			is_available_adult = yes
+		}
+	}
+
+	effect = {
+		custom_tooltip = kns_imperial_olympic_decision_tooltip
+		hidden_effect = {
+			trigger_event = kns_imperial_olympic.0001
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+kns_imperial_olympic_continue_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+
+	decision_group_type = kns_knight_decisions
+	sort_order = 78
+
+	desc = kns_imperial_olympic_continue_decision_desc
+
+	ai_check_interval = 0
+
+	is_shown = {
+		kns_can_see_imperial_olympic_decisions_trigger = yes
+		NOT = { kns_has_olympic_institution_trigger = yes }
+		kns_has_olympic_dormant_tradition_trigger = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		custom_description = {
+			text = kns_imperial_olympic_knighthood_tt
+			kns_practices_knighthood_trigger = yes
+		}
+	}
+
+	effect = {
+		custom_tooltip = kns_imperial_olympic_continue_decision_tooltip
+		hidden_effect = {
+			trigger_event = kns_imperial_olympic.0030
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+kns_imperial_olympic_manage_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+
+	decision_group_type = kns_knight_decisions
+	sort_order = 78
+
+	desc = kns_imperial_olympic_manage_decision_desc
+
+	ai_check_interval = 0
+
+	is_shown = {
+		kns_can_see_imperial_olympic_decisions_trigger = yes
+		kns_has_olympic_institution_trigger = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		custom_description = {
+			text = kns_imperial_olympic_knighthood_tt
+			kns_practices_knighthood_trigger = yes
+		}
+	}
+
+	effect = {
+		custom_tooltip = kns_imperial_olympic_manage_decision_tooltip
+		hidden_effect = {
+			add_character_flag = kns_olympic_manage_session
+			trigger_event = kns_imperial_olympic.0020
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+kns_imperial_olympic_hall_of_fame_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+
+	decision_group_type = kns_knight_decisions
+	sort_order = 79
+
+	desc = kns_imperial_olympic_hall_of_fame_decision_desc
+
+	ai_check_interval = 0
+
+	is_shown = {
+		kns_can_see_imperial_olympic_decisions_trigger = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		custom_tooltip = kns_imperial_olympic_hall_of_fame_decision_tooltip
+		hidden_effect = {
+			kns_open_hof_window_effect = yes
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
