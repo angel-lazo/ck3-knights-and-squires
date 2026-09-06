@@ -1,36 +1,812 @@
-KnsOlympicWinYears = {
+KnsOlympicWinYearsTail = {
 	type = character
 	text = {
 		trigger = { has_variable = kns_olympic_win_year_8 }
-		localization_key = kns_hof_years_8
+		localization_key = kns_hof_years_tail_8
 	}
 	text = {
 		trigger = { has_variable = kns_olympic_win_year_7 }
-		localization_key = kns_hof_years_7
+		localization_key = kns_hof_years_tail_7
 	}
 	text = {
 		trigger = { has_variable = kns_olympic_win_year_6 }
-		localization_key = kns_hof_years_6
+		localization_key = kns_hof_years_tail_6
 	}
 	text = {
 		trigger = { has_variable = kns_olympic_win_year_5 }
-		localization_key = kns_hof_years_5
+		localization_key = kns_hof_years_tail_5
 	}
 	text = {
 		trigger = { has_variable = kns_olympic_win_year_4 }
-		localization_key = kns_hof_years_4
+		localization_key = kns_hof_years_tail_4
 	}
 	text = {
 		trigger = { has_variable = kns_olympic_win_year_3 }
-		localization_key = kns_hof_years_3
+		localization_key = kns_hof_years_tail_3
 	}
 	text = {
 		trigger = { has_variable = kns_olympic_win_year_2 }
-		localization_key = kns_hof_years_2
+		localization_key = kns_hof_years_tail_2
 	}
 	text = {
-		trigger = { has_variable = kns_olympic_win_year_1 }
-		localization_key = kns_hof_years_1
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears1 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_1_y8 }
+		localization_key = kns_hof_champ_1_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_1_y7 }
+		localization_key = kns_hof_champ_1_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_1_y6 }
+		localization_key = kns_hof_champ_1_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_1_y5 }
+		localization_key = kns_hof_champ_1_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_1_y4 }
+		localization_key = kns_hof_champ_1_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_1_y3 }
+		localization_key = kns_hof_champ_1_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_1_y2 }
+		localization_key = kns_hof_champ_1_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_1_y1 }
+		localization_key = kns_hof_champ_1_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears2 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_2_y8 }
+		localization_key = kns_hof_champ_2_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_2_y7 }
+		localization_key = kns_hof_champ_2_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_2_y6 }
+		localization_key = kns_hof_champ_2_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_2_y5 }
+		localization_key = kns_hof_champ_2_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_2_y4 }
+		localization_key = kns_hof_champ_2_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_2_y3 }
+		localization_key = kns_hof_champ_2_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_2_y2 }
+		localization_key = kns_hof_champ_2_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_2_y1 }
+		localization_key = kns_hof_champ_2_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears3 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_3_y8 }
+		localization_key = kns_hof_champ_3_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_3_y7 }
+		localization_key = kns_hof_champ_3_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_3_y6 }
+		localization_key = kns_hof_champ_3_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_3_y5 }
+		localization_key = kns_hof_champ_3_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_3_y4 }
+		localization_key = kns_hof_champ_3_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_3_y3 }
+		localization_key = kns_hof_champ_3_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_3_y2 }
+		localization_key = kns_hof_champ_3_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_3_y1 }
+		localization_key = kns_hof_champ_3_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears4 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_4_y8 }
+		localization_key = kns_hof_champ_4_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_4_y7 }
+		localization_key = kns_hof_champ_4_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_4_y6 }
+		localization_key = kns_hof_champ_4_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_4_y5 }
+		localization_key = kns_hof_champ_4_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_4_y4 }
+		localization_key = kns_hof_champ_4_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_4_y3 }
+		localization_key = kns_hof_champ_4_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_4_y2 }
+		localization_key = kns_hof_champ_4_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_4_y1 }
+		localization_key = kns_hof_champ_4_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears5 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_5_y8 }
+		localization_key = kns_hof_champ_5_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_5_y7 }
+		localization_key = kns_hof_champ_5_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_5_y6 }
+		localization_key = kns_hof_champ_5_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_5_y5 }
+		localization_key = kns_hof_champ_5_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_5_y4 }
+		localization_key = kns_hof_champ_5_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_5_y3 }
+		localization_key = kns_hof_champ_5_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_5_y2 }
+		localization_key = kns_hof_champ_5_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_5_y1 }
+		localization_key = kns_hof_champ_5_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears6 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_6_y8 }
+		localization_key = kns_hof_champ_6_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_6_y7 }
+		localization_key = kns_hof_champ_6_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_6_y6 }
+		localization_key = kns_hof_champ_6_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_6_y5 }
+		localization_key = kns_hof_champ_6_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_6_y4 }
+		localization_key = kns_hof_champ_6_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_6_y3 }
+		localization_key = kns_hof_champ_6_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_6_y2 }
+		localization_key = kns_hof_champ_6_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_6_y1 }
+		localization_key = kns_hof_champ_6_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears7 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_7_y8 }
+		localization_key = kns_hof_champ_7_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_7_y7 }
+		localization_key = kns_hof_champ_7_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_7_y6 }
+		localization_key = kns_hof_champ_7_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_7_y5 }
+		localization_key = kns_hof_champ_7_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_7_y4 }
+		localization_key = kns_hof_champ_7_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_7_y3 }
+		localization_key = kns_hof_champ_7_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_7_y2 }
+		localization_key = kns_hof_champ_7_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_7_y1 }
+		localization_key = kns_hof_champ_7_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears8 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_8_y8 }
+		localization_key = kns_hof_champ_8_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_8_y7 }
+		localization_key = kns_hof_champ_8_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_8_y6 }
+		localization_key = kns_hof_champ_8_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_8_y5 }
+		localization_key = kns_hof_champ_8_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_8_y4 }
+		localization_key = kns_hof_champ_8_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_8_y3 }
+		localization_key = kns_hof_champ_8_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_8_y2 }
+		localization_key = kns_hof_champ_8_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_8_y1 }
+		localization_key = kns_hof_champ_8_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears9 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_9_y8 }
+		localization_key = kns_hof_champ_9_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_9_y7 }
+		localization_key = kns_hof_champ_9_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_9_y6 }
+		localization_key = kns_hof_champ_9_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_9_y5 }
+		localization_key = kns_hof_champ_9_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_9_y4 }
+		localization_key = kns_hof_champ_9_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_9_y3 }
+		localization_key = kns_hof_champ_9_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_9_y2 }
+		localization_key = kns_hof_champ_9_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_9_y1 }
+		localization_key = kns_hof_champ_9_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears10 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_10_y8 }
+		localization_key = kns_hof_champ_10_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_10_y7 }
+		localization_key = kns_hof_champ_10_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_10_y6 }
+		localization_key = kns_hof_champ_10_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_10_y5 }
+		localization_key = kns_hof_champ_10_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_10_y4 }
+		localization_key = kns_hof_champ_10_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_10_y3 }
+		localization_key = kns_hof_champ_10_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_10_y2 }
+		localization_key = kns_hof_champ_10_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_10_y1 }
+		localization_key = kns_hof_champ_10_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears11 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_11_y8 }
+		localization_key = kns_hof_champ_11_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_11_y7 }
+		localization_key = kns_hof_champ_11_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_11_y6 }
+		localization_key = kns_hof_champ_11_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_11_y5 }
+		localization_key = kns_hof_champ_11_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_11_y4 }
+		localization_key = kns_hof_champ_11_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_11_y3 }
+		localization_key = kns_hof_champ_11_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_11_y2 }
+		localization_key = kns_hof_champ_11_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_11_y1 }
+		localization_key = kns_hof_champ_11_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears12 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_12_y8 }
+		localization_key = kns_hof_champ_12_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_12_y7 }
+		localization_key = kns_hof_champ_12_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_12_y6 }
+		localization_key = kns_hof_champ_12_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_12_y5 }
+		localization_key = kns_hof_champ_12_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_12_y4 }
+		localization_key = kns_hof_champ_12_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_12_y3 }
+		localization_key = kns_hof_champ_12_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_12_y2 }
+		localization_key = kns_hof_champ_12_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_12_y1 }
+		localization_key = kns_hof_champ_12_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears13 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_13_y8 }
+		localization_key = kns_hof_champ_13_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_13_y7 }
+		localization_key = kns_hof_champ_13_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_13_y6 }
+		localization_key = kns_hof_champ_13_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_13_y5 }
+		localization_key = kns_hof_champ_13_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_13_y4 }
+		localization_key = kns_hof_champ_13_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_13_y3 }
+		localization_key = kns_hof_champ_13_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_13_y2 }
+		localization_key = kns_hof_champ_13_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_13_y1 }
+		localization_key = kns_hof_champ_13_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears14 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_14_y8 }
+		localization_key = kns_hof_champ_14_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_14_y7 }
+		localization_key = kns_hof_champ_14_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_14_y6 }
+		localization_key = kns_hof_champ_14_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_14_y5 }
+		localization_key = kns_hof_champ_14_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_14_y4 }
+		localization_key = kns_hof_champ_14_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_14_y3 }
+		localization_key = kns_hof_champ_14_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_14_y2 }
+		localization_key = kns_hof_champ_14_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_14_y1 }
+		localization_key = kns_hof_champ_14_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears15 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_15_y8 }
+		localization_key = kns_hof_champ_15_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_15_y7 }
+		localization_key = kns_hof_champ_15_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_15_y6 }
+		localization_key = kns_hof_champ_15_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_15_y5 }
+		localization_key = kns_hof_champ_15_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_15_y4 }
+		localization_key = kns_hof_champ_15_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_15_y3 }
+		localization_key = kns_hof_champ_15_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_15_y2 }
+		localization_key = kns_hof_champ_15_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_15_y1 }
+		localization_key = kns_hof_champ_15_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears16 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_16_y8 }
+		localization_key = kns_hof_champ_16_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_16_y7 }
+		localization_key = kns_hof_champ_16_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_16_y6 }
+		localization_key = kns_hof_champ_16_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_16_y5 }
+		localization_key = kns_hof_champ_16_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_16_y4 }
+		localization_key = kns_hof_champ_16_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_16_y3 }
+		localization_key = kns_hof_champ_16_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_16_y2 }
+		localization_key = kns_hof_champ_16_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_16_y1 }
+		localization_key = kns_hof_champ_16_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears17 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_17_y8 }
+		localization_key = kns_hof_champ_17_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_17_y7 }
+		localization_key = kns_hof_champ_17_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_17_y6 }
+		localization_key = kns_hof_champ_17_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_17_y5 }
+		localization_key = kns_hof_champ_17_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_17_y4 }
+		localization_key = kns_hof_champ_17_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_17_y3 }
+		localization_key = kns_hof_champ_17_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_17_y2 }
+		localization_key = kns_hof_champ_17_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_17_y1 }
+		localization_key = kns_hof_champ_17_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears18 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_18_y8 }
+		localization_key = kns_hof_champ_18_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_18_y7 }
+		localization_key = kns_hof_champ_18_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_18_y6 }
+		localization_key = kns_hof_champ_18_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_18_y5 }
+		localization_key = kns_hof_champ_18_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_18_y4 }
+		localization_key = kns_hof_champ_18_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_18_y3 }
+		localization_key = kns_hof_champ_18_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_18_y2 }
+		localization_key = kns_hof_champ_18_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_18_y1 }
+		localization_key = kns_hof_champ_18_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears19 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_19_y8 }
+		localization_key = kns_hof_champ_19_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_19_y7 }
+		localization_key = kns_hof_champ_19_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_19_y6 }
+		localization_key = kns_hof_champ_19_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_19_y5 }
+		localization_key = kns_hof_champ_19_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_19_y4 }
+		localization_key = kns_hof_champ_19_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_19_y3 }
+		localization_key = kns_hof_champ_19_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_19_y2 }
+		localization_key = kns_hof_champ_19_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_19_y1 }
+		localization_key = kns_hof_champ_19_tail_1
+	}
+	text = {
+		localization_key = kns_hof_years_none
+	}
+}
+
+KnsHofChampionYears20 = {
+	type = character
+	text = {
+		trigger = { has_variable = kns_hof_champion_20_y8 }
+		localization_key = kns_hof_champ_20_tail_8
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_20_y7 }
+		localization_key = kns_hof_champ_20_tail_7
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_20_y6 }
+		localization_key = kns_hof_champ_20_tail_6
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_20_y5 }
+		localization_key = kns_hof_champ_20_tail_5
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_20_y4 }
+		localization_key = kns_hof_champ_20_tail_4
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_20_y3 }
+		localization_key = kns_hof_champ_20_tail_3
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_20_y2 }
+		localization_key = kns_hof_champ_20_tail_2
+	}
+	text = {
+		trigger = { has_variable = kns_hof_champion_20_y1 }
+		localization_key = kns_hof_champ_20_tail_1
 	}
 	text = {
 		localization_key = kns_hof_years_none

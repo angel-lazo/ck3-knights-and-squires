@@ -1,0 +1,17 @@
+---
+description: CK3 loc YAML must stay UTF-8 with BOM
+globs: localization/**/*.yml
+alwaysApply: true
+---
+
+# CK3 localization encoding
+
+Every `localization/**/*.yml` file **must** be **UTF-8 with BOM** (`EF BB BF`). CK3 **skips** loc files that have no BOM, so keys show as raw strings.
+
+After any loc edit (including `StrReplace` / `Write`):
+
+1. Keep the first line exactly `l_english:` (English files).
+2. Keep a leading space on keys: ` kns_foo:0 "text"`.
+3. Confirm the file still starts with bytes `EF BB BF`. If not, prepend those three bytes; do not save as UTF-8 without BOM.
+
+Do not rewrite loc files in a way that strips the BOM.

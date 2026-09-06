@@ -77,61 +77,1152 @@ window = {
 					vbox = {
 						layoutpolicy_horizontal = expanding
 						spacing = 6
-						datamodel = "[GetPlayer.MakeScope.GetList('kns_hof_champions')]"
 
-						item = {
-							hbox = {
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_1').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_1_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_1').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "1"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_1').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
 								layoutpolicy_horizontal = expanding
-								spacing = 8
-								datacontext = "[Scope.Char]"
-								background = {
-									using = Background_Area_Dark
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_1').IsSet]"
 								}
 
 								text_single = {
-									size = { 36 40 }
-									align = center
-									parentanchor = vcenter
-									text = "[Add_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)1')]"
-									default_format = "#high"
-								}
-
-								widget = {
-									size = { 85 90 }
-									parentanchor = vcenter
-									portrait_head_small = {}
-								}
-
-								vbox = {
 									layoutpolicy_horizontal = expanding
-									parentanchor = vcenter
-									spacing = 2
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_1').IsSet )]"
+								}
 
-									text_single = {
-										layoutpolicy_horizontal = expanding
-										text = "[Character.GetShortUINameNoTooltip]"
-										default_format = "#high"
-									}
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_1_dead').IsSet]"
+								}
 
-									text_single = {
-										layoutpolicy_horizontal = expanding
-										text = "kns_hof_window_deceased"
-										visible = "[GetScriptedGui('kns_gui_hof_entry_is_dead').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
-									}
-
-									text_single = {
-										layoutpolicy_horizontal = expanding
-										text = "kns_hof_window_row_titles"
-										default_format = "#positive"
-									}
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_1"
+									default_format = "#positive"
 								}
 							}
 						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_2').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_2_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_2').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "2"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_2').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_2').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_2').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_2_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_2"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_3').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_3_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_3').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "3"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_3').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_3').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_3').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_3_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_3"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_4').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_4_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_4').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "4"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_4').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_4').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_4').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_4_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_4"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_5').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_5_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_5').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "5"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_5').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_5').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_5').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_5_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_5"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_6').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_6_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_6').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "6"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_6').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_6').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_6').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_6_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_6"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_7').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_7_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_7').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "7"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_7').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_7').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_7').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_7_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_7"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_8').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_8_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_8').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "8"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_8').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_8').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_8').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_8_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_8"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_9').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_9_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_9').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "9"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_9').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_9').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_9').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_9_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_9"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_10').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_10_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_10').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "10"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_10').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_10').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_10').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_10_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_10"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_11').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_11_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_11').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "11"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_11').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_11').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_11').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_11_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_11"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_12').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_12_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_12').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "12"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_12').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_12').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_12').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_12_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_12"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_13').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_13_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_13').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "13"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_13').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_13').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_13').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_13_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_13"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_14').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_14_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_14').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "14"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_14').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_14').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_14').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_14_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_14"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_15').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_15_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_15').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "15"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_15').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_15').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_15').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_15_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_15"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_16').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_16_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_16').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "16"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_16').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_16').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_16').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_16_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_16"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_17').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_17_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_17').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "17"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_17').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_17').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_17').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_17_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_17"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_18').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_18_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_18').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "18"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_18').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_18').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_18').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_18_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_18"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_19').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_19_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_19').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "19"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_19').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_19').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_19').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_19_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_19"
+									default_format = "#positive"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_champion_20').IsSet, GetPlayer.MakeScope.Var('kns_hof_champion_20_titles').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_champion_20').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "20"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_20').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_20').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_champion_20').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_champion_20_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_titles_20"
+									default_format = "#positive"
+								}
+							}
+						}
+
 					}
 				}
 
 				blockoverride "scrollbox_empty" {
-					visible = "[IsDataModelEmpty( GetPlayer.MakeScope.GetList('kns_hof_champions') )]"
+					visible = "[GetScriptedGui('kns_hof_champions_empty').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 					text = "kns_hof_window_empty_champions"
 				}
 			}
@@ -156,61 +1247,1152 @@ window = {
 					vbox = {
 						layoutpolicy_horizontal = expanding
 						spacing = 6
-						datamodel = "[GetPlayer.MakeScope.GetList('kns_hof_duelists')]"
 
-						item = {
-							hbox = {
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_1').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_1_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_1').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "1"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_1').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
 								layoutpolicy_horizontal = expanding
-								spacing = 8
-								datacontext = "[Scope.Char]"
-								background = {
-									using = Background_Area_Dark
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_1').IsSet]"
 								}
 
 								text_single = {
-									size = { 36 40 }
-									align = center
-									parentanchor = vcenter
-									text = "[Add_int32(PdxGuiWidget.GetIndexInDataModel, '(int32)1')]"
-									default_format = "#high"
-								}
-
-								widget = {
-									size = { 85 90 }
-									parentanchor = vcenter
-									portrait_head_small = {}
-								}
-
-								vbox = {
 									layoutpolicy_horizontal = expanding
-									parentanchor = vcenter
-									spacing = 2
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_1').IsSet )]"
+								}
 
-									text_single = {
-										layoutpolicy_horizontal = expanding
-										text = "[Character.GetShortUINameNoTooltip]"
-										default_format = "#high"
-									}
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_1_dead').IsSet]"
+								}
 
-									text_single = {
-										layoutpolicy_horizontal = expanding
-										text = "kns_hof_window_deceased"
-										visible = "[GetScriptedGui('kns_gui_hof_entry_is_dead').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
-									}
-
-									text_single = {
-										layoutpolicy_horizontal = expanding
-										text = "kns_hof_window_row_duel_wins"
-										default_format = "#high"
-									}
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_1"
+									default_format = "#high"
 								}
 							}
 						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_2').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_2_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_2').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "2"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_2').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_2').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_2').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_2_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_2"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_3').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_3_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_3').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "3"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_3').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_3').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_3').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_3_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_3"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_4').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_4_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_4').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "4"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_4').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_4').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_4').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_4_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_4"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_5').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_5_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_5').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "5"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_5').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_5').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_5').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_5_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_5"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_6').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_6_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_6').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "6"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_6').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_6').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_6').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_6_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_6"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_7').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_7_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_7').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "7"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_7').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_7').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_7').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_7_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_7"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_8').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_8_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_8').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "8"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_8').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_8').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_8').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_8_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_8"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_9').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_9_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_9').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "9"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_9').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_9').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_9').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_9_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_9"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_10').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_10_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_10').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "10"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_10').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_10').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_10').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_10_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_10"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_11').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_11_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_11').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "11"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_11').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_11').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_11').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_11_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_11"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_12').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_12_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_12').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "12"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_12').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_12').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_12').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_12_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_12"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_13').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_13_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_13').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "13"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_13').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_13').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_13').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_13_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_13"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_14').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_14_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_14').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "14"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_14').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_14').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_14').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_14_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_14"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_15').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_15_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_15').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "15"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_15').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_15').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_15').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_15_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_15"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_16').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_16_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_16').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "16"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_16').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_16').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_16').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_16_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_16"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_17').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_17_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_17').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "17"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_17').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_17').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_17').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_17_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_17"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_18').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_18_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_18').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "18"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_18').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_18').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_18').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_18_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_18"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_19').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_19_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_19').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "19"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_19').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_19').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_19').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_19_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_19"
+									default_format = "#high"
+								}
+							}
+						}
+
+						hbox = {
+							visible = "[Or( GetPlayer.MakeScope.Var('kns_hof_duelist_20').IsSet, GetPlayer.MakeScope.Var('kns_hof_duelist_20_wins').IsSet )]"
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							datacontext = "[GetPlayer.MakeScope.Var('kns_hof_duelist_20').Char]"
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								size = { 36 40 }
+								align = center
+								parentanchor = vcenter
+								text = "20"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 85 90 }
+								parentanchor = vcenter
+								visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_20').IsSet]"
+								portrait_head_small = {}
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								parentanchor = vcenter
+								spacing = 2
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "[Character.GetNameNoTooltip]"
+									default_format = "#high"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_20').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_fallen_name"
+									default_format = "#high"
+									visible = "[Not( GetPlayer.MakeScope.Var('kns_hof_duelist_20').IsSet )]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_deceased"
+									visible = "[GetPlayer.MakeScope.Var('kns_hof_duelist_20_dead').IsSet]"
+								}
+
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									text = "kns_hof_window_row_duel_wins_20"
+									default_format = "#high"
+								}
+							}
+						}
+
 					}
 				}
 
 				blockoverride "scrollbox_empty" {
-					visible = "[IsDataModelEmpty( GetPlayer.MakeScope.GetList('kns_hof_duelists') )]"
+					visible = "[GetScriptedGui('kns_hof_duelists_empty').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 					text = "kns_hof_window_empty_duelists"
 				}
 			}

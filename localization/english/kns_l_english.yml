@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
  # Game concepts
  game_concept_squire:0 "Squire"
  game_concept_squire_desc:0 "A youth bound to a [kns_knight|E] to learn arms, courtesy, and the duties of knighthood. Progress is tracked on the Squire trait. At high progress, any knight - or a Christian king - may dub them."

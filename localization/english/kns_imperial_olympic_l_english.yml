@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
  kns_imperial_olympic_not_on_cooldown_tt:0 "The Imperial Olympic Games are not on cooldown"
 
  kns_imperial_olympic.0001.t:0 "The Size of the Bracket"
@@ -28,11 +28,11 @@ l_english:
  kns_imperial_olympic.0006.c:0 "Three thousand gold"
  kns_imperial_olympic.0006.d:0 "Four thousand gold"
  kns_imperial_olympic.0006.e:0 "Five thousand gold"
- kns_imperial_olympic_prize_gold_1000_tt:0 "You pay 1000 gold. Victor: 400 gold. Host county tax: +10% for 6 months. Knight effectiveness: +20%"
- kns_imperial_olympic_prize_gold_2000_tt:0 "You pay 2000 gold. Victor: 800 gold. Host county tax: +20% for 6 months. Knight effectiveness: +40%"
- kns_imperial_olympic_prize_gold_3000_tt:0 "You pay 3000 gold. Victor: 1200 gold. Host county tax: +30% for 6 months. Knight effectiveness: +60%"
- kns_imperial_olympic_prize_gold_4000_tt:0 "You pay 4000 gold. Victor: 1600 gold. Host county tax: +40% for 6 months. Knight effectiveness: +80%"
- kns_imperial_olympic_prize_gold_5000_tt:0 "You pay 5000 gold. Victor: 2000 gold. Host county tax: +50% for 6 months. Knight effectiveness: +100%"
+ kns_imperial_olympic_prize_gold_1000_tt:0 "You pay 1000 gold. Victor: 400 gold, 50 [renown|E]. Host county tax: +10% for 6 months. Knight effectiveness: +20%"
+ kns_imperial_olympic_prize_gold_2000_tt:0 "You pay 2000 gold. Victor: 800 gold, 100 [renown|E]. Host county tax: +20% for 6 months. Knight effectiveness: +40%"
+ kns_imperial_olympic_prize_gold_3000_tt:0 "You pay 3000 gold. Victor: 1200 gold, 150 [renown|E]. Host county tax: +30% for 6 months. Knight effectiveness: +60%"
+ kns_imperial_olympic_prize_gold_4000_tt:0 "You pay 4000 gold. Victor: 1600 gold, 200 [renown|E]. Host county tax: +40% for 6 months. Knight effectiveness: +80%"
+ kns_imperial_olympic_prize_gold_5000_tt:0 "You pay 5000 gold. Victor: 2000 gold, 250 [renown|E]. Host county tax: +50% for 6 months. Knight effectiveness: +100%"
 
  kns_imperial_olympic.0003.t:0 "Where the Lists Stand"
  kns_imperial_olympic.0003.desc:0 "The games may be raised in your capital, or in any county of your realm. If no place is chosen when the lists open, they default to your capital."
@@ -44,7 +44,7 @@ l_english:
  kns_imperial_olympic_cancel_tt:0 "Cancel the Imperial Olympic Games"
 
  kns_imperial_olympic.0004.t:0 "Proclaim the Games"
- kns_imperial_olympic.0004.desc:0 "Summons will go out to Christian rulers within diplomatic range. They may ride to the lists themselves and send champions from their courts. Your selected champions will be entered as well.\n\nWhen the lists close, the victor takes five thousand prestige, forty percent of the gold you funded, and knighthood if they are not yet a knight (unless they are you). The host county's taxes swell for six months. The games will then return on the cycle you chose."
+ kns_imperial_olympic.0004.desc:0 "Summons will go out to Christian rulers within diplomatic range. They may ride to the lists themselves and send champions from their courts. Your selected champions will be entered as well.\n\nWhen the lists close, the victor takes five thousand prestige, forty percent of the gold you funded, dynasty [renown|E] scaled to the purse (up to 250 at five thousand gold), and knighthood if they are not yet a knight (unless they are you). The host county's taxes swell for six months. The games will then return on the cycle you chose."
 
  kns_imperial_olympic.0004.a:0 "Let the games begin"
  kns_imperial_olympic.0004.b:0 "Not yet"
@@ -89,21 +89,21 @@ l_english:
  kns_imperial_olympic.0032.desc:0 "The Imperial Olympic Games will return on the cycle you set, with the purse you named. No further payment was due: the founding was already bought."
  kns_imperial_olympic.0032.a:0 "So it shall be"
 
- kns_imperial_olympic.0102.t:0 "Called to the Lists"
- kns_imperial_olympic.0102.desc:0 "The heralds name the next bout. [kns_olympic_fighter_a.GetTitledFirstName] stands against [kns_olympic_fighter_b.GetTitledFirstName]. The fight is to first blood, not to the death."
- kns_imperial_olympic.0102.a:0 "To the lists!"
+ kns_imperial_olympic.0102.t:0 "The Next Round"
+ kns_imperial_olympic.0102.desc:0 "The heralds name the next round. [kns_olympic_fighter_a.GetTitledFirstName] stands against [kns_olympic_fighter_b.GetTitledFirstName]. The fight is to first blood, not to the death."
+ kns_imperial_olympic.0102.a:0 "Begin the round"
 
  kns_imperial_olympic.0010.t:0 "Crown the Victor"
- kns_imperial_olympic.0010.desc_self:0 "The last bout is done and the lists fall silent. The heralds name you victor of the Imperial Olympic Games. Five thousand prestige is yours by right of the bracket, and forty percent of the gold you funded for the lists."
- kns_imperial_olympic.0010.desc_crown:0 "The bracket is decided. Before the gathered rulers of Christendom you raise [kns_olympic_winner.GetTitledFirstNamePossessive] hand and name [kns_olympic_winner.GetHerHim] victor of the Imperial Olympic Games. Five thousand prestige, forty percent of the funded gold, and knighthood if they have not yet been dubbed, go to the champion."
+ kns_imperial_olympic.0010.desc_self:0 "The last bout is done and the lists fall silent. The heralds name you victor of the Imperial Olympic Games. Five thousand prestige is yours by right of the bracket, forty percent of the gold you funded for the lists, and [renown|E] for your house in proportion to that purse."
+ kns_imperial_olympic.0010.desc_crown:0 "The bracket is decided. Before the gathered rulers of Christendom you raise [kns_olympic_winner.GetTitledFirstNamePossessive] hand and name [kns_olympic_winner.GetHerHim] victor of the Imperial Olympic Games. Five thousand prestige, forty percent of the funded gold, [renown|E] for their house scaled to the purse, and knighthood if they have not yet been dubbed, go to the champion."
  kns_imperial_olympic.0010.desc_none:0 "The games were proclaimed, but no victor could be crowned."
  kns_imperial_olympic.0010.a:0 "The crown is mine"
  kns_imperial_olympic.0010.b:0 "Let the heralds proclaim it"
  kns_imperial_olympic.0010.c:0 "A hollow proclamation"
- kns_imperial_olympic_prize_tt:0 "The champion receives #V 5000#! [prestige|E] and #V 40%#! of the gold you funded. You pay the full fund; the rest is the cost of the games. The host county gains tax for 6 months (up to +50% at 5000 gold)"
+ kns_imperial_olympic_prize_tt:0 "The champion receives #V 5000#! [prestige|E], #V 40%#! of the gold you funded, and [renown|E] equal to #V 5%#! of the purse (50 at 1000 gold, 250 at 5000). You pay the full fund; the rest is the cost of the games. If you are champion, you still receive the 40% prize. The host county gains tax for 6 months (up to +50% at 5000 gold)"
 
  kns_imperial_olympic.0011.t:0 "Victor of the Imperial Games"
- kns_imperial_olympic.0011.desc_won:0 "[kns_emperor.GetTitledFirstName] has crowned you victor of the Imperial Olympic Games. Five thousand prestige is yours, and forty percent of the gold funded for the lists."
+ kns_imperial_olympic.0011.desc_won:0 "[kns_emperor.GetTitledFirstName] has crowned you victor of the Imperial Olympic Games. Five thousand prestige is yours, forty percent of the gold funded for the lists, and [renown|E] for your house in proportion to that purse."
  kns_imperial_olympic.0011.desc_lost:0 "You competed in the imperial games, but another stood last in the bracket.\n\nThe victor is [kns_olympic_winner.GetTitledFirstName]."
  kns_imperial_olympic.0011.desc_news:0 "Word from the imperial games: [kns_emperor.GetTitledFirstName] has closed the lists.\n\nThe victor is [kns_olympic_winner.GetTitledFirstName]."
  kns_imperial_olympic.0011.desc_none:0 "The imperial games were proclaimed, but no victor could be named."
@@ -111,6 +111,21 @@ l_english:
  kns_imperial_olympic.0011.a:0 "I am victor"
  kns_imperial_olympic.0011.b:0 "So the lists decide"
  kns_imperial_olympic.0011.c:0 "A pity"
+
+ kns_imperial_olympic.0012.t:0 "A Champion of the Games"
+ kns_imperial_olympic.0012.desc_self:0 "The Imperial Olympic Games are closed. The heralds name you champion of the lists: five thousand prestige, forty percent of the funded gold, and [renown|E] for your house in proportion to that purse."
+ kns_imperial_olympic.0012.desc:0 "The Imperial Olympic Games are closed. The last bout is done, and the heralds name [kns_olympic_winner.GetTitledFirstName] champion of the lists."
+ kns_imperial_olympic.0012.desc_none:0 "Word of the imperial games has come, but no champion could be named."
+ kns_imperial_olympic.0012.a:0 "The crown is mine"
+ kns_imperial_olympic.0012.b:0 "So the lists decide"
+ kns_imperial_olympic.0012.c:0 "A hollow proclamation"
+
+ kns_imperial_olympic.0104.t:0 "Worn Arms"
+ kns_imperial_olympic.0104.desc:0 "Your smiths stop you before you take the lists. A duel can strip five to fifteen percent of a weapon or harness's strength if you lose, and five to ten if you win. What you wear now is already at fifteen percent of its soundness, or worse. Pay the smiths, or trust the iron as it stands."
+ kns_imperial_olympic.0104.a:0 "Pay the smiths"
+ kns_imperial_olympic.0104.a.tt:0 "Restore worn weapon and armor to full durability. Costs 50 gold per worn piece"
+ kns_imperial_olympic.0104.b:0 "I will fight as I am"
+ kns_imperial_olympic.0104.b.tt:0 "Begin the round without repairing"
 
  kns_imperial_olympic_winner_toast:0 "Victor of the Imperial Games"
  kns_imperial_olympic_winner_toast.tt:0 "The victor is [kns_olympic_winner.GetTitledFirstName]."
@@ -122,8 +137,8 @@ l_english:
  kns_art_olympic_axe_desc:0 "Awarded as the grand prize of the Imperial Olympic Games. The Emperor's hand is in its history."
 
  kns_olympic_champion_opinion:0 "Imperial Games Victor"
- kns_olympic_knight_culture_modifier:0 "Olympic Knight Culture"
- kns_olympic_knight_culture_modifier_desc:0 "The imperial purse has set every knight to train harder for the next games. Knight effectiveness rises with the gold offered to the champion."
+ kns_olympic_knight_culture_modifier:0 "[knight_effectiveness|E]"
+ kns_olympic_knight_culture_modifier_desc:0 ""
  kns_olympic_host_county_modifier:0 "Host of the Imperial Games"
  kns_olympic_host_county_modifier_desc:0 "The festival spent in this county fills the markets. Taxes are raised for six months, up to half again at a full purse."
  kns_olympic_choose_venue_interaction:0 "Choose the Olympic Venue"

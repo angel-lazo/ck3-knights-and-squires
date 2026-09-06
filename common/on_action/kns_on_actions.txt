@@ -120,6 +120,21 @@ kns_on_death = {
 		if = {
 			limit = {
 				OR = {
+					AND = {
+						has_variable = kns_imperial_duel_wins
+						var:kns_imperial_duel_wins > 0
+					}
+					AND = {
+						has_variable = kns_imperial_titles_won
+						var:kns_imperial_titles_won > 0
+					}
+				}
+			}
+			kns_register_imperial_hof_character_effect = { CHAR = this }
+		}
+		if = {
+			limit = {
+				OR = {
 					has_character_flag = kns_olympic_institution
 					has_character_flag = kns_imperial_olympic_host
 				}

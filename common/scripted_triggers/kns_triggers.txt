@@ -685,3 +685,31 @@ kns_can_enter_papal_youth_tourney_trigger = {
 		kns_has_papal_tourney_physical_deformity_trigger = no
 	}
 }
+
+# Worst-case lost duel can take 15% of max durability from weapon and armor.
+kns_olympic_equipped_gear_low_durability_trigger = {
+	OR = {
+		any_equipped_character_artifact = {
+			artifact_slot_type = primary_armament
+			artifact_durability_percent <= 0.15
+		}
+		any_equipped_character_artifact = {
+			artifact_slot_type = armor
+			artifact_durability_percent <= 0.15
+		}
+	}
+}
+
+kns_olympic_emperor_bout_needs_gear_warning_trigger = {
+	exists = scope:kns_emperor
+	exists = scope:kns_olympic_fighter_a
+	exists = scope:kns_olympic_fighter_b
+	scope:kns_emperor = {
+		is_ai = no
+		kns_olympic_equipped_gear_low_durability_trigger = yes
+		OR = {
+			this = scope:kns_olympic_fighter_a
+			this = scope:kns_olympic_fighter_b
+		}
+	}
+}

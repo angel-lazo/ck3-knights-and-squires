@@ -299,6 +299,10 @@ kns_copy_olympic_runtime_to_effect = {
 		TARGET = scope:kns_olympic_copy_target
 		LIST = kns_olympic_player_champion_picks
 	}
+	kns_copy_olympic_list_to_effect = {
+		TARGET = scope:kns_olympic_copy_target
+		LIST = kns_hof_index
+	}
 	scope:kns_olympic_copy_target = {
 		add_character_flag = kns_imperial_olympic_host
 	}
@@ -558,6 +562,7 @@ kns_handle_imperial_olympic_organizer_death_effect = {
 	if = {
 		limit = { kns_has_olympic_settings_to_save_trigger = yes }
 		kns_olympic_debug_log_effect = { MSG = organizer_death }
+		kns_merge_character_hof_index_into_global_effect = yes
 		kns_save_olympic_dormant_from_this_effect = yes
 		if = {
 			limit = { exists = player_heir }
@@ -991,9 +996,44 @@ kns_seed_imperial_olympic_bracket_effect = {
 	}
 }
 
+kns_merge_character_hof_index_into_global_effect = {
+	every_in_list = {
+		variable = kns_hof_index
+		save_scope_as = kns_hof_merge_char
+		if = {
+			limit = {
+				NOT = {
+					is_target_in_global_variable_list = {
+						name = kns_hof_index
+						target = scope:kns_hof_merge_char
+					}
+				}
+			}
+			add_to_global_variable_list = {
+				name = kns_hof_index
+				target = scope:kns_hof_merge_char
+			}
+		}
+	}
+}
+
 kns_register_imperial_hof_character_effect = {
 	$CHAR$ = {
 		save_scope_as = kns_hof_char
+	}
+	if = {
+		limit = {
+			NOT = {
+				is_target_in_global_variable_list = {
+					name = kns_hof_index
+					target = scope:kns_hof_char
+				}
+			}
+		}
+		add_to_global_variable_list = {
+			name = kns_hof_index
+			target = scope:kns_hof_char
+		}
 	}
 	every_player = {
 		limit = {
@@ -1009,6 +1049,15 @@ kns_register_imperial_hof_character_effect = {
 			target = scope:kns_hof_char
 		}
 	}
+	if = {
+		limit = {
+			scope:kns_hof_char = {
+				NOT = { has_variable = kns_hof_ref_slot }
+			}
+		}
+		kns_hof_bind_next_ref_effect = yes
+	}
+	kns_hof_snapshot_character_stats_effect = yes
 }
 
 kns_olympic_save_host_effect = {
@@ -1390,7 +1439,32 @@ kns_apply_olympic_knight_culture_modifier_effect = {
 			has_variable = kns_olympic_prize_gold
 			var:kns_olympic_prize_gold > 0
 		}
-		add_character_modifier = kns_olympic_knight_culture_modifier
+		if = {
+			limit = {
+				has_variable = kns_olympic_interval_years
+				var:kns_olympic_interval_years = 2
+			}
+			add_character_modifier = {
+				modifier = kns_olympic_knight_culture_modifier
+				years = 3
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = kns_olympic_interval_years
+				var:kns_olympic_interval_years = 3
+			}
+			add_character_modifier = {
+				modifier = kns_olympic_knight_culture_modifier
+				years = 4
+			}
+		}
+		else = {
+			add_character_modifier = {
+				modifier = kns_olympic_knight_culture_modifier
+				years = 5
+			}
+		}
 	}
 }
 
@@ -1429,6 +1503,10 @@ kns_award_imperial_olympic_winner_effect = {
 		}
 		$WINNER$ = {
 			add_gold = scope:kns_emperor.kns_olympic_winner_gold_value
+			if = {
+				limit = { exists = dynasty }
+				add_dynasty_prestige = scope:kns_emperor.kns_olympic_winner_renown_value
+			}
 		}
 	}
 	if = {
@@ -1459,16 +1537,45 @@ kns_crown_imperial_olympic_champion_effect = {
 		save_scope_as = kns_olympic_winner
 	}
 	kns_award_imperial_olympic_winner_effect = { WINNER = scope:kns_olympic_winner }
-	scope:kns_emperor = {
-		if = {
-			limit = {
+	if = {
+		limit = {
+			exists = scope:kns_emperor
+			scope:kns_emperor = {
 				is_alive = yes
 				is_ai = no
 			}
+		}
+		scope:kns_emperor = {
 			trigger_event = kns_imperial_olympic.0010
 		}
-		else = {
-			kns_clear_imperial_olympic_vars_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_player = {
+				is_alive = yes
+				OR = {
+					has_character_flag = kns_olympic_institution
+					highest_held_title_tier >= tier_empire
+				}
+			}
+		}
+		random_player = {
+			limit = {
+				is_alive = yes
+				OR = {
+					has_character_flag = kns_olympic_institution
+					highest_held_title_tier >= tier_empire
+				}
+			}
+			trigger_event = kns_imperial_olympic.0012
+		}
+	}
+	else = {
+		if = {
+			limit = { exists = scope:kns_emperor }
+			scope:kns_emperor = {
+				kns_clear_imperial_olympic_vars_effect = yes
+			}
 		}
 	}
 }
@@ -1554,69 +1661,36 @@ kns_start_imperial_olympic_bracket_effect = {
 
 kns_rebuild_hof_list_effect = {
 	save_scope_as = kns_hof_viewer
-	clear_variable_list = kns_hof_duelists
-	clear_variable_list = kns_hof_champions
+	kns_merge_character_hof_index_into_global_effect = yes
+	if = {
+		limit = { exists = global_var:kns_olympic_dormant_predecessor }
+		global_var:kns_olympic_dormant_predecessor = {
+			kns_merge_character_hof_index_into_global_effect = yes
+		}
+	}
+	every_in_global_list = {
+		variable = kns_hof_index
+		kns_register_imperial_hof_character_effect = { CHAR = this }
+	}
 	every_in_list = {
 		variable = kns_hof_index
-		limit = {
-			OR = {
-				AND = {
-					has_variable = kns_imperial_duel_wins
-					var:kns_imperial_duel_wins > 0
-				}
-				AND = {
-					has_variable = kns_imperial_titles_won
-					var:kns_imperial_titles_won > 0
-				}
-			}
-		}
-		add_to_list = kns_hof_unsorted
+		kns_register_imperial_hof_character_effect = { CHAR = this }
 	}
-	ordered_in_list = {
-		list = kns_hof_unsorted
-		limit = {
-			has_variable = kns_imperial_duel_wins
-			var:kns_imperial_duel_wins > 0
-		}
-		order_by = var:kns_imperial_duel_wins
-		max = 20
-		check_range_bounds = no
-		save_temporary_scope_as = kns_hof_entry
-		scope:kns_hof_viewer = {
-			add_to_variable_list = {
-				name = kns_hof_duelists
-				target = scope:kns_hof_entry
-			}
-		}
-	}
-	ordered_in_list = {
-		list = kns_hof_unsorted
-		limit = {
-			has_variable = kns_imperial_titles_won
-			var:kns_imperial_titles_won > 0
-		}
-		order_by = var:kns_imperial_titles_won
-		max = 100
-		check_range_bounds = no
-		save_temporary_scope_as = kns_hof_entry
-		scope:kns_hof_viewer = {
-			add_to_variable_list = {
-				name = kns_hof_champions
-				target = scope:kns_hof_entry
-			}
-		}
-	}
+	kns_hof_migrate_existing_refs_effect = yes
+	kns_hof_clear_display_vars_effect = yes
+	kns_hof_fill_ranked_display_effect = yes
 }
 
 kns_open_hof_window_effect = {
-	kns_rebuild_hof_list_effect = yes
 	set_variable = kns_hof_window_open
+	kns_rebuild_hof_list_effect = yes
 }
 
 kns_close_hof_window_effect = {
 	remove_variable = kns_hof_window_open
 	clear_variable_list = kns_hof_duelists
 	clear_variable_list = kns_hof_champions
+	kns_hof_clear_display_vars_effect = yes
 }
 
 kns_preview_imperial_olympic_invite_count_effect = {
@@ -1695,14 +1769,66 @@ kns_rebuild_olympic_champion_picker_list_effect = {
 }
 
 kns_open_olympic_champion_picker_effect = {
+	set_variable = kns_olympic_champion_picker_open
 	kns_preview_imperial_olympic_invite_count_effect = yes
 	kns_sync_olympic_champion_picker_slots_effect = yes
 	kns_rebuild_olympic_champion_picker_list_effect = yes
 	kns_sync_olympic_champion_picker_count_effect = yes
-	set_variable = kns_olympic_champion_picker_open
 }
 
 kns_close_olympic_champion_picker_effect = {
 	remove_variable = kns_olympic_champion_picker_open
 	clear_variable_list = kns_olympic_eligible_champions
+}
+
+kns_start_imperial_olympic_player_bout_effect = {
+	if = {
+		limit = {
+			scope:kns_olympic_fighter_a = { is_ai = no }
+		}
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = scope:kns_olympic_fighter_a
+			SC_ATTACKER = scope:kns_olympic_fighter_a
+			SC_DEFENDER = scope:kns_olympic_fighter_b
+			FATALITY = no
+			FIXED = no
+			LOCALE = courtyard
+			OUTPUT_EVENT = kns_imperial_olympic.0103
+			INVALIDATION_EVENT = kns_imperial_olympic.0103
+		}
+	}
+	else = {
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = scope:kns_olympic_fighter_b
+			SC_ATTACKER = scope:kns_olympic_fighter_b
+			SC_DEFENDER = scope:kns_olympic_fighter_a
+			FATALITY = no
+			FIXED = no
+			LOCALE = courtyard
+			OUTPUT_EVENT = kns_imperial_olympic.0103
+			INVALIDATION_EVENT = kns_imperial_olympic.0103
+		}
+	}
+	hidden_effect = {
+		trigger_event = {
+			id = kns_imperial_olympic.0103
+			days = 5
+		}
+	}
+}
+
+kns_repair_olympic_low_durability_gear_effect = {
+	every_equipped_character_artifact = {
+		limit = {
+			OR = {
+				artifact_slot_type = primary_armament
+				artifact_slot_type = armor
+			}
+			artifact_durability_percent <= 0.15
+		}
+		add_durability = {
+			value = artifact_max_durability
+			subtract = artifact_durability
+		}
+	}
 }

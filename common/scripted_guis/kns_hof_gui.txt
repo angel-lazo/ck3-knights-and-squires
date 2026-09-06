@@ -19,6 +19,20 @@ kns_gui_refresh_hof_window = {
 	}
 }
 
+kns_hof_champions_empty = {
+	scope = character
+	is_shown = {
+		NOT = { exists = var:kns_hof_champion_1_titles }
+	}
+}
+
+kns_hof_duelists_empty = {
+	scope = character
+	is_shown = {
+		NOT = { exists = var:kns_hof_duelist_1_wins }
+	}
+}
+
 kns_gui_hof_entry_has_crown = {
 	scope = character
 	saved_scopes = {
