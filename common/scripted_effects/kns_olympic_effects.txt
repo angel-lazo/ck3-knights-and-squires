@@ -1115,15 +1115,8 @@ kns_register_imperial_hof_character_effect = {
 			target = scope:kns_hof_char
 		}
 	}
-	if = {
-		limit = {
-			scope:kns_hof_char = {
-				NOT = { has_variable = kns_hof_ref_slot }
-			}
-		}
-		kns_hof_bind_next_ref_effect = yes
-	}
-	kns_hof_snapshot_character_stats_effect = yes
+	kns_hof_freeze_dead_title_effect = yes
+	kns_hof_freeze_dead_duel_effect = yes
 }
 
 kns_olympic_save_host_effect = {
@@ -3022,6 +3015,128 @@ kns_start_imperial_olympic_bracket_effect = {
 	}
 }
 
+# Copy live character stats into the viewer's tmp vars for Hall of Legends rows.
+# Ranked fill reads kns_hof_index; these do not use the 100-slot snapshots.
+kns_hof_copy_champion_from_char_to_tmp_effect = {
+	remove_variable = kns_hof_tmp_char
+	remove_variable = kns_hof_tmp_titles
+	remove_variable = kns_hof_tmp_dead
+	remove_variable = kns_hof_tmp_y1
+	remove_variable = kns_hof_tmp_y2
+	remove_variable = kns_hof_tmp_y3
+	remove_variable = kns_hof_tmp_y4
+	remove_variable = kns_hof_tmp_y5
+	remove_variable = kns_hof_tmp_y6
+	remove_variable = kns_hof_tmp_y7
+	remove_variable = kns_hof_tmp_y8
+	if = {
+		limit = { exists = scope:kns_hof_rank_char }
+		set_variable = {
+			name = kns_hof_tmp_char
+			value = scope:kns_hof_rank_char
+		}
+		if = {
+			limit = { scope:kns_hof_rank_char = { has_variable = kns_imperial_titles_won } }
+			set_variable = {
+				name = kns_hof_tmp_titles
+				value = scope:kns_hof_rank_char.var:kns_imperial_titles_won
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_rank_char = { is_alive = no } }
+			set_variable = kns_hof_tmp_dead
+		}
+		if = {
+			limit = { scope:kns_hof_rank_char = { has_variable = kns_olympic_win_year_1 } }
+			set_variable = {
+				name = kns_hof_tmp_y1
+				value = scope:kns_hof_rank_char.var:kns_olympic_win_year_1
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_rank_char = { has_variable = kns_olympic_win_year_2 } }
+			set_variable = {
+				name = kns_hof_tmp_y2
+				value = scope:kns_hof_rank_char.var:kns_olympic_win_year_2
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_rank_char = { has_variable = kns_olympic_win_year_3 } }
+			set_variable = {
+				name = kns_hof_tmp_y3
+				value = scope:kns_hof_rank_char.var:kns_olympic_win_year_3
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_rank_char = { has_variable = kns_olympic_win_year_4 } }
+			set_variable = {
+				name = kns_hof_tmp_y4
+				value = scope:kns_hof_rank_char.var:kns_olympic_win_year_4
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_rank_char = { has_variable = kns_olympic_win_year_5 } }
+			set_variable = {
+				name = kns_hof_tmp_y5
+				value = scope:kns_hof_rank_char.var:kns_olympic_win_year_5
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_rank_char = { has_variable = kns_olympic_win_year_6 } }
+			set_variable = {
+				name = kns_hof_tmp_y6
+				value = scope:kns_hof_rank_char.var:kns_olympic_win_year_6
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_rank_char = { has_variable = kns_olympic_win_year_7 } }
+			set_variable = {
+				name = kns_hof_tmp_y7
+				value = scope:kns_hof_rank_char.var:kns_olympic_win_year_7
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_rank_char = { has_variable = kns_olympic_win_year_8 } }
+			set_variable = {
+				name = kns_hof_tmp_y8
+				value = scope:kns_hof_rank_char.var:kns_olympic_win_year_8
+			}
+		}
+	}
+}
+
+kns_hof_copy_duelist_from_char_to_tmp_effect = {
+	remove_variable = kns_hof_tmp_char
+	remove_variable = kns_hof_tmp_wins
+	remove_variable = kns_hof_tmp_losses
+	remove_variable = kns_hof_tmp_dead
+	if = {
+		limit = { exists = scope:kns_hof_rank_char }
+		set_variable = {
+			name = kns_hof_tmp_char
+			value = scope:kns_hof_rank_char
+		}
+		if = {
+			limit = { scope:kns_hof_rank_char = { has_variable = kns_imperial_duel_wins } }
+			set_variable = {
+				name = kns_hof_tmp_wins
+				value = scope:kns_hof_rank_char.var:kns_imperial_duel_wins
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_rank_char = { has_variable = kns_imperial_duel_losses } }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = scope:kns_hof_rank_char.var:kns_imperial_duel_losses
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_rank_char = { is_alive = no } }
+			set_variable = kns_hof_tmp_dead
+		}
+	}
+}
+
 kns_rebuild_hof_list_effect = {
 	save_scope_as = kns_hof_viewer
 	kns_merge_character_hof_index_into_global_effect = yes
@@ -3039,7 +3154,7 @@ kns_rebuild_hof_list_effect = {
 		variable = kns_hof_index
 		kns_register_imperial_hof_character_effect = { CHAR = this }
 	}
-	kns_hof_migrate_existing_refs_effect = yes
+	kns_hof_scan_migrate_old_shared_slots_effect = yes
 	kns_hof_clear_display_vars_effect = yes
 	kns_hof_fill_ranked_display_effect = yes
 }

@@ -165,3 +165,36 @@ kns_olympic_gear_repair_gold_value = {
 		add = 50
 	}
 }
+
+# Hall of Legends ranking (ordered_in_global_list on kns_hof_index).
+kns_hof_titles_rank_value = {
+	value = 0
+	if = {
+		limit = { has_variable = kns_imperial_titles_won }
+		add = var:kns_imperial_titles_won
+	}
+}
+
+kns_hof_duels_rank_value = {
+	value = 0
+	if = {
+		limit = { has_variable = kns_imperial_duel_wins }
+		add = var:kns_imperial_duel_wins
+	}
+}
+
+# Snapshot steal priority: tournament titles outweigh bout wins.
+kns_hof_persist_score_value = {
+	value = 0
+	if = {
+		limit = { has_variable = kns_imperial_titles_won }
+		add = {
+			value = var:kns_imperial_titles_won
+			multiply = 1000
+		}
+	}
+	if = {
+		limit = { has_variable = kns_imperial_duel_wins }
+		add = var:kns_imperial_duel_wins
+	}
+}
