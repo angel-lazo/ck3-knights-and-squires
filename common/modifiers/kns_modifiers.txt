@@ -18,3 +18,30 @@ kns_funding_knight_training = {
 		display_mode = scaled
 	}
 }
+
+kns_olympic_champion_opinion = {
+	opinion = 15
+	years = 10
+}
+
+# 0.0002 * prize gold: 1000 = 20%, 5000 = 100% knight effectiveness
+kns_olympic_knight_culture_modifier = {
+	icon = martial_positive
+	knight_effectiveness_mult = 0.0002
+	scale = {
+		value = kns_olympic_prize_gold_scale_value
+		desc = kns_olympic_knight_culture_modifier
+		display_mode = scaled
+	}
+}
+
+# 0.0001 * prize gold: 1000 = 10%, 5000 = 50% county tax. Lasts 6 months when applied.
+kns_olympic_host_county_modifier = {
+	icon = economy_positive
+	tax_mult = 0.0001
+	scale = {
+		value = kns_olympic_county_bonus_scale_value
+		desc = kns_olympic_host_county_modifier
+		display_mode = scaled
+	}
+}

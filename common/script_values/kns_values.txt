@@ -43,3 +43,125 @@ kns_prowess_training_room_value = {
 		min = 0
 	}
 }
+
+# Imperial Olympic Tournament — hard minimum entrants to crown a champion
+kns_olympic_hard_minimum_value = {
+	value = 2
+}
+
+# Player may reserve up to this many champions (self + court knights).
+kns_olympic_player_champion_slots_value = {
+	value = 4
+}
+
+# Invited ruler champion quota: count 1, duke 2, king 3, empire/hegemony 4. Barons use the count quota.
+kns_olympic_slots_per_ruler_value = {
+	value = 1
+	if = {
+		limit = { highest_held_title_tier >= tier_duchy }
+		value = 2
+	}
+	if = {
+		limit = { highest_held_title_tier >= tier_kingdom }
+		value = 3
+	}
+	if = {
+		limit = { highest_held_title_tier >= tier_empire }
+		value = 4
+	}
+}
+
+# Purse gold on the Olympic host (1000–5000). Scales knight-effectiveness modifier.
+kns_olympic_prize_gold_scale_value = {
+	value = 1000
+	if = {
+		limit = { has_variable = kns_olympic_prize_gold }
+		value = var:kns_olympic_prize_gold
+	}
+}
+
+# Winner takes 40% of the funded purse.
+kns_olympic_winner_gold_value = {
+	value = kns_olympic_prize_gold_scale_value
+	multiply = 0.4
+}
+
+# Dynasty renown: 0.05 * purse (1000 = 50, 5000 = 250).
+kns_olympic_winner_renown_value = {
+	value = kns_olympic_prize_gold_scale_value
+	multiply = 0.05
+}
+
+# County tax bonus scale; set on the host county when the games are crowned.
+kns_olympic_county_bonus_scale_value = {
+	value = 1000
+	if = {
+		limit = { has_variable = kns_olympic_county_bonus_scale }
+		value = var:kns_olympic_county_bonus_scale
+	}
+}
+
+# Fake-duel random_list modifier, evaluated on the fighter.
+# Total weight = 5 (list base) + max(0, prowess×2 − 5×floor(gap/10)).
+# Gap penalty applies only when this fighter is behind the other.
+# Outer min 0 keeps the add from going negative so the +5 floor is always intact.
+kns_olympic_fake_duel_prowess_weight_value = {
+	value = prowess
+	multiply = 2
+	if = {
+		limit = {
+			exists = scope:kns_olympic_fighter_a
+			exists = scope:kns_olympic_fighter_b
+			this = scope:kns_olympic_fighter_a
+			prowess < scope:kns_olympic_fighter_b.prowess
+		}
+		subtract = {
+			value = scope:kns_olympic_fighter_b.prowess
+			subtract = prowess
+			min = 0
+			divide = 10
+			floor = yes
+			multiply = 5
+		}
+	}
+	if = {
+		limit = {
+			exists = scope:kns_olympic_fighter_a
+			exists = scope:kns_olympic_fighter_b
+			this = scope:kns_olympic_fighter_b
+			prowess < scope:kns_olympic_fighter_a.prowess
+		}
+		subtract = {
+			value = scope:kns_olympic_fighter_a.prowess
+			subtract = prowess
+			min = 0
+			divide = 10
+			floor = yes
+			multiply = 5
+		}
+	}
+	min = 0
+}
+
+# 50 gold per worn weapon or armor piece at or below 15% durability.
+kns_olympic_gear_repair_gold_value = {
+	value = 0
+	if = {
+		limit = {
+			any_equipped_character_artifact = {
+				artifact_slot_type = primary_armament
+				artifact_durability_percent <= 0.15
+			}
+		}
+		add = 50
+	}
+	if = {
+		limit = {
+			any_equipped_character_artifact = {
+				artifact_slot_type = armor
+				artifact_durability_percent <= 0.15
+			}
+		}
+		add = 50
+	}
+}

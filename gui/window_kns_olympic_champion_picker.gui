@@ -1,0 +1,157 @@
+window = {
+	name = "kns_olympic_champion_picker_window"
+	size = { 820 900 }
+	parentanchor = center
+	position = { 0 0 }
+	movable = yes
+	layer = top
+	allow_outside = yes
+	visible = "[GetPlayer.MakeScope.Var('kns_olympic_champion_picker_open').IsSet]"
+
+	using = Window_Background_Subwindow
+
+		vbox = {
+			margin = { 10 10 }
+			spacing = 8
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				spacing = 8
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_olympic_champion_picker_title"
+					fontsize = 22
+				}
+
+				button_close = {
+					onclick = "[GetScriptedGui('kns_close_olympic_champion_picker').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+				}
+			}
+
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				background = {
+					using = Background_Area_Dark
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_olympic_champion_picker_subtitle"
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_olympic_champion_picker_quota"
+					default_format = "#high"
+				}
+			}
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				spacing = 8
+
+				button_standard = {
+					layoutpolicy_horizontal = expanding
+					text = "kns_olympic_champion_picker_refresh"
+					tooltip = "kns_olympic_champion_picker_refresh_tt"
+					onclick = "[GetScriptedGui('kns_gui_refresh_olympic_champion_picker').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+				}
+
+				button_standard = {
+					layoutpolicy_horizontal = expanding
+					text = "kns_olympic_champion_picker_clear"
+					tooltip = "kns_olympic_champion_picker_clear_tt"
+					onclick = "[GetScriptedGui('kns_gui_clear_olympic_champion_picks').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+				}
+			}
+
+			scrollbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+
+				blockoverride "scrollbox_content" {
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 6
+						datamodel = "[GetPlayer.MakeScope.GetList('kns_olympic_eligible_champions')]"
+
+						item = {
+							hbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 8
+								datacontext = "[Scope.Char]"
+								background = {
+									using = Background_Area_Dark
+								}
+
+								widget = {
+									size = { 85 90 }
+									parentanchor = vcenter
+									visible = "[Character.IsValid]"
+									portrait_head_small = {}
+								}
+
+								vbox = {
+									layoutpolicy_horizontal = expanding
+									parentanchor = vcenter
+									spacing = 2
+
+									text_single = {
+										layoutpolicy_horizontal = expanding
+										visible = "[Character.IsValid]"
+										text = "[Character.GetShortUINameNoTooltip]"
+										default_format = "#high"
+									}
+
+									text_single = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_olympic_champion_picker_row_prowess"
+										default_format = "#high"
+									}
+
+									hbox = {
+										spacing = 6
+
+										text_single = {
+											text = "kns_olympic_champion_picker_you"
+											visible = "[GetScriptedGui('kns_gui_olympic_champion_is_self').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+										}
+
+										text_single = {
+											text = "kns_olympic_champion_picker_courtier"
+											visible = "[GetScriptedGui('kns_gui_olympic_champion_is_courtier').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+										}
+									}
+								}
+
+								button_checkbox_label = {
+									parentanchor = vcenter
+									onclick = "[GetScriptedGui('kns_gui_toggle_olympic_champion_pick').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+									enabled = "[GetScriptedGui('kns_gui_toggle_olympic_champion_pick').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+									tooltip = "kns_olympic_champion_picker_toggle_tt"
+
+									blockoverride "checkbox" {
+										checked = "[GetScriptedGui('kns_gui_olympic_champion_is_picked').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+									}
+									blockoverride "text" {
+										text = "kns_olympic_champion_picker_selected"
+									}
+								}
+							}
+						}
+					}
+				}
+
+				blockoverride "scrollbox_empty" {
+					visible = "[IsDataModelEmpty( GetPlayer.MakeScope.GetList('kns_olympic_eligible_champions') )]"
+					text = "kns_olympic_champion_picker_empty"
+				}
+			}
+		}
+}

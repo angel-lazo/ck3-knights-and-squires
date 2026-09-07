@@ -1,0 +1,72 @@
+kns_hof_window_is_shown = {
+	scope = character
+	is_shown = {
+		exists = var:kns_hof_window_open
+	}
+}
+
+kns_close_hof_window = {
+	scope = character
+	effect = {
+		kns_close_hof_window_effect = yes
+	}
+}
+
+kns_gui_refresh_hof_window = {
+	scope = character
+	effect = {
+		kns_rebuild_hof_list_effect = yes
+	}
+}
+
+kns_hof_champions_empty = {
+	scope = character
+	is_shown = {
+		NOT = { exists = var:kns_hof_champion_1_titles }
+	}
+}
+
+kns_hof_duelists_empty = {
+	scope = character
+	is_shown = {
+		NOT = { exists = var:kns_hof_duelist_1_wins }
+	}
+}
+
+kns_gui_hof_entry_has_crown = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		scope:target = {
+			has_variable = kns_imperial_titles_won
+			var:kns_imperial_titles_won > 0
+		}
+	}
+}
+
+kns_gui_hof_entry_is_dead = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		scope:target = {
+			is_alive = no
+		}
+	}
+}
+
+kns_gui_hof_entry_has_duel_wins = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		scope:target = {
+			has_variable = kns_imperial_duel_wins
+			var:kns_imperial_duel_wins > 0
+		}
+	}
+}

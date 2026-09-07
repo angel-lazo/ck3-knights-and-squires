@@ -96,3 +96,210 @@ kns_was_stripped_of_knighthood = {
 	participants = { stripper }
 	duration = { years = 100 }
 }
+
+kns_olympic_defeated_in_lists = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_defeated_in_lists_desc }
+	second_perspective_description = { desc = kns_olympic_defeated_in_lists_desc_second }
+	third_perspective_description = { desc = kns_olympic_defeated_in_lists_desc_third }
+	participants = { opponent }
+	duration = { years = 75 }
+}
+
+kns_olympic_defeated_round_1 = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_defeated_round_1_desc }
+	second_perspective_description = { desc = kns_olympic_defeated_round_1_desc_second }
+	third_perspective_description = { desc = kns_olympic_defeated_round_1_desc_third }
+	participants = { opponent }
+	duration = { years = 75 }
+}
+
+kns_olympic_defeated_round_2 = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_defeated_round_2_desc }
+	second_perspective_description = { desc = kns_olympic_defeated_round_2_desc_second }
+	third_perspective_description = { desc = kns_olympic_defeated_round_2_desc_third }
+	participants = { opponent }
+	duration = { years = 75 }
+}
+
+kns_olympic_defeated_round_3 = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_defeated_round_3_desc }
+	second_perspective_description = { desc = kns_olympic_defeated_round_3_desc_second }
+	third_perspective_description = { desc = kns_olympic_defeated_round_3_desc_third }
+	participants = { opponent }
+	duration = { years = 75 }
+}
+
+kns_olympic_defeated_round_4 = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_defeated_round_4_desc }
+	second_perspective_description = { desc = kns_olympic_defeated_round_4_desc_second }
+	third_perspective_description = { desc = kns_olympic_defeated_round_4_desc_third }
+	participants = { opponent }
+	duration = { years = 75 }
+}
+
+kns_olympic_defeated_round_5 = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_defeated_round_5_desc }
+	second_perspective_description = { desc = kns_olympic_defeated_round_5_desc_second }
+	third_perspective_description = { desc = kns_olympic_defeated_round_5_desc_third }
+	participants = { opponent }
+	duration = { years = 75 }
+}
+
+kns_olympic_defeated_quarter = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_defeated_quarter_desc }
+	second_perspective_description = { desc = kns_olympic_defeated_quarter_desc_second }
+	third_perspective_description = { desc = kns_olympic_defeated_quarter_desc_third }
+	participants = { opponent }
+	duration = { years = 75 }
+}
+
+kns_olympic_defeated_semi = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_defeated_semi_desc }
+	second_perspective_description = { desc = kns_olympic_defeated_semi_desc_second }
+	third_perspective_description = { desc = kns_olympic_defeated_semi_desc_third }
+	participants = { opponent }
+	duration = { years = 75 }
+}
+
+kns_olympic_defeated_finals = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_defeated_finals_desc }
+	second_perspective_description = { desc = kns_olympic_defeated_finals_desc_second }
+	third_perspective_description = { desc = kns_olympic_defeated_finals_desc_third }
+	participants = { opponent }
+	duration = { years = 75 }
+}
+
+kns_olympic_knocked_out_of_lists = {
+	categories = { negative martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_knocked_out_of_lists_desc }
+	second_perspective_description = { desc = kns_olympic_knocked_out_of_lists_desc_second }
+	third_perspective_description = { desc = kns_olympic_knocked_out_of_lists_desc_third }
+	participants = { victor }
+	duration = { years = 75 }
+}
+
+kns_olympic_knocked_round_1 = {
+	categories = { negative martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_knocked_round_1_desc }
+	second_perspective_description = { desc = kns_olympic_knocked_round_1_desc_second }
+	third_perspective_description = { desc = kns_olympic_knocked_round_1_desc_third }
+	participants = { victor }
+	duration = { years = 75 }
+}
+
+kns_olympic_knocked_round_2 = {
+	categories = { negative martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_knocked_round_2_desc }
+	second_perspective_description = { desc = kns_olympic_knocked_round_2_desc_second }
+	third_perspective_description = { desc = kns_olympic_knocked_round_2_desc_third }
+	participants = { victor }
+	duration = { years = 75 }
+}
+
+kns_olympic_knocked_round_3 = {
+	categories = { negative martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_knocked_round_3_desc }
+	second_perspective_description = { desc = kns_olympic_knocked_round_3_desc_second }
+	third_perspective_description = { desc = kns_olympic_knocked_round_3_desc_third }
+	participants = { victor }
+	duration = { years = 75 }
+}
+
+kns_olympic_knocked_round_4 = {
+	categories = { negative martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_knocked_round_4_desc }
+	second_perspective_description = { desc = kns_olympic_knocked_round_4_desc_second }
+	third_perspective_description = { desc = kns_olympic_knocked_round_4_desc_third }
+	participants = { victor }
+	duration = { years = 75 }
+}
+
+kns_olympic_knocked_round_5 = {
+	categories = { negative martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_knocked_round_5_desc }
+	second_perspective_description = { desc = kns_olympic_knocked_round_5_desc_second }
+	third_perspective_description = { desc = kns_olympic_knocked_round_5_desc_third }
+	participants = { victor }
+	duration = { years = 75 }
+}
+
+kns_olympic_knocked_quarter = {
+	categories = { negative martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_knocked_quarter_desc }
+	second_perspective_description = { desc = kns_olympic_knocked_quarter_desc_second }
+	third_perspective_description = { desc = kns_olympic_knocked_quarter_desc_third }
+	participants = { victor }
+	duration = { years = 75 }
+}
+
+kns_olympic_knocked_semi = {
+	categories = { negative martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_knocked_semi_desc }
+	second_perspective_description = { desc = kns_olympic_knocked_semi_desc_second }
+	third_perspective_description = { desc = kns_olympic_knocked_semi_desc_third }
+	participants = { victor }
+	duration = { years = 75 }
+}
+
+kns_olympic_knocked_finals = {
+	categories = { negative martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_knocked_finals_desc }
+	second_perspective_description = { desc = kns_olympic_knocked_finals_desc_second }
+	third_perspective_description = { desc = kns_olympic_knocked_finals_desc_third }
+	participants = { victor }
+	duration = { years = 75 }
+}
+
+kns_olympic_won_the_games = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_olympic_won_the_games_desc }
+	second_perspective_description = { desc = kns_olympic_won_the_games_desc_second }
+	third_perspective_description = { desc = kns_olympic_won_the_games_desc_third }
+	duration = { years = 100 }
+}
+
+kns_olympic_founded_the_games = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_olympic_founded_the_games_desc }
+	second_perspective_description = { desc = kns_olympic_founded_the_games_desc_second }
+	third_perspective_description = { desc = kns_olympic_founded_the_games_desc_third }
+	duration = { years = 100 }
+}
+
+kns_olympic_held_the_games = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_olympic_held_the_games_desc }
+	second_perspective_description = { desc = kns_olympic_held_the_games_desc_second }
+	third_perspective_description = { desc = kns_olympic_held_the_games_desc_third }
+	duration = { years = 75 }
+}
