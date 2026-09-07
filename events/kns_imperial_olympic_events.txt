@@ -776,6 +776,7 @@ kns_imperial_olympic.0102 = {
 
 	immediate = {
 		kns_restore_imperial_olympic_bout_scopes_effect = yes
+		kns_olympic_store_player_bout_display_effect = yes
 		kns_olympic_debug_log_bout_effect = { MSG = player_bout_0102 }
 	}
 

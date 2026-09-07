@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  game_concept_kns_prowess_talent:0 "Gift at Arms"
  game_concept_kns_prowess_talent_desc:0 "Every [kns_knight|E] is born with a natural ceiling for [prowess|E], rolled on a curve that clusters around 15. The cap is compared to prowess without weapons. You choose whom to fund. Funded training raises prowess toward that cap, but never past it. Weapons can still push the shown total above the cap. Knights who can lose prowess from Old Age (from 45) cannot be funded. Those who age without that penalty still can. The stipend of 0.5 gold each month continues after the cap is reached."
  game_concept_kns_prowess_talents:0 "Gifts at Arms"

@@ -2457,6 +2457,59 @@ kns_imperial_olympic_roll_pair_winner_effect = {
 	}
 }
 
+kns_olympic_set_fake_opponent_from_foe_effect = {
+	if = {
+		limit = { exists = scope:kns_olympic_minigame_foe }
+		scope:kns_olympic_minigame_foe = {
+			save_scope_as = kns_olympic_fake_opponent
+		}
+	}
+	else_if = {
+		limit = { exists = scope:kns_olympic_ai_combatant }
+		scope:kns_olympic_ai_combatant = {
+			save_scope_as = kns_olympic_fake_opponent
+		}
+	}
+}
+
+kns_olympic_store_player_bout_display_effect = {
+	kns_olympic_set_fake_opponent_from_foe_effect = yes
+	if = {
+		limit = { exists = scope:kns_olympic_player_combatant }
+		scope:kns_olympic_player_combatant = {
+			set_variable = {
+				name = kns_olympic_display_my_prowess
+				value = prowess
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = scope:kns_olympic_player_combatant
+			exists = scope:kns_olympic_fake_opponent
+		}
+		scope:kns_olympic_player_combatant = {
+			set_variable = {
+				name = kns_olympic_display_foe_prowess
+				value = scope:kns_olympic_fake_opponent.prowess
+			}
+		}
+	}
+}
+
+kns_olympic_store_fake_bout_odds_effect = {
+	kns_olympic_store_player_bout_display_effect = yes
+	if = {
+		limit = { exists = scope:kns_olympic_player_combatant }
+		scope:kns_olympic_player_combatant = {
+			set_variable = {
+				name = kns_olympic_fake_win_percent
+				value = kns_olympic_fake_player_win_percent_value
+			}
+		}
+	}
+}
+
 kns_imperial_olympic_resolve_player_fake_bout_effect = {
 	kns_olympic_save_host_effect = yes
 	if = {
@@ -2468,6 +2521,7 @@ kns_imperial_olympic_resolve_player_fake_bout_effect = {
 	}
 	else = {
 		kns_olympic_debug_log_effect = { MSG = fake_bout_resolve }
+		kns_olympic_store_fake_bout_odds_effect = yes
 		kns_imperial_olympic_roll_pair_winner_effect = yes
 		if = {
 			limit = { exists = scope:kns_olympic_winner }
@@ -2493,10 +2547,7 @@ kns_imperial_olympic_resolve_player_fake_bout_effect = {
 			}
 		}
 	}
-	if = {
-		limit = { exists = scope:kns_olympic_fighter_b }
-		scope:kns_olympic_fighter_b = { save_scope_as = kns_olympic_fake_opponent }
-	}
+	kns_olympic_set_fake_opponent_from_foe_effect = yes
 }
 
 kns_imperial_olympic_resolve_ai_bout_effect = {
