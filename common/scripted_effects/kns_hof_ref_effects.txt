@@ -744,6 +744,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_1
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_1
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_1
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_1
@@ -856,6 +866,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_2
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_2
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_2
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -972,6 +992,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_3
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_3
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_3
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_3
@@ -1084,6 +1114,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_4
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_4
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_4
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -1200,6 +1240,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_5
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_5
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_5
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_5
@@ -1312,6 +1362,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_6
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_6
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_6
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -1428,6 +1488,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_7
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_7
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_7
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_7
@@ -1540,6 +1610,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_8
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_8
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_8
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -1656,6 +1736,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_9
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_9
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_9
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_9
@@ -1768,6 +1858,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_10
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_10
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_10
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -1884,6 +1984,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_11
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_11
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_11
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_11
@@ -1996,6 +2106,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_12
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_12
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_12
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -2112,6 +2232,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_13
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_13
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_13
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_13
@@ -2224,6 +2354,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_14
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_14
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_14
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -2340,6 +2480,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_15
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_15
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_15
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_15
@@ -2452,6 +2602,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_16
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_16
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_16
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -2568,6 +2728,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_17
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_17
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_17
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_17
@@ -2680,6 +2850,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_18
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_18
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_18
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -2796,6 +2976,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_19
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_19
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_19
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_19
@@ -2908,6 +3098,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_20
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_20
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_20
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -3024,6 +3224,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_21
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_21
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_21
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_21
@@ -3136,6 +3346,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_22
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_22
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_22
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -3252,6 +3472,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_23
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_23
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_23
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_23
@@ -3364,6 +3594,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_24
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_24
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_24
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -3480,6 +3720,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_25
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_25
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_25
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_25
@@ -3592,6 +3842,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_26
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_26
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_26
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -3708,6 +3968,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_27
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_27
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_27
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_27
@@ -3820,6 +4090,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_28
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_28
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_28
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -3936,6 +4216,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_29
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_29
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_29
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_29
@@ -4048,6 +4338,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_30
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_30
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_30
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -4164,6 +4464,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_31
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_31
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_31
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_31
@@ -4276,6 +4586,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_32
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_32
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_32
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -4392,6 +4712,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_33
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_33
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_33
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_33
@@ -4504,6 +4834,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_34
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_34
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_34
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -4620,6 +4960,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_35
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_35
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_35
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_35
@@ -4732,6 +5082,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_36
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_36
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_36
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -4848,6 +5208,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_37
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_37
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_37
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_37
@@ -4960,6 +5330,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_38
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_38
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_38
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -5076,6 +5456,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_39
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_39
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_39
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_39
@@ -5188,6 +5578,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_40
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_40
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_40
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -5304,6 +5704,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_41
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_41
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_41
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_41
@@ -5416,6 +5826,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_42
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_42
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_42
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -5532,6 +5952,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_43
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_43
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_43
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_43
@@ -5644,6 +6074,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_44
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_44
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_44
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -5760,6 +6200,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_45
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_45
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_45
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_45
@@ -5872,6 +6322,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_46
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_46
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_46
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -5988,6 +6448,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_47
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_47
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_47
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_47
@@ -6100,6 +6570,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_48
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_48
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_48
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -6216,6 +6696,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_49
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_49
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_49
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_49
@@ -6328,6 +6818,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_50
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_50
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_50
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -6444,6 +6944,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_51
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_51
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_51
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_51
@@ -6556,6 +7066,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_52
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_52
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_52
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -6672,6 +7192,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_53
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_53
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_53
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_53
@@ -6784,6 +7314,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_54
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_54
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_54
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -6900,6 +7440,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_55
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_55
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_55
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_55
@@ -7012,6 +7562,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_56
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_56
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_56
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -7128,6 +7688,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_57
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_57
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_57
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_57
@@ -7240,6 +7810,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_58
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_58
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_58
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -7356,6 +7936,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_59
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_59
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_59
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_59
@@ -7468,6 +8058,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_60
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_60
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_60
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -7584,6 +8184,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_61
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_61
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_61
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_61
@@ -7696,6 +8306,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_62
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_62
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_62
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -7812,6 +8432,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_63
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_63
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_63
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_63
@@ -7924,6 +8554,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_64
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_64
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_64
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -8040,6 +8680,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_65
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_65
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_65
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_65
@@ -8152,6 +8802,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_66
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_66
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_66
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -8268,6 +8928,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_67
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_67
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_67
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_67
@@ -8380,6 +9050,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_68
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_68
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_68
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -8496,6 +9176,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_69
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_69
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_69
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_69
@@ -8608,6 +9298,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_70
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_70
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_70
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -8724,6 +9424,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_71
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_71
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_71
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_71
@@ -8836,6 +9546,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_72
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_72
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_72
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -8952,6 +9672,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_73
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_73
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_73
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_73
@@ -9064,6 +9794,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_74
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_74
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_74
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -9180,6 +9920,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_75
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_75
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_75
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_75
@@ -9292,6 +10042,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_76
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_76
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_76
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -9408,6 +10168,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_77
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_77
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_77
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_77
@@ -9520,6 +10290,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_78
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_78
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_78
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -9636,6 +10416,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_79
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_79
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_79
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_79
@@ -9748,6 +10538,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_80
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_80
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_80
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -9864,6 +10664,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_81
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_81
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_81
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_81
@@ -9976,6 +10786,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_82
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_82
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_82
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -10092,6 +10912,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_83
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_83
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_83
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_83
@@ -10204,6 +11034,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_84
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_84
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_84
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -10320,6 +11160,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_85
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_85
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_85
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_85
@@ -10432,6 +11282,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_86
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_86
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_86
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -10548,6 +11408,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_87
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_87
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_87
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_87
@@ -10660,6 +11530,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_88
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_88
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_88
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -10776,6 +11656,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_89
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_89
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_89
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_89
@@ -10888,6 +11778,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_90
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_90
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_90
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -11004,6 +11904,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_91
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_91
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_91
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_91
@@ -11116,6 +12026,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_92
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_92
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_92
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -11232,6 +12152,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_93
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_93
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_93
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_93
@@ -11344,6 +12274,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_94
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_94
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_94
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -11460,6 +12400,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_95
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_95
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_95
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_95
@@ -11572,6 +12522,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_96
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_96
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_96
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -11688,6 +12648,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_97
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_97
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_97
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_97
@@ -11800,6 +12770,16 @@ kns_hof_snapshot_character_stats_effect = {
 		}
 		else = {
 			remove_global_variable = kns_hof_stat_duels_98
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_98
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_98
 		}
 		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
@@ -11916,6 +12896,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_99
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_99
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_99
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_99
@@ -12030,6 +13020,16 @@ kns_hof_snapshot_character_stats_effect = {
 			remove_global_variable = kns_hof_stat_duels_100
 		}
 		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_stat_losses_100
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		else = {
+			remove_global_variable = kns_hof_stat_losses_100
+		}
+		if = {
 			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
 			set_global_variable = {
 				name = kns_hof_stat_titles_100
@@ -12137,6 +13137,7 @@ kns_hof_snapshot_character_stats_effect = {
 kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_duelist_1
 	remove_variable = kns_hof_duelist_1_wins
+	remove_variable = kns_hof_duelist_1_losses
 	remove_variable = kns_hof_duelist_1_dead
 	remove_variable = kns_hof_champion_1
 	remove_variable = kns_hof_champion_1_titles
@@ -12151,6 +13152,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_1_y8
 	remove_variable = kns_hof_duelist_2
 	remove_variable = kns_hof_duelist_2_wins
+	remove_variable = kns_hof_duelist_2_losses
 	remove_variable = kns_hof_duelist_2_dead
 	remove_variable = kns_hof_champion_2
 	remove_variable = kns_hof_champion_2_titles
@@ -12165,6 +13167,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_2_y8
 	remove_variable = kns_hof_duelist_3
 	remove_variable = kns_hof_duelist_3_wins
+	remove_variable = kns_hof_duelist_3_losses
 	remove_variable = kns_hof_duelist_3_dead
 	remove_variable = kns_hof_champion_3
 	remove_variable = kns_hof_champion_3_titles
@@ -12179,6 +13182,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_3_y8
 	remove_variable = kns_hof_duelist_4
 	remove_variable = kns_hof_duelist_4_wins
+	remove_variable = kns_hof_duelist_4_losses
 	remove_variable = kns_hof_duelist_4_dead
 	remove_variable = kns_hof_champion_4
 	remove_variable = kns_hof_champion_4_titles
@@ -12193,6 +13197,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_4_y8
 	remove_variable = kns_hof_duelist_5
 	remove_variable = kns_hof_duelist_5_wins
+	remove_variable = kns_hof_duelist_5_losses
 	remove_variable = kns_hof_duelist_5_dead
 	remove_variable = kns_hof_champion_5
 	remove_variable = kns_hof_champion_5_titles
@@ -12207,6 +13212,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_5_y8
 	remove_variable = kns_hof_duelist_6
 	remove_variable = kns_hof_duelist_6_wins
+	remove_variable = kns_hof_duelist_6_losses
 	remove_variable = kns_hof_duelist_6_dead
 	remove_variable = kns_hof_champion_6
 	remove_variable = kns_hof_champion_6_titles
@@ -12221,6 +13227,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_6_y8
 	remove_variable = kns_hof_duelist_7
 	remove_variable = kns_hof_duelist_7_wins
+	remove_variable = kns_hof_duelist_7_losses
 	remove_variable = kns_hof_duelist_7_dead
 	remove_variable = kns_hof_champion_7
 	remove_variable = kns_hof_champion_7_titles
@@ -12235,6 +13242,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_7_y8
 	remove_variable = kns_hof_duelist_8
 	remove_variable = kns_hof_duelist_8_wins
+	remove_variable = kns_hof_duelist_8_losses
 	remove_variable = kns_hof_duelist_8_dead
 	remove_variable = kns_hof_champion_8
 	remove_variable = kns_hof_champion_8_titles
@@ -12249,6 +13257,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_8_y8
 	remove_variable = kns_hof_duelist_9
 	remove_variable = kns_hof_duelist_9_wins
+	remove_variable = kns_hof_duelist_9_losses
 	remove_variable = kns_hof_duelist_9_dead
 	remove_variable = kns_hof_champion_9
 	remove_variable = kns_hof_champion_9_titles
@@ -12263,6 +13272,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_9_y8
 	remove_variable = kns_hof_duelist_10
 	remove_variable = kns_hof_duelist_10_wins
+	remove_variable = kns_hof_duelist_10_losses
 	remove_variable = kns_hof_duelist_10_dead
 	remove_variable = kns_hof_champion_10
 	remove_variable = kns_hof_champion_10_titles
@@ -12277,6 +13287,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_10_y8
 	remove_variable = kns_hof_duelist_11
 	remove_variable = kns_hof_duelist_11_wins
+	remove_variable = kns_hof_duelist_11_losses
 	remove_variable = kns_hof_duelist_11_dead
 	remove_variable = kns_hof_champion_11
 	remove_variable = kns_hof_champion_11_titles
@@ -12291,6 +13302,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_11_y8
 	remove_variable = kns_hof_duelist_12
 	remove_variable = kns_hof_duelist_12_wins
+	remove_variable = kns_hof_duelist_12_losses
 	remove_variable = kns_hof_duelist_12_dead
 	remove_variable = kns_hof_champion_12
 	remove_variable = kns_hof_champion_12_titles
@@ -12305,6 +13317,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_12_y8
 	remove_variable = kns_hof_duelist_13
 	remove_variable = kns_hof_duelist_13_wins
+	remove_variable = kns_hof_duelist_13_losses
 	remove_variable = kns_hof_duelist_13_dead
 	remove_variable = kns_hof_champion_13
 	remove_variable = kns_hof_champion_13_titles
@@ -12319,6 +13332,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_13_y8
 	remove_variable = kns_hof_duelist_14
 	remove_variable = kns_hof_duelist_14_wins
+	remove_variable = kns_hof_duelist_14_losses
 	remove_variable = kns_hof_duelist_14_dead
 	remove_variable = kns_hof_champion_14
 	remove_variable = kns_hof_champion_14_titles
@@ -12333,6 +13347,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_14_y8
 	remove_variable = kns_hof_duelist_15
 	remove_variable = kns_hof_duelist_15_wins
+	remove_variable = kns_hof_duelist_15_losses
 	remove_variable = kns_hof_duelist_15_dead
 	remove_variable = kns_hof_champion_15
 	remove_variable = kns_hof_champion_15_titles
@@ -12347,6 +13362,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_15_y8
 	remove_variable = kns_hof_duelist_16
 	remove_variable = kns_hof_duelist_16_wins
+	remove_variable = kns_hof_duelist_16_losses
 	remove_variable = kns_hof_duelist_16_dead
 	remove_variable = kns_hof_champion_16
 	remove_variable = kns_hof_champion_16_titles
@@ -12361,6 +13377,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_16_y8
 	remove_variable = kns_hof_duelist_17
 	remove_variable = kns_hof_duelist_17_wins
+	remove_variable = kns_hof_duelist_17_losses
 	remove_variable = kns_hof_duelist_17_dead
 	remove_variable = kns_hof_champion_17
 	remove_variable = kns_hof_champion_17_titles
@@ -12375,6 +13392,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_17_y8
 	remove_variable = kns_hof_duelist_18
 	remove_variable = kns_hof_duelist_18_wins
+	remove_variable = kns_hof_duelist_18_losses
 	remove_variable = kns_hof_duelist_18_dead
 	remove_variable = kns_hof_champion_18
 	remove_variable = kns_hof_champion_18_titles
@@ -12389,6 +13407,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_18_y8
 	remove_variable = kns_hof_duelist_19
 	remove_variable = kns_hof_duelist_19_wins
+	remove_variable = kns_hof_duelist_19_losses
 	remove_variable = kns_hof_duelist_19_dead
 	remove_variable = kns_hof_champion_19
 	remove_variable = kns_hof_champion_19_titles
@@ -12403,6 +13422,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_champion_19_y8
 	remove_variable = kns_hof_duelist_20
 	remove_variable = kns_hof_duelist_20_wins
+	remove_variable = kns_hof_duelist_20_losses
 	remove_variable = kns_hof_duelist_20_dead
 	remove_variable = kns_hof_champion_20
 	remove_variable = kns_hof_champion_20_titles
@@ -12621,6 +13641,7 @@ kns_hof_clear_display_vars_effect = {
 	remove_variable = kns_hof_tmp_char
 	remove_variable = kns_hof_tmp_titles
 	remove_variable = kns_hof_tmp_wins
+	remove_variable = kns_hof_tmp_losses
 	remove_variable = kns_hof_tmp_dead
 	remove_variable = kns_hof_tmp_y1
 	remove_variable = kns_hof_tmp_y2
@@ -22490,6 +23511,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 1 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_1 }
@@ -22506,6 +23528,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_1 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_1
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_1 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22514,6 +23543,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 2 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_2 }
@@ -22530,6 +23560,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_2 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_2
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_2 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22538,6 +23575,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 3 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_3 }
@@ -22554,6 +23592,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_3 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_3
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_3 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22562,6 +23607,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 4 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_4 }
@@ -22578,6 +23624,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_4 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_4
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_4 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22586,6 +23639,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 5 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_5 }
@@ -22602,6 +23656,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_5 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_5
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_5 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22610,6 +23671,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 6 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_6 }
@@ -22626,6 +23688,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_6 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_6
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_6 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22634,6 +23703,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 7 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_7 }
@@ -22650,6 +23720,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_7 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_7
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_7 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22658,6 +23735,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 8 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_8 }
@@ -22674,6 +23752,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_8 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_8
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_8 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22682,6 +23767,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 9 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_9 }
@@ -22698,6 +23784,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_9 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_9
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_9 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22706,6 +23799,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 10 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_10 }
@@ -22722,6 +23816,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_10 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_10
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_10 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22730,6 +23831,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 11 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_11 }
@@ -22746,6 +23848,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_11 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_11
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_11 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22754,6 +23863,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 12 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_12 }
@@ -22770,6 +23880,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_12 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_12
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_12 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22778,6 +23895,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 13 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_13 }
@@ -22794,6 +23912,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_13 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_13
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_13 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22802,6 +23927,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 14 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_14 }
@@ -22818,6 +23944,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_14 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_14
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_14 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22826,6 +23959,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 15 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_15 }
@@ -22842,6 +23976,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_15 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_15
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_15 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22850,6 +23991,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 16 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_16 }
@@ -22866,6 +24008,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_16 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_16
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_16 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22874,6 +24023,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 17 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_17 }
@@ -22890,6 +24040,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_17 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_17
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_17 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22898,6 +24055,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 18 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_18 }
@@ -22914,6 +24072,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_18 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_18
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_18 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22922,6 +24087,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 19 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_19 }
@@ -22938,6 +24104,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_19 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_19
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_19 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22946,6 +24119,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 20 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_20 }
@@ -22962,6 +24136,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_20 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_20
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_20 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22970,6 +24151,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 21 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_21 }
@@ -22986,6 +24168,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_21 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_21
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_21 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -22994,6 +24183,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 22 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_22 }
@@ -23010,6 +24200,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_22 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_22
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_22 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23018,6 +24215,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 23 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_23 }
@@ -23034,6 +24232,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_23 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_23
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_23 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23042,6 +24247,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 24 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_24 }
@@ -23058,6 +24264,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_24 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_24
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_24 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23066,6 +24279,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 25 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_25 }
@@ -23082,6 +24296,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_25 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_25
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_25 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23090,6 +24311,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 26 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_26 }
@@ -23106,6 +24328,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_26 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_26
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_26 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23114,6 +24343,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 27 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_27 }
@@ -23130,6 +24360,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_27 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_27
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_27 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23138,6 +24375,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 28 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_28 }
@@ -23154,6 +24392,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_28 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_28
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_28 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23162,6 +24407,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 29 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_29 }
@@ -23178,6 +24424,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_29 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_29
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_29 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23186,6 +24439,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 30 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_30 }
@@ -23202,6 +24456,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_30 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_30
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_30 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23210,6 +24471,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 31 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_31 }
@@ -23226,6 +24488,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_31 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_31
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_31 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23234,6 +24503,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 32 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_32 }
@@ -23250,6 +24520,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_32 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_32
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_32 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23258,6 +24535,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 33 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_33 }
@@ -23274,6 +24552,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_33 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_33
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_33 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23282,6 +24567,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 34 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_34 }
@@ -23298,6 +24584,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_34 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_34
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_34 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23306,6 +24599,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 35 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_35 }
@@ -23322,6 +24616,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_35 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_35
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_35 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23330,6 +24631,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 36 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_36 }
@@ -23346,6 +24648,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_36 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_36
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_36 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23354,6 +24663,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 37 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_37 }
@@ -23370,6 +24680,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_37 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_37
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_37 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23378,6 +24695,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 38 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_38 }
@@ -23394,6 +24712,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_38 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_38
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_38 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23402,6 +24727,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 39 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_39 }
@@ -23418,6 +24744,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_39 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_39
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_39 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23426,6 +24759,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 40 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_40 }
@@ -23442,6 +24776,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_40 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_40
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_40 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23450,6 +24791,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 41 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_41 }
@@ -23466,6 +24808,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_41 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_41
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_41 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23474,6 +24823,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 42 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_42 }
@@ -23490,6 +24840,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_42 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_42
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_42 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23498,6 +24855,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 43 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_43 }
@@ -23514,6 +24872,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_43 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_43
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_43 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23522,6 +24887,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 44 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_44 }
@@ -23538,6 +24904,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_44 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_44
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_44 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23546,6 +24919,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 45 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_45 }
@@ -23562,6 +24936,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_45 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_45
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_45 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23570,6 +24951,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 46 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_46 }
@@ -23586,6 +24968,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_46 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_46
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_46 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23594,6 +24983,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 47 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_47 }
@@ -23610,6 +25000,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_47 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_47
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_47 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23618,6 +25015,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 48 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_48 }
@@ -23634,6 +25032,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_48 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_48
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_48 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23642,6 +25047,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 49 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_49 }
@@ -23658,6 +25064,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_49 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_49
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_49 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23666,6 +25079,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 50 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_50 }
@@ -23682,6 +25096,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_50 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_50
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_50 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23690,6 +25111,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 51 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_51 }
@@ -23706,6 +25128,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_51 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_51
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_51 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23714,6 +25143,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 52 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_52 }
@@ -23730,6 +25160,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_52 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_52
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_52 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23738,6 +25175,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 53 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_53 }
@@ -23754,6 +25192,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_53 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_53
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_53 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23762,6 +25207,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 54 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_54 }
@@ -23778,6 +25224,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_54 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_54
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_54 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23786,6 +25239,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 55 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_55 }
@@ -23802,6 +25256,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_55 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_55
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_55 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23810,6 +25271,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 56 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_56 }
@@ -23826,6 +25288,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_56 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_56
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_56 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23834,6 +25303,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 57 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_57 }
@@ -23850,6 +25320,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_57 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_57
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_57 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23858,6 +25335,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 58 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_58 }
@@ -23874,6 +25352,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_58 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_58
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_58 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23882,6 +25367,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 59 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_59 }
@@ -23898,6 +25384,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_59 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_59
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_59 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23906,6 +25399,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 60 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_60 }
@@ -23922,6 +25416,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_60 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_60
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_60 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23930,6 +25431,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 61 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_61 }
@@ -23946,6 +25448,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_61 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_61
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_61 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23954,6 +25463,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 62 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_62 }
@@ -23970,6 +25480,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_62 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_62
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_62 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -23978,6 +25495,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 63 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_63 }
@@ -23994,6 +25512,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_63 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_63
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_63 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24002,6 +25527,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 64 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_64 }
@@ -24018,6 +25544,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_64 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_64
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_64 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24026,6 +25559,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 65 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_65 }
@@ -24042,6 +25576,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_65 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_65
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_65 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24050,6 +25591,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 66 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_66 }
@@ -24066,6 +25608,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_66 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_66
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_66 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24074,6 +25623,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 67 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_67 }
@@ -24090,6 +25640,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_67 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_67
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_67 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24098,6 +25655,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 68 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_68 }
@@ -24114,6 +25672,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_68 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_68
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_68 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24122,6 +25687,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 69 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_69 }
@@ -24138,6 +25704,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_69 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_69
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_69 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24146,6 +25719,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 70 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_70 }
@@ -24162,6 +25736,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_70 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_70
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_70 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24170,6 +25751,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 71 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_71 }
@@ -24186,6 +25768,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_71 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_71
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_71 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24194,6 +25783,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 72 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_72 }
@@ -24210,6 +25800,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_72 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_72
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_72 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24218,6 +25815,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 73 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_73 }
@@ -24234,6 +25832,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_73 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_73
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_73 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24242,6 +25847,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 74 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_74 }
@@ -24258,6 +25864,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_74 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_74
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_74 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24266,6 +25879,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 75 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_75 }
@@ -24282,6 +25896,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_75 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_75
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_75 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24290,6 +25911,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 76 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_76 }
@@ -24306,6 +25928,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_76 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_76
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_76 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24314,6 +25943,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 77 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_77 }
@@ -24330,6 +25960,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_77 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_77
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_77 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24338,6 +25975,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 78 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_78 }
@@ -24354,6 +25992,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_78 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_78
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_78 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24362,6 +26007,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 79 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_79 }
@@ -24378,6 +26024,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_79 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_79
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_79 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24386,6 +26039,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 80 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_80 }
@@ -24402,6 +26056,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_80 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_80
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_80 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24410,6 +26071,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 81 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_81 }
@@ -24426,6 +26088,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_81 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_81
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_81 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24434,6 +26103,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 82 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_82 }
@@ -24450,6 +26120,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_82 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_82
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_82 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24458,6 +26135,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 83 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_83 }
@@ -24474,6 +26152,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_83 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_83
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_83 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24482,6 +26167,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 84 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_84 }
@@ -24498,6 +26184,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_84 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_84
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_84 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24506,6 +26199,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 85 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_85 }
@@ -24522,6 +26216,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_85 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_85
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_85 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24530,6 +26231,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 86 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_86 }
@@ -24546,6 +26248,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_86 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_86
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_86 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24554,6 +26263,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 87 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_87 }
@@ -24570,6 +26280,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_87 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_87
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_87 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24578,6 +26295,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 88 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_88 }
@@ -24594,6 +26312,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_88 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_88
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_88 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24602,6 +26327,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 89 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_89 }
@@ -24618,6 +26344,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_89 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_89
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_89 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24626,6 +26359,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 90 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_90 }
@@ -24642,6 +26376,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_90 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_90
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_90 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24650,6 +26391,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 91 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_91 }
@@ -24666,6 +26408,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_91 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_91
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_91 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24674,6 +26423,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 92 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_92 }
@@ -24690,6 +26440,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_92 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_92
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_92 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24698,6 +26455,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 93 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_93 }
@@ -24714,6 +26472,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_93 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_93
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_93 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24722,6 +26487,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 94 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_94 }
@@ -24738,6 +26504,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_94 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_94
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_94 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24746,6 +26519,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 95 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_95 }
@@ -24762,6 +26536,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_95 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_95
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_95 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24770,6 +26551,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 96 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_96 }
@@ -24786,6 +26568,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_96 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_96
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_96 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24794,6 +26583,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 97 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_97 }
@@ -24810,6 +26600,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_97 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_97
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_97 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24818,6 +26615,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 98 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_98 }
@@ -24834,6 +26632,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_98 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_98
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_98 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24842,6 +26647,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 99 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_99 }
@@ -24858,6 +26664,13 @@ kns_hof_load_duelist_tmp_effect = {
 			}
 		}
 		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_99 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_99
+			}
+		}
+		if = {
 			limit = { has_global_variable = kns_hof_stat_dead_99 }
 			set_variable = kns_hof_tmp_dead
 		}
@@ -24866,6 +26679,7 @@ kns_hof_load_duelist_tmp_effect = {
 		limit = { var:kns_hof_best_slot = 100 }
 		remove_variable = kns_hof_tmp_char
 		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
 		remove_variable = kns_hof_tmp_dead
 		if = {
 			limit = { has_global_variable = kns_hof_ref_100 }
@@ -24879,6 +26693,13 @@ kns_hof_load_duelist_tmp_effect = {
 			set_variable = {
 				name = kns_hof_tmp_wins
 				value = global_var:kns_hof_stat_duels_100
+			}
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_stat_losses_100 }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_stat_losses_100
 			}
 		}
 		if = {
@@ -26449,6 +28270,13 @@ kns_hof_store_duelist_display_effect = {
 			}
 		}
 		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_1_losses
+				value = var:kns_hof_tmp_losses
+			}
+		}
+		if = {
 			limit = { exists = var:kns_hof_tmp_dead }
 			set_variable = kns_hof_duelist_1_dead
 		}
@@ -26467,6 +28295,13 @@ kns_hof_store_duelist_display_effect = {
 			set_variable = {
 				name = kns_hof_duelist_2_wins
 				value = var:kns_hof_tmp_wins
+			}
+		}
+		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_2_losses
+				value = var:kns_hof_tmp_losses
 			}
 		}
 		if = {
@@ -26491,6 +28326,13 @@ kns_hof_store_duelist_display_effect = {
 			}
 		}
 		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_3_losses
+				value = var:kns_hof_tmp_losses
+			}
+		}
+		if = {
 			limit = { exists = var:kns_hof_tmp_dead }
 			set_variable = kns_hof_duelist_3_dead
 		}
@@ -26509,6 +28351,13 @@ kns_hof_store_duelist_display_effect = {
 			set_variable = {
 				name = kns_hof_duelist_4_wins
 				value = var:kns_hof_tmp_wins
+			}
+		}
+		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_4_losses
+				value = var:kns_hof_tmp_losses
 			}
 		}
 		if = {
@@ -26533,6 +28382,13 @@ kns_hof_store_duelist_display_effect = {
 			}
 		}
 		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_5_losses
+				value = var:kns_hof_tmp_losses
+			}
+		}
+		if = {
 			limit = { exists = var:kns_hof_tmp_dead }
 			set_variable = kns_hof_duelist_5_dead
 		}
@@ -26551,6 +28407,13 @@ kns_hof_store_duelist_display_effect = {
 			set_variable = {
 				name = kns_hof_duelist_6_wins
 				value = var:kns_hof_tmp_wins
+			}
+		}
+		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_6_losses
+				value = var:kns_hof_tmp_losses
 			}
 		}
 		if = {
@@ -26575,6 +28438,13 @@ kns_hof_store_duelist_display_effect = {
 			}
 		}
 		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_7_losses
+				value = var:kns_hof_tmp_losses
+			}
+		}
+		if = {
 			limit = { exists = var:kns_hof_tmp_dead }
 			set_variable = kns_hof_duelist_7_dead
 		}
@@ -26593,6 +28463,13 @@ kns_hof_store_duelist_display_effect = {
 			set_variable = {
 				name = kns_hof_duelist_8_wins
 				value = var:kns_hof_tmp_wins
+			}
+		}
+		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_8_losses
+				value = var:kns_hof_tmp_losses
 			}
 		}
 		if = {
@@ -26617,6 +28494,13 @@ kns_hof_store_duelist_display_effect = {
 			}
 		}
 		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_9_losses
+				value = var:kns_hof_tmp_losses
+			}
+		}
+		if = {
 			limit = { exists = var:kns_hof_tmp_dead }
 			set_variable = kns_hof_duelist_9_dead
 		}
@@ -26635,6 +28519,13 @@ kns_hof_store_duelist_display_effect = {
 			set_variable = {
 				name = kns_hof_duelist_10_wins
 				value = var:kns_hof_tmp_wins
+			}
+		}
+		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_10_losses
+				value = var:kns_hof_tmp_losses
 			}
 		}
 		if = {
@@ -26659,6 +28550,13 @@ kns_hof_store_duelist_display_effect = {
 			}
 		}
 		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_11_losses
+				value = var:kns_hof_tmp_losses
+			}
+		}
+		if = {
 			limit = { exists = var:kns_hof_tmp_dead }
 			set_variable = kns_hof_duelist_11_dead
 		}
@@ -26677,6 +28575,13 @@ kns_hof_store_duelist_display_effect = {
 			set_variable = {
 				name = kns_hof_duelist_12_wins
 				value = var:kns_hof_tmp_wins
+			}
+		}
+		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_12_losses
+				value = var:kns_hof_tmp_losses
 			}
 		}
 		if = {
@@ -26701,6 +28606,13 @@ kns_hof_store_duelist_display_effect = {
 			}
 		}
 		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_13_losses
+				value = var:kns_hof_tmp_losses
+			}
+		}
+		if = {
 			limit = { exists = var:kns_hof_tmp_dead }
 			set_variable = kns_hof_duelist_13_dead
 		}
@@ -26719,6 +28631,13 @@ kns_hof_store_duelist_display_effect = {
 			set_variable = {
 				name = kns_hof_duelist_14_wins
 				value = var:kns_hof_tmp_wins
+			}
+		}
+		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_14_losses
+				value = var:kns_hof_tmp_losses
 			}
 		}
 		if = {
@@ -26743,6 +28662,13 @@ kns_hof_store_duelist_display_effect = {
 			}
 		}
 		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_15_losses
+				value = var:kns_hof_tmp_losses
+			}
+		}
+		if = {
 			limit = { exists = var:kns_hof_tmp_dead }
 			set_variable = kns_hof_duelist_15_dead
 		}
@@ -26761,6 +28687,13 @@ kns_hof_store_duelist_display_effect = {
 			set_variable = {
 				name = kns_hof_duelist_16_wins
 				value = var:kns_hof_tmp_wins
+			}
+		}
+		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_16_losses
+				value = var:kns_hof_tmp_losses
 			}
 		}
 		if = {
@@ -26785,6 +28718,13 @@ kns_hof_store_duelist_display_effect = {
 			}
 		}
 		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_17_losses
+				value = var:kns_hof_tmp_losses
+			}
+		}
+		if = {
 			limit = { exists = var:kns_hof_tmp_dead }
 			set_variable = kns_hof_duelist_17_dead
 		}
@@ -26803,6 +28743,13 @@ kns_hof_store_duelist_display_effect = {
 			set_variable = {
 				name = kns_hof_duelist_18_wins
 				value = var:kns_hof_tmp_wins
+			}
+		}
+		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_18_losses
+				value = var:kns_hof_tmp_losses
 			}
 		}
 		if = {
@@ -26827,6 +28774,13 @@ kns_hof_store_duelist_display_effect = {
 			}
 		}
 		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_19_losses
+				value = var:kns_hof_tmp_losses
+			}
+		}
+		if = {
 			limit = { exists = var:kns_hof_tmp_dead }
 			set_variable = kns_hof_duelist_19_dead
 		}
@@ -26845,6 +28799,13 @@ kns_hof_store_duelist_display_effect = {
 			set_variable = {
 				name = kns_hof_duelist_20_wins
 				value = var:kns_hof_tmp_wins
+			}
+		}
+		if = {
+			limit = { exists = var:kns_hof_tmp_losses }
+			set_variable = {
+				name = kns_hof_duelist_20_losses
+				value = var:kns_hof_tmp_losses
 			}
 		}
 		if = {

@@ -195,6 +195,32 @@ Unlanded knights are styled **Sir** (men) or **Dame** (women) in titled and unla
 - **Papal youth tourney:** if no living Prodigious knight exists, a papal tourney can create one and raise their prowess toward 30.
 - **Imperial Olympic Games:** a player **emperor or hegemon** may **found** a Christian single-elimination duel bracket as a lasting institution. At founding you choose bracket size (**128** / **256**), cycle (**every 2, 3, or 4 years**), fund (**1000–5000 gold**), and venue (**capital**, or any **realm county** via a title picker; capital if none is chosen). After that the games **auto-start** when due; **Manage Imperial Olympic Games** changes settings or raises the lists early. If the organizer dies mid-bracket, a **player heir** finishes that tournament; afterwards only a **player emperor or hegemon** may **Continue the Imperial Olympic Games** (free — re-pick cycle and purse). AI rulers do not keep the custom. Use **Select Imperial Olympic Champions** to pick up to **four** court knights (and optionally yourself). **Every Prodigious knight** fit to fight is entered automatically, then the **thirty** strongest Christian knights **aged 35 or under** (prowess without weapons). Invited rulers fill remaining slots by rank (**count 1**, **duke 2**, **king 3**, **empire/hegemony 4**). The victor takes **5000 prestige** and **40% of the fund**; the rest pays for the event. The host county gets a tax bonus for **6 months** (max **+50%** at 5000 gold). Knight effectiveness scales with the full fund (**5000 gold = +100%**). Bout winners, the tournament champion, and the hosting emperor keep memories. **View Hall of Legends** opens a ranked GUI. No DLC required.
 
+Each bracket round is fought on **one day**: 256 fighters on day 1, 128 on day 2, and so on (a 128-bracket starts at 128). Assigned champions and every pairing that is not **your own Finals bout** are **fake duels** (a prowess roll, no minigame). If you are in a fake duel, you get an event that you won and advance, or that you lost. If **you** reach the Finals, that last bout is a real first-blood single combat.
+
+**Fake duel odds** use overall prowess (the armed character-sheet total, including weapons):
+
+```
+base(X) = 5 + (prowess_X × 2)
+tens    = floor(max(0, foe − me) / 10)
+weight(X) = max(5, base(X) − (tens × 5))
+P(A wins) = weight(A) / (weight(A) + weight(B))
+```
+
+The weaker side loses **5 weight per full 10** they are behind. A 1–9 gap has no extra penalty. `max(5, …)` keeps every fighter in the roll (never 0 or negative). After about a 50 gap the underdog sits on that floor; the favorite still gets heavier as prowess rises. Chance the **10** wins:
+
+| Match | P(10 wins) |
+|---|---|
+| 10 vs 10 | 50% |
+| 10 vs 20 | 31% |
+| 10 vs 30 | 19% |
+| 10 vs 40 | 11% |
+| 10 vs 50 | 5% |
+| 10 vs 60 | 4% |
+| 10 vs 70 | 3% |
+| 10 vs 80 | 3% |
+| 10 vs 90 | 3% |
+| 10 vs 100 | 2% |
+
 ## Key files
 
 | File | Role |

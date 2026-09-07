@@ -414,6 +414,40 @@ kns_imperial_olympic.0032 = {
 	}
 }
 
+# Hidden: restore champion scopes, then open Crown the Victor (portraits evaluate before immediate).
+kns_imperial_olympic.0008 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		save_scope_as = kns_emperor
+		kns_olympic_restore_champion_scope_effect = yes
+		trigger_event = kns_imperial_olympic.0010
+	}
+}
+
+# Hidden: restore champion scopes, then open the player result window.
+kns_imperial_olympic.0009 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		kns_olympic_restore_champion_scope_effect = yes
+		trigger_event = kns_imperial_olympic.0011
+	}
+}
+
+# Hidden: restore champion scopes, then open emperor news when they did not host.
+kns_imperial_olympic.0013 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		kns_olympic_restore_champion_scope_effect = yes
+		trigger_event = kns_imperial_olympic.0012
+	}
+}
+
 # Emperor crowns the bracket champion
 kns_imperial_olympic.0010 = {
 	type = character_event
@@ -438,16 +472,16 @@ kns_imperial_olympic.0010 = {
 	override_background = { reference = courtyard }
 
 	left_portrait = {
-		character = root
-		animation = personality_honorable
+		character = scope:kns_olympic_winner
+		scripted_animation = duel_celebrate
 	}
 	right_portrait = {
 		trigger = {
 			exists = scope:kns_olympic_winner
 			NOT = { this = scope:kns_olympic_winner }
 		}
-		character = scope:kns_olympic_winner
-		animation = happiness
+		character = root
+		animation = personality_honorable
 	}
 
 	immediate = {
@@ -455,6 +489,7 @@ kns_imperial_olympic.0010 = {
 			limit = { NOT = { exists = scope:kns_emperor } }
 			save_scope_as = kns_emperor
 		}
+		kns_olympic_restore_champion_scope_effect = yes
 	}
 
 	option = {
@@ -465,6 +500,7 @@ kns_imperial_olympic.0010 = {
 		}
 		custom_tooltip = kns_imperial_olympic_prize_tt
 		hidden_effect = {
+			kns_olympic_clear_champion_scope_effect = yes
 			kns_clear_imperial_olympic_vars_effect = yes
 		}
 	}
@@ -482,10 +518,11 @@ kns_imperial_olympic.0010 = {
 					scope:kns_olympic_winner = { is_ai = no }
 				}
 				scope:kns_olympic_winner = {
-					trigger_event = kns_imperial_olympic.0011
+					trigger_event = kns_imperial_olympic.0009
 				}
 			}
 			else = {
+				kns_olympic_clear_champion_scope_effect = yes
 				kns_clear_imperial_olympic_vars_effect = yes
 			}
 		}
@@ -497,6 +534,7 @@ kns_imperial_olympic.0010 = {
 			NOT = { exists = scope:kns_olympic_winner }
 		}
 		hidden_effect = {
+			kns_olympic_clear_champion_scope_effect = yes
 			kns_clear_imperial_olympic_vars_effect = yes
 		}
 	}
@@ -533,14 +571,21 @@ kns_imperial_olympic.0011 = {
 	override_background = { reference = courtyard }
 
 	left_portrait = {
-		trigger = { exists = scope:kns_emperor }
+		character = scope:kns_olympic_winner
+		scripted_animation = duel_celebrate
+	}
+	right_portrait = {
+		trigger = {
+			exists = scope:kns_emperor
+			exists = scope:kns_olympic_winner
+			NOT = { scope:kns_emperor = scope:kns_olympic_winner }
+		}
 		character = scope:kns_emperor
 		animation = personality_honorable
 	}
-	right_portrait = {
-		trigger = { exists = scope:kns_olympic_winner }
-		character = scope:kns_olympic_winner
-		animation = happiness
+
+	immediate = {
+		kns_olympic_restore_champion_scope_effect = yes
 	}
 
 	option = {
@@ -551,6 +596,7 @@ kns_imperial_olympic.0011 = {
 		}
 		custom_tooltip = kns_imperial_olympic_winner_name_tt
 		hidden_effect = {
+			kns_olympic_clear_champion_scope_effect = yes
 			kns_clear_imperial_olympic_vars_effect = yes
 		}
 	}
@@ -563,6 +609,7 @@ kns_imperial_olympic.0011 = {
 		}
 		custom_tooltip = kns_imperial_olympic_winner_name_tt
 		hidden_effect = {
+			kns_olympic_clear_champion_scope_effect = yes
 			kns_clear_imperial_olympic_vars_effect = yes
 		}
 	}
@@ -592,16 +639,21 @@ kns_imperial_olympic.0012 = {
 	override_background = { reference = courtyard }
 
 	left_portrait = {
-		character = root
-		animation = personality_honorable
+		character = scope:kns_olympic_winner
+		scripted_animation = duel_celebrate
 	}
 	right_portrait = {
 		trigger = {
+			exists = scope:kns_emperor
 			exists = scope:kns_olympic_winner
-			NOT = { this = scope:kns_olympic_winner }
+			NOT = { scope:kns_emperor = scope:kns_olympic_winner }
 		}
-		character = scope:kns_olympic_winner
-		animation = happiness
+		character = scope:kns_emperor
+		animation = personality_honorable
+	}
+
+	immediate = {
+		kns_olympic_restore_champion_scope_effect = yes
 	}
 
 	option = {
@@ -612,6 +664,7 @@ kns_imperial_olympic.0012 = {
 		}
 		custom_tooltip = kns_imperial_olympic_winner_name_tt
 		hidden_effect = {
+			kns_olympic_clear_champion_scope_effect = yes
 			if = {
 				limit = { exists = scope:kns_emperor }
 				scope:kns_emperor = {
@@ -632,6 +685,7 @@ kns_imperial_olympic.0012 = {
 		}
 		custom_tooltip = kns_imperial_olympic_winner_name_tt
 		hidden_effect = {
+			kns_olympic_clear_champion_scope_effect = yes
 			if = {
 				limit = { exists = scope:kns_emperor }
 				scope:kns_emperor = {
@@ -650,6 +704,7 @@ kns_imperial_olympic.0012 = {
 			NOT = { exists = scope:kns_olympic_winner }
 		}
 		hidden_effect = {
+			kns_olympic_clear_champion_scope_effect = yes
 			if = {
 				limit = { exists = scope:kns_emperor }
 				scope:kns_emperor = {
@@ -669,6 +724,7 @@ kns_imperial_olympic.0100 = {
 	hidden = yes
 
 	immediate = {
+		kns_olympic_clear_stale_combat_scopes_effect = yes
 		kns_imperial_olympic_advance_round_driver_effect = yes
 	}
 }
@@ -682,24 +738,7 @@ kns_imperial_olympic.0101 = {
 		kns_restore_imperial_olympic_bout_scopes_effect = yes
 		if = {
 			limit = { has_variable = kns_olympic_bout_open }
-			random_list = {
-				50 = {
-					modifier = {
-						add = scope:kns_olympic_fighter_a.prowess_no_portrait
-					}
-					scope:kns_olympic_fighter_a = {
-						save_scope_as = kns_olympic_winner
-					}
-				}
-				50 = {
-					modifier = {
-						add = scope:kns_olympic_fighter_b.prowess_no_portrait
-					}
-					scope:kns_olympic_fighter_b = {
-						save_scope_as = kns_olympic_winner
-					}
-				}
-			}
+			kns_imperial_olympic_roll_pair_winner_effect = yes
 			if = {
 				limit = { exists = scope:kns_olympic_winner }
 				kns_record_imperial_olympic_bout_win_from_pair_effect = {
@@ -737,17 +776,21 @@ kns_imperial_olympic.0102 = {
 
 	immediate = {
 		kns_restore_imperial_olympic_bout_scopes_effect = yes
-		kns_olympic_debug_log_effect = { MSG = player_bout_0102 }
+		kns_olympic_debug_log_bout_effect = { MSG = player_bout_0102 }
 	}
 
 	option = {
 		name = kns_imperial_olympic.0102.a
-		if = {
-			limit = { kns_olympic_emperor_bout_needs_gear_warning_trigger = yes }
-			trigger_event = kns_imperial_olympic.0104
-		}
-		else = {
-			kns_start_imperial_olympic_player_bout_effect = yes
+		custom_tooltip = kns_imperial_olympic.0102.a.tt
+		# Hover evaluates option effects. Cleanup and configure_start must not run here.
+		hidden_effect = {
+			if = {
+				limit = { kns_olympic_emperor_bout_needs_gear_warning_trigger = yes }
+				trigger_event = kns_imperial_olympic.0104
+			}
+			else = {
+				trigger_event = kns_imperial_olympic.0107
+			}
 		}
 	}
 }
@@ -771,7 +814,7 @@ kns_imperial_olympic.0104 = {
 
 	immediate = {
 		kns_restore_imperial_olympic_bout_scopes_effect = yes
-		kns_olympic_debug_log_effect = { MSG = emperor_gear_warning_0104 }
+		kns_olympic_debug_log_bout_effect = { MSG = emperor_gear_warning_0104 }
 	}
 
 	option = {
@@ -787,18 +830,22 @@ kns_imperial_olympic.0104 = {
 			value = kns_olympic_gear_repair_gold_value
 			multiply = -1
 		}
-		kns_repair_olympic_low_durability_gear_effect = yes
-		kns_start_imperial_olympic_player_bout_effect = yes
+		hidden_effect = {
+			kns_repair_olympic_low_durability_gear_effect = yes
+			trigger_event = kns_imperial_olympic.0107
+		}
 	}
 
 	option = {
 		name = kns_imperial_olympic.0104.b
 		custom_tooltip = kns_imperial_olympic.0104.b.tt
-		kns_start_imperial_olympic_player_bout_effect = yes
+		hidden_effect = {
+			trigger_event = kns_imperial_olympic.0107
+		}
 	}
 }
 
-# Single combat outcome
+# Single combat outcome. Both combatants must be the stored pair; player-as-victor alone is not enough.
 kns_imperial_olympic.0103 = {
 	type = character_event
 	hidden = yes
@@ -807,11 +854,79 @@ kns_imperial_olympic.0103 = {
 		if = {
 			limit = { exists = scope:sc_victor }
 			scope:sc_victor = {
+				save_scope_as = kns_olympic_combat_victor
 				save_scope_as = kns_olympic_winner
 			}
 		}
+		if = {
+			limit = { exists = scope:sc_loser }
+			scope:sc_loser = {
+				save_scope_as = kns_olympic_combat_loser
+			}
+		}
+		if = {
+			limit = { exists = scope:sc_attacker }
+			scope:sc_attacker = {
+				save_scope_as = kns_olympic_combat_attacker
+			}
+		}
+		if = {
+			limit = { exists = scope:sc_defender }
+			scope:sc_defender = {
+				save_scope_as = kns_olympic_combat_defender
+			}
+		}
 		kns_restore_imperial_olympic_bout_scopes_effect = yes
-		kns_olympic_debug_log_effect = { MSG = player_bout_0103 }
+		kns_olympic_debug_log_bout_effect = { MSG = player_bout_0103 }
+		scope:kns_emperor = {
+			if = {
+				limit = { has_variable = kns_olympic_bout_open }
+				if = {
+					limit = {
+						exists = scope:kns_olympic_combat_attacker
+						exists = scope:kns_olympic_combat_defender
+					}
+					single_combat_clean_shirtlessness_effect = {
+						ATTACKER = scope:kns_olympic_combat_attacker
+						DEFENDER = scope:kns_olympic_combat_defender
+					}
+				}
+				if = {
+					limit = { kns_olympic_combat_matches_open_bout_trigger = yes }
+					kns_olympic_debug_log_bout_effect = { MSG = player_bout_0103_match_ok }
+					kns_olympic_apply_minigame_result_effect = yes
+					kns_olympic_advance_after_player_round_effect = yes
+				}
+				else = {
+					kns_olympic_debug_log_bout_effect = { MSG = player_bout_0103_ignored_mismatch }
+				}
+			}
+			else = {
+				kns_olympic_debug_log_bout_effect = { MSG = player_bout_0103_ignored_no_open }
+			}
+		}
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:kns_olympic_player_combatant }
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:kns_olympic_ai_combatant }
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:kns_olympic_fighter_a }
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:kns_olympic_fighter_b }
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:sc_loser }
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:sc_victor }
+		kns_olympic_seed_fresh_duel_variables_effect = { CHAR = scope:kns_olympic_player_combatant }
+		kns_olympic_seed_fresh_duel_variables_effect = { CHAR = scope:kns_olympic_ai_combatant }
+		kns_olympic_seed_fresh_duel_variables_effect = { CHAR = scope:kns_olympic_fighter_a }
+		kns_olympic_seed_fresh_duel_variables_effect = { CHAR = scope:kns_olympic_fighter_b }
+		kns_olympic_clear_stale_combat_scopes_effect = yes
+	}
+}
+
+# Duel invalidated: keep the same pair and fight again. Do not prowess-resolve.
+kns_imperial_olympic.0105 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		kns_restore_imperial_olympic_bout_scopes_effect = yes
+		kns_olympic_debug_log_bout_effect = { MSG = player_bout_0105_invalidated }
 		scope:kns_emperor = {
 			if = {
 				limit = { has_variable = kns_olympic_bout_open }
@@ -826,50 +941,266 @@ kns_imperial_olympic.0103 = {
 					}
 				}
 				if = {
-					limit = { NOT = { exists = scope:kns_olympic_winner } }
-					if = {
-						limit = {
-							exists = scope:kns_olympic_fighter_a
-							exists = scope:kns_olympic_fighter_b
-							scope:kns_olympic_fighter_a = {
-								prowess_no_portrait >= scope:kns_olympic_fighter_b.prowess_no_portrait
-							}
-						}
-						scope:kns_olympic_fighter_a = {
-							save_scope_as = kns_olympic_winner
-						}
+					limit = {
+						exists = scope:kns_olympic_fighter_a
+						exists = scope:kns_olympic_fighter_b
+						scope:kns_olympic_fighter_a = { is_alive = yes }
+						scope:kns_olympic_fighter_b = { is_alive = yes }
 					}
-					else_if = {
-						limit = { exists = scope:kns_olympic_fighter_b }
-						scope:kns_olympic_fighter_b = {
-							save_scope_as = kns_olympic_winner
-						}
+					kns_olympic_debug_log_bout_effect = { MSG = player_bout_0105_rematch }
+					send_interface_toast = {
+						title = kns_imperial_olympic.0105.toast
+						left_icon = scope:kns_olympic_fighter_a
+						right_icon = scope:kns_olympic_fighter_b
 					}
-					else_if = {
-						limit = { exists = scope:kns_olympic_fighter_a }
-						scope:kns_olympic_fighter_a = {
-							save_scope_as = kns_olympic_winner
-						}
-					}
+					trigger_event = kns_imperial_olympic.0102
 				}
-				if = {
-					limit = { exists = scope:kns_olympic_winner }
-					kns_record_imperial_olympic_bout_win_from_pair_effect = {
-						WINNER = scope:kns_olympic_winner
+				else_if = {
+					limit = {
+						exists = scope:kns_olympic_fighter_a
+						scope:kns_olympic_fighter_a = { is_alive = yes }
 					}
+					kns_olympic_debug_log_bout_effect = { MSG = player_bout_0105_a_advances }
+					kns_record_imperial_olympic_bye_advance_effect = {
+						WINNER = scope:kns_olympic_fighter_a
+					}
+					kns_olympic_advance_after_player_round_effect = yes
+				}
+				else_if = {
+					limit = {
+						exists = scope:kns_olympic_fighter_b
+						scope:kns_olympic_fighter_b = { is_alive = yes }
+					}
+					kns_olympic_debug_log_bout_effect = { MSG = player_bout_0105_b_advances }
+					kns_record_imperial_olympic_bye_advance_effect = {
+						WINNER = scope:kns_olympic_fighter_b
+					}
+					kns_olympic_advance_after_player_round_effect = yes
 				}
 				else = {
-					kns_olympic_debug_log_effect = { MSG = player_bout_0103_no_winner }
-					remove_variable = kns_olympic_bout_open
-					trigger_event = {
-						id = kns_imperial_olympic.0100
-						days = 1
-					}
+					kns_olympic_debug_log_bout_effect = { MSG = player_bout_0105_cleared }
+					kns_olympic_advance_after_player_round_effect = yes
 				}
 			}
 			else = {
-				kns_olympic_debug_log_effect = { MSG = player_bout_0103_ignored_no_open }
+				kns_olympic_debug_log_bout_effect = { MSG = player_bout_0105_ignored_no_open }
 			}
 		}
+	}
+}
+
+# Click-only combat start. Must not live on a visible option: hover would preview
+# modifier/scope wipes and can fire configure_start with leftover sc_finished.
+kns_imperial_olympic.0107 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		kns_restore_imperial_olympic_bout_scopes_effect = yes
+		kns_olympic_debug_log_bout_effect = { MSG = player_bout_0107_start }
+		kns_start_imperial_olympic_player_bout_effect = yes
+	}
+}
+
+# Prowess result for your own bout before the Finals.
+kns_imperial_olympic.0108 = {
+	type = character_event
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					kns_olympic_root_won_open_bout_trigger = yes
+					kns_olympic_stage_is_semi_trigger = yes
+				}
+				desc = kns_imperial_olympic.0108.t_win_semi
+			}
+			triggered_desc = {
+				trigger = {
+					kns_olympic_root_won_open_bout_trigger = yes
+					kns_olympic_stage_is_quarter_trigger = yes
+				}
+				desc = kns_imperial_olympic.0108.t_win_quarter
+			}
+			triggered_desc = {
+				trigger = {
+					kns_olympic_root_won_open_bout_trigger = yes
+					kns_olympic_stage_is_round_5_trigger = yes
+				}
+				desc = kns_imperial_olympic.0108.t_win_round_5
+			}
+			triggered_desc = {
+				trigger = {
+					kns_olympic_root_won_open_bout_trigger = yes
+					kns_olympic_stage_is_round_4_trigger = yes
+				}
+				desc = kns_imperial_olympic.0108.t_win_round_4
+			}
+			triggered_desc = {
+				trigger = {
+					kns_olympic_root_won_open_bout_trigger = yes
+					kns_olympic_stage_is_round_3_trigger = yes
+				}
+				desc = kns_imperial_olympic.0108.t_win_round_3
+			}
+			triggered_desc = {
+				trigger = {
+					kns_olympic_root_won_open_bout_trigger = yes
+					kns_olympic_stage_is_round_2_trigger = yes
+				}
+				desc = kns_imperial_olympic.0108.t_win_round_2
+			}
+			triggered_desc = {
+				trigger = {
+					kns_olympic_root_won_open_bout_trigger = yes
+					kns_olympic_stage_is_round_1_trigger = yes
+				}
+				desc = kns_imperial_olympic.0108.t_win_round_1
+			}
+			triggered_desc = {
+				trigger = { kns_olympic_root_won_open_bout_trigger = yes }
+				desc = kns_imperial_olympic.0108.t_win
+			}
+			triggered_desc = {
+				trigger = { kns_olympic_stage_is_semi_trigger = yes }
+				desc = kns_imperial_olympic.0108.t_lose_semi
+			}
+			triggered_desc = {
+				trigger = { kns_olympic_stage_is_quarter_trigger = yes }
+				desc = kns_imperial_olympic.0108.t_lose_quarter
+			}
+			triggered_desc = {
+				trigger = { kns_olympic_stage_is_round_5_trigger = yes }
+				desc = kns_imperial_olympic.0108.t_lose_round_5
+			}
+			triggered_desc = {
+				trigger = { kns_olympic_stage_is_round_4_trigger = yes }
+				desc = kns_imperial_olympic.0108.t_lose_round_4
+			}
+			triggered_desc = {
+				trigger = { kns_olympic_stage_is_round_3_trigger = yes }
+				desc = kns_imperial_olympic.0108.t_lose_round_3
+			}
+			triggered_desc = {
+				trigger = { kns_olympic_stage_is_round_2_trigger = yes }
+				desc = kns_imperial_olympic.0108.t_lose_round_2
+			}
+			triggered_desc = {
+				trigger = { kns_olympic_stage_is_round_1_trigger = yes }
+				desc = kns_imperial_olympic.0108.t_lose_round_1
+			}
+			triggered_desc = {
+				trigger = { exists = scope:kns_olympic_winner }
+				desc = kns_imperial_olympic.0108.t_lose
+			}
+			desc = kns_imperial_olympic.0108.t
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { kns_olympic_root_won_open_bout_trigger = yes }
+				desc = kns_imperial_olympic.0108.desc_win
+			}
+			desc = kns_imperial_olympic.0108.desc_lose
+		}
+	}
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		trigger = {
+			exists = scope:kns_olympic_winner
+			exists = scope:kns_olympic_fighter_a
+			scope:kns_olympic_winner = scope:kns_olympic_fighter_a
+		}
+		character = scope:kns_olympic_fighter_a
+		scripted_animation = duel_celebrate
+	}
+	left_portrait = {
+		trigger = {
+			exists = scope:kns_olympic_fighter_a
+			NAND = {
+				exists = scope:kns_olympic_winner
+				scope:kns_olympic_winner = scope:kns_olympic_fighter_a
+			}
+		}
+		character = scope:kns_olympic_fighter_a
+		animation = throne_room_kneel_1
+	}
+	right_portrait = {
+		trigger = {
+			exists = scope:kns_olympic_winner
+			exists = scope:kns_olympic_fighter_b
+			scope:kns_olympic_winner = scope:kns_olympic_fighter_b
+		}
+		character = scope:kns_olympic_fighter_b
+		scripted_animation = duel_celebrate
+	}
+	right_portrait = {
+		trigger = {
+			exists = scope:kns_olympic_fighter_b
+			NAND = {
+				exists = scope:kns_olympic_winner
+				scope:kns_olympic_winner = scope:kns_olympic_fighter_b
+			}
+		}
+		character = scope:kns_olympic_fighter_b
+		animation = throne_room_kneel_1
+	}
+
+	immediate = {
+		kns_restore_imperial_olympic_bout_scopes_effect = yes
+		kns_olympic_save_bout_stage_host_effect = yes
+		kns_imperial_olympic_resolve_player_fake_bout_effect = yes
+		kns_olympic_debug_log_bout_effect = { MSG = player_fake_0108 }
+	}
+
+	option = {
+		name = kns_imperial_olympic.0108.a
+		trigger = {
+			exists = scope:kns_olympic_winner
+			this = scope:kns_olympic_winner
+		}
+		custom_tooltip = kns_imperial_olympic.0108.a.tt
+		hidden_effect = {
+			trigger_event = kns_imperial_olympic.0109
+		}
+	}
+
+	option = {
+		name = kns_imperial_olympic.0108.b
+		trigger = {
+			OR = {
+				NOT = { exists = scope:kns_olympic_winner }
+				NOT = { this = scope:kns_olympic_winner }
+			}
+		}
+		custom_tooltip = kns_imperial_olympic.0108.b.tt
+		hidden_effect = {
+			trigger_event = kns_imperial_olympic.0109
+		}
+	}
+}
+
+# Click-only: close the day's round after the fake-duel result. Hover must not end the round.
+kns_imperial_olympic.0109 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		kns_restore_imperial_olympic_bout_scopes_effect = yes
+		kns_olympic_debug_log_bout_effect = { MSG = player_fake_0109 }
+		kns_olympic_advance_after_player_round_effect = yes
+	}
+}
+
+# Assigned/Prodigious knight duel never returned a result. Prowess-roll that pair.
+# Does not run for your own minigame (defender is you; hang watch is not set).
+kns_imperial_olympic.0106 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		kns_olympic_resolve_hung_knight_bout_effect = yes
 	}
 }

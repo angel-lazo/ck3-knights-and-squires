@@ -101,6 +101,48 @@ kns_olympic_county_bonus_scale_value = {
 	}
 }
 
+# Fake-duel random_list modifier, evaluated on the fighter.
+# Total weight = 5 (list base) + max(0, prowess×2 − 5×floor(gap/10)).
+# Gap penalty applies only when this fighter is behind the other.
+# Outer min 0 keeps the add from going negative so the +5 floor is always intact.
+kns_olympic_fake_duel_prowess_weight_value = {
+	value = prowess
+	multiply = 2
+	if = {
+		limit = {
+			exists = scope:kns_olympic_fighter_a
+			exists = scope:kns_olympic_fighter_b
+			this = scope:kns_olympic_fighter_a
+			prowess < scope:kns_olympic_fighter_b.prowess
+		}
+		subtract = {
+			value = scope:kns_olympic_fighter_b.prowess
+			subtract = prowess
+			min = 0
+			divide = 10
+			floor = yes
+			multiply = 5
+		}
+	}
+	if = {
+		limit = {
+			exists = scope:kns_olympic_fighter_a
+			exists = scope:kns_olympic_fighter_b
+			this = scope:kns_olympic_fighter_b
+			prowess < scope:kns_olympic_fighter_a.prowess
+		}
+		subtract = {
+			value = scope:kns_olympic_fighter_a.prowess
+			subtract = prowess
+			min = 0
+			divide = 10
+			floor = yes
+			multiply = 5
+		}
+	}
+	min = 0
+}
+
 # 50 gold per worn weapon or armor piece at or below 15% durability.
 kns_olympic_gear_repair_gold_value = {
 	value = 0

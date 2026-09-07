@@ -12,11 +12,24 @@ kns_clear_imperial_olympic_vars_effect = {
 	remove_variable = kns_olympic_fighter_b
 	remove_variable = kns_olympic_bout_open
 	remove_variable = kns_olympic_found_seed
+	remove_variable = kns_olympic_found_a
+	remove_variable = kns_olympic_found_b
+	remove_variable = kns_olympic_minigame_side
+	remove_variable = kns_olympic_minigame_foe
+	remove_variable = kns_olympic_player_combatant
+	remove_variable = kns_olympic_ai_combatant
+	remove_variable = kns_olympic_player_bout_pending
+	remove_variable = kns_olympic_player_pair_pending
+	remove_variable = kns_olympic_fake_resolved
+	remove_variable = kns_olympic_pending_a
+	remove_variable = kns_olympic_pending_b
+	remove_variable = kns_olympic_hang_watch
 	clear_variable_list = kns_olympic_entrants
 	clear_variable_list = kns_olympic_invited_rulers
 	clear_variable_list = kns_olympic_round_fighters
 	clear_variable_list = kns_olympic_next_round
 	clear_variable_list = kns_olympic_venue_scratch
+	clear_variable_list = kns_olympic_young_invite_pool
 }
 
 kns_abandon_imperial_olympic_planning_effect = {
@@ -324,16 +337,35 @@ kns_olympic_sync_push_winner_effect = {
 	}
 	if = {
 		limit = { exists = scope:kns_olympic_sync_loser }
-		$WINNER$ = {
-			create_character_memory = {
-				type = kns_olympic_defeated_in_lists
-				participants = {
-					opponent = scope:kns_olympic_sync_loser
+		kns_olympic_create_bout_memories_effect = {
+			WINNER = $WINNER$
+			LOSER = scope:kns_olympic_sync_loser
+		}
+		scope:kns_olympic_sync_loser = {
+			if = {
+				limit = { is_alive = yes }
+				if = {
+					limit = { NOT = { has_variable = kns_imperial_duel_losses } }
+					set_variable = {
+						name = kns_imperial_duel_losses
+						value = 0
+					}
+				}
+				change_variable = {
+					name = kns_imperial_duel_losses
+					add = 1
 				}
 			}
 		}
 	}
 	kns_register_imperial_hof_character_effect = { CHAR = $WINNER$ }
+	if = {
+		limit = {
+			exists = scope:kns_olympic_sync_loser
+			scope:kns_olympic_sync_loser = { is_alive = yes }
+		}
+		kns_register_imperial_hof_character_effect = { CHAR = scope:kns_olympic_sync_loser }
+	}
 	add_to_variable_list = {
 		name = kns_olympic_next_round
 		target = $WINNER$
@@ -353,16 +385,16 @@ kns_olympic_force_complete_bracket_effect = {
 		var:kns_olympic_fighter_a = { save_scope_as = kns_olympic_fighter_a }
 		var:kns_olympic_fighter_b = { save_scope_as = kns_olympic_fighter_b }
 		random_list = {
-			50 = {
+			5 = {
 				modifier = {
-					add = scope:kns_olympic_fighter_a.prowess_no_portrait
+					add = scope:kns_olympic_fighter_a.kns_olympic_fake_duel_prowess_weight_value
 				}
 				scope:kns_olympic_fighter_b = { save_scope_as = kns_olympic_sync_loser }
 				kns_olympic_sync_push_winner_effect = { WINNER = scope:kns_olympic_fighter_a }
 			}
-			50 = {
+			5 = {
 				modifier = {
-					add = scope:kns_olympic_fighter_b.prowess_no_portrait
+					add = scope:kns_olympic_fighter_b.kns_olympic_fake_duel_prowess_weight_value
 				}
 				scope:kns_olympic_fighter_a = { save_scope_as = kns_olympic_sync_loser }
 				kns_olympic_sync_push_winner_effect = { WINNER = scope:kns_olympic_fighter_b }
@@ -390,51 +422,35 @@ kns_olympic_force_complete_bracket_effect = {
 					value >= 2
 				}
 			}
-			random_in_list = {
-				variable = kns_olympic_round_fighters
-				limit = { is_alive = yes }
-				save_scope_as = kns_olympic_fighter_a
-			}
+			kns_olympic_draw_bout_pair_from_round_effect = yes
 			if = {
-				limit = { exists = scope:kns_olympic_fighter_a }
-				remove_list_variable = {
-					name = kns_olympic_round_fighters
-					target = scope:kns_olympic_fighter_a
+				limit = {
+					var:kns_olympic_found_a = 1
+					var:kns_olympic_found_b = 1
 				}
-				random_in_list = {
-					variable = kns_olympic_round_fighters
-					limit = {
-						is_alive = yes
-						NOT = { this = scope:kns_olympic_fighter_a }
-					}
-					save_scope_as = kns_olympic_fighter_b
-				}
-				if = {
-					limit = { exists = scope:kns_olympic_fighter_b }
-					remove_list_variable = {
-						name = kns_olympic_round_fighters
-						target = scope:kns_olympic_fighter_b
-					}
-					random_list = {
-						50 = {
-							modifier = {
-								add = scope:kns_olympic_fighter_a.prowess_no_portrait
-							}
-							scope:kns_olympic_fighter_b = { save_scope_as = kns_olympic_sync_loser }
-							kns_olympic_sync_push_winner_effect = { WINNER = scope:kns_olympic_fighter_a }
+				random_list = {
+					5 = {
+						modifier = {
+							add = scope:kns_olympic_fighter_a.kns_olympic_fake_duel_prowess_weight_value
 						}
-						50 = {
-							modifier = {
-								add = scope:kns_olympic_fighter_b.prowess_no_portrait
-							}
-							scope:kns_olympic_fighter_a = { save_scope_as = kns_olympic_sync_loser }
-							kns_olympic_sync_push_winner_effect = { WINNER = scope:kns_olympic_fighter_b }
+						scope:kns_olympic_fighter_b = { save_scope_as = kns_olympic_sync_loser }
+						kns_olympic_sync_push_winner_effect = { WINNER = scope:kns_olympic_fighter_a }
+					}
+					5 = {
+						modifier = {
+							add = scope:kns_olympic_fighter_b.kns_olympic_fake_duel_prowess_weight_value
 						}
+						scope:kns_olympic_fighter_a = { save_scope_as = kns_olympic_sync_loser }
+						kns_olympic_sync_push_winner_effect = { WINNER = scope:kns_olympic_fighter_b }
 					}
 				}
-				else = {
-					kns_olympic_sync_push_winner_effect = { WINNER = scope:kns_olympic_fighter_a }
-				}
+			}
+			else_if = {
+				limit = { var:kns_olympic_found_a = 1 }
+				kns_olympic_sync_push_winner_effect = { WINNER = scope:kns_olympic_fighter_a }
+			}
+			else = {
+				clear_variable_list = kns_olympic_round_fighters
 			}
 		}
 		else_if = {
@@ -514,12 +530,14 @@ kns_olympic_force_complete_bracket_effect = {
 				exists = scope:kns_olympic_winner
 				scope:kns_olympic_winner = { is_ai = no }
 			}
+			kns_olympic_store_champion_scope_effect = yes
 			scope:kns_olympic_winner = {
-				trigger_event = kns_imperial_olympic.0011
+				trigger_event = kns_imperial_olympic.0009
 			}
 		}
 	}
 	kns_clear_imperial_olympic_vars_effect = yes
+	kns_olympic_store_champion_scope_effect = yes
 }
 
 kns_adopt_imperial_olympic_institution_effect = {
@@ -629,17 +647,29 @@ kns_auto_invite_imperial_olympic_stars_effect = {
 		save_scope_as = kns_olympic_auto_pick
 		kns_try_add_imperial_olympic_entrant_if_room_effect = { ENTRANT = scope:kns_olympic_auto_pick }
 	}
+	clear_variable_list = kns_olympic_young_invite_pool
 	every_living_character = {
 		limit = { kns_olympic_auto_invite_young_christian_knight_trigger = yes }
-		add_to_list = kns_olympic_young_pool
+		save_scope_as = kns_olympic_young_candidate
+		scope:kns_emperor = {
+			add_to_variable_list = {
+				name = kns_olympic_young_invite_pool
+				target = scope:kns_olympic_young_candidate
+			}
+		}
 	}
 	ordered_in_list = {
-		list = kns_olympic_young_pool
+		variable = kns_olympic_young_invite_pool
 		order_by = prowess_no_portrait
 		max = 30
 		check_range_bounds = no
 		save_scope_as = kns_olympic_auto_pick
 		kns_try_add_imperial_olympic_entrant_if_room_effect = { ENTRANT = scope:kns_olympic_auto_pick }
+	}
+	clear_variable_list = kns_olympic_young_invite_pool
+	every_in_list = {
+		list = kns_olympic_young_pool
+		remove_from_list = kns_olympic_young_pool
 	}
 }
 
@@ -1109,12 +1139,732 @@ kns_olympic_save_host_effect = {
 	}
 }
 
-kns_olympic_debug_log_effect = {
-	debug_log = "KNS Olympic | $MSG$"
-	debug_log_scopes = yes
+# Survive bracket teardown and leftover combat-scope wipes until the crown event is dismissed.
+# save_scope_as first: nested set_variable value = scope:winner can silently store the host.
+kns_olympic_store_champion_scope_effect = {
+	if = {
+		limit = { exists = scope:kns_olympic_winner }
+		scope:kns_olympic_winner = {
+			save_scope_as = kns_olympic_champion_char
+		}
+		if = {
+			limit = { NOT = { exists = scope:kns_emperor } }
+			kns_olympic_save_host_effect = yes
+		}
+		if = {
+			limit = { exists = scope:kns_emperor }
+			scope:kns_emperor = {
+				set_variable = {
+					name = kns_olympic_champion
+					value = scope:kns_olympic_champion_char
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				name = kns_olympic_champion
+				value = scope:kns_olympic_champion_char
+			}
+		}
+	}
 }
 
-kns_record_imperial_olympic_bout_win_effect = {
+# Always overwrite winner from the stored character. Portraits of the visible crown
+# event are built before that event's immediate, so restore in a hidden setup event first.
+kns_olympic_restore_champion_scope_effect = {
+	if = {
+		limit = { NOT = { exists = scope:kns_emperor } }
+		kns_olympic_save_host_effect = yes
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:kns_emperor }
+			exists = var:kns_olympic_champion
+		}
+		save_scope_as = kns_emperor
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:kns_emperor }
+		}
+		every_player = {
+			limit = { exists = var:kns_olympic_champion }
+			save_scope_as = kns_emperor
+		}
+	}
+	if = {
+		limit = {
+			exists = scope:kns_emperor
+			scope:kns_emperor = { exists = var:kns_olympic_champion }
+		}
+		scope:kns_emperor = {
+			var:kns_olympic_champion = {
+				save_scope_as = kns_olympic_winner
+			}
+		}
+	}
+	else_if = {
+		limit = { exists = var:kns_olympic_champion }
+		var:kns_olympic_champion = {
+			save_scope_as = kns_olympic_winner
+		}
+	}
+}
+
+kns_olympic_clear_champion_scope_effect = {
+	kns_olympic_save_host_effect = yes
+	if = {
+		limit = { exists = scope:kns_emperor }
+		scope:kns_emperor = { remove_variable = kns_olympic_champion }
+	}
+	remove_variable = kns_olympic_champion
+}
+
+kns_olympic_debug_log_effect = {
+	debug_log = "KNS Olympic $MSG$"
+}
+
+# Strip leftover vanilla duel vars/flags/modifiers from one character.
+# Nested is_alive check: exists + $CHAR$ = { is_alive } in one limit can skip the wipe.
+kns_olympic_reset_character_duel_state_effect = {
+	if = {
+		limit = { exists = $CHAR$ }
+		$CHAR$ = {
+			if = {
+				limit = { is_alive = yes }
+				hidden_effect = {
+					remove_single_combat_character_local_variables_effect = yes
+					remove_single_combat_variables_effect = yes
+					remove_temporary_modifiers_combat_effect = yes
+					remove_character_modifier = combat_move_feint_and_stab_modifier
+					remove_character_modifier = combat_move_stoic_veteran_modifier
+					remove_local_variable = current_duel_edge_buff
+					remove_local_variable = current_duel_edge_debuff
+					remove_character_flag = single_combat_stripped_to_waist
+					remove_character_flag = single_combat_duel_armor
+					remove_character_flag = sce_needs_forced_recalc_flag
+					if = {
+						limit = { has_variable = engaged_in_single_combat }
+						remove_variable = engaged_in_single_combat
+					}
+				}
+			}
+		}
+	}
+}
+
+# Force round 1 scores on a combatant. Removing current_round is not enough:
+# unset or leftover >= 4 makes single_combat.0021 skip to sudden death.
+kns_olympic_seed_fresh_duel_variables_effect = {
+	if = {
+		limit = { exists = $CHAR$ }
+		$CHAR$ = {
+			if = {
+				limit = { is_alive = yes }
+				set_variable = {
+					name = current_round
+					value = 1
+				}
+				set_variable = {
+					name = success_threshold
+					value = starting_success_threshold
+				}
+				set_variable = {
+					name = sc_attacker_injury_bonus
+					value = starting_injury_bonus
+				}
+				set_variable = {
+					name = sc_defender_injury_bonus
+					value = starting_injury_bonus
+				}
+				set_variable = {
+					name = sc_attacker_injury_risk_score
+					value = 0
+				}
+				set_variable = {
+					name = sc_defender_injury_risk_score
+					value = 0
+				}
+				set_variable = {
+					name = sc_attacker_duel_success_score
+					value = 0
+				}
+				set_variable = {
+					name = sc_defender_duel_success_score
+					value = 0
+				}
+				remove_variable = sc_attacker_success_check
+				remove_variable = sc_defender_success_check
+				remove_variable = sc_attacker_injury_risk_check
+				remove_variable = sc_defender_injury_risk_check
+				remove_variable = tier_1_counter
+				remove_variable = tier_2_counter
+				remove_variable = tier_3_counter
+			}
+		}
+	}
+}
+
+kns_olympic_clear_stale_combat_value_scopes_effect = {
+	# sc_finished is a value scope. exists = yes even if the value is no, and 0021
+	# then finalises immediately (shown as sudden death). Never write no; only clear.
+	hidden_effect = {
+		while = {
+			count = 10
+			limit = { exists = scope:sc_finished }
+			clear_saved_scope = sc_finished
+		}
+		if = {
+			limit = { exists = scope:sc_finished }
+			debug_log = "KNS Olympic | sc_finished STILL set after clear"
+		}
+		else = {
+			debug_log = "KNS Olympic | sc_finished cleared"
+		}
+		while = {
+			count = 5
+			limit = { exists = scope:victory_type }
+			clear_saved_scope = victory_type
+		}
+		if = {
+			limit = { exists = scope:death_rattle }
+			clear_saved_scope = death_rattle
+		}
+		if = {
+			limit = { exists = scope:sc_attacker_last_move }
+			clear_saved_scope = sc_attacker_last_move
+		}
+		if = {
+			limit = { exists = scope:sc_defender_last_move }
+			clear_saved_scope = sc_defender_last_move
+		}
+		if = {
+			limit = { exists = scope:fatality }
+			clear_saved_scope = fatality
+		}
+		if = {
+			limit = { exists = scope:fixed }
+			clear_saved_scope = fixed
+		}
+		if = {
+			limit = { exists = scope:locale }
+			clear_saved_scope = locale
+		}
+		if = {
+			limit = { exists = scope:follow_up_event }
+			clear_saved_scope = follow_up_event
+		}
+		if = {
+			limit = { exists = scope:invalidation_event }
+			clear_saved_scope = invalidation_event
+		}
+		if = {
+			limit = { exists = scope:background_terrain_scope }
+			clear_saved_scope = background_terrain_scope
+		}
+	}
+}
+
+kns_olympic_clear_stale_combat_scopes_effect = {
+	hidden_effect = {
+		kns_olympic_clear_stale_combat_value_scopes_effect = yes
+		if = {
+			limit = { exists = scope:sc_loser }
+			clear_saved_scope = sc_loser
+		}
+		if = {
+			limit = { exists = scope:sc_victor }
+			clear_saved_scope = sc_victor
+		}
+		if = {
+			limit = { exists = scope:sc_attacker }
+			clear_saved_scope = sc_attacker
+		}
+		if = {
+			limit = { exists = scope:sc_defender }
+			clear_saved_scope = sc_defender
+		}
+		if = {
+			limit = { exists = scope:sc_initiator }
+			clear_saved_scope = sc_initiator
+		}
+		if = {
+			limit = { exists = scope:myself }
+			clear_saved_scope = myself
+		}
+		if = {
+			limit = { exists = scope:my_foe }
+			clear_saved_scope = my_foe
+		}
+		if = {
+			limit = { exists = scope:kns_olympic_combat_loser }
+			clear_saved_scope = kns_olympic_combat_loser
+		}
+		if = {
+			limit = { exists = scope:kns_olympic_combat_victor }
+			clear_saved_scope = kns_olympic_combat_victor
+		}
+		if = {
+			limit = { exists = scope:kns_olympic_combat_attacker }
+			clear_saved_scope = kns_olympic_combat_attacker
+		}
+		if = {
+			limit = { exists = scope:kns_olympic_combat_defender }
+			clear_saved_scope = kns_olympic_combat_defender
+		}
+	}
+}
+
+# Wipe leftover duel state on both fighters, then seed round 1.
+# Do not overwrite sc_loser here; that is only for bout start.
+kns_olympic_reset_vanilla_duel_state_effect = {
+	hidden_effect = {
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:kns_olympic_player_combatant }
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:kns_olympic_ai_combatant }
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:kns_olympic_fighter_a }
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:kns_olympic_fighter_b }
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:sc_loser }
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:sc_victor }
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:sc_attacker }
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:sc_defender }
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:myself }
+		kns_olympic_reset_character_duel_state_effect = { CHAR = scope:my_foe }
+		kns_olympic_seed_fresh_duel_variables_effect = { CHAR = scope:kns_olympic_player_combatant }
+		kns_olympic_seed_fresh_duel_variables_effect = { CHAR = scope:kns_olympic_ai_combatant }
+		kns_olympic_seed_fresh_duel_variables_effect = { CHAR = scope:kns_olympic_fighter_a }
+		kns_olympic_seed_fresh_duel_variables_effect = { CHAR = scope:kns_olympic_fighter_b }
+		kns_olympic_clear_stale_combat_scopes_effect = yes
+	}
+}
+
+kns_olympic_overwrite_combat_pair_scopes_effect = {
+	if = {
+		limit = {
+			exists = scope:kns_olympic_player_combatant
+			exists = scope:kns_olympic_ai_combatant
+		}
+		scope:kns_olympic_ai_combatant = {
+			save_scope_as = sc_loser
+			save_scope_as = sc_attacker
+			save_scope_as = my_foe
+		}
+		scope:kns_olympic_player_combatant = {
+			save_scope_as = sc_victor
+			save_scope_as = sc_defender
+			save_scope_as = sc_initiator
+			save_scope_as = myself
+		}
+	}
+}
+
+kns_olympic_debug_char_effect = {
+	if = {
+		limit = { exists = $CHAR$ }
+		$CHAR$ = {
+			debug_log = "KNS Olympic | dump | $TAG$"
+			debug_log_scopes = yes
+			if = {
+				limit = { is_ai = no }
+				debug_log = "KNS Olympic | dump | $TAG$ is_player"
+			}
+			else = {
+				debug_log = "KNS Olympic | dump | $TAG$ is_ai"
+			}
+			if = {
+				limit = { has_variable = engaged_in_single_combat }
+				debug_log = "KNS Olympic | dump | $TAG$ engaged=yes"
+			}
+			else = {
+				debug_log = "KNS Olympic | dump | $TAG$ engaged=no"
+			}
+			if = {
+				limit = { has_variable = current_round }
+				if = {
+					limit = { var:current_round = 1 }
+					debug_log = "KNS Olympic | dump | $TAG$ current_round=1"
+				}
+				else_if = {
+					limit = { var:current_round = 2 }
+					debug_log = "KNS Olympic | dump | $TAG$ current_round=2"
+				}
+				else_if = {
+					limit = { var:current_round = 3 }
+					debug_log = "KNS Olympic | dump | $TAG$ current_round=3"
+				}
+				else_if = {
+					limit = { var:current_round = 4 }
+					debug_log = "KNS Olympic | dump | $TAG$ current_round=4"
+				}
+				else = {
+					debug_log = "KNS Olympic | dump | $TAG$ current_round=5+"
+				}
+			}
+			else = {
+				debug_log = "KNS Olympic | dump | $TAG$ current_round_unset"
+			}
+			if = {
+				limit = { is_alive = yes }
+				debug_log = "KNS Olympic | dump | $TAG$ alive=yes"
+			}
+			else = {
+				debug_log = "KNS Olympic | dump | $TAG$ alive=no"
+			}
+		}
+	}
+	else = {
+		debug_log = "KNS Olympic | dump | $TAG$ missing"
+	}
+}
+
+kns_olympic_debug_list_size_effect = {
+	set_variable = {
+		name = kns_olympic_debug_list_count
+		value = 0
+	}
+	every_in_list = {
+		variable = $LIST$
+		scope:kns_emperor = {
+			change_variable = {
+				name = kns_olympic_debug_list_count
+				add = 1
+			}
+		}
+	}
+	if = {
+		limit = { var:kns_olympic_debug_list_count = 0 }
+		debug_log = "KNS Olympic | dump | $TAG$=0"
+	}
+	else_if = {
+		limit = { var:kns_olympic_debug_list_count = 1 }
+		debug_log = "KNS Olympic | dump | $TAG$=1"
+	}
+	else_if = {
+		limit = { var:kns_olympic_debug_list_count = 2 }
+		debug_log = "KNS Olympic | dump | $TAG$=2"
+	}
+	else_if = {
+		limit = { var:kns_olympic_debug_list_count < 8 }
+		debug_log = "KNS Olympic | dump | $TAG$=3-7"
+	}
+	else_if = {
+		limit = { var:kns_olympic_debug_list_count < 16 }
+		debug_log = "KNS Olympic | dump | $TAG$=8-15"
+	}
+	else_if = {
+		limit = { var:kns_olympic_debug_list_count < 32 }
+		debug_log = "KNS Olympic | dump | $TAG$=16-31"
+	}
+	else_if = {
+		limit = { var:kns_olympic_debug_list_count < 64 }
+		debug_log = "KNS Olympic | dump | $TAG$=32-63"
+	}
+	else_if = {
+		limit = { var:kns_olympic_debug_list_count < 128 }
+		debug_log = "KNS Olympic | dump | $TAG$=64-127"
+	}
+	else_if = {
+		limit = { var:kns_olympic_debug_list_count < 256 }
+		debug_log = "KNS Olympic | dump | $TAG$=128-255"
+	}
+	else = {
+		debug_log = "KNS Olympic | dump | $TAG$=256+"
+	}
+}
+
+# Full snapshot for player-bout tracing. Grep debug.log for "KNS Olympic".
+kns_olympic_debug_dump_bout_effect = {
+	kns_olympic_save_host_effect = yes
+	every_in_list = {
+		list = kns_olympic_young_pool
+		remove_from_list = kns_olympic_young_pool
+	}
+	debug_log = "KNS Olympic dump begin"
+	if = {
+		limit = { exists = scope:sc_finished }
+		debug_log = "KNS Olympic | dump | sc_finished=yes"
+	}
+	else = {
+		debug_log = "KNS Olympic | dump | sc_finished=no"
+	}
+	if = {
+		limit = { exists = scope:kns_emperor }
+		scope:kns_emperor = {
+			debug_log = "KNS Olympic | dump | host"
+			if = {
+				limit = { has_variable = kns_olympic_bout_open }
+				debug_log = "KNS Olympic | dump | bout_open=yes"
+			}
+			else = {
+				debug_log = "KNS Olympic | dump | bout_open=no"
+			}
+			if = {
+				limit = { has_variable = kns_olympic_round }
+				if = {
+					limit = { var:kns_olympic_round = 1 }
+					debug_log = "KNS Olympic | dump | round=1"
+				}
+				else_if = {
+					limit = { var:kns_olympic_round = 2 }
+					debug_log = "KNS Olympic | dump | round=2"
+				}
+				else_if = {
+					limit = { var:kns_olympic_round = 3 }
+					debug_log = "KNS Olympic | dump | round=3"
+				}
+				else_if = {
+					limit = { var:kns_olympic_round = 4 }
+					debug_log = "KNS Olympic | dump | round=4"
+				}
+				else_if = {
+					limit = { var:kns_olympic_round = 5 }
+					debug_log = "KNS Olympic | dump | round=5"
+				}
+				else_if = {
+					limit = { var:kns_olympic_round = 6 }
+					debug_log = "KNS Olympic | dump | round=6"
+				}
+				else_if = {
+					limit = { var:kns_olympic_round = 7 }
+					debug_log = "KNS Olympic | dump | round=7"
+				}
+				else_if = {
+					limit = { var:kns_olympic_round = 8 }
+					debug_log = "KNS Olympic | dump | round=8"
+				}
+				else = {
+					debug_log = "KNS Olympic | dump | round=9+"
+				}
+			}
+			else = {
+				debug_log = "KNS Olympic | dump | round missing"
+			}
+			if = {
+				limit = {
+					has_variable = kns_olympic_found_a
+					var:kns_olympic_found_a = 1
+				}
+				debug_log = "KNS Olympic | dump | found_a=1"
+			}
+			else = {
+				debug_log = "KNS Olympic | dump | found_a!=1"
+			}
+			if = {
+				limit = {
+					has_variable = kns_olympic_found_b
+					var:kns_olympic_found_b = 1
+				}
+				debug_log = "KNS Olympic | dump | found_b=1"
+			}
+			else = {
+				debug_log = "KNS Olympic | dump | found_b!=1"
+			}
+			kns_olympic_debug_list_size_effect = {
+				LIST = kns_olympic_round_fighters
+				TAG = round_fighters
+			}
+			kns_olympic_debug_list_size_effect = {
+				LIST = kns_olympic_next_round
+				TAG = next_round
+			}
+			if = {
+				limit = { exists = var:kns_olympic_fighter_a }
+				kns_olympic_debug_char_effect = {
+					CHAR = var:kns_olympic_fighter_a
+					TAG = var_fighter_a
+				}
+			}
+			else = {
+				debug_log = "KNS Olympic | dump | var_fighter_a missing"
+			}
+			if = {
+				limit = { exists = var:kns_olympic_fighter_b }
+				kns_olympic_debug_char_effect = {
+					CHAR = var:kns_olympic_fighter_b
+					TAG = var_fighter_b
+				}
+			}
+			else = {
+				debug_log = "KNS Olympic | dump | var_fighter_b missing"
+			}
+		}
+	}
+	else = {
+		debug_log = "KNS Olympic | dump | host missing"
+	}
+	kns_olympic_debug_char_effect = {
+		CHAR = scope:kns_olympic_fighter_a
+		TAG = scope_fighter_a
+	}
+	kns_olympic_debug_char_effect = {
+		CHAR = scope:kns_olympic_fighter_b
+		TAG = scope_fighter_b
+	}
+	kns_olympic_debug_char_effect = {
+		CHAR = scope:kns_olympic_player_combatant
+		TAG = player_combatant
+	}
+	kns_olympic_debug_char_effect = {
+		CHAR = scope:kns_olympic_ai_combatant
+		TAG = ai_combatant
+	}
+	kns_olympic_debug_char_effect = {
+		CHAR = scope:sc_initiator
+		TAG = sc_initiator
+	}
+	kns_olympic_debug_char_effect = {
+		CHAR = scope:sc_attacker
+		TAG = sc_attacker
+	}
+	kns_olympic_debug_char_effect = {
+		CHAR = scope:sc_defender
+		TAG = sc_defender
+	}
+	kns_olympic_debug_char_effect = {
+		CHAR = scope:sc_victor
+		TAG = sc_victor
+	}
+	kns_olympic_debug_char_effect = {
+		CHAR = scope:sc_loser
+		TAG = sc_loser
+	}
+	kns_olympic_debug_char_effect = {
+		CHAR = scope:kns_olympic_combat_attacker
+		TAG = combat_attacker
+	}
+	kns_olympic_debug_char_effect = {
+		CHAR = scope:kns_olympic_combat_defender
+		TAG = combat_defender
+	}
+	kns_olympic_debug_char_effect = {
+		CHAR = scope:kns_olympic_combat_victor
+		TAG = combat_victor
+	}
+	kns_olympic_debug_char_effect = {
+		CHAR = scope:kns_olympic_combat_loser
+		TAG = combat_loser
+	}
+	if = {
+		limit = { kns_olympic_combat_matches_open_bout_trigger = yes }
+		debug_log = "KNS Olympic | dump | combat_matches_pair=yes"
+	}
+	else = {
+		debug_log = "KNS Olympic | dump | combat_matches_pair=no"
+	}
+	debug_log = "KNS Olympic | dump end"
+}
+
+kns_olympic_debug_log_bout_effect = {
+	debug_log = "KNS Olympic | $MSG$"
+	debug_log_scopes = yes
+	kns_olympic_debug_dump_bout_effect = yes
+}
+
+kns_olympic_save_bout_stage_host_effect = {
+	if = {
+		limit = {
+			exists = scope:kns_emperor
+			scope:kns_emperor = { has_variable = kns_olympic_round }
+		}
+		scope:kns_emperor = { save_scope_as = kns_olympic_stage_host }
+	}
+	else_if = {
+		limit = { has_variable = kns_olympic_round }
+		save_scope_as = kns_olympic_stage_host
+	}
+}
+
+kns_olympic_give_bout_memories_of_type_effect = {
+	scope:kns_olympic_memory_victor = {
+		create_character_memory = {
+			type = $WIN_TYPE$
+			participants = {
+				opponent = scope:kns_olympic_memory_vanquished
+			}
+		}
+	}
+	if = {
+		limit = { scope:kns_olympic_memory_vanquished = { is_alive = yes } }
+		scope:kns_olympic_memory_vanquished = {
+			create_character_memory = {
+				type = $LOSS_TYPE$
+				participants = {
+					victor = scope:kns_olympic_memory_victor
+				}
+			}
+		}
+	}
+}
+
+# Save victor/vanquished first. Nested $WINNER$ inside the loser's block can bind to the host.
+kns_olympic_create_bout_memories_effect = {
+	$WINNER$ = { save_scope_as = kns_olympic_memory_victor }
+	$LOSER$ = { save_scope_as = kns_olympic_memory_vanquished }
+	kns_olympic_save_bout_stage_host_effect = yes
+	if = {
+		limit = { kns_olympic_stage_is_finals_trigger = yes }
+		kns_olympic_give_bout_memories_of_type_effect = {
+			WIN_TYPE = kns_olympic_defeated_finals
+			LOSS_TYPE = kns_olympic_knocked_finals
+		}
+	}
+	else_if = {
+		limit = { kns_olympic_stage_is_semi_trigger = yes }
+		kns_olympic_give_bout_memories_of_type_effect = {
+			WIN_TYPE = kns_olympic_defeated_semi
+			LOSS_TYPE = kns_olympic_knocked_semi
+		}
+	}
+	else_if = {
+		limit = { kns_olympic_stage_is_quarter_trigger = yes }
+		kns_olympic_give_bout_memories_of_type_effect = {
+			WIN_TYPE = kns_olympic_defeated_quarter
+			LOSS_TYPE = kns_olympic_knocked_quarter
+		}
+	}
+	else_if = {
+		limit = { kns_olympic_stage_is_round_5_trigger = yes }
+		kns_olympic_give_bout_memories_of_type_effect = {
+			WIN_TYPE = kns_olympic_defeated_round_5
+			LOSS_TYPE = kns_olympic_knocked_round_5
+		}
+	}
+	else_if = {
+		limit = { kns_olympic_stage_is_round_4_trigger = yes }
+		kns_olympic_give_bout_memories_of_type_effect = {
+			WIN_TYPE = kns_olympic_defeated_round_4
+			LOSS_TYPE = kns_olympic_knocked_round_4
+		}
+	}
+	else_if = {
+		limit = { kns_olympic_stage_is_round_3_trigger = yes }
+		kns_olympic_give_bout_memories_of_type_effect = {
+			WIN_TYPE = kns_olympic_defeated_round_3
+			LOSS_TYPE = kns_olympic_knocked_round_3
+		}
+	}
+	else_if = {
+		limit = { kns_olympic_stage_is_round_2_trigger = yes }
+		kns_olympic_give_bout_memories_of_type_effect = {
+			WIN_TYPE = kns_olympic_defeated_round_2
+			LOSS_TYPE = kns_olympic_knocked_round_2
+		}
+	}
+	else_if = {
+		limit = { kns_olympic_stage_is_round_1_trigger = yes }
+		kns_olympic_give_bout_memories_of_type_effect = {
+			WIN_TYPE = kns_olympic_defeated_round_1
+			LOSS_TYPE = kns_olympic_knocked_round_1
+		}
+	}
+	else = {
+		kns_olympic_give_bout_memories_of_type_effect = {
+			WIN_TYPE = kns_olympic_defeated_in_lists
+			LOSS_TYPE = kns_olympic_knocked_out_of_lists
+		}
+	}
+}
+
+kns_record_imperial_olympic_bout_outcome_effect = {
 	$WINNER$ = {
 		if = {
 			limit = { NOT = { has_variable = kns_imperial_duel_wins } }
@@ -1127,14 +1877,39 @@ kns_record_imperial_olympic_bout_win_effect = {
 			name = kns_imperial_duel_wins
 			add = 1
 		}
-		create_character_memory = {
-			type = kns_olympic_defeated_in_lists
-			participants = {
-				opponent = $LOSER$
+	}
+	kns_olympic_create_bout_memories_effect = {
+		WINNER = $WINNER$
+		LOSER = $LOSER$
+	}
+	$LOSER$ = {
+		if = {
+			limit = { is_alive = yes }
+			if = {
+				limit = { NOT = { has_variable = kns_imperial_duel_losses } }
+				set_variable = {
+					name = kns_imperial_duel_losses
+					value = 0
+				}
+			}
+			change_variable = {
+				name = kns_imperial_duel_losses
+				add = 1
 			}
 		}
 	}
 	kns_register_imperial_hof_character_effect = { CHAR = $WINNER$ }
+	if = {
+		limit = { $LOSER$ = { is_alive = yes } }
+		kns_register_imperial_hof_character_effect = { CHAR = $LOSER$ }
+	}
+}
+
+kns_record_imperial_olympic_bout_win_effect = {
+	kns_record_imperial_olympic_bout_outcome_effect = {
+		WINNER = $WINNER$
+		LOSER = $LOSER$
+	}
 	kns_olympic_finish_bout_and_continue_effect = { WINNER = $WINNER$ }
 }
 
@@ -1163,14 +1938,18 @@ kns_olympic_finish_bout_and_continue_effect = {
 	scope:kns_emperor = {
 		kns_olympic_debug_log_effect = { MSG = finish_bout_continue }
 		remove_variable = kns_olympic_bout_open
+		remove_variable = kns_olympic_fighter_a
+		remove_variable = kns_olympic_fighter_b
+		remove_variable = kns_olympic_minigame_side
+		remove_variable = kns_olympic_minigame_foe
+		remove_variable = kns_olympic_player_combatant
+		remove_variable = kns_olympic_ai_combatant
+		remove_variable = kns_olympic_hang_watch
 		add_to_variable_list = {
 			name = kns_olympic_next_round
 			target = $WINNER$
 		}
-		trigger_event = {
-			id = kns_imperial_olympic.0100
-			days = 1
-		}
+		remove_variable = kns_olympic_player_bout_pending
 	}
 }
 
@@ -1189,46 +1968,598 @@ kns_restore_imperial_olympic_bout_scopes_effect = {
 				save_scope_as = kns_olympic_fighter_b
 			}
 		}
+		if = {
+			limit = { exists = var:kns_olympic_minigame_side }
+			var:kns_olympic_minigame_side = {
+				save_scope_as = kns_olympic_minigame_side
+			}
+		}
+		if = {
+			limit = { exists = var:kns_olympic_minigame_foe }
+			var:kns_olympic_minigame_foe = {
+				save_scope_as = kns_olympic_minigame_foe
+			}
+		}
+		if = {
+			limit = { exists = var:kns_olympic_player_combatant }
+			var:kns_olympic_player_combatant = {
+				save_scope_as = kns_olympic_player_combatant
+			}
+		}
+		if = {
+			limit = { exists = var:kns_olympic_ai_combatant }
+			var:kns_olympic_ai_combatant = {
+				save_scope_as = kns_olympic_ai_combatant
+			}
+		}
+	}
+}
+
+# Named fighter defends. You only get the vanilla window when that fighter is you.
+# Assigned and Prodigious knights fight as themselves; do not stand in for them.
+kns_olympic_assign_minigame_sides_effect = {
+	if = {
+		limit = { scope:kns_olympic_fighter_a = { is_ai = no } }
+		scope:kns_olympic_fighter_a = { save_scope_as = kns_olympic_minigame_side }
+		scope:kns_olympic_fighter_b = { save_scope_as = kns_olympic_minigame_foe }
+	}
+	else_if = {
+		limit = { scope:kns_olympic_fighter_b = { is_ai = no } }
+		scope:kns_olympic_fighter_b = { save_scope_as = kns_olympic_minigame_side }
+		scope:kns_olympic_fighter_a = { save_scope_as = kns_olympic_minigame_foe }
+	}
+	else_if = {
+		limit = {
+			is_target_in_variable_list = {
+				name = kns_olympic_player_champion_picks
+				target = scope:kns_olympic_fighter_a
+			}
+		}
+		scope:kns_olympic_fighter_a = { save_scope_as = kns_olympic_minigame_side }
+		scope:kns_olympic_fighter_b = { save_scope_as = kns_olympic_minigame_foe }
+	}
+	else_if = {
+		limit = {
+			is_target_in_variable_list = {
+				name = kns_olympic_player_champion_picks
+				target = scope:kns_olympic_fighter_b
+			}
+		}
+		scope:kns_olympic_fighter_b = { save_scope_as = kns_olympic_minigame_side }
+		scope:kns_olympic_fighter_a = { save_scope_as = kns_olympic_minigame_foe }
+	}
+	else_if = {
+		limit = { scope:kns_olympic_fighter_a = { has_trait = kns_talent_generation } }
+		scope:kns_olympic_fighter_a = { save_scope_as = kns_olympic_minigame_side }
+		scope:kns_olympic_fighter_b = { save_scope_as = kns_olympic_minigame_foe }
+	}
+	else = {
+		scope:kns_olympic_fighter_b = { save_scope_as = kns_olympic_minigame_side }
+		scope:kns_olympic_fighter_a = { save_scope_as = kns_olympic_minigame_foe }
+	}
+	scope:kns_olympic_minigame_side = { save_scope_as = kns_olympic_player_combatant }
+	scope:kns_olympic_minigame_foe = { save_scope_as = kns_olympic_ai_combatant }
+	set_variable = {
+		name = kns_olympic_minigame_side
+		value = scope:kns_olympic_minigame_side
+	}
+	set_variable = {
+		name = kns_olympic_minigame_foe
+		value = scope:kns_olympic_minigame_foe
+	}
+	set_variable = {
+		name = kns_olympic_player_combatant
+		value = scope:kns_olympic_player_combatant
+	}
+	set_variable = {
+		name = kns_olympic_ai_combatant
+		value = scope:kns_olympic_ai_combatant
+	}
+}
+
+kns_olympic_apply_minigame_result_effect = {
+	if = {
+		limit = { scope:kns_olympic_combat_victor = scope:kns_olympic_player_combatant }
+		scope:kns_olympic_minigame_side = { save_scope_as = kns_olympic_winner }
+	}
+	else = {
+		scope:kns_olympic_minigame_foe = { save_scope_as = kns_olympic_winner }
+	}
+	if = {
+		limit = { scope:kns_olympic_winner = scope:kns_olympic_fighter_a }
+		scope:kns_olympic_fighter_b = {
+			increase_wounds_no_death_effect = { REASON = duel }
+		}
+	}
+	else = {
+		scope:kns_olympic_fighter_a = {
+			increase_wounds_no_death_effect = { REASON = duel }
+		}
+	}
+	kns_record_imperial_olympic_bout_win_from_pair_effect = {
+		WINNER = scope:kns_olympic_winner
+	}
+}
+
+# AI knight duels may never return 0103. One delayed check; rematches reuse it.
+kns_olympic_schedule_knight_bout_hang_watch_effect = {
+	if = {
+		limit = { NOT = { has_variable = kns_olympic_hang_watch } }
+		set_variable = kns_olympic_hang_watch
+		trigger_event = {
+			id = kns_imperial_olympic.0106
+			days = 2
+		}
+	}
+}
+
+kns_olympic_resolve_hung_knight_bout_effect = {
+	kns_restore_imperial_olympic_bout_scopes_effect = yes
+	kns_olympic_debug_log_bout_effect = { MSG = hung_knight_bout_0106 }
+	if = {
+		limit = {
+			exists = scope:kns_emperor
+			scope:kns_emperor = {
+				has_character_flag = kns_imperial_olympic_host
+				has_variable = kns_olympic_hang_watch
+				has_variable = kns_olympic_bout_open
+			}
+			exists = scope:kns_olympic_player_combatant
+			scope:kns_olympic_player_combatant = { is_ai = yes }
+			exists = scope:kns_olympic_fighter_a
+			exists = scope:kns_olympic_fighter_b
+		}
+		scope:kns_emperor = {
+			if = {
+				limit = {
+					scope:kns_olympic_fighter_a = { is_alive = yes }
+					scope:kns_olympic_fighter_b = { is_alive = yes }
+				}
+				kns_olympic_debug_log_bout_effect = { MSG = hung_knight_bout_prowess }
+				send_interface_toast = {
+					title = kns_imperial_olympic.0106.toast
+					left_icon = scope:kns_olympic_fighter_a
+					right_icon = scope:kns_olympic_fighter_b
+				}
+				if = {
+					limit = {
+						exists = scope:kns_olympic_ai_combatant
+						exists = scope:kns_olympic_player_combatant
+					}
+					single_combat_clean_shirtlessness_effect = {
+						ATTACKER = scope:kns_olympic_ai_combatant
+						DEFENDER = scope:kns_olympic_player_combatant
+					}
+				}
+				kns_olympic_reset_vanilla_duel_state_effect = yes
+				kns_imperial_olympic_resolve_ai_bout_effect = yes
+				kns_olympic_advance_after_player_round_effect = yes
+			}
+			else_if = {
+				limit = { scope:kns_olympic_fighter_a = { is_alive = yes } }
+				kns_olympic_debug_log_bout_effect = { MSG = hung_knight_bout_a_advances }
+				kns_record_imperial_olympic_bye_advance_effect = {
+					WINNER = scope:kns_olympic_fighter_a
+				}
+				kns_olympic_advance_after_player_round_effect = yes
+			}
+			else_if = {
+				limit = { scope:kns_olympic_fighter_b = { is_alive = yes } }
+				kns_olympic_debug_log_bout_effect = { MSG = hung_knight_bout_b_advances }
+				kns_record_imperial_olympic_bye_advance_effect = {
+					WINNER = scope:kns_olympic_fighter_b
+				}
+				kns_olympic_advance_after_player_round_effect = yes
+			}
+			else = {
+				kns_olympic_debug_log_bout_effect = { MSG = hung_knight_bout_cleared }
+				kns_olympic_advance_after_player_round_effect = yes
+			}
+		}
+	}
+	else = {
+		kns_olympic_debug_log_effect = { MSG = hung_knight_bout_0106_ignored }
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_variable = kns_olympic_bout_open }
+					AND = {
+						exists = scope:kns_olympic_player_combatant
+						scope:kns_olympic_player_combatant = { is_ai = no }
+					}
+				}
+			}
+			remove_variable = kns_olympic_hang_watch
+		}
+	}
+}
+
+kns_olympic_purge_dead_round_fighters_effect = {
+	every_in_list = {
+		variable = kns_olympic_round_fighters
+		limit = { is_alive = no }
+		save_scope_as = kns_olympic_dead_fighter
+		scope:kns_emperor = {
+			remove_list_variable = {
+				name = kns_olympic_round_fighters
+				target = scope:kns_olympic_dead_fighter
+			}
+		}
+	}
+}
+
+kns_olympic_schedule_next_round_day_effect = {
+	if = {
+		limit = {
+			has_character_flag = kns_imperial_olympic_host
+			variable_list_size = {
+				name = kns_olympic_round_fighters
+				value >= 2
+			}
+		}
+		kns_olympic_debug_log_effect = { MSG = schedule_next_round_day }
+		trigger_event = {
+			id = kns_imperial_olympic.0100
+			days = 1
+		}
+	}
+}
+
+kns_olympic_advance_after_player_round_effect = {
+	kns_olympic_save_host_effect = yes
+	scope:kns_emperor = {
+		kns_olympic_debug_log_effect = { MSG = advance_after_player_round }
+		remove_variable = kns_olympic_fake_resolved
+		remove_variable = kns_olympic_player_pair_pending
+		remove_variable = kns_olympic_pending_a
+		remove_variable = kns_olympic_pending_b
+		remove_variable = kns_olympic_bout_open
+		remove_variable = kns_olympic_fighter_a
+		remove_variable = kns_olympic_fighter_b
+		remove_variable = kns_olympic_minigame_side
+		remove_variable = kns_olympic_minigame_foe
+		remove_variable = kns_olympic_player_combatant
+		remove_variable = kns_olympic_ai_combatant
+		remove_variable = kns_olympic_player_bout_pending
+		remove_variable = kns_olympic_hang_watch
+		kns_imperial_olympic_end_round_effect = yes
+		kns_olympic_schedule_next_round_day_effect = yes
+	}
+}
+
+kns_olympic_extract_human_pair_from_round_effect = {
+	remove_variable = kns_olympic_player_pair_pending
+	remove_variable = kns_olympic_pending_a
+	remove_variable = kns_olympic_pending_b
+	if = {
+		limit = { exists = scope:kns_olympic_human_fighter }
+		clear_saved_scope = kns_olympic_human_fighter
+	}
+	if = {
+		limit = { exists = scope:kns_olympic_human_foe }
+		clear_saved_scope = kns_olympic_human_foe
+	}
+	set_variable = {
+		name = kns_olympic_found_human
+		value = 0
+	}
+	set_variable = {
+		name = kns_olympic_found_foe
+		value = 0
+	}
+	random_in_list = {
+		variable = kns_olympic_round_fighters
+		limit = {
+			is_alive = yes
+			is_ai = no
+		}
+		save_scope_as = kns_olympic_human_fighter
+		scope:kns_emperor = {
+			set_variable = {
+				name = kns_olympic_found_human
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = { var:kns_olympic_found_human = 1 }
+		remove_list_variable = {
+			name = kns_olympic_round_fighters
+			target = scope:kns_olympic_human_fighter
+		}
+		random_in_list = {
+			variable = kns_olympic_round_fighters
+			limit = { is_alive = yes }
+			save_scope_as = kns_olympic_human_foe
+			scope:kns_emperor = {
+				set_variable = {
+					name = kns_olympic_found_foe
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { var:kns_olympic_found_foe = 1 }
+			remove_list_variable = {
+				name = kns_olympic_round_fighters
+				target = scope:kns_olympic_human_foe
+			}
+			set_variable = {
+				name = kns_olympic_pending_a
+				value = scope:kns_olympic_human_fighter
+			}
+			set_variable = {
+				name = kns_olympic_pending_b
+				value = scope:kns_olympic_human_foe
+			}
+			set_variable = kns_olympic_player_pair_pending
+			kns_olympic_debug_log_effect = { MSG = extract_player_pair }
+		}
+		else = {
+			kns_olympic_debug_log_effect = { MSG = extract_player_bye }
+			kns_record_imperial_olympic_bye_advance_effect = {
+				WINNER = scope:kns_olympic_human_fighter
+			}
+		}
+	}
+	else = {
+		kns_olympic_debug_log_effect = { MSG = extract_no_player }
+	}
+	remove_variable = kns_olympic_found_human
+	remove_variable = kns_olympic_found_foe
+}
+
+kns_imperial_olympic_resolve_remaining_ai_bouts_effect = {
+	while = {
+		count = 250
+		limit = {
+			has_character_flag = kns_imperial_olympic_host
+			variable_list_size = {
+				name = kns_olympic_round_fighters
+				value >= 1
+			}
+		}
+		kns_olympic_purge_dead_round_fighters_effect = yes
+		if = {
+			limit = {
+				variable_list_size = {
+					name = kns_olympic_round_fighters
+					value >= 2
+				}
+			}
+			kns_olympic_draw_bout_pair_from_round_effect = yes
+			if = {
+				limit = {
+					var:kns_olympic_found_a = 1
+					var:kns_olympic_found_b = 1
+				}
+				set_variable = {
+					name = kns_olympic_fighter_a
+					value = scope:kns_olympic_fighter_a
+				}
+				set_variable = {
+					name = kns_olympic_fighter_b
+					value = scope:kns_olympic_fighter_b
+				}
+				remove_variable = kns_olympic_found_a
+				remove_variable = kns_olympic_found_b
+				kns_olympic_debug_log_effect = { MSG = pick_bout_ai }
+				kns_imperial_olympic_resolve_ai_bout_effect = yes
+			}
+			else_if = {
+				limit = { var:kns_olympic_found_a = 1 }
+				remove_variable = kns_olympic_found_a
+				remove_variable = kns_olympic_found_b
+				kns_record_imperial_olympic_bye_advance_effect = {
+					WINNER = scope:kns_olympic_fighter_a
+				}
+			}
+			else = {
+				remove_variable = kns_olympic_found_a
+				remove_variable = kns_olympic_found_b
+				clear_variable_list = kns_olympic_round_fighters
+			}
+		}
+		else_if = {
+			limit = {
+				variable_list_size = {
+					name = kns_olympic_round_fighters
+					value = 1
+				}
+			}
+			if = {
+				limit = { exists = scope:kns_olympic_bye_winner }
+				clear_saved_scope = kns_olympic_bye_winner
+			}
+			set_variable = {
+				name = kns_olympic_found_bye
+				value = 0
+			}
+			random_in_list = {
+				variable = kns_olympic_round_fighters
+				limit = { is_alive = yes }
+				save_scope_as = kns_olympic_bye_winner
+				scope:kns_emperor = {
+					set_variable = {
+						name = kns_olympic_found_bye
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = { var:kns_olympic_found_bye = 1 }
+				remove_list_variable = {
+					name = kns_olympic_round_fighters
+					target = scope:kns_olympic_bye_winner
+				}
+				kns_olympic_debug_log_effect = { MSG = driver_odd_bye }
+				kns_record_imperial_olympic_bye_advance_effect = {
+					WINNER = scope:kns_olympic_bye_winner
+				}
+			}
+			else = {
+				clear_variable_list = kns_olympic_round_fighters
+			}
+			remove_variable = kns_olympic_found_bye
+		}
+		else = {
+			clear_variable_list = kns_olympic_round_fighters
+		}
+	}
+}
+
+kns_olympic_open_pending_player_bout_effect = {
+	if = {
+		limit = { exists = var:kns_olympic_pending_a }
+		var:kns_olympic_pending_a = { save_scope_as = kns_olympic_fighter_a }
+	}
+	if = {
+		limit = { exists = var:kns_olympic_pending_b }
+		var:kns_olympic_pending_b = { save_scope_as = kns_olympic_fighter_b }
+	}
+	remove_variable = kns_olympic_player_pair_pending
+	remove_variable = kns_olympic_pending_a
+	remove_variable = kns_olympic_pending_b
+	set_variable = {
+		name = kns_olympic_fighter_a
+		value = scope:kns_olympic_fighter_a
+	}
+	set_variable = {
+		name = kns_olympic_fighter_b
+		value = scope:kns_olympic_fighter_b
+	}
+	set_variable = kns_olympic_bout_open
+	kns_olympic_assign_minigame_sides_effect = yes
+	if = {
+		limit = { kns_olympic_host_is_finals_round_trigger = yes }
+		kns_olympic_debug_log_bout_effect = { MSG = pick_bout_player_finals }
+		scope:kns_olympic_player_combatant = {
+			trigger_event = kns_imperial_olympic.0102
+		}
+	}
+	else = {
+		kns_olympic_debug_log_bout_effect = { MSG = pick_bout_player_fake }
+		kns_olympic_save_bout_stage_host_effect = yes
+		kns_imperial_olympic_resolve_player_fake_bout_effect = yes
+		scope:kns_olympic_player_combatant = {
+			trigger_event = kns_imperial_olympic.0108
+		}
+	}
+}
+
+kns_imperial_olympic_roll_pair_winner_effect = {
+	random_list = {
+		5 = {
+			modifier = {
+				add = scope:kns_olympic_fighter_a.kns_olympic_fake_duel_prowess_weight_value
+			}
+			scope:kns_olympic_fighter_a = { save_scope_as = kns_olympic_winner }
+		}
+		5 = {
+			modifier = {
+				add = scope:kns_olympic_fighter_b.kns_olympic_fake_duel_prowess_weight_value
+			}
+			scope:kns_olympic_fighter_b = { save_scope_as = kns_olympic_winner }
+		}
+	}
+}
+
+kns_imperial_olympic_resolve_player_fake_bout_effect = {
+	kns_olympic_save_host_effect = yes
+	if = {
+		limit = {
+			exists = scope:kns_emperor
+			scope:kns_emperor = { has_variable = kns_olympic_fake_resolved }
+		}
+		kns_olympic_debug_log_effect = { MSG = fake_bout_already_resolved }
+	}
+	else = {
+		kns_olympic_debug_log_effect = { MSG = fake_bout_resolve }
+		kns_imperial_olympic_roll_pair_winner_effect = yes
+		if = {
+			limit = { exists = scope:kns_olympic_winner }
+			if = {
+				limit = { scope:kns_olympic_winner = scope:kns_olympic_fighter_a }
+				kns_record_imperial_olympic_bout_outcome_effect = {
+					WINNER = scope:kns_olympic_fighter_a
+					LOSER = scope:kns_olympic_fighter_b
+				}
+			}
+			else = {
+				kns_record_imperial_olympic_bout_outcome_effect = {
+					WINNER = scope:kns_olympic_fighter_b
+					LOSER = scope:kns_olympic_fighter_a
+				}
+			}
+			scope:kns_emperor = {
+				add_to_variable_list = {
+					name = kns_olympic_next_round
+					target = scope:kns_olympic_winner
+				}
+				set_variable = kns_olympic_fake_resolved
+			}
+		}
+	}
+	if = {
+		limit = { exists = scope:kns_olympic_fighter_b }
+		scope:kns_olympic_fighter_b = { save_scope_as = kns_olympic_fake_opponent }
 	}
 }
 
 kns_imperial_olympic_resolve_ai_bout_effect = {
 	kns_olympic_debug_log_effect = { MSG = ai_bout_resolve }
-	random_list = {
-		50 = {
-			modifier = {
-				add = scope:kns_olympic_fighter_a.prowess_no_portrait
-			}
-			kns_record_imperial_olympic_bout_win_effect = {
-				WINNER = scope:kns_olympic_fighter_a
-				LOSER = scope:kns_olympic_fighter_b
-			}
+	kns_imperial_olympic_roll_pair_winner_effect = yes
+	if = {
+		limit = { exists = scope:kns_olympic_winner }
+		kns_record_imperial_olympic_bout_win_from_pair_effect = {
+			WINNER = scope:kns_olympic_winner
 		}
-		50 = {
-			modifier = {
-				add = scope:kns_olympic_fighter_b.prowess_no_portrait
-			}
-			kns_record_imperial_olympic_bout_win_effect = {
-				WINNER = scope:kns_olympic_fighter_b
-				LOSER = scope:kns_olympic_fighter_a
-			}
+	}
+	else = {
+		kns_record_imperial_olympic_bout_win_effect = {
+			WINNER = scope:kns_olympic_fighter_a
+			LOSER = scope:kns_olympic_fighter_b
 		}
 	}
 }
 
-kns_imperial_olympic_pick_bout_pair_effect = {
-	save_scope_as = kns_emperor
+# Sets kns_olympic_found_a / kns_olympic_found_b (1 only if that pick actually ran).
+# Do not use exists = scope:kns_olympic_fighter_b: leftover scopes look like a real pair.
+kns_olympic_draw_bout_pair_from_round_effect = {
+	if = {
+		limit = { exists = scope:kns_olympic_fighter_a }
+		clear_saved_scope = kns_olympic_fighter_a
+	}
+	if = {
+		limit = { exists = scope:kns_olympic_fighter_b }
+		clear_saved_scope = kns_olympic_fighter_b
+	}
+	remove_variable = kns_olympic_fighter_a
+	remove_variable = kns_olympic_fighter_b
+	set_variable = {
+		name = kns_olympic_found_a
+		value = 0
+	}
+	set_variable = {
+		name = kns_olympic_found_b
+		value = 0
+	}
 	random_in_list = {
 		variable = kns_olympic_round_fighters
 		limit = { is_alive = yes }
+		weight = {
+			base = 1
+		}
 		save_scope_as = kns_olympic_fighter_a
+		scope:kns_emperor = {
+			set_variable = {
+				name = kns_olympic_found_a
+				value = 1
+			}
+		}
 	}
 	if = {
-		limit = { NOT = { exists = scope:kns_olympic_fighter_a } }
-		kns_olympic_debug_log_effect = { MSG = pick_bout_no_fighter_a }
-		kns_imperial_olympic_end_round_effect = yes
-	}
-	else = {
+		limit = { var:kns_olympic_found_a = 1 }
 		remove_list_variable = {
 			name = kns_olympic_round_fighters
 			target = scope:kns_olympic_fighter_a
@@ -1239,43 +2570,69 @@ kns_imperial_olympic_pick_bout_pair_effect = {
 				is_alive = yes
 				NOT = { this = scope:kns_olympic_fighter_a }
 			}
+			weight = {
+				base = 1
+			}
 			save_scope_as = kns_olympic_fighter_b
-		}
-		if = {
-			limit = { NOT = { exists = scope:kns_olympic_fighter_b } }
-			kns_olympic_debug_log_effect = { MSG = pick_bout_bye }
-			kns_record_imperial_olympic_bye_advance_effect = {
-				WINNER = scope:kns_olympic_fighter_a
+			scope:kns_emperor = {
+				set_variable = {
+					name = kns_olympic_found_b
+					value = 1
+				}
 			}
 		}
-		else = {
+		if = {
+			limit = { var:kns_olympic_found_b = 1 }
 			remove_list_variable = {
 				name = kns_olympic_round_fighters
 				target = scope:kns_olympic_fighter_b
 			}
-			set_variable = {
-				name = kns_olympic_fighter_a
-				value = scope:kns_olympic_fighter_a
-			}
-			set_variable = {
-				name = kns_olympic_fighter_b
-				value = scope:kns_olympic_fighter_b
-			}
-			if = {
-				limit = {
-					OR = {
-						scope:kns_olympic_fighter_a = { is_ai = no }
-						scope:kns_olympic_fighter_b = { is_ai = no }
-					}
-				}
-				set_variable = kns_olympic_bout_open
-				kns_olympic_debug_log_effect = { MSG = pick_bout_player }
+		}
+	}
+}
+
+kns_imperial_olympic_pick_bout_pair_effect = {
+	save_scope_as = kns_emperor
+	kns_olympic_draw_bout_pair_from_round_effect = yes
+	if = {
+		limit = { NOT = { var:kns_olympic_found_a = 1 } }
+		kns_olympic_debug_log_bout_effect = { MSG = pick_bout_no_fighter_a }
+		remove_variable = kns_olympic_found_a
+		remove_variable = kns_olympic_found_b
+		kns_imperial_olympic_end_round_effect = yes
+	}
+	else_if = {
+		limit = { NOT = { var:kns_olympic_found_b = 1 } }
+		kns_olympic_debug_log_bout_effect = { MSG = pick_bout_bye }
+		remove_variable = kns_olympic_found_a
+		remove_variable = kns_olympic_found_b
+		kns_record_imperial_olympic_bye_advance_effect = {
+			WINNER = scope:kns_olympic_fighter_a
+		}
+	}
+	else = {
+		set_variable = {
+			name = kns_olympic_fighter_a
+			value = scope:kns_olympic_fighter_a
+		}
+		set_variable = {
+			name = kns_olympic_fighter_b
+			value = scope:kns_olympic_fighter_b
+		}
+		remove_variable = kns_olympic_found_a
+		remove_variable = kns_olympic_found_b
+		if = {
+			limit = { kns_olympic_bout_uses_player_minigame_trigger = yes }
+			set_variable = kns_olympic_bout_open
+			kns_olympic_assign_minigame_sides_effect = yes
+			kns_olympic_debug_log_bout_effect = { MSG = pick_bout_player }
+			scope:kns_olympic_player_combatant = {
 				trigger_event = kns_imperial_olympic.0102
 			}
-			else = {
-				kns_olympic_debug_log_effect = { MSG = pick_bout_ai }
-				kns_imperial_olympic_resolve_ai_bout_effect = yes
-			}
+		}
+		else = {
+			kns_olympic_debug_log_effect = { MSG = pick_bout_ai }
+			kns_imperial_olympic_resolve_ai_bout_effect = yes
 		}
 	}
 }
@@ -1291,45 +2648,18 @@ kns_imperial_olympic_advance_round_driver_effect = {
 				days = 1
 			}
 		}
-		else_if = {
-			limit = {
-				variable_list_size = {
-					name = kns_olympic_round_fighters
-					value = 0
-				}
-			}
-			kns_olympic_debug_log_effect = { MSG = driver_round_fighters_empty }
-			kns_imperial_olympic_end_round_effect = yes
-		}
-		else_if = {
-			limit = {
-				variable_list_size = {
-					name = kns_olympic_round_fighters
-					value = 1
-				}
-			}
-			random_in_list = {
-				variable = kns_olympic_round_fighters
-				limit = { is_alive = yes }
-				save_scope_as = kns_olympic_bye_winner
-			}
-			remove_list_variable = {
-				name = kns_olympic_round_fighters
-				target = scope:kns_olympic_bye_winner
-			}
+		else = {
+			kns_olympic_extract_human_pair_from_round_effect = yes
+			kns_imperial_olympic_resolve_remaining_ai_bouts_effect = yes
 			if = {
-				limit = { exists = scope:kns_olympic_bye_winner }
-				kns_olympic_debug_log_effect = { MSG = driver_odd_bye }
-				kns_record_imperial_olympic_bye_advance_effect = {
-					WINNER = scope:kns_olympic_bye_winner
-				}
+				limit = { has_variable = kns_olympic_player_pair_pending }
+				kns_olympic_open_pending_player_bout_effect = yes
 			}
 			else = {
+				kns_olympic_debug_log_effect = { MSG = driver_round_complete }
 				kns_imperial_olympic_end_round_effect = yes
+				kns_olympic_schedule_next_round_day_effect = yes
 			}
-		}
-		else = {
-			kns_imperial_olympic_pick_bout_pair_effect = yes
 		}
 	}
 }
@@ -1353,6 +2683,8 @@ kns_imperial_olympic_end_round_effect = {
 				limit = { exists = scope:kns_olympic_winner }
 				kns_olympic_debug_log_effect = { MSG = end_round_crown }
 				kns_crown_imperial_olympic_champion_effect = { WINNER = scope:kns_olympic_winner }
+				kns_clear_imperial_olympic_vars_effect = yes
+				kns_olympic_store_champion_scope_effect = yes
 			}
 			else = {
 				kns_olympic_debug_log_effect = { MSG = end_round_crown_failed }
@@ -1398,12 +2730,6 @@ kns_imperial_olympic_end_round_effect = {
 				}
 				trigger_event = kns_imperial_olympic.0005
 				kns_clear_imperial_olympic_vars_effect = yes
-			}
-			else = {
-				trigger_event = {
-					id = kns_imperial_olympic.0100
-					days = 1
-				}
 			}
 		}
 	}
@@ -1573,6 +2899,7 @@ kns_crown_imperial_olympic_champion_effect = {
 		save_scope_as = kns_olympic_winner
 	}
 	kns_award_imperial_olympic_winner_effect = { WINNER = scope:kns_olympic_winner }
+	kns_olympic_store_champion_scope_effect = yes
 	if = {
 		limit = {
 			exists = scope:kns_emperor
@@ -1582,7 +2909,7 @@ kns_crown_imperial_olympic_champion_effect = {
 			}
 		}
 		scope:kns_emperor = {
-			trigger_event = kns_imperial_olympic.0010
+			trigger_event = kns_imperial_olympic.0008
 		}
 	}
 	else_if = {
@@ -1603,7 +2930,7 @@ kns_crown_imperial_olympic_champion_effect = {
 					highest_held_title_tier >= tier_empire
 				}
 			}
-			trigger_event = kns_imperial_olympic.0012
+			trigger_event = kns_imperial_olympic.0013
 		}
 	}
 	else = {
@@ -1814,38 +3141,54 @@ kns_close_olympic_champion_picker_effect = {
 }
 
 kns_start_imperial_olympic_player_bout_effect = {
+	kns_restore_imperial_olympic_bout_scopes_effect = yes
 	if = {
 		limit = {
-			scope:kns_olympic_fighter_a = { is_ai = no }
+			exists = scope:kns_olympic_fighter_a
+			exists = scope:kns_olympic_fighter_b
+			NOT = { scope:kns_olympic_fighter_a = scope:kns_olympic_fighter_b }
 		}
-		configure_start_single_combat_effect = {
-			SC_INITIATOR = scope:kns_olympic_fighter_a
-			SC_ATTACKER = scope:kns_olympic_fighter_a
-			SC_DEFENDER = scope:kns_olympic_fighter_b
-			FATALITY = no
-			FIXED = no
-			LOCALE = courtyard
-			OUTPUT_EVENT = kns_imperial_olympic.0103
-			INVALIDATION_EVENT = kns_imperial_olympic.0103
+		if = {
+			limit = {
+				NOT = { exists = scope:kns_olympic_player_combatant }
+			}
+			kns_olympic_assign_minigame_sides_effect = yes
+		}
+		if = {
+			limit = {
+				exists = scope:kns_olympic_player_combatant
+				exists = scope:kns_olympic_ai_combatant
+			}
+			hidden_effect = {
+				kns_olympic_reset_vanilla_duel_state_effect = yes
+				# Do not pre-set sc_victor/sc_loser: leftover sc_finished then instant-ends the next duel.
+				kns_olympic_debug_log_bout_effect = { MSG = player_bout_start_before_combat }
+				configure_start_single_combat_effect = {
+					SC_INITIATOR = scope:kns_olympic_player_combatant
+					SC_ATTACKER = scope:kns_olympic_ai_combatant
+					SC_DEFENDER = scope:kns_olympic_player_combatant
+					FATALITY = practice
+					FIXED = no
+					LOCALE = courtyard
+					OUTPUT_EVENT = kns_imperial_olympic.0103
+					INVALIDATION_EVENT = kns_imperial_olympic.0105
+				}
+				if = {
+					limit = { scope:kns_olympic_player_combatant = { is_ai = yes } }
+					kns_olympic_schedule_knight_bout_hang_watch_effect = yes
+				}
+				else = {
+					remove_variable = kns_olympic_hang_watch
+				}
+				kns_olympic_debug_log_bout_effect = { MSG = player_bout_start_ok }
+			}
+		}
+		else = {
+			kns_olympic_debug_log_bout_effect = { MSG = player_bout_start_no_player }
 		}
 	}
 	else = {
-		configure_start_single_combat_effect = {
-			SC_INITIATOR = scope:kns_olympic_fighter_b
-			SC_ATTACKER = scope:kns_olympic_fighter_b
-			SC_DEFENDER = scope:kns_olympic_fighter_a
-			FATALITY = no
-			FIXED = no
-			LOCALE = courtyard
-			OUTPUT_EVENT = kns_imperial_olympic.0103
-			INVALIDATION_EVENT = kns_imperial_olympic.0103
-		}
-	}
-	hidden_effect = {
-		trigger_event = {
-			id = kns_imperial_olympic.0103
-			days = 5
-		}
+		kns_olympic_debug_log_bout_effect = { MSG = player_bout_start_bad_pair }
 	}
 }
 

@@ -715,16 +715,158 @@ kns_olympic_equipped_gear_low_durability_trigger = {
 	}
 }
 
-kns_olympic_emperor_bout_needs_gear_warning_trigger = {
-	exists = scope:kns_emperor
+# Host round + bracket, not the shrinking fighter list mid-round.
+kns_olympic_stage_host_ready_trigger = {
+	exists = scope:kns_olympic_stage_host
+	scope:kns_olympic_stage_host = {
+		has_variable = kns_olympic_round
+	}
+}
+
+kns_olympic_stage_is_finals_trigger = {
+	kns_olympic_stage_host_ready_trigger = yes
+	scope:kns_olympic_stage_host = {
+		OR = {
+			AND = {
+				has_variable = kns_olympic_bracket_size
+				var:kns_olympic_bracket_size = 256
+				var:kns_olympic_round = 8
+			}
+			AND = {
+				has_variable = kns_olympic_bracket_size
+				var:kns_olympic_bracket_size = 128
+				var:kns_olympic_round = 7
+			}
+			var:kns_olympic_round >= 8
+		}
+	}
+}
+
+kns_olympic_stage_is_semi_trigger = {
+	kns_olympic_stage_host_ready_trigger = yes
+	scope:kns_olympic_stage_host = {
+		OR = {
+			AND = {
+				has_variable = kns_olympic_bracket_size
+				var:kns_olympic_bracket_size = 256
+				var:kns_olympic_round = 7
+			}
+			AND = {
+				has_variable = kns_olympic_bracket_size
+				var:kns_olympic_bracket_size = 128
+				var:kns_olympic_round = 6
+			}
+		}
+	}
+}
+
+kns_olympic_stage_is_quarter_trigger = {
+	kns_olympic_stage_host_ready_trigger = yes
+	scope:kns_olympic_stage_host = {
+		OR = {
+			AND = {
+				has_variable = kns_olympic_bracket_size
+				var:kns_olympic_bracket_size = 256
+				var:kns_olympic_round = 6
+			}
+			AND = {
+				has_variable = kns_olympic_bracket_size
+				var:kns_olympic_bracket_size = 128
+				var:kns_olympic_round = 5
+			}
+		}
+	}
+}
+
+kns_olympic_stage_is_round_5_trigger = {
+	kns_olympic_stage_host_ready_trigger = yes
+	scope:kns_olympic_stage_host = {
+		has_variable = kns_olympic_bracket_size
+		var:kns_olympic_bracket_size = 256
+		var:kns_olympic_round = 5
+	}
+}
+
+kns_olympic_stage_is_round_4_trigger = {
+	kns_olympic_stage_host_ready_trigger = yes
+	scope:kns_olympic_stage_host = { var:kns_olympic_round = 4 }
+}
+
+kns_olympic_stage_is_round_3_trigger = {
+	kns_olympic_stage_host_ready_trigger = yes
+	scope:kns_olympic_stage_host = { var:kns_olympic_round = 3 }
+}
+
+kns_olympic_stage_is_round_2_trigger = {
+	kns_olympic_stage_host_ready_trigger = yes
+	scope:kns_olympic_stage_host = { var:kns_olympic_round = 2 }
+}
+
+kns_olympic_stage_is_round_1_trigger = {
+	kns_olympic_stage_host_ready_trigger = yes
+	scope:kns_olympic_stage_host = { var:kns_olympic_round = 1 }
+}
+
+kns_olympic_root_won_open_bout_trigger = {
+	exists = scope:kns_olympic_winner
+	this = scope:kns_olympic_winner
+}
+
+kns_olympic_bout_is_player_fight_trigger = {
 	exists = scope:kns_olympic_fighter_a
 	exists = scope:kns_olympic_fighter_b
-	scope:kns_emperor = {
+	OR = {
+		scope:kns_olympic_fighter_a = { is_ai = no }
+		scope:kns_olympic_fighter_b = { is_ai = no }
+	}
+}
+
+# Finals round on the host (128-bracket round 7, 256-bracket round 8).
+kns_olympic_host_is_finals_round_trigger = {
+	has_variable = kns_olympic_round
+	OR = {
+		AND = {
+			has_variable = kns_olympic_bracket_size
+			var:kns_olympic_bracket_size = 256
+			var:kns_olympic_round = 8
+		}
+		AND = {
+			has_variable = kns_olympic_bracket_size
+			var:kns_olympic_bracket_size = 128
+			var:kns_olympic_round = 7
+		}
+		var:kns_olympic_round >= 8
+	}
+}
+
+# Playable vanilla minigame only if you are in the Finals pairing.
+# Every earlier bout, including yours, uses the prowess roll.
+kns_olympic_bout_uses_player_minigame_trigger = {
+	kns_olympic_bout_is_player_fight_trigger = yes
+	exists = scope:kns_emperor
+	scope:kns_emperor = { kns_olympic_host_is_finals_round_trigger = yes }
+}
+
+kns_olympic_emperor_bout_needs_gear_warning_trigger = {
+	exists = scope:kns_olympic_player_combatant
+	scope:kns_olympic_player_combatant = {
 		is_ai = no
 		kns_olympic_equipped_gear_low_durability_trigger = yes
-		OR = {
-			this = scope:kns_olympic_fighter_a
-			this = scope:kns_olympic_fighter_b
-		}
+	}
+}
+
+# Attacker is the stored foe; defender is the named side (you or the knight).
+# Do not trust sc_loser: vanilla keeps the previous loser.
+kns_olympic_combat_matches_open_bout_trigger = {
+	exists = scope:kns_olympic_minigame_foe
+	exists = scope:kns_olympic_player_combatant
+	exists = scope:kns_olympic_combat_attacker
+	exists = scope:kns_olympic_combat_defender
+	exists = scope:kns_olympic_combat_victor
+	scope:kns_olympic_combat_attacker = scope:kns_olympic_minigame_foe
+	scope:kns_olympic_combat_defender = scope:kns_olympic_player_combatant
+	OR = {
+		scope:kns_olympic_combat_victor = scope:kns_olympic_player_combatant
+		scope:kns_olympic_combat_victor = scope:kns_olympic_minigame_foe
 	}
 }
