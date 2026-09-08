@@ -82,6 +82,19 @@ on_death = {
 kns_on_death = {
 	effect = {
 		if = {
+			limit = {
+				OR = {
+					has_character_flag = kns_is_imperial_guard
+					has_character_modifier = kns_imperial_guard_modifier
+				}
+			}
+			kns_dismiss_imperial_guard_effect = { KNIGHT = this }
+		}
+		if = {
+			limit = { num_of_relation_kns_imperial_guard > 0 }
+			kns_dismiss_all_imperial_guards_effect = yes
+		}
+		if = {
 			limit = { exists = var:kns_funding_patron }
 			var:kns_funding_patron = { save_scope_as = kns_dead_patron }
 			remove_character_flag = kns_prowess_funded
@@ -164,6 +177,15 @@ kns_quarterly_playable_pulse = {
 		if = {
 			limit = {
 				OR = {
+					num_of_relation_kns_imperial_guard > 0
+					exists = var:kns_imperial_guard_window_open
+				}
+			}
+			kns_sweep_invalid_imperial_guards_effect = yes
+		}
+		if = {
+			limit = {
+				OR = {
 					exists = var:kns_training_knight_count
 					has_character_modifier = kns_funding_knight_training
 					has_character_flag = kns_prowess_funded
@@ -196,6 +218,58 @@ kns_quarterly_playable_pulse = {
 		850 = 0
 		75 = kns_knighthood.0016
 		75 = kns_knighthood.0017
+	}
+}
+
+on_leave_court = {
+	on_actions = {
+		kns_on_leave_court
+	}
+}
+
+kns_on_leave_court = {
+	effect = {
+		if = {
+			limit = { kns_is_imperial_guard_trigger = yes }
+			kns_dismiss_imperial_guard_effect = { KNIGHT = this }
+		}
+	}
+}
+
+on_title_gain = {
+	on_actions = {
+		kns_on_title_gain
+	}
+}
+
+kns_on_title_gain = {
+	effect = {
+		if = {
+			limit = {
+				kns_is_imperial_guard_trigger = yes
+				is_landed = yes
+			}
+			kns_dismiss_imperial_guard_effect = { KNIGHT = this }
+		}
+		if = {
+			limit = { num_of_relation_kns_imperial_guard > 0 }
+			kns_sweep_invalid_imperial_guards_effect = yes
+		}
+	}
+}
+
+on_title_lost = {
+	on_actions = {
+		kns_on_title_lost
+	}
+}
+
+kns_on_title_lost = {
+	effect = {
+		if = {
+			limit = { num_of_relation_kns_imperial_guard > 0 }
+			kns_sweep_invalid_imperial_guards_effect = yes
+		}
 	}
 }
 

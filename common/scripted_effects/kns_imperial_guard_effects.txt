@@ -1,0 +1,737 @@
+kns_finalize_imperial_guard_artifact_effect = {
+	kns_strip_artifact_prowess_modifiers_effect = yes
+	add_artifact_modifier = artifact_prowess_11_modifier
+	if = {
+		limit = {
+			exists = scope:kns_kit_smith
+			exists = scope:kns_kit_owner
+		}
+		add_artifact_history = {
+			type = given
+			actor = scope:kns_kit_smith
+			recipient = scope:kns_kit_owner
+		}
+	}
+}
+
+kns_unequip_imperial_guard_kit_slots_effect = {
+	every_equipped_character_artifact = {
+		limit = {
+			OR = {
+				artifact_slot_type = primary_armament
+				artifact_slot_type = armor
+			}
+		}
+		add_to_list = kns_ig_kit_unequip
+	}
+	every_in_list = {
+		list = kns_ig_kit_unequip
+		unequip_artifact_from_owner = yes
+	}
+}
+
+kns_strip_extra_equipped_weapons_effect = {
+	every_equipped_character_artifact = {
+		limit = {
+			artifact_slot_type = primary_armament
+			exists = scope:kns_ig_new_weapon
+			NOT = { this = scope:kns_ig_new_weapon }
+		}
+		add_to_list = kns_ig_extra_weapons
+	}
+	every_in_list = {
+		list = kns_ig_extra_weapons
+		unequip_artifact_from_owner = yes
+	}
+}
+
+kns_force_equip_created_artifact_to_kit_owner_effect = {
+	save_scope_as = kns_ig_to_equip
+	scope:kns_kit_owner = {
+		if = {
+			limit = { scope:kns_ig_to_equip = { artifact_slot_type = primary_armament } }
+			every_equipped_character_artifact = {
+				limit = { artifact_slot_type = primary_armament }
+				add_to_list = kns_ig_force_unequip
+			}
+		}
+		else_if = {
+			limit = { scope:kns_ig_to_equip = { artifact_slot_type = armor } }
+			every_equipped_character_artifact = {
+				limit = { artifact_slot_type = armor }
+				add_to_list = kns_ig_force_unequip
+			}
+		}
+		every_in_list = {
+			list = kns_ig_force_unequip
+			unequip_artifact_from_owner = yes
+		}
+	}
+	if = {
+		limit = {
+			scope:kns_kit_owner = { can_equip_artifact = scope:kns_ig_to_equip }
+		}
+		equip_artifact_to_owner = yes
+	}
+	else = {
+		equip_artifact_to_owner_replace = yes
+	}
+}
+
+kns_name_imperial_guard_weapon_effect = {
+	if = {
+		limit = {
+			exists = scope:weapon_type
+			scope:weapon_type = flag:artifact_weapon_type_sword
+		}
+		set_artifact_name = kns_art_imperial_guard_sword
+		set_artifact_description = kns_art_imperial_guard_weapon_desc
+	}
+	else_if = {
+		limit = {
+			exists = scope:weapon_type
+			scope:weapon_type = flag:artifact_weapon_type_axe
+		}
+		set_artifact_name = kns_art_imperial_guard_axe
+		set_artifact_description = kns_art_imperial_guard_weapon_desc
+	}
+	else_if = {
+		limit = {
+			exists = scope:weapon_type
+			scope:weapon_type = flag:artifact_weapon_type_hammer
+		}
+		set_artifact_name = kns_art_imperial_guard_hammer
+		set_artifact_description = kns_art_imperial_guard_weapon_desc
+	}
+	else_if = {
+		limit = {
+			exists = scope:weapon_type
+			scope:weapon_type = flag:artifact_weapon_type_mace
+		}
+		set_artifact_name = kns_art_imperial_guard_mace
+		set_artifact_description = kns_art_imperial_guard_weapon_desc
+	}
+	else = {
+		set_artifact_name = kns_art_imperial_guard_spear
+		set_artifact_description = kns_art_imperial_guard_weapon_desc
+	}
+}
+
+kns_create_imperial_guard_weapon_effect = {
+	set_artifact_rarity_illustrious = yes
+	scope:kns_kit_owner = { save_scope_as = owner }
+	scope:kns_kit_smith = { save_scope_as = smith }
+	if = {
+		limit = { has_character_flag = kns_ig_post_axe }
+		save_scope_value_as = { name = weapon_type value = flag:artifact_weapon_type_axe }
+		create_artifact = {
+			name = kns_art_imperial_guard_axe
+			description = kns_art_imperial_guard_weapon_desc
+			visuals = axe
+			type = axe
+			modifier = artifact_prowess_1_modifier
+			template = kns_imperial_guard_kit_template
+			wealth = scope:wealth
+			quality = scope:quality
+			creator = scope:kns_kit_smith
+			decaying = no
+			save_scope_as = newly_created_artifact
+		}
+		scope:newly_created_artifact = {
+			get_axe_decoration_effect = yes
+			get_artifact_feature_references_effect = yes
+		}
+	}
+	else_if = {
+		limit = { has_character_flag = kns_ig_post_hammer }
+		save_scope_value_as = { name = weapon_type value = flag:artifact_weapon_type_hammer }
+		create_artifact = {
+			name = kns_art_imperial_guard_hammer
+			description = kns_art_imperial_guard_weapon_desc
+			visuals = hammer
+			type = hammer
+			modifier = artifact_prowess_1_modifier
+			template = kns_imperial_guard_kit_template
+			wealth = scope:wealth
+			quality = scope:quality
+			creator = scope:kns_kit_smith
+			decaying = no
+			save_scope_as = newly_created_artifact
+		}
+		scope:newly_created_artifact = {
+			get_hammer_decoration_effect = yes
+			get_artifact_feature_references_effect = yes
+		}
+	}
+	else_if = {
+		limit = { has_character_flag = kns_ig_post_mace }
+		save_scope_value_as = { name = weapon_type value = flag:artifact_weapon_type_mace }
+		create_artifact = {
+			name = kns_art_imperial_guard_mace
+			description = kns_art_imperial_guard_weapon_desc
+			visuals = mace
+			type = mace
+			modifier = artifact_prowess_1_modifier
+			template = kns_imperial_guard_kit_template
+			wealth = scope:wealth
+			quality = scope:quality
+			creator = scope:kns_kit_smith
+			decaying = no
+			save_scope_as = newly_created_artifact
+		}
+		scope:newly_created_artifact = {
+			get_mace_decoration_effect = yes
+			get_artifact_feature_references_effect = yes
+		}
+	}
+	else_if = {
+		limit = { has_character_flag = kns_ig_post_spear }
+		save_scope_value_as = { name = weapon_type value = flag:artifact_weapon_type_spear }
+		create_artifact = {
+			name = kns_art_imperial_guard_spear
+			description = kns_art_imperial_guard_weapon_desc
+			visuals = spear
+			type = spear
+			modifier = artifact_prowess_1_modifier
+			template = kns_imperial_guard_kit_template
+			wealth = scope:wealth
+			quality = scope:quality
+			creator = scope:kns_kit_smith
+			decaying = no
+			save_scope_as = newly_created_artifact
+		}
+		scope:newly_created_artifact = {
+			get_spear_decoration_effect = yes
+			get_artifact_feature_references_effect = yes
+		}
+	}
+	else = {
+		save_scope_value_as = { name = weapon_type value = flag:artifact_weapon_type_sword }
+		create_artifact = {
+			name = kns_art_imperial_guard_sword
+			description = kns_art_imperial_guard_weapon_desc
+			visuals = sword
+			type = sword
+			modifier = artifact_prowess_1_modifier
+			template = kns_imperial_guard_kit_template
+			wealth = scope:wealth
+			quality = scope:quality
+			creator = scope:kns_kit_smith
+			decaying = no
+			save_scope_as = newly_created_artifact
+		}
+		scope:newly_created_artifact = {
+			get_sword_decoration_effect = yes
+			get_artifact_feature_references_effect = yes
+		}
+	}
+	scope:newly_created_artifact ?= {
+		save_scope_as = kns_ig_new_weapon
+		kns_apply_vanilla_weapon_roll_effect = yes
+		kns_finalize_imperial_guard_artifact_effect = yes
+		kns_name_imperial_guard_weapon_effect = yes
+		kns_force_equip_created_artifact_to_kit_owner_effect = yes
+	}
+}
+
+kns_create_imperial_guard_armor_effect = {
+	set_artifact_rarity_illustrious = yes
+	scope:kns_kit_owner = { save_scope_as = owner }
+	scope:kns_kit_smith = { save_scope_as = smith }
+	create_artifact = {
+		name = kns_art_imperial_guard_plate
+		description = kns_art_imperial_guard_armor_desc
+		visuals = armor
+		type = armor_plate
+		modifier = artifact_prowess_1_modifier
+		template = kns_imperial_guard_kit_template
+		wealth = scope:wealth
+		quality = scope:quality
+		creator = scope:kns_kit_smith
+		decaying = no
+		save_scope_as = newly_created_artifact
+	}
+	scope:newly_created_artifact ?= {
+		set_artifact_feature_group = armor_decoration
+		set_artifact_feature_group = armor_property
+		get_artifact_feature_references_effect = yes
+		add_scaled_artifact_modifier_prowess_effect = yes
+		add_scaled_artifact_modifier_combat_effect = yes
+		save_scope_as = kns_ig_new_armor
+		kns_finalize_imperial_guard_artifact_effect = yes
+		set_artifact_name = kns_art_imperial_guard_plate
+		set_artifact_description = kns_art_imperial_guard_armor_desc
+		kns_force_equip_created_artifact_to_kit_owner_effect = yes
+	}
+}
+
+kns_equip_imperial_guard_kit_effect = {
+	save_scope_as = kns_kit_owner
+	if = {
+		limit = {
+			$MAKER$ = { is_alive = yes }
+		}
+		$MAKER$ = { save_scope_as = kns_kit_smith }
+	}
+	else = {
+		random_dummy_gender_effect = yes
+		scope:dummy_gender = { save_scope_as = kns_kit_smith }
+	}
+	custom_tooltip = kns_imperial_guard_kit_tt
+	hidden_effect = {
+		kns_unequip_imperial_guard_kit_slots_effect = yes
+		kns_create_imperial_guard_weapon_effect = yes
+		kns_create_imperial_guard_armor_effect = yes
+		kns_strip_extra_equipped_weapons_effect = yes
+	}
+}
+
+kns_clear_imperial_guard_post_flags_effect = {
+	remove_character_flag = kns_ig_post_sword
+	remove_character_flag = kns_ig_post_axe
+	remove_character_flag = kns_ig_post_hammer
+	remove_character_flag = kns_ig_post_mace
+	remove_character_flag = kns_ig_post_spear
+}
+
+kns_clear_imperial_guard_status_effect = {
+	remove_character_modifier = kns_imperial_guard_modifier
+	remove_character_flag = kns_is_imperial_guard
+	remove_character_flag = wear_armor
+	kns_clear_imperial_guard_post_flags_effect = yes
+	kns_clear_imperial_guard_armor_flags_effect = yes
+	remove_variable = kns_imperial_guard_liege
+}
+
+kns_dismiss_imperial_guard_effect = {
+	$KNIGHT$ = {
+		if = {
+			limit = { exists = var:kns_imperial_guard_liege }
+			var:kns_imperial_guard_liege = { save_scope_as = kns_ig_liege }
+		}
+		kns_clear_imperial_guard_status_effect = yes
+	}
+	scope:kns_ig_liege ?= {
+		if = {
+			limit = { is_alive = yes }
+			remove_relation_kns_imperial_guard = $KNIGHT$
+		}
+	}
+}
+
+kns_dismiss_all_imperial_guards_effect = {
+	every_relation = {
+		type = kns_imperial_guard
+		add_to_list = kns_ig_to_dismiss
+	}
+	every_in_list = {
+		list = kns_ig_to_dismiss
+		kns_dismiss_imperial_guard_effect = { KNIGHT = this }
+	}
+}
+
+kns_appoint_imperial_guard_effect = {
+	$EMPEROR$ = {
+		set_relation_kns_imperial_guard = $KNIGHT$
+	}
+	$KNIGHT$ = {
+		kns_clear_imperial_guard_post_flags_effect = yes
+		add_character_flag = kns_ig_post_$WEAPON$
+		add_character_modifier = kns_imperial_guard_modifier
+		add_character_flag = kns_is_imperial_guard
+		add_character_flag = wear_armor
+		set_variable = {
+			name = kns_imperial_guard_liege
+			value = $EMPEROR$
+		}
+		kns_equip_imperial_guard_kit_effect = {
+			MAKER = $EMPEROR$
+		}
+	}
+}
+
+kns_infer_imperial_guard_post_from_weapon_effect = {
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = kns_ig_post_sword
+				has_character_flag = kns_ig_post_axe
+				has_character_flag = kns_ig_post_hammer
+				has_character_flag = kns_ig_post_mace
+				has_character_flag = kns_ig_post_spear
+			}
+		}
+		if = {
+			limit = { any_equipped_character_artifact = { artifact_type = sword } }
+			add_character_flag = kns_ig_post_sword
+		}
+		else_if = {
+			limit = { any_equipped_character_artifact = { artifact_type = axe } }
+			add_character_flag = kns_ig_post_axe
+		}
+		else_if = {
+			limit = { any_equipped_character_artifact = { artifact_type = hammer } }
+			add_character_flag = kns_ig_post_hammer
+		}
+		else_if = {
+			limit = { any_equipped_character_artifact = { artifact_type = mace } }
+			add_character_flag = kns_ig_post_mace
+		}
+		else_if = {
+			limit = { any_equipped_character_artifact = { artifact_type = spear } }
+			add_character_flag = kns_ig_post_spear
+		}
+	}
+}
+
+kns_claim_first_empty_imperial_guard_post_effect = {
+	save_scope_as = kns_ig_claim_knight
+	kns_clear_imperial_guard_post_flags_effect = yes
+	scope:kns_ig_emperor = {
+		if = {
+			limit = { NOT = { exists = var:kns_ig_slot_sword } }
+			set_variable = {
+				name = kns_ig_slot_sword
+				value = scope:kns_ig_claim_knight
+			}
+			scope:kns_ig_claim_knight = { add_character_flag = kns_ig_post_sword }
+		}
+		else_if = {
+			limit = { NOT = { exists = var:kns_ig_slot_axe } }
+			set_variable = {
+				name = kns_ig_slot_axe
+				value = scope:kns_ig_claim_knight
+			}
+			scope:kns_ig_claim_knight = { add_character_flag = kns_ig_post_axe }
+		}
+		else_if = {
+			limit = { NOT = { exists = var:kns_ig_slot_hammer } }
+			set_variable = {
+				name = kns_ig_slot_hammer
+				value = scope:kns_ig_claim_knight
+			}
+			scope:kns_ig_claim_knight = { add_character_flag = kns_ig_post_hammer }
+		}
+		else_if = {
+			limit = { NOT = { exists = var:kns_ig_slot_mace } }
+			set_variable = {
+				name = kns_ig_slot_mace
+				value = scope:kns_ig_claim_knight
+			}
+			scope:kns_ig_claim_knight = { add_character_flag = kns_ig_post_mace }
+		}
+		else_if = {
+			limit = { NOT = { exists = var:kns_ig_slot_spear } }
+			set_variable = {
+				name = kns_ig_slot_spear
+				value = scope:kns_ig_claim_knight
+			}
+			scope:kns_ig_claim_knight = { add_character_flag = kns_ig_post_spear }
+		}
+	}
+}
+
+kns_bind_imperial_guard_post_effect = {
+	if = {
+		limit = {
+			has_character_flag = kns_ig_post_sword
+			scope:kns_ig_emperor = { NOT = { exists = var:kns_ig_slot_sword } }
+		}
+		scope:kns_ig_emperor = {
+			set_variable = {
+				name = kns_ig_slot_sword
+				value = scope:kns_ig_member
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_flag = kns_ig_post_axe
+			scope:kns_ig_emperor = { NOT = { exists = var:kns_ig_slot_axe } }
+		}
+		scope:kns_ig_emperor = {
+			set_variable = {
+				name = kns_ig_slot_axe
+				value = scope:kns_ig_member
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_flag = kns_ig_post_hammer
+			scope:kns_ig_emperor = { NOT = { exists = var:kns_ig_slot_hammer } }
+		}
+		scope:kns_ig_emperor = {
+			set_variable = {
+				name = kns_ig_slot_hammer
+				value = scope:kns_ig_member
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_flag = kns_ig_post_mace
+			scope:kns_ig_emperor = { NOT = { exists = var:kns_ig_slot_mace } }
+		}
+		scope:kns_ig_emperor = {
+			set_variable = {
+				name = kns_ig_slot_mace
+				value = scope:kns_ig_member
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_flag = kns_ig_post_spear
+			scope:kns_ig_emperor = { NOT = { exists = var:kns_ig_slot_spear } }
+		}
+		scope:kns_ig_emperor = {
+			set_variable = {
+				name = kns_ig_slot_spear
+				value = scope:kns_ig_member
+			}
+		}
+	}
+	else = {
+		kns_claim_first_empty_imperial_guard_post_effect = yes
+	}
+}
+
+kns_clear_imperial_guard_slot_variables_effect = {
+	remove_variable = kns_ig_slot_1
+	remove_variable = kns_ig_slot_2
+	remove_variable = kns_ig_slot_sword
+	remove_variable = kns_ig_slot_axe
+	remove_variable = kns_ig_slot_hammer
+	remove_variable = kns_ig_slot_mace
+	remove_variable = kns_ig_slot_spear
+}
+
+kns_rebuild_imperial_guard_window_effect = {
+	save_scope_as = kns_ig_emperor
+	clear_variable_list = kns_imperial_guards
+	clear_variable_list = kns_imperial_guard_candidates
+	kns_clear_imperial_guard_slot_variables_effect = yes
+	set_variable = {
+		name = kns_ig_guard_count
+		value = 0
+	}
+	every_relation = {
+		type = kns_imperial_guard
+		limit = { is_alive = yes }
+		save_scope_as = kns_ig_member
+		scope:kns_ig_emperor = {
+			add_to_variable_list = {
+				name = kns_imperial_guards
+				target = scope:kns_ig_member
+			}
+			change_variable = {
+				name = kns_ig_guard_count
+				add = 1
+			}
+		}
+		scope:kns_ig_member = {
+			kns_infer_imperial_guard_post_from_weapon_effect = yes
+			kns_bind_imperial_guard_post_effect = yes
+		}
+	}
+	ordered_courtier = {
+		limit = {
+			kns_can_be_appointed_imperial_guard_by_trigger = { EMPEROR = scope:kns_ig_emperor }
+		}
+		order_by = prowess
+		max = 300
+		check_range_bounds = no
+		save_scope_as = kns_ig_cand
+		scope:kns_ig_emperor = {
+			add_to_variable_list = {
+				name = kns_imperial_guard_candidates
+				target = scope:kns_ig_cand
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = var:kns_ig_attire_target
+			OR = {
+				var:kns_ig_attire_target = { is_alive = no }
+				NOT = {
+					var:kns_ig_attire_target = {
+						kns_is_imperial_guard_of_trigger = { EMPEROR = scope:kns_ig_emperor }
+					}
+				}
+			}
+		}
+		remove_variable = kns_ig_attire_target
+		remove_variable = kns_ig_attire_window_open
+	}
+}
+
+kns_appoint_imperial_guard_to_first_vacant_effect = {
+	if = {
+		limit = { NOT = { exists = var:kns_ig_slot_axe } }
+		kns_appoint_imperial_guard_effect = {
+			KNIGHT = $KNIGHT$
+			EMPEROR = this
+			WEAPON = axe
+		}
+	}
+	else_if = {
+		limit = { NOT = { exists = var:kns_ig_slot_hammer } }
+		kns_appoint_imperial_guard_effect = {
+			KNIGHT = $KNIGHT$
+			EMPEROR = this
+			WEAPON = hammer
+		}
+	}
+	else_if = {
+		limit = { NOT = { exists = var:kns_ig_slot_sword } }
+		kns_appoint_imperial_guard_effect = {
+			KNIGHT = $KNIGHT$
+			EMPEROR = this
+			WEAPON = sword
+		}
+	}
+	else_if = {
+		limit = { NOT = { exists = var:kns_ig_slot_spear } }
+		kns_appoint_imperial_guard_effect = {
+			KNIGHT = $KNIGHT$
+			EMPEROR = this
+			WEAPON = spear
+		}
+	}
+	else_if = {
+		limit = { NOT = { exists = var:kns_ig_slot_mace } }
+		kns_appoint_imperial_guard_effect = {
+			KNIGHT = $KNIGHT$
+			EMPEROR = this
+			WEAPON = mace
+		}
+	}
+}
+
+kns_clear_imperial_guard_hire_post_effect = {
+	remove_variable = kns_ig_hiring_axe
+	remove_variable = kns_ig_hiring_hammer
+	remove_variable = kns_ig_hiring_sword
+	remove_variable = kns_ig_hiring_spear
+	remove_variable = kns_ig_hiring_mace
+	remove_variable = kns_ig_hire_post
+}
+
+kns_set_hire_post_to_first_vacant_effect = {
+	kns_clear_imperial_guard_hire_post_effect = yes
+	if = {
+		limit = { NOT = { exists = var:kns_ig_slot_axe } }
+		set_variable = {
+			name = kns_ig_hiring_axe
+			value = 1
+		}
+	}
+	else_if = {
+		limit = { NOT = { exists = var:kns_ig_slot_hammer } }
+		set_variable = {
+			name = kns_ig_hiring_hammer
+			value = 1
+		}
+	}
+	else_if = {
+		limit = { NOT = { exists = var:kns_ig_slot_sword } }
+		set_variable = {
+			name = kns_ig_hiring_sword
+			value = 1
+		}
+	}
+	else_if = {
+		limit = { NOT = { exists = var:kns_ig_slot_spear } }
+		set_variable = {
+			name = kns_ig_hiring_spear
+			value = 1
+		}
+	}
+	else_if = {
+		limit = { NOT = { exists = var:kns_ig_slot_mace } }
+		set_variable = {
+			name = kns_ig_hiring_mace
+			value = 1
+		}
+	}
+}
+
+kns_open_imperial_guard_hire_effect = {
+	kns_clear_imperial_guard_hire_post_effect = yes
+	set_variable = {
+		name = kns_ig_hiring_$WEAPON$
+		value = 1
+	}
+	kns_rebuild_imperial_guard_window_effect = yes
+	set_variable = kns_ig_hire_window_open
+}
+
+kns_close_imperial_guard_hire_effect = {
+	remove_variable = kns_ig_hire_window_open
+	remove_variable = kns_ig_hire_focus
+	kns_clear_imperial_guard_hire_post_effect = yes
+}
+
+kns_open_imperial_guard_attire_effect = {
+	set_variable = {
+		name = kns_ig_attire_target
+		value = $KNIGHT$
+	}
+	set_variable = kns_ig_attire_window_open
+}
+
+kns_close_imperial_guard_attire_effect = {
+	remove_variable = kns_ig_attire_window_open
+}
+
+kns_open_imperial_guard_window_effect = {
+	kns_rebuild_imperial_guard_window_effect = yes
+	set_variable = kns_imperial_guard_window_open
+}
+
+kns_open_imperial_guard_hire_from_interaction_effect = {
+	kns_rebuild_imperial_guard_window_effect = yes
+	kns_set_hire_post_to_first_vacant_effect = yes
+	set_variable = kns_imperial_guard_window_open
+	set_variable = kns_ig_hire_window_open
+}
+
+kns_close_imperial_guard_window_effect = {
+	kns_close_imperial_guard_hire_effect = yes
+	kns_close_imperial_guard_attire_effect = yes
+	remove_variable = kns_imperial_guard_window_open
+	remove_variable = kns_ig_attire_target
+	remove_variable = kns_ig_guard_count
+	kns_clear_imperial_guard_slot_variables_effect = yes
+	clear_variable_list = kns_imperial_guards
+	clear_variable_list = kns_imperial_guard_candidates
+}
+
+kns_sweep_invalid_imperial_guards_effect = {
+	if = {
+		limit = {
+			num_of_relation_kns_imperial_guard > 0
+			NOT = { kns_is_emperor_trigger = yes }
+		}
+		kns_dismiss_all_imperial_guards_effect = yes
+	}
+	else = {
+		every_relation = {
+			type = kns_imperial_guard
+			limit = {
+				OR = {
+					is_alive = no
+					is_landed = yes
+					NOT = { is_courtier_of = prev }
+				}
+			}
+			add_to_list = kns_ig_invalid
+		}
+		every_in_list = {
+			list = kns_ig_invalid
+			kns_dismiss_imperial_guard_effect = { KNIGHT = this }
+		}
+	}
+}

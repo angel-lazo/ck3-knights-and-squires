@@ -870,3 +870,63 @@ kns_olympic_combat_matches_open_bout_trigger = {
 		scope:kns_olympic_combat_victor = scope:kns_olympic_minigame_foe
 	}
 }
+
+kns_can_see_imperial_guard_decisions_trigger = {
+	is_playable_character = yes
+	is_ai = no
+	kns_is_emperor_trigger = yes
+}
+
+kns_is_imperial_guard_trigger = {
+	OR = {
+		has_character_flag = kns_is_imperial_guard
+		has_character_modifier = kns_imperial_guard_modifier
+	}
+}
+
+kns_is_imperial_guard_of_trigger = {
+	kns_is_imperial_guard_trigger = yes
+	exists = var:kns_imperial_guard_liege
+	var:kns_imperial_guard_liege = $EMPEROR$
+}
+
+kns_emperor_has_imperial_guard_slot_trigger = {
+	num_of_relation_kns_imperial_guard < 5
+}
+
+kns_imperial_guard_hire_post_is_vacant_trigger = {
+	OR = {
+		AND = {
+			has_variable = kns_ig_hiring_axe
+			NOT = { exists = var:kns_ig_slot_axe }
+		}
+		AND = {
+			has_variable = kns_ig_hiring_hammer
+			NOT = { exists = var:kns_ig_slot_hammer }
+		}
+		AND = {
+			has_variable = kns_ig_hiring_sword
+			NOT = { exists = var:kns_ig_slot_sword }
+		}
+		AND = {
+			has_variable = kns_ig_hiring_spear
+			NOT = { exists = var:kns_ig_slot_spear }
+		}
+		AND = {
+			has_variable = kns_ig_hiring_mace
+			NOT = { exists = var:kns_ig_slot_mace }
+		}
+	}
+}
+
+kns_can_be_appointed_imperial_guard_by_trigger = {
+	kns_is_knight_trigger = yes
+	is_landed = no
+	is_adult = yes
+	is_alive = yes
+	is_imprisoned = no
+	NOT = { has_trait = incapable }
+	is_courtier_of = $EMPEROR$
+	NOT = { this = $EMPEROR$ }
+	NOT = { kns_is_imperial_guard_trigger = yes }
+}

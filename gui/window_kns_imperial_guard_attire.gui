@@ -1,0 +1,833 @@
+window = {
+	name = "kns_imperial_guard_attire_window"
+	size = { 1100 940 }
+	parentanchor = center
+	position = { 0 0 }
+	movable = yes
+	layer = top
+	allow_outside = yes
+	visible = "[GetPlayer.MakeScope.Var('kns_ig_attire_window_open').IsSet]"
+
+	using = Window_Background_Subwindow
+
+		vbox = {
+			margin = { 10 10 }
+			spacing = 8
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				spacing = 8
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_ig_attire_window_title"
+					fontsize = 22
+				}
+
+				button_close = {
+					onclick = "[GetScriptedGui('kns_close_imperial_guard_attire_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					shortcut = "close_window"
+					visible = "[GetPlayer.MakeScope.Var('kns_ig_attire_window_open').IsSet]"
+				}
+			}
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				spacing = 10
+
+				vbox = {
+					size = { 420 -1 }
+					layoutpolicy_vertical = expanding
+					spacing = 8
+					datacontext = "[GetPlayer.MakeScope.Var('kns_ig_attire_target').Char]"
+					visible = "[GetScriptedGui('kns_gui_ig_has_attire_target').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center
+						visible = "[Character.IsValid]"
+						text = "[Character.GetShortUINameNoTooltip]"
+						default_format = "#high"
+						fontsize = 18
+					}
+
+					widget = {
+						size = { 378 560 }
+						parentanchor = hcenter
+						allow_outside = yes
+
+						portrait_button = {
+							parentanchor = center
+							size = { 420 560 }
+							using = portrait_base
+							effectname = "NoHighlight"
+							visible = "[GetScriptedGui('kns_gui_ig_attire_is_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							portrait_texture = "[Character.GetAnimatedPortrait('environment_body', 'kns_camera_ig_axe', 'throne_room_one_handed_passive_2', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+							mask = "gfx/portraits/portrait_mask_body.dds"
+						}
+
+						portrait_button = {
+							parentanchor = center
+							size = { 420 560 }
+							using = portrait_base
+							effectname = "NoHighlight"
+							visible = "[GetScriptedGui('kns_gui_ig_attire_is_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							portrait_texture = "[Character.GetAnimatedPortrait('environment_body', 'kns_camera_ig_hammer', 'aggressive_hammer', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+							mask = "gfx/portraits/portrait_mask_body.dds"
+						}
+
+						portrait_button = {
+							parentanchor = center
+							size = { 420 560 }
+							using = portrait_base
+							effectname = "NoHighlight"
+							visible = "[GetScriptedGui('kns_gui_ig_attire_is_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							portrait_texture = "[Character.GetAnimatedPortrait('environment_body', 'kns_camera_ig_sword', 'chudan_no_kamae', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+							mask = "gfx/portraits/portrait_mask_body.dds"
+						}
+
+						portrait_button = {
+							parentanchor = center
+							size = { 420 560 }
+							using = portrait_base
+							effectname = "NoHighlight"
+							visible = "[GetScriptedGui('kns_gui_ig_attire_is_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							portrait_texture = "[Character.GetAnimatedPortrait('environment_body', 'kns_camera_ig_spear', 'relaxed_spear', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+							mask = "gfx/portraits/portrait_mask_body.dds"
+						}
+
+						portrait_button = {
+							parentanchor = center
+							size = { 420 560 }
+							using = portrait_base
+							effectname = "NoHighlight"
+							visible = "[GetScriptedGui('kns_gui_ig_attire_is_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							portrait_texture = "[Character.GetAnimatedPortrait('environment_body', 'kns_camera_ig_mace', 'menacing', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+							mask = "gfx/portraits/portrait_mask_body.dds"
+						}
+					}
+				}
+
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					spacing = 6
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						text = "kns_ig_window_armor_header"
+						default_format = "#high"
+					}
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						text = "kns_ig_window_armor_hint"
+						visible = "[Not( GetScriptedGui('kns_gui_ig_has_attire_target').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+					}
+
+					scrollbox = {
+						layoutpolicy_horizontal = expanding
+						layoutpolicy_vertical = expanding
+
+						blockoverride "scrollbox_content" {
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 4
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_default"
+								down = "[GetScriptedGui('kns_gui_ig_armor_default_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_default').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_default').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_holy_roman"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_dde_hre_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_dde_hre_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_dde_hre_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_dde_hre_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_dde_hre_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_dde_hre_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_dde_hre_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_dde_hre_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_dde_hre_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_dde_hre_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_western"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_western_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_western_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_western_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_western_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_western_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_western_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_western_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_western_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_western_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_western_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_western_era1_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era1_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_western_era1_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era1_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era1_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_western_era1_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era1_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_western_era1_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era1_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era1_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_western_era2_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era2_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_western_era2_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era2_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era2_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_western_era2_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era2_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_western_era2_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era2_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era2_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_western_era3_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era3_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_western_era3_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era3_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era3_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_western_era3_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era3_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_western_era3_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era3_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era3_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_western_era4_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era4_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_western_era4_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era4_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era4_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_western_era4_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era4_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_western_era4_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era4_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_western_era4_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_western_crusades"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_western_crusades').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_western_crusades_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_western_crusades').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_western_crusades').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_byzantine"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_byzantine_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_byzantine_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_byzantine_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_byzantine_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_byzantine_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_byzantine_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_byzantine_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_byzantine_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_byzantine_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_byzantine_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_byzantine_war_royalty"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_byzantine_war_royalty').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_byzantine_war_royalty_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_byzantine_war_royalty').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_byzantine_war_royalty').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_byzantine_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_byzantine_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_byzantine_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_byzantine_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_byzantine_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_byzantine_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_byzantine_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_byzantine_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_byzantine_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_byzantine_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep3_byzantine_era1_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep3_byzantine_era1_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep3_byzantine_era1_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep3_byzantine_era1_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep3_byzantine_era1_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep3_byzantine_era1_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep3_byzantine_era1_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep3_byzantine_era1_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep3_byzantine_era1_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep3_byzantine_era1_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep3_byzantine_era2_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep3_byzantine_era2_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep3_byzantine_era2_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep3_byzantine_era2_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep3_byzantine_era2_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep3_byzantine_era2_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep3_byzantine_era2_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep3_byzantine_era2_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep3_byzantine_era2_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep3_byzantine_era2_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_indian"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_indian_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_indian_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_indian_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_indian_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_indian_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_indian_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_indian_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_indian_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_indian_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_indian_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_indian_war_royalty"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_indian_war_royalty').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_indian_war_royalty_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_indian_war_royalty').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_indian_war_royalty').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_indian_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_indian_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_indian_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_indian_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_indian_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_indian_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_indian_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_indian_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_indian_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_indian_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_arabic"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_dde_abbasid_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_dde_abbasid_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_dde_abbasid_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_dde_abbasid_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_dde_abbasid_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_dde_abbasid_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_dde_abbasid_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_dde_abbasid_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_dde_abbasid_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_dde_abbasid_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_dde_abbasid_war_royalty"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_dde_abbasid_war_royalty').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_dde_abbasid_war_royalty_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_dde_abbasid_war_royalty').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_dde_abbasid_war_royalty').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_mena_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_mena_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_mena_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_mena_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_mena_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_mena_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_mena_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_mena_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_mena_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_mena_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_mena_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_mena_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_mena_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_mena_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_mena_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_mena_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_mena_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_mena_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_mena_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_mena_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_steppe"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_steppe_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_steppe_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_steppe_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_steppe_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_steppe_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_steppe_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_steppe_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_steppe_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_steppe_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_steppe_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_mpo_mongol_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_mpo_mongol_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_mpo_mongol_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_mpo_mongol_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_mpo_mongol_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_steppe_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_steppe_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_steppe_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_steppe_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_steppe_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ep2_steppe_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_steppe_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ep2_steppe_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_steppe_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ep2_steppe_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_mpo_mongol_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_mpo_mongol_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_mpo_mongol_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_mpo_mongol_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_mpo_mongol_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_northern"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_northern_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_northern_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_northern_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_northern_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_northern_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_northern_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_northern_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_northern_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_northern_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_northern_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_iberian"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_fp2_iberian_christian_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_fp2_iberian_christian_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_fp2_iberian_christian_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_fp2_iberian_christian_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_fp2_iberian_christian_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_fp2_iberian_christian_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_fp2_iberian_christian_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_fp2_iberian_christian_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_fp2_iberian_christian_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_fp2_iberian_christian_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_fp2_iberian_muslim_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_fp2_iberian_muslim_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_fp2_iberian_muslim_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_fp2_iberian_muslim_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_fp2_iberian_muslim_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_fp2_iberian_muslim_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_fp2_iberian_muslim_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_fp2_iberian_muslim_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_fp2_iberian_muslim_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_fp2_iberian_muslim_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_northern"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_fp1_norse_war"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_fp1_norse_war').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_fp1_norse_war_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_fp1_norse_war').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_fp1_norse_war').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_african"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_sub_saharan_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_sub_saharan_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_sub_saharan_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_sub_saharan_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_sub_saharan_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_sub_saharan_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_sub_saharan_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_sub_saharan_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_sub_saharan_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_sub_saharan_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_afr_berber_war"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_afr_berber_war').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_afr_berber_war_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_afr_berber_war').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_afr_berber_war').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_west_slavic"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_pol_west_slavic_war"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_pol_west_slavic_war').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_pol_west_slavic_war_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_pol_west_slavic_war').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_pol_west_slavic_war').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_khanty"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ccp4_khanty_war_com"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ccp4_khanty_war_com').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ccp4_khanty_war_com_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ccp4_khanty_war_com').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ccp4_khanty_war_com').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ccp4_khanty_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ccp4_khanty_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ccp4_khanty_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ccp4_khanty_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ccp4_khanty_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ccp4_khanty_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ccp4_khanty_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ccp4_khanty_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ccp4_khanty_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ccp4_khanty_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_iranian"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_fp3_iranian_war"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_fp3_iranian_war').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_fp3_iranian_war_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_fp3_iranian_war').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_fp3_iranian_war').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_east_asia"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_tgp_chinese_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_chinese_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_tgp_chinese_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_chinese_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_chinese_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_tgp_chinese_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_chinese_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_tgp_chinese_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_chinese_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_chinese_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_tgp_japanese_war_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_japanese_war_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_tgp_japanese_war_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_japanese_war_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_japanese_war_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_tgp_southeast_war_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_southeast_war_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_tgp_southeast_war_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_southeast_war_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_southeast_war_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_tgp_ainu_war_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_ainu_war_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_tgp_ainu_war_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_ainu_war_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_tgp_ainu_war_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_high_medieval"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ccp5_french_era3_war_commoners"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_era3_war_commoners').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ccp5_french_era3_war_commoners_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_era3_war_commoners').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_era3_war_commoners').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ccp5_french_era3_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_era3_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ccp5_french_era3_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_era3_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_era3_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ccp5_french_era3_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_era3_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ccp5_french_era3_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_era3_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_era3_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ccp5_french_late_era3_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_late_era3_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ccp5_french_late_era3_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_late_era3_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_late_era3_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ccp5_french_late_era3_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_late_era3_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ccp5_french_late_era3_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_late_era3_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_french_late_era3_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ccp5_german_era3_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_german_era3_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ccp5_german_era3_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_german_era3_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_german_era3_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ccp5_german_era3_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_german_era3_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ccp5_german_era3_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_german_era3_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_german_era3_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ccp5_english_era3_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_english_era3_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ccp5_english_era3_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_english_era3_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_english_era3_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ccp5_english_era3_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_english_era3_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ccp5_english_era3_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_english_era3_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_english_era3_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ccp5_english_era4_war_low_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_english_era4_war_low_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ccp5_english_era4_war_low_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_english_era4_war_low_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_english_era4_war_low_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_ccp5_english_era4_war_high_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_english_era4_war_high_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_ccp5_english_era4_war_high_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_english_era4_war_high_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_ccp5_english_era4_war_high_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_group_north_pacific"
+								default_format = "#high"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_cp7_emishi_war_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_cp7_emishi_war_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_cp7_emishi_war_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_cp7_emishi_war_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_cp7_emishi_war_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							button_standard = {
+								layoutpolicy_horizontal = expanding
+								text = "kns_ig_armor_cp7_nivkh_war_nobles"
+								visible = "[GetScriptedGui('kns_gui_ig_set_armor_cp7_nivkh_war_nobles').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								down = "[GetScriptedGui('kns_gui_ig_armor_cp7_nivkh_war_nobles_selected').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('kns_gui_ig_set_armor_cp7_nivkh_war_nobles').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								onclick = "[GetScriptedGui('kns_gui_ig_set_armor_cp7_nivkh_war_nobles').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							}
+							}
+						}
+					}
+				}
+			}
+		}
+}

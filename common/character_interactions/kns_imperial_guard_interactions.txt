@@ -1,0 +1,153 @@
+#########################
+# Appoint Imperial Guard
+#########################
+
+kns_appoint_imperial_guard_interaction = {
+	category = interaction_category_diplomacy
+	desc = kns_appoint_imperial_guard_interaction_desc
+	icon = icon_combat
+	interface_priority = 85
+
+	send_name = kns_appoint_imperial_guard
+	use_diplomatic_range = no
+	auto_accept = yes
+
+	is_shown = {
+		scope:actor = {
+			kns_can_see_imperial_guard_decisions_trigger = yes
+			NOT = { this = scope:recipient }
+		}
+		scope:recipient = {
+			kns_can_be_appointed_imperial_guard_by_trigger = { EMPEROR = scope:actor }
+		}
+	}
+
+	is_valid = {
+		scope:actor = {
+			custom_tooltip = {
+				text = kns_imperial_guard_slot_tt
+				kns_emperor_has_imperial_guard_slot_trigger = yes
+			}
+			gold >= 1500
+		}
+		scope:recipient = {
+			custom_tooltip = {
+				text = kns_imperial_guard_unlanded_tt
+				is_landed = no
+			}
+			custom_tooltip = {
+				text = kns_imperial_guard_courtier_tt
+				is_courtier_of = scope:actor
+			}
+			custom_tooltip = {
+				text = kns_imperial_guard_knight_tt
+				kns_is_knight_trigger = yes
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = { is_imprisoned = no }
+		scope:recipient = {
+			is_imprisoned = no
+			NOT = { has_trait = incapable }
+		}
+	}
+
+	cost = {
+		gold = 1500
+	}
+
+	on_accept = {
+		scope:actor = {
+			kns_rebuild_imperial_guard_window_effect = yes
+			kns_appoint_imperial_guard_to_first_vacant_effect = { KNIGHT = scope:recipient }
+			send_interface_toast = {
+				type = event_toast_effect_good
+				title = kns_appoint_imperial_guard_toast
+				custom_tooltip = kns_appoint_imperial_guard_toast.tt
+				left_icon = scope:recipient
+			}
+			kns_open_imperial_guard_window_effect = yes
+		}
+	}
+
+	ai_will_do = { base = 0 }
+}
+
+#########################
+# Dismiss Imperial Guard
+#########################
+
+kns_dismiss_imperial_guard_interaction = {
+	category = interaction_category_diplomacy
+	desc = kns_dismiss_imperial_guard_interaction_desc
+	icon = icon_combat
+	interface_priority = 86
+
+	send_name = kns_dismiss_imperial_guard
+	use_diplomatic_range = no
+	auto_accept = yes
+
+	is_shown = {
+		scope:actor = {
+			kns_can_see_imperial_guard_decisions_trigger = yes
+			NOT = { this = scope:recipient }
+		}
+		scope:recipient = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = scope:actor }
+		}
+	}
+
+	on_accept = {
+		kns_dismiss_imperial_guard_effect = { KNIGHT = scope:recipient }
+		scope:actor = {
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = kns_dismiss_imperial_guard_toast
+				custom_tooltip = kns_dismiss_imperial_guard_toast.tt
+				left_icon = scope:recipient
+			}
+			if = {
+				limit = { exists = var:kns_imperial_guard_window_open }
+				kns_rebuild_imperial_guard_window_effect = yes
+			}
+		}
+	}
+
+	ai_will_do = { base = 0 }
+}
+
+#########################
+# Attire Imperial Guard
+#########################
+
+kns_attire_imperial_guard_interaction = {
+	category = interaction_category_diplomacy
+	desc = kns_attire_imperial_guard_interaction_desc
+	icon = icon_combat
+	interface_priority = 87
+
+	send_name = kns_attire_imperial_guard
+	use_diplomatic_range = no
+	auto_accept = yes
+
+	is_shown = {
+		scope:actor = {
+			kns_can_see_imperial_guard_decisions_trigger = yes
+			NOT = { this = scope:recipient }
+		}
+		scope:recipient = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = scope:actor }
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			kns_open_imperial_guard_window_effect = yes
+			kns_open_imperial_guard_attire_effect = { KNIGHT = scope:recipient }
+		}
+	}
+
+	ai_will_do = { base = 0 }
+}

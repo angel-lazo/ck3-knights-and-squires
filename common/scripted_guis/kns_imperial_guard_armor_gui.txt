@@ -1,0 +1,2143 @@
+kns_gui_ig_set_armor_default = {
+	scope = character
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+		}
+	}
+}
+
+kns_gui_ig_armor_default_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+			NOR = {
+				has_character_flag = kns_ig_armor_dde_hre_war_low_nobles
+				has_character_flag = kns_ig_armor_dde_hre_war_high_nobles
+				has_character_flag = kns_ig_armor_western_war_low_nobles
+				has_character_flag = kns_ig_armor_western_war_high_nobles
+				has_character_flag = kns_ig_armor_ep2_western_era1_war_low_nobles
+				has_character_flag = kns_ig_armor_ep2_western_era1_war_high_nobles
+				has_character_flag = kns_ig_armor_ep2_western_era2_war_low_nobles
+				has_character_flag = kns_ig_armor_ep2_western_era2_war_high_nobles
+				has_character_flag = kns_ig_armor_ep2_western_era3_war_low_nobles
+				has_character_flag = kns_ig_armor_ep2_western_era3_war_high_nobles
+				has_character_flag = kns_ig_armor_ep2_western_era4_war_low_nobles
+				has_character_flag = kns_ig_armor_ep2_western_era4_war_high_nobles
+				has_character_flag = kns_ig_armor_western_crusades
+				has_character_flag = kns_ig_armor_byzantine_war_low_nobles
+				has_character_flag = kns_ig_armor_byzantine_war_high_nobles
+				has_character_flag = kns_ig_armor_byzantine_war_royalty
+				has_character_flag = kns_ig_armor_ep2_byzantine_war_low_nobles
+				has_character_flag = kns_ig_armor_ep2_byzantine_war_high_nobles
+				has_character_flag = kns_ig_armor_ep3_byzantine_era1_war_low_nobles
+				has_character_flag = kns_ig_armor_ep3_byzantine_era1_war_high_nobles
+				has_character_flag = kns_ig_armor_ep3_byzantine_era2_war_low_nobles
+				has_character_flag = kns_ig_armor_ep3_byzantine_era2_war_high_nobles
+				has_character_flag = kns_ig_armor_indian_war_low_nobles
+				has_character_flag = kns_ig_armor_indian_war_high_nobles
+				has_character_flag = kns_ig_armor_indian_war_royalty
+				has_character_flag = kns_ig_armor_ep2_indian_war_low_nobles
+				has_character_flag = kns_ig_armor_ep2_indian_war_high_nobles
+				has_character_flag = kns_ig_armor_dde_abbasid_war_low_nobles
+				has_character_flag = kns_ig_armor_dde_abbasid_war_high_nobles
+				has_character_flag = kns_ig_armor_dde_abbasid_war_royalty
+				has_character_flag = kns_ig_armor_mena_war_low_nobles
+				has_character_flag = kns_ig_armor_mena_war_high_nobles
+				has_character_flag = kns_ig_armor_ep2_mena_war_low_nobles
+				has_character_flag = kns_ig_armor_ep2_mena_war_high_nobles
+				has_character_flag = kns_ig_armor_steppe_war_low_nobles
+				has_character_flag = kns_ig_armor_ep2_steppe_war_low_nobles
+				has_character_flag = kns_ig_armor_mpo_mongol_war_low_nobles
+				has_character_flag = kns_ig_armor_steppe_war_high_nobles
+				has_character_flag = kns_ig_armor_ep2_steppe_war_high_nobles
+				has_character_flag = kns_ig_armor_mpo_mongol_war_high_nobles
+				has_character_flag = kns_ig_armor_northern_war_low_nobles
+				has_character_flag = kns_ig_armor_northern_war_high_nobles
+				has_character_flag = kns_ig_armor_fp2_iberian_christian_war_low_nobles
+				has_character_flag = kns_ig_armor_fp2_iberian_christian_war_high_nobles
+				has_character_flag = kns_ig_armor_fp2_iberian_muslim_war_low_nobles
+				has_character_flag = kns_ig_armor_fp2_iberian_muslim_war_high_nobles
+				has_character_flag = kns_ig_armor_fp1_norse_war
+				has_character_flag = kns_ig_armor_sub_saharan_war_low_nobles
+				has_character_flag = kns_ig_armor_sub_saharan_war_high_nobles
+				has_character_flag = kns_ig_armor_afr_berber_war
+				has_character_flag = kns_ig_armor_pol_west_slavic_war
+				has_character_flag = kns_ig_armor_ccp4_khanty_war_com
+				has_character_flag = kns_ig_armor_ccp4_khanty_war_low_nobles
+				has_character_flag = kns_ig_armor_ccp4_khanty_war_high_nobles
+				has_character_flag = kns_ig_armor_fp3_iranian_war
+				has_character_flag = kns_ig_armor_tgp_chinese_war_low_nobles
+				has_character_flag = kns_ig_armor_tgp_chinese_war_high_nobles
+				has_character_flag = kns_ig_armor_tgp_japanese_war_nobles
+				has_character_flag = kns_ig_armor_tgp_southeast_war_nobles
+				has_character_flag = kns_ig_armor_tgp_ainu_war_nobles
+				has_character_flag = kns_ig_armor_ccp5_french_era3_war_commoners
+				has_character_flag = kns_ig_armor_ccp5_french_era3_war_low_nobles
+				has_character_flag = kns_ig_armor_ccp5_french_era3_war_high_nobles
+				has_character_flag = kns_ig_armor_ccp5_french_late_era3_war_low_nobles
+				has_character_flag = kns_ig_armor_ccp5_french_late_era3_war_high_nobles
+				has_character_flag = kns_ig_armor_ccp5_german_era3_war_low_nobles
+				has_character_flag = kns_ig_armor_ccp5_german_era3_war_high_nobles
+				has_character_flag = kns_ig_armor_ccp5_english_era3_war_low_nobles
+				has_character_flag = kns_ig_armor_ccp5_english_era3_war_high_nobles
+				has_character_flag = kns_ig_armor_ccp5_english_era4_war_low_nobles
+				has_character_flag = kns_ig_armor_ccp5_english_era4_war_high_nobles
+				has_character_flag = kns_ig_armor_cp7_emishi_war_nobles
+				has_character_flag = kns_ig_armor_cp7_nivkh_war_nobles
+			}
+		}
+	}
+}
+kns_gui_ig_set_armor_dde_hre_war_low_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_dde_hre_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_dde_hre_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_dde_hre_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_dde_hre_war_high_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_dde_hre_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_dde_hre_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_dde_hre_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_western_war_low_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_western_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_western_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_western_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_western_war_high_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_western_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_western_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_western_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_western_era1_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_western_era1_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_western_era1_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_western_era1_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_western_era1_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_western_era1_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_western_era1_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_western_era1_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_western_era2_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_western_era2_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_western_era2_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_western_era2_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_western_era2_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_western_era2_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_western_era2_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_western_era2_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_western_era3_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_western_era3_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_western_era3_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_western_era3_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_western_era3_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_western_era3_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_western_era3_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_western_era3_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_western_era4_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_western_era4_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_western_era4_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_western_era4_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_western_era4_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_western_era4_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_western_era4_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_western_era4_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_western_crusades = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_western_crusades
+		}
+	}
+}
+
+kns_gui_ig_armor_western_crusades_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_western_crusades
+		}
+	}
+}
+kns_gui_ig_set_armor_byzantine_war_low_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_byzantine_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_byzantine_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_byzantine_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_byzantine_war_high_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_byzantine_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_byzantine_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_byzantine_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_byzantine_war_royalty = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_byzantine_war_royalty
+		}
+	}
+}
+
+kns_gui_ig_armor_byzantine_war_royalty_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_byzantine_war_royalty
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_byzantine_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_byzantine_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_byzantine_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_byzantine_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_byzantine_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_byzantine_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_byzantine_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_byzantine_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep3_byzantine_era1_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_ep3_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep3_byzantine_era1_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep3_byzantine_era1_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep3_byzantine_era1_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep3_byzantine_era1_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_ep3_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep3_byzantine_era1_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep3_byzantine_era1_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep3_byzantine_era1_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep3_byzantine_era2_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_ep3_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep3_byzantine_era2_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep3_byzantine_era2_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep3_byzantine_era2_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep3_byzantine_era2_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_ep3_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep3_byzantine_era2_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep3_byzantine_era2_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep3_byzantine_era2_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_indian_war_low_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_indian_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_indian_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_indian_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_indian_war_high_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_indian_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_indian_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_indian_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_indian_war_royalty = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_indian_war_royalty
+		}
+	}
+}
+
+kns_gui_ig_armor_indian_war_royalty_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_indian_war_royalty
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_indian_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_indian_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_indian_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_indian_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_indian_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_indian_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_indian_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_indian_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_dde_abbasid_war_low_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_dde_abbasid_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_dde_abbasid_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_dde_abbasid_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_dde_abbasid_war_high_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_dde_abbasid_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_dde_abbasid_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_dde_abbasid_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_dde_abbasid_war_royalty = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_dde_abbasid_war_royalty
+		}
+	}
+}
+
+kns_gui_ig_armor_dde_abbasid_war_royalty_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_dde_abbasid_war_royalty
+		}
+	}
+}
+kns_gui_ig_set_armor_mena_war_low_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_mena_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_mena_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_mena_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_mena_war_high_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_mena_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_mena_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_mena_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_mena_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_mena_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_mena_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_mena_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_mena_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_mena_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_mena_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_mena_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_steppe_war_low_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_steppe_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_steppe_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_steppe_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_steppe_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_steppe_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_steppe_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_steppe_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_mpo_mongol_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_mpo_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_mpo_mongol_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_mpo_mongol_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_mpo_mongol_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_steppe_war_high_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_steppe_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_steppe_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_steppe_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ep2_steppe_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_ep2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ep2_steppe_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ep2_steppe_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ep2_steppe_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_mpo_mongol_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_mpo_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_mpo_mongol_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_mpo_mongol_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_mpo_mongol_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_northern_war_low_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_northern_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_northern_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_northern_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_northern_war_high_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_northern_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_northern_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_northern_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_fp2_iberian_christian_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_fp2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_fp2_iberian_christian_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_fp2_iberian_christian_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_fp2_iberian_christian_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_fp2_iberian_christian_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_fp2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_fp2_iberian_christian_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_fp2_iberian_christian_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_fp2_iberian_christian_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_fp2_iberian_muslim_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_fp2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_fp2_iberian_muslim_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_fp2_iberian_muslim_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_fp2_iberian_muslim_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_fp2_iberian_muslim_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_fp2_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_fp2_iberian_muslim_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_fp2_iberian_muslim_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_fp2_iberian_muslim_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_fp1_norse_war = {
+	scope = character
+	is_shown = {
+		has_fp1_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_fp1_norse_war
+		}
+	}
+}
+
+kns_gui_ig_armor_fp1_norse_war_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_fp1_norse_war
+		}
+	}
+}
+kns_gui_ig_set_armor_sub_saharan_war_low_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_sub_saharan_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_sub_saharan_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_sub_saharan_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_sub_saharan_war_high_nobles = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_sub_saharan_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_sub_saharan_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_sub_saharan_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_afr_berber_war = {
+	scope = character
+	is_shown = {
+		has_afr_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_afr_berber_war
+		}
+	}
+}
+
+kns_gui_ig_armor_afr_berber_war_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_afr_berber_war
+		}
+	}
+}
+kns_gui_ig_set_armor_pol_west_slavic_war = {
+	scope = character
+	is_shown = {
+		has_pol_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_pol_west_slavic_war
+		}
+	}
+}
+
+kns_gui_ig_armor_pol_west_slavic_war_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_pol_west_slavic_war
+		}
+	}
+}
+kns_gui_ig_set_armor_ccp4_khanty_war_com = {
+	scope = character
+	is_shown = {
+		has_cp4_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ccp4_khanty_war_com
+		}
+	}
+}
+
+kns_gui_ig_armor_ccp4_khanty_war_com_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ccp4_khanty_war_com
+		}
+	}
+}
+kns_gui_ig_set_armor_ccp4_khanty_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_cp4_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ccp4_khanty_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ccp4_khanty_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ccp4_khanty_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ccp4_khanty_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_cp4_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ccp4_khanty_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ccp4_khanty_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ccp4_khanty_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_fp3_iranian_war = {
+	scope = character
+	is_shown = {
+		has_fp3_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_fp3_iranian_war
+		}
+	}
+}
+
+kns_gui_ig_armor_fp3_iranian_war_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_fp3_iranian_war
+		}
+	}
+}
+kns_gui_ig_set_armor_tgp_chinese_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_tgp_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_tgp_chinese_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_tgp_chinese_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_tgp_chinese_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_tgp_chinese_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_tgp_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_tgp_chinese_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_tgp_chinese_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_tgp_chinese_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_tgp_japanese_war_nobles = {
+	scope = character
+	is_shown = {
+		has_tgp_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_tgp_japanese_war_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_tgp_japanese_war_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_tgp_japanese_war_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_tgp_southeast_war_nobles = {
+	scope = character
+	is_shown = {
+		has_tgp_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_tgp_southeast_war_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_tgp_southeast_war_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_tgp_southeast_war_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_tgp_ainu_war_nobles = {
+	scope = character
+	is_shown = {
+		has_tgp_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_tgp_ainu_war_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_tgp_ainu_war_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_tgp_ainu_war_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ccp5_french_era3_war_commoners = {
+	scope = character
+	is_shown = {
+		has_cp5_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ccp5_french_era3_war_commoners
+		}
+	}
+}
+
+kns_gui_ig_armor_ccp5_french_era3_war_commoners_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ccp5_french_era3_war_commoners
+		}
+	}
+}
+kns_gui_ig_set_armor_ccp5_french_era3_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_cp5_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ccp5_french_era3_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ccp5_french_era3_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ccp5_french_era3_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ccp5_french_era3_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_cp5_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ccp5_french_era3_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ccp5_french_era3_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ccp5_french_era3_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ccp5_french_late_era3_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_cp5_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ccp5_french_late_era3_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ccp5_french_late_era3_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ccp5_french_late_era3_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ccp5_french_late_era3_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_cp5_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ccp5_french_late_era3_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ccp5_french_late_era3_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ccp5_french_late_era3_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ccp5_german_era3_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_cp5_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ccp5_german_era3_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ccp5_german_era3_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ccp5_german_era3_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ccp5_german_era3_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_cp5_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ccp5_german_era3_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ccp5_german_era3_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ccp5_german_era3_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ccp5_english_era3_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_cp5_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ccp5_english_era3_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ccp5_english_era3_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ccp5_english_era3_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ccp5_english_era3_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_cp5_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ccp5_english_era3_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ccp5_english_era3_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ccp5_english_era3_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ccp5_english_era4_war_low_nobles = {
+	scope = character
+	is_shown = {
+		has_cp5_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ccp5_english_era4_war_low_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ccp5_english_era4_war_low_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ccp5_english_era4_war_low_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_ccp5_english_era4_war_high_nobles = {
+	scope = character
+	is_shown = {
+		has_cp5_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_ccp5_english_era4_war_high_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_ccp5_english_era4_war_high_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_ccp5_english_era4_war_high_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_cp7_emishi_war_nobles = {
+	scope = character
+	is_shown = {
+		has_cp7_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_cp7_emishi_war_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_cp7_emishi_war_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_cp7_emishi_war_nobles
+		}
+	}
+}
+kns_gui_ig_set_armor_cp7_nivkh_war_nobles = {
+	scope = character
+	is_shown = {
+		has_cp7_dlc_trigger = yes
+	}
+	is_valid = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			kns_is_imperial_guard_of_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		var:kns_ig_attire_target = {
+			kns_clear_imperial_guard_armor_flags_effect = yes
+			add_character_flag = kns_ig_armor_cp7_nivkh_war_nobles
+		}
+	}
+}
+
+kns_gui_ig_armor_cp7_nivkh_war_nobles_selected = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_attire_target
+		var:kns_ig_attire_target = {
+			has_character_flag = kns_ig_armor_cp7_nivkh_war_nobles
+		}
+	}
+}

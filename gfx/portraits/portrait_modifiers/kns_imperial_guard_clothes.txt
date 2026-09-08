@@ -1,0 +1,1484 @@
+kns_imperial_guard_clothes = {
+	usage = game
+	selection_behavior = max
+	priority = 8
+
+	dde_hre_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = dde_hre_war_nobility_clothes
+					accessory = m_clothes_sec_dde_hre_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_dde_hre_war_low_nobles
+			}
+		}
+	}
+
+	dde_hre_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = dde_hre_war_nobility_clothes
+					accessory = m_clothes_sec_dde_hre_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_dde_hre_war_high_nobles
+			}
+		}
+	}
+
+	western_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = western_war_nobility_clothes
+					accessory = m_clothes_sec_western_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_western_war_low_nobles
+			}
+		}
+	}
+
+	western_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = western_war_nobility_clothes
+					accessory = m_clothes_sec_western_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_western_war_high_nobles
+			}
+		}
+	}
+
+	ep2_western_era1_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep2_western_era1_war_nobility_clothes
+					range = { 0 0.49 }
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_western_era1_war_low_nobles
+			}
+		}
+	}
+
+	ep2_western_era1_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep2_western_era1_war_nobility_clothes
+					range = { 0.51 1.0 }
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_western_era1_war_high_nobles
+			}
+		}
+	}
+
+	ep2_western_era2_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep2_western_era2_war_nobility_clothes
+					accessory = m_clothes_sec_ep2_western_era2_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_western_era2_war_low_nobles
+			}
+		}
+	}
+
+	ep2_western_era2_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep2_western_era2_war_nobility_clothes
+					accessory = m_clothes_sec_ep2_western_era2_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_western_era2_war_high_nobles
+			}
+		}
+	}
+
+	ep2_western_era3_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = western_war_nobility_clothes
+					accessory = m_clothes_sec_western_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_western_era3_war_low_nobles
+			}
+		}
+	}
+
+	ep2_western_era3_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = western_war_nobility_clothes
+					accessory = m_clothes_sec_western_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_western_era3_war_high_nobles
+			}
+		}
+	}
+
+	ep2_western_era4_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep2_western_era4_war_nobility_clothes
+					range = { 0 0.49 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_western_era4_war_low_nobles
+			}
+		}
+	}
+
+	ep2_western_era4_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep2_western_era4_war_nobility_clothes
+					range = { 0.51 1 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_western_era4_war_high_nobles
+			}
+		}
+	}
+
+	western_crusades = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = western_crusades
+					range = { 0 1 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_western_crusades
+			}
+		}
+	}
+
+	byzantine_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = byzantine_war_nobility_clothes
+					accessory = m_clothes_sec_byzantine_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_byzantine_war_low_nobles
+			}
+		}
+	}
+
+	byzantine_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = byzantine_war_nobility_clothes
+					accessory = m_clothes_sec_byzantine_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_byzantine_war_high_nobles
+			}
+		}
+	}
+
+	byzantine_war_royalty = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = byzantine_war_nobility_clothes
+					accessory = m_clothes_sec_byzantine_war_nob_01_roy
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_byzantine_war_royalty
+			}
+		}
+	}
+
+	ep2_byzantine_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep2_byzantine_war_nobility_clothes
+					accessory = m_clothes_sec_ep2_byzantine_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_byzantine_war_low_nobles
+			}
+		}
+	}
+
+	ep2_byzantine_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep2_byzantine_war_nobility_clothes
+					accessory = m_clothes_sec_ep2_byzantine_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_byzantine_war_high_nobles
+			}
+		}
+	}
+
+	ep3_byzantine_era1_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep3_byzantine_era1_war_nobility_clothes
+					accessory = m_clothes_sec_ep3_byzantine_era1_war_nob_01
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep3_byzantine_era1_war_low_nobles
+			}
+		}
+	}
+
+	ep3_byzantine_era1_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep3_byzantine_era1_war_nobility_clothes
+					accessory = m_clothes_sec_ep3_byzantine_era1_war_nob_01
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep3_byzantine_era1_war_high_nobles
+			}
+		}
+	}
+
+	ep3_byzantine_era2_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep3_byzantine_era2_war_nobility_clothes
+					accessory = m_clothes_sec_ep3_byzantine_era2_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep3_byzantine_era2_war_low_nobles
+			}
+		}
+	}
+
+	ep3_byzantine_era2_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep3_byzantine_era2_war_nobility_clothes
+					accessory = m_clothes_sec_ep3_byzantine_era2_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep3_byzantine_era2_war_high_nobles
+			}
+		}
+	}
+
+	indian_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = indian_war_nobility_clothes
+					accessory = m_clothes_sec_indian_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_indian_war_low_nobles
+			}
+		}
+	}
+
+	indian_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = indian_war_nobility_clothes
+					accessory = m_clothes_sec_indian_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_indian_war_high_nobles
+			}
+		}
+	}
+
+	indian_war_royalty = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = indian_war_nobility_clothes
+					accessory = m_clothes_sec_indian_war_nob_01_roy
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_indian_war_royalty
+			}
+		}
+	}
+
+	ep2_indian_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep2_indian_war_nobility_clothes
+					accessory = m_clothes_sec_ep2_indian_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_indian_war_low_nobles
+			}
+		}
+	}
+
+	ep2_indian_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep2_indian_war_nobility_clothes
+					accessory = m_clothes_sec_ep2_indian_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_indian_war_high_nobles
+			}
+		}
+	}
+
+	dde_abbasid_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = dde_abbasid_war_nobility_clothes
+					accessory = m_clothes_sec_dde_abbasid_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_dde_abbasid_war_low_nobles
+			}
+		}
+	}
+
+	dde_abbasid_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = dde_abbasid_war_nobility_clothes
+					accessory = m_clothes_sec_dde_abbasid_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_dde_abbasid_war_high_nobles
+			}
+		}
+	}
+
+	dde_abbasid_war_royalty = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = dde_abbasid_war_nobility_clothes
+					accessory = m_clothes_sec_dde_abbasid_war_nob_01_roy
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_dde_abbasid_war_royalty
+			}
+		}
+	}
+
+	mena_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = mena_war_nobility_clothes
+					accessory = m_clothes_sec_mena_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_mena_war_low_nobles
+			}
+		}
+	}
+
+	mena_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = mena_war_nobility_clothes
+					accessory = m_clothes_sec_mena_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_mena_war_high_nobles
+			}
+		}
+	}
+
+	ep2_mena_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep2_mena_war_nobility_clothes
+					accessory = m_clothes_sec_ep2_mena_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_mena_war_low_nobles
+			}
+		}
+	}
+
+	ep2_mena_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep2_mena_war_nobility_clothes
+					accessory = m_clothes_sec_ep2_mena_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_mena_war_high_nobles
+			}
+		}
+	}
+
+	steppe_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = steppe_war_nobility_clothes
+					accessory = m_clothes_sec_steppe_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_steppe_war_low_nobles
+			}
+		}
+	}
+
+	ep2_steppe_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep2_steppe_war_nobility_clothes
+					accessory = m_clothes_sec_ep2_steppe_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_steppe_war_low_nobles
+			}
+		}
+	}
+
+	mpo_mongol_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = mpo_mongol_war_nobility_clothes
+					range = { 0 1 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_mpo_mongol_war_low_nobles
+			}
+		}
+	}
+
+	steppe_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = steppe_war_nobility_clothes
+					accessory = m_clothes_sec_steppe_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_steppe_war_high_nobles
+			}
+		}
+	}
+
+	ep2_steppe_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ep2_steppe_war_nobility_clothes
+					accessory = m_clothes_sec_ep2_steppe_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ep2_steppe_war_high_nobles
+			}
+		}
+	}
+
+	mpo_mongol_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = mpo_mongol_war_nobility_clothes
+					range = { 0 1 }
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_mpo_mongol_war_high_nobles
+			}
+		}
+	}
+
+	northern_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = northern_war_nobility_clothes
+					accessory = m_clothes_sec_northern_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_northern_war_low_nobles
+			}
+		}
+	}
+
+	northern_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = northern_war_nobility_clothes
+					accessory = m_clothes_sec_northern_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_northern_war_high_nobles
+			}
+		}
+	}
+
+	fp2_iberian_christian_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = fp2_christian_war_nobility_clothes
+					accessory = m_clothes_sec_fp2_iberian_christian_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_fp2_iberian_christian_war_low_nobles
+			}
+		}
+	}
+
+	fp2_iberian_christian_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = fp2_christian_war_nobility_clothes
+					accessory = m_clothes_sec_fp2_iberian_christian_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_fp2_iberian_christian_war_high_nobles
+			}
+		}
+	}
+
+	fp2_iberian_muslim_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = fp2_muslim_war_nobility_clothes
+					accessory = m_clothes_sec_fp2_iberian_muslim_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_fp2_iberian_muslim_war_low_nobles
+			}
+		}
+	}
+
+	fp2_iberian_muslim_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = fp2_muslim_war_nobility_clothes
+					accessory = m_clothes_sec_fp2_iberian_muslim_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_fp2_iberian_muslim_war_high_nobles
+			}
+		}
+	}
+
+	fp1_norse_war = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = fp1_war_nobility_clothes
+					range = { 0 1 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_fp1_norse_war
+			}
+		}
+	}
+
+	sub_saharan_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = sub_saharan_war_nobility_clothes
+					accessory = m_clothes_sec_mena_war_nob_01_lo
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_sub_saharan_war_low_nobles
+			}
+		}
+	}
+
+	sub_saharan_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = sub_saharan_war_nobility_clothes
+					accessory = m_clothes_sec_mena_war_nob_01_hi
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_sub_saharan_war_high_nobles
+			}
+		}
+	}
+
+	afr_berber_war = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = afr_war_nobility_clothes
+					range = { 0 1 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_afr_berber_war
+			}
+		}
+	}
+
+	pol_west_slavic_war = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = pol_war_nobility_clothes
+					range = { 0 1 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_pol_west_slavic_war
+			}
+		}
+	}
+
+	ccp4_khanty_war_com = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp4_khanty_war_nobility_clothes
+					range = { 0 0.3 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ccp4_khanty_war_com
+			}
+		}
+	}
+
+	ccp4_khanty_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp4_khanty_war_nobility_clothes
+					range = { 0.1 0.6 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ccp4_khanty_war_low_nobles
+			}
+		}
+	}
+
+	ccp4_khanty_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp4_khanty_war_nobility_clothes
+					range = { 0.7 1.0 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ccp4_khanty_war_high_nobles
+			}
+		}
+	}
+
+	fp3_iranian_war = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = fp3_iranian_war_nobility_clothes
+					range = { 0 1 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_fp3_iranian_war
+			}
+		}
+	}
+
+	tgp_chinese_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = tgp_chinese_war_nobility_clothes
+					accessory = m_clothes_sec_tgp_chinese_war_nob_01
+				}
+				accessory = {
+					mode = add
+					gene = legwear
+					template = tgp_chinese_war_legwear
+					range = { 0 1 }
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_tgp_chinese_war_low_nobles
+			}
+		}
+	}
+
+	tgp_chinese_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = tgp_chinese_war_nobility_clothes
+					accessory = m_clothes_sec_tgp_chinese_war_nob_02
+				}
+				accessory = {
+					mode = add
+					gene = legwear
+					template = tgp_chinese_war_legwear
+					range = { 0 1 }
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_tgp_chinese_war_high_nobles
+			}
+		}
+	}
+
+	tgp_japanese_war_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = tgp_japanese_war_nobility_clothes
+					range = { 0 1 }
+				}
+				accessory = {
+					mode = add
+					gene = legwear
+					template = tgp_japanese_war_legwear
+					range = { 0 1 }
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_tgp_japanese_war_nobles
+			}
+		}
+	}
+
+	tgp_southeast_war_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = indian_war_nobility_clothes
+					range = { 0 1 }
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_tgp_southeast_war_nobles
+			}
+		}
+	}
+
+	tgp_ainu_war_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = steppe_war_nobility_clothes
+					range = { 0 1 }
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_tgp_ainu_war_nobles
+			}
+		}
+	}
+
+	ccp5_french_era3_war_commoners = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp5_french_era3_war_commoners_clothes
+					range = { 0 1 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ccp5_french_era3_war_commoners
+			}
+		}
+	}
+
+	ccp5_french_era3_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp5_french_era3_war_nobility_clothes
+					range = { 0 0.49 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ccp5_french_era3_war_low_nobles
+			}
+		}
+	}
+
+	ccp5_french_era3_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp5_french_era3_war_nobility_clothes
+					range = { 0.51 1 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ccp5_french_era3_war_high_nobles
+			}
+		}
+	}
+
+	ccp5_french_late_era3_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp5_french_late_era3_war_nobility_clothes
+					range = { 0 0.49 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ccp5_french_late_era3_war_low_nobles
+			}
+		}
+	}
+
+	ccp5_french_late_era3_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp5_french_late_era3_war_nobility_clothes
+					range = { 0.51 1 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ccp5_french_late_era3_war_high_nobles
+			}
+		}
+	}
+
+	ccp5_german_era3_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp5_german_era3_war_nobility_clothes
+					range = { 0 0.49 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ccp5_german_era3_war_low_nobles
+			}
+		}
+	}
+
+	ccp5_german_era3_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp5_german_era3_war_nobility_clothes
+					range = { 0.51 1 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ccp5_german_era3_war_high_nobles
+			}
+		}
+	}
+
+	ccp5_english_era3_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp5_english_era3_war_nobility_clothes
+					range = { 0 0.49 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ccp5_english_era3_war_low_nobles
+			}
+		}
+	}
+
+	ccp5_english_era3_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp5_english_era3_war_nobility_clothes
+					range = { 0.51 1 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ccp5_english_era3_war_high_nobles
+			}
+		}
+	}
+
+	ccp5_english_era4_war_low_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp5_english_era4_war_nobility_clothes
+					range = { 0 0.49 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ccp5_english_era4_war_low_nobles
+			}
+		}
+	}
+
+	ccp5_english_era4_war_high_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp5_english_era4_war_nobility_clothes
+					range = { 0.51 1 } # For the randomness to work correctly
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_ccp5_english_era4_war_high_nobles
+			}
+		}
+	}
+
+	cp7_emishi_war_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = ccp7_emishi_war_nob_clothes
+					range = { 0 1 }
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_cp7_emishi_war_nobles
+			}
+		}
+	}
+
+	cp7_nivkh_war_nobles = {
+		dna_modifiers = {
+				accessory = {
+					mode = add
+					gene = clothes
+					template = steppe_war_nobility_clothes
+					range = { 0 1 }
+				}
+		}
+		ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = kns_is_imperial_guard
+				has_character_flag = kns_ig_armor_cp7_nivkh_war_nobles
+			}
+		}
+	}
+
+}

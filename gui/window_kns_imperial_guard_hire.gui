@@ -1,0 +1,190 @@
+window = {
+	name = "kns_imperial_guard_hire_window"
+	size = { 780 860 }
+	parentanchor = center
+	position = { 0 0 }
+	movable = yes
+	layer = top
+	allow_outside = yes
+	visible = "[GetPlayer.MakeScope.Var('kns_ig_hire_window_open').IsSet]"
+
+	using = Window_Background_Subwindow
+
+		vbox = {
+			margin = { 10 10 }
+			spacing = 8
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				spacing = 8
+
+				vbox = {
+					layoutpolicy_horizontal = expanding
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center
+						visible = "[GetScriptedGui('kns_gui_ig_hiring_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						text = "kns_ig_hire_title_sword"
+						fontsize = 22
+					}
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center
+						visible = "[GetScriptedGui('kns_gui_ig_hiring_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						text = "kns_ig_hire_title_axe"
+						fontsize = 22
+					}
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center
+						visible = "[GetScriptedGui('kns_gui_ig_hiring_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						text = "kns_ig_hire_title_hammer"
+						fontsize = 22
+					}
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center
+						visible = "[GetScriptedGui('kns_gui_ig_hiring_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						text = "kns_ig_hire_title_mace"
+						fontsize = 22
+					}
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center
+						visible = "[GetScriptedGui('kns_gui_ig_hiring_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						text = "kns_ig_hire_title_spear"
+						fontsize = 22
+					}
+				}
+
+				button_close = {
+					onclick = "[GetScriptedGui('kns_close_imperial_guard_hire_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					shortcut = "close_window"
+					visible = "[GetPlayer.MakeScope.Var('kns_ig_hire_window_open').IsSet]"
+				}
+			}
+
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				background = {
+					using = Background_Area_Dark
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					visible = "[GetScriptedGui('kns_gui_ig_hiring_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					text = "kns_ig_hire_kit_sword"
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					visible = "[GetScriptedGui('kns_gui_ig_hiring_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					text = "kns_ig_hire_kit_axe"
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					visible = "[GetScriptedGui('kns_gui_ig_hiring_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					text = "kns_ig_hire_kit_hammer"
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					visible = "[GetScriptedGui('kns_gui_ig_hiring_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					text = "kns_ig_hire_kit_mace"
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					visible = "[GetScriptedGui('kns_gui_ig_hiring_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					text = "kns_ig_hire_kit_spear"
+				}
+			}
+
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				text = "kns_ig_window_candidates_header"
+				default_format = "#high"
+			}
+
+			scrollbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+
+				blockoverride "scrollbox_content" {
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 6
+						datamodel = "[GetPlayer.MakeScope.GetList('kns_imperial_guard_candidates')]"
+
+						item = {
+							hbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 8
+								datacontext = "[Scope.Char]"
+								background = {
+									using = Background_Area_Dark
+								}
+
+								widget = {
+									size = { 85 90 }
+									parentanchor = vcenter
+									visible = "[Character.IsValid]"
+									portrait_head_small = {}
+								}
+
+								vbox = {
+									layoutpolicy_horizontal = expanding
+									parentanchor = vcenter
+									spacing = 2
+
+									text_single = {
+										layoutpolicy_horizontal = expanding
+										visible = "[Character.IsValid]"
+										text = "[Character.GetShortUINameNoTooltip]"
+										default_format = "#high"
+									}
+
+									text_single = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_candidate_prowess"
+									}
+
+									text_single = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_hire_selected"
+										visible = "[GetScriptedGui('kns_gui_ig_candidate_is_hire_focus').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+									}
+								}
+
+								button_standard = {
+									parentanchor = vcenter
+									text = "kns_ig_window_appoint"
+									tooltip = "kns_imperial_guard_kit_tt"
+									enabled = "[GetScriptedGui('kns_gui_ig_can_appoint').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+									onclick = "[GetScriptedGui('kns_gui_ig_can_appoint').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+								}
+							}
+						}
+					}
+				}
+
+				blockoverride "scrollbox_empty" {
+					visible = "[IsDataModelEmpty( GetPlayer.MakeScope.GetList('kns_imperial_guard_candidates') )]"
+					text = "kns_ig_window_candidates_empty"
+				}
+			}
+		}
+}

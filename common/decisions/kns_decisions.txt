@@ -388,3 +388,39 @@ kns_imperial_olympic_hall_of_fame_decision = {
 		base = 0
 	}
 }
+
+kns_manage_imperial_guard_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+
+	decision_group_type = kns_knight_decisions
+	sort_order = 80
+
+	desc = kns_manage_imperial_guard_decision_desc
+
+	ai_check_interval = 0
+
+	is_shown = {
+		kns_can_see_imperial_guard_decisions_trigger = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		custom_tooltip = kns_manage_imperial_guard_decision_tooltip
+		hidden_effect = {
+			kns_open_imperial_guard_window_effect = yes
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

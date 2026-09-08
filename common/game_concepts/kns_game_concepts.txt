@@ -12,3 +12,8 @@ kns_prowess_talent = {
 	texture = "gfx/interface/icons/icon_prowess.dds"
 	alias = { kns_prowess_talents }
 }
+
+kns_imperial_guard = {
+	texture = "gfx/interface/icons/icon_prowess.dds"
+	alias = { kns_imperial_guards kns_imperial_guardspossessive }
+}
