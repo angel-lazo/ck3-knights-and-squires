@@ -29,6 +29,8 @@ window = {
 
 				button_close = {
 					onclick = "[GetScriptedGui('kns_close_olympic_champion_picker').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					shortcut = "close_window"
+					visible = "[GetPlayer.MakeScope.Var('kns_olympic_champion_picker_open').IsSet]"
 				}
 			}
 
