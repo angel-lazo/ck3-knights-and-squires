@@ -8,7 +8,16 @@ kns_hof_bind_next_ref_effect = {
 	}
 	if = {
 		limit = { global_var:kns_hof_ref_count >= 100 }
-		debug_log = "KNS Olympic | hof_ref_full"
+		if = {
+			limit = {
+				exists = scope:kns_hof_char
+				scope:kns_hof_char = { is_alive = no }
+			}
+			kns_hof_steal_ref_for_dead_effect = yes
+		}
+		else = {
+			debug_log = "KNS Olympic | hof_ref_full"
+		}
 	}
 	else = {
 		change_global_variable = {
@@ -28853,55 +28862,61 @@ kns_hof_pick_next_duelist_effect = {
 	}
 }
 
+# Rank living fighters from kns_hof_index and merge dead snapshot rows.
 kns_hof_fill_ranked_display_effect = {
+	save_scope_as = kns_hof_viewer
+	kns_hof_clear_index_picked_effect = yes
+	kns_hof_scan_clear_ref_picked_effect = yes
 	set_variable = {
 		name = kns_hof_display_i
 		value = 1
 	}
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	kns_hof_pick_next_champion_effect = yes
-	set_variable = {
-		name = kns_hof_display_i
-		value = 1
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	kns_hof_pick_next_hybrid_champion_effect = yes
+	scope:kns_hof_viewer = {
+		set_variable = {
+			name = kns_hof_display_i
+			value = 1
+		}
 	}
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
-	kns_hof_pick_next_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
+	kns_hof_pick_next_hybrid_duelist_effect = yes
 }
 kns_hof_migrate_one_ref_effect = {
 	if = {

@@ -143,6 +143,31 @@ kns_olympic_fake_duel_prowess_weight_value = {
 	min = 0
 }
 
+# Fake-duel list total: 5+weight per fighter.
+kns_olympic_fake_total_weight_value = {
+	value = 10
+	if = {
+		limit = { exists = scope:kns_olympic_fighter_a }
+		add = scope:kns_olympic_fighter_a.kns_olympic_fake_duel_prowess_weight_value
+	}
+	if = {
+		limit = { exists = scope:kns_olympic_fighter_b }
+		add = scope:kns_olympic_fighter_b.kns_olympic_fake_duel_prowess_weight_value
+	}
+	min = 1
+}
+
+# Percent chance this character wins the fake duel. Evaluate on the combatant.
+kns_olympic_fake_player_win_percent_value = {
+	value = 5
+	add = kns_olympic_fake_duel_prowess_weight_value
+	multiply = 100
+	divide = kns_olympic_fake_total_weight_value
+	round = yes
+	min = 0
+	max = 100
+}
+
 # 50 gold per worn weapon or armor piece at or below 15% durability.
 kns_olympic_gear_repair_gold_value = {
 	value = 0
@@ -163,5 +188,38 @@ kns_olympic_gear_repair_gold_value = {
 			}
 		}
 		add = 50
+	}
+}
+
+# Hall of Legends ranking (ordered_in_global_list on kns_hof_index).
+kns_hof_titles_rank_value = {
+	value = 0
+	if = {
+		limit = { has_variable = kns_imperial_titles_won }
+		add = var:kns_imperial_titles_won
+	}
+}
+
+kns_hof_duels_rank_value = {
+	value = 0
+	if = {
+		limit = { has_variable = kns_imperial_duel_wins }
+		add = var:kns_imperial_duel_wins
+	}
+}
+
+# Snapshot steal priority: tournament titles outweigh bout wins.
+kns_hof_persist_score_value = {
+	value = 0
+	if = {
+		limit = { has_variable = kns_imperial_titles_won }
+		add = {
+			value = var:kns_imperial_titles_won
+			multiply = 1000
+		}
+	}
+	if = {
+		limit = { has_variable = kns_imperial_duel_wins }
+		add = var:kns_imperial_duel_wins
 	}
 }

@@ -1,0 +1,920 @@
+# Split Hall of Legends freeze pools (100 title slots, 100 duel slots).
+# Living rank from kns_hof_index. Dead freeze into the matching pool only.
+
+kns_hof_consider_dead_champion_slot_effect = {
+	if = {
+		limit = {
+			has_global_variable = kns_hof_title_stat_$SLOT$
+			global_var:kns_hof_title_stat_$SLOT$ > 0
+			NOT = { exists = var:kns_hof_used_champ_$SLOT$ }
+			global_var:kns_hof_title_stat_$SLOT$ > var:kns_hof_best_score
+			OR = {
+				NOT = { has_global_variable = kns_hof_title_ref_$SLOT$ }
+				NOT = { exists = global_var:kns_hof_title_ref_$SLOT$ }
+				global_var:kns_hof_title_ref_$SLOT$ = { is_alive = no }
+			}
+			NAND = {
+				exists = global_var:kns_hof_title_ref_$SLOT$
+				global_var:kns_hof_title_ref_$SLOT$ = { has_variable = kns_hof_champ_picked }
+			}
+		}
+		set_variable = {
+			name = kns_hof_best_score
+			value = global_var:kns_hof_title_stat_$SLOT$
+		}
+		set_variable = {
+			name = kns_hof_best_slot
+			value = $SLOT$
+		}
+	}
+}
+
+kns_hof_consider_dead_duelist_slot_effect = {
+	if = {
+		limit = {
+			has_global_variable = kns_hof_duel_stat_$SLOT$
+			global_var:kns_hof_duel_stat_$SLOT$ > 0
+			NOT = { exists = var:kns_hof_used_duel_$SLOT$ }
+			global_var:kns_hof_duel_stat_$SLOT$ > var:kns_hof_best_score
+			OR = {
+				NOT = { has_global_variable = kns_hof_duel_ref_$SLOT$ }
+				NOT = { exists = global_var:kns_hof_duel_ref_$SLOT$ }
+				global_var:kns_hof_duel_ref_$SLOT$ = { is_alive = no }
+			}
+			NAND = {
+				exists = global_var:kns_hof_duel_ref_$SLOT$
+				global_var:kns_hof_duel_ref_$SLOT$ = { has_variable = kns_hof_duel_picked }
+			}
+		}
+		set_variable = {
+			name = kns_hof_best_score
+			value = global_var:kns_hof_duel_stat_$SLOT$
+		}
+		set_variable = {
+			name = kns_hof_best_slot
+			value = $SLOT$
+		}
+	}
+}
+
+kns_hof_clear_picked_on_title_ref_effect = {
+	if = {
+		limit = { exists = global_var:kns_hof_title_ref_$SLOT$ }
+		global_var:kns_hof_title_ref_$SLOT$ = {
+			remove_variable = kns_hof_champ_picked
+		}
+	}
+}
+
+kns_hof_clear_picked_on_duel_ref_effect = {
+	if = {
+		limit = { exists = global_var:kns_hof_duel_ref_$SLOT$ }
+		global_var:kns_hof_duel_ref_$SLOT$ = {
+			remove_variable = kns_hof_duel_picked
+		}
+	}
+}
+
+kns_hof_clear_index_picked_effect = {
+	every_in_global_list = {
+		variable = kns_hof_index
+		remove_variable = kns_hof_champ_picked
+		remove_variable = kns_hof_duel_picked
+	}
+}
+
+kns_hof_ensure_title_count_effect = {
+	if = {
+		limit = { NOT = { has_global_variable = kns_hof_title_count } }
+		set_global_variable = {
+			name = kns_hof_title_count
+			value = 0
+		}
+	}
+}
+
+kns_hof_ensure_duel_count_effect = {
+	if = {
+		limit = { NOT = { has_global_variable = kns_hof_duel_count } }
+		set_global_variable = {
+			name = kns_hof_duel_count
+			value = 0
+		}
+	}
+}
+
+kns_hof_write_title_slot_effect = {
+	if = {
+		limit = { global_var:kns_hof_title_count = $SLOT$ }
+		set_global_variable = {
+			name = kns_hof_title_ref_$SLOT$
+			value = scope:kns_hof_char
+		}
+	}
+}
+
+kns_hof_write_duel_slot_effect = {
+	if = {
+		limit = { global_var:kns_hof_duel_count = $SLOT$ }
+		set_global_variable = {
+			name = kns_hof_duel_ref_$SLOT$
+			value = scope:kns_hof_char
+		}
+	}
+}
+
+kns_hof_snapshot_title_slot_effect = {
+	if = {
+		limit = {
+			scope:kns_hof_char = { has_variable = kns_hof_title_slot }
+			scope:kns_hof_char.var:kns_hof_title_slot = $SLOT$
+		}
+		if = {
+			limit = { exists = global_var:kns_hof_title_ref_$SLOT$ }
+		}
+		else = {
+			set_global_variable = {
+				name = kns_hof_title_ref_$SLOT$
+				value = scope:kns_hof_char
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_titles_won } }
+			set_global_variable = {
+				name = kns_hof_title_stat_$SLOT$
+				value = scope:kns_hof_char.var:kns_imperial_titles_won
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_olympic_win_year_1 } }
+			set_global_variable = {
+				name = kns_hof_title_y1_$SLOT$
+				value = scope:kns_hof_char.var:kns_olympic_win_year_1
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_olympic_win_year_2 } }
+			set_global_variable = {
+				name = kns_hof_title_y2_$SLOT$
+				value = scope:kns_hof_char.var:kns_olympic_win_year_2
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_olympic_win_year_3 } }
+			set_global_variable = {
+				name = kns_hof_title_y3_$SLOT$
+				value = scope:kns_hof_char.var:kns_olympic_win_year_3
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_olympic_win_year_4 } }
+			set_global_variable = {
+				name = kns_hof_title_y4_$SLOT$
+				value = scope:kns_hof_char.var:kns_olympic_win_year_4
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_olympic_win_year_5 } }
+			set_global_variable = {
+				name = kns_hof_title_y5_$SLOT$
+				value = scope:kns_hof_char.var:kns_olympic_win_year_5
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_olympic_win_year_6 } }
+			set_global_variable = {
+				name = kns_hof_title_y6_$SLOT$
+				value = scope:kns_hof_char.var:kns_olympic_win_year_6
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_olympic_win_year_7 } }
+			set_global_variable = {
+				name = kns_hof_title_y7_$SLOT$
+				value = scope:kns_hof_char.var:kns_olympic_win_year_7
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_olympic_win_year_8 } }
+			set_global_variable = {
+				name = kns_hof_title_y8_$SLOT$
+				value = scope:kns_hof_char.var:kns_olympic_win_year_8
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					scope:kns_hof_char = { is_alive = no }
+					scope:kns_hof_char = { has_character_flag = kns_hof_freezing }
+				}
+			}
+			set_global_variable = kns_hof_title_dead_$SLOT$
+		}
+		else = {
+			remove_global_variable = kns_hof_title_dead_$SLOT$
+		}
+	}
+}
+
+kns_hof_snapshot_duel_slot_effect = {
+	if = {
+		limit = {
+			scope:kns_hof_char = { has_variable = kns_hof_duel_slot }
+			scope:kns_hof_char.var:kns_hof_duel_slot = $SLOT$
+		}
+		if = {
+			limit = { exists = global_var:kns_hof_duel_ref_$SLOT$ }
+		}
+		else = {
+			set_global_variable = {
+				name = kns_hof_duel_ref_$SLOT$
+				value = scope:kns_hof_char
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_wins } }
+			set_global_variable = {
+				name = kns_hof_duel_stat_$SLOT$
+				value = scope:kns_hof_char.var:kns_imperial_duel_wins
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_imperial_duel_losses } }
+			set_global_variable = {
+				name = kns_hof_duel_loss_$SLOT$
+				value = scope:kns_hof_char.var:kns_imperial_duel_losses
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					scope:kns_hof_char = { is_alive = no }
+					scope:kns_hof_char = { has_character_flag = kns_hof_freezing }
+				}
+			}
+			set_global_variable = kns_hof_duel_dead_$SLOT$
+		}
+		else = {
+			remove_global_variable = kns_hof_duel_dead_$SLOT$
+		}
+	}
+}
+
+kns_hof_snapshot_title_effect = {
+	if = {
+		limit = { scope:kns_hof_char = { has_variable = kns_hof_title_slot } }
+		kns_hof_scan_snapshot_title_effect = yes
+	}
+}
+
+kns_hof_snapshot_duel_effect = {
+	if = {
+		limit = { scope:kns_hof_char = { has_variable = kns_hof_duel_slot } }
+		kns_hof_scan_snapshot_duel_effect = yes
+	}
+}
+
+kns_hof_load_title_tmp_slot_effect = {
+	if = {
+		limit = { var:kns_hof_best_slot = $SLOT$ }
+		remove_variable = kns_hof_tmp_char
+		remove_variable = kns_hof_tmp_titles
+		remove_variable = kns_hof_tmp_dead
+		remove_variable = kns_hof_tmp_y1
+		remove_variable = kns_hof_tmp_y2
+		remove_variable = kns_hof_tmp_y3
+		remove_variable = kns_hof_tmp_y4
+		remove_variable = kns_hof_tmp_y5
+		remove_variable = kns_hof_tmp_y6
+		remove_variable = kns_hof_tmp_y7
+		remove_variable = kns_hof_tmp_y8
+		if = {
+			limit = { exists = global_var:kns_hof_title_ref_$SLOT$ }
+			set_variable = {
+				name = kns_hof_tmp_char
+				value = global_var:kns_hof_title_ref_$SLOT$
+			}
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_title_stat_$SLOT$ }
+			set_variable = {
+				name = kns_hof_tmp_titles
+				value = global_var:kns_hof_title_stat_$SLOT$
+			}
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_title_dead_$SLOT$ }
+			set_variable = kns_hof_tmp_dead
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_title_y1_$SLOT$ }
+			set_variable = {
+				name = kns_hof_tmp_y1
+				value = global_var:kns_hof_title_y1_$SLOT$
+			}
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_title_y2_$SLOT$ }
+			set_variable = {
+				name = kns_hof_tmp_y2
+				value = global_var:kns_hof_title_y2_$SLOT$
+			}
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_title_y3_$SLOT$ }
+			set_variable = {
+				name = kns_hof_tmp_y3
+				value = global_var:kns_hof_title_y3_$SLOT$
+			}
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_title_y4_$SLOT$ }
+			set_variable = {
+				name = kns_hof_tmp_y4
+				value = global_var:kns_hof_title_y4_$SLOT$
+			}
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_title_y5_$SLOT$ }
+			set_variable = {
+				name = kns_hof_tmp_y5
+				value = global_var:kns_hof_title_y5_$SLOT$
+			}
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_title_y6_$SLOT$ }
+			set_variable = {
+				name = kns_hof_tmp_y6
+				value = global_var:kns_hof_title_y6_$SLOT$
+			}
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_title_y7_$SLOT$ }
+			set_variable = {
+				name = kns_hof_tmp_y7
+				value = global_var:kns_hof_title_y7_$SLOT$
+			}
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_title_y8_$SLOT$ }
+			set_variable = {
+				name = kns_hof_tmp_y8
+				value = global_var:kns_hof_title_y8_$SLOT$
+			}
+		}
+	}
+}
+
+kns_hof_load_duel_tmp_slot_effect = {
+	if = {
+		limit = { var:kns_hof_best_slot = $SLOT$ }
+		remove_variable = kns_hof_tmp_char
+		remove_variable = kns_hof_tmp_wins
+		remove_variable = kns_hof_tmp_losses
+		remove_variable = kns_hof_tmp_dead
+		if = {
+			limit = { exists = global_var:kns_hof_duel_ref_$SLOT$ }
+			set_variable = {
+				name = kns_hof_tmp_char
+				value = global_var:kns_hof_duel_ref_$SLOT$
+			}
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_duel_stat_$SLOT$ }
+			set_variable = {
+				name = kns_hof_tmp_wins
+				value = global_var:kns_hof_duel_stat_$SLOT$
+			}
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_duel_loss_$SLOT$ }
+			set_variable = {
+				name = kns_hof_tmp_losses
+				value = global_var:kns_hof_duel_loss_$SLOT$
+			}
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_duel_dead_$SLOT$ }
+			set_variable = kns_hof_tmp_dead
+		}
+	}
+}
+
+kns_hof_consider_steal_title_slot_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_global_variable = kns_hof_title_ref_$SLOT$
+				has_global_variable = kns_hof_title_stat_$SLOT$
+			}
+			NAND = {
+				exists = global_var:kns_hof_title_ref_$SLOT$
+				global_var:kns_hof_title_ref_$SLOT$ = scope:kns_hof_char
+			}
+		}
+		set_variable = {
+			name = kns_hof_slot_score
+			value = 0
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_title_stat_$SLOT$ }
+			set_variable = {
+				name = kns_hof_slot_score
+				value = global_var:kns_hof_title_stat_$SLOT$
+			}
+		}
+		if = {
+			limit = {
+				exists = global_var:kns_hof_title_ref_$SLOT$
+				global_var:kns_hof_title_ref_$SLOT$ = { is_alive = yes }
+				var:kns_hof_slot_score < var:kns_hof_steal_living_score
+			}
+			set_variable = {
+				name = kns_hof_steal_living_score
+				value = var:kns_hof_slot_score
+			}
+			set_variable = {
+				name = kns_hof_steal_living_slot
+				value = $SLOT$
+			}
+		}
+		if = {
+			limit = { var:kns_hof_slot_score < var:kns_hof_steal_any_score }
+			set_variable = {
+				name = kns_hof_steal_any_score
+				value = var:kns_hof_slot_score
+			}
+			set_variable = {
+				name = kns_hof_steal_any_slot
+				value = $SLOT$
+			}
+		}
+	}
+}
+
+kns_hof_consider_steal_duel_slot_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_global_variable = kns_hof_duel_ref_$SLOT$
+				has_global_variable = kns_hof_duel_stat_$SLOT$
+			}
+			NAND = {
+				exists = global_var:kns_hof_duel_ref_$SLOT$
+				global_var:kns_hof_duel_ref_$SLOT$ = scope:kns_hof_char
+			}
+		}
+		set_variable = {
+			name = kns_hof_slot_score
+			value = 0
+		}
+		if = {
+			limit = { has_global_variable = kns_hof_duel_stat_$SLOT$ }
+			set_variable = {
+				name = kns_hof_slot_score
+				value = global_var:kns_hof_duel_stat_$SLOT$
+			}
+		}
+		if = {
+			limit = {
+				exists = global_var:kns_hof_duel_ref_$SLOT$
+				global_var:kns_hof_duel_ref_$SLOT$ = { is_alive = yes }
+				var:kns_hof_slot_score < var:kns_hof_steal_living_score
+			}
+			set_variable = {
+				name = kns_hof_steal_living_score
+				value = var:kns_hof_slot_score
+			}
+			set_variable = {
+				name = kns_hof_steal_living_slot
+				value = $SLOT$
+			}
+		}
+		if = {
+			limit = { var:kns_hof_slot_score < var:kns_hof_steal_any_score }
+			set_variable = {
+				name = kns_hof_steal_any_score
+				value = var:kns_hof_slot_score
+			}
+			set_variable = {
+				name = kns_hof_steal_any_slot
+				value = $SLOT$
+			}
+		}
+	}
+}
+
+kns_hof_try_apply_steal_title_slot_effect = {
+	if = {
+		limit = { var:kns_hof_steal_slot = $SLOT$ }
+		if = {
+			limit = { exists = global_var:kns_hof_title_ref_$SLOT$ }
+			global_var:kns_hof_title_ref_$SLOT$ = {
+				if = {
+					limit = { has_variable = kns_hof_title_slot }
+					remove_variable = kns_hof_title_slot
+				}
+			}
+		}
+		set_global_variable = {
+			name = kns_hof_title_ref_$SLOT$
+			value = scope:kns_hof_char
+		}
+		scope:kns_hof_char = {
+			set_variable = {
+				name = kns_hof_title_slot
+				value = $SLOT$
+			}
+		}
+	}
+}
+
+kns_hof_try_apply_steal_duel_slot_effect = {
+	if = {
+		limit = { var:kns_hof_steal_slot = $SLOT$ }
+		if = {
+			limit = { exists = global_var:kns_hof_duel_ref_$SLOT$ }
+			global_var:kns_hof_duel_ref_$SLOT$ = {
+				if = {
+					limit = { has_variable = kns_hof_duel_slot }
+					remove_variable = kns_hof_duel_slot
+				}
+			}
+		}
+		set_global_variable = {
+			name = kns_hof_duel_ref_$SLOT$
+			value = scope:kns_hof_char
+		}
+		scope:kns_hof_char = {
+			set_variable = {
+				name = kns_hof_duel_slot
+				value = $SLOT$
+			}
+		}
+	}
+}
+
+kns_hof_pick_steal_victim_effect = {
+	remove_variable = kns_hof_steal_slot
+	remove_variable = kns_hof_victim_score
+	if = {
+		limit = { exists = var:kns_hof_steal_living_slot }
+		set_variable = {
+			name = kns_hof_steal_slot
+			value = var:kns_hof_steal_living_slot
+		}
+		set_variable = {
+			name = kns_hof_victim_score
+			value = var:kns_hof_steal_living_score
+		}
+	}
+	else_if = {
+		limit = { exists = var:kns_hof_steal_any_slot }
+		set_variable = {
+			name = kns_hof_steal_slot
+			value = var:kns_hof_steal_any_slot
+		}
+		set_variable = {
+			name = kns_hof_victim_score
+			value = var:kns_hof_steal_any_score
+		}
+	}
+}
+
+kns_hof_clear_steal_vars_effect = {
+	remove_variable = kns_hof_steal_living_score
+	remove_variable = kns_hof_steal_any_score
+	remove_variable = kns_hof_steal_living_slot
+	remove_variable = kns_hof_steal_any_slot
+	remove_variable = kns_hof_steal_slot
+	remove_variable = kns_hof_incoming_score
+	remove_variable = kns_hof_victim_score
+	remove_variable = kns_hof_slot_score
+}
+
+kns_hof_steal_title_for_dead_effect = {
+	set_variable = {
+		name = kns_hof_steal_living_score
+		value = 1000000
+	}
+	set_variable = {
+		name = kns_hof_steal_any_score
+		value = 1000000
+	}
+	remove_variable = kns_hof_steal_living_slot
+	remove_variable = kns_hof_steal_any_slot
+	kns_hof_scan_steal_title_slots_effect = yes
+	set_variable = {
+		name = kns_hof_incoming_score
+		value = scope:kns_hof_char.kns_hof_titles_rank_value
+	}
+	kns_hof_pick_steal_victim_effect = yes
+	if = {
+		limit = {
+			exists = var:kns_hof_steal_slot
+			var:kns_hof_incoming_score > var:kns_hof_victim_score
+		}
+		kns_hof_apply_steal_title_scan_effect = yes
+	}
+	kns_hof_clear_steal_vars_effect = yes
+}
+
+kns_hof_steal_duel_for_dead_effect = {
+	set_variable = {
+		name = kns_hof_steal_living_score
+		value = 1000000
+	}
+	set_variable = {
+		name = kns_hof_steal_any_score
+		value = 1000000
+	}
+	remove_variable = kns_hof_steal_living_slot
+	remove_variable = kns_hof_steal_any_slot
+	kns_hof_scan_steal_duel_slots_effect = yes
+	set_variable = {
+		name = kns_hof_incoming_score
+		value = scope:kns_hof_char.kns_hof_duels_rank_value
+	}
+	kns_hof_pick_steal_victim_effect = yes
+	if = {
+		limit = {
+			exists = var:kns_hof_steal_slot
+			var:kns_hof_incoming_score > var:kns_hof_victim_score
+		}
+		kns_hof_apply_steal_duel_scan_effect = yes
+	}
+	kns_hof_clear_steal_vars_effect = yes
+}
+
+kns_hof_bind_next_title_effect = {
+	kns_hof_ensure_title_count_effect = yes
+	if = {
+		limit = { global_var:kns_hof_title_count >= 100 }
+		kns_hof_steal_title_for_dead_effect = yes
+	}
+	else = {
+		change_global_variable = {
+			name = kns_hof_title_count
+			add = 1
+		}
+		kns_hof_scan_write_title_effect = yes
+		scope:kns_hof_char = {
+			set_variable = {
+				name = kns_hof_title_slot
+				value = global_var:kns_hof_title_count
+			}
+		}
+	}
+}
+
+kns_hof_bind_next_duel_effect = {
+	kns_hof_ensure_duel_count_effect = yes
+	if = {
+		limit = { global_var:kns_hof_duel_count >= 100 }
+		kns_hof_steal_duel_for_dead_effect = yes
+	}
+	else = {
+		change_global_variable = {
+			name = kns_hof_duel_count
+			add = 1
+		}
+		kns_hof_scan_write_duel_effect = yes
+		scope:kns_hof_char = {
+			set_variable = {
+				name = kns_hof_duel_slot
+				value = global_var:kns_hof_duel_count
+			}
+		}
+	}
+}
+
+kns_hof_freeze_dead_title_effect = {
+	if = {
+		limit = {
+			scope:kns_hof_char = {
+				has_variable = kns_imperial_titles_won
+				var:kns_imperial_titles_won > 0
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_hof_title_slot } }
+			kns_hof_snapshot_title_effect = yes
+		}
+		else_if = {
+			limit = {
+				OR = {
+					scope:kns_hof_char = { is_alive = no }
+					scope:kns_hof_char = { has_character_flag = kns_hof_freezing }
+				}
+			}
+			kns_hof_bind_next_title_effect = yes
+			kns_hof_snapshot_title_effect = yes
+		}
+	}
+}
+
+kns_hof_freeze_dead_duel_effect = {
+	if = {
+		limit = {
+			scope:kns_hof_char = {
+				has_variable = kns_imperial_duel_wins
+				var:kns_imperial_duel_wins > 0
+			}
+		}
+		if = {
+			limit = { scope:kns_hof_char = { has_variable = kns_hof_duel_slot } }
+			kns_hof_snapshot_duel_effect = yes
+		}
+		else_if = {
+			limit = {
+				OR = {
+					scope:kns_hof_char = { is_alive = no }
+					scope:kns_hof_char = { has_character_flag = kns_hof_freezing }
+				}
+			}
+			kns_hof_bind_next_duel_effect = yes
+			kns_hof_snapshot_duel_effect = yes
+		}
+	}
+}
+
+kns_hof_migrate_old_shared_slot_effect = {
+	if = {
+		limit = {
+			has_global_variable = kns_hof_stat_titles_$SLOT$
+			global_var:kns_hof_stat_titles_$SLOT$ > 0
+			OR = {
+				NOT = { has_global_variable = kns_hof_ref_$SLOT$ }
+				NOT = { exists = global_var:kns_hof_ref_$SLOT$ }
+				global_var:kns_hof_ref_$SLOT$ = { is_alive = no }
+			}
+		}
+		if = {
+			limit = { exists = global_var:kns_hof_ref_$SLOT$ }
+			global_var:kns_hof_ref_$SLOT$ = { save_scope_as = kns_hof_char }
+			kns_hof_freeze_dead_title_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			has_global_variable = kns_hof_stat_duels_$SLOT$
+			global_var:kns_hof_stat_duels_$SLOT$ > 0
+			OR = {
+				NOT = { has_global_variable = kns_hof_ref_$SLOT$ }
+				NOT = { exists = global_var:kns_hof_ref_$SLOT$ }
+				global_var:kns_hof_ref_$SLOT$ = { is_alive = no }
+			}
+		}
+		if = {
+			limit = { exists = global_var:kns_hof_ref_$SLOT$ }
+			global_var:kns_hof_ref_$SLOT$ = { save_scope_as = kns_hof_char }
+			kns_hof_freeze_dead_duel_effect = yes
+		}
+	}
+}
+
+kns_hof_pick_next_hybrid_champion_effect = {
+	if = {
+		limit = { exists = scope:kns_hof_best_living }
+		clear_saved_scope = kns_hof_best_living
+	}
+	ordered_in_global_list = {
+		variable = kns_hof_index
+		limit = {
+			NOT = { has_variable = kns_hof_champ_picked }
+			has_variable = kns_imperial_titles_won
+			var:kns_imperial_titles_won > 0
+		}
+		order_by = kns_hof_titles_rank_value
+		max = 1
+		check_range_bounds = no
+		save_scope_as = kns_hof_best_living
+	}
+	scope:kns_hof_viewer = {
+		set_variable = {
+			name = kns_hof_living_score
+			value = -1
+		}
+		if = {
+			limit = { exists = scope:kns_hof_best_living }
+			set_variable = {
+				name = kns_hof_living_score
+				value = scope:kns_hof_best_living.kns_hof_titles_rank_value
+			}
+		}
+		set_variable = {
+			name = kns_hof_best_score
+			value = -1
+		}
+		remove_variable = kns_hof_best_slot
+		kns_hof_scan_dead_champion_slots_effect = yes
+		if = {
+			limit = {
+				exists = scope:kns_hof_best_living
+				OR = {
+					NOT = { exists = var:kns_hof_best_slot }
+					var:kns_hof_living_score >= var:kns_hof_best_score
+				}
+			}
+			scope:kns_hof_best_living = {
+				save_scope_as = kns_hof_rank_char
+				set_variable = kns_hof_champ_picked
+			}
+			kns_hof_copy_champion_from_char_to_tmp_effect = yes
+			kns_hof_store_champion_display_effect = yes
+			change_variable = {
+				name = kns_hof_display_i
+				add = 1
+			}
+		}
+		else_if = {
+			limit = { exists = var:kns_hof_best_slot }
+			kns_hof_scan_load_title_tmp_effect = yes
+			if = {
+				limit = { exists = var:kns_hof_tmp_char }
+				var:kns_hof_tmp_char = {
+					set_variable = kns_hof_champ_picked
+				}
+			}
+			kns_hof_store_champion_display_effect = yes
+			kns_hof_mark_champion_used_effect = yes
+			change_variable = {
+				name = kns_hof_display_i
+				add = 1
+			}
+		}
+	}
+}
+
+kns_hof_pick_next_hybrid_duelist_effect = {
+	if = {
+		limit = { exists = scope:kns_hof_best_living }
+		clear_saved_scope = kns_hof_best_living
+	}
+	ordered_in_global_list = {
+		variable = kns_hof_index
+		limit = {
+			NOT = { has_variable = kns_hof_duel_picked }
+			has_variable = kns_imperial_duel_wins
+			var:kns_imperial_duel_wins > 0
+		}
+		order_by = kns_hof_duels_rank_value
+		max = 1
+		check_range_bounds = no
+		save_scope_as = kns_hof_best_living
+	}
+	scope:kns_hof_viewer = {
+		set_variable = {
+			name = kns_hof_living_score
+			value = -1
+		}
+		if = {
+			limit = { exists = scope:kns_hof_best_living }
+			set_variable = {
+				name = kns_hof_living_score
+				value = scope:kns_hof_best_living.kns_hof_duels_rank_value
+			}
+		}
+		set_variable = {
+			name = kns_hof_best_score
+			value = -1
+		}
+		remove_variable = kns_hof_best_slot
+		kns_hof_scan_dead_duelist_slots_effect = yes
+		if = {
+			limit = {
+				exists = scope:kns_hof_best_living
+				OR = {
+					NOT = { exists = var:kns_hof_best_slot }
+					var:kns_hof_living_score >= var:kns_hof_best_score
+				}
+			}
+			scope:kns_hof_best_living = {
+				save_scope_as = kns_hof_rank_char
+				set_variable = kns_hof_duel_picked
+			}
+			kns_hof_copy_duelist_from_char_to_tmp_effect = yes
+			kns_hof_store_duelist_display_effect = yes
+			change_variable = {
+				name = kns_hof_display_i
+				add = 1
+			}
+		}
+		else_if = {
+			limit = { exists = var:kns_hof_best_slot }
+			kns_hof_scan_load_duel_tmp_effect = yes
+			if = {
+				limit = { exists = var:kns_hof_tmp_char }
+				var:kns_hof_tmp_char = {
+					set_variable = kns_hof_duel_picked
+				}
+			}
+			kns_hof_store_duelist_display_effect = yes
+			kns_hof_mark_duelist_used_effect = yes
+			change_variable = {
+				name = kns_hof_display_i
+				add = 1
+			}
+		}
+	}
+}

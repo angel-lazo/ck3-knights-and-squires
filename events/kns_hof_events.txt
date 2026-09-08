@@ -1,0 +1,15 @@
+namespace = kns_hof
+
+# Queued from on_death (days = 1). Root may be the dead fighter or a living player.
+kns_hof.0001 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		exists = scope:kns_hof_char
+	}
+
+	immediate = {
+		kns_register_imperial_hof_character_effect = { CHAR = scope:kns_hof_char }
+	}
+}
