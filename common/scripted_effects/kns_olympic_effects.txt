@@ -1086,6 +1086,7 @@ kns_merge_character_hof_index_into_global_effect = {
 kns_register_imperial_hof_character_effect = {
 	$CHAR$ = {
 		save_scope_as = kns_hof_char
+		make_unprunable = yes
 	}
 	if = {
 		limit = {

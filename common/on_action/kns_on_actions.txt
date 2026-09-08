@@ -130,7 +130,16 @@ kns_on_death = {
 					}
 				}
 			}
+			# on_death often still has is_alive = yes. Execution also prunes
+			# unimportant dead, which drops them from kns_hof_index.
+			add_character_flag = kns_hof_freezing
+			make_unprunable = yes
 			kns_register_imperial_hof_character_effect = { CHAR = this }
+			# on_death is "about to die". Freeze again tomorrow when is_alive is no.
+			trigger_event = { id = kns_hof.0001 days = 1 }
+			every_player = {
+				trigger_event = { id = kns_hof.0001 days = 1 }
+			}
 		}
 		if = {
 			limit = {

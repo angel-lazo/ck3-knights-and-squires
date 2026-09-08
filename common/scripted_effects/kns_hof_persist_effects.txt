@@ -202,7 +202,12 @@ kns_hof_snapshot_title_slot_effect = {
 			}
 		}
 		if = {
-			limit = { scope:kns_hof_char = { is_alive = no } }
+			limit = {
+				OR = {
+					scope:kns_hof_char = { is_alive = no }
+					scope:kns_hof_char = { has_character_flag = kns_hof_freezing }
+				}
+			}
 			set_global_variable = kns_hof_title_dead_$SLOT$
 		}
 		else = {
@@ -241,7 +246,12 @@ kns_hof_snapshot_duel_slot_effect = {
 			}
 		}
 		if = {
-			limit = { scope:kns_hof_char = { is_alive = no } }
+			limit = {
+				OR = {
+					scope:kns_hof_char = { is_alive = no }
+					scope:kns_hof_char = { has_character_flag = kns_hof_freezing }
+				}
+			}
 			set_global_variable = kns_hof_duel_dead_$SLOT$
 		}
 		else = {
@@ -691,7 +701,12 @@ kns_hof_freeze_dead_title_effect = {
 			kns_hof_snapshot_title_effect = yes
 		}
 		else_if = {
-			limit = { scope:kns_hof_char = { is_alive = no } }
+			limit = {
+				OR = {
+					scope:kns_hof_char = { is_alive = no }
+					scope:kns_hof_char = { has_character_flag = kns_hof_freezing }
+				}
+			}
 			kns_hof_bind_next_title_effect = yes
 			kns_hof_snapshot_title_effect = yes
 		}
@@ -711,7 +726,12 @@ kns_hof_freeze_dead_duel_effect = {
 			kns_hof_snapshot_duel_effect = yes
 		}
 		else_if = {
-			limit = { scope:kns_hof_char = { is_alive = no } }
+			limit = {
+				OR = {
+					scope:kns_hof_char = { is_alive = no }
+					scope:kns_hof_char = { has_character_flag = kns_hof_freezing }
+				}
+			}
 			kns_hof_bind_next_duel_effect = yes
 			kns_hof_snapshot_duel_effect = yes
 		}
