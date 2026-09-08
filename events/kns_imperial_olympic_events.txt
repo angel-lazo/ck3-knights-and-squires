@@ -34,7 +34,7 @@ kns_imperial_olympic.0001 = {
 	}
 }
 
-# Cycle: every 2, 3, or 4 years
+# Cycle: every 1, 2, 3, or 4 years
 kns_imperial_olympic.0002 = {
 	type = character_event
 	title = kns_imperial_olympic.0002.t
@@ -45,6 +45,16 @@ kns_imperial_olympic.0002 = {
 	left_portrait = {
 		character = root
 		animation = personality_rational
+	}
+
+	option = {
+		name = kns_imperial_olympic.0002.d
+		set_variable = {
+			name = kns_olympic_interval_years
+			value = 1
+		}
+		custom_tooltip = kns_imperial_olympic_interval_1_tt
+		kns_olympic_continue_setup_or_manage_effect = { NEXT = kns_imperial_olympic.0006 }
 	}
 
 	option = {
@@ -302,7 +312,9 @@ kns_imperial_olympic.0020 = {
 
 	option = {
 		name = kns_imperial_olympic.0020.e
+		# Hidden from Manage. Remove always = no to restore Raise the lists now.
 		trigger = {
+			always = no
 			NOT = { has_character_flag = kns_imperial_olympic_host }
 			is_at_war = no
 			is_available_adult = yes

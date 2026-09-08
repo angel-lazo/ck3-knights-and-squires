@@ -2849,6 +2849,16 @@ kns_apply_olympic_knight_culture_modifier_effect = {
 		if = {
 			limit = {
 				has_variable = kns_olympic_interval_years
+				var:kns_olympic_interval_years = 1
+			}
+			add_character_modifier = {
+				modifier = kns_olympic_knight_culture_modifier
+				years = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = kns_olympic_interval_years
 				var:kns_olympic_interval_years = 2
 			}
 			add_character_modifier = {

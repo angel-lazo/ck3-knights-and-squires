@@ -98,11 +98,11 @@
  kns_funding_window_empty:0 "No knights in reach"
 
  kns_imperial_olympic_decision:0 "Hold Imperial Olympic Games"
- kns_imperial_olympic_decision_desc:0 "Found the Imperial Olympic Games as an institution of your empire or hegemony. You choose the bracket, how often they return (every 2, 3, or 4 years), the fund (1000–5000 gold), and the venue (capital, or any realm county). After that the games run on their own; use Manage Imperial Olympic Games to change the settings.\n\nUse #V Select Imperial Olympic Champions#! first to choose who represents your realm.\n\nThe victor takes five thousand prestige and 40% of the gold you funded. The host county's taxes rise for six months (up to +50% at a full purse). A richer fund also makes your knights more effective.\n\n#weak Player only. AI rulers will not use this decision.#!"
+ kns_imperial_olympic_decision_desc:0 "Found the Imperial Olympic Games as an institution of your empire or hegemony. You choose the bracket, how often they return (every 1, 2, 3, or 4 years), the fund (1000–5000 gold), and the venue (capital, or any realm county). After that the games run on their own; use Manage Imperial Olympic Games to change the settings.\n\nUse #V Select Imperial Olympic Champions#! first to choose who represents your realm.\n\nThe victor takes five thousand prestige and 40% of the gold you funded. The host county's taxes rise for six months (up to +50% at a full purse). A richer fund also makes your knights more effective.\n\n#weak Player only. AI rulers will not use this decision.#!"
  kns_imperial_olympic_decision_tooltip:0 "Found the Imperial Olympic Games"
  kns_imperial_olympic_decision_confirm:0 "Hold Games"
  kns_imperial_olympic_manage_decision:0 "Manage Imperial Olympic Games"
- kns_imperial_olympic_manage_decision_desc:0 "Change the cycle, purse, bracket, or venue of your Imperial Olympic Games. The lists still raise themselves when the cycle comes due. You may also raise them early if no bracket is running."
+ kns_imperial_olympic_manage_decision_desc:0 "Change the cycle, purse, bracket, or venue of your Imperial Olympic Games. The lists still raise themselves when the cycle comes due."
  kns_imperial_olympic_manage_decision_tooltip:0 "Change how the Imperial Olympic Games are held"
  kns_imperial_olympic_manage_decision_confirm:0 "Manage Games"
  kns_imperial_olympic_continue_decision:0 "Continue the Imperial Olympic Games"
