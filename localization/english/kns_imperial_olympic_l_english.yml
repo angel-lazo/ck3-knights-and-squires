@@ -108,7 +108,7 @@
  kns_imperial_olympic.0011.desc_none:0 "The imperial games were proclaimed, but no victor could be named."
 
  kns_imperial_olympic.0011.a:0 "I am victor"
- kns_imperial_olympic.0011.b:0 "So the lists decide"
+ kns_imperial_olympic.0011.b:0 "So be it"
  kns_imperial_olympic.0011.c:0 "A pity"
 
  kns_imperial_olympic.0012.t:0 "A Champion of the Games"
@@ -116,7 +116,7 @@
  kns_imperial_olympic.0012.desc:0 "The Imperial Olympic Games are closed. The last bout is done, and the heralds name [kns_olympic_winner.GetTitledFirstName] champion of the lists."
  kns_imperial_olympic.0012.desc_none:0 "Word of the imperial games has come, but no champion could be named."
  kns_imperial_olympic.0012.a:0 "The crown is mine"
- kns_imperial_olympic.0012.b:0 "So the lists decide"
+ kns_imperial_olympic.0012.b:0 "So be it"
  kns_imperial_olympic.0012.c:0 "A hollow proclamation"
 
  kns_imperial_olympic.0104.t:0 "Worn Arms"
@@ -149,7 +149,7 @@
  kns_imperial_olympic.0108.desc_lose:0 "Today's fighting is done. You have fallen to [kns_olympic_fake_opponent.GetTitledFirstName]. Your run in the lists is over.\n\nYour prowess: [ROOT.Char.MakeScope.Var('kns_olympic_display_my_prowess').GetValue|0]. [kns_olympic_fake_opponent.GetTitledFirstNamePossessive] prowess: [ROOT.Char.MakeScope.Var('kns_olympic_display_foe_prowess').GetValue|0]. The lists gave you a [ROOT.Char.MakeScope.Var('kns_olympic_fake_win_percent').GetValue|0]% chance to win."
  kns_imperial_olympic.0108.a:0 "I advance"
  kns_imperial_olympic.0108.a.tt:0 "You move on with the other victors of the day. The next round is fought tomorrow."
- kns_imperial_olympic.0108.b:0 "So the lists decide"
+ kns_imperial_olympic.0108.b:0 "So be it"
  kns_imperial_olympic.0108.b.tt:0 "You are out. The remaining rounds continue without you, one per day."
 
  kns_imperial_olympic_winner_toast:0 "Victor of the Imperial Games"
