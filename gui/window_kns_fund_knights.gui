@@ -29,6 +29,8 @@ window = {
 
 				button_close = {
 					onclick = "[GetScriptedGui('kns_close_funding_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					shortcut = "close_window"
+					visible = "[GetPlayer.MakeScope.Var('kns_funding_window_open').IsSet]"
 				}
 			}
 
