@@ -88,7 +88,7 @@
  kns_imperial_olympic.0032.a:0 "So it shall be"
 
  kns_imperial_olympic.0102.t:0 "The Finals"
- kns_imperial_olympic.0102.desc:0 "The last pairing of the Imperial Olympic Games is named. [kns_olympic_fighter_a.GetTitledFirstName] stands against [kns_olympic_fighter_b.GetTitledFirstName]. This bout is fought in the lists, to first blood, not to the death.\n\nYour prowess: [ROOT.MakeScope.Var('kns_olympic_display_my_prowess').GetValue|0]. [kns_olympic_fake_opponent.GetTitledFirstName]'s prowess: [ROOT.MakeScope.Var('kns_olympic_display_foe_prowess').GetValue|0]."
+ kns_imperial_olympic.0102.desc:0 "The last pairing of the Imperial Olympic Games is named. [kns_olympic_fighter_a.GetTitledFirstName] stands against [kns_olympic_fighter_b.GetTitledFirstName]. This bout is fought in the lists, to first blood, not to the death.\n\nYour prowess: [ROOT.Char.MakeScope.Var('kns_olympic_display_my_prowess').GetValue|0]. [kns_olympic_fake_opponent.GetTitledFirstNamePossessive] prowess: [ROOT.Char.MakeScope.Var('kns_olympic_display_foe_prowess').GetValue|0]."
  kns_imperial_olympic.0102.a:0 "Begin the bout"
  kns_imperial_olympic.0102.a.tt:0 "The Finals begin. First blood, not to the death."
 
@@ -145,8 +145,8 @@
  kns_imperial_olympic.0108.t_lose_round_5:0 "Lost the 5th Round"
  kns_imperial_olympic.0108.t_lose_quarter:0 "Lost the Quarter Finals"
  kns_imperial_olympic.0108.t_lose_semi:0 "Lost the Semi Finals"
- kns_imperial_olympic.0108.desc_win:0 "Today's fighting is done. You have overcome [kns_olympic_fake_opponent.GetTitledFirstName] and advance to the next round of the Imperial Olympic Games.\n\nYour prowess: [ROOT.MakeScope.Var('kns_olympic_display_my_prowess').GetValue|0]. [kns_olympic_fake_opponent.GetTitledFirstName]'s prowess: [ROOT.MakeScope.Var('kns_olympic_display_foe_prowess').GetValue|0]. The lists gave you a [ROOT.MakeScope.Var('kns_olympic_fake_win_percent').GetValue|0]% chance."
- kns_imperial_olympic.0108.desc_lose:0 "Today's fighting is done. You have fallen to [kns_olympic_fake_opponent.GetTitledFirstName]. Your run in the lists is over.\n\nYour prowess: [ROOT.MakeScope.Var('kns_olympic_display_my_prowess').GetValue|0]. [kns_olympic_fake_opponent.GetTitledFirstName]'s prowess: [ROOT.MakeScope.Var('kns_olympic_display_foe_prowess').GetValue|0]. The lists gave you a [ROOT.MakeScope.Var('kns_olympic_fake_win_percent').GetValue|0]% chance."
+ kns_imperial_olympic.0108.desc_win:0 "Today's fighting is done. You have overcome [kns_olympic_fake_opponent.GetTitledFirstName] and advance to the next round of the Imperial Olympic Games.\n\nYour prowess: [ROOT.Char.MakeScope.Var('kns_olympic_display_my_prowess').GetValue|0]. [kns_olympic_fake_opponent.GetTitledFirstNamePossessive] prowess: [ROOT.Char.MakeScope.Var('kns_olympic_display_foe_prowess').GetValue|0]. The lists gave you a [ROOT.Char.MakeScope.Var('kns_olympic_fake_win_percent').GetValue|0]% chance to win."
+ kns_imperial_olympic.0108.desc_lose:0 "Today's fighting is done. You have fallen to [kns_olympic_fake_opponent.GetTitledFirstName]. Your run in the lists is over.\n\nYour prowess: [ROOT.Char.MakeScope.Var('kns_olympic_display_my_prowess').GetValue|0]. [kns_olympic_fake_opponent.GetTitledFirstNamePossessive] prowess: [ROOT.Char.MakeScope.Var('kns_olympic_display_foe_prowess').GetValue|0]. The lists gave you a [ROOT.Char.MakeScope.Var('kns_olympic_fake_win_percent').GetValue|0]% chance to win."
  kns_imperial_olympic.0108.a:0 "I advance"
  kns_imperial_olympic.0108.a.tt:0 "You move on with the other victors of the day. The next round is fought tomorrow."
  kns_imperial_olympic.0108.b:0 "So the lists decide"
