@@ -1,0 +1,62 @@
+on_artifact_changed_owner = {
+	on_actions = {
+		kns_on_artifact_changed_owner
+	}
+}
+
+kns_on_artifact_changed_owner = {
+	effect = {
+		kns_ig_try_recover_if_kit_stolen_effect = yes
+	}
+}
+
+on_artifact_durability_low = {
+	on_actions = {
+		kns_on_artifact_durability_low
+	}
+}
+
+kns_on_artifact_durability_low = {
+	effect = {
+		every_character_artifact = {
+			limit = { exists = var:kns_ig_kit_kind }
+			kns_ig_restore_kit_durability_effect = yes
+		}
+	}
+}
+
+on_artifact_durability_very_low = {
+	on_actions = {
+		kns_on_artifact_durability_very_low
+	}
+}
+
+kns_on_artifact_durability_very_low = {
+	effect = {
+		kns_ig_try_restore_kit_if_stamped_effect = yes
+	}
+}
+
+on_artifact_broken_through_decay = {
+	on_actions = {
+		kns_on_artifact_broken_through_decay
+	}
+}
+
+kns_on_artifact_broken_through_decay = {
+	effect = {
+		kns_ig_try_restore_kit_if_stamped_effect = yes
+	}
+}
+
+on_artifact_broken_through_effect = {
+	on_actions = {
+		kns_on_artifact_broken_through_effect
+	}
+}
+
+kns_on_artifact_broken_through_effect = {
+	effect = {
+		kns_ig_try_restore_kit_if_stamped_effect = yes
+	}
+}

@@ -45,3 +45,8 @@ kns_olympic_host_county_modifier = {
 		display_mode = scaled
 	}
 }
+
+# Status only. Prowess comes from the gifted illustrious kit.
+kns_imperial_guard_modifier = {
+	icon = martial_positive
+}

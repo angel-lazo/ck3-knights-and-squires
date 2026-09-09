@@ -1,3 +1,6 @@
 gui/window_kns_fund_knights.gui = kns_fund_knights_window
 gui/window_kns_imperial_hof.gui = kns_imperial_hof_window
 gui/window_kns_olympic_champion_picker.gui = kns_olympic_champion_picker_window
+gui/window_kns_imperial_guard.gui = kns_imperial_guard_window
+gui/window_kns_imperial_guard_hire.gui = kns_imperial_guard_hire_window
+gui/window_kns_imperial_guard_attire.gui = kns_imperial_guard_attire_window

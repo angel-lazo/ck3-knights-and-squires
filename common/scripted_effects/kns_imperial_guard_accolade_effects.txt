@@ -1,0 +1,471 @@
+kns_ig_grant_accolade_unlocks_effect = {
+	set_variable = { name = marauder_attribute_unlock value = yes }
+	set_variable = { name = idealist_attribute_unlock value = yes }
+	set_variable = { name = charmer_attribute_unlock value = yes }
+	set_variable = { name = thug_attribute_unlock value = yes }
+	set_variable = { name = disciplinarian_attribute_unlock value = yes }
+	set_variable = { name = fanatic_attribute_unlock value = yes }
+	set_variable = { name = valiant_attribute_unlock value = yes }
+	set_variable = { name = stalwart_attribute_unlock value = yes }
+	set_variable = { name = scoundrel_attribute_unlock value = yes }
+	set_variable = { name = politicker_attribute_unlock value = yes }
+	set_variable = { name = tactician_attribute_unlock value = yes }
+	set_variable = { name = reeve_attribute_unlock value = yes }
+	set_variable = { name = manipulator_attribute_unlock value = yes }
+	set_variable = { name = mentor_attribute_unlock value = yes }
+	set_variable = { name = archer_attribute_unlock value = yes }
+	set_variable = { name = skirmisher_attribute_unlock value = yes }
+	set_variable = { name = pike_attribute_unlock value = yes }
+	set_variable = { name = outrider_attribute_unlock value = yes }
+	set_variable = { name = vanguard_attribute_unlock value = yes }
+	set_variable = { name = lancer_attribute_unlock value = yes }
+	set_variable = { name = crossbowmen_attribute_unlock value = yes }
+	set_variable = { name = besieger_attribute_unlock value = yes }
+	set_variable = { name = camelry_attribute_unlock value = yes }
+	set_variable = { name = elephantry_attribute_unlock value = yes }
+	set_variable = { name = horse_archer_attribute_unlock value = yes }
+	set_variable = { name = gunpowder_attribute_unlock value = yes }
+	set_variable = { name = huntsmaster_attribute_unlock value = yes }
+	set_variable = { name = master_of_revels_attribute_unlock value = yes }
+	set_knight_status = force
+}
+
+kns_ig_reassign_accolade_if_successor_is_effect = {
+	save_temporary_scope_as = kns_ig_acc_check
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					exists = accolade_successor
+					accolade_successor = $KNIGHT$
+				}
+				$KNIGHT$ = { is_successor_of_accolade = scope:kns_ig_acc_check }
+			}
+		}
+		if = {
+			limit = {
+				accolade_owner = {
+					any_knight = {
+						NOT = { this = $KNIGHT$ }
+						is_acclaimed = no
+						kns_is_imperial_guard_trigger = no
+					}
+				}
+			}
+			accolade_owner = {
+				random_knight = {
+					limit = {
+						NOT = { this = $KNIGHT$ }
+						is_acclaimed = no
+						kns_is_imperial_guard_trigger = no
+					}
+					save_temporary_scope_as = kns_ig_alt_succ
+				}
+			}
+			set_accolade_successor = scope:kns_ig_alt_succ
+		}
+		else_if = {
+			limit = { exists = acclaimed_knight }
+			set_accolade_successor = acclaimed_knight
+		}
+	}
+}
+
+# Create Accolade hides knights who are already an Accolade successor.
+kns_ig_clear_accolade_successor_status_effect = {
+	$EMPEROR$ = {
+		every_accolade = {
+			kns_ig_reassign_accolade_if_successor_is_effect = { KNIGHT = $KNIGHT$ }
+		}
+		every_vassal_or_below = {
+			every_accolade = {
+				kns_ig_reassign_accolade_if_successor_is_effect = { KNIGHT = $KNIGHT$ }
+			}
+		}
+	}
+	$KNIGHT$ = {
+		if = {
+			limit = {
+				exists = liege
+				NOT = { liege = $EMPEROR$ }
+			}
+			liege = {
+				every_accolade = {
+					kns_ig_reassign_accolade_if_successor_is_effect = { KNIGHT = $KNIGHT$ }
+				}
+			}
+		}
+	}
+}
+
+kns_ig_clear_all_imperial_guard_successors_effect = {
+	every_relation = {
+		type = kns_imperial_guard
+		limit = { is_alive = yes }
+		kns_ig_clear_accolade_successor_status_effect = {
+			KNIGHT = this
+			EMPEROR = prev
+		}
+	}
+}
+
+kns_ig_bind_accolade_effect = {
+	kns_ig_clear_all_imperial_guard_successors_effect = yes
+	kns_ig_clear_accolade_successor_status_effect = {
+		KNIGHT = $KNIGHT$
+		EMPEROR = this
+	}
+	set_variable = {
+		name = kns_ig_acc_name_target
+		value = $KNIGHT$
+	}
+	remove_variable = kns_ig_acc_rename_only
+	$KNIGHT$ = {
+		save_scope_as = kns_ig_named_knight
+		kns_ig_roll_accolade_name_picks_effect = yes
+	}
+	kns_close_imperial_guard_window_effect = yes
+	trigger_event = kns_ig_accolade.0001
+}
+
+kns_ig_rename_accolade_title_effect = {
+	set_variable = {
+		name = kns_ig_acc_name_target
+		value = $KNIGHT$
+	}
+	set_variable = {
+		name = kns_ig_acc_rename_only
+		value = 1
+	}
+	$KNIGHT$ = {
+		save_scope_as = kns_ig_named_knight
+		kns_ig_roll_accolade_name_picks_effect = yes
+	}
+	kns_close_imperial_guard_window_effect = yes
+	trigger_event = kns_ig_accolade.0001
+}
+
+kns_ig_commit_accolade_name_pick_effect = {
+	if = {
+		limit = {
+			exists = var:kns_ig_acc_name_target
+			var:kns_ig_acc_name_target = { exists = var:kns_ig_acc_pick_$SLOT$ }
+		}
+		var:kns_ig_acc_name_target = {
+			set_variable = {
+				name = kns_ig_acc_name_idx
+				value = var:kns_ig_acc_pick_$SLOT$
+			}
+			kns_ig_clear_accolade_name_picks_effect = yes
+		}
+		if = {
+			limit = { exists = var:kns_ig_acc_rename_only }
+			var:kns_ig_acc_name_target = {
+				kns_ig_name_kit_weapon_from_title_effect = yes
+				if = {
+					limit = { is_acclaimed = yes }
+					accolade = {
+						kns_ig_stamp_accolade_from_knight_effect = { KNIGHT = prev }
+					}
+				}
+			}
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = kns_ig_rename_toast
+				custom_tooltip = kns_ig_rename_toast.tt
+				left_icon = var:kns_ig_acc_name_target
+			}
+			remove_variable = kns_ig_acc_name_target
+			remove_variable = kns_ig_acc_rename_only
+			kns_open_imperial_guard_window_effect = yes
+		}
+		else = {
+			var:kns_ig_acc_name_target = {
+				kns_ig_give_accolade_title_nickname_effect = yes
+				kns_ig_grant_accolade_unlocks_effect = yes
+			}
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = kns_ig_bind_toast
+				custom_tooltip = kns_ig_bind_toast.tt
+				left_icon = var:kns_ig_acc_name_target
+			}
+			kns_ig_clear_accolade_successor_status_effect = {
+				KNIGHT = var:kns_ig_acc_name_target
+				EMPEROR = this
+			}
+			remove_variable = kns_ig_acc_name_target
+			open_view_data = {
+				view = create_accolade_view
+				data = this
+			}
+		}
+	}
+}
+
+kns_ig_abort_accolade_name_event_effect = {
+	if = {
+		limit = { exists = var:kns_ig_acc_name_target }
+		var:kns_ig_acc_name_target = {
+			kns_ig_clear_accolade_name_picks_effect = yes
+		}
+		remove_variable = kns_ig_acc_name_target
+	}
+	remove_variable = kns_ig_acc_rename_only
+	kns_open_imperial_guard_window_effect = yes
+}
+
+# kns_ig_weapon on the Accolade: 1 axe, 2 hammer, 3 sword, 4 spear, 5 mace
+kns_ig_stamp_accolade_from_knight_effect = {
+	if = {
+		limit = { $KNIGHT$ = { has_character_flag = kns_ig_post_axe } }
+		set_variable = { name = kns_ig_weapon value = 1 }
+	}
+	else_if = {
+		limit = { $KNIGHT$ = { has_character_flag = kns_ig_post_hammer } }
+		set_variable = { name = kns_ig_weapon value = 2 }
+	}
+	else_if = {
+		limit = { $KNIGHT$ = { has_character_flag = kns_ig_post_sword } }
+		set_variable = { name = kns_ig_weapon value = 3 }
+	}
+	else_if = {
+		limit = { $KNIGHT$ = { has_character_flag = kns_ig_post_spear } }
+		set_variable = { name = kns_ig_weapon value = 4 }
+	}
+	else_if = {
+		limit = { $KNIGHT$ = { has_character_flag = kns_ig_post_mace } }
+		set_variable = { name = kns_ig_weapon value = 5 }
+	}
+	if = {
+		limit = { $KNIGHT$ = { exists = var:kns_ig_acc_name_idx } }
+		set_variable = {
+			name = kns_ig_acc_name_idx
+			value = $KNIGHT$.var:kns_ig_acc_name_idx
+		}
+	}
+}
+
+kns_ig_copy_accolade_title_to_knight_effect = {
+	if = {
+		limit = { exists = var:kns_ig_acc_name_idx }
+		$KNIGHT$ = {
+			set_variable = {
+				name = kns_ig_acc_name_idx
+				value = prev.var:kns_ig_acc_name_idx
+			}
+			kns_ig_give_accolade_title_nickname_effect = yes
+		}
+	}
+}
+
+kns_ig_handoff_bound_accolade_effect = {
+	$OLD$ = {
+		if = {
+			limit = { is_acclaimed = yes }
+			if = {
+				limit = { exists = var:kns_ig_acc_name_idx }
+				$NEW$ = {
+					set_variable = {
+						name = kns_ig_acc_name_idx
+						value = $OLD$.var:kns_ig_acc_name_idx
+					}
+				}
+			}
+			accolade = {
+				kns_ig_stamp_accolade_from_knight_effect = { KNIGHT = $OLD$ }
+				set_accolade_successor = $NEW$
+			}
+		}
+	}
+}
+
+# Move the Accolade's current Acclaimed Knight to the replacement Guard.
+kns_ig_transfer_accolade_to_replacement_effect = {
+	$OLD$ = {
+		if = {
+			limit = { is_acclaimed = yes }
+			accolade = {
+				set_acclaimed_knight = $NEW$
+				if = {
+					limit = {
+						NOT = { acclaimed_knight = $NEW$ }
+					}
+					set_accolade_successor = $NEW$
+					remove_acclaimed_knight = yes
+				}
+			}
+		}
+	}
+}
+
+kns_ig_appoint_to_stamped_post_effect = {
+	if = {
+		limit = { var:kns_ig_weapon = 1 }
+		$EMPEROR$ = {
+			kns_appoint_imperial_guard_effect = {
+				KNIGHT = $KNIGHT$
+				EMPEROR = $EMPEROR$
+				WEAPON = axe
+			}
+		}
+	}
+	else_if = {
+		limit = { var:kns_ig_weapon = 2 }
+		$EMPEROR$ = {
+			kns_appoint_imperial_guard_effect = {
+				KNIGHT = $KNIGHT$
+				EMPEROR = $EMPEROR$
+				WEAPON = hammer
+			}
+		}
+	}
+	else_if = {
+		limit = { var:kns_ig_weapon = 3 }
+		$EMPEROR$ = {
+			kns_appoint_imperial_guard_effect = {
+				KNIGHT = $KNIGHT$
+				EMPEROR = $EMPEROR$
+				WEAPON = sword
+			}
+		}
+	}
+	else_if = {
+		limit = { var:kns_ig_weapon = 4 }
+		$EMPEROR$ = {
+			kns_appoint_imperial_guard_effect = {
+				KNIGHT = $KNIGHT$
+				EMPEROR = $EMPEROR$
+				WEAPON = spear
+			}
+		}
+	}
+	else_if = {
+		limit = { var:kns_ig_weapon = 5 }
+		$EMPEROR$ = {
+			kns_appoint_imperial_guard_effect = {
+				KNIGHT = $KNIGHT$
+				EMPEROR = $EMPEROR$
+				WEAPON = mace
+			}
+		}
+	}
+}
+
+kns_ig_dismiss_stamped_post_occupant_effect = {
+	$EMPEROR$ = {
+		if = {
+			limit = {
+				$ACCOLADE$ = { var:kns_ig_weapon = 1 }
+				exists = var:kns_ig_slot_axe
+				NOT = { var:kns_ig_slot_axe = $KEEP$ }
+			}
+			kns_dismiss_imperial_guard_effect = { KNIGHT = var:kns_ig_slot_axe }
+		}
+		else_if = {
+			limit = {
+				$ACCOLADE$ = { var:kns_ig_weapon = 2 }
+				exists = var:kns_ig_slot_hammer
+				NOT = { var:kns_ig_slot_hammer = $KEEP$ }
+			}
+			kns_dismiss_imperial_guard_effect = { KNIGHT = var:kns_ig_slot_hammer }
+		}
+		else_if = {
+			limit = {
+				$ACCOLADE$ = { var:kns_ig_weapon = 3 }
+				exists = var:kns_ig_slot_sword
+				NOT = { var:kns_ig_slot_sword = $KEEP$ }
+			}
+			kns_dismiss_imperial_guard_effect = { KNIGHT = var:kns_ig_slot_sword }
+		}
+		else_if = {
+			limit = {
+				$ACCOLADE$ = { var:kns_ig_weapon = 4 }
+				exists = var:kns_ig_slot_spear
+				NOT = { var:kns_ig_slot_spear = $KEEP$ }
+			}
+			kns_dismiss_imperial_guard_effect = { KNIGHT = var:kns_ig_slot_spear }
+		}
+		else_if = {
+			limit = {
+				$ACCOLADE$ = { var:kns_ig_weapon = 5 }
+				exists = var:kns_ig_slot_mace
+				NOT = { var:kns_ig_slot_mace = $KEEP$ }
+			}
+			kns_dismiss_imperial_guard_effect = { KNIGHT = var:kns_ig_slot_mace }
+		}
+	}
+}
+
+kns_ig_on_accolade_created_effect = {
+	if = {
+		limit = {
+			exists = acclaimed_knight
+			acclaimed_knight = {
+				kns_is_imperial_guard_trigger = yes
+			}
+		}
+		acclaimed_knight = {
+			save_scope_as = kns_ig_new_acclaimed
+			kns_ig_grant_accolade_unlocks_effect = yes
+			kns_ig_roll_accolade_title_effect = yes
+			kns_ig_give_accolade_title_nickname_effect = yes
+		}
+		kns_ig_stamp_accolade_from_knight_effect = { KNIGHT = scope:kns_ig_new_acclaimed }
+		if = {
+			limit = { accolade_rank < 3 }
+			add_glory = 600
+		}
+	}
+	accolade_owner ?= {
+		if = {
+			limit = { num_of_relation_kns_imperial_guard > 0 }
+			trigger_event = {
+				id = kns_ig_accolade.0002
+				days = 0
+			}
+		}
+	}
+}
+
+kns_ig_on_accolade_new_acclaimed_knight_effect = {
+	if = {
+		limit = {
+			exists = var:kns_ig_weapon
+			exists = scope:new_acclaimed_knight
+			accolade_owner ?= { kns_is_emperor_trigger = yes }
+		}
+		save_scope_as = kns_ig_acc
+		accolade_owner = { save_scope_as = kns_ig_emperor }
+		if = {
+			limit = {
+				scope:new_acclaimed_knight = {
+					kns_is_imperial_guard_of_trigger = { EMPEROR = scope:kns_ig_emperor }
+					kns_ig_knight_matches_accolade_post_trigger = { ACCOLADE = scope:kns_ig_acc }
+				}
+			}
+			kns_ig_copy_accolade_title_to_knight_effect = { KNIGHT = scope:new_acclaimed_knight }
+			scope:new_acclaimed_knight = {
+				kns_ig_grant_accolade_unlocks_effect = yes
+			}
+		}
+		else = {
+			kns_ig_dismiss_stamped_post_occupant_effect = {
+				EMPEROR = scope:kns_ig_emperor
+				ACCOLADE = scope:kns_ig_acc
+				KEEP = scope:new_acclaimed_knight
+			}
+			kns_ig_appoint_to_stamped_post_effect = {
+				EMPEROR = scope:kns_ig_emperor
+				KNIGHT = scope:new_acclaimed_knight
+			}
+			kns_ig_copy_accolade_title_to_knight_effect = { KNIGHT = scope:new_acclaimed_knight }
+		}
+		scope:kns_ig_emperor = {
+			if = {
+				limit = { exists = var:kns_imperial_guard_window_open }
+				kns_rebuild_imperial_guard_window_effect = yes
+			}
+		}
+	}
+}

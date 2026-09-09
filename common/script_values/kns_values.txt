@@ -16,6 +16,10 @@ kns_funding_monthly_cost = {
 	multiply = 0.5
 }
 
+kns_imperial_guard_kit_gold_value = 1500
+
+kns_imperial_guard_max_value = 2
+
 kns_prowess_needed_to_reach_30 = {
 	value = 30
 	subtract = prowess_no_portrait

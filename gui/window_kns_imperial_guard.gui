@@ -1,0 +1,1218 @@
+window = {
+	name = "kns_imperial_guard_window"
+	size = { 1780 1080 }
+	parentanchor = center
+	position = { 0 0 }
+	movable = yes
+	layer = top
+	allow_outside = yes
+	visible = "[And( GetPlayer.MakeScope.Var('kns_imperial_guard_window_open').IsSet, Not( Or( GetPlayer.MakeScope.Var('kns_ig_hire_window_open').IsSet, GetPlayer.MakeScope.Var('kns_ig_attire_window_open').IsSet ) ) )]"
+
+	using = Window_Background_Subwindow
+
+		vbox = {
+			margin = { 10 10 }
+			spacing = 8
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				spacing = 8
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_ig_window_title"
+					fontsize = 22
+				}
+
+				button_close = {
+					onclick = "[GetScriptedGui('kns_close_imperial_guard_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					shortcut = "close_window"
+					visible = "[And( GetPlayer.MakeScope.Var('kns_imperial_guard_window_open').IsSet, Not( Or( GetPlayer.MakeScope.Var('kns_ig_hire_window_open').IsSet, GetPlayer.MakeScope.Var('kns_ig_attire_window_open').IsSet ) ) )]"
+				}
+			}
+
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				background = {
+					using = Background_Area_Dark
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_ig_window_quota"
+					default_format = "#high"
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					text = "kns_ig_window_kit_cost"
+				}
+			}
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				spacing = 8
+
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							layoutpolicy_vertical = expanding
+							minimumsize = { 280 0 }
+							spacing = 4
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[Not( GetScriptedGui('kns_gui_ig_has_slot_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+								text = "kns_ig_window_unbound"
+								default_format = "#high"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_axe').Char]"
+								text = "[Character.Custom('KnsIgHallTitle')]"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 280 520 }
+								parentanchor = hcenter
+								allow_outside = yes
+
+								widget = {
+									size = { 100% 100% }
+									allow_outside = yes
+									alwaystransparent = yes
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_axe').Char]"
+
+									portrait_button = {
+										parentanchor = center
+										position = { -20 0 }
+										size = { 320 520 }
+										using = portrait_base
+										alwaystransparent = yes
+										effectname = "NoHighlight"
+										portrait_texture = "[Character.GetAnimatedPortrait('environment_body', 'kns_camera_ig_axe', 'throne_room_one_handed_passive_2', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+										mask = "gfx/portraits/portrait_mask_body.dds"
+									}
+								}
+
+								button = {
+									parentanchor = center
+									size = { 195 282 }
+									visible = "[Not( GetScriptedGui('kns_gui_ig_has_slot_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+									enabled = "[GetScriptedGui('kns_gui_ig_open_hire_axe').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									gfxtype = framedbuttongfx
+									effectname = "NoHighlight"
+									texture = "gfx/portraits/unknown_portraits/unknown_spouse.dds"
+									framesize = { 554 780 }
+									upframe = 1
+									overframe = 2
+									alpha = 0.8
+									tooltip = "kns_ig_window_vacant_tt"
+									onclick = "[GetScriptedGui('kns_gui_ig_open_hire_axe').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+									button_plus = {
+										parentanchor = center
+										alwaystransparent = yes
+									}
+								}
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_axe').Char]"
+								text = "[Character.GetShortUINameNoTooltip]"
+								default_format = "#high"
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 4
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+								hbox = {
+									layoutpolicy_horizontal = expanding
+									spacing = 4
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_customize"
+										onclick = "[GetScriptedGui('kns_gui_ig_open_attire_axe').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									}
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_dismiss"
+										visible = "[GetScriptedGui('kns_gui_ig_dismiss_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_dismiss_axe').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_dismiss_axe').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									}
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_replace"
+										visible = "[GetScriptedGui('kns_gui_ig_open_replace_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_open_replace_axe').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_open_replace_axe').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_replace_tt"
+									}
+								}
+
+								widget = {
+									layoutpolicy_horizontal = expanding
+									size = { 0 36 }
+
+									button_standard = {
+										parentanchor = center
+										size = { 100% 100% }
+										text = "kns_ig_window_bind"
+										visible = "[GetScriptedGui('kns_gui_ig_bind_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_bind_axe').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_bind_axe').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_bind_tt"
+									}
+
+									button_standard = {
+										parentanchor = center
+										size = { 100% 100% }
+										text = "kns_ig_window_rename"
+										visible = "[GetScriptedGui('kns_gui_ig_rename_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_rename_axe').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_rename_axe').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_rename_tt"
+									}
+								}
+
+								hbox = {
+									layoutpolicy_horizontal = expanding
+									minimumsize = { 0 72 }
+									spacing = 8
+
+									widget = {
+										layoutpolicy_horizontal = expanding
+									}
+
+								widget = {
+									size = { 72 72 }
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_axe').Char]"
+
+									widget = {
+										size = { 72 72 }
+										visible = "[Character.MakeScope.Var('kns_ig_kit_weapon').IsSet]"
+										datacontext = "[Character.MakeScope.Var('kns_ig_kit_weapon').Artifact]"
+
+										button = {
+											size = { 72 72 }
+											onclick = "[ToggleGameViewData( 'artifact_details', Artifact.GetID )]"
+											tooltipwidget = {
+												artifact_tooltip = {}
+											}
+
+											icon = {
+												size = { 100% 100% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "gfx/interface/icons/artifact/artifact_bg.dds"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+
+											icon = {
+												size = { 90% 90% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "[Artifact.GetIcon]"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+										}
+									}
+								}
+
+								widget = {
+									size = { 72 72 }
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_axe').Char]"
+
+									widget = {
+										size = { 72 72 }
+										visible = "[Character.MakeScope.Var('kns_ig_kit_armor').IsSet]"
+										datacontext = "[Character.MakeScope.Var('kns_ig_kit_armor').Artifact]"
+
+										button = {
+											size = { 72 72 }
+											onclick = "[ToggleGameViewData( 'artifact_details', Artifact.GetID )]"
+											tooltipwidget = {
+												artifact_tooltip = {}
+											}
+
+											icon = {
+												size = { 100% 100% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "gfx/interface/icons/artifact/artifact_bg.dds"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+
+											icon = {
+												size = { 90% 90% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "[Artifact.GetIcon]"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+										}
+									}
+								}
+
+									widget = {
+										layoutpolicy_horizontal = expanding
+									}
+								}
+							}
+						}
+
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							layoutpolicy_vertical = expanding
+							minimumsize = { 280 0 }
+							spacing = 4
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[Not( GetScriptedGui('kns_gui_ig_has_slot_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+								text = "kns_ig_window_unbound"
+								default_format = "#high"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_hammer').Char]"
+								text = "[Character.Custom('KnsIgHallTitle')]"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 280 520 }
+								parentanchor = hcenter
+								allow_outside = yes
+
+								widget = {
+									size = { 100% 100% }
+									allow_outside = yes
+									alwaystransparent = yes
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_hammer').Char]"
+
+									portrait_button = {
+										parentanchor = center
+										position = { -48 0 }
+										size = { 320 520 }
+										using = portrait_base
+										alwaystransparent = yes
+										effectname = "NoHighlight"
+										portrait_texture = "[Character.GetAnimatedPortrait('environment_body', 'kns_camera_ig_hammer', 'aggressive_hammer', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+										mask = "gfx/portraits/portrait_mask_body.dds"
+									}
+								}
+
+								button = {
+									parentanchor = center
+									size = { 195 282 }
+									visible = "[Not( GetScriptedGui('kns_gui_ig_has_slot_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+									enabled = "[GetScriptedGui('kns_gui_ig_open_hire_hammer').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									gfxtype = framedbuttongfx
+									effectname = "NoHighlight"
+									texture = "gfx/portraits/unknown_portraits/unknown_spouse.dds"
+									framesize = { 554 780 }
+									upframe = 1
+									overframe = 2
+									alpha = 0.8
+									tooltip = "kns_ig_window_vacant_tt"
+									onclick = "[GetScriptedGui('kns_gui_ig_open_hire_hammer').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+									button_plus = {
+										parentanchor = center
+										alwaystransparent = yes
+									}
+								}
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_hammer').Char]"
+								text = "[Character.GetShortUINameNoTooltip]"
+								default_format = "#high"
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 4
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+								hbox = {
+									layoutpolicy_horizontal = expanding
+									spacing = 4
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_customize"
+										onclick = "[GetScriptedGui('kns_gui_ig_open_attire_hammer').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									}
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_dismiss"
+										visible = "[GetScriptedGui('kns_gui_ig_dismiss_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_dismiss_hammer').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_dismiss_hammer').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									}
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_replace"
+										visible = "[GetScriptedGui('kns_gui_ig_open_replace_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_open_replace_hammer').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_open_replace_hammer').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_replace_tt"
+									}
+								}
+
+								widget = {
+									layoutpolicy_horizontal = expanding
+									size = { 0 36 }
+
+									button_standard = {
+										parentanchor = center
+										size = { 100% 100% }
+										text = "kns_ig_window_bind"
+										visible = "[GetScriptedGui('kns_gui_ig_bind_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_bind_hammer').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_bind_hammer').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_bind_tt"
+									}
+
+									button_standard = {
+										parentanchor = center
+										size = { 100% 100% }
+										text = "kns_ig_window_rename"
+										visible = "[GetScriptedGui('kns_gui_ig_rename_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_rename_hammer').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_rename_hammer').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_rename_tt"
+									}
+								}
+
+								hbox = {
+									layoutpolicy_horizontal = expanding
+									minimumsize = { 0 72 }
+									spacing = 8
+
+									widget = {
+										layoutpolicy_horizontal = expanding
+									}
+
+								widget = {
+									size = { 72 72 }
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_hammer').Char]"
+
+									widget = {
+										size = { 72 72 }
+										visible = "[Character.MakeScope.Var('kns_ig_kit_weapon').IsSet]"
+										datacontext = "[Character.MakeScope.Var('kns_ig_kit_weapon').Artifact]"
+
+										button = {
+											size = { 72 72 }
+											onclick = "[ToggleGameViewData( 'artifact_details', Artifact.GetID )]"
+											tooltipwidget = {
+												artifact_tooltip = {}
+											}
+
+											icon = {
+												size = { 100% 100% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "gfx/interface/icons/artifact/artifact_bg.dds"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+
+											icon = {
+												size = { 90% 90% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "[Artifact.GetIcon]"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+										}
+									}
+								}
+
+								widget = {
+									size = { 72 72 }
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_hammer').Char]"
+
+									widget = {
+										size = { 72 72 }
+										visible = "[Character.MakeScope.Var('kns_ig_kit_armor').IsSet]"
+										datacontext = "[Character.MakeScope.Var('kns_ig_kit_armor').Artifact]"
+
+										button = {
+											size = { 72 72 }
+											onclick = "[ToggleGameViewData( 'artifact_details', Artifact.GetID )]"
+											tooltipwidget = {
+												artifact_tooltip = {}
+											}
+
+											icon = {
+												size = { 100% 100% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "gfx/interface/icons/artifact/artifact_bg.dds"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+
+											icon = {
+												size = { 90% 90% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "[Artifact.GetIcon]"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+										}
+									}
+								}
+
+									widget = {
+										layoutpolicy_horizontal = expanding
+									}
+								}
+							}
+						}
+
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							layoutpolicy_vertical = expanding
+							minimumsize = { 280 0 }
+							spacing = 4
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[Not( GetScriptedGui('kns_gui_ig_has_slot_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+								text = "kns_ig_window_unbound"
+								default_format = "#high"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_sword').Char]"
+								text = "[Character.Custom('KnsIgHallTitle')]"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 280 520 }
+								parentanchor = hcenter
+								allow_outside = yes
+
+								widget = {
+									size = { 100% 100% }
+									allow_outside = yes
+									alwaystransparent = yes
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_sword').Char]"
+
+									portrait_button = {
+										parentanchor = center
+										position = { -44 0 }
+										size = { 320 520 }
+										using = portrait_base
+										alwaystransparent = yes
+										effectname = "NoHighlight"
+										portrait_texture = "[Character.GetAnimatedPortrait('environment_body', 'kns_camera_ig_sword', 'chudan_no_kamae', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+										mask = "gfx/portraits/portrait_mask_body.dds"
+									}
+								}
+
+								button = {
+									parentanchor = center
+									size = { 195 282 }
+									visible = "[Not( GetScriptedGui('kns_gui_ig_has_slot_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+									enabled = "[GetScriptedGui('kns_gui_ig_open_hire_sword').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									gfxtype = framedbuttongfx
+									effectname = "NoHighlight"
+									texture = "gfx/portraits/unknown_portraits/unknown_spouse.dds"
+									framesize = { 554 780 }
+									upframe = 1
+									overframe = 2
+									alpha = 0.8
+									tooltip = "kns_ig_window_vacant_tt"
+									onclick = "[GetScriptedGui('kns_gui_ig_open_hire_sword').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+									button_plus = {
+										parentanchor = center
+										alwaystransparent = yes
+									}
+								}
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_sword').Char]"
+								text = "[Character.GetShortUINameNoTooltip]"
+								default_format = "#high"
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 4
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+								hbox = {
+									layoutpolicy_horizontal = expanding
+									spacing = 4
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_customize"
+										onclick = "[GetScriptedGui('kns_gui_ig_open_attire_sword').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									}
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_dismiss"
+										visible = "[GetScriptedGui('kns_gui_ig_dismiss_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_dismiss_sword').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_dismiss_sword').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									}
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_replace"
+										visible = "[GetScriptedGui('kns_gui_ig_open_replace_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_open_replace_sword').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_open_replace_sword').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_replace_tt"
+									}
+								}
+
+								widget = {
+									layoutpolicy_horizontal = expanding
+									size = { 0 36 }
+
+									button_standard = {
+										parentanchor = center
+										size = { 100% 100% }
+										text = "kns_ig_window_bind"
+										visible = "[GetScriptedGui('kns_gui_ig_bind_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_bind_sword').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_bind_sword').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_bind_tt"
+									}
+
+									button_standard = {
+										parentanchor = center
+										size = { 100% 100% }
+										text = "kns_ig_window_rename"
+										visible = "[GetScriptedGui('kns_gui_ig_rename_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_rename_sword').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_rename_sword').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_rename_tt"
+									}
+								}
+
+								hbox = {
+									layoutpolicy_horizontal = expanding
+									minimumsize = { 0 72 }
+									spacing = 8
+
+									widget = {
+										layoutpolicy_horizontal = expanding
+									}
+
+								widget = {
+									size = { 72 72 }
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_sword').Char]"
+
+									widget = {
+										size = { 72 72 }
+										visible = "[Character.MakeScope.Var('kns_ig_kit_weapon').IsSet]"
+										datacontext = "[Character.MakeScope.Var('kns_ig_kit_weapon').Artifact]"
+
+										button = {
+											size = { 72 72 }
+											onclick = "[ToggleGameViewData( 'artifact_details', Artifact.GetID )]"
+											tooltipwidget = {
+												artifact_tooltip = {}
+											}
+
+											icon = {
+												size = { 100% 100% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "gfx/interface/icons/artifact/artifact_bg.dds"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+
+											icon = {
+												size = { 90% 90% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "[Artifact.GetIcon]"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+										}
+									}
+								}
+
+								widget = {
+									size = { 72 72 }
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_sword').Char]"
+
+									widget = {
+										size = { 72 72 }
+										visible = "[Character.MakeScope.Var('kns_ig_kit_armor').IsSet]"
+										datacontext = "[Character.MakeScope.Var('kns_ig_kit_armor').Artifact]"
+
+										button = {
+											size = { 72 72 }
+											onclick = "[ToggleGameViewData( 'artifact_details', Artifact.GetID )]"
+											tooltipwidget = {
+												artifact_tooltip = {}
+											}
+
+											icon = {
+												size = { 100% 100% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "gfx/interface/icons/artifact/artifact_bg.dds"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+
+											icon = {
+												size = { 90% 90% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "[Artifact.GetIcon]"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+										}
+									}
+								}
+
+									widget = {
+										layoutpolicy_horizontal = expanding
+									}
+								}
+							}
+						}
+
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							layoutpolicy_vertical = expanding
+							minimumsize = { 280 0 }
+							spacing = 4
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[Not( GetScriptedGui('kns_gui_ig_has_slot_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+								text = "kns_ig_window_unbound"
+								default_format = "#high"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_spear').Char]"
+								text = "[Character.Custom('KnsIgHallTitle')]"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 280 520 }
+								parentanchor = hcenter
+								allow_outside = yes
+
+								widget = {
+									size = { 100% 100% }
+									allow_outside = yes
+									alwaystransparent = yes
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_spear').Char]"
+
+									portrait_button = {
+										parentanchor = center
+										position = { -68 0 }
+										size = { 320 520 }
+										using = portrait_base
+										alwaystransparent = yes
+										effectname = "NoHighlight"
+										portrait_texture = "[Character.GetAnimatedPortrait('environment_body', 'kns_camera_ig_spear', 'relaxed_spear', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+										mask = "gfx/portraits/portrait_mask_body.dds"
+									}
+								}
+
+								button = {
+									parentanchor = center
+									size = { 195 282 }
+									visible = "[Not( GetScriptedGui('kns_gui_ig_has_slot_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+									enabled = "[GetScriptedGui('kns_gui_ig_open_hire_spear').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									gfxtype = framedbuttongfx
+									effectname = "NoHighlight"
+									texture = "gfx/portraits/unknown_portraits/unknown_spouse.dds"
+									framesize = { 554 780 }
+									upframe = 1
+									overframe = 2
+									alpha = 0.8
+									tooltip = "kns_ig_window_vacant_tt"
+									onclick = "[GetScriptedGui('kns_gui_ig_open_hire_spear').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+									button_plus = {
+										parentanchor = center
+										alwaystransparent = yes
+									}
+								}
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_spear').Char]"
+								text = "[Character.GetShortUINameNoTooltip]"
+								default_format = "#high"
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 4
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+								hbox = {
+									layoutpolicy_horizontal = expanding
+									spacing = 4
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_customize"
+										onclick = "[GetScriptedGui('kns_gui_ig_open_attire_spear').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									}
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_dismiss"
+										visible = "[GetScriptedGui('kns_gui_ig_dismiss_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_dismiss_spear').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_dismiss_spear').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									}
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_replace"
+										visible = "[GetScriptedGui('kns_gui_ig_open_replace_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_open_replace_spear').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_open_replace_spear').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_replace_tt"
+									}
+								}
+
+								widget = {
+									layoutpolicy_horizontal = expanding
+									size = { 0 36 }
+
+									button_standard = {
+										parentanchor = center
+										size = { 100% 100% }
+										text = "kns_ig_window_bind"
+										visible = "[GetScriptedGui('kns_gui_ig_bind_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_bind_spear').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_bind_spear').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_bind_tt"
+									}
+
+									button_standard = {
+										parentanchor = center
+										size = { 100% 100% }
+										text = "kns_ig_window_rename"
+										visible = "[GetScriptedGui('kns_gui_ig_rename_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_rename_spear').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_rename_spear').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_rename_tt"
+									}
+								}
+
+								hbox = {
+									layoutpolicy_horizontal = expanding
+									minimumsize = { 0 72 }
+									spacing = 8
+
+									widget = {
+										layoutpolicy_horizontal = expanding
+									}
+
+								widget = {
+									size = { 72 72 }
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_spear').Char]"
+
+									widget = {
+										size = { 72 72 }
+										visible = "[Character.MakeScope.Var('kns_ig_kit_weapon').IsSet]"
+										datacontext = "[Character.MakeScope.Var('kns_ig_kit_weapon').Artifact]"
+
+										button = {
+											size = { 72 72 }
+											onclick = "[ToggleGameViewData( 'artifact_details', Artifact.GetID )]"
+											tooltipwidget = {
+												artifact_tooltip = {}
+											}
+
+											icon = {
+												size = { 100% 100% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "gfx/interface/icons/artifact/artifact_bg.dds"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+
+											icon = {
+												size = { 90% 90% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "[Artifact.GetIcon]"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+										}
+									}
+								}
+
+								widget = {
+									size = { 72 72 }
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_spear').Char]"
+
+									widget = {
+										size = { 72 72 }
+										visible = "[Character.MakeScope.Var('kns_ig_kit_armor').IsSet]"
+										datacontext = "[Character.MakeScope.Var('kns_ig_kit_armor').Artifact]"
+
+										button = {
+											size = { 72 72 }
+											onclick = "[ToggleGameViewData( 'artifact_details', Artifact.GetID )]"
+											tooltipwidget = {
+												artifact_tooltip = {}
+											}
+
+											icon = {
+												size = { 100% 100% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "gfx/interface/icons/artifact/artifact_bg.dds"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+
+											icon = {
+												size = { 90% 90% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "[Artifact.GetIcon]"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+										}
+									}
+								}
+
+									widget = {
+										layoutpolicy_horizontal = expanding
+									}
+								}
+							}
+						}
+
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							layoutpolicy_vertical = expanding
+							minimumsize = { 280 0 }
+							spacing = 4
+							background = {
+								using = Background_Area_Dark
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[Not( GetScriptedGui('kns_gui_ig_has_slot_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+								text = "kns_ig_window_unbound"
+								default_format = "#high"
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_mace').Char]"
+								text = "[Character.Custom('KnsIgHallTitle')]"
+								default_format = "#high"
+							}
+
+							widget = {
+								size = { 280 520 }
+								parentanchor = hcenter
+								allow_outside = yes
+
+								widget = {
+									size = { 100% 100% }
+									allow_outside = yes
+									alwaystransparent = yes
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_mace').Char]"
+
+									portrait_button = {
+										parentanchor = center
+										position = { -32 0 }
+										size = { 320 520 }
+										using = portrait_base
+										alwaystransparent = yes
+										effectname = "NoHighlight"
+										portrait_texture = "[Character.GetAnimatedPortrait('environment_body', 'kns_camera_ig_mace', 'menacing', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+										mask = "gfx/portraits/portrait_mask_body.dds"
+									}
+								}
+
+								button = {
+									parentanchor = center
+									size = { 195 282 }
+									visible = "[Not( GetScriptedGui('kns_gui_ig_has_slot_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+									enabled = "[GetScriptedGui('kns_gui_ig_open_hire_mace').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									gfxtype = framedbuttongfx
+									effectname = "NoHighlight"
+									texture = "gfx/portraits/unknown_portraits/unknown_spouse.dds"
+									framesize = { 554 780 }
+									upframe = 1
+									overframe = 2
+									alpha = 0.8
+									tooltip = "kns_ig_window_vacant_tt"
+									onclick = "[GetScriptedGui('kns_gui_ig_open_hire_mace').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+									button_plus = {
+										parentanchor = center
+										alwaystransparent = yes
+									}
+								}
+							}
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_mace').Char]"
+								text = "[Character.GetShortUINameNoTooltip]"
+								default_format = "#high"
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 4
+								visible = "[GetScriptedGui('kns_gui_ig_has_slot_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+								hbox = {
+									layoutpolicy_horizontal = expanding
+									spacing = 4
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_customize"
+										onclick = "[GetScriptedGui('kns_gui_ig_open_attire_mace').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									}
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_dismiss"
+										visible = "[GetScriptedGui('kns_gui_ig_dismiss_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_dismiss_mace').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_dismiss_mace').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									}
+
+									button_standard = {
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_replace"
+										visible = "[GetScriptedGui('kns_gui_ig_open_replace_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_open_replace_mace').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_open_replace_mace').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_replace_tt"
+									}
+								}
+
+								widget = {
+									layoutpolicy_horizontal = expanding
+									size = { 0 36 }
+
+									button_standard = {
+										parentanchor = center
+										size = { 100% 100% }
+										text = "kns_ig_window_bind"
+										visible = "[GetScriptedGui('kns_gui_ig_bind_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_bind_mace').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_bind_mace').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_bind_tt"
+									}
+
+									button_standard = {
+										parentanchor = center
+										size = { 100% 100% }
+										text = "kns_ig_window_rename"
+										visible = "[GetScriptedGui('kns_gui_ig_rename_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_rename_mace').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_rename_mace').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										tooltip = "kns_ig_window_rename_tt"
+									}
+								}
+
+								hbox = {
+									layoutpolicy_horizontal = expanding
+									minimumsize = { 0 72 }
+									spacing = 8
+
+									widget = {
+										layoutpolicy_horizontal = expanding
+									}
+
+								widget = {
+									size = { 72 72 }
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_mace').Char]"
+
+									widget = {
+										size = { 72 72 }
+										visible = "[Character.MakeScope.Var('kns_ig_kit_weapon').IsSet]"
+										datacontext = "[Character.MakeScope.Var('kns_ig_kit_weapon').Artifact]"
+
+										button = {
+											size = { 72 72 }
+											onclick = "[ToggleGameViewData( 'artifact_details', Artifact.GetID )]"
+											tooltipwidget = {
+												artifact_tooltip = {}
+											}
+
+											icon = {
+												size = { 100% 100% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "gfx/interface/icons/artifact/artifact_bg.dds"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+
+											icon = {
+												size = { 90% 90% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "[Artifact.GetIcon]"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+										}
+									}
+								}
+
+								widget = {
+									size = { 72 72 }
+									visible = "[GetScriptedGui('kns_gui_ig_has_slot_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_mace').Char]"
+
+									widget = {
+										size = { 72 72 }
+										visible = "[Character.MakeScope.Var('kns_ig_kit_armor').IsSet]"
+										datacontext = "[Character.MakeScope.Var('kns_ig_kit_armor').Artifact]"
+
+										button = {
+											size = { 72 72 }
+											onclick = "[ToggleGameViewData( 'artifact_details', Artifact.GetID )]"
+											tooltipwidget = {
+												artifact_tooltip = {}
+											}
+
+											icon = {
+												size = { 100% 100% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "gfx/interface/icons/artifact/artifact_bg.dds"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+
+											icon = {
+												size = { 90% 90% }
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "[Artifact.GetIcon]"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = { 240 240 }
+											}
+										}
+									}
+								}
+
+									widget = {
+										layoutpolicy_horizontal = expanding
+									}
+								}
+							}
+						}
+			}
+		}
+}

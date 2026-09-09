@@ -1,0 +1,176 @@
+namespace = kns_ig_kit
+
+# Christian AI holder without vice returns the imperial kit.
+kns_ig_kit.0001 = {
+	type = character_event
+	title = kns_ig_kit.0001.t
+	desc = kns_ig_kit.0001.desc
+	theme = martial
+	override_background = { reference = throne_room }
+
+	left_portrait = {
+		character = scope:kns_ig_guard
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:kns_ig_holder
+		animation = shame
+	}
+
+	trigger = {
+		exists = scope:kns_ig_guard
+		exists = scope:kns_ig_holder
+		scope:kns_ig_guard = { is_alive = yes }
+		scope:kns_ig_holder = { is_alive = yes }
+	}
+
+	immediate = {
+		kns_ig_return_stolen_kit_to_guard_effect = {
+			GUARD = scope:kns_ig_guard
+			HOLDER = scope:kns_ig_holder
+		}
+		scope:kns_ig_guard = {
+			create_character_memory = {
+				type = kns_ig_kit_returned
+				participants = {
+					holder = scope:kns_ig_holder
+				}
+			}
+			kns_ig_give_accolade_title_nickname_effect = yes
+		}
+		kns_ig_clear_kit_recovery_lock_effect = { GUARD = scope:kns_ig_guard }
+	}
+
+	option = {
+		name = kns_ig_kit.0001.a
+	}
+}
+
+# Vice or non-Christian holder: Guard fights to the death for weapon and armor.
+kns_ig_kit.0002 = {
+	type = character_event
+	window = duel_event
+	title = kns_ig_kit.0002.t
+	desc = kns_ig_kit.0002.desc
+	theme = martial
+
+	left_portrait = {
+		character = scope:kns_ig_guard
+		animation = rage
+	}
+	right_portrait = {
+		character = scope:kns_ig_holder
+		animation = anger
+	}
+
+	trigger = {
+		exists = scope:kns_ig_guard
+		exists = scope:kns_ig_holder
+		scope:kns_ig_guard = { is_alive = yes }
+		scope:kns_ig_holder = { is_alive = yes }
+	}
+
+	immediate = {
+		single_combat_apply_default_shirtlessness_effect = {
+			ATTACKER = scope:kns_ig_guard
+			DEFENDER = scope:kns_ig_holder
+		}
+	}
+
+	option = {
+		name = kns_ig_kit.0002.a
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = scope:kns_ig_guard
+			SC_ATTACKER = scope:kns_ig_guard
+			SC_DEFENDER = scope:kns_ig_holder
+			FATALITY = always
+			FIXED = no
+			LOCALE = courtyard
+			OUTPUT_EVENT = kns_ig_kit.0003
+			INVALIDATION_EVENT = kns_ig_kit.0004
+		}
+	}
+}
+
+# Lethal recovery outcome.
+kns_ig_kit.0003 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { exists = scope:sc_attacker }
+			scope:sc_attacker = { save_scope_as = kns_ig_guard }
+		}
+		if = {
+			limit = { exists = scope:sc_defender }
+			scope:sc_defender = { save_scope_as = kns_ig_holder }
+		}
+		if = {
+			limit = {
+				exists = scope:sc_attacker
+				exists = scope:sc_defender
+			}
+			single_combat_clean_shirtlessness_effect = {
+				ATTACKER = scope:sc_attacker
+				DEFENDER = scope:sc_defender
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:sc_victor
+				exists = scope:kns_ig_guard
+				scope:sc_victor = scope:kns_ig_guard
+				scope:kns_ig_guard = { is_alive = yes }
+			}
+			if = {
+				limit = { exists = scope:kns_ig_holder }
+				kns_ig_return_stolen_kit_to_guard_effect = {
+					GUARD = scope:kns_ig_guard
+					HOLDER = scope:kns_ig_holder
+				}
+			}
+			scope:kns_ig_guard = {
+				create_character_memory = {
+					type = kns_ig_kit_reclaimed
+					participants = {
+						holder = scope:kns_ig_holder
+					}
+				}
+				kns_ig_give_accolade_title_nickname_effect = yes
+			}
+		}
+		else_if = {
+			limit = { exists = scope:kns_ig_guard }
+			scope:kns_ig_guard = {
+				create_character_memory = {
+					type = kns_ig_kit_lost
+					participants = {
+						holder = scope:kns_ig_holder
+					}
+				}
+			}
+		}
+		if = {
+			limit = { exists = scope:kns_ig_guard }
+			kns_ig_clear_kit_recovery_lock_effect = { GUARD = scope:kns_ig_guard }
+		}
+	}
+}
+
+# Duel could not start.
+kns_ig_kit.0004 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { exists = scope:kns_ig_guard }
+			kns_ig_clear_kit_recovery_lock_effect = { GUARD = scope:kns_ig_guard }
+		}
+		else_if = {
+			limit = { exists = scope:sc_attacker }
+			kns_ig_clear_kit_recovery_lock_effect = { GUARD = scope:sc_attacker }
+		}
+	}
+}

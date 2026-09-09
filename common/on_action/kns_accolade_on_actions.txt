@@ -1,0 +1,23 @@
+on_accolade_created = {
+	on_actions = {
+		kns_on_accolade_created
+	}
+}
+
+kns_on_accolade_created = {
+	effect = {
+		kns_ig_on_accolade_created_effect = yes
+	}
+}
+
+on_accolade_new_acclaimed_knight = {
+	on_actions = {
+		kns_on_accolade_new_acclaimed_knight
+	}
+}
+
+kns_on_accolade_new_acclaimed_knight = {
+	effect = {
+		kns_ig_on_accolade_new_acclaimed_knight_effect = yes
+	}
+}

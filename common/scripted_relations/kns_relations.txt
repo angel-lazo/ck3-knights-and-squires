@@ -9,3 +9,15 @@ kns_knight = {
 	special_guest = no
 	title_grant_target = no
 }
+
+kns_imperial_guard = {
+	corresponding = kns_imperial_guard_lord
+	special_guest = no
+	title_grant_target = no
+}
+
+kns_imperial_guard_lord = {
+	corresponding = kns_imperial_guard
+	special_guest = no
+	title_grant_target = no
+}

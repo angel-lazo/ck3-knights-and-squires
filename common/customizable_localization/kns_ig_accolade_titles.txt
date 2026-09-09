@@ -1,0 +1,8790 @@
+KnsIgHallTitle = {
+	type = character
+	random_valid = no
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 1
+		}
+		localization_key = kns_ig_acc_axe_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 2
+		}
+		localization_key = kns_ig_acc_axe_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 3
+		}
+		localization_key = kns_ig_acc_axe_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 4
+		}
+		localization_key = kns_ig_acc_axe_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 5
+		}
+		localization_key = kns_ig_acc_axe_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 6
+		}
+		localization_key = kns_ig_acc_axe_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 7
+		}
+		localization_key = kns_ig_acc_axe_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 8
+		}
+		localization_key = kns_ig_acc_axe_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 9
+		}
+		localization_key = kns_ig_acc_axe_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 10
+		}
+		localization_key = kns_ig_acc_axe_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 11
+		}
+		localization_key = kns_ig_acc_axe_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 12
+		}
+		localization_key = kns_ig_acc_axe_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 13
+		}
+		localization_key = kns_ig_acc_axe_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 14
+		}
+		localization_key = kns_ig_acc_axe_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 15
+		}
+		localization_key = kns_ig_acc_axe_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 16
+		}
+		localization_key = kns_ig_acc_axe_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 17
+		}
+		localization_key = kns_ig_acc_axe_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 18
+		}
+		localization_key = kns_ig_acc_axe_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 19
+		}
+		localization_key = kns_ig_acc_axe_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 20
+		}
+		localization_key = kns_ig_acc_axe_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 21
+		}
+		localization_key = kns_ig_acc_axe_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 22
+		}
+		localization_key = kns_ig_acc_axe_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 23
+		}
+		localization_key = kns_ig_acc_axe_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 24
+		}
+		localization_key = kns_ig_acc_axe_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 25
+		}
+		localization_key = kns_ig_acc_axe_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 26
+		}
+		localization_key = kns_ig_acc_axe_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 27
+		}
+		localization_key = kns_ig_acc_axe_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 28
+		}
+		localization_key = kns_ig_acc_axe_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 29
+		}
+		localization_key = kns_ig_acc_axe_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 30
+		}
+		localization_key = kns_ig_acc_axe_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 31
+		}
+		localization_key = kns_ig_acc_axe_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 32
+		}
+		localization_key = kns_ig_acc_axe_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 33
+		}
+		localization_key = kns_ig_acc_axe_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 34
+		}
+		localization_key = kns_ig_acc_axe_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 35
+		}
+		localization_key = kns_ig_acc_axe_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 36
+		}
+		localization_key = kns_ig_acc_axe_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 37
+		}
+		localization_key = kns_ig_acc_axe_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 38
+		}
+		localization_key = kns_ig_acc_axe_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 39
+		}
+		localization_key = kns_ig_acc_axe_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 40
+		}
+		localization_key = kns_ig_acc_axe_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 41
+		}
+		localization_key = kns_ig_acc_axe_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 42
+		}
+		localization_key = kns_ig_acc_axe_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 43
+		}
+		localization_key = kns_ig_acc_axe_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 44
+		}
+		localization_key = kns_ig_acc_axe_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 45
+		}
+		localization_key = kns_ig_acc_axe_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 46
+		}
+		localization_key = kns_ig_acc_axe_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 47
+		}
+		localization_key = kns_ig_acc_axe_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 48
+		}
+		localization_key = kns_ig_acc_axe_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 49
+		}
+		localization_key = kns_ig_acc_axe_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_name_idx = 50
+		}
+		localization_key = kns_ig_acc_axe_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 1
+		}
+		localization_key = kns_ig_acc_hammer_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 2
+		}
+		localization_key = kns_ig_acc_hammer_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 3
+		}
+		localization_key = kns_ig_acc_hammer_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 4
+		}
+		localization_key = kns_ig_acc_hammer_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 5
+		}
+		localization_key = kns_ig_acc_hammer_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 6
+		}
+		localization_key = kns_ig_acc_hammer_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 7
+		}
+		localization_key = kns_ig_acc_hammer_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 8
+		}
+		localization_key = kns_ig_acc_hammer_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 9
+		}
+		localization_key = kns_ig_acc_hammer_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 10
+		}
+		localization_key = kns_ig_acc_hammer_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 11
+		}
+		localization_key = kns_ig_acc_hammer_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 12
+		}
+		localization_key = kns_ig_acc_hammer_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 13
+		}
+		localization_key = kns_ig_acc_hammer_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 14
+		}
+		localization_key = kns_ig_acc_hammer_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 15
+		}
+		localization_key = kns_ig_acc_hammer_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 16
+		}
+		localization_key = kns_ig_acc_hammer_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 17
+		}
+		localization_key = kns_ig_acc_hammer_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 18
+		}
+		localization_key = kns_ig_acc_hammer_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 19
+		}
+		localization_key = kns_ig_acc_hammer_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 20
+		}
+		localization_key = kns_ig_acc_hammer_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 21
+		}
+		localization_key = kns_ig_acc_hammer_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 22
+		}
+		localization_key = kns_ig_acc_hammer_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 23
+		}
+		localization_key = kns_ig_acc_hammer_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 24
+		}
+		localization_key = kns_ig_acc_hammer_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 25
+		}
+		localization_key = kns_ig_acc_hammer_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 26
+		}
+		localization_key = kns_ig_acc_hammer_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 27
+		}
+		localization_key = kns_ig_acc_hammer_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 28
+		}
+		localization_key = kns_ig_acc_hammer_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 29
+		}
+		localization_key = kns_ig_acc_hammer_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 30
+		}
+		localization_key = kns_ig_acc_hammer_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 31
+		}
+		localization_key = kns_ig_acc_hammer_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 32
+		}
+		localization_key = kns_ig_acc_hammer_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 33
+		}
+		localization_key = kns_ig_acc_hammer_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 34
+		}
+		localization_key = kns_ig_acc_hammer_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 35
+		}
+		localization_key = kns_ig_acc_hammer_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 36
+		}
+		localization_key = kns_ig_acc_hammer_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 37
+		}
+		localization_key = kns_ig_acc_hammer_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 38
+		}
+		localization_key = kns_ig_acc_hammer_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 39
+		}
+		localization_key = kns_ig_acc_hammer_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 40
+		}
+		localization_key = kns_ig_acc_hammer_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 41
+		}
+		localization_key = kns_ig_acc_hammer_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 42
+		}
+		localization_key = kns_ig_acc_hammer_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 43
+		}
+		localization_key = kns_ig_acc_hammer_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 44
+		}
+		localization_key = kns_ig_acc_hammer_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 45
+		}
+		localization_key = kns_ig_acc_hammer_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 46
+		}
+		localization_key = kns_ig_acc_hammer_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 47
+		}
+		localization_key = kns_ig_acc_hammer_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 48
+		}
+		localization_key = kns_ig_acc_hammer_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 49
+		}
+		localization_key = kns_ig_acc_hammer_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_name_idx = 50
+		}
+		localization_key = kns_ig_acc_hammer_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 1
+		}
+		localization_key = kns_ig_acc_sword_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 2
+		}
+		localization_key = kns_ig_acc_sword_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 3
+		}
+		localization_key = kns_ig_acc_sword_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 4
+		}
+		localization_key = kns_ig_acc_sword_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 5
+		}
+		localization_key = kns_ig_acc_sword_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 6
+		}
+		localization_key = kns_ig_acc_sword_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 7
+		}
+		localization_key = kns_ig_acc_sword_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 8
+		}
+		localization_key = kns_ig_acc_sword_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 9
+		}
+		localization_key = kns_ig_acc_sword_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 10
+		}
+		localization_key = kns_ig_acc_sword_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 11
+		}
+		localization_key = kns_ig_acc_sword_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 12
+		}
+		localization_key = kns_ig_acc_sword_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 13
+		}
+		localization_key = kns_ig_acc_sword_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 14
+		}
+		localization_key = kns_ig_acc_sword_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 15
+		}
+		localization_key = kns_ig_acc_sword_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 16
+		}
+		localization_key = kns_ig_acc_sword_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 17
+		}
+		localization_key = kns_ig_acc_sword_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 18
+		}
+		localization_key = kns_ig_acc_sword_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 19
+		}
+		localization_key = kns_ig_acc_sword_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 20
+		}
+		localization_key = kns_ig_acc_sword_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 21
+		}
+		localization_key = kns_ig_acc_sword_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 22
+		}
+		localization_key = kns_ig_acc_sword_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 23
+		}
+		localization_key = kns_ig_acc_sword_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 24
+		}
+		localization_key = kns_ig_acc_sword_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 25
+		}
+		localization_key = kns_ig_acc_sword_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 26
+		}
+		localization_key = kns_ig_acc_sword_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 27
+		}
+		localization_key = kns_ig_acc_sword_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 28
+		}
+		localization_key = kns_ig_acc_sword_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 29
+		}
+		localization_key = kns_ig_acc_sword_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 30
+		}
+		localization_key = kns_ig_acc_sword_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 31
+		}
+		localization_key = kns_ig_acc_sword_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 32
+		}
+		localization_key = kns_ig_acc_sword_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 33
+		}
+		localization_key = kns_ig_acc_sword_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 34
+		}
+		localization_key = kns_ig_acc_sword_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 35
+		}
+		localization_key = kns_ig_acc_sword_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 36
+		}
+		localization_key = kns_ig_acc_sword_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 37
+		}
+		localization_key = kns_ig_acc_sword_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 38
+		}
+		localization_key = kns_ig_acc_sword_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 39
+		}
+		localization_key = kns_ig_acc_sword_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 40
+		}
+		localization_key = kns_ig_acc_sword_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 41
+		}
+		localization_key = kns_ig_acc_sword_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 42
+		}
+		localization_key = kns_ig_acc_sword_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 43
+		}
+		localization_key = kns_ig_acc_sword_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 44
+		}
+		localization_key = kns_ig_acc_sword_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 45
+		}
+		localization_key = kns_ig_acc_sword_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 46
+		}
+		localization_key = kns_ig_acc_sword_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 47
+		}
+		localization_key = kns_ig_acc_sword_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 48
+		}
+		localization_key = kns_ig_acc_sword_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 49
+		}
+		localization_key = kns_ig_acc_sword_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_name_idx = 50
+		}
+		localization_key = kns_ig_acc_sword_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 1
+		}
+		localization_key = kns_ig_acc_spear_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 2
+		}
+		localization_key = kns_ig_acc_spear_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 3
+		}
+		localization_key = kns_ig_acc_spear_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 4
+		}
+		localization_key = kns_ig_acc_spear_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 5
+		}
+		localization_key = kns_ig_acc_spear_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 6
+		}
+		localization_key = kns_ig_acc_spear_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 7
+		}
+		localization_key = kns_ig_acc_spear_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 8
+		}
+		localization_key = kns_ig_acc_spear_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 9
+		}
+		localization_key = kns_ig_acc_spear_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 10
+		}
+		localization_key = kns_ig_acc_spear_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 11
+		}
+		localization_key = kns_ig_acc_spear_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 12
+		}
+		localization_key = kns_ig_acc_spear_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 13
+		}
+		localization_key = kns_ig_acc_spear_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 14
+		}
+		localization_key = kns_ig_acc_spear_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 15
+		}
+		localization_key = kns_ig_acc_spear_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 16
+		}
+		localization_key = kns_ig_acc_spear_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 17
+		}
+		localization_key = kns_ig_acc_spear_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 18
+		}
+		localization_key = kns_ig_acc_spear_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 19
+		}
+		localization_key = kns_ig_acc_spear_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 20
+		}
+		localization_key = kns_ig_acc_spear_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 21
+		}
+		localization_key = kns_ig_acc_spear_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 22
+		}
+		localization_key = kns_ig_acc_spear_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 23
+		}
+		localization_key = kns_ig_acc_spear_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 24
+		}
+		localization_key = kns_ig_acc_spear_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 25
+		}
+		localization_key = kns_ig_acc_spear_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 26
+		}
+		localization_key = kns_ig_acc_spear_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 27
+		}
+		localization_key = kns_ig_acc_spear_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 28
+		}
+		localization_key = kns_ig_acc_spear_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 29
+		}
+		localization_key = kns_ig_acc_spear_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 30
+		}
+		localization_key = kns_ig_acc_spear_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 31
+		}
+		localization_key = kns_ig_acc_spear_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 32
+		}
+		localization_key = kns_ig_acc_spear_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 33
+		}
+		localization_key = kns_ig_acc_spear_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 34
+		}
+		localization_key = kns_ig_acc_spear_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 35
+		}
+		localization_key = kns_ig_acc_spear_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 36
+		}
+		localization_key = kns_ig_acc_spear_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 37
+		}
+		localization_key = kns_ig_acc_spear_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 38
+		}
+		localization_key = kns_ig_acc_spear_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 39
+		}
+		localization_key = kns_ig_acc_spear_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 40
+		}
+		localization_key = kns_ig_acc_spear_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 41
+		}
+		localization_key = kns_ig_acc_spear_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 42
+		}
+		localization_key = kns_ig_acc_spear_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 43
+		}
+		localization_key = kns_ig_acc_spear_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 44
+		}
+		localization_key = kns_ig_acc_spear_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 45
+		}
+		localization_key = kns_ig_acc_spear_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 46
+		}
+		localization_key = kns_ig_acc_spear_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 47
+		}
+		localization_key = kns_ig_acc_spear_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 48
+		}
+		localization_key = kns_ig_acc_spear_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 49
+		}
+		localization_key = kns_ig_acc_spear_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_name_idx = 50
+		}
+		localization_key = kns_ig_acc_spear_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 1
+		}
+		localization_key = kns_ig_acc_mace_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 2
+		}
+		localization_key = kns_ig_acc_mace_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 3
+		}
+		localization_key = kns_ig_acc_mace_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 4
+		}
+		localization_key = kns_ig_acc_mace_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 5
+		}
+		localization_key = kns_ig_acc_mace_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 6
+		}
+		localization_key = kns_ig_acc_mace_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 7
+		}
+		localization_key = kns_ig_acc_mace_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 8
+		}
+		localization_key = kns_ig_acc_mace_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 9
+		}
+		localization_key = kns_ig_acc_mace_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 10
+		}
+		localization_key = kns_ig_acc_mace_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 11
+		}
+		localization_key = kns_ig_acc_mace_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 12
+		}
+		localization_key = kns_ig_acc_mace_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 13
+		}
+		localization_key = kns_ig_acc_mace_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 14
+		}
+		localization_key = kns_ig_acc_mace_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 15
+		}
+		localization_key = kns_ig_acc_mace_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 16
+		}
+		localization_key = kns_ig_acc_mace_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 17
+		}
+		localization_key = kns_ig_acc_mace_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 18
+		}
+		localization_key = kns_ig_acc_mace_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 19
+		}
+		localization_key = kns_ig_acc_mace_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 20
+		}
+		localization_key = kns_ig_acc_mace_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 21
+		}
+		localization_key = kns_ig_acc_mace_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 22
+		}
+		localization_key = kns_ig_acc_mace_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 23
+		}
+		localization_key = kns_ig_acc_mace_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 24
+		}
+		localization_key = kns_ig_acc_mace_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 25
+		}
+		localization_key = kns_ig_acc_mace_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 26
+		}
+		localization_key = kns_ig_acc_mace_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 27
+		}
+		localization_key = kns_ig_acc_mace_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 28
+		}
+		localization_key = kns_ig_acc_mace_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 29
+		}
+		localization_key = kns_ig_acc_mace_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 30
+		}
+		localization_key = kns_ig_acc_mace_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 31
+		}
+		localization_key = kns_ig_acc_mace_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 32
+		}
+		localization_key = kns_ig_acc_mace_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 33
+		}
+		localization_key = kns_ig_acc_mace_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 34
+		}
+		localization_key = kns_ig_acc_mace_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 35
+		}
+		localization_key = kns_ig_acc_mace_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 36
+		}
+		localization_key = kns_ig_acc_mace_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 37
+		}
+		localization_key = kns_ig_acc_mace_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 38
+		}
+		localization_key = kns_ig_acc_mace_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 39
+		}
+		localization_key = kns_ig_acc_mace_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 40
+		}
+		localization_key = kns_ig_acc_mace_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 41
+		}
+		localization_key = kns_ig_acc_mace_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 42
+		}
+		localization_key = kns_ig_acc_mace_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 43
+		}
+		localization_key = kns_ig_acc_mace_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 44
+		}
+		localization_key = kns_ig_acc_mace_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 45
+		}
+		localization_key = kns_ig_acc_mace_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 46
+		}
+		localization_key = kns_ig_acc_mace_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 47
+		}
+		localization_key = kns_ig_acc_mace_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 48
+		}
+		localization_key = kns_ig_acc_mace_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 49
+		}
+		localization_key = kns_ig_acc_mace_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_name_idx = 50
+		}
+		localization_key = kns_ig_acc_mace_50
+	}
+	text = {
+		localization_key = kns_ig_hall_title_fallback
+	}
+}
+
+KnsIgAccPick1 = {
+	type = character
+	random_valid = no
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 1
+		}
+		localization_key = kns_ig_acc_axe_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 2
+		}
+		localization_key = kns_ig_acc_axe_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 3
+		}
+		localization_key = kns_ig_acc_axe_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 4
+		}
+		localization_key = kns_ig_acc_axe_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 5
+		}
+		localization_key = kns_ig_acc_axe_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 6
+		}
+		localization_key = kns_ig_acc_axe_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 7
+		}
+		localization_key = kns_ig_acc_axe_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 8
+		}
+		localization_key = kns_ig_acc_axe_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 9
+		}
+		localization_key = kns_ig_acc_axe_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 10
+		}
+		localization_key = kns_ig_acc_axe_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 11
+		}
+		localization_key = kns_ig_acc_axe_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 12
+		}
+		localization_key = kns_ig_acc_axe_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 13
+		}
+		localization_key = kns_ig_acc_axe_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 14
+		}
+		localization_key = kns_ig_acc_axe_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 15
+		}
+		localization_key = kns_ig_acc_axe_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 16
+		}
+		localization_key = kns_ig_acc_axe_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 17
+		}
+		localization_key = kns_ig_acc_axe_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 18
+		}
+		localization_key = kns_ig_acc_axe_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 19
+		}
+		localization_key = kns_ig_acc_axe_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 20
+		}
+		localization_key = kns_ig_acc_axe_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 21
+		}
+		localization_key = kns_ig_acc_axe_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 22
+		}
+		localization_key = kns_ig_acc_axe_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 23
+		}
+		localization_key = kns_ig_acc_axe_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 24
+		}
+		localization_key = kns_ig_acc_axe_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 25
+		}
+		localization_key = kns_ig_acc_axe_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 26
+		}
+		localization_key = kns_ig_acc_axe_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 27
+		}
+		localization_key = kns_ig_acc_axe_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 28
+		}
+		localization_key = kns_ig_acc_axe_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 29
+		}
+		localization_key = kns_ig_acc_axe_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 30
+		}
+		localization_key = kns_ig_acc_axe_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 31
+		}
+		localization_key = kns_ig_acc_axe_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 32
+		}
+		localization_key = kns_ig_acc_axe_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 33
+		}
+		localization_key = kns_ig_acc_axe_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 34
+		}
+		localization_key = kns_ig_acc_axe_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 35
+		}
+		localization_key = kns_ig_acc_axe_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 36
+		}
+		localization_key = kns_ig_acc_axe_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 37
+		}
+		localization_key = kns_ig_acc_axe_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 38
+		}
+		localization_key = kns_ig_acc_axe_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 39
+		}
+		localization_key = kns_ig_acc_axe_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 40
+		}
+		localization_key = kns_ig_acc_axe_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 41
+		}
+		localization_key = kns_ig_acc_axe_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 42
+		}
+		localization_key = kns_ig_acc_axe_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 43
+		}
+		localization_key = kns_ig_acc_axe_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 44
+		}
+		localization_key = kns_ig_acc_axe_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 45
+		}
+		localization_key = kns_ig_acc_axe_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 46
+		}
+		localization_key = kns_ig_acc_axe_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 47
+		}
+		localization_key = kns_ig_acc_axe_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 48
+		}
+		localization_key = kns_ig_acc_axe_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 49
+		}
+		localization_key = kns_ig_acc_axe_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_1 = 50
+		}
+		localization_key = kns_ig_acc_axe_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 1
+		}
+		localization_key = kns_ig_acc_hammer_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 2
+		}
+		localization_key = kns_ig_acc_hammer_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 3
+		}
+		localization_key = kns_ig_acc_hammer_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 4
+		}
+		localization_key = kns_ig_acc_hammer_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 5
+		}
+		localization_key = kns_ig_acc_hammer_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 6
+		}
+		localization_key = kns_ig_acc_hammer_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 7
+		}
+		localization_key = kns_ig_acc_hammer_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 8
+		}
+		localization_key = kns_ig_acc_hammer_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 9
+		}
+		localization_key = kns_ig_acc_hammer_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 10
+		}
+		localization_key = kns_ig_acc_hammer_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 11
+		}
+		localization_key = kns_ig_acc_hammer_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 12
+		}
+		localization_key = kns_ig_acc_hammer_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 13
+		}
+		localization_key = kns_ig_acc_hammer_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 14
+		}
+		localization_key = kns_ig_acc_hammer_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 15
+		}
+		localization_key = kns_ig_acc_hammer_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 16
+		}
+		localization_key = kns_ig_acc_hammer_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 17
+		}
+		localization_key = kns_ig_acc_hammer_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 18
+		}
+		localization_key = kns_ig_acc_hammer_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 19
+		}
+		localization_key = kns_ig_acc_hammer_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 20
+		}
+		localization_key = kns_ig_acc_hammer_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 21
+		}
+		localization_key = kns_ig_acc_hammer_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 22
+		}
+		localization_key = kns_ig_acc_hammer_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 23
+		}
+		localization_key = kns_ig_acc_hammer_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 24
+		}
+		localization_key = kns_ig_acc_hammer_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 25
+		}
+		localization_key = kns_ig_acc_hammer_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 26
+		}
+		localization_key = kns_ig_acc_hammer_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 27
+		}
+		localization_key = kns_ig_acc_hammer_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 28
+		}
+		localization_key = kns_ig_acc_hammer_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 29
+		}
+		localization_key = kns_ig_acc_hammer_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 30
+		}
+		localization_key = kns_ig_acc_hammer_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 31
+		}
+		localization_key = kns_ig_acc_hammer_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 32
+		}
+		localization_key = kns_ig_acc_hammer_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 33
+		}
+		localization_key = kns_ig_acc_hammer_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 34
+		}
+		localization_key = kns_ig_acc_hammer_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 35
+		}
+		localization_key = kns_ig_acc_hammer_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 36
+		}
+		localization_key = kns_ig_acc_hammer_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 37
+		}
+		localization_key = kns_ig_acc_hammer_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 38
+		}
+		localization_key = kns_ig_acc_hammer_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 39
+		}
+		localization_key = kns_ig_acc_hammer_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 40
+		}
+		localization_key = kns_ig_acc_hammer_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 41
+		}
+		localization_key = kns_ig_acc_hammer_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 42
+		}
+		localization_key = kns_ig_acc_hammer_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 43
+		}
+		localization_key = kns_ig_acc_hammer_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 44
+		}
+		localization_key = kns_ig_acc_hammer_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 45
+		}
+		localization_key = kns_ig_acc_hammer_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 46
+		}
+		localization_key = kns_ig_acc_hammer_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 47
+		}
+		localization_key = kns_ig_acc_hammer_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 48
+		}
+		localization_key = kns_ig_acc_hammer_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 49
+		}
+		localization_key = kns_ig_acc_hammer_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_1 = 50
+		}
+		localization_key = kns_ig_acc_hammer_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 1
+		}
+		localization_key = kns_ig_acc_sword_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 2
+		}
+		localization_key = kns_ig_acc_sword_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 3
+		}
+		localization_key = kns_ig_acc_sword_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 4
+		}
+		localization_key = kns_ig_acc_sword_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 5
+		}
+		localization_key = kns_ig_acc_sword_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 6
+		}
+		localization_key = kns_ig_acc_sword_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 7
+		}
+		localization_key = kns_ig_acc_sword_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 8
+		}
+		localization_key = kns_ig_acc_sword_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 9
+		}
+		localization_key = kns_ig_acc_sword_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 10
+		}
+		localization_key = kns_ig_acc_sword_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 11
+		}
+		localization_key = kns_ig_acc_sword_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 12
+		}
+		localization_key = kns_ig_acc_sword_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 13
+		}
+		localization_key = kns_ig_acc_sword_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 14
+		}
+		localization_key = kns_ig_acc_sword_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 15
+		}
+		localization_key = kns_ig_acc_sword_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 16
+		}
+		localization_key = kns_ig_acc_sword_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 17
+		}
+		localization_key = kns_ig_acc_sword_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 18
+		}
+		localization_key = kns_ig_acc_sword_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 19
+		}
+		localization_key = kns_ig_acc_sword_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 20
+		}
+		localization_key = kns_ig_acc_sword_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 21
+		}
+		localization_key = kns_ig_acc_sword_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 22
+		}
+		localization_key = kns_ig_acc_sword_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 23
+		}
+		localization_key = kns_ig_acc_sword_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 24
+		}
+		localization_key = kns_ig_acc_sword_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 25
+		}
+		localization_key = kns_ig_acc_sword_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 26
+		}
+		localization_key = kns_ig_acc_sword_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 27
+		}
+		localization_key = kns_ig_acc_sword_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 28
+		}
+		localization_key = kns_ig_acc_sword_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 29
+		}
+		localization_key = kns_ig_acc_sword_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 30
+		}
+		localization_key = kns_ig_acc_sword_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 31
+		}
+		localization_key = kns_ig_acc_sword_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 32
+		}
+		localization_key = kns_ig_acc_sword_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 33
+		}
+		localization_key = kns_ig_acc_sword_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 34
+		}
+		localization_key = kns_ig_acc_sword_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 35
+		}
+		localization_key = kns_ig_acc_sword_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 36
+		}
+		localization_key = kns_ig_acc_sword_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 37
+		}
+		localization_key = kns_ig_acc_sword_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 38
+		}
+		localization_key = kns_ig_acc_sword_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 39
+		}
+		localization_key = kns_ig_acc_sword_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 40
+		}
+		localization_key = kns_ig_acc_sword_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 41
+		}
+		localization_key = kns_ig_acc_sword_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 42
+		}
+		localization_key = kns_ig_acc_sword_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 43
+		}
+		localization_key = kns_ig_acc_sword_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 44
+		}
+		localization_key = kns_ig_acc_sword_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 45
+		}
+		localization_key = kns_ig_acc_sword_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 46
+		}
+		localization_key = kns_ig_acc_sword_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 47
+		}
+		localization_key = kns_ig_acc_sword_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 48
+		}
+		localization_key = kns_ig_acc_sword_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 49
+		}
+		localization_key = kns_ig_acc_sword_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_1 = 50
+		}
+		localization_key = kns_ig_acc_sword_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 1
+		}
+		localization_key = kns_ig_acc_spear_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 2
+		}
+		localization_key = kns_ig_acc_spear_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 3
+		}
+		localization_key = kns_ig_acc_spear_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 4
+		}
+		localization_key = kns_ig_acc_spear_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 5
+		}
+		localization_key = kns_ig_acc_spear_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 6
+		}
+		localization_key = kns_ig_acc_spear_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 7
+		}
+		localization_key = kns_ig_acc_spear_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 8
+		}
+		localization_key = kns_ig_acc_spear_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 9
+		}
+		localization_key = kns_ig_acc_spear_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 10
+		}
+		localization_key = kns_ig_acc_spear_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 11
+		}
+		localization_key = kns_ig_acc_spear_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 12
+		}
+		localization_key = kns_ig_acc_spear_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 13
+		}
+		localization_key = kns_ig_acc_spear_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 14
+		}
+		localization_key = kns_ig_acc_spear_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 15
+		}
+		localization_key = kns_ig_acc_spear_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 16
+		}
+		localization_key = kns_ig_acc_spear_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 17
+		}
+		localization_key = kns_ig_acc_spear_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 18
+		}
+		localization_key = kns_ig_acc_spear_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 19
+		}
+		localization_key = kns_ig_acc_spear_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 20
+		}
+		localization_key = kns_ig_acc_spear_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 21
+		}
+		localization_key = kns_ig_acc_spear_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 22
+		}
+		localization_key = kns_ig_acc_spear_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 23
+		}
+		localization_key = kns_ig_acc_spear_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 24
+		}
+		localization_key = kns_ig_acc_spear_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 25
+		}
+		localization_key = kns_ig_acc_spear_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 26
+		}
+		localization_key = kns_ig_acc_spear_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 27
+		}
+		localization_key = kns_ig_acc_spear_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 28
+		}
+		localization_key = kns_ig_acc_spear_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 29
+		}
+		localization_key = kns_ig_acc_spear_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 30
+		}
+		localization_key = kns_ig_acc_spear_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 31
+		}
+		localization_key = kns_ig_acc_spear_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 32
+		}
+		localization_key = kns_ig_acc_spear_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 33
+		}
+		localization_key = kns_ig_acc_spear_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 34
+		}
+		localization_key = kns_ig_acc_spear_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 35
+		}
+		localization_key = kns_ig_acc_spear_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 36
+		}
+		localization_key = kns_ig_acc_spear_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 37
+		}
+		localization_key = kns_ig_acc_spear_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 38
+		}
+		localization_key = kns_ig_acc_spear_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 39
+		}
+		localization_key = kns_ig_acc_spear_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 40
+		}
+		localization_key = kns_ig_acc_spear_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 41
+		}
+		localization_key = kns_ig_acc_spear_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 42
+		}
+		localization_key = kns_ig_acc_spear_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 43
+		}
+		localization_key = kns_ig_acc_spear_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 44
+		}
+		localization_key = kns_ig_acc_spear_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 45
+		}
+		localization_key = kns_ig_acc_spear_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 46
+		}
+		localization_key = kns_ig_acc_spear_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 47
+		}
+		localization_key = kns_ig_acc_spear_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 48
+		}
+		localization_key = kns_ig_acc_spear_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 49
+		}
+		localization_key = kns_ig_acc_spear_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_1 = 50
+		}
+		localization_key = kns_ig_acc_spear_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 1
+		}
+		localization_key = kns_ig_acc_mace_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 2
+		}
+		localization_key = kns_ig_acc_mace_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 3
+		}
+		localization_key = kns_ig_acc_mace_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 4
+		}
+		localization_key = kns_ig_acc_mace_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 5
+		}
+		localization_key = kns_ig_acc_mace_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 6
+		}
+		localization_key = kns_ig_acc_mace_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 7
+		}
+		localization_key = kns_ig_acc_mace_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 8
+		}
+		localization_key = kns_ig_acc_mace_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 9
+		}
+		localization_key = kns_ig_acc_mace_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 10
+		}
+		localization_key = kns_ig_acc_mace_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 11
+		}
+		localization_key = kns_ig_acc_mace_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 12
+		}
+		localization_key = kns_ig_acc_mace_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 13
+		}
+		localization_key = kns_ig_acc_mace_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 14
+		}
+		localization_key = kns_ig_acc_mace_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 15
+		}
+		localization_key = kns_ig_acc_mace_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 16
+		}
+		localization_key = kns_ig_acc_mace_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 17
+		}
+		localization_key = kns_ig_acc_mace_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 18
+		}
+		localization_key = kns_ig_acc_mace_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 19
+		}
+		localization_key = kns_ig_acc_mace_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 20
+		}
+		localization_key = kns_ig_acc_mace_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 21
+		}
+		localization_key = kns_ig_acc_mace_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 22
+		}
+		localization_key = kns_ig_acc_mace_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 23
+		}
+		localization_key = kns_ig_acc_mace_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 24
+		}
+		localization_key = kns_ig_acc_mace_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 25
+		}
+		localization_key = kns_ig_acc_mace_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 26
+		}
+		localization_key = kns_ig_acc_mace_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 27
+		}
+		localization_key = kns_ig_acc_mace_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 28
+		}
+		localization_key = kns_ig_acc_mace_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 29
+		}
+		localization_key = kns_ig_acc_mace_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 30
+		}
+		localization_key = kns_ig_acc_mace_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 31
+		}
+		localization_key = kns_ig_acc_mace_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 32
+		}
+		localization_key = kns_ig_acc_mace_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 33
+		}
+		localization_key = kns_ig_acc_mace_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 34
+		}
+		localization_key = kns_ig_acc_mace_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 35
+		}
+		localization_key = kns_ig_acc_mace_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 36
+		}
+		localization_key = kns_ig_acc_mace_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 37
+		}
+		localization_key = kns_ig_acc_mace_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 38
+		}
+		localization_key = kns_ig_acc_mace_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 39
+		}
+		localization_key = kns_ig_acc_mace_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 40
+		}
+		localization_key = kns_ig_acc_mace_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 41
+		}
+		localization_key = kns_ig_acc_mace_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 42
+		}
+		localization_key = kns_ig_acc_mace_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 43
+		}
+		localization_key = kns_ig_acc_mace_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 44
+		}
+		localization_key = kns_ig_acc_mace_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 45
+		}
+		localization_key = kns_ig_acc_mace_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 46
+		}
+		localization_key = kns_ig_acc_mace_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 47
+		}
+		localization_key = kns_ig_acc_mace_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 48
+		}
+		localization_key = kns_ig_acc_mace_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 49
+		}
+		localization_key = kns_ig_acc_mace_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_1 = 50
+		}
+		localization_key = kns_ig_acc_mace_50
+	}
+	text = {
+		localization_key = kns_ig_acc_pick_fallback
+	}
+}
+
+KnsIgAccPick2 = {
+	type = character
+	random_valid = no
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 1
+		}
+		localization_key = kns_ig_acc_axe_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 2
+		}
+		localization_key = kns_ig_acc_axe_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 3
+		}
+		localization_key = kns_ig_acc_axe_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 4
+		}
+		localization_key = kns_ig_acc_axe_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 5
+		}
+		localization_key = kns_ig_acc_axe_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 6
+		}
+		localization_key = kns_ig_acc_axe_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 7
+		}
+		localization_key = kns_ig_acc_axe_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 8
+		}
+		localization_key = kns_ig_acc_axe_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 9
+		}
+		localization_key = kns_ig_acc_axe_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 10
+		}
+		localization_key = kns_ig_acc_axe_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 11
+		}
+		localization_key = kns_ig_acc_axe_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 12
+		}
+		localization_key = kns_ig_acc_axe_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 13
+		}
+		localization_key = kns_ig_acc_axe_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 14
+		}
+		localization_key = kns_ig_acc_axe_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 15
+		}
+		localization_key = kns_ig_acc_axe_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 16
+		}
+		localization_key = kns_ig_acc_axe_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 17
+		}
+		localization_key = kns_ig_acc_axe_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 18
+		}
+		localization_key = kns_ig_acc_axe_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 19
+		}
+		localization_key = kns_ig_acc_axe_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 20
+		}
+		localization_key = kns_ig_acc_axe_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 21
+		}
+		localization_key = kns_ig_acc_axe_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 22
+		}
+		localization_key = kns_ig_acc_axe_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 23
+		}
+		localization_key = kns_ig_acc_axe_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 24
+		}
+		localization_key = kns_ig_acc_axe_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 25
+		}
+		localization_key = kns_ig_acc_axe_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 26
+		}
+		localization_key = kns_ig_acc_axe_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 27
+		}
+		localization_key = kns_ig_acc_axe_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 28
+		}
+		localization_key = kns_ig_acc_axe_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 29
+		}
+		localization_key = kns_ig_acc_axe_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 30
+		}
+		localization_key = kns_ig_acc_axe_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 31
+		}
+		localization_key = kns_ig_acc_axe_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 32
+		}
+		localization_key = kns_ig_acc_axe_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 33
+		}
+		localization_key = kns_ig_acc_axe_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 34
+		}
+		localization_key = kns_ig_acc_axe_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 35
+		}
+		localization_key = kns_ig_acc_axe_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 36
+		}
+		localization_key = kns_ig_acc_axe_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 37
+		}
+		localization_key = kns_ig_acc_axe_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 38
+		}
+		localization_key = kns_ig_acc_axe_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 39
+		}
+		localization_key = kns_ig_acc_axe_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 40
+		}
+		localization_key = kns_ig_acc_axe_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 41
+		}
+		localization_key = kns_ig_acc_axe_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 42
+		}
+		localization_key = kns_ig_acc_axe_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 43
+		}
+		localization_key = kns_ig_acc_axe_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 44
+		}
+		localization_key = kns_ig_acc_axe_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 45
+		}
+		localization_key = kns_ig_acc_axe_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 46
+		}
+		localization_key = kns_ig_acc_axe_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 47
+		}
+		localization_key = kns_ig_acc_axe_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 48
+		}
+		localization_key = kns_ig_acc_axe_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 49
+		}
+		localization_key = kns_ig_acc_axe_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_2 = 50
+		}
+		localization_key = kns_ig_acc_axe_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 1
+		}
+		localization_key = kns_ig_acc_hammer_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 2
+		}
+		localization_key = kns_ig_acc_hammer_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 3
+		}
+		localization_key = kns_ig_acc_hammer_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 4
+		}
+		localization_key = kns_ig_acc_hammer_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 5
+		}
+		localization_key = kns_ig_acc_hammer_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 6
+		}
+		localization_key = kns_ig_acc_hammer_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 7
+		}
+		localization_key = kns_ig_acc_hammer_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 8
+		}
+		localization_key = kns_ig_acc_hammer_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 9
+		}
+		localization_key = kns_ig_acc_hammer_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 10
+		}
+		localization_key = kns_ig_acc_hammer_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 11
+		}
+		localization_key = kns_ig_acc_hammer_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 12
+		}
+		localization_key = kns_ig_acc_hammer_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 13
+		}
+		localization_key = kns_ig_acc_hammer_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 14
+		}
+		localization_key = kns_ig_acc_hammer_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 15
+		}
+		localization_key = kns_ig_acc_hammer_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 16
+		}
+		localization_key = kns_ig_acc_hammer_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 17
+		}
+		localization_key = kns_ig_acc_hammer_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 18
+		}
+		localization_key = kns_ig_acc_hammer_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 19
+		}
+		localization_key = kns_ig_acc_hammer_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 20
+		}
+		localization_key = kns_ig_acc_hammer_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 21
+		}
+		localization_key = kns_ig_acc_hammer_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 22
+		}
+		localization_key = kns_ig_acc_hammer_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 23
+		}
+		localization_key = kns_ig_acc_hammer_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 24
+		}
+		localization_key = kns_ig_acc_hammer_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 25
+		}
+		localization_key = kns_ig_acc_hammer_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 26
+		}
+		localization_key = kns_ig_acc_hammer_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 27
+		}
+		localization_key = kns_ig_acc_hammer_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 28
+		}
+		localization_key = kns_ig_acc_hammer_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 29
+		}
+		localization_key = kns_ig_acc_hammer_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 30
+		}
+		localization_key = kns_ig_acc_hammer_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 31
+		}
+		localization_key = kns_ig_acc_hammer_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 32
+		}
+		localization_key = kns_ig_acc_hammer_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 33
+		}
+		localization_key = kns_ig_acc_hammer_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 34
+		}
+		localization_key = kns_ig_acc_hammer_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 35
+		}
+		localization_key = kns_ig_acc_hammer_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 36
+		}
+		localization_key = kns_ig_acc_hammer_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 37
+		}
+		localization_key = kns_ig_acc_hammer_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 38
+		}
+		localization_key = kns_ig_acc_hammer_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 39
+		}
+		localization_key = kns_ig_acc_hammer_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 40
+		}
+		localization_key = kns_ig_acc_hammer_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 41
+		}
+		localization_key = kns_ig_acc_hammer_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 42
+		}
+		localization_key = kns_ig_acc_hammer_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 43
+		}
+		localization_key = kns_ig_acc_hammer_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 44
+		}
+		localization_key = kns_ig_acc_hammer_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 45
+		}
+		localization_key = kns_ig_acc_hammer_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 46
+		}
+		localization_key = kns_ig_acc_hammer_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 47
+		}
+		localization_key = kns_ig_acc_hammer_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 48
+		}
+		localization_key = kns_ig_acc_hammer_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 49
+		}
+		localization_key = kns_ig_acc_hammer_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_2 = 50
+		}
+		localization_key = kns_ig_acc_hammer_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 1
+		}
+		localization_key = kns_ig_acc_sword_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 2
+		}
+		localization_key = kns_ig_acc_sword_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 3
+		}
+		localization_key = kns_ig_acc_sword_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 4
+		}
+		localization_key = kns_ig_acc_sword_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 5
+		}
+		localization_key = kns_ig_acc_sword_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 6
+		}
+		localization_key = kns_ig_acc_sword_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 7
+		}
+		localization_key = kns_ig_acc_sword_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 8
+		}
+		localization_key = kns_ig_acc_sword_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 9
+		}
+		localization_key = kns_ig_acc_sword_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 10
+		}
+		localization_key = kns_ig_acc_sword_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 11
+		}
+		localization_key = kns_ig_acc_sword_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 12
+		}
+		localization_key = kns_ig_acc_sword_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 13
+		}
+		localization_key = kns_ig_acc_sword_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 14
+		}
+		localization_key = kns_ig_acc_sword_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 15
+		}
+		localization_key = kns_ig_acc_sword_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 16
+		}
+		localization_key = kns_ig_acc_sword_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 17
+		}
+		localization_key = kns_ig_acc_sword_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 18
+		}
+		localization_key = kns_ig_acc_sword_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 19
+		}
+		localization_key = kns_ig_acc_sword_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 20
+		}
+		localization_key = kns_ig_acc_sword_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 21
+		}
+		localization_key = kns_ig_acc_sword_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 22
+		}
+		localization_key = kns_ig_acc_sword_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 23
+		}
+		localization_key = kns_ig_acc_sword_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 24
+		}
+		localization_key = kns_ig_acc_sword_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 25
+		}
+		localization_key = kns_ig_acc_sword_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 26
+		}
+		localization_key = kns_ig_acc_sword_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 27
+		}
+		localization_key = kns_ig_acc_sword_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 28
+		}
+		localization_key = kns_ig_acc_sword_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 29
+		}
+		localization_key = kns_ig_acc_sword_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 30
+		}
+		localization_key = kns_ig_acc_sword_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 31
+		}
+		localization_key = kns_ig_acc_sword_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 32
+		}
+		localization_key = kns_ig_acc_sword_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 33
+		}
+		localization_key = kns_ig_acc_sword_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 34
+		}
+		localization_key = kns_ig_acc_sword_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 35
+		}
+		localization_key = kns_ig_acc_sword_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 36
+		}
+		localization_key = kns_ig_acc_sword_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 37
+		}
+		localization_key = kns_ig_acc_sword_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 38
+		}
+		localization_key = kns_ig_acc_sword_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 39
+		}
+		localization_key = kns_ig_acc_sword_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 40
+		}
+		localization_key = kns_ig_acc_sword_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 41
+		}
+		localization_key = kns_ig_acc_sword_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 42
+		}
+		localization_key = kns_ig_acc_sword_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 43
+		}
+		localization_key = kns_ig_acc_sword_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 44
+		}
+		localization_key = kns_ig_acc_sword_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 45
+		}
+		localization_key = kns_ig_acc_sword_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 46
+		}
+		localization_key = kns_ig_acc_sword_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 47
+		}
+		localization_key = kns_ig_acc_sword_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 48
+		}
+		localization_key = kns_ig_acc_sword_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 49
+		}
+		localization_key = kns_ig_acc_sword_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_2 = 50
+		}
+		localization_key = kns_ig_acc_sword_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 1
+		}
+		localization_key = kns_ig_acc_spear_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 2
+		}
+		localization_key = kns_ig_acc_spear_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 3
+		}
+		localization_key = kns_ig_acc_spear_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 4
+		}
+		localization_key = kns_ig_acc_spear_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 5
+		}
+		localization_key = kns_ig_acc_spear_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 6
+		}
+		localization_key = kns_ig_acc_spear_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 7
+		}
+		localization_key = kns_ig_acc_spear_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 8
+		}
+		localization_key = kns_ig_acc_spear_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 9
+		}
+		localization_key = kns_ig_acc_spear_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 10
+		}
+		localization_key = kns_ig_acc_spear_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 11
+		}
+		localization_key = kns_ig_acc_spear_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 12
+		}
+		localization_key = kns_ig_acc_spear_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 13
+		}
+		localization_key = kns_ig_acc_spear_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 14
+		}
+		localization_key = kns_ig_acc_spear_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 15
+		}
+		localization_key = kns_ig_acc_spear_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 16
+		}
+		localization_key = kns_ig_acc_spear_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 17
+		}
+		localization_key = kns_ig_acc_spear_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 18
+		}
+		localization_key = kns_ig_acc_spear_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 19
+		}
+		localization_key = kns_ig_acc_spear_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 20
+		}
+		localization_key = kns_ig_acc_spear_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 21
+		}
+		localization_key = kns_ig_acc_spear_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 22
+		}
+		localization_key = kns_ig_acc_spear_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 23
+		}
+		localization_key = kns_ig_acc_spear_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 24
+		}
+		localization_key = kns_ig_acc_spear_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 25
+		}
+		localization_key = kns_ig_acc_spear_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 26
+		}
+		localization_key = kns_ig_acc_spear_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 27
+		}
+		localization_key = kns_ig_acc_spear_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 28
+		}
+		localization_key = kns_ig_acc_spear_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 29
+		}
+		localization_key = kns_ig_acc_spear_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 30
+		}
+		localization_key = kns_ig_acc_spear_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 31
+		}
+		localization_key = kns_ig_acc_spear_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 32
+		}
+		localization_key = kns_ig_acc_spear_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 33
+		}
+		localization_key = kns_ig_acc_spear_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 34
+		}
+		localization_key = kns_ig_acc_spear_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 35
+		}
+		localization_key = kns_ig_acc_spear_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 36
+		}
+		localization_key = kns_ig_acc_spear_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 37
+		}
+		localization_key = kns_ig_acc_spear_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 38
+		}
+		localization_key = kns_ig_acc_spear_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 39
+		}
+		localization_key = kns_ig_acc_spear_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 40
+		}
+		localization_key = kns_ig_acc_spear_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 41
+		}
+		localization_key = kns_ig_acc_spear_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 42
+		}
+		localization_key = kns_ig_acc_spear_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 43
+		}
+		localization_key = kns_ig_acc_spear_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 44
+		}
+		localization_key = kns_ig_acc_spear_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 45
+		}
+		localization_key = kns_ig_acc_spear_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 46
+		}
+		localization_key = kns_ig_acc_spear_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 47
+		}
+		localization_key = kns_ig_acc_spear_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 48
+		}
+		localization_key = kns_ig_acc_spear_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 49
+		}
+		localization_key = kns_ig_acc_spear_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_2 = 50
+		}
+		localization_key = kns_ig_acc_spear_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 1
+		}
+		localization_key = kns_ig_acc_mace_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 2
+		}
+		localization_key = kns_ig_acc_mace_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 3
+		}
+		localization_key = kns_ig_acc_mace_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 4
+		}
+		localization_key = kns_ig_acc_mace_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 5
+		}
+		localization_key = kns_ig_acc_mace_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 6
+		}
+		localization_key = kns_ig_acc_mace_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 7
+		}
+		localization_key = kns_ig_acc_mace_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 8
+		}
+		localization_key = kns_ig_acc_mace_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 9
+		}
+		localization_key = kns_ig_acc_mace_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 10
+		}
+		localization_key = kns_ig_acc_mace_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 11
+		}
+		localization_key = kns_ig_acc_mace_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 12
+		}
+		localization_key = kns_ig_acc_mace_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 13
+		}
+		localization_key = kns_ig_acc_mace_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 14
+		}
+		localization_key = kns_ig_acc_mace_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 15
+		}
+		localization_key = kns_ig_acc_mace_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 16
+		}
+		localization_key = kns_ig_acc_mace_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 17
+		}
+		localization_key = kns_ig_acc_mace_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 18
+		}
+		localization_key = kns_ig_acc_mace_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 19
+		}
+		localization_key = kns_ig_acc_mace_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 20
+		}
+		localization_key = kns_ig_acc_mace_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 21
+		}
+		localization_key = kns_ig_acc_mace_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 22
+		}
+		localization_key = kns_ig_acc_mace_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 23
+		}
+		localization_key = kns_ig_acc_mace_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 24
+		}
+		localization_key = kns_ig_acc_mace_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 25
+		}
+		localization_key = kns_ig_acc_mace_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 26
+		}
+		localization_key = kns_ig_acc_mace_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 27
+		}
+		localization_key = kns_ig_acc_mace_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 28
+		}
+		localization_key = kns_ig_acc_mace_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 29
+		}
+		localization_key = kns_ig_acc_mace_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 30
+		}
+		localization_key = kns_ig_acc_mace_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 31
+		}
+		localization_key = kns_ig_acc_mace_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 32
+		}
+		localization_key = kns_ig_acc_mace_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 33
+		}
+		localization_key = kns_ig_acc_mace_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 34
+		}
+		localization_key = kns_ig_acc_mace_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 35
+		}
+		localization_key = kns_ig_acc_mace_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 36
+		}
+		localization_key = kns_ig_acc_mace_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 37
+		}
+		localization_key = kns_ig_acc_mace_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 38
+		}
+		localization_key = kns_ig_acc_mace_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 39
+		}
+		localization_key = kns_ig_acc_mace_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 40
+		}
+		localization_key = kns_ig_acc_mace_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 41
+		}
+		localization_key = kns_ig_acc_mace_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 42
+		}
+		localization_key = kns_ig_acc_mace_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 43
+		}
+		localization_key = kns_ig_acc_mace_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 44
+		}
+		localization_key = kns_ig_acc_mace_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 45
+		}
+		localization_key = kns_ig_acc_mace_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 46
+		}
+		localization_key = kns_ig_acc_mace_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 47
+		}
+		localization_key = kns_ig_acc_mace_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 48
+		}
+		localization_key = kns_ig_acc_mace_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 49
+		}
+		localization_key = kns_ig_acc_mace_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_2 = 50
+		}
+		localization_key = kns_ig_acc_mace_50
+	}
+	text = {
+		localization_key = kns_ig_acc_pick_fallback
+	}
+}
+
+KnsIgAccPick3 = {
+	type = character
+	random_valid = no
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 1
+		}
+		localization_key = kns_ig_acc_axe_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 2
+		}
+		localization_key = kns_ig_acc_axe_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 3
+		}
+		localization_key = kns_ig_acc_axe_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 4
+		}
+		localization_key = kns_ig_acc_axe_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 5
+		}
+		localization_key = kns_ig_acc_axe_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 6
+		}
+		localization_key = kns_ig_acc_axe_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 7
+		}
+		localization_key = kns_ig_acc_axe_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 8
+		}
+		localization_key = kns_ig_acc_axe_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 9
+		}
+		localization_key = kns_ig_acc_axe_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 10
+		}
+		localization_key = kns_ig_acc_axe_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 11
+		}
+		localization_key = kns_ig_acc_axe_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 12
+		}
+		localization_key = kns_ig_acc_axe_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 13
+		}
+		localization_key = kns_ig_acc_axe_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 14
+		}
+		localization_key = kns_ig_acc_axe_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 15
+		}
+		localization_key = kns_ig_acc_axe_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 16
+		}
+		localization_key = kns_ig_acc_axe_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 17
+		}
+		localization_key = kns_ig_acc_axe_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 18
+		}
+		localization_key = kns_ig_acc_axe_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 19
+		}
+		localization_key = kns_ig_acc_axe_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 20
+		}
+		localization_key = kns_ig_acc_axe_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 21
+		}
+		localization_key = kns_ig_acc_axe_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 22
+		}
+		localization_key = kns_ig_acc_axe_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 23
+		}
+		localization_key = kns_ig_acc_axe_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 24
+		}
+		localization_key = kns_ig_acc_axe_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 25
+		}
+		localization_key = kns_ig_acc_axe_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 26
+		}
+		localization_key = kns_ig_acc_axe_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 27
+		}
+		localization_key = kns_ig_acc_axe_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 28
+		}
+		localization_key = kns_ig_acc_axe_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 29
+		}
+		localization_key = kns_ig_acc_axe_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 30
+		}
+		localization_key = kns_ig_acc_axe_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 31
+		}
+		localization_key = kns_ig_acc_axe_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 32
+		}
+		localization_key = kns_ig_acc_axe_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 33
+		}
+		localization_key = kns_ig_acc_axe_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 34
+		}
+		localization_key = kns_ig_acc_axe_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 35
+		}
+		localization_key = kns_ig_acc_axe_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 36
+		}
+		localization_key = kns_ig_acc_axe_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 37
+		}
+		localization_key = kns_ig_acc_axe_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 38
+		}
+		localization_key = kns_ig_acc_axe_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 39
+		}
+		localization_key = kns_ig_acc_axe_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 40
+		}
+		localization_key = kns_ig_acc_axe_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 41
+		}
+		localization_key = kns_ig_acc_axe_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 42
+		}
+		localization_key = kns_ig_acc_axe_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 43
+		}
+		localization_key = kns_ig_acc_axe_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 44
+		}
+		localization_key = kns_ig_acc_axe_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 45
+		}
+		localization_key = kns_ig_acc_axe_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 46
+		}
+		localization_key = kns_ig_acc_axe_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 47
+		}
+		localization_key = kns_ig_acc_axe_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 48
+		}
+		localization_key = kns_ig_acc_axe_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 49
+		}
+		localization_key = kns_ig_acc_axe_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_3 = 50
+		}
+		localization_key = kns_ig_acc_axe_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 1
+		}
+		localization_key = kns_ig_acc_hammer_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 2
+		}
+		localization_key = kns_ig_acc_hammer_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 3
+		}
+		localization_key = kns_ig_acc_hammer_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 4
+		}
+		localization_key = kns_ig_acc_hammer_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 5
+		}
+		localization_key = kns_ig_acc_hammer_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 6
+		}
+		localization_key = kns_ig_acc_hammer_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 7
+		}
+		localization_key = kns_ig_acc_hammer_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 8
+		}
+		localization_key = kns_ig_acc_hammer_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 9
+		}
+		localization_key = kns_ig_acc_hammer_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 10
+		}
+		localization_key = kns_ig_acc_hammer_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 11
+		}
+		localization_key = kns_ig_acc_hammer_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 12
+		}
+		localization_key = kns_ig_acc_hammer_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 13
+		}
+		localization_key = kns_ig_acc_hammer_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 14
+		}
+		localization_key = kns_ig_acc_hammer_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 15
+		}
+		localization_key = kns_ig_acc_hammer_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 16
+		}
+		localization_key = kns_ig_acc_hammer_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 17
+		}
+		localization_key = kns_ig_acc_hammer_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 18
+		}
+		localization_key = kns_ig_acc_hammer_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 19
+		}
+		localization_key = kns_ig_acc_hammer_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 20
+		}
+		localization_key = kns_ig_acc_hammer_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 21
+		}
+		localization_key = kns_ig_acc_hammer_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 22
+		}
+		localization_key = kns_ig_acc_hammer_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 23
+		}
+		localization_key = kns_ig_acc_hammer_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 24
+		}
+		localization_key = kns_ig_acc_hammer_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 25
+		}
+		localization_key = kns_ig_acc_hammer_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 26
+		}
+		localization_key = kns_ig_acc_hammer_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 27
+		}
+		localization_key = kns_ig_acc_hammer_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 28
+		}
+		localization_key = kns_ig_acc_hammer_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 29
+		}
+		localization_key = kns_ig_acc_hammer_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 30
+		}
+		localization_key = kns_ig_acc_hammer_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 31
+		}
+		localization_key = kns_ig_acc_hammer_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 32
+		}
+		localization_key = kns_ig_acc_hammer_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 33
+		}
+		localization_key = kns_ig_acc_hammer_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 34
+		}
+		localization_key = kns_ig_acc_hammer_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 35
+		}
+		localization_key = kns_ig_acc_hammer_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 36
+		}
+		localization_key = kns_ig_acc_hammer_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 37
+		}
+		localization_key = kns_ig_acc_hammer_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 38
+		}
+		localization_key = kns_ig_acc_hammer_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 39
+		}
+		localization_key = kns_ig_acc_hammer_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 40
+		}
+		localization_key = kns_ig_acc_hammer_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 41
+		}
+		localization_key = kns_ig_acc_hammer_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 42
+		}
+		localization_key = kns_ig_acc_hammer_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 43
+		}
+		localization_key = kns_ig_acc_hammer_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 44
+		}
+		localization_key = kns_ig_acc_hammer_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 45
+		}
+		localization_key = kns_ig_acc_hammer_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 46
+		}
+		localization_key = kns_ig_acc_hammer_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 47
+		}
+		localization_key = kns_ig_acc_hammer_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 48
+		}
+		localization_key = kns_ig_acc_hammer_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 49
+		}
+		localization_key = kns_ig_acc_hammer_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_3 = 50
+		}
+		localization_key = kns_ig_acc_hammer_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 1
+		}
+		localization_key = kns_ig_acc_sword_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 2
+		}
+		localization_key = kns_ig_acc_sword_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 3
+		}
+		localization_key = kns_ig_acc_sword_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 4
+		}
+		localization_key = kns_ig_acc_sword_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 5
+		}
+		localization_key = kns_ig_acc_sword_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 6
+		}
+		localization_key = kns_ig_acc_sword_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 7
+		}
+		localization_key = kns_ig_acc_sword_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 8
+		}
+		localization_key = kns_ig_acc_sword_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 9
+		}
+		localization_key = kns_ig_acc_sword_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 10
+		}
+		localization_key = kns_ig_acc_sword_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 11
+		}
+		localization_key = kns_ig_acc_sword_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 12
+		}
+		localization_key = kns_ig_acc_sword_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 13
+		}
+		localization_key = kns_ig_acc_sword_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 14
+		}
+		localization_key = kns_ig_acc_sword_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 15
+		}
+		localization_key = kns_ig_acc_sword_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 16
+		}
+		localization_key = kns_ig_acc_sword_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 17
+		}
+		localization_key = kns_ig_acc_sword_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 18
+		}
+		localization_key = kns_ig_acc_sword_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 19
+		}
+		localization_key = kns_ig_acc_sword_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 20
+		}
+		localization_key = kns_ig_acc_sword_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 21
+		}
+		localization_key = kns_ig_acc_sword_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 22
+		}
+		localization_key = kns_ig_acc_sword_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 23
+		}
+		localization_key = kns_ig_acc_sword_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 24
+		}
+		localization_key = kns_ig_acc_sword_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 25
+		}
+		localization_key = kns_ig_acc_sword_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 26
+		}
+		localization_key = kns_ig_acc_sword_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 27
+		}
+		localization_key = kns_ig_acc_sword_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 28
+		}
+		localization_key = kns_ig_acc_sword_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 29
+		}
+		localization_key = kns_ig_acc_sword_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 30
+		}
+		localization_key = kns_ig_acc_sword_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 31
+		}
+		localization_key = kns_ig_acc_sword_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 32
+		}
+		localization_key = kns_ig_acc_sword_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 33
+		}
+		localization_key = kns_ig_acc_sword_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 34
+		}
+		localization_key = kns_ig_acc_sword_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 35
+		}
+		localization_key = kns_ig_acc_sword_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 36
+		}
+		localization_key = kns_ig_acc_sword_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 37
+		}
+		localization_key = kns_ig_acc_sword_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 38
+		}
+		localization_key = kns_ig_acc_sword_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 39
+		}
+		localization_key = kns_ig_acc_sword_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 40
+		}
+		localization_key = kns_ig_acc_sword_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 41
+		}
+		localization_key = kns_ig_acc_sword_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 42
+		}
+		localization_key = kns_ig_acc_sword_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 43
+		}
+		localization_key = kns_ig_acc_sword_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 44
+		}
+		localization_key = kns_ig_acc_sword_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 45
+		}
+		localization_key = kns_ig_acc_sword_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 46
+		}
+		localization_key = kns_ig_acc_sword_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 47
+		}
+		localization_key = kns_ig_acc_sword_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 48
+		}
+		localization_key = kns_ig_acc_sword_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 49
+		}
+		localization_key = kns_ig_acc_sword_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_3 = 50
+		}
+		localization_key = kns_ig_acc_sword_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 1
+		}
+		localization_key = kns_ig_acc_spear_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 2
+		}
+		localization_key = kns_ig_acc_spear_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 3
+		}
+		localization_key = kns_ig_acc_spear_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 4
+		}
+		localization_key = kns_ig_acc_spear_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 5
+		}
+		localization_key = kns_ig_acc_spear_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 6
+		}
+		localization_key = kns_ig_acc_spear_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 7
+		}
+		localization_key = kns_ig_acc_spear_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 8
+		}
+		localization_key = kns_ig_acc_spear_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 9
+		}
+		localization_key = kns_ig_acc_spear_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 10
+		}
+		localization_key = kns_ig_acc_spear_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 11
+		}
+		localization_key = kns_ig_acc_spear_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 12
+		}
+		localization_key = kns_ig_acc_spear_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 13
+		}
+		localization_key = kns_ig_acc_spear_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 14
+		}
+		localization_key = kns_ig_acc_spear_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 15
+		}
+		localization_key = kns_ig_acc_spear_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 16
+		}
+		localization_key = kns_ig_acc_spear_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 17
+		}
+		localization_key = kns_ig_acc_spear_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 18
+		}
+		localization_key = kns_ig_acc_spear_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 19
+		}
+		localization_key = kns_ig_acc_spear_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 20
+		}
+		localization_key = kns_ig_acc_spear_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 21
+		}
+		localization_key = kns_ig_acc_spear_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 22
+		}
+		localization_key = kns_ig_acc_spear_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 23
+		}
+		localization_key = kns_ig_acc_spear_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 24
+		}
+		localization_key = kns_ig_acc_spear_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 25
+		}
+		localization_key = kns_ig_acc_spear_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 26
+		}
+		localization_key = kns_ig_acc_spear_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 27
+		}
+		localization_key = kns_ig_acc_spear_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 28
+		}
+		localization_key = kns_ig_acc_spear_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 29
+		}
+		localization_key = kns_ig_acc_spear_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 30
+		}
+		localization_key = kns_ig_acc_spear_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 31
+		}
+		localization_key = kns_ig_acc_spear_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 32
+		}
+		localization_key = kns_ig_acc_spear_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 33
+		}
+		localization_key = kns_ig_acc_spear_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 34
+		}
+		localization_key = kns_ig_acc_spear_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 35
+		}
+		localization_key = kns_ig_acc_spear_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 36
+		}
+		localization_key = kns_ig_acc_spear_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 37
+		}
+		localization_key = kns_ig_acc_spear_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 38
+		}
+		localization_key = kns_ig_acc_spear_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 39
+		}
+		localization_key = kns_ig_acc_spear_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 40
+		}
+		localization_key = kns_ig_acc_spear_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 41
+		}
+		localization_key = kns_ig_acc_spear_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 42
+		}
+		localization_key = kns_ig_acc_spear_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 43
+		}
+		localization_key = kns_ig_acc_spear_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 44
+		}
+		localization_key = kns_ig_acc_spear_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 45
+		}
+		localization_key = kns_ig_acc_spear_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 46
+		}
+		localization_key = kns_ig_acc_spear_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 47
+		}
+		localization_key = kns_ig_acc_spear_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 48
+		}
+		localization_key = kns_ig_acc_spear_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 49
+		}
+		localization_key = kns_ig_acc_spear_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_3 = 50
+		}
+		localization_key = kns_ig_acc_spear_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 1
+		}
+		localization_key = kns_ig_acc_mace_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 2
+		}
+		localization_key = kns_ig_acc_mace_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 3
+		}
+		localization_key = kns_ig_acc_mace_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 4
+		}
+		localization_key = kns_ig_acc_mace_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 5
+		}
+		localization_key = kns_ig_acc_mace_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 6
+		}
+		localization_key = kns_ig_acc_mace_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 7
+		}
+		localization_key = kns_ig_acc_mace_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 8
+		}
+		localization_key = kns_ig_acc_mace_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 9
+		}
+		localization_key = kns_ig_acc_mace_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 10
+		}
+		localization_key = kns_ig_acc_mace_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 11
+		}
+		localization_key = kns_ig_acc_mace_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 12
+		}
+		localization_key = kns_ig_acc_mace_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 13
+		}
+		localization_key = kns_ig_acc_mace_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 14
+		}
+		localization_key = kns_ig_acc_mace_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 15
+		}
+		localization_key = kns_ig_acc_mace_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 16
+		}
+		localization_key = kns_ig_acc_mace_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 17
+		}
+		localization_key = kns_ig_acc_mace_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 18
+		}
+		localization_key = kns_ig_acc_mace_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 19
+		}
+		localization_key = kns_ig_acc_mace_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 20
+		}
+		localization_key = kns_ig_acc_mace_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 21
+		}
+		localization_key = kns_ig_acc_mace_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 22
+		}
+		localization_key = kns_ig_acc_mace_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 23
+		}
+		localization_key = kns_ig_acc_mace_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 24
+		}
+		localization_key = kns_ig_acc_mace_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 25
+		}
+		localization_key = kns_ig_acc_mace_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 26
+		}
+		localization_key = kns_ig_acc_mace_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 27
+		}
+		localization_key = kns_ig_acc_mace_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 28
+		}
+		localization_key = kns_ig_acc_mace_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 29
+		}
+		localization_key = kns_ig_acc_mace_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 30
+		}
+		localization_key = kns_ig_acc_mace_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 31
+		}
+		localization_key = kns_ig_acc_mace_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 32
+		}
+		localization_key = kns_ig_acc_mace_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 33
+		}
+		localization_key = kns_ig_acc_mace_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 34
+		}
+		localization_key = kns_ig_acc_mace_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 35
+		}
+		localization_key = kns_ig_acc_mace_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 36
+		}
+		localization_key = kns_ig_acc_mace_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 37
+		}
+		localization_key = kns_ig_acc_mace_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 38
+		}
+		localization_key = kns_ig_acc_mace_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 39
+		}
+		localization_key = kns_ig_acc_mace_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 40
+		}
+		localization_key = kns_ig_acc_mace_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 41
+		}
+		localization_key = kns_ig_acc_mace_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 42
+		}
+		localization_key = kns_ig_acc_mace_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 43
+		}
+		localization_key = kns_ig_acc_mace_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 44
+		}
+		localization_key = kns_ig_acc_mace_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 45
+		}
+		localization_key = kns_ig_acc_mace_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 46
+		}
+		localization_key = kns_ig_acc_mace_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 47
+		}
+		localization_key = kns_ig_acc_mace_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 48
+		}
+		localization_key = kns_ig_acc_mace_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 49
+		}
+		localization_key = kns_ig_acc_mace_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_3 = 50
+		}
+		localization_key = kns_ig_acc_mace_50
+	}
+	text = {
+		localization_key = kns_ig_acc_pick_fallback
+	}
+}
+
+KnsIgAccPick4 = {
+	type = character
+	random_valid = no
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 1
+		}
+		localization_key = kns_ig_acc_axe_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 2
+		}
+		localization_key = kns_ig_acc_axe_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 3
+		}
+		localization_key = kns_ig_acc_axe_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 4
+		}
+		localization_key = kns_ig_acc_axe_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 5
+		}
+		localization_key = kns_ig_acc_axe_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 6
+		}
+		localization_key = kns_ig_acc_axe_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 7
+		}
+		localization_key = kns_ig_acc_axe_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 8
+		}
+		localization_key = kns_ig_acc_axe_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 9
+		}
+		localization_key = kns_ig_acc_axe_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 10
+		}
+		localization_key = kns_ig_acc_axe_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 11
+		}
+		localization_key = kns_ig_acc_axe_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 12
+		}
+		localization_key = kns_ig_acc_axe_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 13
+		}
+		localization_key = kns_ig_acc_axe_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 14
+		}
+		localization_key = kns_ig_acc_axe_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 15
+		}
+		localization_key = kns_ig_acc_axe_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 16
+		}
+		localization_key = kns_ig_acc_axe_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 17
+		}
+		localization_key = kns_ig_acc_axe_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 18
+		}
+		localization_key = kns_ig_acc_axe_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 19
+		}
+		localization_key = kns_ig_acc_axe_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 20
+		}
+		localization_key = kns_ig_acc_axe_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 21
+		}
+		localization_key = kns_ig_acc_axe_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 22
+		}
+		localization_key = kns_ig_acc_axe_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 23
+		}
+		localization_key = kns_ig_acc_axe_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 24
+		}
+		localization_key = kns_ig_acc_axe_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 25
+		}
+		localization_key = kns_ig_acc_axe_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 26
+		}
+		localization_key = kns_ig_acc_axe_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 27
+		}
+		localization_key = kns_ig_acc_axe_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 28
+		}
+		localization_key = kns_ig_acc_axe_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 29
+		}
+		localization_key = kns_ig_acc_axe_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 30
+		}
+		localization_key = kns_ig_acc_axe_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 31
+		}
+		localization_key = kns_ig_acc_axe_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 32
+		}
+		localization_key = kns_ig_acc_axe_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 33
+		}
+		localization_key = kns_ig_acc_axe_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 34
+		}
+		localization_key = kns_ig_acc_axe_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 35
+		}
+		localization_key = kns_ig_acc_axe_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 36
+		}
+		localization_key = kns_ig_acc_axe_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 37
+		}
+		localization_key = kns_ig_acc_axe_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 38
+		}
+		localization_key = kns_ig_acc_axe_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 39
+		}
+		localization_key = kns_ig_acc_axe_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 40
+		}
+		localization_key = kns_ig_acc_axe_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 41
+		}
+		localization_key = kns_ig_acc_axe_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 42
+		}
+		localization_key = kns_ig_acc_axe_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 43
+		}
+		localization_key = kns_ig_acc_axe_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 44
+		}
+		localization_key = kns_ig_acc_axe_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 45
+		}
+		localization_key = kns_ig_acc_axe_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 46
+		}
+		localization_key = kns_ig_acc_axe_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 47
+		}
+		localization_key = kns_ig_acc_axe_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 48
+		}
+		localization_key = kns_ig_acc_axe_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 49
+		}
+		localization_key = kns_ig_acc_axe_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_axe
+			var:kns_ig_acc_pick_4 = 50
+		}
+		localization_key = kns_ig_acc_axe_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 1
+		}
+		localization_key = kns_ig_acc_hammer_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 2
+		}
+		localization_key = kns_ig_acc_hammer_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 3
+		}
+		localization_key = kns_ig_acc_hammer_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 4
+		}
+		localization_key = kns_ig_acc_hammer_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 5
+		}
+		localization_key = kns_ig_acc_hammer_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 6
+		}
+		localization_key = kns_ig_acc_hammer_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 7
+		}
+		localization_key = kns_ig_acc_hammer_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 8
+		}
+		localization_key = kns_ig_acc_hammer_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 9
+		}
+		localization_key = kns_ig_acc_hammer_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 10
+		}
+		localization_key = kns_ig_acc_hammer_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 11
+		}
+		localization_key = kns_ig_acc_hammer_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 12
+		}
+		localization_key = kns_ig_acc_hammer_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 13
+		}
+		localization_key = kns_ig_acc_hammer_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 14
+		}
+		localization_key = kns_ig_acc_hammer_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 15
+		}
+		localization_key = kns_ig_acc_hammer_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 16
+		}
+		localization_key = kns_ig_acc_hammer_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 17
+		}
+		localization_key = kns_ig_acc_hammer_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 18
+		}
+		localization_key = kns_ig_acc_hammer_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 19
+		}
+		localization_key = kns_ig_acc_hammer_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 20
+		}
+		localization_key = kns_ig_acc_hammer_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 21
+		}
+		localization_key = kns_ig_acc_hammer_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 22
+		}
+		localization_key = kns_ig_acc_hammer_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 23
+		}
+		localization_key = kns_ig_acc_hammer_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 24
+		}
+		localization_key = kns_ig_acc_hammer_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 25
+		}
+		localization_key = kns_ig_acc_hammer_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 26
+		}
+		localization_key = kns_ig_acc_hammer_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 27
+		}
+		localization_key = kns_ig_acc_hammer_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 28
+		}
+		localization_key = kns_ig_acc_hammer_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 29
+		}
+		localization_key = kns_ig_acc_hammer_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 30
+		}
+		localization_key = kns_ig_acc_hammer_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 31
+		}
+		localization_key = kns_ig_acc_hammer_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 32
+		}
+		localization_key = kns_ig_acc_hammer_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 33
+		}
+		localization_key = kns_ig_acc_hammer_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 34
+		}
+		localization_key = kns_ig_acc_hammer_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 35
+		}
+		localization_key = kns_ig_acc_hammer_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 36
+		}
+		localization_key = kns_ig_acc_hammer_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 37
+		}
+		localization_key = kns_ig_acc_hammer_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 38
+		}
+		localization_key = kns_ig_acc_hammer_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 39
+		}
+		localization_key = kns_ig_acc_hammer_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 40
+		}
+		localization_key = kns_ig_acc_hammer_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 41
+		}
+		localization_key = kns_ig_acc_hammer_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 42
+		}
+		localization_key = kns_ig_acc_hammer_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 43
+		}
+		localization_key = kns_ig_acc_hammer_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 44
+		}
+		localization_key = kns_ig_acc_hammer_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 45
+		}
+		localization_key = kns_ig_acc_hammer_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 46
+		}
+		localization_key = kns_ig_acc_hammer_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 47
+		}
+		localization_key = kns_ig_acc_hammer_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 48
+		}
+		localization_key = kns_ig_acc_hammer_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 49
+		}
+		localization_key = kns_ig_acc_hammer_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_hammer
+			var:kns_ig_acc_pick_4 = 50
+		}
+		localization_key = kns_ig_acc_hammer_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 1
+		}
+		localization_key = kns_ig_acc_sword_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 2
+		}
+		localization_key = kns_ig_acc_sword_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 3
+		}
+		localization_key = kns_ig_acc_sword_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 4
+		}
+		localization_key = kns_ig_acc_sword_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 5
+		}
+		localization_key = kns_ig_acc_sword_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 6
+		}
+		localization_key = kns_ig_acc_sword_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 7
+		}
+		localization_key = kns_ig_acc_sword_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 8
+		}
+		localization_key = kns_ig_acc_sword_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 9
+		}
+		localization_key = kns_ig_acc_sword_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 10
+		}
+		localization_key = kns_ig_acc_sword_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 11
+		}
+		localization_key = kns_ig_acc_sword_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 12
+		}
+		localization_key = kns_ig_acc_sword_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 13
+		}
+		localization_key = kns_ig_acc_sword_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 14
+		}
+		localization_key = kns_ig_acc_sword_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 15
+		}
+		localization_key = kns_ig_acc_sword_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 16
+		}
+		localization_key = kns_ig_acc_sword_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 17
+		}
+		localization_key = kns_ig_acc_sword_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 18
+		}
+		localization_key = kns_ig_acc_sword_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 19
+		}
+		localization_key = kns_ig_acc_sword_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 20
+		}
+		localization_key = kns_ig_acc_sword_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 21
+		}
+		localization_key = kns_ig_acc_sword_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 22
+		}
+		localization_key = kns_ig_acc_sword_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 23
+		}
+		localization_key = kns_ig_acc_sword_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 24
+		}
+		localization_key = kns_ig_acc_sword_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 25
+		}
+		localization_key = kns_ig_acc_sword_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 26
+		}
+		localization_key = kns_ig_acc_sword_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 27
+		}
+		localization_key = kns_ig_acc_sword_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 28
+		}
+		localization_key = kns_ig_acc_sword_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 29
+		}
+		localization_key = kns_ig_acc_sword_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 30
+		}
+		localization_key = kns_ig_acc_sword_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 31
+		}
+		localization_key = kns_ig_acc_sword_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 32
+		}
+		localization_key = kns_ig_acc_sword_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 33
+		}
+		localization_key = kns_ig_acc_sword_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 34
+		}
+		localization_key = kns_ig_acc_sword_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 35
+		}
+		localization_key = kns_ig_acc_sword_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 36
+		}
+		localization_key = kns_ig_acc_sword_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 37
+		}
+		localization_key = kns_ig_acc_sword_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 38
+		}
+		localization_key = kns_ig_acc_sword_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 39
+		}
+		localization_key = kns_ig_acc_sword_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 40
+		}
+		localization_key = kns_ig_acc_sword_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 41
+		}
+		localization_key = kns_ig_acc_sword_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 42
+		}
+		localization_key = kns_ig_acc_sword_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 43
+		}
+		localization_key = kns_ig_acc_sword_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 44
+		}
+		localization_key = kns_ig_acc_sword_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 45
+		}
+		localization_key = kns_ig_acc_sword_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 46
+		}
+		localization_key = kns_ig_acc_sword_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 47
+		}
+		localization_key = kns_ig_acc_sword_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 48
+		}
+		localization_key = kns_ig_acc_sword_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 49
+		}
+		localization_key = kns_ig_acc_sword_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_sword
+			var:kns_ig_acc_pick_4 = 50
+		}
+		localization_key = kns_ig_acc_sword_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 1
+		}
+		localization_key = kns_ig_acc_spear_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 2
+		}
+		localization_key = kns_ig_acc_spear_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 3
+		}
+		localization_key = kns_ig_acc_spear_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 4
+		}
+		localization_key = kns_ig_acc_spear_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 5
+		}
+		localization_key = kns_ig_acc_spear_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 6
+		}
+		localization_key = kns_ig_acc_spear_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 7
+		}
+		localization_key = kns_ig_acc_spear_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 8
+		}
+		localization_key = kns_ig_acc_spear_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 9
+		}
+		localization_key = kns_ig_acc_spear_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 10
+		}
+		localization_key = kns_ig_acc_spear_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 11
+		}
+		localization_key = kns_ig_acc_spear_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 12
+		}
+		localization_key = kns_ig_acc_spear_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 13
+		}
+		localization_key = kns_ig_acc_spear_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 14
+		}
+		localization_key = kns_ig_acc_spear_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 15
+		}
+		localization_key = kns_ig_acc_spear_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 16
+		}
+		localization_key = kns_ig_acc_spear_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 17
+		}
+		localization_key = kns_ig_acc_spear_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 18
+		}
+		localization_key = kns_ig_acc_spear_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 19
+		}
+		localization_key = kns_ig_acc_spear_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 20
+		}
+		localization_key = kns_ig_acc_spear_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 21
+		}
+		localization_key = kns_ig_acc_spear_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 22
+		}
+		localization_key = kns_ig_acc_spear_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 23
+		}
+		localization_key = kns_ig_acc_spear_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 24
+		}
+		localization_key = kns_ig_acc_spear_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 25
+		}
+		localization_key = kns_ig_acc_spear_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 26
+		}
+		localization_key = kns_ig_acc_spear_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 27
+		}
+		localization_key = kns_ig_acc_spear_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 28
+		}
+		localization_key = kns_ig_acc_spear_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 29
+		}
+		localization_key = kns_ig_acc_spear_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 30
+		}
+		localization_key = kns_ig_acc_spear_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 31
+		}
+		localization_key = kns_ig_acc_spear_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 32
+		}
+		localization_key = kns_ig_acc_spear_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 33
+		}
+		localization_key = kns_ig_acc_spear_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 34
+		}
+		localization_key = kns_ig_acc_spear_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 35
+		}
+		localization_key = kns_ig_acc_spear_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 36
+		}
+		localization_key = kns_ig_acc_spear_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 37
+		}
+		localization_key = kns_ig_acc_spear_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 38
+		}
+		localization_key = kns_ig_acc_spear_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 39
+		}
+		localization_key = kns_ig_acc_spear_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 40
+		}
+		localization_key = kns_ig_acc_spear_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 41
+		}
+		localization_key = kns_ig_acc_spear_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 42
+		}
+		localization_key = kns_ig_acc_spear_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 43
+		}
+		localization_key = kns_ig_acc_spear_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 44
+		}
+		localization_key = kns_ig_acc_spear_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 45
+		}
+		localization_key = kns_ig_acc_spear_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 46
+		}
+		localization_key = kns_ig_acc_spear_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 47
+		}
+		localization_key = kns_ig_acc_spear_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 48
+		}
+		localization_key = kns_ig_acc_spear_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 49
+		}
+		localization_key = kns_ig_acc_spear_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_spear
+			var:kns_ig_acc_pick_4 = 50
+		}
+		localization_key = kns_ig_acc_spear_50
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 1
+		}
+		localization_key = kns_ig_acc_mace_01
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 2
+		}
+		localization_key = kns_ig_acc_mace_02
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 3
+		}
+		localization_key = kns_ig_acc_mace_03
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 4
+		}
+		localization_key = kns_ig_acc_mace_04
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 5
+		}
+		localization_key = kns_ig_acc_mace_05
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 6
+		}
+		localization_key = kns_ig_acc_mace_06
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 7
+		}
+		localization_key = kns_ig_acc_mace_07
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 8
+		}
+		localization_key = kns_ig_acc_mace_08
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 9
+		}
+		localization_key = kns_ig_acc_mace_09
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 10
+		}
+		localization_key = kns_ig_acc_mace_10
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 11
+		}
+		localization_key = kns_ig_acc_mace_11
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 12
+		}
+		localization_key = kns_ig_acc_mace_12
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 13
+		}
+		localization_key = kns_ig_acc_mace_13
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 14
+		}
+		localization_key = kns_ig_acc_mace_14
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 15
+		}
+		localization_key = kns_ig_acc_mace_15
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 16
+		}
+		localization_key = kns_ig_acc_mace_16
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 17
+		}
+		localization_key = kns_ig_acc_mace_17
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 18
+		}
+		localization_key = kns_ig_acc_mace_18
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 19
+		}
+		localization_key = kns_ig_acc_mace_19
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 20
+		}
+		localization_key = kns_ig_acc_mace_20
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 21
+		}
+		localization_key = kns_ig_acc_mace_21
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 22
+		}
+		localization_key = kns_ig_acc_mace_22
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 23
+		}
+		localization_key = kns_ig_acc_mace_23
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 24
+		}
+		localization_key = kns_ig_acc_mace_24
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 25
+		}
+		localization_key = kns_ig_acc_mace_25
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 26
+		}
+		localization_key = kns_ig_acc_mace_26
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 27
+		}
+		localization_key = kns_ig_acc_mace_27
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 28
+		}
+		localization_key = kns_ig_acc_mace_28
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 29
+		}
+		localization_key = kns_ig_acc_mace_29
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 30
+		}
+		localization_key = kns_ig_acc_mace_30
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 31
+		}
+		localization_key = kns_ig_acc_mace_31
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 32
+		}
+		localization_key = kns_ig_acc_mace_32
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 33
+		}
+		localization_key = kns_ig_acc_mace_33
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 34
+		}
+		localization_key = kns_ig_acc_mace_34
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 35
+		}
+		localization_key = kns_ig_acc_mace_35
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 36
+		}
+		localization_key = kns_ig_acc_mace_36
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 37
+		}
+		localization_key = kns_ig_acc_mace_37
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 38
+		}
+		localization_key = kns_ig_acc_mace_38
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 39
+		}
+		localization_key = kns_ig_acc_mace_39
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 40
+		}
+		localization_key = kns_ig_acc_mace_40
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 41
+		}
+		localization_key = kns_ig_acc_mace_41
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 42
+		}
+		localization_key = kns_ig_acc_mace_42
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 43
+		}
+		localization_key = kns_ig_acc_mace_43
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 44
+		}
+		localization_key = kns_ig_acc_mace_44
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 45
+		}
+		localization_key = kns_ig_acc_mace_45
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 46
+		}
+		localization_key = kns_ig_acc_mace_46
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 47
+		}
+		localization_key = kns_ig_acc_mace_47
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 48
+		}
+		localization_key = kns_ig_acc_mace_48
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 49
+		}
+		localization_key = kns_ig_acc_mace_49
+	}
+	text = {
+		trigger = {
+			has_character_flag = kns_ig_post_mace
+			var:kns_ig_acc_pick_4 = 50
+		}
+		localization_key = kns_ig_acc_mace_50
+	}
+	text = {
+		localization_key = kns_ig_acc_pick_fallback
+	}
+}
+

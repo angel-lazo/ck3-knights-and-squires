@@ -23,6 +23,31 @@ kns_olympic_prize_template = {
 	unique = no
 }
 
+kns_imperial_guard_kit_template = {
+	can_equip = {
+		always = yes
+	}
+
+	can_benefit = {
+		always = yes
+	}
+
+	can_reforge = {
+		always = no
+	}
+
+	can_repair = {
+		always = no
+	}
+
+	fallback = {
+		prowess = 8
+		monthly_prestige = 0.1
+	}
+
+	unique = no
+}
+
 kns_prodigious_relic_template = {
 	can_equip = {
 		always = yes

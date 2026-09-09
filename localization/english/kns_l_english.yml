@@ -8,6 +8,10 @@
  game_concept_kns_knight_desc:0 "A Christian man or woman who has been dubbed and may take [squires|E], grant knighthood to the worthy, and stand in the first rank of battle. In this mod, knighthood is a rank of honor among Christians, not merely a place in the army."
  game_concept_kns_knights:0 "Knights"
  game_concept_kns_knightspossessive:0 "Knight's"
+ game_concept_kns_imperial_guard:0 "Imperial Guard"
+ game_concept_kns_imperial_guard_desc:0 "An unlanded [kns_knight|E] sworn to a player [emperor|E]. An emperor may keep five at a time, one each for axe, hammer, sword, spear, and mace. Appointment costs 1500 gold and gifts that post's illustrious weapon and plate. The office itself grants no extra bonuses."
+ game_concept_kns_imperial_guards:0 "Imperial Guards"
+ game_concept_kns_imperial_guardspossessive:0 "Imperial Guard's"
 
  # Traits
  trait_squire:0 "Squire"
@@ -26,10 +30,14 @@
  # Relations
  kns_squire:0 "Squire"
  kns_knight:0 "Knight"
+ kns_imperial_guard:0 "Imperial Guard"
+ kns_imperial_guard_lord:0 "Imperial Liege"
 
  # Modifiers
  kns_has_squire_modifier:0 "Has a Squire"
  kns_has_squire_modifier_desc:0 "Keeping a squire brings a little honor and keeps a knight sharp."
+ kns_imperial_guard_modifier:0 "Imperial Guard"
+ kns_imperial_guard_modifier_desc:0 "Sworn to the emperor's person. The office is an honor, not a second gift of skill."
 
  # Opinions
  kns_made_me_squire_opinion:0 "Made Me a Squire"
@@ -330,6 +338,19 @@
  kns_was_stripped_of_knighthood_desc:0 "[stripper.GetShortUIName] stripped me of knighthood"
  kns_was_stripped_of_knighthood_desc_second:0 "[stripper.GetShortUIName] stripped you of knighthood"
  kns_was_stripped_of_knighthood_desc_third:0 "[stripper.GetShortUIName] stripped [owner.GetShortUIName] of knighthood"
+ kns_ig_kit_returned:0 "recovered imperial steel"
+ kns_ig_kit_reclaimed:0 "reclaimed imperial steel in a duel"
+ kns_ig_kit_lost:0 "died trying to reclaim imperial steel"
+ kns_ig_kit_returned_desc:0 "I received my imperial weapon and plate back from [holder.GetShortUIName]"
+ kns_ig_kit_returned_desc_second:0 "You received your imperial weapon and plate back from [holder.GetShortUIName]"
+ kns_ig_kit_returned_desc_third:0 "[owner.GetShortUIName|U] received imperial steel back from [holder.GetShortUIName]"
+ kns_ig_kit_reclaimed_desc:0 "I slew [holder.GetShortUIName] and reclaimed my imperial weapon and plate"
+ kns_ig_kit_reclaimed_desc_second:0 "You slew [holder.GetShortUIName] and reclaimed your imperial weapon and plate"
+ kns_ig_kit_reclaimed_desc_third:0 "[owner.GetShortUIName|U] slew [holder.GetShortUIName] and reclaimed imperial steel"
+ kns_ig_kit_lost_desc:0 "I died trying to take my imperial weapon and plate from [holder.GetShortUIName]"
+ kns_ig_kit_lost_desc_second:0 "You died trying to take your imperial weapon and plate from [holder.GetShortUIName]"
+ kns_ig_kit_lost_desc_third:0 "[owner.GetShortUIName|U] died trying to take imperial steel from [holder.GetShortUIName]"
+ kns_olympic_defeated_in_lists:0 "won a bout in the Imperial Games"
  kns_olympic_defeated_in_lists:0 "won a bout in the Imperial Games"
  kns_olympic_defeated_round_1:0 "won a bout in the 1st Round of the Imperial Olympic Games"
  kns_olympic_defeated_round_2:0 "won a bout in the 2nd Round of the Imperial Olympic Games"
