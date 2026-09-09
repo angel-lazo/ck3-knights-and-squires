@@ -88,6 +88,13 @@ kns_on_death = {
 					has_character_modifier = kns_imperial_guard_modifier
 				}
 			}
+			if = {
+				limit = { is_acclaimed = yes }
+				save_scope_as = kns_ig_dying
+				accolade = {
+					kns_ig_stamp_accolade_from_knight_effect = { KNIGHT = scope:kns_ig_dying }
+				}
+			}
 			kns_dismiss_imperial_guard_effect = { KNIGHT = this }
 		}
 		if = {
@@ -230,7 +237,10 @@ on_leave_court = {
 kns_on_leave_court = {
 	effect = {
 		if = {
-			limit = { kns_is_imperial_guard_trigger = yes }
+			limit = {
+				kns_is_imperial_guard_trigger = yes
+				is_landed = no
+			}
 			kns_dismiss_imperial_guard_effect = { KNIGHT = this }
 		}
 	}
@@ -248,6 +258,7 @@ kns_on_title_gain = {
 			limit = {
 				kns_is_imperial_guard_trigger = yes
 				is_landed = yes
+				NOT = { kns_ig_may_remain_landed_guard_trigger = yes }
 			}
 			kns_dismiss_imperial_guard_effect = { KNIGHT = this }
 		}

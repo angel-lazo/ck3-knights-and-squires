@@ -1,0 +1,14 @@
+# Override vanilla ep2_can_be_accolade_successor_base_trigger (04_ep2_accolade_triggers.txt).
+# Imperial Guard stay eligible to found Accolades (can_be_acclaimed) but are skipped
+# when vanilla auto-picks or generates a successor/squire.
+
+ep2_can_be_accolade_successor_base_trigger = {
+	is_acclaimed = no
+	prowess >= 8
+	is_available_quick = {
+		alive = yes
+		adult = yes
+	}
+	highest_held_title_tier <= tier_barony
+	kns_is_imperial_guard_trigger = no
+}

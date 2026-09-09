@@ -1,0 +1,109 @@
+namespace = kns_ig_accolade
+
+# Bind Accolade / Rename hall title: pick a hall title. Bind then opens vanilla Accolade creation.
+kns_ig_accolade.0001 = {
+	type = character_event
+	is_triggered_only = yes
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = var:kns_ig_acc_rename_only }
+				desc = kns_ig_accolade.0001.t_rename
+			}
+			desc = kns_ig_accolade.0001.t
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = var:kns_ig_acc_rename_only }
+				desc = kns_ig_accolade.0001.desc_rename
+			}
+			desc = kns_ig_accolade.0001.desc
+		}
+	}
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = scope:kns_ig_named_knight
+		animation = personality_honorable
+	}
+
+	immediate = {
+		if = {
+			limit = { exists = var:kns_ig_acc_name_target }
+			var:kns_ig_acc_name_target = {
+				save_scope_as = kns_ig_named_knight
+				if = {
+					limit = { NOT = { exists = var:kns_ig_acc_pick_1 } }
+					kns_ig_roll_accolade_name_picks_effect = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = kns_ig_accolade.0001.a
+		trigger = {
+			exists = scope:kns_ig_named_knight
+			scope:kns_ig_named_knight = { exists = var:kns_ig_acc_pick_1 }
+		}
+		kns_ig_commit_accolade_name_pick_effect = { SLOT = 1 }
+	}
+
+	option = {
+		name = kns_ig_accolade.0001.b
+		trigger = {
+			exists = scope:kns_ig_named_knight
+			scope:kns_ig_named_knight = { exists = var:kns_ig_acc_pick_2 }
+		}
+		kns_ig_commit_accolade_name_pick_effect = { SLOT = 2 }
+	}
+
+	option = {
+		name = kns_ig_accolade.0001.c
+		trigger = {
+			exists = scope:kns_ig_named_knight
+			scope:kns_ig_named_knight = { exists = var:kns_ig_acc_pick_3 }
+		}
+		kns_ig_commit_accolade_name_pick_effect = { SLOT = 3 }
+	}
+
+	option = {
+		name = kns_ig_accolade.0001.d
+		trigger = {
+			exists = scope:kns_ig_named_knight
+			scope:kns_ig_named_knight = { exists = var:kns_ig_acc_pick_4 }
+		}
+		kns_ig_commit_accolade_name_pick_effect = { SLOT = 4 }
+	}
+
+	option = {
+		name = kns_ig_accolade.0001.e
+		trigger = {
+			exists = var:kns_ig_acc_name_target
+		}
+		var:kns_ig_acc_name_target = {
+			kns_ig_roll_accolade_name_picks_effect = yes
+			save_scope_as = kns_ig_named_knight
+		}
+		trigger_event = kns_ig_accolade.0001
+	}
+
+	option = {
+		name = kns_ig_accolade.0001.f
+		kns_ig_abort_accolade_name_event_effect = yes
+	}
+}
+
+# After vanilla assigns a successor, free Imperial Guard so they can still found Accolades.
+kns_ig_accolade.0002 = {
+	hidden = yes
+	type = character_event
+	is_triggered_only = yes
+
+	immediate = {
+		kns_ig_clear_all_imperial_guard_successors_effect = yes
+	}
+}

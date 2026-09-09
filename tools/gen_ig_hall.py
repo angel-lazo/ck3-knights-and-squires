@@ -64,6 +64,47 @@ def hired_portrait(weapon: str) -> str:
 									}}"""
 
 
+def kit_icon(weapon: str, var_name: str) -> str:
+    shown = f"GetScriptedGui('kns_gui_ig_has_slot_{weapon}').IsShown( {SCOPE} )"
+    return f'''								widget = {{
+									size = {{ 72 72 }}
+									visible = "[{shown}]"
+									datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_{weapon}').Char]"
+
+									widget = {{
+										size = {{ 72 72 }}
+										visible = "[Character.MakeScope.Var('{var_name}').IsSet]"
+										datacontext = "[Character.MakeScope.Var('{var_name}').Artifact]"
+
+										button = {{
+											size = {{ 72 72 }}
+											onclick = "[ToggleGameViewData( 'artifact_details', Artifact.GetID )]"
+											tooltipwidget = {{
+												artifact_tooltip = {{}}
+											}}
+
+											icon = {{
+												size = {{ 100% 100% }}
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "gfx/interface/icons/artifact/artifact_bg.dds"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = {{ 240 240 }}
+											}}
+
+											icon = {{
+												size = {{ 90% 90% }}
+												parentanchor = center
+												alwaystransparent = yes
+												texture = "[Artifact.GetIcon]"
+												frame = "[Artifact.GetIconFrame]"
+												framesize = {{ 240 240 }}
+											}}
+										}}
+									}}
+								}}'''
+
+
 def col(weapon: str) -> str:
     shown = f"GetScriptedGui('kns_gui_ig_has_slot_{weapon}').IsShown( {SCOPE} )"
     vacant = f"Not( {shown} )"
@@ -80,7 +121,17 @@ def col(weapon: str) -> str:
 							text_single = {{
 								layoutpolicy_horizontal = expanding
 								align = center
-								text = "kns_ig_window_post_{weapon}"
+								visible = "[{vacant}]"
+								text = "kns_ig_window_unbound"
+								default_format = "#high"
+							}}
+
+							text_single = {{
+								layoutpolicy_horizontal = expanding
+								align = center
+								visible = "[{shown}]"
+								datacontext = "[GetPlayer.MakeScope.Var('kns_ig_slot_{weapon}').Char]"
+								text = "[Character.Custom('KnsIgHallTitle')]"
 								default_format = "#high"
 							}}
 
@@ -130,21 +181,80 @@ def col(weapon: str) -> str:
 								default_format = "#high"
 							}}
 
-							hbox = {{
+							vbox = {{
 								layoutpolicy_horizontal = expanding
 								spacing = 4
 								visible = "[{shown}]"
 
-								button_standard = {{
+								hbox = {{
 									layoutpolicy_horizontal = expanding
-									text = "kns_ig_window_customize"
-									onclick = "[GetScriptedGui('kns_gui_ig_open_attire_{weapon}').Execute( {SCOPE} )]"
+									spacing = 4
+
+									button_standard = {{
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_customize"
+										onclick = "[GetScriptedGui('kns_gui_ig_open_attire_{weapon}').Execute( {SCOPE} )]"
+									}}
+
+									button_standard = {{
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_dismiss"
+										visible = "[GetScriptedGui('kns_gui_ig_dismiss_{weapon}').IsShown( {SCOPE} )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_dismiss_{weapon}').IsValid( {SCOPE} )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_dismiss_{weapon}').Execute( {SCOPE} )]"
+									}}
+
+									button_standard = {{
+										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_replace"
+										visible = "[GetScriptedGui('kns_gui_ig_open_replace_{weapon}').IsShown( {SCOPE} )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_open_replace_{weapon}').IsValid( {SCOPE} )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_open_replace_{weapon}').Execute( {SCOPE} )]"
+										tooltip = "kns_ig_window_replace_tt"
+									}}
 								}}
 
-								button_standard = {{
-									text = "kns_ig_window_dismiss"
-									enabled = "[GetScriptedGui('kns_gui_ig_dismiss_{weapon}').IsValid( {SCOPE} )]"
-									onclick = "[GetScriptedGui('kns_gui_ig_dismiss_{weapon}').Execute( {SCOPE} )]"
+								widget = {{
+									layoutpolicy_horizontal = expanding
+									size = {{ 0 36 }}
+
+									button_standard = {{
+										parentanchor = center
+										size = {{ 100% 100% }}
+										text = "kns_ig_window_bind"
+										visible = "[GetScriptedGui('kns_gui_ig_bind_{weapon}').IsShown( {SCOPE} )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_bind_{weapon}').IsValid( {SCOPE} )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_bind_{weapon}').Execute( {SCOPE} )]"
+										tooltip = "kns_ig_window_bind_tt"
+									}}
+
+									button_standard = {{
+										parentanchor = center
+										size = {{ 100% 100% }}
+										text = "kns_ig_window_rename"
+										visible = "[GetScriptedGui('kns_gui_ig_rename_{weapon}').IsShown( {SCOPE} )]"
+										enabled = "[GetScriptedGui('kns_gui_ig_rename_{weapon}').IsValid( {SCOPE} )]"
+										onclick = "[GetScriptedGui('kns_gui_ig_rename_{weapon}').Execute( {SCOPE} )]"
+										tooltip = "kns_ig_window_rename_tt"
+									}}
+								}}
+
+								hbox = {{
+									layoutpolicy_horizontal = expanding
+									minimumsize = {{ 0 72 }}
+									spacing = 8
+
+									widget = {{
+										layoutpolicy_horizontal = expanding
+									}}
+
+{kit_icon(weapon, "kns_ig_kit_weapon")}
+
+{kit_icon(weapon, "kns_ig_kit_armor")}
+
+									widget = {{
+										layoutpolicy_horizontal = expanding
+									}}
 								}}
 							}}
 						}}'''
@@ -153,7 +263,7 @@ def col(weapon: str) -> str:
 def write_hall() -> None:
     header = f'''window = {{
 	name = "kns_imperial_guard_window"
-	size = {{ 1780 950 }}
+	size = {{ 1780 1080 }}
 	parentanchor = center
 	position = {{ 0 0 }}
 	movable = yes

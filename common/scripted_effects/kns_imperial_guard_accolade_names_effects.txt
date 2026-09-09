@@ -1,0 +1,5930 @@
+kns_ig_clear_accolade_name_picks_effect = {
+	remove_variable = kns_ig_acc_pick_1
+	remove_variable = kns_ig_acc_pick_2
+	remove_variable = kns_ig_acc_pick_3
+	remove_variable = kns_ig_acc_pick_4
+}
+
+kns_ig_roll_accolade_title_effect = {
+	if = {
+		limit = { NOT = { has_variable = kns_ig_acc_name_idx } }
+		random_list = {
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 1
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 2
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 3
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 4
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 5
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 6
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 7
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 8
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 9
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 10
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 11
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 12
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 13
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 14
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 15
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 16
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 17
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 18
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 19
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 20
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 21
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 22
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 23
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 24
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 25
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 26
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 27
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 28
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 29
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 30
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 31
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 32
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 33
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 34
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 35
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 36
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 37
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 38
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 39
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 40
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 41
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 42
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 43
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 44
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 45
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 46
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 47
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 48
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 49
+				}
+			}
+			1 = {
+				set_variable = {
+					name = kns_ig_acc_name_idx
+					value = 50
+				}
+			}
+		}
+	}
+}
+
+kns_ig_roll_accolade_name_picks_effect = {
+	kns_ig_clear_accolade_name_picks_effect = yes
+	random_list = {
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 1
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 2
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 3
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 4
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 5
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 6
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 7
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 8
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 9
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 10
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 11
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 12
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 13
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 14
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 15
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 16
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 17
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 18
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 19
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 20
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 21
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 22
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 23
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 24
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 25
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 26
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 27
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 28
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 29
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 30
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 31
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 32
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 33
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 34
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 35
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 36
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 37
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 38
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 39
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 40
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 41
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 42
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 43
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 44
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 45
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 46
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 47
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 48
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 49
+			}
+		}
+		1 = {
+			set_variable = {
+				name = kns_ig_acc_pick_1
+				value = 50
+			}
+		}
+	}
+	random_list = {
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 1 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 1
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 2 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 2
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 3 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 3
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 4 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 4
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 5 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 5
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 6 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 6
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 7 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 7
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 8 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 8
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 9 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 9
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 10 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 11 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 11
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 12 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 12
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 13 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 13
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 14 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 14
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 15 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 15
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 16 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 16
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 17 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 17
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 18 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 18
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 19 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 19
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 20 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 20
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 21 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 21
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 22 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 22
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 23 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 23
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 24 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 24
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 25 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 25
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 26 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 26
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 27 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 27
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 28 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 28
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 29 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 29
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 30 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 30
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 31 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 31
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 32 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 32
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 33 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 33
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 34 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 34
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 35 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 35
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 36 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 36
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 37 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 37
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 38 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 38
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 39 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 39
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 40 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 40
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 41 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 41
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 42 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 42
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 43 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 43
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 44 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 44
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 45 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 45
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 46 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 46
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 47 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 47
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 48 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 48
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 49 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 49
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 50 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_2
+				value = 50
+			}
+		}
+	}
+	random_list = {
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 1 }
+				NOT = { var:kns_ig_acc_pick_2 = 1 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 1
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 2 }
+				NOT = { var:kns_ig_acc_pick_2 = 2 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 2
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 3 }
+				NOT = { var:kns_ig_acc_pick_2 = 3 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 3
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 4 }
+				NOT = { var:kns_ig_acc_pick_2 = 4 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 4
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 5 }
+				NOT = { var:kns_ig_acc_pick_2 = 5 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 5
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 6 }
+				NOT = { var:kns_ig_acc_pick_2 = 6 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 6
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 7 }
+				NOT = { var:kns_ig_acc_pick_2 = 7 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 7
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 8 }
+				NOT = { var:kns_ig_acc_pick_2 = 8 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 8
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 9 }
+				NOT = { var:kns_ig_acc_pick_2 = 9 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 9
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 10 }
+				NOT = { var:kns_ig_acc_pick_2 = 10 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 11 }
+				NOT = { var:kns_ig_acc_pick_2 = 11 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 11
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 12 }
+				NOT = { var:kns_ig_acc_pick_2 = 12 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 12
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 13 }
+				NOT = { var:kns_ig_acc_pick_2 = 13 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 13
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 14 }
+				NOT = { var:kns_ig_acc_pick_2 = 14 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 14
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 15 }
+				NOT = { var:kns_ig_acc_pick_2 = 15 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 15
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 16 }
+				NOT = { var:kns_ig_acc_pick_2 = 16 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 16
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 17 }
+				NOT = { var:kns_ig_acc_pick_2 = 17 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 17
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 18 }
+				NOT = { var:kns_ig_acc_pick_2 = 18 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 18
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 19 }
+				NOT = { var:kns_ig_acc_pick_2 = 19 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 19
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 20 }
+				NOT = { var:kns_ig_acc_pick_2 = 20 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 20
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 21 }
+				NOT = { var:kns_ig_acc_pick_2 = 21 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 21
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 22 }
+				NOT = { var:kns_ig_acc_pick_2 = 22 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 22
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 23 }
+				NOT = { var:kns_ig_acc_pick_2 = 23 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 23
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 24 }
+				NOT = { var:kns_ig_acc_pick_2 = 24 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 24
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 25 }
+				NOT = { var:kns_ig_acc_pick_2 = 25 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 25
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 26 }
+				NOT = { var:kns_ig_acc_pick_2 = 26 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 26
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 27 }
+				NOT = { var:kns_ig_acc_pick_2 = 27 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 27
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 28 }
+				NOT = { var:kns_ig_acc_pick_2 = 28 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 28
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 29 }
+				NOT = { var:kns_ig_acc_pick_2 = 29 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 29
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 30 }
+				NOT = { var:kns_ig_acc_pick_2 = 30 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 30
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 31 }
+				NOT = { var:kns_ig_acc_pick_2 = 31 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 31
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 32 }
+				NOT = { var:kns_ig_acc_pick_2 = 32 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 32
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 33 }
+				NOT = { var:kns_ig_acc_pick_2 = 33 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 33
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 34 }
+				NOT = { var:kns_ig_acc_pick_2 = 34 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 34
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 35 }
+				NOT = { var:kns_ig_acc_pick_2 = 35 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 35
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 36 }
+				NOT = { var:kns_ig_acc_pick_2 = 36 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 36
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 37 }
+				NOT = { var:kns_ig_acc_pick_2 = 37 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 37
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 38 }
+				NOT = { var:kns_ig_acc_pick_2 = 38 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 38
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 39 }
+				NOT = { var:kns_ig_acc_pick_2 = 39 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 39
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 40 }
+				NOT = { var:kns_ig_acc_pick_2 = 40 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 40
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 41 }
+				NOT = { var:kns_ig_acc_pick_2 = 41 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 41
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 42 }
+				NOT = { var:kns_ig_acc_pick_2 = 42 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 42
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 43 }
+				NOT = { var:kns_ig_acc_pick_2 = 43 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 43
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 44 }
+				NOT = { var:kns_ig_acc_pick_2 = 44 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 44
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 45 }
+				NOT = { var:kns_ig_acc_pick_2 = 45 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 45
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 46 }
+				NOT = { var:kns_ig_acc_pick_2 = 46 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 46
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 47 }
+				NOT = { var:kns_ig_acc_pick_2 = 47 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 47
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 48 }
+				NOT = { var:kns_ig_acc_pick_2 = 48 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 48
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 49 }
+				NOT = { var:kns_ig_acc_pick_2 = 49 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 49
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 50 }
+				NOT = { var:kns_ig_acc_pick_2 = 50 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_3
+				value = 50
+			}
+		}
+	}
+	random_list = {
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 1 }
+				NOT = { var:kns_ig_acc_pick_2 = 1 }
+				NOT = { var:kns_ig_acc_pick_3 = 1 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 1
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 2 }
+				NOT = { var:kns_ig_acc_pick_2 = 2 }
+				NOT = { var:kns_ig_acc_pick_3 = 2 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 2
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 3 }
+				NOT = { var:kns_ig_acc_pick_2 = 3 }
+				NOT = { var:kns_ig_acc_pick_3 = 3 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 3
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 4 }
+				NOT = { var:kns_ig_acc_pick_2 = 4 }
+				NOT = { var:kns_ig_acc_pick_3 = 4 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 4
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 5 }
+				NOT = { var:kns_ig_acc_pick_2 = 5 }
+				NOT = { var:kns_ig_acc_pick_3 = 5 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 5
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 6 }
+				NOT = { var:kns_ig_acc_pick_2 = 6 }
+				NOT = { var:kns_ig_acc_pick_3 = 6 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 6
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 7 }
+				NOT = { var:kns_ig_acc_pick_2 = 7 }
+				NOT = { var:kns_ig_acc_pick_3 = 7 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 7
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 8 }
+				NOT = { var:kns_ig_acc_pick_2 = 8 }
+				NOT = { var:kns_ig_acc_pick_3 = 8 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 8
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 9 }
+				NOT = { var:kns_ig_acc_pick_2 = 9 }
+				NOT = { var:kns_ig_acc_pick_3 = 9 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 9
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 10 }
+				NOT = { var:kns_ig_acc_pick_2 = 10 }
+				NOT = { var:kns_ig_acc_pick_3 = 10 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 10
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 11 }
+				NOT = { var:kns_ig_acc_pick_2 = 11 }
+				NOT = { var:kns_ig_acc_pick_3 = 11 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 11
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 12 }
+				NOT = { var:kns_ig_acc_pick_2 = 12 }
+				NOT = { var:kns_ig_acc_pick_3 = 12 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 12
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 13 }
+				NOT = { var:kns_ig_acc_pick_2 = 13 }
+				NOT = { var:kns_ig_acc_pick_3 = 13 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 13
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 14 }
+				NOT = { var:kns_ig_acc_pick_2 = 14 }
+				NOT = { var:kns_ig_acc_pick_3 = 14 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 14
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 15 }
+				NOT = { var:kns_ig_acc_pick_2 = 15 }
+				NOT = { var:kns_ig_acc_pick_3 = 15 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 15
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 16 }
+				NOT = { var:kns_ig_acc_pick_2 = 16 }
+				NOT = { var:kns_ig_acc_pick_3 = 16 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 16
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 17 }
+				NOT = { var:kns_ig_acc_pick_2 = 17 }
+				NOT = { var:kns_ig_acc_pick_3 = 17 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 17
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 18 }
+				NOT = { var:kns_ig_acc_pick_2 = 18 }
+				NOT = { var:kns_ig_acc_pick_3 = 18 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 18
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 19 }
+				NOT = { var:kns_ig_acc_pick_2 = 19 }
+				NOT = { var:kns_ig_acc_pick_3 = 19 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 19
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 20 }
+				NOT = { var:kns_ig_acc_pick_2 = 20 }
+				NOT = { var:kns_ig_acc_pick_3 = 20 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 20
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 21 }
+				NOT = { var:kns_ig_acc_pick_2 = 21 }
+				NOT = { var:kns_ig_acc_pick_3 = 21 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 21
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 22 }
+				NOT = { var:kns_ig_acc_pick_2 = 22 }
+				NOT = { var:kns_ig_acc_pick_3 = 22 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 22
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 23 }
+				NOT = { var:kns_ig_acc_pick_2 = 23 }
+				NOT = { var:kns_ig_acc_pick_3 = 23 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 23
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 24 }
+				NOT = { var:kns_ig_acc_pick_2 = 24 }
+				NOT = { var:kns_ig_acc_pick_3 = 24 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 24
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 25 }
+				NOT = { var:kns_ig_acc_pick_2 = 25 }
+				NOT = { var:kns_ig_acc_pick_3 = 25 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 25
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 26 }
+				NOT = { var:kns_ig_acc_pick_2 = 26 }
+				NOT = { var:kns_ig_acc_pick_3 = 26 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 26
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 27 }
+				NOT = { var:kns_ig_acc_pick_2 = 27 }
+				NOT = { var:kns_ig_acc_pick_3 = 27 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 27
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 28 }
+				NOT = { var:kns_ig_acc_pick_2 = 28 }
+				NOT = { var:kns_ig_acc_pick_3 = 28 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 28
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 29 }
+				NOT = { var:kns_ig_acc_pick_2 = 29 }
+				NOT = { var:kns_ig_acc_pick_3 = 29 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 29
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 30 }
+				NOT = { var:kns_ig_acc_pick_2 = 30 }
+				NOT = { var:kns_ig_acc_pick_3 = 30 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 30
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 31 }
+				NOT = { var:kns_ig_acc_pick_2 = 31 }
+				NOT = { var:kns_ig_acc_pick_3 = 31 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 31
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 32 }
+				NOT = { var:kns_ig_acc_pick_2 = 32 }
+				NOT = { var:kns_ig_acc_pick_3 = 32 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 32
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 33 }
+				NOT = { var:kns_ig_acc_pick_2 = 33 }
+				NOT = { var:kns_ig_acc_pick_3 = 33 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 33
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 34 }
+				NOT = { var:kns_ig_acc_pick_2 = 34 }
+				NOT = { var:kns_ig_acc_pick_3 = 34 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 34
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 35 }
+				NOT = { var:kns_ig_acc_pick_2 = 35 }
+				NOT = { var:kns_ig_acc_pick_3 = 35 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 35
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 36 }
+				NOT = { var:kns_ig_acc_pick_2 = 36 }
+				NOT = { var:kns_ig_acc_pick_3 = 36 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 36
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 37 }
+				NOT = { var:kns_ig_acc_pick_2 = 37 }
+				NOT = { var:kns_ig_acc_pick_3 = 37 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 37
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 38 }
+				NOT = { var:kns_ig_acc_pick_2 = 38 }
+				NOT = { var:kns_ig_acc_pick_3 = 38 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 38
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 39 }
+				NOT = { var:kns_ig_acc_pick_2 = 39 }
+				NOT = { var:kns_ig_acc_pick_3 = 39 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 39
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 40 }
+				NOT = { var:kns_ig_acc_pick_2 = 40 }
+				NOT = { var:kns_ig_acc_pick_3 = 40 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 40
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 41 }
+				NOT = { var:kns_ig_acc_pick_2 = 41 }
+				NOT = { var:kns_ig_acc_pick_3 = 41 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 41
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 42 }
+				NOT = { var:kns_ig_acc_pick_2 = 42 }
+				NOT = { var:kns_ig_acc_pick_3 = 42 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 42
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 43 }
+				NOT = { var:kns_ig_acc_pick_2 = 43 }
+				NOT = { var:kns_ig_acc_pick_3 = 43 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 43
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 44 }
+				NOT = { var:kns_ig_acc_pick_2 = 44 }
+				NOT = { var:kns_ig_acc_pick_3 = 44 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 44
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 45 }
+				NOT = { var:kns_ig_acc_pick_2 = 45 }
+				NOT = { var:kns_ig_acc_pick_3 = 45 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 45
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 46 }
+				NOT = { var:kns_ig_acc_pick_2 = 46 }
+				NOT = { var:kns_ig_acc_pick_3 = 46 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 46
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 47 }
+				NOT = { var:kns_ig_acc_pick_2 = 47 }
+				NOT = { var:kns_ig_acc_pick_3 = 47 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 47
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 48 }
+				NOT = { var:kns_ig_acc_pick_2 = 48 }
+				NOT = { var:kns_ig_acc_pick_3 = 48 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 48
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 49 }
+				NOT = { var:kns_ig_acc_pick_2 = 49 }
+				NOT = { var:kns_ig_acc_pick_3 = 49 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 49
+			}
+		}
+		1 = {
+			trigger = {
+				NOT = { var:kns_ig_acc_pick_1 = 50 }
+				NOT = { var:kns_ig_acc_pick_2 = 50 }
+				NOT = { var:kns_ig_acc_pick_3 = 50 }
+			}
+			set_variable = {
+				name = kns_ig_acc_pick_4
+				value = 50
+			}
+		}
+	}
+}
+
+kns_ig_name_kit_weapon_from_title_effect = {
+	if = {
+		limit = { exists = var:kns_imperial_guard_liege }
+		kns_ig_relink_and_dedupe_all_post_kit_effect = { EMPEROR = var:kns_imperial_guard_liege }
+		kns_ig_link_knight_kit_vars_from_post_effect = { EMPEROR = var:kns_imperial_guard_liege }
+	}
+	if = {
+		limit = {
+			exists = var:kns_ig_acc_name_idx
+			OR = {
+				exists = var:kns_ig_kit_weapon
+				exists = var:kns_ig_kit_armor
+			}
+		}
+		if = {
+			limit = { has_character_flag = kns_ig_post_axe }
+			if = {
+				limit = { var:kns_ig_acc_name_idx = 1 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_01 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_01_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 2 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_02 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_02_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 3 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_03 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_03_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 4 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_04 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_04_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 5 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_05 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_05_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 6 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_06 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_06_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 7 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_07 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_07_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 8 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_08 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_08_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 9 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_09 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_09_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 10 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_10 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_10_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 11 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_11 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_11_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 12 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_12 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_12_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 13 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_13 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_13_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 14 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_14 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_14_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 15 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_15 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_15_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 16 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_16 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_16_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 17 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_17 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_17_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 18 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_18 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_18_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 19 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_19 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_19_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 20 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_20 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_20_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 21 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_21 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_21_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 22 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_22 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_22_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 23 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_23 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_23_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 24 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_24 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_24_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 25 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_25 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_25_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 26 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_26 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_26_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 27 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_27 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_27_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 28 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_28 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_28_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 29 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_29 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_29_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 30 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_30 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_30_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 31 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_31 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_31_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 32 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_32 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_32_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 33 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_33 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_33_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 34 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_34 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_34_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 35 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_35 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_35_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 36 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_36 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_36_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 37 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_37 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_37_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 38 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_38 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_38_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 39 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_39 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_39_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 40 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_40 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_40_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 41 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_41 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_41_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 42 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_42 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_42_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 43 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_43 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_43_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 44 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_44 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_44_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 45 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_45 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_45_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 46 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_46 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_46_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 47 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_47 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_47_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 48 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_48 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_48_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 49 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_49 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_49_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 50 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_axe_50 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_axe_50_armor }
+				}
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = kns_ig_post_hammer }
+			if = {
+				limit = { var:kns_ig_acc_name_idx = 1 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_01 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_01_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 2 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_02 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_02_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 3 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_03 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_03_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 4 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_04 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_04_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 5 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_05 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_05_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 6 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_06 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_06_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 7 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_07 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_07_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 8 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_08 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_08_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 9 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_09 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_09_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 10 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_10 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_10_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 11 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_11 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_11_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 12 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_12 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_12_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 13 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_13 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_13_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 14 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_14 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_14_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 15 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_15 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_15_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 16 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_16 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_16_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 17 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_17 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_17_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 18 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_18 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_18_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 19 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_19 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_19_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 20 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_20 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_20_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 21 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_21 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_21_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 22 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_22 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_22_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 23 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_23 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_23_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 24 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_24 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_24_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 25 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_25 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_25_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 26 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_26 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_26_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 27 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_27 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_27_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 28 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_28 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_28_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 29 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_29 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_29_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 30 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_30 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_30_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 31 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_31 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_31_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 32 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_32 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_32_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 33 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_33 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_33_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 34 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_34 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_34_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 35 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_35 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_35_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 36 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_36 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_36_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 37 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_37 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_37_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 38 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_38 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_38_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 39 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_39 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_39_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 40 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_40 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_40_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 41 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_41 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_41_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 42 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_42 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_42_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 43 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_43 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_43_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 44 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_44 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_44_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 45 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_45 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_45_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 46 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_46 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_46_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 47 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_47 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_47_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 48 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_48 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_48_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 49 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_49 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_49_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 50 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_hammer_50 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_hammer_50_armor }
+				}
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = kns_ig_post_sword }
+			if = {
+				limit = { var:kns_ig_acc_name_idx = 1 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_01 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_01_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 2 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_02 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_02_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 3 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_03 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_03_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 4 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_04 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_04_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 5 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_05 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_05_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 6 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_06 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_06_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 7 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_07 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_07_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 8 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_08 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_08_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 9 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_09 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_09_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 10 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_10 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_10_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 11 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_11 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_11_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 12 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_12 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_12_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 13 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_13 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_13_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 14 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_14 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_14_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 15 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_15 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_15_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 16 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_16 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_16_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 17 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_17 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_17_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 18 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_18 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_18_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 19 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_19 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_19_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 20 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_20 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_20_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 21 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_21 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_21_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 22 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_22 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_22_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 23 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_23 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_23_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 24 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_24 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_24_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 25 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_25 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_25_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 26 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_26 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_26_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 27 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_27 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_27_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 28 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_28 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_28_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 29 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_29 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_29_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 30 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_30 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_30_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 31 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_31 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_31_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 32 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_32 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_32_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 33 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_33 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_33_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 34 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_34 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_34_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 35 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_35 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_35_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 36 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_36 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_36_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 37 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_37 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_37_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 38 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_38 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_38_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 39 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_39 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_39_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 40 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_40 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_40_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 41 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_41 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_41_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 42 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_42 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_42_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 43 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_43 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_43_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 44 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_44 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_44_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 45 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_45 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_45_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 46 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_46 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_46_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 47 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_47 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_47_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 48 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_48 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_48_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 49 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_49 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_49_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 50 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_sword_50 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_sword_50_armor }
+				}
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = kns_ig_post_spear }
+			if = {
+				limit = { var:kns_ig_acc_name_idx = 1 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_01 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_01_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 2 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_02 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_02_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 3 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_03 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_03_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 4 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_04 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_04_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 5 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_05 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_05_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 6 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_06 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_06_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 7 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_07 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_07_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 8 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_08 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_08_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 9 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_09 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_09_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 10 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_10 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_10_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 11 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_11 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_11_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 12 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_12 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_12_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 13 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_13 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_13_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 14 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_14 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_14_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 15 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_15 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_15_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 16 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_16 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_16_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 17 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_17 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_17_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 18 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_18 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_18_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 19 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_19 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_19_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 20 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_20 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_20_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 21 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_21 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_21_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 22 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_22 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_22_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 23 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_23 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_23_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 24 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_24 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_24_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 25 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_25 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_25_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 26 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_26 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_26_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 27 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_27 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_27_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 28 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_28 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_28_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 29 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_29 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_29_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 30 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_30 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_30_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 31 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_31 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_31_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 32 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_32 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_32_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 33 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_33 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_33_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 34 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_34 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_34_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 35 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_35 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_35_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 36 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_36 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_36_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 37 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_37 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_37_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 38 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_38 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_38_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 39 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_39 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_39_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 40 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_40 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_40_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 41 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_41 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_41_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 42 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_42 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_42_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 43 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_43 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_43_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 44 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_44 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_44_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 45 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_45 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_45_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 46 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_46 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_46_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 47 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_47 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_47_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 48 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_48 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_48_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 49 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_49 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_49_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 50 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_spear_50 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_spear_50_armor }
+				}
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = kns_ig_post_mace }
+			if = {
+				limit = { var:kns_ig_acc_name_idx = 1 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_01 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_01_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 2 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_02 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_02_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 3 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_03 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_03_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 4 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_04 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_04_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 5 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_05 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_05_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 6 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_06 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_06_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 7 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_07 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_07_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 8 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_08 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_08_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 9 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_09 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_09_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 10 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_10 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_10_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 11 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_11 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_11_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 12 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_12 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_12_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 13 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_13 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_13_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 14 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_14 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_14_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 15 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_15 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_15_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 16 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_16 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_16_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 17 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_17 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_17_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 18 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_18 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_18_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 19 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_19 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_19_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 20 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_20 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_20_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 21 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_21 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_21_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 22 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_22 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_22_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 23 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_23 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_23_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 24 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_24 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_24_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 25 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_25 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_25_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 26 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_26 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_26_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 27 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_27 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_27_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 28 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_28 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_28_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 29 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_29 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_29_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 30 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_30 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_30_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 31 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_31 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_31_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 32 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_32 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_32_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 33 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_33 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_33_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 34 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_34 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_34_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 35 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_35 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_35_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 36 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_36 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_36_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 37 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_37 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_37_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 38 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_38 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_38_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 39 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_39 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_39_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 40 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_40 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_40_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 41 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_41 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_41_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 42 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_42 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_42_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 43 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_43 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_43_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 44 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_44 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_44_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 45 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_45 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_45_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 46 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_46 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_46_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 47 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_47 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_47_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 48 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_48 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_48_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 49 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_49 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_49_armor }
+				}
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 50 }
+				if = {
+					limit = { exists = var:kns_ig_kit_weapon }
+					var:kns_ig_kit_weapon = { set_artifact_name = kns_ig_acc_mace_50 }
+				}
+				if = {
+					limit = { exists = var:kns_ig_kit_armor }
+					var:kns_ig_kit_armor = { set_artifact_name = kns_ig_acc_mace_50_armor }
+				}
+			}
+		}
+	}
+}
+
+kns_ig_give_accolade_title_nickname_effect = {
+	if = {
+		limit = { exists = var:kns_ig_acc_name_idx }
+		if = {
+			limit = { has_character_flag = kns_ig_post_axe }
+			if = {
+				limit = { var:kns_ig_acc_name_idx = 1 }
+				give_nickname = nick_kns_ig_acc_axe_01
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 2 }
+				give_nickname = nick_kns_ig_acc_axe_02
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 3 }
+				give_nickname = nick_kns_ig_acc_axe_03
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 4 }
+				give_nickname = nick_kns_ig_acc_axe_04
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 5 }
+				give_nickname = nick_kns_ig_acc_axe_05
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 6 }
+				give_nickname = nick_kns_ig_acc_axe_06
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 7 }
+				give_nickname = nick_kns_ig_acc_axe_07
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 8 }
+				give_nickname = nick_kns_ig_acc_axe_08
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 9 }
+				give_nickname = nick_kns_ig_acc_axe_09
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 10 }
+				give_nickname = nick_kns_ig_acc_axe_10
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 11 }
+				give_nickname = nick_kns_ig_acc_axe_11
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 12 }
+				give_nickname = nick_kns_ig_acc_axe_12
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 13 }
+				give_nickname = nick_kns_ig_acc_axe_13
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 14 }
+				give_nickname = nick_kns_ig_acc_axe_14
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 15 }
+				give_nickname = nick_kns_ig_acc_axe_15
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 16 }
+				give_nickname = nick_kns_ig_acc_axe_16
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 17 }
+				give_nickname = nick_kns_ig_acc_axe_17
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 18 }
+				give_nickname = nick_kns_ig_acc_axe_18
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 19 }
+				give_nickname = nick_kns_ig_acc_axe_19
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 20 }
+				give_nickname = nick_kns_ig_acc_axe_20
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 21 }
+				give_nickname = nick_kns_ig_acc_axe_21
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 22 }
+				give_nickname = nick_kns_ig_acc_axe_22
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 23 }
+				give_nickname = nick_kns_ig_acc_axe_23
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 24 }
+				give_nickname = nick_kns_ig_acc_axe_24
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 25 }
+				give_nickname = nick_kns_ig_acc_axe_25
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 26 }
+				give_nickname = nick_kns_ig_acc_axe_26
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 27 }
+				give_nickname = nick_kns_ig_acc_axe_27
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 28 }
+				give_nickname = nick_kns_ig_acc_axe_28
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 29 }
+				give_nickname = nick_kns_ig_acc_axe_29
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 30 }
+				give_nickname = nick_kns_ig_acc_axe_30
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 31 }
+				give_nickname = nick_kns_ig_acc_axe_31
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 32 }
+				give_nickname = nick_kns_ig_acc_axe_32
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 33 }
+				give_nickname = nick_kns_ig_acc_axe_33
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 34 }
+				give_nickname = nick_kns_ig_acc_axe_34
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 35 }
+				give_nickname = nick_kns_ig_acc_axe_35
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 36 }
+				give_nickname = nick_kns_ig_acc_axe_36
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 37 }
+				give_nickname = nick_kns_ig_acc_axe_37
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 38 }
+				give_nickname = nick_kns_ig_acc_axe_38
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 39 }
+				give_nickname = nick_kns_ig_acc_axe_39
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 40 }
+				give_nickname = nick_kns_ig_acc_axe_40
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 41 }
+				give_nickname = nick_kns_ig_acc_axe_41
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 42 }
+				give_nickname = nick_kns_ig_acc_axe_42
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 43 }
+				give_nickname = nick_kns_ig_acc_axe_43
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 44 }
+				give_nickname = nick_kns_ig_acc_axe_44
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 45 }
+				give_nickname = nick_kns_ig_acc_axe_45
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 46 }
+				give_nickname = nick_kns_ig_acc_axe_46
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 47 }
+				give_nickname = nick_kns_ig_acc_axe_47
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 48 }
+				give_nickname = nick_kns_ig_acc_axe_48
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 49 }
+				give_nickname = nick_kns_ig_acc_axe_49
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 50 }
+				give_nickname = nick_kns_ig_acc_axe_50
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = kns_ig_post_hammer }
+			if = {
+				limit = { var:kns_ig_acc_name_idx = 1 }
+				give_nickname = nick_kns_ig_acc_hammer_01
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 2 }
+				give_nickname = nick_kns_ig_acc_hammer_02
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 3 }
+				give_nickname = nick_kns_ig_acc_hammer_03
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 4 }
+				give_nickname = nick_kns_ig_acc_hammer_04
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 5 }
+				give_nickname = nick_kns_ig_acc_hammer_05
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 6 }
+				give_nickname = nick_kns_ig_acc_hammer_06
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 7 }
+				give_nickname = nick_kns_ig_acc_hammer_07
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 8 }
+				give_nickname = nick_kns_ig_acc_hammer_08
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 9 }
+				give_nickname = nick_kns_ig_acc_hammer_09
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 10 }
+				give_nickname = nick_kns_ig_acc_hammer_10
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 11 }
+				give_nickname = nick_kns_ig_acc_hammer_11
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 12 }
+				give_nickname = nick_kns_ig_acc_hammer_12
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 13 }
+				give_nickname = nick_kns_ig_acc_hammer_13
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 14 }
+				give_nickname = nick_kns_ig_acc_hammer_14
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 15 }
+				give_nickname = nick_kns_ig_acc_hammer_15
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 16 }
+				give_nickname = nick_kns_ig_acc_hammer_16
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 17 }
+				give_nickname = nick_kns_ig_acc_hammer_17
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 18 }
+				give_nickname = nick_kns_ig_acc_hammer_18
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 19 }
+				give_nickname = nick_kns_ig_acc_hammer_19
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 20 }
+				give_nickname = nick_kns_ig_acc_hammer_20
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 21 }
+				give_nickname = nick_kns_ig_acc_hammer_21
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 22 }
+				give_nickname = nick_kns_ig_acc_hammer_22
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 23 }
+				give_nickname = nick_kns_ig_acc_hammer_23
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 24 }
+				give_nickname = nick_kns_ig_acc_hammer_24
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 25 }
+				give_nickname = nick_kns_ig_acc_hammer_25
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 26 }
+				give_nickname = nick_kns_ig_acc_hammer_26
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 27 }
+				give_nickname = nick_kns_ig_acc_hammer_27
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 28 }
+				give_nickname = nick_kns_ig_acc_hammer_28
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 29 }
+				give_nickname = nick_kns_ig_acc_hammer_29
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 30 }
+				give_nickname = nick_kns_ig_acc_hammer_30
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 31 }
+				give_nickname = nick_kns_ig_acc_hammer_31
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 32 }
+				give_nickname = nick_kns_ig_acc_hammer_32
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 33 }
+				give_nickname = nick_kns_ig_acc_hammer_33
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 34 }
+				give_nickname = nick_kns_ig_acc_hammer_34
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 35 }
+				give_nickname = nick_kns_ig_acc_hammer_35
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 36 }
+				give_nickname = nick_kns_ig_acc_hammer_36
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 37 }
+				give_nickname = nick_kns_ig_acc_hammer_37
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 38 }
+				give_nickname = nick_kns_ig_acc_hammer_38
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 39 }
+				give_nickname = nick_kns_ig_acc_hammer_39
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 40 }
+				give_nickname = nick_kns_ig_acc_hammer_40
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 41 }
+				give_nickname = nick_kns_ig_acc_hammer_41
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 42 }
+				give_nickname = nick_kns_ig_acc_hammer_42
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 43 }
+				give_nickname = nick_kns_ig_acc_hammer_43
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 44 }
+				give_nickname = nick_kns_ig_acc_hammer_44
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 45 }
+				give_nickname = nick_kns_ig_acc_hammer_45
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 46 }
+				give_nickname = nick_kns_ig_acc_hammer_46
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 47 }
+				give_nickname = nick_kns_ig_acc_hammer_47
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 48 }
+				give_nickname = nick_kns_ig_acc_hammer_48
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 49 }
+				give_nickname = nick_kns_ig_acc_hammer_49
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 50 }
+				give_nickname = nick_kns_ig_acc_hammer_50
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = kns_ig_post_sword }
+			if = {
+				limit = { var:kns_ig_acc_name_idx = 1 }
+				give_nickname = nick_kns_ig_acc_sword_01
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 2 }
+				give_nickname = nick_kns_ig_acc_sword_02
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 3 }
+				give_nickname = nick_kns_ig_acc_sword_03
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 4 }
+				give_nickname = nick_kns_ig_acc_sword_04
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 5 }
+				give_nickname = nick_kns_ig_acc_sword_05
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 6 }
+				give_nickname = nick_kns_ig_acc_sword_06
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 7 }
+				give_nickname = nick_kns_ig_acc_sword_07
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 8 }
+				give_nickname = nick_kns_ig_acc_sword_08
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 9 }
+				give_nickname = nick_kns_ig_acc_sword_09
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 10 }
+				give_nickname = nick_kns_ig_acc_sword_10
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 11 }
+				give_nickname = nick_kns_ig_acc_sword_11
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 12 }
+				give_nickname = nick_kns_ig_acc_sword_12
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 13 }
+				give_nickname = nick_kns_ig_acc_sword_13
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 14 }
+				give_nickname = nick_kns_ig_acc_sword_14
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 15 }
+				give_nickname = nick_kns_ig_acc_sword_15
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 16 }
+				give_nickname = nick_kns_ig_acc_sword_16
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 17 }
+				give_nickname = nick_kns_ig_acc_sword_17
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 18 }
+				give_nickname = nick_kns_ig_acc_sword_18
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 19 }
+				give_nickname = nick_kns_ig_acc_sword_19
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 20 }
+				give_nickname = nick_kns_ig_acc_sword_20
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 21 }
+				give_nickname = nick_kns_ig_acc_sword_21
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 22 }
+				give_nickname = nick_kns_ig_acc_sword_22
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 23 }
+				give_nickname = nick_kns_ig_acc_sword_23
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 24 }
+				give_nickname = nick_kns_ig_acc_sword_24
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 25 }
+				give_nickname = nick_kns_ig_acc_sword_25
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 26 }
+				give_nickname = nick_kns_ig_acc_sword_26
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 27 }
+				give_nickname = nick_kns_ig_acc_sword_27
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 28 }
+				give_nickname = nick_kns_ig_acc_sword_28
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 29 }
+				give_nickname = nick_kns_ig_acc_sword_29
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 30 }
+				give_nickname = nick_kns_ig_acc_sword_30
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 31 }
+				give_nickname = nick_kns_ig_acc_sword_31
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 32 }
+				give_nickname = nick_kns_ig_acc_sword_32
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 33 }
+				give_nickname = nick_kns_ig_acc_sword_33
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 34 }
+				give_nickname = nick_kns_ig_acc_sword_34
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 35 }
+				give_nickname = nick_kns_ig_acc_sword_35
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 36 }
+				give_nickname = nick_kns_ig_acc_sword_36
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 37 }
+				give_nickname = nick_kns_ig_acc_sword_37
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 38 }
+				give_nickname = nick_kns_ig_acc_sword_38
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 39 }
+				give_nickname = nick_kns_ig_acc_sword_39
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 40 }
+				give_nickname = nick_kns_ig_acc_sword_40
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 41 }
+				give_nickname = nick_kns_ig_acc_sword_41
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 42 }
+				give_nickname = nick_kns_ig_acc_sword_42
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 43 }
+				give_nickname = nick_kns_ig_acc_sword_43
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 44 }
+				give_nickname = nick_kns_ig_acc_sword_44
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 45 }
+				give_nickname = nick_kns_ig_acc_sword_45
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 46 }
+				give_nickname = nick_kns_ig_acc_sword_46
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 47 }
+				give_nickname = nick_kns_ig_acc_sword_47
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 48 }
+				give_nickname = nick_kns_ig_acc_sword_48
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 49 }
+				give_nickname = nick_kns_ig_acc_sword_49
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 50 }
+				give_nickname = nick_kns_ig_acc_sword_50
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = kns_ig_post_spear }
+			if = {
+				limit = { var:kns_ig_acc_name_idx = 1 }
+				give_nickname = nick_kns_ig_acc_spear_01
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 2 }
+				give_nickname = nick_kns_ig_acc_spear_02
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 3 }
+				give_nickname = nick_kns_ig_acc_spear_03
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 4 }
+				give_nickname = nick_kns_ig_acc_spear_04
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 5 }
+				give_nickname = nick_kns_ig_acc_spear_05
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 6 }
+				give_nickname = nick_kns_ig_acc_spear_06
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 7 }
+				give_nickname = nick_kns_ig_acc_spear_07
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 8 }
+				give_nickname = nick_kns_ig_acc_spear_08
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 9 }
+				give_nickname = nick_kns_ig_acc_spear_09
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 10 }
+				give_nickname = nick_kns_ig_acc_spear_10
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 11 }
+				give_nickname = nick_kns_ig_acc_spear_11
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 12 }
+				give_nickname = nick_kns_ig_acc_spear_12
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 13 }
+				give_nickname = nick_kns_ig_acc_spear_13
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 14 }
+				give_nickname = nick_kns_ig_acc_spear_14
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 15 }
+				give_nickname = nick_kns_ig_acc_spear_15
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 16 }
+				give_nickname = nick_kns_ig_acc_spear_16
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 17 }
+				give_nickname = nick_kns_ig_acc_spear_17
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 18 }
+				give_nickname = nick_kns_ig_acc_spear_18
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 19 }
+				give_nickname = nick_kns_ig_acc_spear_19
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 20 }
+				give_nickname = nick_kns_ig_acc_spear_20
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 21 }
+				give_nickname = nick_kns_ig_acc_spear_21
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 22 }
+				give_nickname = nick_kns_ig_acc_spear_22
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 23 }
+				give_nickname = nick_kns_ig_acc_spear_23
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 24 }
+				give_nickname = nick_kns_ig_acc_spear_24
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 25 }
+				give_nickname = nick_kns_ig_acc_spear_25
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 26 }
+				give_nickname = nick_kns_ig_acc_spear_26
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 27 }
+				give_nickname = nick_kns_ig_acc_spear_27
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 28 }
+				give_nickname = nick_kns_ig_acc_spear_28
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 29 }
+				give_nickname = nick_kns_ig_acc_spear_29
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 30 }
+				give_nickname = nick_kns_ig_acc_spear_30
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 31 }
+				give_nickname = nick_kns_ig_acc_spear_31
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 32 }
+				give_nickname = nick_kns_ig_acc_spear_32
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 33 }
+				give_nickname = nick_kns_ig_acc_spear_33
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 34 }
+				give_nickname = nick_kns_ig_acc_spear_34
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 35 }
+				give_nickname = nick_kns_ig_acc_spear_35
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 36 }
+				give_nickname = nick_kns_ig_acc_spear_36
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 37 }
+				give_nickname = nick_kns_ig_acc_spear_37
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 38 }
+				give_nickname = nick_kns_ig_acc_spear_38
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 39 }
+				give_nickname = nick_kns_ig_acc_spear_39
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 40 }
+				give_nickname = nick_kns_ig_acc_spear_40
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 41 }
+				give_nickname = nick_kns_ig_acc_spear_41
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 42 }
+				give_nickname = nick_kns_ig_acc_spear_42
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 43 }
+				give_nickname = nick_kns_ig_acc_spear_43
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 44 }
+				give_nickname = nick_kns_ig_acc_spear_44
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 45 }
+				give_nickname = nick_kns_ig_acc_spear_45
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 46 }
+				give_nickname = nick_kns_ig_acc_spear_46
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 47 }
+				give_nickname = nick_kns_ig_acc_spear_47
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 48 }
+				give_nickname = nick_kns_ig_acc_spear_48
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 49 }
+				give_nickname = nick_kns_ig_acc_spear_49
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 50 }
+				give_nickname = nick_kns_ig_acc_spear_50
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = kns_ig_post_mace }
+			if = {
+				limit = { var:kns_ig_acc_name_idx = 1 }
+				give_nickname = nick_kns_ig_acc_mace_01
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 2 }
+				give_nickname = nick_kns_ig_acc_mace_02
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 3 }
+				give_nickname = nick_kns_ig_acc_mace_03
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 4 }
+				give_nickname = nick_kns_ig_acc_mace_04
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 5 }
+				give_nickname = nick_kns_ig_acc_mace_05
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 6 }
+				give_nickname = nick_kns_ig_acc_mace_06
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 7 }
+				give_nickname = nick_kns_ig_acc_mace_07
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 8 }
+				give_nickname = nick_kns_ig_acc_mace_08
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 9 }
+				give_nickname = nick_kns_ig_acc_mace_09
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 10 }
+				give_nickname = nick_kns_ig_acc_mace_10
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 11 }
+				give_nickname = nick_kns_ig_acc_mace_11
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 12 }
+				give_nickname = nick_kns_ig_acc_mace_12
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 13 }
+				give_nickname = nick_kns_ig_acc_mace_13
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 14 }
+				give_nickname = nick_kns_ig_acc_mace_14
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 15 }
+				give_nickname = nick_kns_ig_acc_mace_15
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 16 }
+				give_nickname = nick_kns_ig_acc_mace_16
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 17 }
+				give_nickname = nick_kns_ig_acc_mace_17
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 18 }
+				give_nickname = nick_kns_ig_acc_mace_18
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 19 }
+				give_nickname = nick_kns_ig_acc_mace_19
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 20 }
+				give_nickname = nick_kns_ig_acc_mace_20
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 21 }
+				give_nickname = nick_kns_ig_acc_mace_21
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 22 }
+				give_nickname = nick_kns_ig_acc_mace_22
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 23 }
+				give_nickname = nick_kns_ig_acc_mace_23
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 24 }
+				give_nickname = nick_kns_ig_acc_mace_24
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 25 }
+				give_nickname = nick_kns_ig_acc_mace_25
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 26 }
+				give_nickname = nick_kns_ig_acc_mace_26
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 27 }
+				give_nickname = nick_kns_ig_acc_mace_27
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 28 }
+				give_nickname = nick_kns_ig_acc_mace_28
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 29 }
+				give_nickname = nick_kns_ig_acc_mace_29
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 30 }
+				give_nickname = nick_kns_ig_acc_mace_30
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 31 }
+				give_nickname = nick_kns_ig_acc_mace_31
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 32 }
+				give_nickname = nick_kns_ig_acc_mace_32
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 33 }
+				give_nickname = nick_kns_ig_acc_mace_33
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 34 }
+				give_nickname = nick_kns_ig_acc_mace_34
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 35 }
+				give_nickname = nick_kns_ig_acc_mace_35
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 36 }
+				give_nickname = nick_kns_ig_acc_mace_36
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 37 }
+				give_nickname = nick_kns_ig_acc_mace_37
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 38 }
+				give_nickname = nick_kns_ig_acc_mace_38
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 39 }
+				give_nickname = nick_kns_ig_acc_mace_39
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 40 }
+				give_nickname = nick_kns_ig_acc_mace_40
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 41 }
+				give_nickname = nick_kns_ig_acc_mace_41
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 42 }
+				give_nickname = nick_kns_ig_acc_mace_42
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 43 }
+				give_nickname = nick_kns_ig_acc_mace_43
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 44 }
+				give_nickname = nick_kns_ig_acc_mace_44
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 45 }
+				give_nickname = nick_kns_ig_acc_mace_45
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 46 }
+				give_nickname = nick_kns_ig_acc_mace_46
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 47 }
+				give_nickname = nick_kns_ig_acc_mace_47
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 48 }
+				give_nickname = nick_kns_ig_acc_mace_48
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 49 }
+				give_nickname = nick_kns_ig_acc_mace_49
+			}
+			else_if = {
+				limit = { var:kns_ig_acc_name_idx = 50 }
+				give_nickname = nick_kns_ig_acc_mace_50
+			}
+		}
+	}
+	kns_ig_name_kit_weapon_from_title_effect = yes
+}

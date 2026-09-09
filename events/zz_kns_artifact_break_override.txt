@@ -1,0 +1,76 @@
+# Wrap vanilla artifact break events so Imperial Guard kit never destroys.
+# Same IDs as vanilla: this file must load last.
+
+namespace = artifact
+
+artifact.0021 = {
+	scope = artifact
+	hidden = yes
+
+	immediate = {
+		save_scope_as = this_artifact
+		if = {
+			limit = { exists = var:kns_ig_kit_kind }
+			kns_ig_restore_kit_durability_effect = yes
+		}
+		else_if = {
+			limit = {
+				exists = scope:owner
+				scope:owner = { is_alive = yes }
+			}
+			scope:owner = {
+				send_interface_toast = {
+					title = artifact.0021.t
+					right_icon = scope:this_artifact
+					destroy_artifact = scope:this_artifact
+				}
+			}
+		}
+	}
+}
+
+artifact.1000 = {
+	scope = artifact
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { exists = var:kns_ig_kit_kind }
+			kns_ig_restore_kit_durability_effect = yes
+		}
+		else_if = {
+			limit = { has_variable = 1025_treasure_map }
+			save_scope_as = decayed_artifact
+			scope:owner = { trigger_event = ep3_contract_event.0040 }
+		}
+		else_if = {
+			limit = {
+				category = inventory
+				exists = scope:owner
+				scope:owner = {
+					has_royal_court = yes
+					is_alive = yes
+				}
+				OR = {
+					artifact_slot_type = primary_armament
+					artifact_slot_type = armor
+					artifact_slot_type = regalia
+					artifact_slot_type = helmet
+				}
+			}
+			save_scope_as = this_artifact
+			scope:owner = {
+				trigger_event = {
+					id = artifact.1001
+					days = 0
+				}
+			}
+		}
+		else = {
+			trigger_event = {
+				id = artifact.0021
+				days = 0
+			}
+		}
+	}
+}

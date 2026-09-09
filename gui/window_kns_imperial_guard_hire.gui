@@ -26,7 +26,7 @@ window = {
 					text_single = {
 						layoutpolicy_horizontal = expanding
 						align = center
-						visible = "[GetScriptedGui('kns_gui_ig_hiring_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						visible = "[And( GetScriptedGui('kns_gui_ig_hiring_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_hiring').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
 						text = "kns_ig_hire_title_sword"
 						fontsize = 22
 					}
@@ -34,7 +34,7 @@ window = {
 					text_single = {
 						layoutpolicy_horizontal = expanding
 						align = center
-						visible = "[GetScriptedGui('kns_gui_ig_hiring_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						visible = "[And( GetScriptedGui('kns_gui_ig_hiring_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_hiring').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
 						text = "kns_ig_hire_title_axe"
 						fontsize = 22
 					}
@@ -42,7 +42,7 @@ window = {
 					text_single = {
 						layoutpolicy_horizontal = expanding
 						align = center
-						visible = "[GetScriptedGui('kns_gui_ig_hiring_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						visible = "[And( GetScriptedGui('kns_gui_ig_hiring_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_hiring').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
 						text = "kns_ig_hire_title_hammer"
 						fontsize = 22
 					}
@@ -50,7 +50,7 @@ window = {
 					text_single = {
 						layoutpolicy_horizontal = expanding
 						align = center
-						visible = "[GetScriptedGui('kns_gui_ig_hiring_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						visible = "[And( GetScriptedGui('kns_gui_ig_hiring_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_hiring').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
 						text = "kns_ig_hire_title_mace"
 						fontsize = 22
 					}
@@ -58,8 +58,48 @@ window = {
 					text_single = {
 						layoutpolicy_horizontal = expanding
 						align = center
-						visible = "[GetScriptedGui('kns_gui_ig_hiring_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+						visible = "[And( GetScriptedGui('kns_gui_ig_hiring_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_hiring').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
 						text = "kns_ig_hire_title_spear"
+						fontsize = 22
+					}
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center
+						visible = "[And( GetScriptedGui('kns_gui_ig_hiring_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_replacing').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+						text = "kns_ig_replace_title_sword"
+						fontsize = 22
+					}
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center
+						visible = "[And( GetScriptedGui('kns_gui_ig_hiring_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_replacing').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+						text = "kns_ig_replace_title_axe"
+						fontsize = 22
+					}
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center
+						visible = "[And( GetScriptedGui('kns_gui_ig_hiring_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_replacing').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+						text = "kns_ig_replace_title_hammer"
+						fontsize = 22
+					}
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center
+						visible = "[And( GetScriptedGui('kns_gui_ig_hiring_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_replacing').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+						text = "kns_ig_replace_title_mace"
+						fontsize = 22
+					}
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center
+						visible = "[And( GetScriptedGui('kns_gui_ig_hiring_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_replacing').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
+						text = "kns_ig_replace_title_spear"
 						fontsize = 22
 					}
 				}
@@ -80,43 +120,65 @@ window = {
 				text_single = {
 					layoutpolicy_horizontal = expanding
 					align = center
-					visible = "[GetScriptedGui('kns_gui_ig_hiring_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					visible = "[And( GetScriptedGui('kns_gui_ig_hiring_sword').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_hiring').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
 					text = "kns_ig_hire_kit_sword"
 				}
 
 				text_single = {
 					layoutpolicy_horizontal = expanding
 					align = center
-					visible = "[GetScriptedGui('kns_gui_ig_hiring_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					visible = "[And( GetScriptedGui('kns_gui_ig_hiring_axe').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_hiring').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
 					text = "kns_ig_hire_kit_axe"
 				}
 
 				text_single = {
 					layoutpolicy_horizontal = expanding
 					align = center
-					visible = "[GetScriptedGui('kns_gui_ig_hiring_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					visible = "[And( GetScriptedGui('kns_gui_ig_hiring_hammer').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_hiring').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
 					text = "kns_ig_hire_kit_hammer"
 				}
 
 				text_single = {
 					layoutpolicy_horizontal = expanding
 					align = center
-					visible = "[GetScriptedGui('kns_gui_ig_hiring_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					visible = "[And( GetScriptedGui('kns_gui_ig_hiring_mace').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_hiring').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
 					text = "kns_ig_hire_kit_mace"
 				}
 
 				text_single = {
 					layoutpolicy_horizontal = expanding
 					align = center
-					visible = "[GetScriptedGui('kns_gui_ig_hiring_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					visible = "[And( GetScriptedGui('kns_gui_ig_hiring_spear').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ), GetScriptedGui('kns_gui_ig_is_hiring').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
 					text = "kns_ig_hire_kit_spear"
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = center
+					visible = "[GetScriptedGui('kns_gui_ig_is_replacing').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					text = "kns_ig_replace_kit"
 				}
 			}
 
-			text_single = {
+			hbox = {
 				layoutpolicy_horizontal = expanding
-				text = "kns_ig_window_candidates_header"
-				default_format = "#high"
+				spacing = 8
+
+				button_standard = {
+					layoutpolicy_horizontal = expanding
+					text = "kns_ig_window_sort_prowess"
+					down = "[GetScriptedGui('kns_gui_ig_sort_prowess_is_shown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					onclick = "[GetScriptedGui('kns_gui_ig_sort_by_prowess').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					tooltip = "kns_ig_window_sort_prowess_tt"
+				}
+
+				button_standard = {
+					layoutpolicy_horizontal = expanding
+					text = "kns_ig_window_sort_potential"
+					down = "[GetScriptedGui('kns_gui_ig_sort_potential_is_shown').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					onclick = "[GetScriptedGui('kns_gui_ig_sort_by_potential').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					tooltip = "kns_ig_window_sort_potential_tt"
+				}
 			}
 
 			scrollbox = {
@@ -164,6 +226,11 @@ window = {
 
 									text_single = {
 										layoutpolicy_horizontal = expanding
+										text = "kns_ig_window_candidate_potential"
+									}
+
+									text_single = {
+										layoutpolicy_horizontal = expanding
 										text = "kns_ig_hire_selected"
 										visible = "[GetScriptedGui('kns_gui_ig_candidate_is_hire_focus').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
 									}
@@ -173,8 +240,18 @@ window = {
 									parentanchor = vcenter
 									text = "kns_ig_window_appoint"
 									tooltip = "kns_imperial_guard_kit_tt"
+									visible = "[GetScriptedGui('kns_gui_ig_is_hiring').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 									enabled = "[GetScriptedGui('kns_gui_ig_can_appoint').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
 									onclick = "[GetScriptedGui('kns_gui_ig_can_appoint').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+								}
+
+								button_standard = {
+									parentanchor = vcenter
+									text = "kns_ig_window_replace"
+									tooltip = "kns_ig_replace_kit_tt"
+									visible = "[GetScriptedGui('kns_gui_ig_is_replacing').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+									enabled = "[GetScriptedGui('kns_gui_ig_can_replace').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+									onclick = "[GetScriptedGui('kns_gui_ig_can_replace').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
 								}
 							}
 						}

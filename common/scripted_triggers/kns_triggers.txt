@@ -212,6 +212,26 @@ kns_can_grant_knighthood_as_ruler_trigger = {
 	kns_practices_knighthood_trigger = yes
 }
 
+kns_ig_kit_holder_keeps_by_vice_trigger = {
+	OR = {
+		has_trait = greedy
+		has_trait = ambitious
+		has_trait = deceitful
+		has_trait = vengeful
+		has_trait = callous
+		has_trait = arbitrary
+		has_trait = sadistic
+		has_trait = wrathful
+		has_trait = paranoid
+	}
+}
+
+kns_ig_kit_holder_returns_trigger = {
+	kns_practices_knighthood_trigger = yes
+	$GUARD$ = { kns_practices_knighthood_trigger = yes }
+	kns_ig_kit_holder_keeps_by_vice_trigger = no
+}
+
 kns_is_king_or_emperor_trigger = {
 	is_landed = yes
 	highest_held_title_tier >= tier_kingdom
@@ -548,6 +568,7 @@ kns_can_see_imperial_olympic_decisions_trigger = {
 	is_playable_character = yes
 	is_ai = no
 	kns_is_emperor_trigger = yes
+	kns_practices_knighthood_trigger = yes
 }
 
 kns_can_host_imperial_olympic_trigger = {
@@ -875,6 +896,7 @@ kns_can_see_imperial_guard_decisions_trigger = {
 	is_playable_character = yes
 	is_ai = no
 	kns_is_emperor_trigger = yes
+	kns_practices_knighthood_trigger = yes
 }
 
 kns_is_imperial_guard_trigger = {
@@ -890,8 +912,64 @@ kns_is_imperial_guard_of_trigger = {
 	var:kns_imperial_guard_liege = $EMPEROR$
 }
 
+kns_ig_kit_holder_is_fellow_guard_trigger = {
+	kns_is_imperial_guard_trigger = yes
+	$GUARD$ = { kns_is_imperial_guard_trigger = yes }
+	exists = var:kns_imperial_guard_liege
+	$GUARD$ = { exists = var:kns_imperial_guard_liege }
+	var:kns_imperial_guard_liege = $GUARD$.var:kns_imperial_guard_liege
+}
+
+kns_ig_kit_holder_is_clergy_trigger = {
+	OR = {
+		is_clergy = yes
+		has_trait = devoted
+		has_trait = order_member
+		is_theocratic_lessee = yes
+	}
+}
+
+kns_ig_kit_holder_is_imperial_dynasty_family_trigger = {
+	OR = {
+		is_close_family_of = $GUARD$
+		AND = {
+			exists = dynasty
+			$GUARD$ = {
+				exists = dynasty
+				dynasty = prev.dynasty
+			}
+		}
+		AND = {
+			$GUARD$ = { exists = var:kns_imperial_guard_liege }
+			is_close_family_of = $GUARD$.var:kns_imperial_guard_liege
+		}
+		AND = {
+			exists = dynasty
+			$GUARD$ = { exists = var:kns_imperial_guard_liege }
+			$GUARD$.var:kns_imperial_guard_liege = {
+				exists = dynasty
+				dynasty = prev.dynasty
+			}
+		}
+	}
+}
+
+kns_ig_kit_holder_gives_back_quietly_trigger = {
+	OR = {
+		kns_ig_kit_holder_is_fellow_guard_trigger = { GUARD = $GUARD$ }
+		kns_ig_kit_holder_is_clergy_trigger = yes
+		kns_ig_kit_holder_is_imperial_dynasty_family_trigger = { GUARD = $GUARD$ }
+	}
+}
+
 kns_emperor_has_imperial_guard_slot_trigger = {
 	num_of_relation_kns_imperial_guard < 5
+}
+
+kns_emperor_has_free_accolade_slot_trigger = {
+	has_dlc_feature = accolades
+	max_accolades > 0
+	num_accolades < max_accolades
 }
 
 kns_imperial_guard_hire_post_is_vacant_trigger = {
@@ -919,14 +997,77 @@ kns_imperial_guard_hire_post_is_vacant_trigger = {
 	}
 }
 
+kns_ig_candidate_is_knight_trigger = {
+	OR = {
+		kns_is_knight_trigger = yes
+		is_knight = yes
+	}
+}
+
+kns_ig_is_domain_baron_knight_trigger = {
+	highest_held_title_tier = tier_barony
+	is_vassal_or_below_of = $EMPEROR$
+	kns_ig_candidate_is_knight_trigger = yes
+}
+
+kns_ig_serves_in_emperor_domain_trigger = {
+	OR = {
+		is_courtier_of = $EMPEROR$
+		is_knight_of = $EMPEROR$
+		AND = {
+			exists = liege
+			OR = {
+				liege = $EMPEROR$
+				liege = { is_vassal_or_below_of = $EMPEROR$ }
+			}
+		}
+	}
+}
+
 kns_can_be_appointed_imperial_guard_by_trigger = {
-	kns_is_knight_trigger = yes
-	is_landed = no
+	kns_ig_candidate_is_knight_trigger = yes
+	kns_practices_knighthood_trigger = yes
 	is_adult = yes
 	is_alive = yes
 	is_imprisoned = no
 	NOT = { has_trait = incapable }
-	is_courtier_of = $EMPEROR$
 	NOT = { this = $EMPEROR$ }
 	NOT = { kns_is_imperial_guard_trigger = yes }
+	trigger_if = {
+		limit = { is_landed = yes }
+		kns_ig_is_domain_baron_knight_trigger = { EMPEROR = $EMPEROR$ }
+	}
+	trigger_else = {
+		kns_ig_serves_in_emperor_domain_trigger = { EMPEROR = $EMPEROR$ }
+	}
+}
+
+kns_ig_may_remain_landed_guard_trigger = {
+	highest_held_title_tier = tier_barony
+}
+
+kns_ig_knight_matches_accolade_post_trigger = {
+	trigger_if = {
+		limit = { $ACCOLADE$ = { var:kns_ig_weapon = 1 } }
+		has_character_flag = kns_ig_post_axe
+	}
+	trigger_else_if = {
+		limit = { $ACCOLADE$ = { var:kns_ig_weapon = 2 } }
+		has_character_flag = kns_ig_post_hammer
+	}
+	trigger_else_if = {
+		limit = { $ACCOLADE$ = { var:kns_ig_weapon = 3 } }
+		has_character_flag = kns_ig_post_sword
+	}
+	trigger_else_if = {
+		limit = { $ACCOLADE$ = { var:kns_ig_weapon = 4 } }
+		has_character_flag = kns_ig_post_spear
+	}
+	trigger_else_if = {
+		limit = { $ACCOLADE$ = { var:kns_ig_weapon = 5 } }
+		has_character_flag = kns_ig_post_mace
+	}
+	trigger_else = {
+		always = no
+	}
 }

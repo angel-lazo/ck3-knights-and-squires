@@ -32,16 +32,12 @@ kns_appoint_imperial_guard_interaction = {
 		}
 		scope:recipient = {
 			custom_tooltip = {
-				text = kns_imperial_guard_unlanded_tt
-				is_landed = no
-			}
-			custom_tooltip = {
 				text = kns_imperial_guard_courtier_tt
-				is_courtier_of = scope:actor
+				kns_can_be_appointed_imperial_guard_by_trigger = { EMPEROR = scope:actor }
 			}
 			custom_tooltip = {
 				text = kns_imperial_guard_knight_tt
-				kns_is_knight_trigger = yes
+				kns_ig_candidate_is_knight_trigger = yes
 			}
 		}
 	}
@@ -96,6 +92,7 @@ kns_dismiss_imperial_guard_interaction = {
 		}
 		scope:recipient = {
 			kns_is_imperial_guard_of_trigger = { EMPEROR = scope:actor }
+			is_acclaimed = no
 		}
 	}
 

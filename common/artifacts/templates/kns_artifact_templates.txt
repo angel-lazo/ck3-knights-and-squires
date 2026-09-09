@@ -37,7 +37,7 @@ kns_imperial_guard_kit_template = {
 	}
 
 	can_repair = {
-		always = yes
+		always = no
 	}
 
 	fallback = {

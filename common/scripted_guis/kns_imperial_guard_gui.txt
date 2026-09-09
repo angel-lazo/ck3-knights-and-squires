@@ -70,6 +70,7 @@ kns_gui_ig_open_hire_axe = {
 		always = yes
 	}
 	effect = {
+		remove_variable = kns_ig_replacing
 		remove_variable = kns_ig_hire_focus
 		kns_open_imperial_guard_hire_effect = { WEAPON = axe }
 	}
@@ -84,6 +85,7 @@ kns_gui_ig_open_hire_hammer = {
 		always = yes
 	}
 	effect = {
+		remove_variable = kns_ig_replacing
 		remove_variable = kns_ig_hire_focus
 		kns_open_imperial_guard_hire_effect = { WEAPON = hammer }
 	}
@@ -98,6 +100,7 @@ kns_gui_ig_open_hire_sword = {
 		always = yes
 	}
 	effect = {
+		remove_variable = kns_ig_replacing
 		remove_variable = kns_ig_hire_focus
 		kns_open_imperial_guard_hire_effect = { WEAPON = sword }
 	}
@@ -112,6 +115,7 @@ kns_gui_ig_open_hire_spear = {
 		always = yes
 	}
 	effect = {
+		remove_variable = kns_ig_replacing
 		remove_variable = kns_ig_hire_focus
 		kns_open_imperial_guard_hire_effect = { WEAPON = spear }
 	}
@@ -126,6 +130,7 @@ kns_gui_ig_open_hire_mace = {
 		always = yes
 	}
 	effect = {
+		remove_variable = kns_ig_replacing
 		remove_variable = kns_ig_hire_focus
 		kns_open_imperial_guard_hire_effect = { WEAPON = mace }
 	}
@@ -163,6 +168,135 @@ kns_gui_ig_hiring_mace = {
 	scope = character
 	is_shown = {
 		has_variable = kns_ig_hiring_mace
+	}
+}
+
+kns_gui_ig_is_hiring = {
+	scope = character
+	is_shown = {
+		NOT = { exists = var:kns_ig_replacing }
+	}
+}
+
+kns_gui_ig_is_replacing = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_replacing
+	}
+}
+
+kns_gui_ig_sort_prowess_is_shown = {
+	scope = character
+	is_shown = {
+		NOT = { exists = var:kns_ig_sort_potential }
+	}
+}
+
+kns_gui_ig_sort_potential_is_shown = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_sort_potential
+	}
+}
+
+kns_gui_ig_sort_by_prowess = {
+	scope = character
+	effect = {
+		remove_variable = kns_ig_sort_potential
+		kns_rebuild_imperial_guard_window_effect = yes
+	}
+}
+
+kns_gui_ig_sort_by_potential = {
+	scope = character
+	effect = {
+		set_variable = kns_ig_sort_potential
+		kns_rebuild_imperial_guard_window_effect = yes
+	}
+}
+
+kns_gui_ig_open_replace_axe = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_axe
+		var:kns_ig_slot_axe = { is_acclaimed = yes }
+	}
+	is_valid = {
+		is_imprisoned = no
+		exists = var:kns_ig_slot_axe
+	}
+	effect = {
+		set_variable = kns_ig_replacing
+		remove_variable = kns_ig_hire_focus
+		kns_open_imperial_guard_hire_effect = { WEAPON = axe }
+	}
+}
+
+kns_gui_ig_open_replace_hammer = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_hammer
+		var:kns_ig_slot_hammer = { is_acclaimed = yes }
+	}
+	is_valid = {
+		is_imprisoned = no
+		exists = var:kns_ig_slot_hammer
+	}
+	effect = {
+		set_variable = kns_ig_replacing
+		remove_variable = kns_ig_hire_focus
+		kns_open_imperial_guard_hire_effect = { WEAPON = hammer }
+	}
+}
+
+kns_gui_ig_open_replace_sword = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_sword
+		var:kns_ig_slot_sword = { is_acclaimed = yes }
+	}
+	is_valid = {
+		is_imprisoned = no
+		exists = var:kns_ig_slot_sword
+	}
+	effect = {
+		set_variable = kns_ig_replacing
+		remove_variable = kns_ig_hire_focus
+		kns_open_imperial_guard_hire_effect = { WEAPON = sword }
+	}
+}
+
+kns_gui_ig_open_replace_spear = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_spear
+		var:kns_ig_slot_spear = { is_acclaimed = yes }
+	}
+	is_valid = {
+		is_imprisoned = no
+		exists = var:kns_ig_slot_spear
+	}
+	effect = {
+		set_variable = kns_ig_replacing
+		remove_variable = kns_ig_hire_focus
+		kns_open_imperial_guard_hire_effect = { WEAPON = spear }
+	}
+}
+
+kns_gui_ig_open_replace_mace = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_mace
+		var:kns_ig_slot_mace = { is_acclaimed = yes }
+	}
+	is_valid = {
+		is_imprisoned = no
+		exists = var:kns_ig_slot_mace
+	}
+	effect = {
+		set_variable = kns_ig_replacing
+		remove_variable = kns_ig_hire_focus
+		kns_open_imperial_guard_hire_effect = { WEAPON = mace }
 	}
 }
 
@@ -218,6 +352,10 @@ kns_gui_ig_open_attire_spear = {
 
 kns_gui_ig_dismiss_sword = {
 	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_sword
+		var:kns_ig_slot_sword = { is_acclaimed = no }
+	}
 	is_valid = {
 		is_imprisoned = no
 		exists = var:kns_ig_slot_sword
@@ -230,6 +368,10 @@ kns_gui_ig_dismiss_sword = {
 
 kns_gui_ig_dismiss_axe = {
 	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_axe
+		var:kns_ig_slot_axe = { is_acclaimed = no }
+	}
 	is_valid = {
 		is_imprisoned = no
 		exists = var:kns_ig_slot_axe
@@ -242,6 +384,10 @@ kns_gui_ig_dismiss_axe = {
 
 kns_gui_ig_dismiss_hammer = {
 	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_hammer
+		var:kns_ig_slot_hammer = { is_acclaimed = no }
+	}
 	is_valid = {
 		is_imprisoned = no
 		exists = var:kns_ig_slot_hammer
@@ -254,6 +400,10 @@ kns_gui_ig_dismiss_hammer = {
 
 kns_gui_ig_dismiss_mace = {
 	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_mace
+		var:kns_ig_slot_mace = { is_acclaimed = no }
+	}
 	is_valid = {
 		is_imprisoned = no
 		exists = var:kns_ig_slot_mace
@@ -266,6 +416,10 @@ kns_gui_ig_dismiss_mace = {
 
 kns_gui_ig_dismiss_spear = {
 	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_spear
+		var:kns_ig_slot_spear = { is_acclaimed = no }
+	}
 	is_valid = {
 		is_imprisoned = no
 		exists = var:kns_ig_slot_spear
@@ -273,6 +427,191 @@ kns_gui_ig_dismiss_spear = {
 	effect = {
 		kns_dismiss_imperial_guard_effect = { KNIGHT = var:kns_ig_slot_spear }
 		kns_rebuild_imperial_guard_window_effect = yes
+	}
+}
+
+kns_gui_ig_bind_axe = {
+	scope = character
+	is_shown = {
+		has_dlc_feature = accolades
+		exists = var:kns_ig_slot_axe
+		var:kns_ig_slot_axe = {
+			is_acclaimed = no
+		}
+	}
+	is_valid = {
+		custom_tooltip = {
+			text = kns_ig_bind_need_slot_tt
+			kns_emperor_has_free_accolade_slot_trigger = yes
+		}
+	}
+	effect = {
+		kns_ig_bind_accolade_effect = { KNIGHT = var:kns_ig_slot_axe }
+	}
+}
+
+kns_gui_ig_bind_hammer = {
+	scope = character
+	is_shown = {
+		has_dlc_feature = accolades
+		exists = var:kns_ig_slot_hammer
+		var:kns_ig_slot_hammer = {
+			is_acclaimed = no
+		}
+	}
+	is_valid = {
+		custom_tooltip = {
+			text = kns_ig_bind_need_slot_tt
+			kns_emperor_has_free_accolade_slot_trigger = yes
+		}
+	}
+	effect = {
+		kns_ig_bind_accolade_effect = { KNIGHT = var:kns_ig_slot_hammer }
+	}
+}
+
+kns_gui_ig_bind_sword = {
+	scope = character
+	is_shown = {
+		has_dlc_feature = accolades
+		exists = var:kns_ig_slot_sword
+		var:kns_ig_slot_sword = {
+			is_acclaimed = no
+		}
+	}
+	is_valid = {
+		custom_tooltip = {
+			text = kns_ig_bind_need_slot_tt
+			kns_emperor_has_free_accolade_slot_trigger = yes
+		}
+	}
+	effect = {
+		kns_ig_bind_accolade_effect = { KNIGHT = var:kns_ig_slot_sword }
+	}
+}
+
+kns_gui_ig_bind_spear = {
+	scope = character
+	is_shown = {
+		has_dlc_feature = accolades
+		exists = var:kns_ig_slot_spear
+		var:kns_ig_slot_spear = {
+			is_acclaimed = no
+		}
+	}
+	is_valid = {
+		custom_tooltip = {
+			text = kns_ig_bind_need_slot_tt
+			kns_emperor_has_free_accolade_slot_trigger = yes
+		}
+	}
+	effect = {
+		kns_ig_bind_accolade_effect = { KNIGHT = var:kns_ig_slot_spear }
+	}
+}
+
+kns_gui_ig_bind_mace = {
+	scope = character
+	is_shown = {
+		has_dlc_feature = accolades
+		exists = var:kns_ig_slot_mace
+		var:kns_ig_slot_mace = {
+			is_acclaimed = no
+		}
+	}
+	is_valid = {
+		custom_tooltip = {
+			text = kns_ig_bind_need_slot_tt
+			kns_emperor_has_free_accolade_slot_trigger = yes
+		}
+	}
+	effect = {
+		kns_ig_bind_accolade_effect = { KNIGHT = var:kns_ig_slot_mace }
+	}
+}
+
+kns_gui_ig_rename_axe = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_axe
+		var:kns_ig_slot_axe = {
+			is_acclaimed = yes
+		}
+	}
+	is_valid = {
+		is_imprisoned = no
+		exists = var:kns_ig_slot_axe
+	}
+	effect = {
+		kns_ig_rename_accolade_title_effect = { KNIGHT = var:kns_ig_slot_axe }
+	}
+}
+
+kns_gui_ig_rename_hammer = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_hammer
+		var:kns_ig_slot_hammer = {
+			is_acclaimed = yes
+		}
+	}
+	is_valid = {
+		is_imprisoned = no
+		exists = var:kns_ig_slot_hammer
+	}
+	effect = {
+		kns_ig_rename_accolade_title_effect = { KNIGHT = var:kns_ig_slot_hammer }
+	}
+}
+
+kns_gui_ig_rename_sword = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_sword
+		var:kns_ig_slot_sword = {
+			is_acclaimed = yes
+		}
+	}
+	is_valid = {
+		is_imprisoned = no
+		exists = var:kns_ig_slot_sword
+	}
+	effect = {
+		kns_ig_rename_accolade_title_effect = { KNIGHT = var:kns_ig_slot_sword }
+	}
+}
+
+kns_gui_ig_rename_spear = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_spear
+		var:kns_ig_slot_spear = {
+			is_acclaimed = yes
+		}
+	}
+	is_valid = {
+		is_imprisoned = no
+		exists = var:kns_ig_slot_spear
+	}
+	effect = {
+		kns_ig_rename_accolade_title_effect = { KNIGHT = var:kns_ig_slot_spear }
+	}
+}
+
+kns_gui_ig_rename_mace = {
+	scope = character
+	is_shown = {
+		exists = var:kns_ig_slot_mace
+		var:kns_ig_slot_mace = {
+			is_acclaimed = yes
+		}
+	}
+	is_valid = {
+		is_imprisoned = no
+		exists = var:kns_ig_slot_mace
+	}
+	effect = {
+		kns_ig_rename_accolade_title_effect = { KNIGHT = var:kns_ig_slot_mace }
 	}
 }
 
@@ -340,6 +679,7 @@ kns_gui_ig_can_appoint = {
 	}
 	is_valid = {
 		is_imprisoned = no
+		NOT = { exists = var:kns_ig_replacing }
 		gold >= 1500
 		kns_emperor_has_imperial_guard_slot_trigger = yes
 		scope:target = {
@@ -415,6 +755,36 @@ kns_gui_ig_can_appoint = {
 			type = event_toast_effect_good
 			title = kns_appoint_imperial_guard_toast
 			custom_tooltip = kns_appoint_imperial_guard_toast.tt
+			left_icon = scope:target
+		}
+		kns_close_imperial_guard_hire_effect = yes
+		kns_rebuild_imperial_guard_window_effect = yes
+	}
+}
+
+kns_gui_ig_can_replace = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_valid = {
+		is_imprisoned = no
+		exists = var:kns_ig_replacing
+		scope:target = {
+			kns_can_be_appointed_imperial_guard_by_trigger = { EMPEROR = root }
+		}
+	}
+	effect = {
+		custom_tooltip = kns_ig_replace_kit_tt
+		kns_ig_replace_hiring_post_effect = { KNIGHT = scope:target }
+		set_variable = {
+			name = kns_ig_attire_target
+			value = scope:target
+		}
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = kns_ig_replace_toast
+			custom_tooltip = kns_ig_replace_toast.tt
 			left_icon = scope:target
 		}
 		kns_close_imperial_guard_hire_effect = yes

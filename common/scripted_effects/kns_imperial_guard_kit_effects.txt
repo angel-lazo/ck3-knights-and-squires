@@ -1,0 +1,727 @@
+# Imperial Guard kit is one bound weapon + plate per post.
+# kns_ig_kit_kind: 1 weapon, 2 armor. kns_ig_kit_post: 1 axe, 2 hammer, 3 sword, 4 spear, 5 mace.
+
+kns_ig_quiet_set_artifact_owner_effect = {
+	set_variable = { name = kns_ig_quiet_move value = yes }
+	set_owner = $OWNER$
+}
+
+kns_ig_stamp_kit_post_from_guard_effect = {
+	if = {
+		limit = { $GUARD$ = { has_character_flag = kns_ig_post_axe } }
+		set_variable = { name = kns_ig_kit_post value = 1 }
+	}
+	else_if = {
+		limit = { $GUARD$ = { has_character_flag = kns_ig_post_hammer } }
+		set_variable = { name = kns_ig_kit_post value = 2 }
+	}
+	else_if = {
+		limit = { $GUARD$ = { has_character_flag = kns_ig_post_sword } }
+		set_variable = { name = kns_ig_kit_post value = 3 }
+	}
+	else_if = {
+		limit = { $GUARD$ = { has_character_flag = kns_ig_post_spear } }
+		set_variable = { name = kns_ig_kit_post value = 4 }
+	}
+	else_if = {
+		limit = { $GUARD$ = { has_character_flag = kns_ig_post_mace } }
+		set_variable = { name = kns_ig_kit_post value = 5 }
+	}
+}
+
+kns_ig_stamp_kit_artifact_effect = {
+	set_variable = { name = kns_ig_kit_kind value = $KIND$ }
+	set_variable = {
+		name = kns_ig_kit_guard
+		value = $GUARD$
+	}
+	set_variable = {
+		name = kns_ig_kit_emperor
+		value = $EMPEROR$
+	}
+	kns_ig_stamp_kit_post_from_guard_effect = { GUARD = $GUARD$ }
+}
+
+kns_ig_restore_kit_durability_effect = {
+	add_durability = {
+		value = artifact_max_durability
+		subtract = artifact_durability
+	}
+}
+
+kns_ig_restore_if_artifact_var_effect = {
+	if = {
+		limit = { exists = var:$VAR$ }
+		var:$VAR$ = { kns_ig_restore_kit_durability_effect = yes }
+	}
+}
+
+kns_ig_restore_knight_kit_durability_effect = {
+	kns_ig_restore_if_artifact_var_effect = { VAR = kns_ig_kit_weapon }
+	kns_ig_restore_if_artifact_var_effect = { VAR = kns_ig_kit_armor }
+}
+
+kns_ig_restore_emperor_post_kit_durability_effect = {
+	kns_ig_restore_if_artifact_var_effect = { VAR = kns_ig_post_weapon_axe }
+	kns_ig_restore_if_artifact_var_effect = { VAR = kns_ig_post_weapon_hammer }
+	kns_ig_restore_if_artifact_var_effect = { VAR = kns_ig_post_weapon_sword }
+	kns_ig_restore_if_artifact_var_effect = { VAR = kns_ig_post_weapon_spear }
+	kns_ig_restore_if_artifact_var_effect = { VAR = kns_ig_post_weapon_mace }
+	kns_ig_restore_if_artifact_var_effect = { VAR = kns_ig_post_armor_axe }
+	kns_ig_restore_if_artifact_var_effect = { VAR = kns_ig_post_armor_hammer }
+	kns_ig_restore_if_artifact_var_effect = { VAR = kns_ig_post_armor_sword }
+	kns_ig_restore_if_artifact_var_effect = { VAR = kns_ig_post_armor_spear }
+	kns_ig_restore_if_artifact_var_effect = { VAR = kns_ig_post_armor_mace }
+}
+
+kns_ig_name_unbound_kit_armor_effect = {
+	if = {
+		limit = {
+			exists = var:kns_ig_kit_armor
+			NOT = { exists = var:kns_ig_acc_name_idx }
+		}
+		if = {
+			limit = { has_character_flag = kns_ig_post_axe }
+			var:kns_ig_kit_armor = { set_artifact_name = kns_art_imperial_guard_axe_armor }
+		}
+		else_if = {
+			limit = { has_character_flag = kns_ig_post_hammer }
+			var:kns_ig_kit_armor = { set_artifact_name = kns_art_imperial_guard_hammer_armor }
+		}
+		else_if = {
+			limit = { has_character_flag = kns_ig_post_sword }
+			var:kns_ig_kit_armor = { set_artifact_name = kns_art_imperial_guard_sword_armor }
+		}
+		else_if = {
+			limit = { has_character_flag = kns_ig_post_spear }
+			var:kns_ig_kit_armor = { set_artifact_name = kns_art_imperial_guard_spear_armor }
+		}
+		else_if = {
+			limit = { has_character_flag = kns_ig_post_mace }
+			var:kns_ig_kit_armor = { set_artifact_name = kns_art_imperial_guard_mace_armor }
+		}
+	}
+}
+
+kns_ig_try_restore_kit_if_stamped_effect = {
+	if = {
+		limit = { exists = var:kns_ig_kit_kind }
+		kns_ig_restore_kit_durability_effect = yes
+	}
+}
+
+kns_ig_copy_post_kit_vars_to_knight_effect = {
+	if = {
+		limit = { $EMPEROR$ = { exists = var:kns_ig_post_weapon_$WEAPON$ } }
+		set_variable = {
+			name = kns_ig_kit_weapon
+			value = $EMPEROR$.var:kns_ig_post_weapon_$WEAPON$
+		}
+	}
+	if = {
+		limit = { $EMPEROR$ = { exists = var:kns_ig_post_armor_$WEAPON$ } }
+		set_variable = {
+			name = kns_ig_kit_armor
+			value = $EMPEROR$.var:kns_ig_post_armor_$WEAPON$
+		}
+	}
+}
+
+kns_ig_link_knight_kit_vars_from_post_effect = {
+	if = {
+		limit = { has_character_flag = kns_ig_post_axe }
+		kns_ig_copy_post_kit_vars_to_knight_effect = { EMPEROR = $EMPEROR$ WEAPON = axe }
+	}
+	else_if = {
+		limit = { has_character_flag = kns_ig_post_hammer }
+		kns_ig_copy_post_kit_vars_to_knight_effect = { EMPEROR = $EMPEROR$ WEAPON = hammer }
+	}
+	else_if = {
+		limit = { has_character_flag = kns_ig_post_sword }
+		kns_ig_copy_post_kit_vars_to_knight_effect = { EMPEROR = $EMPEROR$ WEAPON = sword }
+	}
+	else_if = {
+		limit = { has_character_flag = kns_ig_post_spear }
+		kns_ig_copy_post_kit_vars_to_knight_effect = { EMPEROR = $EMPEROR$ WEAPON = spear }
+	}
+	else_if = {
+		limit = { has_character_flag = kns_ig_post_mace }
+		kns_ig_copy_post_kit_vars_to_knight_effect = { EMPEROR = $EMPEROR$ WEAPON = mace }
+	}
+}
+
+kns_ig_clear_invalid_post_kit_var_effect = {
+	if = {
+		limit = {
+			exists = var:$VAR$
+			NOT = { var:$VAR$ = { exists = var:kns_ig_kit_kind } }
+		}
+		remove_variable = $VAR$
+	}
+}
+
+kns_ig_relink_or_queue_duplicate_kit_slot_effect = {
+	if = {
+		limit = {
+			var:kns_ig_kit_kind = $KIND$
+			var:kns_ig_kit_post = $POST$
+		}
+		if = {
+			limit = {
+				$EMPEROR$ = { exists = var:kns_ig_post_$SLOT$ }
+				NOT = { this = $EMPEROR$.var:kns_ig_post_$SLOT$ }
+			}
+			add_to_list = kns_ig_dup_kit
+		}
+		else_if = {
+			limit = { $EMPEROR$ = { NOT = { exists = var:kns_ig_post_$SLOT$ } } }
+			$EMPEROR$ = {
+				set_variable = {
+					name = kns_ig_post_$SLOT$
+					value = prev
+				}
+			}
+		}
+	}
+}
+
+kns_ig_relink_or_queue_duplicate_kit_artifact_effect = {
+	kns_ig_relink_or_queue_duplicate_kit_slot_effect = { EMPEROR = $EMPEROR$ KIND = 1 POST = 1 SLOT = weapon_axe }
+	kns_ig_relink_or_queue_duplicate_kit_slot_effect = { EMPEROR = $EMPEROR$ KIND = 1 POST = 2 SLOT = weapon_hammer }
+	kns_ig_relink_or_queue_duplicate_kit_slot_effect = { EMPEROR = $EMPEROR$ KIND = 1 POST = 3 SLOT = weapon_sword }
+	kns_ig_relink_or_queue_duplicate_kit_slot_effect = { EMPEROR = $EMPEROR$ KIND = 1 POST = 4 SLOT = weapon_spear }
+	kns_ig_relink_or_queue_duplicate_kit_slot_effect = { EMPEROR = $EMPEROR$ KIND = 1 POST = 5 SLOT = weapon_mace }
+	kns_ig_relink_or_queue_duplicate_kit_slot_effect = { EMPEROR = $EMPEROR$ KIND = 2 POST = 1 SLOT = armor_axe }
+	kns_ig_relink_or_queue_duplicate_kit_slot_effect = { EMPEROR = $EMPEROR$ KIND = 2 POST = 2 SLOT = armor_hammer }
+	kns_ig_relink_or_queue_duplicate_kit_slot_effect = { EMPEROR = $EMPEROR$ KIND = 2 POST = 3 SLOT = armor_sword }
+	kns_ig_relink_or_queue_duplicate_kit_slot_effect = { EMPEROR = $EMPEROR$ KIND = 2 POST = 4 SLOT = armor_spear }
+	kns_ig_relink_or_queue_duplicate_kit_slot_effect = { EMPEROR = $EMPEROR$ KIND = 2 POST = 5 SLOT = armor_mace }
+}
+
+kns_ig_scan_character_kit_artifacts_effect = {
+	$CHAR$ = {
+		every_character_artifact = {
+			limit = {
+				exists = var:kns_ig_kit_emperor
+				var:kns_ig_kit_emperor = $EMPEROR$
+				exists = var:kns_ig_kit_kind
+				exists = var:kns_ig_kit_post
+			}
+			kns_ig_relink_or_queue_duplicate_kit_artifact_effect = { EMPEROR = $EMPEROR$ }
+		}
+	}
+}
+
+kns_ig_relink_and_dedupe_all_post_kit_effect = {
+	$EMPEROR$ = {
+		kns_ig_clear_invalid_post_kit_var_effect = { VAR = kns_ig_post_weapon_axe }
+		kns_ig_clear_invalid_post_kit_var_effect = { VAR = kns_ig_post_weapon_hammer }
+		kns_ig_clear_invalid_post_kit_var_effect = { VAR = kns_ig_post_weapon_sword }
+		kns_ig_clear_invalid_post_kit_var_effect = { VAR = kns_ig_post_weapon_spear }
+		kns_ig_clear_invalid_post_kit_var_effect = { VAR = kns_ig_post_weapon_mace }
+		kns_ig_clear_invalid_post_kit_var_effect = { VAR = kns_ig_post_armor_axe }
+		kns_ig_clear_invalid_post_kit_var_effect = { VAR = kns_ig_post_armor_hammer }
+		kns_ig_clear_invalid_post_kit_var_effect = { VAR = kns_ig_post_armor_sword }
+		kns_ig_clear_invalid_post_kit_var_effect = { VAR = kns_ig_post_armor_spear }
+		kns_ig_clear_invalid_post_kit_var_effect = { VAR = kns_ig_post_armor_mace }
+	}
+	kns_ig_scan_character_kit_artifacts_effect = {
+		CHAR = $EMPEROR$
+		EMPEROR = $EMPEROR$
+	}
+	$EMPEROR$ = {
+		every_relation = {
+			type = kns_imperial_guard
+			limit = { is_alive = yes }
+			kns_ig_scan_character_kit_artifacts_effect = {
+				CHAR = this
+				EMPEROR = $EMPEROR$
+			}
+		}
+	}
+	every_in_list = {
+		list = kns_ig_dup_kit
+		destroy_artifact = yes
+	}
+}
+
+kns_ig_clear_knight_kit_vars_effect = {
+	remove_variable = kns_ig_kit_weapon
+	remove_variable = kns_ig_kit_armor
+	remove_character_flag = kns_ig_kit_recovery_lock
+}
+
+kns_ig_equip_kit_artifact_to_effect = {
+	$CHAR$ = { save_scope_as = kns_kit_owner }
+	kns_force_equip_created_artifact_to_kit_owner_effect = yes
+}
+
+kns_ig_bind_knight_kit_to_post_effect = {
+	if = {
+		limit = { $KNIGHT$ = { exists = var:kns_ig_kit_weapon } }
+		$EMPEROR$ = {
+			set_variable = {
+				name = kns_ig_post_weapon_$WEAPON$
+				value = $KNIGHT$.var:kns_ig_kit_weapon
+			}
+		}
+		$KNIGHT$.var:kns_ig_kit_weapon = {
+			kns_ig_stamp_kit_artifact_effect = {
+				KIND = 1
+				GUARD = $KNIGHT$
+				EMPEROR = $EMPEROR$
+			}
+		}
+	}
+	if = {
+		limit = { $KNIGHT$ = { exists = var:kns_ig_kit_armor } }
+		$EMPEROR$ = {
+			set_variable = {
+				name = kns_ig_post_armor_$WEAPON$
+				value = $KNIGHT$.var:kns_ig_kit_armor
+			}
+		}
+		$KNIGHT$.var:kns_ig_kit_armor = {
+			kns_ig_stamp_kit_artifact_effect = {
+				KIND = 2
+				GUARD = $KNIGHT$
+				EMPEROR = $EMPEROR$
+			}
+		}
+	}
+}
+
+kns_ig_transfer_post_kit_to_knight_effect = {
+	if = {
+		limit = { $EMPEROR$ = { exists = var:kns_ig_post_weapon_$WEAPON$ } }
+		$EMPEROR$.var:kns_ig_post_weapon_$WEAPON$ = {
+			kns_ig_quiet_set_artifact_owner_effect = { OWNER = $KNIGHT$ }
+			kns_ig_stamp_kit_artifact_effect = {
+				KIND = 1
+				GUARD = $KNIGHT$
+				EMPEROR = $EMPEROR$
+			}
+			kns_ig_equip_kit_artifact_to_effect = { CHAR = $KNIGHT$ }
+		}
+		$KNIGHT$ = {
+			set_variable = {
+				name = kns_ig_kit_weapon
+				value = $EMPEROR$.var:kns_ig_post_weapon_$WEAPON$
+			}
+		}
+	}
+	if = {
+		limit = { $EMPEROR$ = { exists = var:kns_ig_post_armor_$WEAPON$ } }
+		$EMPEROR$.var:kns_ig_post_armor_$WEAPON$ = {
+			kns_ig_quiet_set_artifact_owner_effect = { OWNER = $KNIGHT$ }
+			kns_ig_stamp_kit_artifact_effect = {
+				KIND = 2
+				GUARD = $KNIGHT$
+				EMPEROR = $EMPEROR$
+			}
+			kns_ig_equip_kit_artifact_to_effect = { CHAR = $KNIGHT$ }
+		}
+		$KNIGHT$ = {
+			set_variable = {
+				name = kns_ig_kit_armor
+				value = $EMPEROR$.var:kns_ig_post_armor_$WEAPON$
+			}
+		}
+	}
+}
+
+kns_ig_give_or_create_post_kit_effect = {
+	kns_ig_relink_and_dedupe_all_post_kit_effect = { EMPEROR = $EMPEROR$ }
+	kns_ig_transfer_post_kit_to_knight_effect = {
+		KNIGHT = $KNIGHT$
+		EMPEROR = $EMPEROR$
+		WEAPON = $WEAPON$
+	}
+	if = {
+		limit = { $EMPEROR$ = { NOT = { exists = var:kns_ig_post_weapon_$WEAPON$ } } }
+		$KNIGHT$ = {
+			save_scope_as = kns_kit_owner
+			$EMPEROR$ = { save_scope_as = kns_kit_smith }
+			kns_create_imperial_guard_weapon_effect = yes
+		}
+		kns_ig_bind_knight_kit_to_post_effect = {
+			KNIGHT = $KNIGHT$
+			EMPEROR = $EMPEROR$
+			WEAPON = $WEAPON$
+		}
+	}
+	if = {
+		limit = { $EMPEROR$ = { NOT = { exists = var:kns_ig_post_armor_$WEAPON$ } } }
+		$KNIGHT$ = {
+			save_scope_as = kns_kit_owner
+			$EMPEROR$ = { save_scope_as = kns_kit_smith }
+			kns_create_imperial_guard_armor_effect = yes
+		}
+		kns_ig_bind_knight_kit_to_post_effect = {
+			KNIGHT = $KNIGHT$
+			EMPEROR = $EMPEROR$
+			WEAPON = $WEAPON$
+		}
+	}
+}
+
+kns_ig_return_held_kit_to_emperor_effect = {
+	$KNIGHT$ = {
+		if = {
+			limit = {
+				exists = var:kns_ig_kit_weapon
+				var:kns_ig_kit_weapon = {
+					exists = artifact_owner
+					artifact_owner = $KNIGHT$
+				}
+			}
+			var:kns_ig_kit_weapon = {
+				kns_ig_quiet_set_artifact_owner_effect = { OWNER = $EMPEROR$ }
+			}
+		}
+		if = {
+			limit = {
+				exists = var:kns_ig_kit_armor
+				var:kns_ig_kit_armor = {
+					exists = artifact_owner
+					artifact_owner = $KNIGHT$
+				}
+			}
+			var:kns_ig_kit_armor = {
+				kns_ig_quiet_set_artifact_owner_effect = { OWNER = $EMPEROR$ }
+			}
+		}
+		kns_ig_clear_knight_kit_vars_effect = yes
+	}
+}
+
+kns_ig_unbind_kit_artifact_from_post_effect = {
+	if = {
+		limit = { exists = var:kns_ig_kit_emperor }
+		var:kns_ig_kit_emperor = { save_scope_as = kns_ig_unbind_emperor }
+	}
+	if = {
+		limit = {
+			exists = scope:kns_ig_unbind_emperor
+			exists = var:kns_ig_kit_kind
+			exists = var:kns_ig_kit_post
+		}
+		if = {
+			limit = {
+				var:kns_ig_kit_kind = 1
+				var:kns_ig_kit_post = 1
+			}
+			scope:kns_ig_unbind_emperor = { remove_variable = kns_ig_post_weapon_axe }
+		}
+		else_if = {
+			limit = {
+				var:kns_ig_kit_kind = 1
+				var:kns_ig_kit_post = 2
+			}
+			scope:kns_ig_unbind_emperor = { remove_variable = kns_ig_post_weapon_hammer }
+		}
+		else_if = {
+			limit = {
+				var:kns_ig_kit_kind = 1
+				var:kns_ig_kit_post = 3
+			}
+			scope:kns_ig_unbind_emperor = { remove_variable = kns_ig_post_weapon_sword }
+		}
+		else_if = {
+			limit = {
+				var:kns_ig_kit_kind = 1
+				var:kns_ig_kit_post = 4
+			}
+			scope:kns_ig_unbind_emperor = { remove_variable = kns_ig_post_weapon_spear }
+		}
+		else_if = {
+			limit = {
+				var:kns_ig_kit_kind = 1
+				var:kns_ig_kit_post = 5
+			}
+			scope:kns_ig_unbind_emperor = { remove_variable = kns_ig_post_weapon_mace }
+		}
+		else_if = {
+			limit = {
+				var:kns_ig_kit_kind = 2
+				var:kns_ig_kit_post = 1
+			}
+			scope:kns_ig_unbind_emperor = { remove_variable = kns_ig_post_armor_axe }
+		}
+		else_if = {
+			limit = {
+				var:kns_ig_kit_kind = 2
+				var:kns_ig_kit_post = 2
+			}
+			scope:kns_ig_unbind_emperor = { remove_variable = kns_ig_post_armor_hammer }
+		}
+		else_if = {
+			limit = {
+				var:kns_ig_kit_kind = 2
+				var:kns_ig_kit_post = 3
+			}
+			scope:kns_ig_unbind_emperor = { remove_variable = kns_ig_post_armor_sword }
+		}
+		else_if = {
+			limit = {
+				var:kns_ig_kit_kind = 2
+				var:kns_ig_kit_post = 4
+			}
+			scope:kns_ig_unbind_emperor = { remove_variable = kns_ig_post_armor_spear }
+		}
+		else_if = {
+			limit = {
+				var:kns_ig_kit_kind = 2
+				var:kns_ig_kit_post = 5
+			}
+			scope:kns_ig_unbind_emperor = { remove_variable = kns_ig_post_armor_mace }
+		}
+	}
+	remove_variable = kns_ig_kit_kind
+	remove_variable = kns_ig_kit_guard
+	remove_variable = kns_ig_kit_emperor
+	remove_variable = kns_ig_kit_post
+	remove_variable = kns_ig_quiet_move
+}
+
+kns_ig_return_stolen_kit_to_guard_effect = {
+	$HOLDER$ = {
+		every_character_artifact = {
+			limit = {
+				exists = var:kns_ig_kit_guard
+				var:kns_ig_kit_guard = $GUARD$
+			}
+			add_to_list = kns_ig_stolen_kit
+		}
+	}
+	every_in_list = {
+		list = kns_ig_stolen_kit
+		kns_ig_quiet_set_artifact_owner_effect = { OWNER = $GUARD$ }
+		kns_ig_equip_kit_artifact_to_effect = { CHAR = $GUARD$ }
+	}
+}
+
+kns_ig_unbind_stolen_kit_held_by_effect = {
+	$HOLDER$ = {
+		every_character_artifact = {
+			limit = {
+				exists = var:kns_ig_kit_guard
+				var:kns_ig_kit_guard = $GUARD$
+			}
+			add_to_list = kns_ig_lost_kit
+		}
+	}
+	every_in_list = {
+		list = kns_ig_lost_kit
+		kns_ig_unbind_kit_artifact_from_post_effect = yes
+	}
+	$GUARD$ = { kns_ig_clear_knight_kit_vars_effect = yes }
+}
+
+kns_ig_clear_kit_recovery_lock_effect = {
+	$GUARD$ = {
+		remove_character_flag = kns_ig_kit_recovery_lock
+	}
+}
+
+kns_ig_start_kit_recovery_effect = {
+	if = {
+		limit = {
+			$GUARD$ = { has_character_flag = kns_ig_kit_recovery_lock }
+		}
+	}
+	else_if = {
+		limit = {
+			$GUARD$ = {
+				is_alive = yes
+				kns_is_imperial_guard_trigger = yes
+			}
+			$HOLDER$ = {
+				is_alive = yes
+				NOT = { this = $GUARD$ }
+				kns_ig_kit_holder_gives_back_quietly_trigger = { GUARD = $GUARD$ }
+			}
+		}
+		kns_ig_return_stolen_kit_to_guard_effect = {
+			GUARD = $GUARD$
+			HOLDER = $HOLDER$
+		}
+		$GUARD$ = { kns_ig_give_accolade_title_nickname_effect = yes }
+	}
+	else_if = {
+		limit = {
+			$GUARD$ = {
+				is_alive = yes
+				kns_is_imperial_guard_trigger = yes
+				NOT = { has_trait = incapable }
+				NOT = { has_variable = engaged_in_single_combat }
+			}
+			$HOLDER$ = {
+				is_alive = yes
+				is_ai = yes
+				is_imprisoned = no
+				NOT = { has_trait = incapable }
+				NOT = { this = $GUARD$ }
+			}
+		}
+		$GUARD$ = { add_character_flag = kns_ig_kit_recovery_lock }
+		$GUARD$ = { save_scope_as = kns_ig_guard }
+		$HOLDER$ = { save_scope_as = kns_ig_holder }
+		if = {
+			limit = { $GUARD$ = { exists = var:kns_imperial_guard_liege } }
+			$GUARD$.var:kns_imperial_guard_liege = { save_scope_as = kns_ig_emperor }
+		}
+		else_if = {
+			limit = { exists = var:kns_ig_kit_emperor }
+			var:kns_ig_kit_emperor = { save_scope_as = kns_ig_emperor }
+		}
+		if = {
+			limit = {
+				$HOLDER$ = {
+					kns_ig_kit_holder_returns_trigger = { GUARD = $GUARD$ }
+				}
+			}
+			if = {
+				limit = { exists = scope:kns_ig_emperor }
+				scope:kns_ig_emperor = { trigger_event = kns_ig_kit.0001 }
+			}
+			else = {
+				$GUARD$ = { trigger_event = kns_ig_kit.0001 }
+			}
+		}
+		else = {
+			if = {
+				limit = { exists = scope:kns_ig_emperor }
+				scope:kns_ig_emperor = { trigger_event = kns_ig_kit.0002 }
+			}
+			else = {
+				$GUARD$ = { trigger_event = kns_ig_kit.0002 }
+			}
+		}
+	}
+}
+
+kns_ig_try_recover_if_kit_stolen_effect = {
+	# this = artifact
+	if = {
+		limit = { exists = var:kns_ig_quiet_move }
+		remove_variable = kns_ig_quiet_move
+	}
+	else_if = {
+		limit = {
+			exists = var:kns_ig_kit_kind
+			exists = var:kns_ig_kit_guard
+			exists = scope:owner
+			var:kns_ig_kit_guard = {
+				is_alive = yes
+				kns_is_imperial_guard_trigger = yes
+			}
+			NOT = { scope:owner = var:kns_ig_kit_guard }
+			trigger_if = {
+				limit = { exists = var:kns_ig_kit_emperor }
+				NOT = { scope:owner = var:kns_ig_kit_emperor }
+			}
+			trigger_else = {
+				always = yes
+			}
+		}
+		kns_ig_start_kit_recovery_effect = {
+			GUARD = var:kns_ig_kit_guard
+			HOLDER = scope:owner
+		}
+	}
+}
+
+kns_ig_check_guard_kit_in_wrong_hands_effect = {
+	# this = guard
+	if = {
+		limit = {
+			exists = var:kns_ig_kit_weapon
+			NOT = { has_character_flag = kns_ig_kit_recovery_lock }
+			var:kns_ig_kit_weapon = {
+				exists = artifact_owner
+				NOT = { artifact_owner = prev }
+				trigger_if = {
+					limit = { exists = var:kns_ig_kit_emperor }
+					NOT = { artifact_owner = var:kns_ig_kit_emperor }
+				}
+			}
+		}
+		var:kns_ig_kit_weapon = {
+			save_scope_as = kns_ig_stolen_piece
+			artifact_owner = { save_scope_as = kns_ig_wrong_holder }
+		}
+		kns_ig_start_kit_recovery_effect = {
+			GUARD = this
+			HOLDER = scope:kns_ig_wrong_holder
+		}
+	}
+	else_if = {
+		limit = {
+			exists = var:kns_ig_kit_armor
+			NOT = { has_character_flag = kns_ig_kit_recovery_lock }
+			var:kns_ig_kit_armor = {
+				exists = artifact_owner
+				NOT = { artifact_owner = prev }
+				trigger_if = {
+					limit = { exists = var:kns_ig_kit_emperor }
+					NOT = { artifact_owner = var:kns_ig_kit_emperor }
+				}
+			}
+		}
+		var:kns_ig_kit_armor = {
+			artifact_owner = { save_scope_as = kns_ig_wrong_holder }
+		}
+		kns_ig_start_kit_recovery_effect = {
+			GUARD = this
+			HOLDER = scope:kns_ig_wrong_holder
+		}
+	}
+}
+
+kns_ig_adopt_equipped_kit_if_unbound_effect = {
+	kns_ig_relink_and_dedupe_all_post_kit_effect = { EMPEROR = $EMPEROR$ }
+	if = {
+		limit = { has_character_flag = kns_ig_post_axe }
+		kns_ig_transfer_post_kit_to_knight_effect = {
+			KNIGHT = this
+			EMPEROR = $EMPEROR$
+			WEAPON = axe
+		}
+	}
+	else_if = {
+		limit = { has_character_flag = kns_ig_post_hammer }
+		kns_ig_transfer_post_kit_to_knight_effect = {
+			KNIGHT = this
+			EMPEROR = $EMPEROR$
+			WEAPON = hammer
+		}
+	}
+	else_if = {
+		limit = { has_character_flag = kns_ig_post_sword }
+		kns_ig_transfer_post_kit_to_knight_effect = {
+			KNIGHT = this
+			EMPEROR = $EMPEROR$
+			WEAPON = sword
+		}
+	}
+	else_if = {
+		limit = { has_character_flag = kns_ig_post_spear }
+		kns_ig_transfer_post_kit_to_knight_effect = {
+			KNIGHT = this
+			EMPEROR = $EMPEROR$
+			WEAPON = spear
+		}
+	}
+	else_if = {
+		limit = { has_character_flag = kns_ig_post_mace }
+		kns_ig_transfer_post_kit_to_knight_effect = {
+			KNIGHT = this
+			EMPEROR = $EMPEROR$
+			WEAPON = mace
+		}
+	}
+	kns_ig_give_accolade_title_nickname_effect = yes
+	kns_ig_name_unbound_kit_armor_effect = yes
+	kns_ig_restore_knight_kit_durability_effect = yes
+}

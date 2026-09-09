@@ -303,3 +303,33 @@ kns_olympic_held_the_games = {
 	third_perspective_description = { desc = kns_olympic_held_the_games_desc_third }
 	duration = { years = 75 }
 }
+
+kns_ig_kit_returned = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_ig_kit_returned_desc }
+	second_perspective_description = { desc = kns_ig_kit_returned_desc_second }
+	third_perspective_description = { desc = kns_ig_kit_returned_desc_third }
+	participants = { holder }
+	duration = { years = 75 }
+}
+
+kns_ig_kit_reclaimed = {
+	categories = { positive martial }
+	icon = "battle.dds"
+	description = { desc = kns_ig_kit_reclaimed_desc }
+	second_perspective_description = { desc = kns_ig_kit_reclaimed_desc_second }
+	third_perspective_description = { desc = kns_ig_kit_reclaimed_desc_third }
+	participants = { holder }
+	duration = { years = 100 }
+}
+
+kns_ig_kit_lost = {
+	categories = { negative martial }
+	icon = "battle.dds"
+	description = { desc = kns_ig_kit_lost_desc }
+	second_perspective_description = { desc = kns_ig_kit_lost_desc_second }
+	third_perspective_description = { desc = kns_ig_kit_lost_desc_third }
+	participants = { holder }
+	duration = { years = 100 }
+}

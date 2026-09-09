@@ -1,6 +1,7 @@
 kns_finalize_imperial_guard_artifact_effect = {
 	kns_strip_artifact_prowess_modifiers_effect = yes
 	add_artifact_modifier = artifact_prowess_11_modifier
+	kns_ig_restore_kit_durability_effect = yes
 	if = {
 		limit = {
 			exists = scope:kns_kit_smith
@@ -232,6 +233,12 @@ kns_create_imperial_guard_weapon_effect = {
 		kns_name_imperial_guard_weapon_effect = yes
 		kns_force_equip_created_artifact_to_kit_owner_effect = yes
 	}
+	scope:kns_kit_owner = {
+		set_variable = {
+			name = kns_ig_kit_weapon
+			value = scope:kns_ig_new_weapon
+		}
+	}
 }
 
 kns_create_imperial_guard_armor_effect = {
@@ -259,9 +266,21 @@ kns_create_imperial_guard_armor_effect = {
 		add_scaled_artifact_modifier_combat_effect = yes
 		save_scope_as = kns_ig_new_armor
 		kns_finalize_imperial_guard_artifact_effect = yes
-		set_artifact_name = kns_art_imperial_guard_plate
 		set_artifact_description = kns_art_imperial_guard_armor_desc
 		kns_force_equip_created_artifact_to_kit_owner_effect = yes
+	}
+	scope:kns_kit_owner = {
+		set_variable = {
+			name = kns_ig_kit_armor
+			value = scope:kns_ig_new_armor
+		}
+		if = {
+			limit = { exists = var:kns_ig_acc_name_idx }
+			kns_ig_name_kit_weapon_from_title_effect = yes
+		}
+		else = {
+			kns_ig_name_unbound_kit_armor_effect = yes
+		}
 	}
 }
 
@@ -294,6 +313,18 @@ kns_clear_imperial_guard_post_flags_effect = {
 	remove_character_flag = kns_ig_post_spear
 }
 
+kns_ig_summon_to_imperial_court_effect = {
+	$KNIGHT$ = {
+		if = {
+			limit = {
+				is_landed = no
+				NOT = { is_courtier_of = $EMPEROR$ }
+			}
+			$EMPEROR$ = { add_courtier = $KNIGHT$ }
+		}
+	}
+}
+
 kns_clear_imperial_guard_status_effect = {
 	remove_character_modifier = kns_imperial_guard_modifier
 	remove_character_flag = kns_is_imperial_guard
@@ -308,6 +339,16 @@ kns_dismiss_imperial_guard_effect = {
 		if = {
 			limit = { exists = var:kns_imperial_guard_liege }
 			var:kns_imperial_guard_liege = { save_scope_as = kns_ig_liege }
+		}
+		if = {
+			limit = { exists = scope:kns_ig_liege }
+			kns_ig_return_held_kit_to_emperor_effect = {
+				KNIGHT = $KNIGHT$
+				EMPEROR = scope:kns_ig_liege
+			}
+		}
+		else = {
+			kns_ig_clear_knight_kit_vars_effect = yes
 		}
 		kns_clear_imperial_guard_status_effect = yes
 	}
@@ -331,6 +372,14 @@ kns_dismiss_all_imperial_guards_effect = {
 }
 
 kns_appoint_imperial_guard_effect = {
+	kns_ig_clear_accolade_successor_status_effect = {
+		KNIGHT = $KNIGHT$
+		EMPEROR = $EMPEROR$
+	}
+	kns_ig_summon_to_imperial_court_effect = {
+		KNIGHT = $KNIGHT$
+		EMPEROR = $EMPEROR$
+	}
 	$EMPEROR$ = {
 		set_relation_kns_imperial_guard = $KNIGHT$
 	}
@@ -344,9 +393,13 @@ kns_appoint_imperial_guard_effect = {
 			name = kns_imperial_guard_liege
 			value = $EMPEROR$
 		}
-		kns_equip_imperial_guard_kit_effect = {
-			MAKER = $EMPEROR$
+		kns_ig_give_or_create_post_kit_effect = {
+			KNIGHT = $KNIGHT$
+			EMPEROR = $EMPEROR$
+			WEAPON = $WEAPON$
 		}
+		kns_ig_grant_accolade_unlocks_effect = yes
+		kns_ig_give_accolade_title_nickname_effect = yes
 	}
 }
 
@@ -497,6 +550,184 @@ kns_bind_imperial_guard_post_effect = {
 	}
 }
 
+kns_ig_collect_imperial_guard_candidates_effect = {
+	clear_variable_list = kns_imperial_guard_candidates
+	every_courtier = {
+		limit = {
+			kns_can_be_appointed_imperial_guard_by_trigger = { EMPEROR = scope:kns_ig_emperor }
+			NOT = { is_in_list = kns_ig_cand_pool }
+		}
+		add_to_list = kns_ig_cand_pool
+	}
+	every_knight = {
+		limit = {
+			kns_can_be_appointed_imperial_guard_by_trigger = { EMPEROR = scope:kns_ig_emperor }
+			NOT = { is_in_list = kns_ig_cand_pool }
+		}
+		add_to_list = kns_ig_cand_pool
+	}
+	every_vassal_or_below = {
+		limit = { is_alive = yes }
+		if = {
+			limit = {
+				kns_can_be_appointed_imperial_guard_by_trigger = { EMPEROR = scope:kns_ig_emperor }
+				NOT = { is_in_list = kns_ig_cand_pool }
+			}
+			add_to_list = kns_ig_cand_pool
+		}
+		every_knight = {
+			limit = {
+				kns_can_be_appointed_imperial_guard_by_trigger = { EMPEROR = scope:kns_ig_emperor }
+				NOT = { is_in_list = kns_ig_cand_pool }
+			}
+			add_to_list = kns_ig_cand_pool
+		}
+	}
+	if = {
+		limit = { exists = var:kns_ig_sort_potential }
+		ordered_in_list = {
+			list = kns_ig_cand_pool
+			limit = { has_variable = kns_prowess_cap }
+			order_by = {
+				value = 0
+				add = var:kns_prowess_cap
+			}
+			max = 50
+			check_range_bounds = no
+			save_scope_as = kns_ig_cand
+			scope:kns_ig_emperor = {
+				add_to_variable_list = {
+					name = kns_imperial_guard_candidates
+					target = scope:kns_ig_cand
+				}
+			}
+		}
+	}
+	else = {
+		ordered_in_list = {
+			list = kns_ig_cand_pool
+			order_by = prowess
+			max = 50
+			check_range_bounds = no
+			save_scope_as = kns_ig_cand
+			scope:kns_ig_emperor = {
+				add_to_variable_list = {
+					name = kns_imperial_guard_candidates
+					target = scope:kns_ig_cand
+				}
+			}
+		}
+	}
+}
+
+kns_ig_replace_hiring_post_effect = {
+	if = {
+		limit = {
+			has_variable = kns_ig_hiring_axe
+			exists = var:kns_ig_slot_axe
+		}
+		var:kns_ig_slot_axe = { save_scope_as = kns_ig_old_guard }
+		kns_ig_handoff_bound_accolade_effect = {
+			OLD = scope:kns_ig_old_guard
+			NEW = $KNIGHT$
+		}
+		kns_dismiss_imperial_guard_effect = { KNIGHT = scope:kns_ig_old_guard }
+		kns_appoint_imperial_guard_effect = {
+			KNIGHT = $KNIGHT$
+			EMPEROR = this
+			WEAPON = axe
+		}
+		kns_ig_transfer_accolade_to_replacement_effect = {
+			OLD = scope:kns_ig_old_guard
+			NEW = $KNIGHT$
+		}
+	}
+	else_if = {
+		limit = {
+			has_variable = kns_ig_hiring_hammer
+			exists = var:kns_ig_slot_hammer
+		}
+		var:kns_ig_slot_hammer = { save_scope_as = kns_ig_old_guard }
+		kns_ig_handoff_bound_accolade_effect = {
+			OLD = scope:kns_ig_old_guard
+			NEW = $KNIGHT$
+		}
+		kns_dismiss_imperial_guard_effect = { KNIGHT = scope:kns_ig_old_guard }
+		kns_appoint_imperial_guard_effect = {
+			KNIGHT = $KNIGHT$
+			EMPEROR = this
+			WEAPON = hammer
+		}
+		kns_ig_transfer_accolade_to_replacement_effect = {
+			OLD = scope:kns_ig_old_guard
+			NEW = $KNIGHT$
+		}
+	}
+	else_if = {
+		limit = {
+			has_variable = kns_ig_hiring_sword
+			exists = var:kns_ig_slot_sword
+		}
+		var:kns_ig_slot_sword = { save_scope_as = kns_ig_old_guard }
+		kns_ig_handoff_bound_accolade_effect = {
+			OLD = scope:kns_ig_old_guard
+			NEW = $KNIGHT$
+		}
+		kns_dismiss_imperial_guard_effect = { KNIGHT = scope:kns_ig_old_guard }
+		kns_appoint_imperial_guard_effect = {
+			KNIGHT = $KNIGHT$
+			EMPEROR = this
+			WEAPON = sword
+		}
+		kns_ig_transfer_accolade_to_replacement_effect = {
+			OLD = scope:kns_ig_old_guard
+			NEW = $KNIGHT$
+		}
+	}
+	else_if = {
+		limit = {
+			has_variable = kns_ig_hiring_spear
+			exists = var:kns_ig_slot_spear
+		}
+		var:kns_ig_slot_spear = { save_scope_as = kns_ig_old_guard }
+		kns_ig_handoff_bound_accolade_effect = {
+			OLD = scope:kns_ig_old_guard
+			NEW = $KNIGHT$
+		}
+		kns_dismiss_imperial_guard_effect = { KNIGHT = scope:kns_ig_old_guard }
+		kns_appoint_imperial_guard_effect = {
+			KNIGHT = $KNIGHT$
+			EMPEROR = this
+			WEAPON = spear
+		}
+		kns_ig_transfer_accolade_to_replacement_effect = {
+			OLD = scope:kns_ig_old_guard
+			NEW = $KNIGHT$
+		}
+	}
+	else_if = {
+		limit = {
+			has_variable = kns_ig_hiring_mace
+			exists = var:kns_ig_slot_mace
+		}
+		var:kns_ig_slot_mace = { save_scope_as = kns_ig_old_guard }
+		kns_ig_handoff_bound_accolade_effect = {
+			OLD = scope:kns_ig_old_guard
+			NEW = $KNIGHT$
+		}
+		kns_dismiss_imperial_guard_effect = { KNIGHT = scope:kns_ig_old_guard }
+		kns_appoint_imperial_guard_effect = {
+			KNIGHT = $KNIGHT$
+			EMPEROR = this
+			WEAPON = mace
+		}
+		kns_ig_transfer_accolade_to_replacement_effect = {
+			OLD = scope:kns_ig_old_guard
+			NEW = $KNIGHT$
+		}
+	}
+}
+
 kns_clear_imperial_guard_slot_variables_effect = {
 	remove_variable = kns_ig_slot_1
 	remove_variable = kns_ig_slot_2
@@ -533,22 +764,18 @@ kns_rebuild_imperial_guard_window_effect = {
 		scope:kns_ig_member = {
 			kns_infer_imperial_guard_post_from_weapon_effect = yes
 			kns_bind_imperial_guard_post_effect = yes
-		}
-	}
-	ordered_courtier = {
-		limit = {
-			kns_can_be_appointed_imperial_guard_by_trigger = { EMPEROR = scope:kns_ig_emperor }
-		}
-		order_by = prowess
-		max = 300
-		check_range_bounds = no
-		save_scope_as = kns_ig_cand
-		scope:kns_ig_emperor = {
-			add_to_variable_list = {
-				name = kns_imperial_guard_candidates
-				target = scope:kns_ig_cand
+			kns_ig_adopt_equipped_kit_if_unbound_effect = {
+				EMPEROR = scope:kns_ig_emperor
+			}
+			kns_ig_clear_accolade_successor_status_effect = {
+				KNIGHT = scope:kns_ig_member
+				EMPEROR = scope:kns_ig_emperor
 			}
 		}
+	}
+	if = {
+		limit = { exists = var:kns_ig_hire_window_open }
+		kns_ig_collect_imperial_guard_candidates_effect = yes
 	}
 	if = {
 		limit = {
@@ -664,13 +891,14 @@ kns_open_imperial_guard_hire_effect = {
 		name = kns_ig_hiring_$WEAPON$
 		value = 1
 	}
-	kns_rebuild_imperial_guard_window_effect = yes
 	set_variable = kns_ig_hire_window_open
+	kns_rebuild_imperial_guard_window_effect = yes
 }
 
 kns_close_imperial_guard_hire_effect = {
 	remove_variable = kns_ig_hire_window_open
 	remove_variable = kns_ig_hire_focus
+	remove_variable = kns_ig_replacing
 	kns_clear_imperial_guard_hire_post_effect = yes
 }
 
@@ -692,10 +920,12 @@ kns_open_imperial_guard_window_effect = {
 }
 
 kns_open_imperial_guard_hire_from_interaction_effect = {
+	remove_variable = kns_ig_replacing
 	kns_rebuild_imperial_guard_window_effect = yes
 	kns_set_hire_post_to_first_vacant_effect = yes
 	set_variable = kns_imperial_guard_window_open
 	set_variable = kns_ig_hire_window_open
+	kns_rebuild_imperial_guard_window_effect = yes
 }
 
 kns_close_imperial_guard_window_effect = {
@@ -713,7 +943,10 @@ kns_sweep_invalid_imperial_guards_effect = {
 	if = {
 		limit = {
 			num_of_relation_kns_imperial_guard > 0
-			NOT = { kns_is_emperor_trigger = yes }
+			OR = {
+				NOT = { kns_is_emperor_trigger = yes }
+				NOT = { kns_practices_knighthood_trigger = yes }
+			}
 		}
 		kns_dismiss_all_imperial_guards_effect = yes
 	}
@@ -723,8 +956,15 @@ kns_sweep_invalid_imperial_guards_effect = {
 			limit = {
 				OR = {
 					is_alive = no
-					is_landed = yes
-					NOT = { is_courtier_of = prev }
+					AND = {
+						is_landed = yes
+						NOT = { kns_ig_may_remain_landed_guard_trigger = yes }
+					}
+					AND = {
+						is_landed = no
+						NOT = { is_courtier_of = prev }
+					}
+					NOT = { kns_practices_knighthood_trigger = yes }
 				}
 			}
 			add_to_list = kns_ig_invalid
@@ -733,5 +973,13 @@ kns_sweep_invalid_imperial_guards_effect = {
 			list = kns_ig_invalid
 			kns_dismiss_imperial_guard_effect = { KNIGHT = this }
 		}
+		every_relation = {
+			type = kns_imperial_guard
+			limit = { is_alive = yes }
+			kns_ig_check_guard_kit_in_wrong_hands_effect = yes
+			kns_ig_restore_knight_kit_durability_effect = yes
+		}
+		kns_ig_restore_emperor_post_kit_durability_effect = yes
+		kns_ig_clear_all_imperial_guard_successors_effect = yes
 	}
 }
