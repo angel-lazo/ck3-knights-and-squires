@@ -20,6 +20,8 @@ Knights who **can take the Old Age prowess penalty** (from age **45**) cannot be
 
 When a character becomes a knight, the game rolls `kns_prowess_cap` from **1 to 50**. That number is their natural ceiling. It is **not** based on current prowess. If prowess without weapons is already above the roll, the cap is not raised; they simply have no training room.
 
+The knight who dubs them can raise that roll. **Inept** and **Mediocre** mentors add nothing. **Able** adds **+2** if the roll is 29 or lower. **Formidable** adds **+4** if the roll is 29 or lower. **Prodigious** adds **+5** if the roll is 35 or lower; if that is still under **15**, the cap is **15**. The talent trait is then assigned from the new cap (so Able 29 + 4 becomes Formidable 33). Self-dubbing, the Pope with no Gift, and game-start knights get no mentor bonus. The papal youth tourney still forces 50.
+
 The roll also assigns a talent trait:
 
 | Trait | Cap |

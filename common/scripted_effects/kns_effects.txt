@@ -173,6 +173,7 @@ kns_become_a_knight_effect = {
 				KNIGHT_TO_BE = this
 			}
 		}
+		$KNIGHT_MAKER$ = { save_scope_as = kns_gift_mentor }
 		kns_assign_prowess_talent_effect = yes
 		kns_apply_knight_glory_floors_effect = yes
 		if = {

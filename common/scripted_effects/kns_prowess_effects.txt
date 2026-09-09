@@ -477,9 +477,66 @@ kns_close_funding_window_effect = {
 
 kns_assign_prowess_talent_core_effect = {
 	kns_roll_prowess_cap_effect = yes
+	kns_apply_mentor_gift_bonus_effect = yes
 	kns_apply_talent_trait_from_cap_effect = yes
 	kns_refresh_base_prowess_effect = yes
 	kns_update_training_modifier_effect = yes
+}
+
+# Mentor talent can raise a newly rolled Gift at Arms. Inept and Mediocre give nothing.
+# Able +2 if rolled 29 or lower. Formidable +4 if rolled 29 or lower. Prodigious +5 if rolled 35 or lower; if that is still under 15, the cap is 15.
+kns_apply_mentor_gift_bonus_effect = {
+	if = {
+		limit = {
+			exists = scope:kns_gift_mentor
+			scope:kns_gift_mentor != this
+			exists = var:kns_prowess_cap
+		}
+		if = {
+			limit = {
+				scope:kns_gift_mentor = { has_trait = kns_talent_generation }
+				var:kns_prowess_cap <= 35
+			}
+			change_variable = {
+				name = kns_prowess_cap
+				add = 5
+			}
+			if = {
+				limit = { var:kns_prowess_cap < 15 }
+				set_variable = {
+					name = kns_prowess_cap
+					value = 15
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:kns_gift_mentor = { has_trait = kns_talent_elite }
+				var:kns_prowess_cap <= 29
+			}
+			change_variable = {
+				name = kns_prowess_cap
+				add = 4
+			}
+		}
+		else_if = {
+			limit = {
+				scope:kns_gift_mentor = { has_trait = kns_talent_normal }
+				var:kns_prowess_cap <= 29
+			}
+			change_variable = {
+				name = kns_prowess_cap
+				add = 2
+			}
+		}
+		if = {
+			limit = { var:kns_prowess_cap > 50 }
+			set_variable = {
+				name = kns_prowess_cap
+				value = 50
+			}
+		}
+	}
 }
 
 kns_assign_prowess_talent_effect = {
