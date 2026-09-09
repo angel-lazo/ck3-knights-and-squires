@@ -400,6 +400,15 @@ kns_appoint_imperial_guard_effect = {
 		}
 		kns_ig_grant_accolade_unlocks_effect = yes
 		kns_ig_give_accolade_title_nickname_effect = yes
+		if = {
+			limit = { has_trait = squire }
+			remove_trait = squire
+		}
+		if = {
+			limit = { NOT = { has_trait = knight } }
+			add_trait = knight
+		}
+		kns_apply_knight_glory_floors_effect = yes
 	}
 }
 

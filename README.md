@@ -189,7 +189,8 @@ Unlanded knights are styled **Sir** (men) or **Dame** (women) in titled and unla
 
 ## Other systems
 
-- **Squires:** Christian youths can be taken as squires and later knighted.
+- **Squires:** Christian youths train on the Squire trait. Each birthday they take an Arms lesson (about 45–55 XP on a good day, 25–35 on a poor one), so the track fills in about **2–4 years**. A player’s squire shows a toast only. **Train Squire** is still there for extra sessions. At **16**, if the track is full they are dubbed automatically; if not, training continues and they are dubbed as soon as it fills.
+- **Knight ranks:** Knight (0–9), Proven (10–19), Renowned (20–49), Famous (50–99), Legendary (100). Glory comes from Imperial Olympic bout wins and titles (losses subtract the same as a win, except Legendary is locked), a +2 birthday stipend for Imperial Guard or Prodigious knights, Papal/Gift-at-Arms Prodigious floor of 50, and Guard appointment floor of 30.
 - **Offer Knighthood / Ask Liege:** character interactions for knighthood. Ask Liege still has a cooldown; Offer Knighthood does not.
 - **Buy Knighthood:** a paid decision for some characters to knight themselves.
 - **Papal youth tourney:** if no living Prodigious knight exists, a papal tourney can create one and raise their prowess toward 30.

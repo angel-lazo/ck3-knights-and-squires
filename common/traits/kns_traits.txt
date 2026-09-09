@@ -1,48 +1,21 @@
 squire = {
 	physical = no
 	shown_in_ruler_designer = no
+	opposites = { knight stripped_knight }
 
 	name = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					exists = this
-					kns_is_squire_with_trait_xp = yes
+					NOT = { exists = this }
 				}
 				desc = trait_squire
 			}
-			triggered_desc = {
-				trigger = {
-					exists = this
-					kns_is_knight_trigger = yes
-				}
-				desc = trait_knight
-			}
-			desc = trait_knight
+			desc = trait_squire
 		}
 	}
 
-	icon = {
-		first_valid = {
-			triggered_desc = {
-				trigger = { NOT = { exists = this } }
-				desc = squire.dds
-			}
-			triggered_desc = {
-				trigger = {
-					kns_is_squire_with_trait_xp = yes
-				}
-				desc = squire.dds
-			}
-			triggered_desc = {
-				trigger = {
-					kns_is_knight_trigger = yes
-				}
-				desc = knight.dds
-			}
-			desc = knight.dds
-		}
-	}
+	icon = squire.dds
 
 	desc = {
 		first_valid = {
@@ -57,13 +30,6 @@ squire = {
 					has_character_flag = kns_knightless_squire_flag
 				}
 				desc = trait_squire_no_knight_desc
-			}
-			triggered_desc = {
-				trigger = {
-					exists = this
-					kns_is_knight_trigger = yes
-				}
-				desc = trait_knight_character_desc
 			}
 			triggered_desc = {
 				trigger = {
@@ -83,11 +49,110 @@ squire = {
 	tracks = {
 		knight = {
 			100 = {
-				monthly_prestige = 1
-				attraction_opinion = 5
-				general_opinion = 5
-				heavy_cavalry_damage_mult = 0.05
+				monthly_prestige = 0
+			}
+		}
+	}
+}
+
+knight = {
+	physical = no
+	category = fame
+	shown_in_ruler_designer = no
+	opposites = { squire stripped_knight }
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_knight
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = knight
+						track = glory
+						value >= 100
+					}
+				}
+				desc = trait_knight_5
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = knight
+						track = glory
+						value >= 50
+					}
+				}
+				desc = trait_knight_4
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = knight
+						track = glory
+						value >= 20
+					}
+				}
+				desc = trait_knight_3
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = knight
+						track = glory
+						value >= 10
+					}
+				}
+				desc = trait_knight_2
+			}
+			desc = trait_knight
+		}
+	}
+
+	icon = kns_knight.dds
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_knight_desc
+			}
+			desc = trait_knight_character_desc
+		}
+	}
+
+	same_opinion = 5
+	monthly_prestige = 1
+	attraction_opinion = 5
+	general_opinion = 5
+	heavy_cavalry_damage_mult = 0.05
+	knight_effectiveness_mult = 0.02
+
+	tracks = {
+		glory = {
+			10 = {
+				monthly_prestige = 0.1
+				knight_effectiveness_mult = 0.01
+			}
+			20 = {
+				monthly_prestige = 0.15
+				attraction_opinion = 2
+			}
+			50 = {
+				monthly_prestige = 0.25
+				general_opinion = 2
 				knight_effectiveness_mult = 0.02
+			}
+			100 = {
+				monthly_prestige = 0.5
+				attraction_opinion = 5
+				knight_effectiveness_mult = 0.03
 			}
 		}
 	}
@@ -98,7 +163,7 @@ stripped_knight = {
 	category = fame
 	opposite_opinion = -10
 	monthly_prestige_gain_mult = -0.01
-	opposites = { squire }
+	opposites = { squire knight }
 
 	name = {
 		first_valid = {

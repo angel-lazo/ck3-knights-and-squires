@@ -345,7 +345,7 @@ kns_maintenance.0300 = {
 				has_trait_xp = {
 					trait = squire
 					track = knight
-					value >= 66
+					value >= 100
 				}
 				kns_can_become_a_knight_trigger = yes
 			}

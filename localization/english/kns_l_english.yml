@@ -1,11 +1,11 @@
 ﻿l_english:
  # Game concepts
  game_concept_squire:0 "Squire"
- game_concept_squire_desc:0 "A youth bound to a [kns_knight|E] to learn arms, courtesy, and the duties of knighthood. Progress is tracked on the Squire trait. At high progress, any knight - or a Christian king - may dub them."
+ game_concept_squire_desc:0 "A youth bound to a [kns_knight|E] to learn arms, courtesy, and the duties of knighthood. Progress is tracked on the Squire trait. When that track is full, any knight - or a Christian king - may dub them."
  game_concept_squires:0 "Squires"
  game_concept_squirepossessive:0 "Squire's"
  game_concept_kns_knight:0 "Knight"
- game_concept_kns_knight_desc:0 "A Christian man or woman who has been dubbed and may take [squires|E], grant knighthood to the worthy, and stand in the first rank of battle. In this mod, knighthood is a rank of honor among Christians, not merely a place in the army."
+ game_concept_kns_knight_desc:0 "A Christian man or woman who has been dubbed and may take [squires|E], grant knighthood to the worthy, and stand in the first rank of battle. Knights earn Glory through the Imperial Olympic Games, and Imperial Guard or Prodigious knights gain a little each year. Ranks run Knight, Proven, Renowned, Famous, then Legendary."
  game_concept_kns_knights:0 "Knights"
  game_concept_kns_knightspossessive:0 "Knight's"
  game_concept_kns_imperial_guard:0 "Imperial Guard"
@@ -19,13 +19,19 @@
  trait_squire_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] serves as a squire and is learning the ways of knighthood."
  trait_squire_no_knight_desc:0 "This squire currently has no knight and must find another master or be dubbed."
  trait_knight:0 "Knight"
- trait_knight_desc:0 "This character has been dubbed a knight and may take squires of their own. Knighthood grants 1 [prestige|E] each month, +5 [attraction|E] opinion, +5 general opinion, and +5 opinion with other knights."
+ trait_knight_2:0 "Proven Knight"
+ trait_knight_3:0 "Renowned Knight"
+ trait_knight_4:0 "Famous Knight"
+ trait_knight_5:0 "Legendary Knight"
+ trait_knight_desc:0 "This character has been dubbed a knight and may take squires of their own. Knighthood grants 1 [prestige|E] each month, +5 [attraction|E] opinion, +5 general opinion, and +5 opinion with other knights. Glory from tournaments and long service raises the rank from Knight to Proven, Renowned, Famous, then Legendary."
  trait_knight_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has been made a knight."
  trait_stripped_knight:0 "Stripped of Knighthood"
  trait_stripped_knight_desc:0 "This character was publicly stripped of knighthood and may not be dubbed again."
  trait_stripped_knight_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] was stripped of knighthood in disgrace."
- trait_track_knight:0 "Knighthood"
- trait_track_knight_desc:0 "Service, courtesy, and skill at arms. A squire who masters this path may be dubbed a knight."
+ trait_track_knight:0 "Squirehood"
+ trait_track_knight_desc:0 "Service, courtesy, and skill at arms. A squire who fills this track may be dubbed a knight."
+ trait_track_glory:0 "Glory"
+ trait_track_glory_desc:0 "Renown won in the Imperial Olympic Games and similar deeds. Legendary knights keep the rank even if they later lose a bout."
 
  # Relations
  kns_squire:0 "Squire"
@@ -214,6 +220,8 @@
  kns_squire.0401_bad_arms.desc:0 "[my_squire.GetName] is slow, and the waster finds [my_squire.GetHerHis] guard too often."
  kns_squire.0401_good_horse.desc:0 "[my_squire.GetName] sits the horse as if born to it."
  kns_squire.0401_bad_horse.desc:0 "The horse has the better of [my_squire.GetName] today."
+ kns_auto_dub_squire_toast.t:0 "Accolade"
+ kns_auto_dub_squire_toast.tt:0 "[my_squire.GetName] has been dubbed a [kns_knight|E]."
 
  # Knighthood events
  kns_knighthood.0016.t:0 "The Wandering Knight"

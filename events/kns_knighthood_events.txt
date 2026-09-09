@@ -62,13 +62,9 @@ kns_knighthood.0016 = {
 			save_scope_as = hedge_knight
 		}
 		scope:hedge_knight = {
-			add_trait = squire
-			add_trait_xp = {
-				trait = squire
-				track = knight
-				value = 100
-			}
+			add_trait = knight
 			kns_assign_prowess_talent_silent_effect = yes
+			kns_apply_knight_glory_floors_effect = yes
 		}
 	}
 
@@ -252,7 +248,7 @@ kns_knighthood.0300 = {
 					has_trait_xp = {
 						trait = squire
 						track = knight
-						value >= 66
+						value >= 100
 					}
 				}
 				save_scope_as = my_squire

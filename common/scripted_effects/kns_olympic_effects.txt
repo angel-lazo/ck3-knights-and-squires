@@ -357,6 +357,32 @@ kns_olympic_sync_push_winner_effect = {
 				}
 			}
 		}
+		save_scope_value_as = {
+			name = kns_bout_glory
+			value = kns_olympic_bout_glory_value
+		}
+		$WINNER$ = {
+			kns_add_knight_glory_xp_effect = {
+				CHAR = this
+				VALUE = scope:kns_bout_glory
+			}
+		}
+		scope:kns_olympic_sync_loser = {
+			if = {
+				limit = { is_alive = yes }
+				kns_remove_knight_glory_xp_effect = {
+					CHAR = this
+					AMOUNT = scope:kns_bout_glory
+				}
+				if = {
+					limit = { has_trait = knight }
+					set_variable = {
+						name = kns_knight_glory_clock_year
+						value = current_year
+					}
+				}
+			}
+		}
 	}
 	kns_register_imperial_hof_character_effect = { CHAR = $WINNER$ }
 	if = {
@@ -2935,6 +2961,10 @@ kns_award_imperial_olympic_winner_effect = {
 			KNIGHT_TO_BE = $WINNER$
 			KNIGHT_MAKER = scope:kns_emperor
 		}
+	}
+	else_if = {
+		limit = { $WINNER$ = { has_trait = knight } }
+		kns_grant_olympic_champion_glory_effect = { CHAR = $WINNER$ }
 	}
 	scope:kns_emperor = {
 		kns_apply_olympic_knight_culture_modifier_effect = yes

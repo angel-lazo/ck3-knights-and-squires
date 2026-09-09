@@ -42,6 +42,11 @@ on_birthday = {
 }
 
 kns_on_birthday = {
+	effect = {
+		kns_try_yearly_squire_progress_effect = yes
+		kns_try_add_yearly_knight_glory_effect = yes
+		kns_try_ai_request_accolade_effect = yes
+	}
 	events = {
 		kns_squire.0231
 		kns_prowess.0001
