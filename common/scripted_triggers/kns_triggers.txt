@@ -81,20 +81,7 @@ kns_has_past_squirehood_experience = {
 }
 
 kns_is_knight_trigger = {
-	OR = {
-		AND = {
-			has_trait_xp = {
-				trait = squire
-				track = knight
-				value >= 100
-			}
-			NOT = {
-				any_owned_story = {
-					story_type = story_kns_squire_ongoing
-				}
-			}
-		}
-	}
+	has_trait = knight
 }
 
 # Children, siblings, and other close family of a living king or emperor already use Prince/Princess.
@@ -117,26 +104,7 @@ kns_should_use_sir_style_trigger = {
 }
 
 kns_is_squire_with_trait_xp = {
-	OR = {
-		AND = {
-			has_trait_xp = {
-				trait = squire
-				track = knight
-				value >= 100
-			}
-			any_owned_story = {
-				story_type = story_kns_squire_ongoing
-			}
-		}
-		AND = {
-			has_trait = squire
-			has_trait_xp = {
-				trait = squire
-				track = knight
-				value < 100
-			}
-		}
-	}
+	has_trait = squire
 	kns_is_knight_trigger = no
 }
 
@@ -297,7 +265,7 @@ kns_can_receive_knighthood_offer_from_trigger = {
 			has_trait_xp = {
 				trait = squire
 				track = knight
-				value >= 66
+				value >= 100
 			}
 		}
 		AND = {
@@ -551,6 +519,39 @@ kns_is_catholic_pope_trigger = {
 			exists = title:k_papal_state.holder
 			this = title:k_papal_state.holder
 		}
+	}
+}
+
+# Court chaplain of $CHAR$, or of their liege / court owner if they have no council of their own.
+kns_is_court_chaplain_for_trigger = {
+	$CHAR$ = {
+		OR = {
+			AND = {
+				exists = cp:councillor_court_chaplain
+				prev = cp:councillor_court_chaplain
+			}
+			AND = {
+				NOT = { exists = cp:councillor_court_chaplain }
+				exists = liege
+				liege != this
+				exists = liege.cp:councillor_court_chaplain
+				prev = liege.cp:councillor_court_chaplain
+			}
+			AND = {
+				NOT = { exists = cp:councillor_court_chaplain }
+				exists = court_owner
+				court_owner != this
+				exists = court_owner.cp:councillor_court_chaplain
+				prev = court_owner.cp:councillor_court_chaplain
+			}
+		}
+	}
+}
+
+kns_can_request_accolade_from_trigger = {
+	OR = {
+		kns_is_catholic_pope_trigger = yes
+		kns_is_court_chaplain_for_trigger = { CHAR = $CHAR$ }
 	}
 }
 

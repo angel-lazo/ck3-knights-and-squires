@@ -105,6 +105,13 @@ kns_apply_talent_trait_from_cap_effect = {
 		kns_unregister_living_prodigy_effect = yes
 	}
 	remove_character_flag = kns_had_prodigy_trait
+	if = {
+		limit = {
+			has_trait = kns_talent_generation
+			has_trait = knight
+		}
+		kns_ensure_knight_glory_at_least_effect = { VALUE = 50 }
+	}
 }
 
 kns_update_training_modifier_effect = {
@@ -747,14 +754,18 @@ kns_make_papal_tourney_winner_prodigious_effect = {
 		add_character_flag = kns_papal_tourney_prize
 		kns_force_prodigious_cap_effect = yes
 	}
-	kns_become_a_knight_effect = {
-		KNIGHT_MAKER = $POPE$
-		KNIGHT_TO_BE = $WINNER$
+	if = {
+		limit = { $WINNER$ = { kns_is_knight_trigger = no } }
+		kns_become_a_knight_effect = {
+			KNIGHT_MAKER = $POPE$
+			KNIGHT_TO_BE = $WINNER$
+		}
 	}
 	$WINNER$ = {
 		kns_raise_prowess_to_thirty_effect = yes
 		add_character_flag = kns_papal_tourney_prodigy
 		remove_character_flag = kns_papal_tourney_prize
+		kns_apply_knight_glory_floors_effect = yes
 	}
 }
 

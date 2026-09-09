@@ -4,22 +4,13 @@ kns_become_a_knight_effect = {
 			limit = {
 				has_trait = squire
 			}
-			add_trait_xp = {
-				trait = squire
-				track = knight
-				value = 100
-			}
+			remove_trait = squire
 		}
-		else_if = {
+		if = {
 			limit = {
-				NOT = { has_trait = squire }
+				NOT = { has_trait = knight }
 			}
-			add_trait = squire
-			add_trait_xp = {
-				trait = squire
-				track = knight
-				value = 100
-			}
+			add_trait = knight
 		}
 		if = {
 			limit = {
@@ -183,6 +174,7 @@ kns_become_a_knight_effect = {
 			}
 		}
 		kns_assign_prowess_talent_effect = yes
+		kns_apply_knight_glory_floors_effect = yes
 		if = {
 			limit = {
 				NOT = { has_character_flag = kns_received_knighting_kit }
@@ -198,6 +190,200 @@ kns_become_a_knight_effect = {
 				kns_equip_knighting_kit_effect = {
 					MAKER = $KNIGHT_MAKER$
 				}
+			}
+		}
+	}
+}
+
+kns_save_court_chaplain_for_accolade_effect = {
+	if = {
+		limit = { exists = cp:councillor_court_chaplain }
+		cp:councillor_court_chaplain = { save_scope_as = kns_accolade_priest }
+	}
+	else_if = {
+		limit = {
+			exists = liege
+			liege != this
+			exists = liege.cp:councillor_court_chaplain
+		}
+		liege.cp:councillor_court_chaplain = { save_scope_as = kns_accolade_priest }
+	}
+	else_if = {
+		limit = {
+			exists = court_owner
+			court_owner != this
+			exists = court_owner.cp:councillor_court_chaplain
+		}
+		court_owner.cp:councillor_court_chaplain = { save_scope_as = kns_accolade_priest }
+	}
+}
+
+kns_pay_for_accolade_and_dub_effect = {
+	pay_short_term_gold = {
+		target = $PRIEST$
+		gold = kns_accolade_request_gold_value
+	}
+	kns_become_a_knight_effect = {
+		KNIGHT_MAKER = $PRIEST$
+		KNIGHT_TO_BE = this
+	}
+}
+
+# AI with enough gold always pays the Catholic Pope. If there is no Pope, they pay their chaplain.
+kns_try_ai_request_accolade_effect = {
+	if = {
+		limit = {
+			is_ai = yes
+			kns_can_become_a_knight_trigger = yes
+			NOT = { has_trait = squire }
+			gold >= kns_accolade_request_gold_value
+		}
+		if = {
+			limit = {
+				exists = faith:catholic.religious_head
+				faith:catholic.religious_head = {
+					is_alive = yes
+					NOT = { this = prev }
+				}
+			}
+			faith:catholic.religious_head = { save_scope_as = kns_accolade_priest }
+			kns_pay_for_accolade_and_dub_effect = { PRIEST = scope:kns_accolade_priest }
+		}
+		else_if = {
+			limit = {
+				exists = title:k_papal_state.holder
+				title:k_papal_state.holder = {
+					is_alive = yes
+					NOT = { this = prev }
+				}
+			}
+			title:k_papal_state.holder = { save_scope_as = kns_accolade_priest }
+			kns_pay_for_accolade_and_dub_effect = { PRIEST = scope:kns_accolade_priest }
+		}
+		else = {
+			kns_save_court_chaplain_for_accolade_effect = yes
+			if = {
+				limit = {
+					exists = scope:kns_accolade_priest
+					scope:kns_accolade_priest = {
+						is_alive = yes
+						NOT = { this = prev }
+					}
+				}
+				kns_pay_for_accolade_and_dub_effect = { PRIEST = scope:kns_accolade_priest }
+			}
+		}
+	}
+}
+
+# Adds glory on the Knight trait. VALUE may be a number or script value.
+kns_add_knight_glory_xp_effect = {
+	$CHAR$ = {
+		if = {
+			limit = { has_trait = knight }
+			add_trait_xp = {
+				trait = knight
+				track = glory
+				value = $VALUE$
+			}
+		}
+	}
+}
+
+# Subtracts AMOUNT glory. No-op at 0 XP or at Legendary (100).
+kns_remove_knight_glory_xp_effect = {
+	$CHAR$ = {
+		if = {
+			limit = {
+				has_trait = knight
+				NOT = {
+					has_trait_xp = {
+						trait = knight
+						track = glory
+						value >= 100
+					}
+				}
+				has_trait_xp = {
+					trait = knight
+					track = glory
+					value >= 1
+				}
+			}
+			add_trait_xp = {
+				trait = knight
+				track = glory
+				value = {
+					value = $AMOUNT$
+					multiply = -1
+				}
+			}
+		}
+	}
+}
+
+kns_ensure_knight_glory_at_least_effect = {
+	if = {
+		limit = { has_trait = knight }
+		if = {
+			limit = {
+				NOT = {
+					has_trait_xp = {
+						trait = knight
+						track = glory
+						value >= $VALUE$
+					}
+				}
+			}
+			set_trait_xp = {
+				trait = knight
+				track = glory
+				value = $VALUE$
+			}
+		}
+	}
+}
+
+kns_apply_knight_glory_floors_effect = {
+	if = {
+		limit = { has_trait = knight }
+		if = {
+			limit = { has_trait = kns_talent_generation }
+			kns_ensure_knight_glory_at_least_effect = { VALUE = 50 }
+		}
+		else_if = {
+			limit = { kns_is_imperial_guard_trigger = yes }
+			kns_ensure_knight_glory_at_least_effect = { VALUE = 30 }
+		}
+	}
+}
+
+kns_try_add_yearly_knight_glory_effect = {
+	if = {
+		limit = {
+			has_trait = knight
+			OR = {
+				kns_is_imperial_guard_trigger = yes
+				has_trait = kns_talent_generation
+			}
+		}
+		kns_add_knight_glory_xp_effect = {
+			CHAR = this
+			VALUE = 2
+		}
+	}
+}
+
+kns_grant_olympic_champion_glory_effect = {
+	$CHAR$ = {
+		if = {
+			limit = { has_trait = knight }
+			kns_add_knight_glory_xp_effect = {
+				CHAR = this
+				VALUE = kns_olympic_champion_glory_value
+			}
+			set_variable = {
+				name = kns_knight_glory_clock_year
+				value = current_year
 			}
 		}
 	}
@@ -626,6 +812,12 @@ kns_strip_knighthood_effect = {
 			}
 			remove_trait = squire
 		}
+		if = {
+			limit = {
+				has_trait = knight
+			}
+			remove_trait = knight
+		}
 		add_trait = stripped_knight
 		if = {
 			limit = {
@@ -747,6 +939,123 @@ kns_init_squire_story_cycle_effect = {
 	}
 }
 
+# One Arms lesson per birthday. Good days 45-55 XP, poor days 25-35, so the
+# Squire track fills in about 2-4 years. Toast only if the knight is a player.
+kns_yearly_squire_arms_training_effect = {
+	if = {
+		limit = {
+			has_trait = squire
+			NOT = {
+				has_trait_xp = {
+					trait = squire
+					track = knight
+					value >= 100
+				}
+			}
+			any_relation = {
+				type = kns_knight
+				is_alive = yes
+			}
+		}
+		save_scope_as = my_squire
+		random_relation = {
+			type = kns_knight
+			limit = { is_alive = yes }
+			save_scope_as = my_knight
+		}
+		random_list = {
+			3 = {
+				modifier = {
+					prowess > mediocre_skill_rating
+					add = 2
+				}
+				modifier = {
+					has_trait_rank = {
+						trait = education_martial_prowess
+						rank >= 1
+					}
+					add = 3
+				}
+				kns_add_squire_trait_xp_effect = { MIN_VALUE = 45 MAX_VALUE = 55 }
+				kns_try_squire_skill_increase_effect = { SKILL = prowess }
+				if = {
+					limit = { scope:my_knight = { is_ai = no } }
+					scope:my_knight = {
+						send_interface_message = {
+							type = event_toast_effect_good
+							title = kns_squire.0400.had_a_training_session.t
+							desc = kns_squire.0401_good_arms.desc
+							left_icon = scope:my_squire
+							right_icon = scope:my_knight
+						}
+					}
+				}
+			}
+			1 = {
+				kns_add_squire_trait_xp_effect = { MIN_VALUE = 25 MAX_VALUE = 35 }
+				if = {
+					limit = { scope:my_knight = { is_ai = no } }
+					scope:my_knight = {
+						send_interface_message = {
+							type = event_toast_effect_neutral
+							title = kns_squire.0400.had_a_training_session.t
+							desc = kns_squire.0401_bad_arms.desc
+							left_icon = scope:my_squire
+							right_icon = scope:my_knight
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Dub at 16+ once the Squire track is full. Toast only if the knight is a player.
+kns_try_auto_dub_squire_effect = {
+	if = {
+		limit = {
+			has_trait = squire
+			age >= 16
+			has_trait_xp = {
+				trait = squire
+				track = knight
+				value >= 100
+			}
+			kns_can_become_a_knight_trigger = yes
+			any_relation = {
+				type = kns_knight
+				is_alive = yes
+			}
+		}
+		save_scope_as = my_squire
+		random_relation = {
+			type = kns_knight
+			limit = { is_alive = yes }
+			save_scope_as = my_knight
+		}
+		if = {
+			limit = { scope:my_knight = { is_ai = no } }
+			scope:my_knight = {
+				send_interface_toast = {
+					title = kns_auto_dub_squire_toast.t
+					custom_tooltip = kns_auto_dub_squire_toast.tt
+					left_icon = scope:my_squire
+					right_icon = scope:my_knight
+				}
+			}
+		}
+		kns_become_a_knight_effect = {
+			KNIGHT_MAKER = scope:my_knight
+			KNIGHT_TO_BE = scope:my_squire
+		}
+	}
+}
+
+kns_try_yearly_squire_progress_effect = {
+	kns_yearly_squire_arms_training_effect = yes
+	kns_try_auto_dub_squire_effect = yes
+}
+
 kns_add_squire_trait_xp_effect = {
 	add_trait_xp = {
 		trait = squire
@@ -862,15 +1171,12 @@ kns_try_make_starting_knight_effect = {
 	if = {
 		limit = {
 			kns_can_try_starting_knight_trigger = yes
+			NOT = { has_trait = knight }
 			NOT = { has_trait = squire }
 		}
-		add_trait = squire
-		add_trait_xp = {
-			trait = squire
-			track = knight
-			value = 100
-		}
+		add_trait = knight
 		kns_assign_prowess_talent_silent_effect = yes
+		kns_apply_knight_glory_floors_effect = yes
 	}
 }
 

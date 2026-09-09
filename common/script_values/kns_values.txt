@@ -18,6 +18,9 @@ kns_funding_monthly_cost = {
 
 kns_imperial_guard_kit_gold_value = 1500
 
+# Paid to the Pope or court chaplain for a requested accolade. The recipient receives this gold.
+kns_accolade_request_gold_value = 400
+
 kns_imperial_guard_max_value = 2
 
 kns_prowess_needed_to_reach_30 = {
@@ -225,5 +228,37 @@ kns_hof_persist_score_value = {
 	if = {
 		limit = { has_variable = kns_imperial_duel_wins }
 		add = var:kns_imperial_duel_wins
+	}
+}
+
+# 1-year: 1, 2-year: 1, 3-year: 2, 4-year: 3. Evaluated on the Olympic host.
+kns_olympic_bout_glory_value = {
+	value = 1
+	if = {
+		limit = {
+			has_variable = kns_olympic_interval_years
+			var:kns_olympic_interval_years >= 4
+		}
+		value = 3
+	}
+	else_if = {
+		limit = {
+			has_variable = kns_olympic_interval_years
+			var:kns_olympic_interval_years >= 3
+		}
+		value = 2
+	}
+}
+
+# Evaluated on the champion: 20 if no clock, else 5 per elapsed year (min 1, cap 4).
+kns_olympic_champion_glory_value = {
+	value = 20
+	if = {
+		limit = { has_variable = kns_knight_glory_clock_year }
+		value = current_year
+		subtract = var:kns_knight_glory_clock_year
+		min = 1
+		max = 4
+		multiply = 5
 	}
 }
