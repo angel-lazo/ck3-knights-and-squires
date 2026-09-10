@@ -387,9 +387,40 @@ kns_is_funded_knight_trigger = {
 	exists = var:kns_funding_patron
 }
 
+kns_has_free_prowess_funding_trigger = {
+	has_character_flag = kns_free_prowess_funding
+}
+
+kns_has_live_prodigy_patron_term_trigger = {
+	exists = var:kns_free_funding_end_year
+	current_year < var:kns_free_funding_end_year
+}
+
+kns_is_paid_funded_knight_trigger = {
+	kns_is_funded_knight_trigger = yes
+	NOT = { has_character_flag = kns_free_prowess_funding }
+}
+
 kns_is_funded_by_character_trigger = {
 	kns_is_funded_knight_trigger = yes
 	var:kns_funding_patron = $PATRON$
+}
+
+kns_is_paid_funded_by_character_trigger = {
+	kns_is_paid_funded_knight_trigger = yes
+	var:kns_funding_patron = $PATRON$
+}
+
+kns_can_receive_prodigy_patron_event_trigger = {
+	has_trait = kns_talent_generation
+	kns_is_knight_trigger = yes
+	age < 50
+	is_alive = yes
+	is_imprisoned = no
+	NOT = { has_trait = incapable }
+	NOT = { kns_takes_old_age_prowess_loss_trigger = yes }
+	NOT = { kns_has_live_prodigy_patron_term_trigger = yes }
+	NOT = { kns_knight_has_reached_prowess_peak_trigger = yes }
 }
 
 kns_is_in_funding_reach_of_trigger = {
@@ -450,12 +481,12 @@ kns_has_any_fundable_knight_trigger = {
 
 kns_has_any_funded_knight_trigger = {
 	OR = {
-		has_character_flag = kns_prowess_funded
+		kns_is_paid_funded_by_character_trigger = { PATRON = this }
 		any_courtier = {
-			has_character_flag = kns_prowess_funded
+			kns_is_paid_funded_by_character_trigger = { PATRON = prev }
 		}
 		any_vassal = {
-			has_character_flag = kns_prowess_funded
+			kns_is_paid_funded_by_character_trigger = { PATRON = prev }
 		}
 	}
 }
@@ -553,6 +584,26 @@ kns_can_request_accolade_from_trigger = {
 		kns_is_catholic_pope_trigger = yes
 		kns_is_court_chaplain_for_trigger = { CHAR = $CHAR$ }
 	}
+}
+
+# Ordinary squires still wait for their knight. Kings, emperors, hegemonies,
+# and knightless squires may pay the Pope or a court chaplain (covers leftover squire trait).
+kns_actor_can_request_clerical_accolade_trigger = {
+	kns_can_become_a_knight_trigger = yes
+	OR = {
+		NOT = { has_trait = squire }
+		kns_is_king_or_emperor_trigger = yes
+		kns_is_emperor_trigger = yes
+		num_of_relation_kns_knight = 0
+		has_character_flag = kns_knightless_squire_flag
+	}
+}
+
+kns_priest_can_grant_clerical_accolade_trigger = {
+	is_alive = yes
+	is_adult = yes
+	is_imprisoned = no
+	kns_practices_knighthood_trigger = yes
 }
 
 kns_is_emperor_trigger = {

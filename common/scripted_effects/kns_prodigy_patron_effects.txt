@@ -1,0 +1,129 @@
+kns_save_prodigy_deed_county_effect = {
+	if = {
+		limit = { exists = location.county }
+		location.county = { save_scope_as = kns_deed_county }
+	}
+	else_if = {
+		limit = {
+			exists = liege
+			liege != this
+			exists = liege.capital_county
+		}
+		liege.capital_county = { save_scope_as = kns_deed_county }
+	}
+	else_if = {
+		limit = {
+			exists = court_owner
+			court_owner != this
+			exists = court_owner.capital_county
+		}
+		court_owner.capital_county = { save_scope_as = kns_deed_county }
+	}
+	else_if = {
+		limit = { exists = capital_county }
+		capital_county = { save_scope_as = kns_deed_county }
+	}
+}
+
+kns_roll_free_funding_duration_effect = {
+	random_list = {
+		1 = { set_variable = { name = kns_free_funding_duration value = 5 } }
+		1 = { set_variable = { name = kns_free_funding_duration value = 6 } }
+		1 = { set_variable = { name = kns_free_funding_duration value = 7 } }
+		1 = { set_variable = { name = kns_free_funding_duration value = 8 } }
+		1 = { set_variable = { name = kns_free_funding_duration value = 9 } }
+		1 = { set_variable = { name = kns_free_funding_duration value = 10 } }
+		1 = { set_variable = { name = kns_free_funding_duration value = 11 } }
+		1 = { set_variable = { name = kns_free_funding_duration value = 12 } }
+		1 = { set_variable = { name = kns_free_funding_duration value = 13 } }
+		1 = { set_variable = { name = kns_free_funding_duration value = 14 } }
+		1 = { set_variable = { name = kns_free_funding_duration value = 15 } }
+	}
+	set_variable = {
+		name = kns_free_funding_end_year
+		value = current_year
+	}
+	change_variable = {
+		name = kns_free_funding_end_year
+		add = var:kns_free_funding_duration
+	}
+}
+
+kns_start_prodigy_patron_term_effect = {
+	kns_roll_free_funding_duration_effect = yes
+	if = {
+		limit = { kns_is_paid_funded_knight_trigger = yes }
+		if = {
+			limit = { has_character_modifier = kns_prodigy_patron_purse }
+			remove_character_modifier = kns_prodigy_patron_purse
+		}
+		add_character_modifier = kns_prodigy_patron_purse
+	}
+	else = {
+		add_character_flag = kns_free_prowess_funding
+		kns_start_funding_knight_effect = {
+			KNIGHT = this
+			PATRON = this
+		}
+	}
+}
+
+kns_expire_prodigy_patron_term_effect = {
+	if = {
+		limit = { has_character_flag = kns_free_prowess_funding }
+		save_scope_as = kns_expire_knight
+		kns_stop_funding_knight_effect = {
+			KNIGHT = this
+			PATRON = this
+		}
+	}
+	if = {
+		limit = { has_character_modifier = kns_prodigy_patron_purse }
+		remove_character_modifier = kns_prodigy_patron_purse
+	}
+	remove_variable = kns_free_funding_end_year
+	remove_variable = kns_free_funding_duration
+}
+
+kns_try_expire_prodigy_patron_term_effect = {
+	if = {
+		limit = {
+			exists = var:kns_free_funding_end_year
+			current_year >= var:kns_free_funding_end_year
+		}
+		kns_expire_prodigy_patron_term_effect = yes
+	}
+}
+
+kns_try_start_prodigy_patron_event_effect = {
+	if = {
+		limit = { kns_can_receive_prodigy_patron_event_trigger = yes }
+		trigger_event = kns_prowess.0100
+	}
+}
+
+kns_show_prodigy_patron_event_to_player_effect = {
+	save_scope_as = kns_patron_knight
+	if = {
+		limit = { is_ai = no }
+		trigger_event = kns_prowess.0101
+	}
+	else_if = {
+		limit = {
+			exists = liege
+			liege = { is_ai = no }
+		}
+		liege = {
+			trigger_event = kns_prowess.0101
+		}
+	}
+	else_if = {
+		limit = {
+			exists = court_owner
+			court_owner = { is_ai = no }
+		}
+		court_owner = {
+			trigger_event = kns_prowess.0101
+		}
+	}
+}

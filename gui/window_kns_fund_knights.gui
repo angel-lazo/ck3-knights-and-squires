@@ -204,6 +204,13 @@ window = {
 
 											text_single = {
 												layoutpolicy_horizontal = expanding
+												text = "kns_funding_window_row_patronage"
+												tooltip = "kns_funding_window_row_patronage_tt"
+												visible = "[GetScriptedGui('kns_gui_knight_has_free_patronage').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
 												text = "kns_funding_window_row_old_age"
 												default_format = "#negative"
 												visible = "[GetScriptedGui('kns_gui_knight_old_age_blocked').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
@@ -212,7 +219,7 @@ window = {
 											text_single = {
 												layoutpolicy_horizontal = expanding
 												text = "kns_funding_window_row_no_stipend"
-												visible = "[And( Not( GetScriptedGui('kns_gui_knight_is_funded').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End ) ), Not( GetScriptedGui('kns_gui_knight_old_age_blocked').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End ) ) )]"
+												visible = "[And( And( Not( GetScriptedGui('kns_gui_knight_is_funded').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End ) ), Not( GetScriptedGui('kns_gui_knight_old_age_blocked').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End ) ) ), Not( GetScriptedGui('kns_gui_knight_has_free_patronage').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End ) ) )]"
 											}
 
 											hbox = {
@@ -327,6 +334,13 @@ window = {
 
 											text_single = {
 												layoutpolicy_horizontal = expanding
+												text = "kns_funding_window_row_patronage"
+												tooltip = "kns_funding_window_row_patronage_tt"
+												visible = "[GetScriptedGui('kns_gui_knight_has_free_patronage').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
+											}
+
+											text_single = {
+												layoutpolicy_horizontal = expanding
 												text = "kns_funding_window_row_old_age"
 												default_format = "#negative"
 												visible = "[GetScriptedGui('kns_gui_knight_old_age_blocked').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End )]"
@@ -335,7 +349,7 @@ window = {
 											text_single = {
 												layoutpolicy_horizontal = expanding
 												text = "kns_funding_window_row_no_stipend"
-												visible = "[And( Not( GetScriptedGui('kns_gui_knight_is_funded').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End ) ), Not( GetScriptedGui('kns_gui_knight_old_age_blocked').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End ) ) )]"
+												visible = "[And( And( Not( GetScriptedGui('kns_gui_knight_is_funded').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End ) ), Not( GetScriptedGui('kns_gui_knight_old_age_blocked').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End ) ) ), Not( GetScriptedGui('kns_gui_knight_has_free_patronage').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'target', Character.MakeScope ).End ) ) )]"
 											}
 
 											hbox = {

@@ -230,50 +230,54 @@ kns_pay_for_accolade_and_dub_effect = {
 	}
 }
 
+# Pays the Catholic Pope if one exists, otherwise the court chaplain. Dubbing removes Squire.
+kns_try_pay_for_clerical_accolade_effect = {
+	if = {
+		limit = {
+			exists = faith:catholic.religious_head
+			faith:catholic.religious_head = {
+				NOT = { this = prev }
+				kns_priest_can_grant_clerical_accolade_trigger = yes
+			}
+		}
+		faith:catholic.religious_head = { save_scope_as = kns_accolade_priest }
+		kns_pay_for_accolade_and_dub_effect = { PRIEST = scope:kns_accolade_priest }
+	}
+	else_if = {
+		limit = {
+			exists = title:k_papal_state.holder
+			title:k_papal_state.holder = {
+				NOT = { this = prev }
+				kns_priest_can_grant_clerical_accolade_trigger = yes
+			}
+		}
+		title:k_papal_state.holder = { save_scope_as = kns_accolade_priest }
+		kns_pay_for_accolade_and_dub_effect = { PRIEST = scope:kns_accolade_priest }
+	}
+	else = {
+		kns_save_court_chaplain_for_accolade_effect = yes
+		if = {
+			limit = {
+				exists = scope:kns_accolade_priest
+				scope:kns_accolade_priest = {
+					NOT = { this = prev }
+					kns_priest_can_grant_clerical_accolade_trigger = yes
+				}
+			}
+			kns_pay_for_accolade_and_dub_effect = { PRIEST = scope:kns_accolade_priest }
+		}
+	}
+}
+
 # AI with enough gold always pays the Catholic Pope. If there is no Pope, they pay their chaplain.
 kns_try_ai_request_accolade_effect = {
 	if = {
 		limit = {
 			is_ai = yes
-			kns_can_become_a_knight_trigger = yes
-			NOT = { has_trait = squire }
+			kns_actor_can_request_clerical_accolade_trigger = yes
 			gold >= kns_accolade_request_gold_value
 		}
-		if = {
-			limit = {
-				exists = faith:catholic.religious_head
-				faith:catholic.religious_head = {
-					is_alive = yes
-					NOT = { this = prev }
-				}
-			}
-			faith:catholic.religious_head = { save_scope_as = kns_accolade_priest }
-			kns_pay_for_accolade_and_dub_effect = { PRIEST = scope:kns_accolade_priest }
-		}
-		else_if = {
-			limit = {
-				exists = title:k_papal_state.holder
-				title:k_papal_state.holder = {
-					is_alive = yes
-					NOT = { this = prev }
-				}
-			}
-			title:k_papal_state.holder = { save_scope_as = kns_accolade_priest }
-			kns_pay_for_accolade_and_dub_effect = { PRIEST = scope:kns_accolade_priest }
-		}
-		else = {
-			kns_save_court_chaplain_for_accolade_effect = yes
-			if = {
-				limit = {
-					exists = scope:kns_accolade_priest
-					scope:kns_accolade_priest = {
-						is_alive = yes
-						NOT = { this = prev }
-					}
-				}
-				kns_pay_for_accolade_and_dub_effect = { PRIEST = scope:kns_accolade_priest }
-			}
-		}
+		kns_try_pay_for_clerical_accolade_effect = yes
 	}
 }
 

@@ -1,0 +1,802 @@
+# Generated. Do not edit by hand; run tools/gen_prodigy_patron.py
+
+kns_prodigy_patron_001 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_001_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_001_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_001_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_002 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_002_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_002_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_002_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_003 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_003_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_003_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_003_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_004 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_004_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_004_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_004_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_005 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_005_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_005_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_005_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_006 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_006_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_006_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_006_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_007 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_007_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_007_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_007_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_008 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_008_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_008_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_008_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_009 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_009_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_009_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_009_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_010 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_010_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_010_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_010_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_011 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_011_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_011_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_011_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_012 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_012_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_012_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_012_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_013 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_013_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_013_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_013_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_014 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_014_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_014_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_014_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_015 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_015_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_015_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_015_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_016 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_016_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_016_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_016_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_017 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_017_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_017_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_017_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_018 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_018_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_018_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_018_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_019 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_019_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_019_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_019_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_020 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_020_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_020_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_020_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_021 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_021_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_021_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_021_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_022 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_022_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_022_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_022_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_023 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_023_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_023_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_023_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_024 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_024_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_024_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_024_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_025 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_025_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_025_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_025_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_026 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_026_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_026_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_026_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_027 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_027_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_027_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_027_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_028 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_028_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_028_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_028_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_029 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_029_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_029_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_029_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_030 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_030_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_030_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_030_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_031 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_031_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_031_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_031_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_032 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_032_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_032_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_032_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_033 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_033_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_033_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_033_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_034 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_034_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_034_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_034_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_035 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_035_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_035_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_035_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_036 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_036_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_036_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_036_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_037 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_037_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_037_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_037_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_038 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_038_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_038_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_038_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_039 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_039_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_039_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_039_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_040 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_040_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_040_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_040_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_041 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_041_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_041_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_041_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_042 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_042_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_042_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_042_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_043 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_043_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_043_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_043_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_044 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_044_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_044_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_044_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_045 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_045_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_045_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_045_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_046 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_046_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_046_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_046_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_047 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_047_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_047_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_047_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_048 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_048_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_048_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_048_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_049 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_049_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_049_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_049_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_050 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_050_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_050_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_050_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_051 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_051_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_051_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_051_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_052 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_052_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_052_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_052_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_053 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_053_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_053_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_053_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_054 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_054_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_054_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_054_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_055 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_055_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_055_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_055_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_056 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_056_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_056_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_056_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_057 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_057_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_057_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_057_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_058 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_058_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_058_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_058_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_059 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_059_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_059_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_059_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_060 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_060_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_060_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_060_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_061 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_061_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_061_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_061_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_062 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_062_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_062_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_062_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_063 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_063_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_063_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_063_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_064 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_064_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_064_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_064_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_065 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_065_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_065_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_065_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_066 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_066_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_066_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_066_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_067 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_067_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_067_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_067_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_068 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_068_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_068_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_068_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_069 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_069_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_069_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_069_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_070 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_070_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_070_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_070_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_071 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_071_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_071_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_071_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_072 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_072_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_072_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_072_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_073 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_073_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_073_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_073_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_074 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_074_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_074_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_074_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_075 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_075_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_075_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_075_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_076 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_076_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_076_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_076_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_077 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_077_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_077_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_077_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_078 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_078_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_078_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_078_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_079 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_079_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_079_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_079_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_080 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_080_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_080_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_080_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_081 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_081_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_081_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_081_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_082 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_082_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_082_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_082_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_083 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_083_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_083_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_083_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_084 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_084_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_084_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_084_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_085 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_085_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_085_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_085_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_086 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_086_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_086_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_086_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_087 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_087_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_087_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_087_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_088 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_088_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_088_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_088_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_089 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_089_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_089_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_089_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_090 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_090_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_090_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_090_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_091 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_091_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_091_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_091_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_092 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_092_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_092_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_092_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_093 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_093_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_093_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_093_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_094 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_094_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_094_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_094_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_095 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_095_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_095_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_095_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_096 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_096_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_096_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_096_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_097 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_097_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_097_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_097_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_098 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_098_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_098_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_098_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_099 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_099_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_099_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_099_desc_third }
+	duration = { years = 75 }
+}
+kns_prodigy_patron_100 = {
+	categories = { positive martial }
+	icon = "martial.dds"
+	description = { desc = kns_prodigy_patron_100_desc }
+	second_perspective_description = { desc = kns_prodigy_patron_100_desc_second }
+	third_perspective_description = { desc = kns_prodigy_patron_100_desc_third }
+	duration = { years = 75 }
+}

@@ -309,6 +309,85 @@ kns_ask_liege_knighthood_interaction = {
 }
 
 #########################
+# Request Accolade (Pope or court chaplain)
+#########################
+
+kns_request_accolade_interaction = {
+	category = interaction_category_diplomacy
+	desc = kns_request_accolade_interaction_desc
+	icon = icon_combat
+	interface_priority = 71
+
+	send_name = kns_request_accolade
+	notification_text = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:recipient = { kns_is_catholic_pope_trigger = yes }
+				}
+				desc = KNS_REQUEST_ACCOLADE_POPE_NOTIFICATION
+			}
+			desc = KNS_REQUEST_ACCOLADE_CHAPLAIN_NOTIFICATION
+		}
+	}
+
+	use_diplomatic_range = yes
+	auto_accept = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			NOT = { this = scope:recipient }
+			kns_actor_can_request_clerical_accolade_trigger = yes
+		}
+		scope:recipient = {
+			kns_can_request_accolade_from_trigger = { CHAR = scope:actor }
+		}
+	}
+
+	is_valid = {
+		scope:actor = {
+			custom_tooltip = {
+				text = kns_request_accolade_gold_tt
+				gold >= kns_accolade_request_gold_value
+			}
+		}
+		scope:recipient = {
+			custom_tooltip = {
+				text = kns_ask_liege_christian_tt
+				kns_practices_knighthood_trigger = yes
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_imprisoned = no
+			NOT = { is_at_war_with = scope:recipient }
+		}
+		scope:recipient = {
+			is_adult = yes
+			is_imprisoned = no
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			kns_pay_for_accolade_and_dub_effect = { PRIEST = scope:recipient }
+			send_interface_toast = {
+				type = event_toast_effect_good
+				title = kns_request_accolade_toast
+				left_icon = scope:actor
+				right_icon = scope:recipient
+				custom_tooltip = kns_request_accolade_toast.tt
+			}
+		}
+	}
+
+	ai_will_do = { base = 0 }
+}
+
+#########################
 # Educate Squire (own court)
 #########################
 
@@ -1294,7 +1373,7 @@ kns_stop_funding_knight_interaction = {
 			is_landed = yes
 		}
 		scope:recipient = {
-			kns_is_funded_by_character_trigger = { PATRON = scope:actor }
+			kns_is_paid_funded_by_character_trigger = { PATRON = scope:actor }
 		}
 	}
 

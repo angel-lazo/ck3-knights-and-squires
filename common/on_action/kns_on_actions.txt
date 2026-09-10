@@ -110,7 +110,14 @@ kns_on_death = {
 			limit = { exists = var:kns_funding_patron }
 			var:kns_funding_patron = { save_scope_as = kns_dead_patron }
 			remove_character_flag = kns_prowess_funded
+			remove_character_flag = kns_free_prowess_funding
 			remove_variable = kns_funding_patron
+			remove_variable = kns_free_funding_end_year
+			remove_variable = kns_free_funding_duration
+			if = {
+				limit = { has_character_modifier = kns_prodigy_patron_purse }
+				remove_character_modifier = kns_prodigy_patron_purse
+			}
 			scope:kns_dead_patron ?= {
 				kns_refresh_training_upkeep_effect = yes
 			}
@@ -130,13 +137,17 @@ kns_on_death = {
 		if = {
 			limit = { exists = var:kns_training_knight_count }
 			every_courtier = {
-				limit = { has_character_flag = kns_prowess_funded }
+				limit = {
+					kns_is_paid_funded_by_character_trigger = { PATRON = prev }
+				}
 				remove_character_flag = kns_prowess_funded
 				remove_variable = kns_funding_patron
 				kns_update_training_modifier_effect = yes
 			}
 			every_vassal = {
-				limit = { has_character_flag = kns_prowess_funded }
+				limit = {
+					kns_is_paid_funded_by_character_trigger = { PATRON = prev }
+				}
 				remove_character_flag = kns_prowess_funded
 				remove_variable = kns_funding_patron
 				kns_update_training_modifier_effect = yes

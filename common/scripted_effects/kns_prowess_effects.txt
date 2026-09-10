@@ -111,6 +111,10 @@ kns_apply_talent_trait_from_cap_effect = {
 			has_trait = knight
 		}
 		kns_ensure_knight_glory_at_least_effect = { VALUE = 50 }
+		trigger_event = {
+			id = kns_prowess.0100
+			days = 3
+		}
 	}
 }
 
@@ -145,6 +149,13 @@ kns_cancel_old_age_funding_effect = {
 		kns_stop_funding_knight_effect = {
 			KNIGHT = this
 			PATRON = scope:kns_old_age_patron
+		}
+		remove_character_flag = kns_free_prowess_funding
+		remove_variable = kns_free_funding_end_year
+		remove_variable = kns_free_funding_duration
+		if = {
+			limit = { has_character_modifier = kns_prodigy_patron_purse }
+			remove_character_modifier = kns_prodigy_patron_purse
 		}
 		send_interface_toast = {
 			type = event_toast_effect_neutral
@@ -199,6 +210,7 @@ kns_stop_funding_knight_effect = {
 	$PATRON$ = { save_scope_as = kns_old_patron }
 	$KNIGHT$ = {
 		remove_character_flag = kns_prowess_funded
+		remove_character_flag = kns_free_prowess_funding
 		remove_variable = kns_funding_patron
 		kns_update_training_modifier_effect = yes
 	}
@@ -241,21 +253,27 @@ kns_fund_all_knights_effect = {
 kns_stop_all_funded_knights_effect = {
 	save_scope_as = kns_funding_actor
 	if = {
-		limit = { has_character_flag = kns_prowess_funded }
+		limit = {
+			kns_is_paid_funded_by_character_trigger = { PATRON = scope:kns_funding_actor }
+		}
 		kns_stop_funding_knight_effect = {
 			KNIGHT = this
 			PATRON = scope:kns_funding_actor
 		}
 	}
 	every_courtier = {
-		limit = { has_character_flag = kns_prowess_funded }
+		limit = {
+			kns_is_paid_funded_by_character_trigger = { PATRON = scope:kns_funding_actor }
+		}
 		kns_stop_funding_knight_effect = {
 			KNIGHT = this
 			PATRON = scope:kns_funding_actor
 		}
 	}
 	every_vassal = {
-		limit = { has_character_flag = kns_prowess_funded }
+		limit = {
+			kns_is_paid_funded_by_character_trigger = { PATRON = scope:kns_funding_actor }
+		}
 		kns_stop_funding_knight_effect = {
 			KNIGHT = this
 			PATRON = scope:kns_funding_actor
@@ -592,14 +610,20 @@ kns_count_training_knights_effect = {
 		value = 0
 	}
 	if = {
-		limit = { has_character_flag = kns_prowess_funded }
+		limit = {
+			has_character_flag = kns_prowess_funded
+			NOT = { has_character_flag = kns_free_prowess_funding }
+		}
 		change_variable = {
 			name = kns_training_knight_count
 			add = 1
 		}
 	}
 	every_courtier = {
-		limit = { has_character_flag = kns_prowess_funded }
+		limit = {
+			has_character_flag = kns_prowess_funded
+			NOT = { has_character_flag = kns_free_prowess_funding }
+		}
 		scope:kns_upkeep_payer = {
 			change_variable = {
 				name = kns_training_knight_count
@@ -608,7 +632,10 @@ kns_count_training_knights_effect = {
 		}
 	}
 	every_vassal = {
-		limit = { has_character_flag = kns_prowess_funded }
+		limit = {
+			has_character_flag = kns_prowess_funded
+			NOT = { has_character_flag = kns_free_prowess_funding }
+		}
 		scope:kns_upkeep_payer = {
 			change_variable = {
 				name = kns_training_knight_count
@@ -702,6 +729,7 @@ kns_yearly_prowess_training_effect = {
 		}
 		else_if = {
 			limit = {
+				NOT = { has_character_flag = kns_free_prowess_funding }
 				scope:kns_training_patron = {
 					gold < 0
 				}

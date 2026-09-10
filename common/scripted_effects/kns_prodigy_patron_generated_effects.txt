@@ -1,0 +1,1413 @@
+# Generated. Do not edit by hand; run tools/gen_prodigy_patron.py
+
+kns_roll_prodigy_patron_flavor_effect = {
+	random_list = {
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 1
+			}
+			set_variable = { name = kns_patron_flavor value = 1 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 2
+			}
+			set_variable = { name = kns_patron_flavor value = 2 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 3
+			}
+			set_variable = { name = kns_patron_flavor value = 3 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 4
+			}
+			set_variable = { name = kns_patron_flavor value = 4 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 5
+			}
+			set_variable = { name = kns_patron_flavor value = 5 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 6
+			}
+			set_variable = { name = kns_patron_flavor value = 6 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 7
+			}
+			set_variable = { name = kns_patron_flavor value = 7 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 8
+			}
+			set_variable = { name = kns_patron_flavor value = 8 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 9
+			}
+			set_variable = { name = kns_patron_flavor value = 9 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 10
+			}
+			set_variable = { name = kns_patron_flavor value = 10 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 11
+			}
+			set_variable = { name = kns_patron_flavor value = 11 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 12
+			}
+			set_variable = { name = kns_patron_flavor value = 12 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 13
+			}
+			set_variable = { name = kns_patron_flavor value = 13 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 14
+			}
+			set_variable = { name = kns_patron_flavor value = 14 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 15
+			}
+			set_variable = { name = kns_patron_flavor value = 15 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 16
+			}
+			set_variable = { name = kns_patron_flavor value = 16 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 17
+			}
+			set_variable = { name = kns_patron_flavor value = 17 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 18
+			}
+			set_variable = { name = kns_patron_flavor value = 18 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 19
+			}
+			set_variable = { name = kns_patron_flavor value = 19 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 20
+			}
+			set_variable = { name = kns_patron_flavor value = 20 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 21
+			}
+			set_variable = { name = kns_patron_flavor value = 21 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 22
+			}
+			set_variable = { name = kns_patron_flavor value = 22 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 23
+			}
+			set_variable = { name = kns_patron_flavor value = 23 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 24
+			}
+			set_variable = { name = kns_patron_flavor value = 24 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 25
+			}
+			set_variable = { name = kns_patron_flavor value = 25 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 26
+			}
+			set_variable = { name = kns_patron_flavor value = 26 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 27
+			}
+			set_variable = { name = kns_patron_flavor value = 27 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 28
+			}
+			set_variable = { name = kns_patron_flavor value = 28 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 29
+			}
+			set_variable = { name = kns_patron_flavor value = 29 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 30
+			}
+			set_variable = { name = kns_patron_flavor value = 30 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 31
+			}
+			set_variable = { name = kns_patron_flavor value = 31 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 32
+			}
+			set_variable = { name = kns_patron_flavor value = 32 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 33
+			}
+			set_variable = { name = kns_patron_flavor value = 33 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 34
+			}
+			set_variable = { name = kns_patron_flavor value = 34 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 35
+			}
+			set_variable = { name = kns_patron_flavor value = 35 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 36
+			}
+			set_variable = { name = kns_patron_flavor value = 36 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 37
+			}
+			set_variable = { name = kns_patron_flavor value = 37 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 38
+			}
+			set_variable = { name = kns_patron_flavor value = 38 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 39
+			}
+			set_variable = { name = kns_patron_flavor value = 39 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 40
+			}
+			set_variable = { name = kns_patron_flavor value = 40 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 41
+			}
+			set_variable = { name = kns_patron_flavor value = 41 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 42
+			}
+			set_variable = { name = kns_patron_flavor value = 42 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 43
+			}
+			set_variable = { name = kns_patron_flavor value = 43 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 44
+			}
+			set_variable = { name = kns_patron_flavor value = 44 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 45
+			}
+			set_variable = { name = kns_patron_flavor value = 45 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 46
+			}
+			set_variable = { name = kns_patron_flavor value = 46 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 47
+			}
+			set_variable = { name = kns_patron_flavor value = 47 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 48
+			}
+			set_variable = { name = kns_patron_flavor value = 48 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 49
+			}
+			set_variable = { name = kns_patron_flavor value = 49 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 50
+			}
+			set_variable = { name = kns_patron_flavor value = 50 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 51
+			}
+			set_variable = { name = kns_patron_flavor value = 51 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 52
+			}
+			set_variable = { name = kns_patron_flavor value = 52 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 53
+			}
+			set_variable = { name = kns_patron_flavor value = 53 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 54
+			}
+			set_variable = { name = kns_patron_flavor value = 54 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 55
+			}
+			set_variable = { name = kns_patron_flavor value = 55 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 56
+			}
+			set_variable = { name = kns_patron_flavor value = 56 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 57
+			}
+			set_variable = { name = kns_patron_flavor value = 57 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 58
+			}
+			set_variable = { name = kns_patron_flavor value = 58 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 59
+			}
+			set_variable = { name = kns_patron_flavor value = 59 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 60
+			}
+			set_variable = { name = kns_patron_flavor value = 60 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 61
+			}
+			set_variable = { name = kns_patron_flavor value = 61 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 62
+			}
+			set_variable = { name = kns_patron_flavor value = 62 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 63
+			}
+			set_variable = { name = kns_patron_flavor value = 63 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 64
+			}
+			set_variable = { name = kns_patron_flavor value = 64 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 65
+			}
+			set_variable = { name = kns_patron_flavor value = 65 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 66
+			}
+			set_variable = { name = kns_patron_flavor value = 66 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 67
+			}
+			set_variable = { name = kns_patron_flavor value = 67 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 68
+			}
+			set_variable = { name = kns_patron_flavor value = 68 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 69
+			}
+			set_variable = { name = kns_patron_flavor value = 69 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 70
+			}
+			set_variable = { name = kns_patron_flavor value = 70 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 71
+			}
+			set_variable = { name = kns_patron_flavor value = 71 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 72
+			}
+			set_variable = { name = kns_patron_flavor value = 72 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 73
+			}
+			set_variable = { name = kns_patron_flavor value = 73 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 74
+			}
+			set_variable = { name = kns_patron_flavor value = 74 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 75
+			}
+			set_variable = { name = kns_patron_flavor value = 75 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 76
+			}
+			set_variable = { name = kns_patron_flavor value = 76 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 77
+			}
+			set_variable = { name = kns_patron_flavor value = 77 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 78
+			}
+			set_variable = { name = kns_patron_flavor value = 78 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 79
+			}
+			set_variable = { name = kns_patron_flavor value = 79 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 80
+			}
+			set_variable = { name = kns_patron_flavor value = 80 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 81
+			}
+			set_variable = { name = kns_patron_flavor value = 81 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 82
+			}
+			set_variable = { name = kns_patron_flavor value = 82 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 83
+			}
+			set_variable = { name = kns_patron_flavor value = 83 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 84
+			}
+			set_variable = { name = kns_patron_flavor value = 84 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 85
+			}
+			set_variable = { name = kns_patron_flavor value = 85 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 86
+			}
+			set_variable = { name = kns_patron_flavor value = 86 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 87
+			}
+			set_variable = { name = kns_patron_flavor value = 87 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 88
+			}
+			set_variable = { name = kns_patron_flavor value = 88 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 89
+			}
+			set_variable = { name = kns_patron_flavor value = 89 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 90
+			}
+			set_variable = { name = kns_patron_flavor value = 90 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 91
+			}
+			set_variable = { name = kns_patron_flavor value = 91 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 92
+			}
+			set_variable = { name = kns_patron_flavor value = 92 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 93
+			}
+			set_variable = { name = kns_patron_flavor value = 93 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 94
+			}
+			set_variable = { name = kns_patron_flavor value = 94 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 95
+			}
+			set_variable = { name = kns_patron_flavor value = 95 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 96
+			}
+			set_variable = { name = kns_patron_flavor value = 96 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 97
+			}
+			set_variable = { name = kns_patron_flavor value = 97 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 98
+			}
+			set_variable = { name = kns_patron_flavor value = 98 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 99
+			}
+			set_variable = { name = kns_patron_flavor value = 99 }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				exists = var:kns_last_patron_flavor
+				var:kns_last_patron_flavor = 100
+			}
+			set_variable = { name = kns_patron_flavor value = 100 }
+		}
+	}
+	set_variable = {
+		name = kns_last_patron_flavor
+		value = var:kns_patron_flavor
+	}
+}
+
+kns_create_prodigy_patron_memory_effect = {
+	if = {
+		limit = { var:kns_patron_flavor = 1 }
+		create_character_memory = {
+			type = kns_prodigy_patron_001
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 2 }
+		create_character_memory = {
+			type = kns_prodigy_patron_002
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 3 }
+		create_character_memory = {
+			type = kns_prodigy_patron_003
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 4 }
+		create_character_memory = {
+			type = kns_prodigy_patron_004
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 5 }
+		create_character_memory = {
+			type = kns_prodigy_patron_005
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 6 }
+		create_character_memory = {
+			type = kns_prodigy_patron_006
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 7 }
+		create_character_memory = {
+			type = kns_prodigy_patron_007
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 8 }
+		create_character_memory = {
+			type = kns_prodigy_patron_008
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 9 }
+		create_character_memory = {
+			type = kns_prodigy_patron_009
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 10 }
+		create_character_memory = {
+			type = kns_prodigy_patron_010
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 11 }
+		create_character_memory = {
+			type = kns_prodigy_patron_011
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 12 }
+		create_character_memory = {
+			type = kns_prodigy_patron_012
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 13 }
+		create_character_memory = {
+			type = kns_prodigy_patron_013
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 14 }
+		create_character_memory = {
+			type = kns_prodigy_patron_014
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 15 }
+		create_character_memory = {
+			type = kns_prodigy_patron_015
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 16 }
+		create_character_memory = {
+			type = kns_prodigy_patron_016
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 17 }
+		create_character_memory = {
+			type = kns_prodigy_patron_017
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 18 }
+		create_character_memory = {
+			type = kns_prodigy_patron_018
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 19 }
+		create_character_memory = {
+			type = kns_prodigy_patron_019
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 20 }
+		create_character_memory = {
+			type = kns_prodigy_patron_020
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 21 }
+		create_character_memory = {
+			type = kns_prodigy_patron_021
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 22 }
+		create_character_memory = {
+			type = kns_prodigy_patron_022
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 23 }
+		create_character_memory = {
+			type = kns_prodigy_patron_023
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 24 }
+		create_character_memory = {
+			type = kns_prodigy_patron_024
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 25 }
+		create_character_memory = {
+			type = kns_prodigy_patron_025
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 26 }
+		create_character_memory = {
+			type = kns_prodigy_patron_026
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 27 }
+		create_character_memory = {
+			type = kns_prodigy_patron_027
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 28 }
+		create_character_memory = {
+			type = kns_prodigy_patron_028
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 29 }
+		create_character_memory = {
+			type = kns_prodigy_patron_029
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 30 }
+		create_character_memory = {
+			type = kns_prodigy_patron_030
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 31 }
+		create_character_memory = {
+			type = kns_prodigy_patron_031
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 32 }
+		create_character_memory = {
+			type = kns_prodigy_patron_032
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 33 }
+		create_character_memory = {
+			type = kns_prodigy_patron_033
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 34 }
+		create_character_memory = {
+			type = kns_prodigy_patron_034
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 35 }
+		create_character_memory = {
+			type = kns_prodigy_patron_035
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 36 }
+		create_character_memory = {
+			type = kns_prodigy_patron_036
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 37 }
+		create_character_memory = {
+			type = kns_prodigy_patron_037
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 38 }
+		create_character_memory = {
+			type = kns_prodigy_patron_038
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 39 }
+		create_character_memory = {
+			type = kns_prodigy_patron_039
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 40 }
+		create_character_memory = {
+			type = kns_prodigy_patron_040
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 41 }
+		create_character_memory = {
+			type = kns_prodigy_patron_041
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 42 }
+		create_character_memory = {
+			type = kns_prodigy_patron_042
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 43 }
+		create_character_memory = {
+			type = kns_prodigy_patron_043
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 44 }
+		create_character_memory = {
+			type = kns_prodigy_patron_044
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 45 }
+		create_character_memory = {
+			type = kns_prodigy_patron_045
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 46 }
+		create_character_memory = {
+			type = kns_prodigy_patron_046
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 47 }
+		create_character_memory = {
+			type = kns_prodigy_patron_047
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 48 }
+		create_character_memory = {
+			type = kns_prodigy_patron_048
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 49 }
+		create_character_memory = {
+			type = kns_prodigy_patron_049
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 50 }
+		create_character_memory = {
+			type = kns_prodigy_patron_050
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 51 }
+		create_character_memory = {
+			type = kns_prodigy_patron_051
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 52 }
+		create_character_memory = {
+			type = kns_prodigy_patron_052
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 53 }
+		create_character_memory = {
+			type = kns_prodigy_patron_053
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 54 }
+		create_character_memory = {
+			type = kns_prodigy_patron_054
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 55 }
+		create_character_memory = {
+			type = kns_prodigy_patron_055
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 56 }
+		create_character_memory = {
+			type = kns_prodigy_patron_056
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 57 }
+		create_character_memory = {
+			type = kns_prodigy_patron_057
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 58 }
+		create_character_memory = {
+			type = kns_prodigy_patron_058
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 59 }
+		create_character_memory = {
+			type = kns_prodigy_patron_059
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 60 }
+		create_character_memory = {
+			type = kns_prodigy_patron_060
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 61 }
+		create_character_memory = {
+			type = kns_prodigy_patron_061
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 62 }
+		create_character_memory = {
+			type = kns_prodigy_patron_062
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 63 }
+		create_character_memory = {
+			type = kns_prodigy_patron_063
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 64 }
+		create_character_memory = {
+			type = kns_prodigy_patron_064
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 65 }
+		create_character_memory = {
+			type = kns_prodigy_patron_065
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 66 }
+		create_character_memory = {
+			type = kns_prodigy_patron_066
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 67 }
+		create_character_memory = {
+			type = kns_prodigy_patron_067
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 68 }
+		create_character_memory = {
+			type = kns_prodigy_patron_068
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 69 }
+		create_character_memory = {
+			type = kns_prodigy_patron_069
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 70 }
+		create_character_memory = {
+			type = kns_prodigy_patron_070
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 71 }
+		create_character_memory = {
+			type = kns_prodigy_patron_071
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 72 }
+		create_character_memory = {
+			type = kns_prodigy_patron_072
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 73 }
+		create_character_memory = {
+			type = kns_prodigy_patron_073
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 74 }
+		create_character_memory = {
+			type = kns_prodigy_patron_074
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 75 }
+		create_character_memory = {
+			type = kns_prodigy_patron_075
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 76 }
+		create_character_memory = {
+			type = kns_prodigy_patron_076
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 77 }
+		create_character_memory = {
+			type = kns_prodigy_patron_077
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 78 }
+		create_character_memory = {
+			type = kns_prodigy_patron_078
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 79 }
+		create_character_memory = {
+			type = kns_prodigy_patron_079
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 80 }
+		create_character_memory = {
+			type = kns_prodigy_patron_080
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 81 }
+		create_character_memory = {
+			type = kns_prodigy_patron_081
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 82 }
+		create_character_memory = {
+			type = kns_prodigy_patron_082
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 83 }
+		create_character_memory = {
+			type = kns_prodigy_patron_083
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 84 }
+		create_character_memory = {
+			type = kns_prodigy_patron_084
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 85 }
+		create_character_memory = {
+			type = kns_prodigy_patron_085
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 86 }
+		create_character_memory = {
+			type = kns_prodigy_patron_086
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 87 }
+		create_character_memory = {
+			type = kns_prodigy_patron_087
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 88 }
+		create_character_memory = {
+			type = kns_prodigy_patron_088
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 89 }
+		create_character_memory = {
+			type = kns_prodigy_patron_089
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 90 }
+		create_character_memory = {
+			type = kns_prodigy_patron_090
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 91 }
+		create_character_memory = {
+			type = kns_prodigy_patron_091
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 92 }
+		create_character_memory = {
+			type = kns_prodigy_patron_092
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 93 }
+		create_character_memory = {
+			type = kns_prodigy_patron_093
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 94 }
+		create_character_memory = {
+			type = kns_prodigy_patron_094
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 95 }
+		create_character_memory = {
+			type = kns_prodigy_patron_095
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 96 }
+		create_character_memory = {
+			type = kns_prodigy_patron_096
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 97 }
+		create_character_memory = {
+			type = kns_prodigy_patron_097
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 98 }
+		create_character_memory = {
+			type = kns_prodigy_patron_098
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 99 }
+		create_character_memory = {
+			type = kns_prodigy_patron_099
+		}
+	}
+	else_if = {
+		limit = { var:kns_patron_flavor = 100 }
+		create_character_memory = {
+			type = kns_prodigy_patron_100
+		}
+	}
+}

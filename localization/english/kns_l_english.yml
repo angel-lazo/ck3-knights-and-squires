@@ -60,6 +60,12 @@
  kns_buy_knighthood_decision_desc:0 "If no worthy knight will dub me, gold and influence may still buy the accolade. The just and the content will not stoop to this, and the truly zealous find it shameful."
  kns_buy_knighthood_decision_tooltip:0 "You will be made a [kns_knight|E]"
  kns_buy_knighthood_decision_confirm:0 "Purchase Knighthood"
+
+ kns_request_accolade_decision:0 "Request Accolade"
+ kns_request_accolade_decision_desc:0 "Pay the Pope, or your [court_chaplain|E] if there is no Pope, to dub you a [kns_knight|E]. This also ends the [squire|E] trait. Independent [kings|E] and [emperors|E] who still wear that trait, and knightless squires, may ask. A squire who still has a knight should wait to be dubbed by that knight."
+ kns_request_accolade_decision_tooltip:0 "You will pay 400 gold and be made a [kns_knight|E]. The [squire|E] trait is removed if you still have it."
+ kns_request_accolade_decision_confirm:0 "Request Accolade"
+ kns_request_accolade_priest_tt:0 "The Pope or a [court_chaplain|E] can dub you"
  kns_faith_practices_knighthood:0 "Follows a Christian faith"
 
  # Interactions
@@ -81,6 +87,15 @@
  kns_ask_liege_martial_tt:0 "Has at least 15 [martial|E], or a martial education"
  kns_ask_liege_knighthood_rejected_toast:0 "Knighthood Denied"
  kns_ask_liege_knighthood_rejected_toast.tt:0 "[recipient.GetShortUIName|U] has refused to dub you."
+
+ kns_request_accolade_interaction:0 "Request Accolade"
+ kns_request_accolade_interaction_desc:0 "Pay [recipient.GetShortUIName] 400 gold to dub you a [kns_knight|E]. You may ask the Pope or your [court_chaplain|E]. This also ends the [squire|E] trait. Independent [kings|E] and [emperors|E] who still wear that trait, and knightless squires, may ask. A squire who still has a knight should wait to be dubbed by that knight."
+ kns_request_accolade:0 "Request Accolade"
+ KNS_REQUEST_ACCOLADE_POPE_NOTIFICATION:0 "Holy Father, I kneel for the accolade. Make me a knight."
+ KNS_REQUEST_ACCOLADE_CHAPLAIN_NOTIFICATION:0 "Father, I ask you to dub me a knight."
+ kns_request_accolade_gold_tt:0 "Has at least 400 gold"
+ kns_request_accolade_toast:0 "Accolade Granted"
+ kns_request_accolade_toast.tt:0 "[recipient.GetShortUIName|U] has dubbed you a [kns_knight|E]."
 
  kns_educate_squire_interaction:0 "Educate Squire"
  kns_educate_squire_interaction_desc:0 "Appoint a [squire|E] and a [kns_knight|E] in your [court|E]"

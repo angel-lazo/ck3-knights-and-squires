@@ -130,6 +130,95 @@ kns_buy_knighthood_decision = {
 	}
 }
 
+kns_request_accolade_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+
+	decision_group_type = kns_knight_decisions
+	sort_order = 74
+
+	desc = kns_request_accolade_decision_desc
+
+	ai_check_interval = 0
+
+	is_shown = {
+		is_ai = no
+		kns_actor_can_request_clerical_accolade_trigger = yes
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = kns_request_accolade_gold_tt
+			gold >= kns_accolade_request_gold_value
+		}
+		custom_tooltip = {
+			text = kns_request_accolade_priest_tt
+			OR = {
+				AND = {
+					exists = faith:catholic.religious_head
+					faith:catholic.religious_head = {
+						NOT = { this = root }
+						kns_priest_can_grant_clerical_accolade_trigger = yes
+					}
+				}
+				AND = {
+					exists = title:k_papal_state.holder
+					title:k_papal_state.holder = {
+						NOT = { this = root }
+						kns_priest_can_grant_clerical_accolade_trigger = yes
+					}
+				}
+				AND = {
+					exists = cp:councillor_court_chaplain
+					cp:councillor_court_chaplain = {
+						NOT = { this = root }
+						kns_priest_can_grant_clerical_accolade_trigger = yes
+					}
+				}
+				AND = {
+					exists = liege
+					liege != this
+					exists = liege.cp:councillor_court_chaplain
+					liege.cp:councillor_court_chaplain = {
+						NOT = { this = root }
+						kns_priest_can_grant_clerical_accolade_trigger = yes
+					}
+				}
+				AND = {
+					exists = court_owner
+					court_owner != this
+					exists = court_owner.cp:councillor_court_chaplain
+					court_owner.cp:councillor_court_chaplain = {
+						NOT = { this = root }
+						kns_priest_can_grant_clerical_accolade_trigger = yes
+					}
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+	}
+
+	effect = {
+		custom_tooltip = kns_request_accolade_decision_tooltip
+		hidden_effect = {
+			kns_try_pay_for_clerical_accolade_effect = yes
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
 kns_manage_knight_funding_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"

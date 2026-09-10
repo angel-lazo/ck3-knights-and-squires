@@ -11,5 +11,64 @@ kns_prowess.0001 = {
 
 	immediate = {
 		kns_yearly_prowess_training_effect = yes
+		kns_try_expire_prodigy_patron_term_effect = yes
+		kns_try_start_prodigy_patron_event_effect = yes
+	}
+}
+
+# Hidden: start a prodigy patronage term and memory. Visible follow-up is 0101.
+kns_prowess.0100 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		kns_can_receive_prodigy_patron_event_trigger = yes
+	}
+
+	immediate = {
+		save_scope_as = kns_patron_knight
+		kns_save_prodigy_deed_county_effect = yes
+		kns_roll_prodigy_patron_flavor_effect = yes
+		kns_start_prodigy_patron_term_effect = yes
+		kns_create_prodigy_patron_memory_effect = yes
+		kns_show_prodigy_patron_event_to_player_effect = yes
+	}
+}
+
+kns_prowess.0101 = {
+	type = character_event
+	title = kns_prowess.0101.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = scope:kns_deed_county }
+				desc = kns_prowess.0101.desc_county
+			}
+			desc = kns_prowess.0101.desc_plain
+		}
+	}
+	theme = martial
+	override_background = { reference = courtyard }
+
+	left_portrait = {
+		character = scope:kns_patron_knight
+		animation = personality_bold
+	}
+
+	trigger = {
+		exists = scope:kns_patron_knight
+	}
+
+	option = {
+		name = kns_prowess.0101.a
+		if = {
+			limit = {
+				scope:kns_patron_knight = { kns_has_free_prowess_funding_trigger = yes }
+			}
+			custom_tooltip = kns_prowess.0101.a.free_tt
+		}
+		else = {
+			custom_tooltip = kns_prowess.0101.a.purse_tt
+		}
 	}
 }

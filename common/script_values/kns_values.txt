@@ -16,6 +16,16 @@ kns_funding_monthly_cost = {
 	multiply = 0.5
 }
 
+kns_prodigy_patron_years_left_value = {
+	value = 0
+	if = {
+		limit = { exists = var:kns_free_funding_end_year }
+		add = var:kns_free_funding_end_year
+		subtract = current_year
+		min = 0
+	}
+}
+
 kns_imperial_guard_kit_gold_value = 1500
 
 # Paid to the Pope or court chaplain for a requested accolade. The recipient receives this gold.

@@ -1,0 +1,408 @@
+# Generated. Do not edit by hand; run tools/gen_prodigy_patron.py
+
+KnsProdigyPatronStory = {
+	type = character
+	text = {
+		trigger = { var:kns_patron_flavor = 1 }
+		localization_key = kns_prodigy_patron_story_001
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 2 }
+		localization_key = kns_prodigy_patron_story_002
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 3 }
+		localization_key = kns_prodigy_patron_story_003
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 4 }
+		localization_key = kns_prodigy_patron_story_004
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 5 }
+		localization_key = kns_prodigy_patron_story_005
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 6 }
+		localization_key = kns_prodigy_patron_story_006
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 7 }
+		localization_key = kns_prodigy_patron_story_007
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 8 }
+		localization_key = kns_prodigy_patron_story_008
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 9 }
+		localization_key = kns_prodigy_patron_story_009
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 10 }
+		localization_key = kns_prodigy_patron_story_010
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 11 }
+		localization_key = kns_prodigy_patron_story_011
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 12 }
+		localization_key = kns_prodigy_patron_story_012
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 13 }
+		localization_key = kns_prodigy_patron_story_013
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 14 }
+		localization_key = kns_prodigy_patron_story_014
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 15 }
+		localization_key = kns_prodigy_patron_story_015
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 16 }
+		localization_key = kns_prodigy_patron_story_016
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 17 }
+		localization_key = kns_prodigy_patron_story_017
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 18 }
+		localization_key = kns_prodigy_patron_story_018
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 19 }
+		localization_key = kns_prodigy_patron_story_019
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 20 }
+		localization_key = kns_prodigy_patron_story_020
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 21 }
+		localization_key = kns_prodigy_patron_story_021
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 22 }
+		localization_key = kns_prodigy_patron_story_022
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 23 }
+		localization_key = kns_prodigy_patron_story_023
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 24 }
+		localization_key = kns_prodigy_patron_story_024
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 25 }
+		localization_key = kns_prodigy_patron_story_025
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 26 }
+		localization_key = kns_prodigy_patron_story_026
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 27 }
+		localization_key = kns_prodigy_patron_story_027
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 28 }
+		localization_key = kns_prodigy_patron_story_028
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 29 }
+		localization_key = kns_prodigy_patron_story_029
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 30 }
+		localization_key = kns_prodigy_patron_story_030
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 31 }
+		localization_key = kns_prodigy_patron_story_031
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 32 }
+		localization_key = kns_prodigy_patron_story_032
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 33 }
+		localization_key = kns_prodigy_patron_story_033
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 34 }
+		localization_key = kns_prodigy_patron_story_034
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 35 }
+		localization_key = kns_prodigy_patron_story_035
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 36 }
+		localization_key = kns_prodigy_patron_story_036
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 37 }
+		localization_key = kns_prodigy_patron_story_037
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 38 }
+		localization_key = kns_prodigy_patron_story_038
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 39 }
+		localization_key = kns_prodigy_patron_story_039
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 40 }
+		localization_key = kns_prodigy_patron_story_040
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 41 }
+		localization_key = kns_prodigy_patron_story_041
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 42 }
+		localization_key = kns_prodigy_patron_story_042
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 43 }
+		localization_key = kns_prodigy_patron_story_043
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 44 }
+		localization_key = kns_prodigy_patron_story_044
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 45 }
+		localization_key = kns_prodigy_patron_story_045
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 46 }
+		localization_key = kns_prodigy_patron_story_046
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 47 }
+		localization_key = kns_prodigy_patron_story_047
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 48 }
+		localization_key = kns_prodigy_patron_story_048
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 49 }
+		localization_key = kns_prodigy_patron_story_049
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 50 }
+		localization_key = kns_prodigy_patron_story_050
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 51 }
+		localization_key = kns_prodigy_patron_story_051
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 52 }
+		localization_key = kns_prodigy_patron_story_052
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 53 }
+		localization_key = kns_prodigy_patron_story_053
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 54 }
+		localization_key = kns_prodigy_patron_story_054
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 55 }
+		localization_key = kns_prodigy_patron_story_055
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 56 }
+		localization_key = kns_prodigy_patron_story_056
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 57 }
+		localization_key = kns_prodigy_patron_story_057
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 58 }
+		localization_key = kns_prodigy_patron_story_058
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 59 }
+		localization_key = kns_prodigy_patron_story_059
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 60 }
+		localization_key = kns_prodigy_patron_story_060
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 61 }
+		localization_key = kns_prodigy_patron_story_061
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 62 }
+		localization_key = kns_prodigy_patron_story_062
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 63 }
+		localization_key = kns_prodigy_patron_story_063
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 64 }
+		localization_key = kns_prodigy_patron_story_064
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 65 }
+		localization_key = kns_prodigy_patron_story_065
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 66 }
+		localization_key = kns_prodigy_patron_story_066
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 67 }
+		localization_key = kns_prodigy_patron_story_067
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 68 }
+		localization_key = kns_prodigy_patron_story_068
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 69 }
+		localization_key = kns_prodigy_patron_story_069
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 70 }
+		localization_key = kns_prodigy_patron_story_070
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 71 }
+		localization_key = kns_prodigy_patron_story_071
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 72 }
+		localization_key = kns_prodigy_patron_story_072
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 73 }
+		localization_key = kns_prodigy_patron_story_073
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 74 }
+		localization_key = kns_prodigy_patron_story_074
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 75 }
+		localization_key = kns_prodigy_patron_story_075
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 76 }
+		localization_key = kns_prodigy_patron_story_076
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 77 }
+		localization_key = kns_prodigy_patron_story_077
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 78 }
+		localization_key = kns_prodigy_patron_story_078
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 79 }
+		localization_key = kns_prodigy_patron_story_079
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 80 }
+		localization_key = kns_prodigy_patron_story_080
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 81 }
+		localization_key = kns_prodigy_patron_story_081
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 82 }
+		localization_key = kns_prodigy_patron_story_082
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 83 }
+		localization_key = kns_prodigy_patron_story_083
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 84 }
+		localization_key = kns_prodigy_patron_story_084
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 85 }
+		localization_key = kns_prodigy_patron_story_085
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 86 }
+		localization_key = kns_prodigy_patron_story_086
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 87 }
+		localization_key = kns_prodigy_patron_story_087
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 88 }
+		localization_key = kns_prodigy_patron_story_088
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 89 }
+		localization_key = kns_prodigy_patron_story_089
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 90 }
+		localization_key = kns_prodigy_patron_story_090
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 91 }
+		localization_key = kns_prodigy_patron_story_091
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 92 }
+		localization_key = kns_prodigy_patron_story_092
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 93 }
+		localization_key = kns_prodigy_patron_story_093
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 94 }
+		localization_key = kns_prodigy_patron_story_094
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 95 }
+		localization_key = kns_prodigy_patron_story_095
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 96 }
+		localization_key = kns_prodigy_patron_story_096
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 97 }
+		localization_key = kns_prodigy_patron_story_097
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 98 }
+		localization_key = kns_prodigy_patron_story_098
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 99 }
+		localization_key = kns_prodigy_patron_story_099
+	}
+	text = {
+		trigger = { var:kns_patron_flavor = 100 }
+		localization_key = kns_prodigy_patron_story_100
+	}
+	text = {
+		localization_key = kns_prodigy_patron_story_fallback
+	}
+}

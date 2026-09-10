@@ -50,3 +50,10 @@ kns_olympic_host_county_modifier = {
 kns_imperial_guard_modifier = {
 	icon = martial_positive
 }
+
+# Purse on a prodigy who is already on a liege stipend. Does not train.
+kns_prodigy_patron_purse = {
+	icon = economy_positive
+	monthly_income = 0.5
+	monthly_prestige = 1
+}

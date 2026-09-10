@@ -93,7 +93,20 @@ kns_gui_knight_is_funded = {
 	}
 	is_shown = {
 		scope:target = {
-			kns_is_funded_by_character_trigger = { PATRON = root }
+			kns_is_paid_funded_by_character_trigger = { PATRON = root }
+		}
+	}
+}
+
+kns_gui_knight_has_free_patronage = {
+	scope = character
+	saved_scopes = {
+		target
+	}
+	is_shown = {
+		scope:target = {
+			kns_has_free_prowess_funding_trigger = yes
+			kns_has_live_prodigy_patron_term_trigger = yes
 		}
 	}
 }
@@ -107,7 +120,7 @@ kns_gui_toggle_knight_funding = {
 		is_imprisoned = no
 		OR = {
 			scope:target = {
-				kns_is_funded_by_character_trigger = { PATRON = root }
+				kns_is_paid_funded_by_character_trigger = { PATRON = root }
 			}
 			scope:target = {
 				kns_can_be_funded_by_trigger = { PATRON = root }
@@ -119,7 +132,7 @@ kns_gui_toggle_knight_funding = {
 		if = {
 			limit = {
 				scope:target = {
-					kns_is_funded_by_character_trigger = { PATRON = root }
+					kns_is_paid_funded_by_character_trigger = { PATRON = root }
 				}
 			}
 			kns_stop_funding_knight_effect = {

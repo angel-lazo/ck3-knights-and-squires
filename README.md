@@ -12,7 +12,9 @@ Use the **Manage Knight Decision**. It opens a window with two tabs.
 
 Per-character **Fund Knight** and **Disable Funding** interactions still work.
 
-A funded knight also gets the Funded Knight health bonus. If they leave your reach, funding stops. If the patron is in debt (`gold < 0`), that year pays no skill gain.
+A funded knight also gets the Funded Knight health bonus. If they leave your reach, paid funding stops. If the patron is in debt (`gold < 0`), that year pays no skill gain.
+
+**Prodigious knights** get patronage stories (memories, 100 flavors) that last a random **5–15 years**. If nobody is paying their stipend, that term trains them at **no gold cost**. If you already fund them, your 0.5 gold stays the only stipend and they get a **Patron's Purse** instead (0.5 gold and 1 prestige each month). New patronage events stop at **age 50**; a term already running keeps going. Disable All does not end a free patronage term.
 
 Knights who **can take the Old Age prowess penalty** (from age **45**) cannot be funded or trained. Existing funding is cancelled automatically (birthday, quarterly pulse, or when you open Manage Knights): the stipend stops and the Funded Knight health bonus is removed. Knights who **do not lose prowess from age** (Graceful Aging / `no_prowess_loss_from_age`, including Immortal) can still be funded past 45.
 
@@ -248,6 +250,10 @@ The weaker side loses **5 weight per full 10** they are behind. A 1–9 gap has 
 | `gui/window_kns_imperial_guard_attire.gui` | Armor picker for a hired guard |
 | `common/decisions/kns_decisions.txt` | Manage Knight Decision, Select Olympic Champions, Hold/Continue/Manage Olympic Games, Hall of Legends, Manage Imperial Guard |
 | `events/kns_imperial_olympic_events.txt` | Imperial Olympic setup, bracket, duels, and results |
+| `common/scripted_effects/kns_prodigy_patron_effects.txt` | Prodigious patronage terms, expire, player event routing |
+| `common/scripted_effects/kns_prodigy_patron_generated_effects.txt` | Flavor roll and 100 memory creates |
+| `common/character_memory_types/kns_prodigy_patron_memories.txt` | Patronage origin-story memories |
+| `localization/english/kns_prodigy_patron_l_english.yml` | Patronage memory and story text |
 | `localization/english/kns_prowess_l_english.yml` | Player-facing text |
 | `localization/english/kns_imperial_olympic_l_english.yml` | Imperial Olympic text |
 | `localization/english/kns_imperial_guard_l_english.yml` | Imperial Guard text |
